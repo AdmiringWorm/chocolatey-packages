@@ -1,0 +1,59 @@
+version: '{build}'
+max_jobs: 1
+clone_depth: 5
+branches:
+  only:
+  - master
+#build:
+#  verbosity: minimal
+
+environment:
+  # au job parameters
+  au_timeout: 100
+  au_threads: 10
+  au_push: true
+  au_force: false
+  
+  GIST_DIR: 'C:\projects\gists'
+  GIST_NAME: 'Update-AUPackages.md'
+  GIST_URL: 'https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1.git'
+
+  # Github credentials - used to save result to gist and to commit pushed packages to the git repository
+  github_token:
+    secure: C+ODU/MgHUn2H+QTznSAaUipq9eZBWdgknp11GNX2rWkHacX7CgEQYkdHwPDIiuw #https://ci.appveyor.com/tools/encrypt
+  github_user_repo: 'AdmiringWorm/chocolatey-packages' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+
+  # Chocolatey API key - to push updated packages
+  api_key:
+    secure: UQv7FmMmH7JRvBu2myLFuWSkX8MvlDIKh0mC/2mfKMb31mQY0cwRSvu354pNH7g6 # https://ci.appveyor.com/tools/encrypt
+
+init:
+- git config --global user.email "kim.nordmo@gmail.com"
+- git config --global user.name "Appveyor"
+
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- ps: |
+    Install-PackageProvider -Name NuGet -Force
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+    Install-Module au -Scope CurrentUser
+    Get-Module au -ListAvailable | select Name, Version
+
+build_script:
+- cmd: git clone "%GIST_URL%" "%GIST_DIR%"
+- ps: .\au\update_all.ps1
+- git config --global credential.helper store
+- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
+- pushd "%GIST_DIR%"
+- git add "%GIST_NAME%"
+- git commit -m "UPDATE BOT: Updating package statistics";
+- git push
+- popd
+- git push
+
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+artifacts:
+- path: automatic\gist.md

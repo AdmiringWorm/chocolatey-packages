@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>inno-script-studio</id>
+    <title>Inno Script Studio</title>
+    <version>2.2.2.32</version>
+    <authors>Kymoto Solutions</authors>
+    <owners>AdmiringWorm</owners>
+    <summary>Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.</summary>
+    <description>
+Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.
+
+Inno Script Studio provides help to simplify the creation of Microsoft Windows installations by allowing the generation of Inno Setup scripts by use of the intuitive interface to reduce the need to manually edit the Inno Setup scripts.
+
+If you’ve created a freeware application, or even if it’s a large and complex application, Inno Script Studio will help you create the perfect Windows installation that fits both you and your customers’ requirements.</description>
+    <projectUrl>https://www.kymoto.org/products/inno-script-studio</projectUrl>
+    <tags>inno-script-studio admin installer script exe</tags>
+    <copyright>Copyright © 2013 Kymoto Solutions</copyright>
+	<docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
+	<bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d54558fc5d3f4c3ecb2ecd5ac813ad61faac4e03/icons/inno-script-studio.png</iconUrl>
+	<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
+
+    <dependencies>
+      <dependency id="innosetup" />
+	  <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+    <releaseNotes>https://www.kymoto.org/products/inno-script-studio/release-history</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

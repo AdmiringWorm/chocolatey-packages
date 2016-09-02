@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wave-engine</id>
+    <version>2.2.1</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/wave-engine</packageSourceUrl>
+    <owners>Kim Nordmo</owners>
+    <title>Wave Engine</title>
+    <authors>Wave Corporation</authors>
+    <projectUrl>https://waveengine.net/</projectUrl>
+	<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/8ee794ca6076c97596f7335b669278339fae480d/icons/wave-engine.png</iconUrl>
+    <copyright>© 2016 WAVE CORPORATIONr</copyright>
+    <licenseUrl>https://waveengine.net/Company#Legal</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://github.com/WaveEngine/Documentation/wiki</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>wave engine admin development .net</tags>
+    <summary>Component based game engine architecture, 2D and 3D physics engine, beautiful visual effects, cross-platform support, advenced layout system and much more.</summary>
+    <description>Wave Engine is a C# component-based modern game engine which allows you to create cross-platform games and apps for many platforms: Windows, Linux, MacOS, IOS, Android, Windows Store and Windows Phone.
+
+Wave Engine supports the same set of features in all its platforms to make it easy to port all your projects to other supported platforms.
+
+You also have a great set of extensions with the complete code on Github, to use WaveEngine with Kinect, OculusRift, Vuforia, Cardboard, Leapmotion and much more. </description>
+	<dependencies>
+	  <dependency id="gtksharp" />
+	  <dependency id="microsoft-build-tools" version="14.0.23107.10" />
+	  <dependency id="vcredist2012" />
+	  <!-- <dependency id="directx" /> 'Broken when last tested -->
+	  <dependency id="chocolatey-uninstall.extension" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
