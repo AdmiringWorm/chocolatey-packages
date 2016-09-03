@@ -1,7 +1,7 @@
 ﻿param(
     [string]$Name = $null,
-    [System.Nullable``1[boolean]]$Force = $null,
-    [System.Nullable``1[boolean]]$Push = $null
+    [boolean]$Force,
+    [boolean]$Push
 )
 $ErrorActionPreference = "Stop";
 
@@ -42,14 +42,14 @@ try {
 
     $options = parseEnvironment -values $options;
 
-    If ($Force -ine $null) {
+    If ($PSBoundParameters.ContainsKey("Force")) {
         "Setting Force updated packages to $Force"
-        $options.Force = $Force.Value;
+        $options.Force = $Force;
     }
 
-    If ($Push -ine $null) {
+    If ($PSBoundParameters.ContainsKey("Push")) {
         "Pushing Packages? $Push"
-        $options.Push = $Push.Value;
+        $options.Push = $Push;
     }
 
     printVariables -values $options;
