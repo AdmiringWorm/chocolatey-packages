@@ -8,7 +8,7 @@
     <title>Wave Engine</title>
     <authors>Wave Corporation</authors>
     <projectUrl>https://waveengine.net/</projectUrl>
-	<iconUrl>https://cdn.rawgit.com/AdmiringWorm/e46c5b56e7ebe894d196d28d66a08cebe4237390/icons/wave-engine.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/cd925521b4087171c97a75a06634d0ae06be7aad/icons/wave-engine.png</iconUrl>
     <copyright>© 2016 WAVE CORPORATIONr</copyright>
     <licenseUrl>https://waveengine.net/Company#Legal</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
