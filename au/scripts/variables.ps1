@@ -24,6 +24,7 @@
   If (-Not (Test-Path Env:\APPVEYOR)) {
     return $values;
   }
+  $values.Push = $true;
   
   If (Test-Path Env:APPVEYOR_REPO_BRANCH) {
 	$values.GitBranch = $env:APPVEYOR_REPO_BRANCH;
@@ -38,8 +39,8 @@
   }
 
   If (Test-Path Env:\APPVEYOR_PULL_REQUEST_NUMBER) {
-    $values.Push = ($env:APPVEYOR_PULL_REQUEST_NUMBER -eq 0);
-	$values.GitPush = ($values.GitPush) -and ($values.Push);
+    $values.Push = ([System.Int32]::Parse($env:APPVEYOR_PULL_REQUEST_NUMBER) -eq 0);
+	  $values.GitPush = ($values.GitPush) -and ($values.Push);
   }
 
   If (Test-Path Env:\APPVEYOR_BUILD_NUMBER) {
