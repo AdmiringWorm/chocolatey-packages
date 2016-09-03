@@ -30,28 +30,29 @@ environment:
 init:
 - git config --global user.email "kim.nordmo@gmail.com"
 - git config --global user.name "Appveyor"
+- git config --global core.autocrlf input
 
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
-- ps: |
-    Install-PackageProvider -Name NuGet -Force
-    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    Install-Module au -Scope CurrentUser
-    Get-Module au -ListAvailable | select Name, Version
+- ps: Install-PackageProvider -Name NuGet -Force
+- ps: Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+- ps: Install-Module au -Scope CurrentUser
+- ps: Get-Module au -ListAvailable | select Name, Version
 
 build_script:
 - cmd: git clone "%GIST_URL%" "%GIST_DIR%"
 - ps: .\au\update_all.ps1
-- git config --global credential.helper store
+- cmd: git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@gist.github.com`n"
-- pushd "%GIST_DIR%"
-- git add "%GIST_NAME%"
-- git commit -m "UPDATE BOT: Updating package statistics";
-- git push
-- popd
-- git push
+- cmd: |
+    pushd "%GIST_DIR%"
+    git add "%GIST_NAME%"
+    git commit -m "UPDATE BOT: Updating package statistics";
+    git push
+    popd
+    git push
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
