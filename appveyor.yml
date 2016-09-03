@@ -47,11 +47,11 @@ build_script:
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@gist.github.com`n"
 - cmd: |
-    pushd "%GIST_DIR%"
+    cd "%GIST_DIR%""
     git add "%GIST_NAME%"
     git commit -m "UPDATE BOT: Updating package statistics";
     git push
-    popd
+    cd "%APPVEYOR_BUILD_FOLDER%"
     git push
 
 #on_finish:
