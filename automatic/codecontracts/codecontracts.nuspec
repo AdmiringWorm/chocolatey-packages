@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>codecontracts</id>
+    <version>0.0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codecontracts</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+
+    <title>CodeContracts</title>
+    <authors>RiSE</authors>
+    <projectUrl>https://github.com/Microsoft/CodeContracts</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/3925a4a8dbb9caffb458f64b133f22260c6eff8b/icons/codecontracts.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/Microsoft/CodeContracts/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Microsoft/CodeContracts</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/Microsoft/CodeContracts/issues</bugTrackerUrl>
+    <tags>code contracts admin CodeContracts static-analysis contracts requires ensures invariant assume assert static-checker static-verification visual-studio</tags>
+    <summary>Code Contracts provide a language-agnostic way to express coding assumptions in .NET programs.</summary>
+    <description>
+
+Code Contracts provide a language-agnostic way to express coding assumptions
+in .NET programs.
+
+The contracts take the form of pre-conditions, post-conditions, and object
+invariants.
+Contracts act as checked documentation of your external and internal APIs.
+The contracts are used to improve testing via runtime checking,
+enable static contract verification, and documentation generation.
+Code Contracts bring the advantages of design-by-contract programming to all
+.NET programming languages. We currently provide three tools:
+
+1. **Runtime Checking**. Our binary rewriter modifies a program by injecting
+the contracts, which are checked as part of program execution.
+Rewritten programs improve testability: each contract acts as an oracle,
+giving a test run a pass/fail indication. Automatic testing tools, such as Pex,
+take advantage of contracts to generate more meaningful unit tests by
+filtering out meaningless test arguments that don't satisfy the pre-conditions.
+1. **Static Checking**. Our static checker can decide if there are any contract
+violations without even running the program!
+It checks for implicit contracts, such as null dereferences and array bounds,
+as well as the explicit contracts.
+1. **Documentation Generation**. Our documentation generator augments existing
+XML doc files with contract information.
+There are also new style sheets that can be used with Sandcastle so that the
+generated documentation pages have contract sections.
+
+
+**Please Note**: This is an automatically updated package. If you find it is
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.
+</description>
+	<dependencies>
+	  <dependency id="chocolatey-uninstall.extension" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

@@ -21,7 +21,7 @@ try {
         Force = $false
         GistName = "gist.md"
         GistDir = $null
-        GitBranch = "master"
+        GitBranch = $null
         RepoName = "AdmiringWorm/chocolatey-packages"
 
         Script = {

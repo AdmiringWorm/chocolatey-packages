@@ -5,7 +5,7 @@
     )
 
     $pushed = $Info.result.pushed;
-    If ((!$Info.pushed) -and (!$true)) {
+    If ((!$Info.pushed)) {
         "Git: no packages is pushed to Chocolatey community feed, skipping";
         return;
     }

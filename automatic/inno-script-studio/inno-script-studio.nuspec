@@ -21,7 +21,7 @@ If you’ve created a freeware application, or even if it’s a large and comple
 	<docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
 	<bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d54558fc5d3f4c3ecb2ecd5ac813ad61faac4e03/icons/inno-script-studio.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e46c5b56e7ebe894d196d28d66a08cebe4237390/icons/inno-script-studio.png</iconUrl>
 	<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
 
     <dependencies>
