@@ -16,7 +16,7 @@
     git pull -q
 
     "Commiting updated packages to git repository"
-    $pushed | % { git add $_.PackageName -q }
+    $pushed | % { git add $_.PackageName }
     git commit -q -m "UPDATE BOT: $($Info.pushed) packages updated
     [skip ci]"
 }
