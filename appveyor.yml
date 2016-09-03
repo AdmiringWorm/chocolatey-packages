@@ -51,6 +51,8 @@ build_script:
     git add "%GIST_NAME%"
     git commit -m "UPDATE BOT: Updating package statistics";
     git push
+- cmd: cd "%APPVEYOR_BUILD_DIR%"
+- cmd: git push
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

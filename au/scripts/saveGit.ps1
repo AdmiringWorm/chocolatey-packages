@@ -12,11 +12,11 @@
 
     ""
     "Executing git pull"
-    git checkout master
-    git pull
+    git checkout master -q
+    git pull -q
 
     "Commiting updated packages to git repository"
-    $pushed | % { git add $_.PackageName }
-    git commit -m "UPDATE BOT: $($Info.pushed) packages updated
+    $pushed | % { git add $_.PackageName -q }
+    git commit -q -m "UPDATE BOT: $($Info.pushed) packages updated
     [skip ci]"
 }
