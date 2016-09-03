@@ -12,7 +12,7 @@
     }
     $Branch = $options.GitBranch;
     If ($AppveyorProjectId) {
-        "[![](https://ci.appveyor.com/api/projects/status/github/$(GitHubUserRepo)?svg=true)](https://ci.appveyor.com/project/$GitHubUserRepo$BuildPath)"
+        "[![](https://ci.appveyor.com/api/projects/status/github/$($GitHubUserRepo)?svg=true)](https://ci.appveyor.com/project/$GitHubUserRepo$BuildPath)"
     }
 )
 [![$pno](https://img.shields.io/badge/AU%20packages-$($pno)-red.svg)](#ok)
