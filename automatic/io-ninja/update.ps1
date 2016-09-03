@@ -17,7 +17,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases;
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing;
 
     $re = "ioninja-.*(x86|amd64)\.msi";
     $url = $download_page.Links | ? href -Match $re | select -First 2 -ExpandProperty href;
@@ -35,4 +35,4 @@ function global:au_GetLatest {
     return $Latest;
 }
 
-update -Force
+update
