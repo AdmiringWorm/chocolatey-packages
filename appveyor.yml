@@ -45,6 +45,7 @@ build_script:
 - ps: .\au\update_all.ps1
 - git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
+- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@gist.github.com`n"
 - pushd "%GIST_DIR%"
 - git add "%GIST_NAME%"
 - git commit -m "UPDATE BOT: Updating package statistics";
