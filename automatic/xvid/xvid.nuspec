@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Michael Militzer</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/92d455fd230f163d5c43df2711f9be87d2347892/icons/io-ninja.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/92d455fd230f163d5c43df2711f9be87d2347892/icons/xvid.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
