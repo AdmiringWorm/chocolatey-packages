@@ -35,7 +35,7 @@ init:
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
-- choco --version
+- cup chocolatey -y
 #- "ruby -e \"require 'gist'; Gist.login! username: ENV['github_user'], password: ENV['github_pass'] if ENV['github_user'] \""
 - ps: |
     Install-PackageProvider -Name NuGet -Force
