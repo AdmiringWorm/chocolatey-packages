@@ -23,7 +23,7 @@ environment:
   gist_id: 747b3ede98c9404e5cb6a399595e7ad1
 
   # Chocolatey API key - to push updated packages
-  choco_api_key:
+  api_key:
     secure: CzGGbCfsVKyCTbY193kYveGQDN5ilsyI30J3FYdo9+IpGsDwi/knjzBqCQbztIzY
 
 init:
@@ -31,7 +31,6 @@ init:
 - git config --global user.name "Chocolatey"
 - git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
-- choco apikey -s "https://chocolatey.org/" -k="%choco_api_key%"
 
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
@@ -41,7 +40,7 @@ install:
 - ps: |
     Install-PackageProvider -Name NuGet -Force
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    Install-Module au -Scope CurrentUser
+    Install-Module au -Scope CurrentUser -MaximumVersion 2016.8.15
     Get-Module au -ListAvailable | select Name, Version
 
 build_script:
