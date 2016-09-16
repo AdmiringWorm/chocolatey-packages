@@ -39,7 +39,13 @@ function getLatestReleases {
 		$apiUrl = "https://api.github.com/repos/$($repoUser)/$($repoName)/releases";
 	}
 	
-	$response = Invoke-RestMethod -Uri $apiUrl;
+	$headers = @{}
+	
+	If (Test-Path Env:\github_token) {
+		$headers.Authorization = "token " + $env:github_token;
+	}
+	
+	$response = Invoke-RestMethod -Uri $apiUrl -Headers $headers;
 	
 	$latestStableRelease = resolveRelease -response $response -usePrerelease $false;
 	$latestRelease = resolveRelease -response $response -usePrerelease $includePreRelease;

@@ -1,5 +1,4 @@
 ﻿import-module au
-cd "$PSScriptRoot"
 
 $releases = "https://waveengine.net/Downloads"
 

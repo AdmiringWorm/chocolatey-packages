@@ -1,5 +1,4 @@
 import-module au
-cd "$PSScriptRoot"
 
 $releases = "http://tibbo.com/ninja/downloads.html"
 

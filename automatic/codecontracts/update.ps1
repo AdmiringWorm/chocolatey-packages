@@ -1,5 +1,5 @@
 ﻿import-module au
-cd "$PSScriptRoot";
+
 . $PSScriptRoot\..\scripts\githubHelper.ps1
 
 function global:au_SearchReplace {

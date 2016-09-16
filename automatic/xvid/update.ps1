@@ -1,5 +1,4 @@
 import-module au
-cd "$PSScriptRoot"
 
 $releases = "https://www.xvid.com/download/"
 
