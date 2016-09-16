@@ -3,18 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>io-ninja</id>
-    <version>0.0.0</version>
+    <version>3.6.7</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>IO Ninja</title>
     <authors>Tibbo Technology Inc</authors>
     <projectUrl>http://tibbo.com/ninja.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/70c9b63e17e976a00ef6d32fd1248c831d1ed5ec/icons/io-ninja.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
-    <!-- If there is a license Url available, it is is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <copyright>2016 IO Ninja Tibbo</copyright>
+    <docsUrl>http://tibbo.com/support.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>io-ninja admin ipv6 script terminal emulator monitor IO Ninja</tags>
@@ -58,8 +55,6 @@ However, if you plan to use IO Ninja for work-related purposes, you have to [pur
 If you already have a license for IO Ninja version 2.x.x, you can upgrade it to a commercial license for IO Ninja version 3.x.x free of charge.
 Contact our sales department for details at [sales@tibbo.com](mailto:sales@tibbo.com)
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-
     <dependencies>
       <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
