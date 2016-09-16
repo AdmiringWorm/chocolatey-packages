@@ -11,7 +11,7 @@
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/cd925521b4087171c97a75a06634d0ae06be7aad/icons/wave-engine.png</iconUrl>
     <copyright>© 2016 WAVE CORPORATIONr</copyright>
     <licenseUrl>https://waveengine.net/Company#Legal</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://github.com/WaveEngine/Documentation/wiki</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
