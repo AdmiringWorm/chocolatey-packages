@@ -100,11 +100,8 @@ function Save-Gist {
 				}
 			}
 		}
-        
-        $newGist
 		
 		$json = $newGist | ConvertTo-Json
-		$json
 		
 		$url = "https://api.github.com/gists/" + $Info.Options.Gist_ID;
 		
