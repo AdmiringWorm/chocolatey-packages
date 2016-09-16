@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = "Stop";
-
+function Save-Gist {
     function Expand-PoshString() {
         [CmdletBinding()]
         param ( [parameter(ValueFromPipeline = $true)] [string] $str)
@@ -51,13 +50,7 @@
                             $r
                         }
                     },
-                    'Pushed',
-                    @{ N='RemoteVersion'
-                       E={'![{0}](https://img.shields.io/badge/v.-{0}-red.svg)' -f $_.RemoteVersion }
-                    },
-                    @{ N='NuspecVersion'
-                       E={'![{0}](https://img.shields.io/badge/v.-{0}-blue.svg)' -f $_.NuspecVersion  }
-                    },
+                    'Pushed', 'RemoteVersion', 'NuspecVersion',
                     @{ N='Error'
                        E={
                             $err = ("$($_.Error)" -replace "`r?`n", '; ').Trim()
@@ -74,18 +67,50 @@
         $res
     }
 
-function saveGist {
-    param([hashtable] $options,
-        $Info
-    )
+    "Saving results to gist"
+    #if (!(gcm gist.bat -ea 0)) { "ERROR: No gist.bat found. Install it using:  'gem install gist'"; return }
 
-    $gistPath = (Join-Path $options.GistDir $options.GistName);
+    $log = gc $PSScriptRoot\..\gist.md.ps1 -Raw | Expand-PoshString
+    $log | Out-File gist.md -Encoding ascii
 
-    If (Test-Path $options.GistDir) {
-        "Saving results to gist"
-        $log = gc (Join-Path $PSScriptRoot (Join-Path ".." "gist.md.ps1")) -Raw | Expand-PoshString;
-        $log | Out-File -FilePath $gistPath -Encoding utf8;
-    } Else {
-        Write-Warning ("Gist directory '" + $options.GistDir + "' does not exist, skipping gist creation")
-    }
+    #$params = @( "--filename 'Update-AUPackages.md'")
+    #$params += if ($Info.Options.Gist_ID) { "--update " + $Info.Options.Gist_ID } else { '--anonymous' }
+
+    #iex -Command "`$log | gist.bat $params"
+    #if ($LastExitCode) { "ERROR: Gist update failed with exit code: '$LastExitCode'" }
+	
+	if ((Test-Path Env:\github_token)) {
+		#$headers = New-Object "System.Collections.Generic.Dictionary[[string], [string]]";
+		#$headers.Add("Content-Type", "application/json");
+		#$headers.Add("Authorization", "token $env:github_token");
+		#$headers[0]
+		#$headers[1]
+		
+		$headers = @{
+			"Content-Type" = "application/json"
+			"Authorization" = "token $env:github_token"
+		}
+		
+		#$headers.Keys | % { "key = $_ , value = " + $headers.Item($_) }
+		
+		$newGist = @{
+			files = @{
+				"_Update-AUPackages.md" = @{
+					content = (Get-Content "gist.md" -Raw) -replace "`r`n","`n"
+				}
+			}
+		}
+        
+        $newGist
+		
+		$json = $newGist | ConvertTo-Json
+		$json
+		
+		$url = "https://api.github.com/gists/" + $Info.Options.Gist_ID;
+		
+		#Invoke-RestMethod -UseBasicParsing -Uri ("https://api.github.com/gists/" + $Info.Options.Gist_ID) -Body $json -Method Patch -Headers $headers
+		Invoke-RestMethod -UseBasicParsing -Uri $url -Body $json -Method Patch -Headers $headers;
+        return
+	}
 }
+

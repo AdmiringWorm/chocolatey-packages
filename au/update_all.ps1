@@ -1,73 +1,60 @@
-﻿param(
-    [string]$Name = $null,
-    [boolean]$Force,
-    [boolean]$Push
-)
-$ErrorActionPreference = "Stop";
+param($Name = $null)
+cd $PSScriptRoot
 
-pushd $PSScriptRoot;
-try {
-    ls $PSScriptRoot\scripts\*.ps1 | % { 
-        "Loading $_";
-        . $_
-    }
+ls scripts\*.ps1 | % { . $_ }
 
-    If (Test-Path update_vars.ps1) { ./update_vars.ps1 }
+# used when running locally
+if (Test-Path update_vars.ps1) { . ./update_vars.ps1 }
 
-    $options = @{
-        Timeout = 60
-        Push = $false
-        Threads = 10
-        Force = $false
-        GistName = "gist.md"
-        GistDir = $null
-        GitBranch = $null
-        RepoName = "AdmiringWorm/chocolatey-packages"
+$options = @{
+    Timeout = $env:au_timeout
+    Push    = $true
+    Threads = $env:au_threads
+    Force   = $false
 
-        Script = {
-            param($Phase, $Info)
-
-            If  ($Phase -ne "END") { return }
-
-            saveRunInfo -Info $Info;
-            If (($options.GistDir -ne $null) -and ($options.GistName -ne $null)) {
-                saveGist -Options $options -Info $Info;
+    Mail = if ($env:mail_user) {
+            $enableSsl = $true
+            if ($env:mail_enablessl -eq 'false') {
+                $enableSsl = $false
             }
 
-            If (($options.GitBranch -ne $null)) {
-                saveGit -options $options -Info $Info;
+            @{
+                To        = $env:mail_user
+                Server    = $env:mail_server
+                UserName  = $env:mail_user
+                Password  = $env:mail_pass
+                Port      = $env:mail_port
+                EnableSsl = $enableSsl
             }
-        }
+           } else {}
+
+    Gist_ID = $Env:Gist_ID
+
+    Script = {
+        param($Phase, $Info)
+
+        if ($Phase -ne 'END') { return }
+
+        Save-RunInfo
+        Save-Gist
+        Save-Git
     }
-
-    $options = parseEnvironment -values $options;
-
-    If ($PSBoundParameters.ContainsKey("Force")) {
-        "Setting Force updated packages to $Force"
-        $options.Force = $Force;
-    }
-
-    If ($PSBoundParameters.ContainsKey("Push")) {
-        "Pushing Packages? $Push"
-        $options.Push = $Push;
-    }
-
-    printVariables -values $options;
-
-
-    try {
-        pushd "../automatic";
-        $ErrorActionPreference = "Continue";
-        Update-AUPackages -Name $Name -Options $options | ft -AutoSize
-        $global:updateall = Import-Clixml "update_info.xml"
-
-    } finally {
-        popd;
-    }
-
-    # Uncomment to fail the build on AppVeyor on any package error
-    #If ($updateall.error_count.total) { throw "Error during package update" }
-
-} finally {
-    popd;
 }
+
+if ($env:au_push -eq 'false') {
+  $options.Push = $false
+}
+
+if ($env:au_force -eq 'true') {
+  $options.Force = $true
+}
+
+cd $PSScriptRoot/../automatic
+
+Update-AUPackages -Name $Name -Options $options | ft
+$global:updateall = Import-CliXML $PSScriptRoot\..\automatic\update_info.xml
+
+#Uncomment to fail the build on AppVeyor on any package error
+#if ($updateall.error_count.total) { throw 'Errors during update' }
+
+cd $PSScriptRoot
