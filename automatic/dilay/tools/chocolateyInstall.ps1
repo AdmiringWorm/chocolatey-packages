@@ -2,9 +2,9 @@
 
 $packageName    = 'dilay'
 
-$url32          = ''
-$checksum32     = ''
-$checksumType32 = ''
+$url32          = 'https://github.com/abau/dilay/releases/download/1.5.0/dilay-1.5.0.msi'
+$checksum32     = '365a4538f109b8d5230c5eefffba2d309f7b272eb2017f66996e8be083a758a9'
+$checksumType32 = 'sha256'
 
 $packageArgs = @{
 	packageName   = $packageName
