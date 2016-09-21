@@ -51,4 +51,4 @@ build_script:
 
 artifacts:
 - path: automatic\update_info.xml
-- path: gist.md
+- path: automatic\gist.md

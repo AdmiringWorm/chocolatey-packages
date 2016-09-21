@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “O” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+		<id>dilay</id>
+		<title>Dilay</title>
+		<version>0.0</version>
+		<authors>abau</authors>
+		<owners>AdmiringWorm</owners>
+		<summary>a 3D sculpting application</summary>
+		<description>
+**Dilay** is a 3D sculpting application that provides an intuitive workflow using a number of powerful modeling tools.
+As each tool locally subdivides the mesh where more details are required, Dilay allows artists to rapidly create complex meshes.
+		</description>
+		<projectUrl>http://abau.org/dilay/</projectUrl>
+		<tags>3D sculpting qt admin</tags>
+		<copyright>2016 dilay abau</copyright>
+		<licenseUrl>https://github.com/abau/dilay/blob/master/LICENSE.txt</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/86d8c79c08e5535c335153cd7644fd3549622238/icons/dilay.png</iconUrl>
+		<dependencies>
+			<dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+		</dependencies>
+		<docsUrl>http://abau.org/dilay/manual.html</docsUrl>
+		<bugTrackerUrl>https://github.com/abau/dilay/issues</bugTrackerUrl>
+		<projectSourceUrl>https://github.com/abau/dilay</projectSourceUrl>
+		<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dilay</packageSourceUrl>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
