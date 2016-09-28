@@ -5,7 +5,7 @@ $(
     $GitHubUserRepo = $env:github_user_repo
 )
 
-[![](https://ci.appveyor.com/api/projects/status/9ipva7kgjigug2rn?svg=true)](https://ci.appveyor.com/project/$GitHubUserRepo/build/$Env:APPVEYOR_BUILD_NUMBER)
+[![](https://ci.appveyor.com/api/projects/status/github/$GitHubUserRepo?svg=true)](https://ci.appveyor.com/project/$GitHubUserRepo/build/$Env:APPVEYOR_BUILD_NUMBER)
 [![$pno](https://img.shields.io/badge/AU%20packages-$($pno)-red.svg)](#ok)
 [![$au](https://img.shields.io/badge/AU-$($au)-blue.svg)](https://www.powershellgallery.com/packages/AU)
 
