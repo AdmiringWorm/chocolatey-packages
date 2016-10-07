@@ -17,6 +17,6 @@ Thumbs.db
 .DS_Store
 
 update_info.xml
-gist.md
 
 au/update_vars.ps1
+au/Update-AUPackages*.md

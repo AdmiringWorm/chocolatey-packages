@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases = getLatestReleases -repoUser "Microsoft" -repoName "CodeContracts" -includePreRelease $false
+    $releases = getLatestReleases -repoUser "Microsoft" -repoName "CodeContracts" -includePreRelease $true
 
     $version = $releases.latestStable.Version;
     $url = $releases.latestStable.Assets | select -First 1

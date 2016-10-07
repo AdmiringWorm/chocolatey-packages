@@ -9,13 +9,11 @@ branches:
 
 environment:
   # au job parameters
-  au_timeout: 100
-  au_threads: 10
+  au_version:
   au_push: true
-  au_force: false
 
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
-  github_token:
+  github_api_key:
     secure: C+ODU/MgHUn2H+QTznSAaUipq9eZBWdgknp11GNX2rWkHacX7CgEQYkdHwPDIiuw
   github_user_repo: 'AdmiringWorm/chocolatey-packages'
 
@@ -35,12 +33,12 @@ init:
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
-- cup chocolatey -y
-#- "ruby -e \"require 'gist'; Gist.login! username: ENV['github_user'], password: ENV['github_pass'] if ENV['github_user'] \""
 - ps: |
     Install-PackageProvider -Name NuGet -Force
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    Install-Module au -Scope CurrentUser -MaximumVersion 2016.8.15
+    @params = @{ Name = 'au'}
+    if ( $Env:au_version -ne $null ) { $params.MaximumVersion = $Env:au_version }
+    Install-Module @params
     Get-Module au -ListAvailable | select Name, Version
 
 build_script:
@@ -50,5 +48,5 @@ build_script:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 artifacts:
-- path: automatic\update_info.xml
-- path: automatic\gist.md
+- path: au\update_info.xml
+- path: au\Update-AUPackages.md

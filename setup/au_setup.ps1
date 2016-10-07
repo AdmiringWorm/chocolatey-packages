@@ -1,26 +1,15 @@
-@"
-## Update Variables - AU
-#
-# This file is not checked in. It exists only locally.
-# These same settings should be verified with appveyor.yml
+# WMF 3/4 only
+if ($PSVersionTable.PSVersion -lt $(New-Object System.Version("5.0.0.0"))) {
+  choco install dotnet4.5.1 -y
+  choco upgrade powershell-packagemanagement --ignore-dependencies -y
+}
 
-# Job parameters
-`$env:au_timeout      = '100'
-`$env:au_threads      = '10'
-`$env:au_push         = 'true'
-`$env:au_force        = 'false'
-
-# Github credentials - used to save result to gist and to commit pushed packages to the git repository
-`$env:github_token    = 'YOUR_GITHUB_ACCESS_TOKEN_HERE'
-`$env:github_user_repo= 'AdmiringWorm/chocolatey-packages'  #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
-
-# Chocolatey API key - to push updated packages
-`$env:api_key         = 'YOUR_CHOCO_API_KEY_HERE'
-
-# ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
-`$env:gist_id         = '64ff175b4dcb279dcece41aa21adcbe2'
-"@ | Out-File $PSScriptRoot\..\au\update_vars.ps1 -NoClobber
-
+$refreshenv = Get-Command refreshenv -ea SilentlyContinue
+if ($refreshenv -ne $null -and $refreshenv.CommandType -ne 'Application') {
+  refreshenv # You need the Chocolatey profile installed for this to work properly (Choco v0.9.10.0+).
+} else {
+  Write-Warning "We detected that you do not have the Chocolatey PowerShell profile installed, which is necessary for 'refreshenv' to work in PowerShell."
+}
 
 Install-PackageProvider -Name NuGet -Force
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
