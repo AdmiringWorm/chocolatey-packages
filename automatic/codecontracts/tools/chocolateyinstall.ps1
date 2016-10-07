@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'CodeContracts'
-$url        = 'https://github.com/Microsoft/CodeContracts/releases/download/v1.9.10714.2/Contracts.devlab9ts.msi'
-$checksum   = '6a0bddc2bf87c8a7a9c4c23dc043d43c43f2d49ef90951585f5a0deb2d069315'
+$url        = 'https://github.com/Microsoft/CodeContracts/releases/download/v1.10.20606.1/Contracts.devlab9ts.msi'
+$checksum   = '5a2e44751a650a8442dfe1a41484e960b46eaa1a55b25672f6537a1d59015f5b'
 $checksumType = 'sha256'
 
 $packageArgs = @{
