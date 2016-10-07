@@ -36,7 +36,7 @@ install:
 - ps: |
     Install-PackageProvider -Name NuGet -Force
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    @params = @{ Name = 'au'}
+    $params = @{ Name = 'au'}
     if ( $Env:au_version -ne $null ) { $params.MaximumVersion = $Env:au_version }
     Install-Module @params
     Get-Module au -ListAvailable | select Name, Version
