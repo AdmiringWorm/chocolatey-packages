@@ -93,10 +93,7 @@ function Import-Package()
   $newInstallFile = $newInstallFile -replace "(validExitCodes\s*=\s*)@\(.*\)", "`$1@($validExitCodes)"
 
   $newInstallFile | Out-File -Encoding utf8 "$PSScriptRoot/$Name/tools/chocolateyInstall.ps1"
-}
-
-if (Test-Path "$Name") {
-  Remove-Item -Recurse -Force "$Name"
+  Copy-Item "$PSScriptRoot/_template/update.ps1" "$PSScriptRoot/$Name/update.ps1"
 }
 
 Import-Package -Name $Name -GithubRepository "AdmiringWorm/chocolatey-packages"
