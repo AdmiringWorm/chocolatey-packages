@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>codecontracts</id>
-    <version>1.9.10714.2</version>
+    <version>1.10.20606.1-rc2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codecontracts</packageSourceUrl>
     <owners>AdmiringWorm</owners>
 
