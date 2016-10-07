@@ -30,23 +30,12 @@ function New-Package{
     if (!(Test-Path _template)) { throw "Template for the packages not found" }
     cp _template $Name -Recurse
 
-    $nuspec = gc "$Name\template.nuspec"
-    rm "$Name\template.nuspec"
-	
-	$commitHash = git log -1 --format="%H" "../icons/$Name.png"
-	
-	If (!$commitHash) {
-		if (Test-Path "../icons/$Name.png") {
-			git add "../icons/$Name.png"
-			git commit -m "Added $Name Icon" "../icons/$Name.png"
-			$commitHash = git log -1 --format="%H" "../icons/$Name.png"
-		}
-	}
+    Move-Item "$Name/template.nuspec" "$Name/$Name.nuspec" -Force;
+    ./update-icons.ps1 -Name "$Name" -GithubRepository $GithubRepository;
+    $nuspec = gc -Encoding utf8 "$name/$Name.nuspec";
 
     Write-Verbose 'Fixing nuspec'
     $nuspec = $nuspec -replace '<id>.+',               "<id>$Name</id>"
-    #$nuspec = $nuspec -replace '<iconUrl>.+',          "<iconUrl>https://cdn.rawgit.com/$GithubRepository/master/$Name/icon.png</iconUrl>"
-	$nuspec = $nuspec -replace '<iconUrl>.+', "<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/$commitHash/icons/$Name.png</iconUrl>"
     $nuspec = $nuspec -replace '<packageSourceUrl>.+', "<packageSourceUrl>https://github.com/$GithubRepository/tree/master/automatic/$Name</packageSourceUrl>"
     $nuspec | Out-File -Encoding UTF8 "$Name\$Name.nuspec"
 

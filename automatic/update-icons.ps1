@@ -9,14 +9,12 @@ function Update-Icon()
 
   $nuspec = gc "$PSScriptRoot/$Name/$Name.nuspec" -Encoding utf8;
   $iconPath = "$PSScriptRoot/../icons/$Name.png";
-  $commitHash = git log -1 --format="%H" "$iconPath";
-
-  If (!$commitHash) {
-    if (Test-Path "$iconPath") {
-      git add "$iconPath";
-      git commit -m "Added $Name Icon" "$iconPath"
-    }
+  if ((git status $iconPath -s)) {
+    git add $iconPath
+    git commit -m "Added/Updated $Name Icon" "$iconPath"
   }
+
+  $commitHash = git log -1 --format="%H" "$iconPath";
 
   $nuspec = $nuspec -replace '<iconUrl>.+', "<iconUrl>https://cdn.rawgit.com/$GithubRepository/$commitHash/icons/$Name.png</iconUrl>"
   $nuspec | Out-File -Encoding utf8 "$PSScriptRoot/$Name/$Name.nuspec";
