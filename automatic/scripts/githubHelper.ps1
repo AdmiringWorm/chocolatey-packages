@@ -42,8 +42,8 @@ function getLatestReleases {
 
 	$headers = @{}
 
-	If (Test-Path Env:\github_token) {
-		$headers.Authorization = "token " + $env:github_token;
+	If (Test-Path Env:\github_access_token) {
+		$headers.Authorization = "token " + $env:github_access_token;
 	}
 
 	$response = Invoke-RestMethod -Uri $apiUrl -Headers $headers;

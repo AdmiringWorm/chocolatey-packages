@@ -22,13 +22,13 @@ $Options = [ordered]@{
 
     Gist = @{
         Id          = $Env:gist_id                          #Your gist id or leave empty for anonymous
-        ApiKey      = $Env:github_api_key                   #Your github api key
+        ApiKey      = $Env:github_access_token                   #Your github api key
         Path        = "$PSScriptRoot\Update-AUPackages.md"  #List of files to add to gist
     }
 
     Git = @{
         User     = ''                                       #Git username, leave empty if github api key is used
-        Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+        Password = $Env:github_access_token                      #Password if username is not empty, otherwise api key
     }
 
     RunInfo = @{

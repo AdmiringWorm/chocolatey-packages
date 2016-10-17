@@ -13,16 +13,10 @@ environment:
   au_push: true
 
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
-  github_api_key:
-    secure: C+ODU/MgHUn2H+QTznSAaUipq9eZBWdgknp11GNX2rWkHacX7CgEQYkdHwPDIiuw
   github_user_repo: 'AdmiringWorm/chocolatey-packages'
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   gist_id: 747b3ede98c9404e5cb6a399595e7ad1
-
-  # Chocolatey API key - to push updated packages
-  api_key:
-    secure: CzGGbCfsVKyCTbY193kYveGQDN5ilsyI30J3FYdo9+IpGsDwi/knjzBqCQbztIzY
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
