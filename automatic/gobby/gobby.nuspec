@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>gobby</id>
     <title>Gobby</title>
-    <version>0.0</version>
+    <version>0.5.0</version>
     <authors>aburgm</authors>
     <owners>AdmiringWorm</owners>
     <summary>Gobby is a multi-platform collaborative text editor. It allows multiple users to edit the same document together over the internet in real-time.</summary>
