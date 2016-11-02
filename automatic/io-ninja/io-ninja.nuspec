@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -9,7 +9,7 @@
     <title>IO Ninja</title>
     <authors>Tibbo Technology Inc</authors>
     <projectUrl>http://tibbo.com/ninja.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/70c9b63e17e976a00ef6d32fd1248c831d1ed5ec/icons/io-ninja.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/io-ninja.png</iconUrl>
     <copyright>2016 IO Ninja Tibbo</copyright>
     <docsUrl>http://tibbo.com/support.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->

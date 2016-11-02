@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
@@ -44,7 +44,7 @@ However if you wish to show your appreciation and support its development you ca
 		<copyright>1997-2012 Jordan Russell</copyright>
 		<licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/1788026ae41eb9a3922a8353070e68194ba85593/icons/innosetup.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
 		<dependencies>
 			<dependency id="chocolatey-uninstall.extension" version="1.1.0" />
 		</dependencies>

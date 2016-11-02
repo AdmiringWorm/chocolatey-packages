@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
@@ -21,7 +21,7 @@ If you’ve created a freeware application, or even if it’s a large and comple
 	<docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
 	<bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/cd925521b4087171c97a75a06634d0ae06be7aad/icons/inno-script-studio.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/inno-script-studio.png</iconUrl>
 	<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
 
     <dependencies>

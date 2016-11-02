@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “O” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
@@ -44,7 +44,7 @@ nicely into the GNOME desktop environment if you want it to.
     <copyright>Copyright © 2008-2014 Armin Burgmeier</copyright>
     <licenseUrl>https://github.com/gobby/gobby/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d90c26b878f630f9fa9212581c2d11929acb23da/icons/gobby.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/gobby.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
     </dependencies>

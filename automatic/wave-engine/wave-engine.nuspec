@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wave-engine</id>
@@ -8,7 +8,7 @@
     <title>Wave Engine</title>
     <authors>Wave Corporation</authors>
     <projectUrl>https://waveengine.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/cd925521b4087171c97a75a06634d0ae06be7aad/icons/wave-engine.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/wave-engine.png</iconUrl>
     <copyright>© 2016 WAVE CORPORATIONr</copyright>
     <licenseUrl>https://waveengine.net/Company#Legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
