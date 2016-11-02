@@ -31,7 +31,7 @@ function New-Package{
     cp _template $Name -Recurse
 
     Move-Item "$Name/template.nuspec" "$Name/$Name.nuspec" -Force;
-    ./update-icons.ps1 -Name "$Name" -GithubRepository $GithubRepository;
+    ../setup/Update-IconUrl.ps1 -Name "$Name" -GithubRepository $GithubRepository;
     $nuspec = gc -Encoding utf8 "$name/$Name.nuspec";
 
     Write-Verbose 'Fixing nuspec'
