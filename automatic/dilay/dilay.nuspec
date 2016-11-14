@@ -26,6 +26,9 @@ As each tool locally subdivides the mesh where more details are required, Dilay 
 		<bugTrackerUrl>https://github.com/abau/dilay/issues</bugTrackerUrl>
 		<projectSourceUrl>https://github.com/abau/dilay</projectSourceUrl>
 		<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dilay</packageSourceUrl>
+		<dependencies>
+		  <dependency id="chocolatey-core.extension" version="1.0" />
+		</dependencies>
 	</metadata>
 	<files>
 		<file src="tools\**" target="tools" />

@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $packageName    = 'innosetup'
 $url32          = 'http://files.jrsoftware.org/is/5/innosetup-5.5.9-unicode.exe'

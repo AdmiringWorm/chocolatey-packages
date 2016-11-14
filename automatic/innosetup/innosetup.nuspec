@@ -37,7 +37,8 @@ Inno Setup is a free installer for Windows programs. First introduced in 1997, I
 **Is it really free of charge, even for commercial use?**
 Yes, it may be used completely free of charge, even when deploying commercial applications.
 However if you wish to show your appreciation and support its development you can make a [donation](http://www.jrsoftware.org/isdonate.php).
-*(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software. There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
+*(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software.
+  There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
 		</description>
 		<projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
 		<tags>innosetup admin installer setup exe</tags>
@@ -46,7 +47,7 @@ However if you wish to show your appreciation and support its development you ca
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
 		<dependencies>
-			<dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+			<dependency id="chocolatey-core.extension" version="1.0" />
 		</dependencies>
 		<releaseNotes>http://www.jrsoftware.org/files/is5-whatsnew.htm</releaseNotes>
 		<docsUrl>http://www.jrsoftware.org/ishelp/</docsUrl>
