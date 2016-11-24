@@ -9,7 +9,7 @@ branches:
 
 environment:
   # au job parameters
-  au_version: 2016.9.25
+  au_version: 2016.11.5
   au_push: true
 
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
