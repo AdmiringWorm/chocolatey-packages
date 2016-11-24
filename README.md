@@ -5,4 +5,4 @@ Check current status [here](https://gist.github.com/AdmiringWorm/747b3ede98c9404
 
 **NOTE**
 
-The packages located in this repository will eventually be moved over to the [chocolatey-coreteampackages](https://github.com/chocolatey/chocolatey-coreteampackages)
+Most of packages located in this repository will eventually be moved over to the [chocolatey-coreteampackages](https://github.com/chocolatey/chocolatey-coreteampackages).
