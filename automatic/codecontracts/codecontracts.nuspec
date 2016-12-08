@@ -53,9 +53,9 @@ generated documentation pages have contract sections.
 out of date by more than a day or two, please contact the maintainer(s) and
 let them know the package is no longer updating correctly.
 </description>
-	<dependencies>
-	  <dependency id="chocolatey-core.extension" version="1.0" />
-	</dependencies>
+  <dependencies>
+    <dependency id="chocolatey-core.extension" version="1.0.2" />
+  </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

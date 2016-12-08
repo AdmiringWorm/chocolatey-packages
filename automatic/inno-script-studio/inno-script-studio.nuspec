@@ -18,15 +18,15 @@ If you’ve created a freeware application, or even if it’s a large and comple
     <projectUrl>https://www.kymoto.org/products/inno-script-studio</projectUrl>
     <tags>inno-script-studio admin installer script exe</tags>
     <copyright>Copyright © 2013 Kymoto Solutions</copyright>
-	<docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
-	<bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
+  <docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
+  <bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/inno-script-studio.png</iconUrl>
-	<packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
+  <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
 
     <dependencies>
       <dependency id="innosetup" version="5.5.9.20160928" />
-	  <dependency id="chocolatey-core.extension" version="1.0" />
+    <dependency id="chocolatey-core.extension" version="1.0.2" />
     </dependencies>
     <releaseNotes>https://www.kymoto.org/products/inno-script-studio/release-history</releaseNotes>
   </metadata>

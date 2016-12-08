@@ -46,7 +46,7 @@ nicely into the GNOME desktop environment if you want it to.
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/gobby.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.2" />
     </dependencies>
     <releaseNotes>https://github.com/gobby/gobby/blob/master/NEWS</releaseNotes>
     <docsUrl>https://github.com/gobby/gobby/wiki</docsUrl>
