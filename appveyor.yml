@@ -1,6 +1,6 @@
 version: '{build}'
 max_jobs: 1
-clone_depth: 5
+#clone_depth: 5
 branches:
   only:
   - master
@@ -9,9 +9,8 @@ branches:
 
 environment:
   # au job parameters
-  au_version: 2016.11.5
+  au_version: "2016.11.5"
   au_push: true
-
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
   github_user_repo: 'AdmiringWorm/chocolatey-packages'
 
@@ -21,6 +20,7 @@ environment:
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
 - git config --global user.name "Chocolatey"
+- git config --global core.safecrlf false
 - git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
 
@@ -29,20 +29,41 @@ install:
 - cmd: git lfs install
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
+- cmd: git --version
 - ps: |
-    Install-PackageProvider -Name NuGet -Force
-    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    $params = @{ Name = 'au'}
-    if ( $Env:au_version -ne $null ) { $params.MaximumVersion = $Env:au_version }
-    Install-Module @params
-    Get-Module au -ListAvailable | select Name, Version
+    git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au --branch $Env:au_version
+    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+
+- ps: |
+    "Build info"
+    '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
+    '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
+    '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
 
 build_script:
-- ps: .\au\update_all.ps1
-
-#on_finish:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-
+- ps: |
+    if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
+    if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
+        switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
+        {
+            '\[AU (.+?)\]'   { $forced = $Matches[1] }
+            '\[PUSH (.+?)\]' {
+                $packages = $Matches[1] -split ' '
+                Write-Host "PUSHING PACKAGES: $packages"
+                foreach ($package in $packages) {
+                    Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
+                    $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec"} | select -First 1 | % Directory
+                    if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
+                    pushd $package_dir; choco pack; Push-Package; popd
+                }
+                return
+            }
+        }
+    }
+    $ErrorActionPreference = 'Continue'
+    ./update_all.ps1 -ForcedPackages $forced
+    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 artifacts:
-- path: au\update_info.xml
-- path: au\Update-AUPackages.md
+- path: update_info.xml
+- path: Update-AUPackages.md
+- path: au_temp.zip
