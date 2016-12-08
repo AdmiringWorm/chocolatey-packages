@@ -28,7 +28,7 @@ install:
 - ps: $PSVersionTable
 - cmd: git --version
 - ps: |
-    git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au --branch $Env:au_version
+    git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au --branch $Env:au_version
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
 - ps: |
