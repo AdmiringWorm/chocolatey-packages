@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 import-module au
+import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $versionDirUrl = 'http://files.jrsoftware.org/is/';
 
