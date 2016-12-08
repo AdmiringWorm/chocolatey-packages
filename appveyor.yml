@@ -9,7 +9,7 @@ branches:
 
 environment:
   # au job parameters
-  au_version: "2016.11.5"
+  au_version: master
   au_push: true
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
   github_user_repo: 'AdmiringWorm/chocolatey-packages'
