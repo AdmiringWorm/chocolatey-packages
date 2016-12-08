@@ -3,12 +3,28 @@ import-module au
 
 $versionDirUrl = 'http://files.jrsoftware.org/is/';
 
+function global:au_BeforeUpdate {
+  Remove-Item "$PSScriptRoot\tools\*.msi"
+
+  $Latest.FileName = Get-WebFileName $Latest.URL32 "innosetup-unicode.msi"
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+  Get-WebFile $Latest.URL32 $filePath
+
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+}
+
 function global:au_SearchReplace {
 	@{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(file server\s*)\<.*\>" = "`${1}<$($Latest.Releases)>"
+      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"          = "`${1} $($Latest.Checksum32)"
+    }
+
 		".\tools\chocolateyInstall.ps1" = @{
-			"(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-			"(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+			"(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
 		}
     ".\innosetup.nuspec" = @{
       "(\<releaseNotes\>).*" = "`$1$($Latest.ReleaseNotesUrl)</releaseNotes>"
@@ -28,7 +44,7 @@ function global:au_GetLatest {
 	$version  = $url -split '[_-]|.exe' | select -Last 1 -Skip 2
   $releaseNotes = "http://www.jrsoftware.org/files/is$($versionReleaseDir.TrimEnd('/'))-whatsnew.htm"
 
-	return @{ URL32 = $url; Version = $version; ReleaseNotesUrl = $releaseNotes }
+	return @{ URL32 = $url; Version = $version; ReleaseNotesUrl = $releaseNotes ; Releases = ($versionDirUrl + $versionReleaseDir) }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

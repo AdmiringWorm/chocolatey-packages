@@ -29,3 +29,8 @@ if ($key.Count -eq 1) {
 	Write-Warning "Please alert package maintainer the following keys were matched:"
 	$key | % {Write-Warning "- $_.DisplayName"}
 }
+
+$appPathKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\"
+if (Test-Path "$appPathKey\ISCC.exe") { Remove-Item "$appPathKey\ISCC.exe" -Force }
+if (Test-Path "$appPathKey\$packageName.exe") { Remove-Item "$appPathKey\$packageName.exe" -Force }
+Uninstall-BinFile "ISCC"

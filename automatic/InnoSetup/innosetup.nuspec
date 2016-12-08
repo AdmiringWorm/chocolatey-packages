@@ -7,7 +7,7 @@
     <title>Inno Setup</title>
     <version>5.5.9.20160928</version>
     <authors>jrsoftware</authors>
-    <owners>vicneanschi AdmiringWorm</owners>
+    <owners>vicneanschi,AdmiringWorm</owners>
     <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>
     <description>
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
@@ -41,20 +41,20 @@ However if you wish to show your appreciation and support its development you ca
   There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
     </description>
     <projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
-    <tags>innosetup admin installer setup exe</tags>
+    <tags>innosetup admin installer setup exe foss</tags>
     <copyright>1997-2012 Jordan Russell</copyright>
     <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.2" />
-    </dependencies>
     <releaseNotes>http://www.jrsoftware.org/files/is5-whatsnew.htm</releaseNotes>
     <docsUrl>http://www.jrsoftware.org/ishelp/</docsUrl>
     <mailingListUrl>http://www.jrsoftware.org/ismail.php</mailingListUrl>
     <bugTrackerUrl>https://github.com/jrsoftware/issrc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/innosetup</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
