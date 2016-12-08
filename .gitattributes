@@ -3,3 +3,4 @@
 *.ps1 text eol=crlf
 
 *.png binary diff=exif
+*.msi filter=lfs diff=lfs merge=lfs -text

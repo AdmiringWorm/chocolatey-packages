@@ -19,12 +19,12 @@ if ($key.Count -eq 1) {
 			$file = ''
 		}
 
-	Uninstall-ChocolateyPackage `
-		-PackageName $packageName `
-		-FileType $installerType `
-		-SilentArgs "$silentArgs" `
-		-ValidExitCodes $validExitCodes `
-		-File "$file"
+    Uninstall-ChocolateyPackage `
+  	  -PackageName $packageName `
+  	  -FileType $installerType `
+  	  -SilentArgs "$silentArgs" `
+  	  -ValidExitCodes $validExitCodes `
+  	  -File "$file"
 	}
 } elseif ($key.Count -eq 0) {
 	Write-Warning "$packageName has already been uninstalled by other means."

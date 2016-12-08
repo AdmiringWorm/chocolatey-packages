@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks,
+you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dilay</id>
     <title>Dilay</title>
     <version>1.5.0</version>
@@ -13,15 +13,13 @@
 **Dilay** is a 3D sculpting application that provides an intuitive workflow using a number of powerful modeling tools.
 As each tool locally subdivides the mesh where more details are required, Dilay allows artists to rapidly create complex meshes.
     </description>
+    <releaseNotes>http://abau.org/dilay/index.html#news</releaseNotes>
     <projectUrl>http://abau.org/dilay/</projectUrl>
-    <tags>3D sculpting qt admin</tags>
+    <tags>3D sculpting qt admin foss cross-platform</tags>
     <copyright>2016 dilay abau</copyright>
     <licenseUrl>https://github.com/abau/dilay/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/dilay.png</iconUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.2" />
-    </dependencies>
     <docsUrl>http://abau.org/dilay/manual.html</docsUrl>
     <bugTrackerUrl>https://github.com/abau/dilay/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/abau/dilay</projectSourceUrl>
@@ -32,5 +30,6 @@ As each tool locally subdivides the mesh where more details are required, Dilay 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

@@ -1,26 +1,42 @@
 import-module au
+import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-. $PSScriptRoot\..\scripts\githubHelper.ps1
+$releases = "http://abau.org/dilay/download.html"
+
+function global:au_BeforeUpdate {
+  Remove-Item "$PSScriptRoot\tools\*.msi"
+
+  $Latest.FileName = Get-WebFileName $Latest.URL32 "dilay.msi"
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+  Get-WebFile $Latest.URL32 $filePath
+
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+}
 
 function global:au_SearchReplace {
 	@{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
+    }
+
 		".\tools\chocolateyInstall.ps1" = @{
-			"(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-			"(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-			"(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+			"(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
 		}
 	}
 }
 
 function global:au_GetLatest {
-	$releases = getLatestReleases -repoUser "abau" -repoName "dilay" -includePreRelease $false;
+	$download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-    $version = $releases.latestStable.Version;
-    $url = $releases.latestStable.Assets | select -First 1
+  $re = '\.msi$'
+  $url = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $version = $url -split '/' | select -last 1 -skip 1
 
-    $Latest = @{ URL32 = $url; Version = $version };
-
-    return $Latest;
+  @{ URL32 = $url; Version = $version };
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none -Force

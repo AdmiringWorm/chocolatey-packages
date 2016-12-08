@@ -25,6 +25,8 @@ init:
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_token):x-oauth-basic@github.com`n"
 
 install:
+- cmd: cinst git-lfs.install
+- cmd: git lfs install
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - ps: |
