@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\"
+$filePath = "$toolsDir\dilay-1.5.0.msi"
 
 $packageArgs = @{
 	packageName   = 'dilay'
