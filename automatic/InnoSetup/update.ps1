@@ -25,7 +25,7 @@ function global:au_SearchReplace {
     }
 
 		".\tools\chocolateyInstall.ps1" = @{
-			"(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
+			"(?i)(`"[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
 		}
     ".\innosetup.nuspec" = @{
       "(\<releaseNotes\>).*" = "`$1$($Latest.ReleaseNotesUrl)</releaseNotes>"

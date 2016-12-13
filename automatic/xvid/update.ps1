@@ -1,15 +1,30 @@
 import-module au
+import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = "https://www.xvid.com/download/"
 
+function global:au_BeforeUpdate {
+  Remove-Item "$PSScriptRoot\tools\*.exe"
+
+  $Latest.FileName = Get-WebFileName $Latest.URL32 "xvid.exe"
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32     = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+}
+
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(mirror on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)"
+      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
@@ -28,4 +43,4 @@ function global:au_GetLatest {
     return $Latest;
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
