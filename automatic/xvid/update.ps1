@@ -8,16 +8,17 @@ function global:au_BeforeUpdate {
 
   $Latest.FileName = Get-WebFileName $Latest.URL32 "xvid.exe"
   $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+  Get-WebFile $Latest.URL32 $filePath
 
   $Latest.ChecksumType32 = 'sha256'
-  $Latest.Checksum32     = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
 }
 
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(mirror on\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)"
+      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
       "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
@@ -37,7 +38,7 @@ function global:au_GetLatest {
 
     $Latest = @{
       Version = $version
-      URL = $url
+      URL32 = $url
     }
 
     return $Latest;
