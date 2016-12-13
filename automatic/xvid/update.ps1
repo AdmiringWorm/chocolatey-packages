@@ -29,7 +29,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing;
+    $download_page = Invoke-WebRequest -Uri $releases;
 
     $re = "Xvid.*\.exe";
     $url = $download_page.links | ? href -Match $re | select -First 1 -ExpandProperty href;
