@@ -2,15 +2,15 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer have been downloaded from their official mirror on <>
+The installer have been downloaded from their official mirror on <https://www.xvid.com/download/>
 this can be navigated to from the main page by following:
 
-1. Download <>
+1. Download <https://assets.xvid.com/assets/Xvid-1.3.4-20150621.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 88263578D2C3E2DC1E02116A1FB5D9238843B9D84AA371A0F5B32F1B2507524E
 
 File 'LICENSE.txt' is obtained from <http://websvn.xvid.org/cvs/viewvc.cgi/trunk/xvidcore/LICENSE?revision=851>
