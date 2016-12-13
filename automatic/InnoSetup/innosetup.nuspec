@@ -58,5 +58,6 @@ However if you wish to show your appreciation and support its development you ca
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+	<file src="legal\**" target="legal" />
   </files>
 </package>
