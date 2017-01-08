@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
-$packageName = ''
+$packageName = 'electrum-ltc.install'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName ''
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'Electrum-LTC*'
 
 if ($key.Count -eq 1) {
   $key | % {
