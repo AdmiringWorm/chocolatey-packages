@@ -18,5 +18,10 @@ Thumbs.db
 
 update_info.xml
 
-au/update_vars.ps1
-au/Update-AUPackages*.md
+update_vars.ps1
+Update-AUPackages*.md
+Update-Force-Test*.md
+Update-History.md
+setup/
+
+.vscode
