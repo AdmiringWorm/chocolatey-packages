@@ -17,8 +17,9 @@ function global:au_GetLatest {
   $re    = 'setup.*\.exe$'
   $url_i = $download_page.links | ? href -match $re | select -First 1 -expand href
   $url_i = $releases + $url_i
-  $re    = "portable.*\.exe$"
-  $url_p = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re    = ".*\.exe$"
+  $url_p = $download_page.links | ? { $_.href -match $re -and $_.href -notmatch "setup" -and $_.href -notmatch "portable" } `
+    | select -First 1 -expand href
   $url_p = $releases + $url_p
 
   $version  = $url_i -split '[-]|\.exe' | select -Last 1 -Skip 1

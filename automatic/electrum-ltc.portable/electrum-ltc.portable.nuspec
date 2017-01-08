@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>electrum-ltc.install</id>
-    <title>Electrum-LTC (Install)</title>
+    <id>electrum-ltc.portable</id>
+    <title>Electrum-LTC (Portable)</title>
     <version>0.0</version>
     <authors>Electrum Technologies GmbH</authors>
     <owners>AdmiringWorm</owners>
     <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
     <projectUrl>https://electrum-ltc.org/</projectUrl>
-    <tags>electrum-ltc admin cryptocurrency wallet litecoin</tags>
+    <tags>electrum-ltc cryptocurrency wallet litecoin</tags>
     <copyright>2013-2016 Electrum Technologies GmbH</copyright>
     <licenseUrl>https://github.com/pooler/electrum-ltc/blob/master/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -34,9 +34,6 @@ No waiting, no lengthy blockchain downloads and no syncing to the network.
 * **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
     </description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
