@@ -28,7 +28,7 @@ function New-Package{
     if ($Name -eq $null) { throw "Name can't be empty" }
     if (Test-Path $Name) { throw "Package with that name already exists" }
     if (!(Test-Path _template)) { throw "Template for the packages not found" }
-    $LowerName = $Name.ToLower()
+    $LowerName = $Name.ToLower() -replace ' ','-'
     cp _template $LowerName -Recurse
 
     Move-Item "$LowerName/template.nuspec" "$LowerName/$LowerName.nuspec" -Force;
@@ -37,7 +37,7 @@ function New-Package{
 
     Write-Verbose 'Fixing nuspec'
     $nuspec = $nuspec -replace '<id>.+',               "<id>$LowerName</id>"
-    $nuspec = $nuspec -replace '<title>.+',            "<id>$Name</id>"
+    $nuspec = $nuspec -replace '<title>.+',            "<title>$Name</title>"
     $nuspec = $nuspec -replace '<packageSourceUrl>.+', "<packageSourceUrl>https://github.com/$GithubRepository/tree/master/automatic/$LowerName</packageSourceUrl>"
     $nuspec | Out-File -Encoding UTF8 "$LowerName\$LowerName.nuspec"
 

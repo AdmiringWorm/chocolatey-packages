@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>electrum-ltc</id>
+    <title>Electrum-LTC</title>
+    <version>0.0</version>
+    <authors>Electrum Technologies GmbH</authors>
+    <owners>AdmiringWorm</owners>
+    <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
+    <projectUrl>https://electrum-ltc.org/</projectUrl>
+    <tags>electrum-ltc cryptocurrency wallet litecoin</tags>
+    <copyright>2013-2016 Electrum Technologies GmbH</copyright>
+    <licenseUrl>https://github.com/pooler/electrum-ltc/blob/master/LICENCE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/82feba9417e5f3a4b8747baa10559f7939ecbe33/icons/electrum-ltc.png</iconUrl>
+    <bugTrackerUrl>https://github.com/pooler/electrum-ltc/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/pooler/electrum-ltc</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/electrum-ltc.install</packageSourceUrl>
+    <description>
+Electrum-LTC is a simple, but powerful Litecoin wallet.
+A twelve-word security passphrase (or “seed”) leaves intruders stranded and your peace of mind intact.
+Keep it on paper, or in your head... and never worry about losing your litecoins to theft or hardware failure.
+No waiting, no lengthy blockchain downloads and no syncing to the network.
+
+## Features
+* **Use instantly:** Electrum doesn't download the blockchain or require your computer to sync with the network.
+  instead, it is maintained on a tamper-proof, remote server.
+* **Safe:** Your unique twelve word pass-phrase and private keys are never sent to the Electrum-LTC servers.
+  All information received from the server is verified using [Simplified Payment Verification (SPV)](https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients).
+* **Forgiving:** Never be concerned about losing your wallet! With your unique twelve-word seed, you can always recover and restore your wallet...
+  even if you sustain the worst of hardware and software failures.
+* **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
+* **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
+    </description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="electrum-ltc.install" version="[0.0]" />
+    </dependencies>
+  </metadata>
+</package>
