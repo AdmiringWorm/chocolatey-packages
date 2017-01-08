@@ -2,17 +2,22 @@ $ErrorActionPreference = 'Stop';
 
 $packageName = ''
 $softwareName = ''
-$installerType = 'EXE' 
+$installerType = 'EXE'
 
 $silentArgs = '/VERYSILENT'
 $validExitCodes = @(0)
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
+[array]$key = Get-UninstallRegistryKey -SoftwareName ''
 
 if ($key.Count -eq 1) {
-  $key | % { 
+  $key | % {
     $file = "$($_.UninstallString)"
+
+  $packageArgs = @{
+    packageName = $packageName
+    fileType    = 'EXE'
+  }
 
     Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `

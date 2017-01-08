@@ -28,34 +28,37 @@ function New-Package{
     if ($Name -eq $null) { throw "Name can't be empty" }
     if (Test-Path $Name) { throw "Package with that name already exists" }
     if (!(Test-Path _template)) { throw "Template for the packages not found" }
-    cp _template $Name -Recurse
+    $LowerName = $Name.ToLower()
+    cp _template $LowerName -Recurse
 
-    Move-Item "$Name/template.nuspec" "$Name/$Name.nuspec" -Force;
-    ../setup/Update-IconUrl.ps1 -Name "$Name" -GithubRepository $GithubRepository;
-    $nuspec = gc -Encoding utf8 "$name/$Name.nuspec";
+    Move-Item "$LowerName/template.nuspec" "$LowerName/$LowerName.nuspec" -Force;
+    ../setup/Update-IconUrl.ps1 -Name "$LowerName" -GithubRepository $GithubRepository;
+    $nuspec = gc -Encoding utf8 "$LowerName/$LowerName.nuspec";
 
     Write-Verbose 'Fixing nuspec'
-    $nuspec = $nuspec -replace '<id>.+',               "<id>$Name</id>"
-    $nuspec = $nuspec -replace '<packageSourceUrl>.+', "<packageSourceUrl>https://github.com/$GithubRepository/tree/master/automatic/$Name</packageSourceUrl>"
-    $nuspec | Out-File -Encoding UTF8 "$Name\$Name.nuspec"
+    $nuspec = $nuspec -replace '<id>.+',               "<id>$LowerName</id>"
+    $nuspec = $nuspec -replace '<title>.+',            "<id>$Name</id>"
+    $nuspec = $nuspec -replace '<packageSourceUrl>.+', "<packageSourceUrl>https://github.com/$GithubRepository/tree/master/automatic/$LowerName</packageSourceUrl>"
+    $nuspec | Out-File -Encoding UTF8 "$LowerName\$LowerName.nuspec"
 
     switch ($Type)
     {
         'Installer' {
             Write-Verbose 'Using installer template'
-            rm "$Name\tools\chocolateyInstallZip.ps1"
-            mv "$Name\tools\chocolateyInstallExe.ps1" "$Name\tools\chocolateyInstall.ps1"
+            rm "$LowerName\tools\chocolateyInstallZip.ps1"
+            mv "$LowerName\tools\chocolateyInstallExe.ps1" "$LowerName\tools\chocolateyInstall.ps1"
         }
         'Portable' {
             Write-Verbose 'Using portable template'
-            rm "$Name\tools\chocolateyInstallExe.ps1"
-            mv "$Name\tools\chocolateyInstallZip.ps1" "$Name\tools\chocolateyInstall.ps1"
+            rm "$LowerName\tools\chocolateyInstallExe.ps1"
+            mv "$LowerName\tools\chocolateyInstallZip.ps1" "$LowerName\tools\chocolateyInstall.ps1"
         }
     }
 
     Write-Verbose 'Fixing chocolateyInstall.ps1'
-    $installer = gc "$Name\tools\chocolateyInstall.ps1"
-    $installer -replace "(^[$]packageName\s*=\s*)('.*')", "`$1'$($Name)'" | sc "$Name\tools\chocolateyInstall.ps1"
+    $installer = gc "$LowerName\tools\chocolateyInstall.ps1"
+    $installer = $installer -replace "(?i)(^\s*softwareName\s*=\s*)('.*')", "`$1'$($Name)'"
+    $installer -replace "(?i)(^\s*packageName\s*=\s*)('.*')", "`$1'$($LowerName)'" | sc "$LowerName\tools\chocolateyInstall.ps1"
 }
 
 New-Package $Name $Type -GithubRepository AdmiringWorm/chocolatey-packages -Verbose
