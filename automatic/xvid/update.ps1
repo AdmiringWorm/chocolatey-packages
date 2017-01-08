@@ -4,16 +4,8 @@ import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 $releases = "https://www.xvid.com/download/"
 
 function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.exe"
-
-  $Latest.FileName = Get-WebFileName $Latest.URL32 "xvid.exe"
-  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-  Get-WebFile $Latest.URL32 $filePath
-
   $Latest.ChecksumType32 = 'sha256'
-  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
-
-  $Latest
+  Get-RemoteFiles -Purge
 }
 
 function global:au_SearchReplace {
@@ -25,7 +17,7 @@ function global:au_SearchReplace {
       "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
+      "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
     }
   }
 }

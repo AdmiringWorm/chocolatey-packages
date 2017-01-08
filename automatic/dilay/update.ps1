@@ -4,18 +4,12 @@ import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 $releases = "http://abau.org/dilay/download.html"
 
 function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.msi"
-
-  $Latest.FileName = Get-WebFileName $Latest.URL32 "dilay.msi"
-  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-  Get-WebFile $Latest.URL32 $filePath
-
   $Latest.ChecksumType32 = 'sha256'
-  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+  Get-RemoteFiles -Purge
 }
 
 function global:au_SearchReplace {
-	@{
+  @{
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
@@ -23,14 +17,14 @@ function global:au_SearchReplace {
       "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
     }
 
-		".\tools\chocolateyInstall.ps1" = @{
-			"(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
-		}
-	}
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
-	$download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re = '\.msi$'
   $url = $download_page.links | ? href -match $re | select -first 1 -expand href
