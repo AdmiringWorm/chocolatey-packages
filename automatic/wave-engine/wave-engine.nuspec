@@ -23,7 +23,7 @@ Wave Engine supports the same set of features in all its platforms to make it ea
 
 You also have a great set of extensions with the complete code on Github, to use WaveEngine with Kinect, OculusRift, Vuforia, Cardboard, Leapmotion and much more. </description>
   <dependencies>
-    <dependency id="gtksharp" version="2.12.38" />
+    <dependency id="gtksharp" version="2.12.42" />
     <dependency id="microsoft-build-tools" version="14.0.25420.1" />
     <dependency id="vcredist2012" version="11.0.61031" />
     <!-- <dependency id="directx" version="9.0.0.0" /> 'Broken when last tested -->

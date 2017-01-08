@@ -24,7 +24,7 @@ If you’ve created a freeware application, or even if it’s a large and comple
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
 
     <dependencies>
-      <dependency id="innosetup" version="5.5.9.20160928" />
+      <dependency id="innosetup" version="5.5.9.20161208" />
       <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
     <releaseNotes>https://www.kymoto.org/products/inno-script-studio/release-history</releaseNotes>
