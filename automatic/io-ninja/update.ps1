@@ -1,6 +1,6 @@
 import-module au
 
-$releases = "http://tibbo.com/ninja/downloads.html"
+$releases = "http://tibbo.com/api/downloads.json"
 
 function global:au_SearchReplace {
     @{
@@ -16,14 +16,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing;
+    $json_page = Invoke-RestMethod -Uri $releases -UseBasicParsing;
+
+    $id_item = $json_page.downloads | ? id -eq "ninja_windows_latest" | select -first 1 -expand groups
 
     $re = "ioninja-.*(x86|amd64)\.msi";
-    $url = $download_page.Links | ? href -Match $re | select -First 2 -ExpandProperty href;
+    $url = $id_item.files | ? file -match $re | select -first 2 -expand file
 
     $version = $url[0] -split '-' | select -Last 1 -Skip 1;
-    $url32 = 'http://tibbo.com' + $url[0];
-    $url64 = 'http://tibbo.com' + $url[1];
+    $url32 = $url[0];
+    $url64 = $url[1];
 
     $Latest = @{
         URL32 = $url32
