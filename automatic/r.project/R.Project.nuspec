@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
+    <id>R.Project</id>
+    <version>3.2.1</version>
+    <title>The R Project for Statistical Computing</title>
+    <authors>R Core Team</authors>
+    <owners>Elliando Dias AdmiringWorm</owners>
+    <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
+    <projectUrl>http://www.r-project.org</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages//icons/r.project.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The R Project for Statistical Computing</description>
+    <summary>R is a system for statistical computation and graphics. It consists of a language plus a
+    run-time environment with graphics, a debugger, access to certain system functions, and the ability
+    to run programs stored in script files</summary>
+    <releaseNotes />
+    <copyright>Copyright (C) 1989, 1991-2015 Free Software Foundation, Inc</copyright>
+    <tags>statistics</tags>
+  </metadata>
+</package>
