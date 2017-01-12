@@ -4,22 +4,22 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id></id>
-    <title></title>
     <version>0.0</version>
-    <authors></authors>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/</packageSourceUrl>
     <owners>AdmiringWorm</owners>
-    <summary></summary>
+    <title></title>
+    <authors></authors>
     <projectUrl></projectUrl>
-    <tags></tags>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/master/copyq/icon.png</iconUrl>
     <copyright></copyright>
     <licenseUrl></licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/master/copyq/icon.png</iconUrl>
+    <projectSourceUrl></projectSourceUrl>
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>
-    <projectSourceUrl></projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/</packageSourceUrl>
+    <tags></tags>
+    <summary></summary>
     <description>
     </description>
     <releaseNotes></releaseNotes>
