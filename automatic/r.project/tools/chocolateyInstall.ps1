@@ -1,19 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
 
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
 $packageArgs = @{
   packageName   = ''
-  fileType      = ''
+  fileType      = 'exe'
   softwareName  = ''
-
-  checksum      = ''
-  checksum64    = ''
-  checksumType  = ''
-  checksumType64= ''
-  url           = ''
-  url64bit      = ''
-
-  silentArgs    = "/VERYSILENT"
-  validExitCodes= @()
+  file          = "$toolsDir\"
+  silentArgs    = "/SILENT /NORESTART /SP- /SUPPRESSMSGBOXES"
+  validExitCodes= @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
