@@ -1,16 +1,26 @@
 ﻿import-module au
 
-$releases = ''
+$releases = 'https://cran.r-project.org/bin/windows/base/'
+$softwareName = 'R for Windows*'
+
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha256'
+  Get-RemoteFiles -FileNameBase $Latest.FileName32.TrimEnd('.exe') -DontAppendArch -Purge
+}
 
 function global:au_SearchReplace {
   @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
+    }
+
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-      "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(?i)(`"`[$]toolsDir\\).*`""      = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*softwareName\s*=\s*)'.*'"   = "`${1}'$softwareName'"
+      "(?i)(^\s*packageName\s*=\s*)'.*'" = "`${1}'$($Latest.PackageName)'"
     }
   }
 }
@@ -18,12 +28,18 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
 
-  $re    = ''
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re       = '\.exe$'
+  $fileName = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-  $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
+  $version  = $fileName -split '[\-]' | select -Last 1 -Skip 1
 
-  return @{ URL32 = $url; Version = $version }
+  return @{
+    URL32 = $releases + $fileName
+    Version = $version
+    FileName32 = $fileName
+    # Needed until https://github.com/chocolatey/choco/issues/1040 is fixed
+    PackageName = 'R.Project'
+  }
 }
 
-update
+update -ChecksumFor none
