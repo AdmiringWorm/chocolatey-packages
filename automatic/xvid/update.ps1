@@ -36,4 +36,13 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor none
+try {
+  update -ChecksumFor none
+} catch {
+  if ($_ -match 'NotFound.*\.exe$') {
+    Write-Host "Executable not found again"
+    'ignore'
+  } else {
+    throw $_
+  }
+}
