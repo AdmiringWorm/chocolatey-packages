@@ -37,8 +37,6 @@ function global:au_GetLatest {
     URL32 = $releases + $fileName
     Version = $version
     FileName32 = $fileName
-    # Needed until https://github.com/chocolatey/choco/issues/1040 is fixed
-    PackageName = 'R.Project'
   }
 }
 
