@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>asp.net-mvc-boilerplate</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/asp.net-mvc-boilerplate</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>ASP.NET MVC Boilerplate</title>
+    <authors>Rehan Saeed</authors>
+    <projectUrl>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/68aff5541c151e271ae0a93c6a210def569b7cc5/icons/asp.net-mvc-boilerplate.png</iconUrl>
+    <copyright>2017 ASP.NET MVC Boilerplate Rehan Saeed</copyright>
+    <licenseUrl>https://github.com/ASP-NET-MVC-Boilerplate/Templates/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate/issues</bugTrackerUrl>
+    <tags>asp.net-mvc-boilerplate admin mvc5 mvc6 visual-studio-extension development</tags>
+    <summary>A professional ASP.NET MVC template for building secure, fast, robust and adaptable
+web applications or sites. It provides the minimum amount of code required on top of
+the default MVC template provided by Microsoft.</summary>
+    <description>
+A professional ASP.NET MVC template for building secure, fast, robust and adaptable
+web applications or sites. It provides the minimum of code required on top of the
+default MVC	template provided by Microsoft. Find out more at
+[RehanSaeed.com](http://rehansaeed.com/asp-net-mvc-boilerplate/),
+[Github](https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate) or at
+[The Open Web Security Project (OWASP)](https://www.owasp.org/index.php/OWASP_ASP.NET_MVC_Boilerplate_Project).
+You can also follow me on Twitter at [@RehanSaeedUK](https://twitter.com/rehansaeeduk).
+
+
+**Please Note**: This is an automatically updated package. If you find it is
+out of date by more than a day or two, please contact the maintainer(s) and
+let them know the package is no longer updating correctly.
+    </description>
+    <releaseNotes>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate/blob/master/Source/Boilerplate.Vsix/Release%20Notes.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
