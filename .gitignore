@@ -25,3 +25,8 @@ Update-History.md
 setup/
 
 .vscode
+
+*.exe
+*.msi
+*.vsix
+*.zip
