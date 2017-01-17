@@ -4,13 +4,13 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>asp.net-mvc-boilerplate</id>
-    <version>0.0</version>
+    <version>5.0.0.121</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/asp.net-mvc-boilerplate</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ASP.NET MVC Boilerplate</title>
     <authors>Rehan Saeed</authors>
     <projectUrl>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/68aff5541c151e271ae0a93c6a210def569b7cc5/icons/asp.net-mvc-boilerplate.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/da4c068353efc5072d22cfb58d224c858f0fb4da/icons/asp.net-mvc-boilerplate.png</iconUrl>
     <copyright>2017 ASP.NET MVC Boilerplate Rehan Saeed</copyright>
     <licenseUrl>https://github.com/ASP-NET-MVC-Boilerplate/Templates/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
