@@ -6,7 +6,7 @@ $filePath = "$toolsPath\ASP.NET%20MVC%20Boilerplate_x32.vsix"
 $vsixUrl =  "file://" + $filePath.Replace("\", "/")
 
 $parameters = @{
-    PackageName = "asp.net-mvc-boilerplate"
+    PackageName = 'asp-net-mvc-boilerplate'
     VsixUrl = $vsixUrl
 }
 

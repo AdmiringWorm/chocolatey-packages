@@ -15,7 +15,7 @@ function global:au_SearchReplace {
       "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
     'tools\chocolateyInstall.ps1' = @{
-      "(PackageName\s*=\s*)'.*'" = "`$1`"$($Latest.PackageName)`""
+      "(packageName\s*=\s*)'.*'" = "`$1'$($Latest.PackageName)'"
       "(^[$]filePath\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
     }
   }
