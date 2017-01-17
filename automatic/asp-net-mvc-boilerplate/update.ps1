@@ -9,7 +9,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(studio gallery\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
       "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
