@@ -39,7 +39,7 @@ function global:au_GetLatest {
 try {
   update -ChecksumFor none
 } catch {
-  if ($_ -match 'NotFound.*\.exe$') {
+  if ($_ -match "^Can't validate URL") {
     Write-Host "Executable not found again"
     'ignore'
   } else {
