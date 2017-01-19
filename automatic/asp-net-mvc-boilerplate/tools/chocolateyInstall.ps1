@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$filePath = "$toolsPath\ASP.NET%20MVC%20Boilerplate_x32.vsix"
+$filePath = "$toolsPath\asp-net-mvc-boilerplate.vsix"
 
 $vsixUrl =  "file://" + $filePath.Replace("\", "/")
 
