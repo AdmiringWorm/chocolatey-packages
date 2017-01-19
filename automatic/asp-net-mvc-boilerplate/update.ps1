@@ -3,7 +3,7 @@
 $releases = 'https://marketplace.visualstudio.com/items?itemName=RehanSaeed.ASPNETMVCBoilerplate'
 
 function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge
+  Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName -DontAppendArch
 }
 
 function global:au_SearchReplace {
