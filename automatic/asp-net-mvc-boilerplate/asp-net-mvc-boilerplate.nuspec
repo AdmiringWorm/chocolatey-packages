@@ -4,12 +4,12 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>asp-net-mvc-boilerplate</id>
-    <version>5.0.0.121</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/asp.net-mvc-boilerplate</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ASP.NET MVC Boilerplate</title>
     <authors>Rehan Saeed</authors>
-    <projectUrl>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate</projectUrl>
+    <projectUrl>http://rehansaeed.com/asp-net-mvc-boilerplate/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/da4c068353efc5072d22cfb58d224c858f0fb4da/icons/asp.net-mvc-boilerplate.png</iconUrl>
     <copyright>2017 ASP.NET MVC Boilerplate Rehan Saeed</copyright>
     <licenseUrl>https://github.com/ASP-NET-MVC-Boilerplate/Templates/blob/master/LICENSE</licenseUrl>
@@ -29,10 +29,18 @@ default MVC	template provided by Microsoft. Find out more at
 [The Open Web Security Project (OWASP)](https://www.owasp.org/index.php/OWASP_ASP.NET_MVC_Boilerplate_Project).
 You can also follow me on Twitter at [@RehanSaeedUK](https://twitter.com/rehansaeeduk).
 
-
-**Please Note**: This is an automatically updated package. If you find it is
-out of date by more than a day or two, please contact the maintainer(s) and
-let them know the package is no longer updating correctly.
+The main benefits of using this template are:
+- Security
+- Performance
+- Search Engine Optimization (SEO)
+- Accessibility
+- Browser Compatibility
+- Resilience and Error Handling
+- Easier Debugging and Performance Testing Tools
+- Patterns and Practices
+- Atom Feed
+- Search
+- Social Media Support
     </description>
     <releaseNotes>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate/blob/master/Source/Boilerplate.Vsix/Release%20Notes.txt</releaseNotes>
   </metadata>
