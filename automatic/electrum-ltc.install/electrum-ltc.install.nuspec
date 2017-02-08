@@ -35,7 +35,7 @@ No waiting, no lengthy blockchain downloads and no syncing to the network.
     </description>
     <releaseNotes>https://github.com/pooler/electrum-ltc/blob/2.6.4.2/RELEASE-NOTES</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
   </metadata>
   <files>

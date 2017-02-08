@@ -52,7 +52,7 @@ In addition, because its scanning is performed in the cloud, your PC's performan
 designed to co-exist with any existing anti-malware platform already running on your PC.
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
   </metadata>
   <files>

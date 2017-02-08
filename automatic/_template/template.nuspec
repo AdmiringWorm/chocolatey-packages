@@ -24,7 +24,7 @@
     </description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
   </metadata>
   <files>

@@ -53,7 +53,7 @@ However if you wish to show your appreciation and support its development you ca
     <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/innosetup</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
   </metadata>
   <files>

@@ -27,7 +27,7 @@ You also have a great set of extensions with the complete code on Github, to use
     <dependency id="microsoft-build-tools" version="14.0.25420.1" />
     <dependency id="vcredist2012" version="11.0.61031" />
     <!-- <dependency id="directx" version="9.0.0.0" /> 'Broken when last tested -->
-    <dependency id="chocolatey-core.extension" version="1.0.4" />
+    <dependency id="chocolatey-core.extension" version="1.0.6" />
   </dependencies>
   </metadata>
   <files>
