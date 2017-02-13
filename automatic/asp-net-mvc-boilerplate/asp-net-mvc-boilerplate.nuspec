@@ -4,7 +4,7 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>asp-net-mvc-boilerplate</id>
-    <version>5.0.0.121</version>
+    <version>5.1.0.156</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/asp.net-mvc-boilerplate</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ASP.NET MVC Boilerplate</title>
