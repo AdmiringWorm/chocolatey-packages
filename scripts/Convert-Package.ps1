@@ -4,11 +4,11 @@
   [Parameter(Position = 1, Mandatory = $true)]
   [string]$ReleaseUrl,
   [string]$RootDirectory = "$PSScriptRoot\..\automatic",
-  [string]$KetarinDirectory = "$PSScriptRoot\..\ketarin",
   [string]$IconsDirectory   = "$PSScriptRoot\..\icons",
   [switch]$Embedd,
   [string]$BranchName = $PackageName,
-  [switch]$RunUpdate
+  [switch]$RunUpdate,
+  [switch]$RegisterApp
 )
 
 function yesno {
@@ -105,7 +105,6 @@ if (!($branches -match "^\*?\s*$BranchName$")) {
 }
 
 $RootDirectory = Resolve-Path $RootDirectory
-$KetarinDirectory = Resolve-Path $KetarinDirectory
 $IconsDirectory = Resolve-Path $IconsDirectory
 
 $packagePath = Get-ChildItem -Directory -Path $RootDirectory -Filter "$PackageName"
@@ -123,7 +122,6 @@ if (!$iconPath) {
 $package = @{
   DirectoryPath = $packagePath.FullName
   NuspecPath    = Get-ChildItem -File -Path $packagePath.FullName -Filter "$PackageName.nuspec" | % FullName
-  KetarinFile   = Get-ChildItem -File -Path $KetarinDirectory -Filter "$PackageName.ketarin.xml" | % FullName
   IconPath      = $iconPath
 }
 
@@ -186,12 +184,6 @@ if ($oldNuspec.package.metadata.version -match "^[\d\.]+$") {
 
 
 
-# Remove the ketarin file
-if ($package.KetarinFile -and (Test-Path $package.KetarinFile)) {
-  Write-Host "Removing ketarin file"
-  . git rm "$($package.KetarinFile)"
-  . git commit -m "($id) Ketarin file removed" -- "$($package.KetarinFile)"
-}
 
 if ($package.IconPath -and $package.IconPath.EndsWith(".png") -and (Get-Command pngquant)) {
   if (yesno "Do you wish to optimize icon using pngquant") {
@@ -227,9 +219,9 @@ Add-Element $newNuspec "packageSourceUrl" $metadata $packageSourceUrl | Out-Null
 $existingOwners = $oldNuspec.package.metadata.owners -split '[ ,]'
 
 if (!$existingOwners) {
-  $existingOwners = @('chocolatey')
-} elseif($existingOwners[0] -ne 'chocolatey') {
-  $existingOwners = @('chocolatey') + $existingOwners
+  $existingOwners = @('AdmiringWorm')
+} elseif($existingOwners[0] -ne 'AdmiringWorm') {
+  $existingOwners = @('AdmiringWorm') + $existingOwners
 }
 
 Add-Element $newNuspec "owners" $metadata ($existingOwners -join ', ') | Out-Null
@@ -620,8 +612,17 @@ if ($instalScript) {
       $writer.WriteLine('$filePath = "$toolsPath\"')
     }
   }
+  if ($RegisterApp)
+  {
+    $writer.WriteLine("`$packageName = '$packageName'")
+    $writer.WriteLine('')
+  }
   $writer.WriteLine('$packageArgs = @{')
-  $writer.WriteLine("  packageName    = '$packageName'")
+  if ($RegisterApp) {
+    $writer.WriteLine('  packageName    = $packageName')
+  } else {
+    $writer.WriteLine("  packageName    = '$packageName'")
+  }
 
   if ($package.FileType -ne 'zip') {
    $writer.WriteLine("  fileType       = '$($installData.fileType)'")
@@ -677,6 +678,18 @@ if ($instalScript) {
     $writer.WriteLine('Install-ChocolateyPackage @packageArgs')
   }
 
+  if ($RegisterApp) {
+    $writer.WriteLine("")
+    $writer.WriteLine('$installLocation = Get-AppInstallLocation $packageArgs.softwareName')
+    $writer.WriteLine('if ($installLocation) {')
+    $writer.WriteLine('  Write-Host "$packageName installed to ''$installLocation''"')
+    $writer.WriteLine('  Register-Application "$installLocation\$packageName.exe"')
+    $writer.WriteLine('  Write-Host "$packageName registered as $packageName"')
+    $writer.WriteLine('} else {')
+    $writer.WriteLine('  Write-Warning "Can''t find $PackageName install location"')
+    $writer.WriteLine('}')
+  }
+
   [System.IO.File]::WriteAllText($path, $writer.ToString(), $BOMEncoding)
 }
 
@@ -726,28 +739,43 @@ if ($uninstallScript) {
   $writer = New-Object System.IO.StringWriter
   $writer.WriteLine("`$ErrorActionPreference = 'Stop';")
   $writer.WriteLine('')
-  $writer.WriteLine("`$packageName = ''")
+  $writer.WriteLine('$packageArgs = @{')
+  $writer.WriteLine('  packageName   = $env:ChocolateyPackageName')
+  $writer.WriteLine("  softwareName  = ''")
+  $writer.WriteLine("  fileType      = '$($uninstallData.fileType)'")
+  if ($uninstallData.fileType -eq 'msi') {
+    $writer.WriteLine("  silentArgs    = `"`$(`$_.PSChildName) $($uninstallData.silentArgs)`"")
+  } else {
+    $writer.WriteLine("  silentArgs    = '$($uninstallData.silentArgs)'")
+  }
+  $writer.WriteLine("  validExitCodes= @($($uninstallData.validExitCodes -join ','))")
+  $writer.WriteLine('}')
   $writer.WriteLine("")
   $writer.WriteLine('$uninstalled = $false')
   $writer.WriteLine('')
 
-  $writer.WriteLine("[array]`$key = Get-UninstallRegistryKey -SoftwareName ''")
+  $writer.WriteLine("[array]`$key = Get-UninstallRegistryKey @packageArgs")
   $writer.WriteLine('')
   $writer.WriteLine('if ($key.Count -eq 1) {')
   $writer.WriteLine('  $key | % {')
-  $writer.WriteLine('    $packageArgs = @{')
-  $writer.WriteLine('      packageName = $packageName')
-  $writer.WriteLine("      fileType    = '$($uninstallData.fileType)'")
+
   if ($uninstallData.fileType -eq 'msi') {
-    $writer.WriteLine("      silentArgs  = `"`$(`$_.PSChildName) $($uninstallData.silentArgs)`"")
-    $writer.WriteLine("      file        = ''")
+    $writer.WriteLine("    `$packageArgs['silentArgs'] = `"`$(`$_.PSChildName) `$(`$packageArgs['silentArgs'])`"")
+    $writer.WriteLine("    `$packageArgs['file'] = ''")
   } else {
-    $writer.WriteLine("      silentArgs  = '$($uninstallData.silentArgs)'")
-    $writer.WriteLine('      file        = "$($_.UninstallString)"')
+    $writer.WriteLine("    `$packageArgs['file'] = `"`$(`$_.UninstallString)`"")
   }
-  $writer.WriteLine('    }')
+
   $writer.WriteLine('')
   $writer.WriteLine('    Uninstall-ChocolateyPackage @packageArgs')
+
+  if ($RegisterApp -and $uninstallData.fileType -eq 'exe') {
+    $writer.WriteLine('')
+    $writer.WriteLine('    $regKey ="HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\$($packageArgs[''packageName'']).exe"')
+    $writer.WriteLine('    if (Test-Path $regKey) {')
+    $writer.WriteLine('      Remove-Item $regKey -Force -ea 0')
+    $writer.WriteLine('    }')
+  }
   $writer.WriteLine('  }')
   $writer.WriteLine('} elseif ($key.Count -eq 0) {')
   $writer.WriteLine('  Write-Warning "$packageName has already been uninstalled by other means."')
