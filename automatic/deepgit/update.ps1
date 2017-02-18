@@ -1,29 +1,50 @@
-﻿import-module au
+﻿Import-Module AU
+cd $PSScriptRoot
 
-$releases = ''
+$domain       = 'https://www.syntevo.com'
+$packagePage  = "$domain/deepgit"
+$releases     = "$packagePage/download"
+$softwareName = 'DeepGit'
+
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha512'
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
+}
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-      "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+    ".\tools\chocolateyInstall.ps1"   = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)^(\s*url\s*=\s*)'.*'"          = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)(\-SoftwareName\s+)'.*'"       = "`${1}'$softwareName'"
     }
   }
 }
-
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = ''
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re = '\.zip$'
+  $url = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $packagePage + $_.TrimStart('.') }
 
-  $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
+  $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
 
-  return @{ URL32 = $url; Version = $version }
+  $re = 'static.*\.zip$'
+  $url = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+
+  $version = $url -split 'jre\-|\.zip' | select -last 1 -skip 1
+  $version = $version -replace '_','.'
+  if ($version -match '^\d+$') {
+    $version += ".0"
+  }
+
+  @{
+    URL32 = $url
+    Version = $version
+  }
 }
 
-update
+update -ChecksumFor none
