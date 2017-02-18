@@ -21,9 +21,7 @@ function global:au_BeforeUpdate {
   $licenseOutput = "$PSScriptRoot\legal\LICENSE.txt"
   Remove-Item $licenseOutput
   Invoke-WebRequest -UseBasicParsing -Uri "$($json.download_url)" -OutFile "$licenseOutput"
-  if ((gc $licenseOutput -Encoding UTF8) -match "GNU General Public License") {
-    $Latest.LicenseUrl = "https://github.com/$owner/$repo/blob/$sha/$path"
-  } else {
+  if (!((gc $licenseOutput -Encoding UTF8) -match "GNU General Public License")) {
     throw "License type have changed, please verify it still allows distribution"
   }
 }
@@ -35,7 +33,6 @@ function global:au_SearchReplace {
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
-      "(?i)(LICENSE\.txt.*)\<.*\>"        = "`${1}<$($Latest.LicenseUrl)>"
     }
     ".\tools\chocolateyInstall.ps1"   = @{
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
