@@ -28,9 +28,9 @@ $options = [ordered]@{
         Path = "$PSScriptRoot\Update-Force-Test-${n}.md"      #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
-            NoAppVeyor  = $true                             #  Markdown: do not show AppVeyor build shield
+            NoAppVeyor  = $false                             #  Markdown: do not show AppVeyor build shield
             Title       = "Update Force Test - Group ${n}"
-            UserMessage = "[Update report](https://gist.github.com/$Env:gist_id) | [Build](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages-xnxcr) | **USING AU CUSTOM VERSION**"       #  Markdown, Text: Custom user message to show
+            UserMessage = "[Update report](https://gist.github.com/$Env:gist_id) | **USING AU CUSTOM VERSION**"       #  Markdown, Text: Custom user message to show
         }
     }
 
@@ -40,6 +40,25 @@ $options = [ordered]@{
         Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"       #List of files to add to the gist
         Description = "Update Force Test Report #powershell #chocolatey"
     }
+
+    RunInfo = @{
+        Exclude = 'password', 'apikey', 'UserName', 'To'    #Option keys which contain those words will be removed
+        Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
+    }
+
+    Mail = if ($Env:mail_user) {
+            @{
+                To          = $Env:mail_user
+                Server      = $Env:mail_server
+                UserName    = $Env:mail_user
+                Password    = $Env:mail_pass
+                Port        = $Env:mail_port
+                EnableSsl   = $Env:mail_enablessl -eq 'true'
+                Attachment = "$PSScriptRoot\update_info.xml"
+                UserMessage = ''
+                SendAlways  = $false                        #Send notifications every time
+             }
+           } else {}
 }
 
 

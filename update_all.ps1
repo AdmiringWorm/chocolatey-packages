@@ -17,7 +17,7 @@ $Options = [ordered]@{
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo          #  Markdown: shows user info in upper right corner
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
-            UserMessage = "[History](#update-history) | **USING AU Custom**" #  Markdown, Text: Custom user message to show
+            UserMessage = "[Weekly Test Results](https://gist.github.com/$Env:gist_id_test) | [History](#update-history) | **USING AU Custom**" #  Markdown, Text: Custom user message to show
             NoIcons     = $false
             IconSize    = 32
             Title       = ''
@@ -42,7 +42,7 @@ $Options = [ordered]@{
     }
 
     RunInfo = @{
-        Exclude = 'password', 'apikey'                      #Option keys which contain those words will be removed
+        Exclude = 'password', 'apikey', 'UserName', 'To'    #Option keys which contain those words will be removed
         Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
     }
 
