@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resxtranslator</id>
-    <version>0.0</version>
+    <version>2.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/resxtranslator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Resx Resource Translator</title>
     <authors>Hakan Lindestaf</authors>
     <projectUrl>https://github.com/HakanL/resxtranslator</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png</iconUrl>
     <licenseUrl>https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/HakanL/resxtranslator</projectSourceUrl>
@@ -40,7 +40,7 @@ The rows that are red means one or more languages are missing values. I have a s
 These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
     </description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/HakanL/resxtranslator/releases/tag/v2.2</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.0" version="4.0" />
       <dependency id="chocolatey-core.extension" version="1.0.7" />
