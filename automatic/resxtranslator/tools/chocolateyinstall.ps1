@@ -29,3 +29,7 @@ if ($pp.CreateDesktopIcon) {
 }
 
 Remove-Item $packageArgs.file -Force
+
+Get-ChildItem $toolsPath -Filter "*.exe" | % {
+  New-Item "$($_.FullName).gui" -ItemType File
+}
