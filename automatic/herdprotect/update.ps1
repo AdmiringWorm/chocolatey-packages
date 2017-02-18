@@ -34,4 +34,13 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor none
+try {
+  update -ChecksumFor none
+} catch {
+  if ($_ -match "Invalid Version") {
+    Write-Host "No version was found, ignoring..."
+    "ignore"
+  } else {
+    throw $_
+  }
+}
