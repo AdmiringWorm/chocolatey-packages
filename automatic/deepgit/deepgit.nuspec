@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>deepgit</id>
-    <version>0.0</version>
+    <version>1.0.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/deepgit</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DeepGit (Install)</title>
     <authors>syntevo</authors>
     <projectUrl>https://www.syntevo.com/deepgit/download</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7dde21b3f1e1dd5d27ce9e387b2a0da2ee7004fb/icons/deepgit.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7dde21b3f1e1dd5d27ce9e387b2a0da2ee7004fb/icons/deepgit.png</iconUrl>
     <licenseUrl>https://www.syntevo.com/deepgit/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.syntevo.com/doc/display/DG/Manual</docsUrl>
