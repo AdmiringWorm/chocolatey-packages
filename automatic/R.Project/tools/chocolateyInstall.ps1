@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = 'R.Project'
   fileType      = 'exe'
   softwareName  = 'R for Windows*'
-  file          = "$toolsDir\R-3.3.2-win.exe"
+  file          = "$toolsDir\R-3.3.3-win.exe"
   silentArgs    = "/SILENT /NORESTART /SP- /SUPPRESSMSGBOXES"
   validExitCodes= @(0)
 }
