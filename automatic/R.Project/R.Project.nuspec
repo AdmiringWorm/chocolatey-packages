@@ -4,7 +4,7 @@
     <id>R.Project</id>
     <version>3.3.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
-    <owners>zippy1981,yoshimov,jeffmoser,AdmiringWorm</owners>
+    <owners>AdmiringWorm,zippy1981,yoshimov,jeffmoser</owners>
     <title>The R Project for Statistical Computing</title>
     <authors>R Core Team</authors>
     <projectUrl>http://www.r-project.org</projectUrl>

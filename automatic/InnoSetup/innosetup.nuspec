@@ -7,7 +7,7 @@
     <title>Inno Setup</title>
     <version>5.5.9.20161208</version>
     <authors>jrsoftware</authors>
-    <owners>vicneanschi,AdmiringWorm</owners>
+    <owners>AdmiringWorm,vicneanschi</owners>
     <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>
     <description>
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
