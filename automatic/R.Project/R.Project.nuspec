@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>R.Project</id>
-    <version>3.3.3</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm,zippy1981,yoshimov,jeffmoser</owners>
     <title>The R Project for Statistical Computing</title>
@@ -16,7 +16,7 @@
     <docsUrl>https://cran.r-project.org/manuals.html</docsUrl>
     <mailingListUrl>https://www.r-project.org/mail.html</mailingListUrl>
     <bugTrackerUrl>https://bugs.r-project.org/bugzilla3/</bugTrackerUrl>
-    <tags>r-project admin statistics programming data-analysis programming-language mathematics data-mining
+    <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining
     statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
     <summary>R is a language and environment for statistical computing and graphics</summary>
     <description>
