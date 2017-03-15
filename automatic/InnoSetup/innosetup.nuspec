@@ -51,7 +51,7 @@ However if you wish to show your appreciation and support its development you ca
     <mailingListUrl>http://www.jrsoftware.org/ismail.php</mailingListUrl>
     <bugTrackerUrl>https://github.com/jrsoftware/issrc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/innosetup</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/InnoSetup</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
