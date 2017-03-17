@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName  = 'Wave Engine'
-$url          = 'https://wave.blob.core.windows.net/waveinstallers/WaveEngineSetup_2_3_0.exe'
-$checksum     = '4ede0aa748ebb2f28385b6331205079a6753fa98beee09fc834221327ac159f8'
+$url          = 'https://wave.blob.core.windows.net/waveinstallers/WaveEngineSetup_2_3_1.exe'
+$checksum     = 'a0ac361dcd60eef9180ac836aa7b8b382b65f357e2c6d5db5b1489b8d8ccd597'
 $checksumType = 'sha256'
 
 $packageArgs = @{
