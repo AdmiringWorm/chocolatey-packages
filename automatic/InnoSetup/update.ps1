@@ -6,7 +6,7 @@ $versionDirUrl = 'http://files.jrsoftware.org/is/';
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
-  Get-RemoteFiles -Purge -DontAppendArch
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {

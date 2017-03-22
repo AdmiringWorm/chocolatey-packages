@@ -5,7 +5,7 @@ $releases = "http://abau.org/dilay/download.html"
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
-  Get-RemoteFiles -Purge -DontAppendArch
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {

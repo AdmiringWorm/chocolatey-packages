@@ -6,7 +6,7 @@ $releases = "$domain/HakanL/resxtranslator/releases/latest"
 $licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
 
 function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -DontAppendArch
+  Get-RemoteFiles -Purge -NoSuffix
 
   # Lets download the latest url
   $Matches = $null

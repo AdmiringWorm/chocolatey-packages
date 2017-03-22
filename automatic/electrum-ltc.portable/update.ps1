@@ -11,7 +11,7 @@ function global:au_BeforeUpdate {
     New-Item -ItemType Directory "$PSScriptRoot\tools"
   }
 
-  Get-RemoteFiles -Purge -DontAppendArch -FileNameBase 'electrum-ltc'
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase 'electrum-ltc'
 }
 
 function global:au_SearchReplace {

@@ -5,7 +5,7 @@ $softwareName = 'R for Windows*'
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
-  Get-RemoteFiles -FileNameBase $Latest.FileName32.TrimEnd('.exe') -DontAppendArch -Purge
+  Get-RemoteFiles -FileNameBase $Latest.FileName32.TrimEnd('.exe') -NoSuffix -Purge
 }
 
 function global:au_SearchReplace {

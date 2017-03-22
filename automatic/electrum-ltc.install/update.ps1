@@ -7,7 +7,7 @@ function global:au_BeforeUpdate {
   $Latest.URL32 = $Latest.URL_I
   $Latest.ChecksumType32 = 'sha256'
 
-  Get-RemoteFiles -Purge -DontAppendArch
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
