@@ -2,7 +2,7 @@
 
 $packageName  = 'Wave Engine'
 $url          = 'https://wave.blob.core.windows.net/waveinstallers/WaveEngineSetup_2_3_1.exe'
-$checksum     = 'a0ac361dcd60eef9180ac836aa7b8b382b65f357e2c6d5db5b1489b8d8ccd597'
+$checksum     = '00be934ad571fe408d78a9711417079b6513bafb9c68da8b988cf7b1e3bef3c7'
 $checksumType = 'sha256'
 
 $packageArgs = @{
