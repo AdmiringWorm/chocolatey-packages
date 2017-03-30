@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wave-engine</id>
-    <version>2.3.1</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/wave-engine</packageSourceUrl>
     <owners>Kim Nordmo</owners>
     <title>Wave Engine</title>
