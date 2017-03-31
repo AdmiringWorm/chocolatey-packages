@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>enki</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/enki</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Enki</title>
+    <authors>Andrei Kopats</authors>
+    <projectUrl>http://enki-editor.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/de3a93bc8d9c35cdec568ae6041f7b882f07a032/icons/enki.png</iconUrl>
+    <copyright>Copyright (C) 2012 Andrei Kopats</copyright>
+    <licenseUrl>https://github.com/andreikop/enki/blob/master/LICENSE.GPL2</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/andreikop/enki</projectSourceUrl>
+    <docsUrl>https://github.com/hlamer/enki/wiki/User-manual</docsUrl>
+    <bugTrackerUrl>https://github.com/hlamer/enki/issues</bugTrackerUrl>
+    <tags>enki admin editor text-editor code-editor</tags>
+    <summary>A text editor for programmers.</summary>
+    <description>
+Enki is a text editor for programmers. It is:
+
+- **User friendly.** Intuitive interface. Works out of the box. You don't have to read a lot of docs.
+- **Hacker friendly.** Works as quickly as possible. Navigate efficiently without your mouse.
+- **Advanced.** You invent software. An editor helps you focus on inventing, instead of fighting with your tools.
+- **Extensible.** Operating systems are designed for running applications. Enki is designed for running plugins.
+- **Cross platform.** Use your habitual editor on any OS. Tested on Linux and WIndows. Users report that Enki works on Mac OS X.
+- **High quality.** No long list of fancy features. But, what is done, is done well.
+- **Open source.** Created, tested, and designed for community, by the community, and with the community.
+- [More Features](http://enki-editor.org/features.html)
+    </description>
+    <releaseNotes>https://github.com/andreikop/enki/releases</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
