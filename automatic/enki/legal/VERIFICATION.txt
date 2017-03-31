@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/andreikop/enki/releases>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://github.com/andreikop/enki/releases/download/v16.04.1/Install_Enki.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: EF1C799591E520DB95DC1B3C05528E5A3D104BA9027B4DEF340F5D85B3977FC1
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/andreikop/enki/blob/73baac5e1dc3be6dbad0b1210750caf5c7c9cae9/LICENSE.GPL2>

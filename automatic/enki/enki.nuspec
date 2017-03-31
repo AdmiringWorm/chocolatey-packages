@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>enki</id>
-    <version>0.0</version>
+    <version>16.04.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/enki</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Enki</title>
     <authors>Andrei Kopats</authors>
     <projectUrl>http://enki-editor.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/de3a93bc8d9c35cdec568ae6041f7b882f07a032/icons/enki.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/de3a93bc8d9c35cdec568ae6041f7b882f07a032/icons/enki.png</iconUrl>
     <copyright>Copyright (C) 2012 Andrei Kopats</copyright>
     <licenseUrl>https://github.com/andreikop/enki/blob/master/LICENSE.GPL2</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
