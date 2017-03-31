@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>enki</id>
-    <version>16.04.1</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/enki</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Enki</title>
@@ -31,9 +31,6 @@ Enki is a text editor for programmers. It is:
 - [More Features](http://enki-editor.org/features.html)
     </description>
     <releaseNotes>https://github.com/andreikop/enki/releases</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2.0" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
