@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The extension has been downloaded from visual studio gallery <https://marketplace.visualstudio.com/items?itemName=RehanSaeed.ASPNETMVCBoilerplate>
 and can be verified like this:
 
-1. Download <https://rehansaeed.gallerycdn.vsassets.io/extensions/rehansaeed/aspnetmvcboilerplate/5.1.1.158/1487015706524/148517/117/ASP.NET%20MVC%20Boilerplate.vsix>
+1. Download <https://rehansaeed.gallerycdn.vsassets.io/extensions/rehansaeed/aspnetmvcboilerplate/6.0.0.226/1491495609616/148517/118/ASP.NET%20MVC%20Boilerplate.vsix>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: D2E9E41863C669AE16F82804A504D8DCA6F696A3DC793689F98AC49F8E2CF4FF
+  checksum: 9EA54A098D2EB933613582DEFDBC0E855D5C11F110E4E8B6DD391503EB4C28B3
 
 File 'LICENSE.txt' is obtained from <https://github.com/ASP-NET-MVC-Boilerplate/Templates/blob/5107cde3811f49b3ada1c2dfc8197cee2a2a71f3/LICENSE>
