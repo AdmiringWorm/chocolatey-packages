@@ -36,6 +36,7 @@ $arguments = @{
   UseBasicParsing = $true
   Uri = $WebHook
   ContentType = 'application/x-www-form-urlencoded'
+  Method = 'Post'
 }
 
 "Submitting message to gitter."
