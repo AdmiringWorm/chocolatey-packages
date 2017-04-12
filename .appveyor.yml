@@ -18,6 +18,10 @@ environment:
   github_api_key:
     secure: pmwNf8f5uDVc1IdjM+mRpfMsYW6dieBT0znGf6NRUCjE+9LyWUYSQqVcRNPafSx6
 
+  # The gitter webhook to use to publish messages
+  gitter_webhook:
+    secure: IdcwkBrgIxM2NDj1oTyiuxWBAyCHs63PlFOtIe9qqXWFqJj/GmrkELVnRkH8NGHV/m7wRpUiJyctzHNFb5TuHg==
+
   mail_user:
     secure: XNJ3ZGH/Nr6Vd7Y5CNCTyISBPfWh8CYm6+htpmgQH+c=
   mail_pass:

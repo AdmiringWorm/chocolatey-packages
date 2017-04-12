@@ -9,7 +9,7 @@ $Options = [ordered]@{
     UpdateTimeout = 1200
     Threads    = 10                                         #Number of background jobs to use
     Push       = $Env:au_Push -eq 'true'                    #Push to chocolatey
-    PluginPath = ''                                         #Path to user plugins
+    PluginPath = 'scripts\au_plugins'                       #Path to user plugins
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
@@ -39,6 +39,10 @@ $Options = [ordered]@{
     Git = @{
         User     = ''                                       #Git username, leave empty if github api key is used
         Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+    }
+
+    Gitter = @{
+        WebHook = $Env:gitter_webhook
     }
 
     RunInfo = @{
