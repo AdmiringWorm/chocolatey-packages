@@ -1,8 +1,9 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+cd "$PSScriptRoot"
 
 $domain   = 'https://github.com'
-$releases = "$domain/HakanL/resxtranslator/releases/tag/v2.1"
+$releases = "$domain/HakanL/resxtranslator/releases/tag/v2.0"
 $licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
 
 function global:au_BeforeUpdate {
@@ -50,7 +51,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
 
-  $re = 'signed\.zip$'
+  $re = 'archive\.zip$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_}
   $re = '\/releases\/tag\/v[\d\.]+$'
   $releaseUrl = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
