@@ -2,7 +2,7 @@
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $domain   = 'https://github.com'
-$releases = "$domain/HakanL/resxtranslator/releases/latest"
+$releases = "$domain/HakanL/resxtranslator/releases/tag/v2.0"
 $licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
 
 function global:au_BeforeUpdate {
@@ -57,6 +57,7 @@ function global:au_GetLatest {
 
   $verRe = '\/'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+
   @{
     URL32 = $url32
     Version = $version32.TrimStart('v')
