@@ -1,4 +1,6 @@
 version: '{build}'
+pull_requests:
+  do_not_increment_build_number: true
 max_jobs: 1
 #clone_depth: 5
 branches:
@@ -41,10 +43,9 @@ init:
 - git config --global core.safecrlf false
 
 install:
-- cmd: git lfs install
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
-- cmd: git --version
+- git --version
 - ps: |
     git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au --branch $Env:au_version
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
@@ -57,7 +58,15 @@ install:
 
 build_script:
 - ps: |
+    $ErrorActionPreference = 'Continue'
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
+    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
+      ./scripts/Test-RepoPackage.ps1 -CleanFiles -TakeScreenshots
+      return
+    } else {
+      # Clean the choco logs as it's quite large
+      rm "$env:ChocolateyInstall\logs\*.log"
+    }
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
@@ -75,10 +84,12 @@ build_script:
             }
         }
     }
-    $ErrorActionPreference = 'Continue'
     ./update_all.ps1 -ForcedPackages $forced
-    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
-artifacts:
-- path: update_info.xml
-- path: Update-AUPackages.md
-- path: au_temp.zip
+
+on_finish:
+- ps: |
+    7z a -mx9 choco_logs.7z "$Env:ChocolateyInstall\logs\*"
+    Push-AppveyorArtifact choco_logs.7z
+    if (Test-Path $Env:TEMP\chocolatey\au) { 7z a -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* ; Push-AppveyorArtifact au_temp.7z }
+    if (Test-Path update_info.xml) { Push-AppveyorArtifact update_info.xml }
+    if (Test-Path Update-AUPackages.md) { Push-AppveyorArtifact Update-AUPackages.md }
