@@ -3,7 +3,7 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 cd "$PSScriptRoot"
 
 $domain   = 'https://github.com'
-$releases = "$domain/HakanL/resxtranslator/releases/tag/v2.0"
+$releases = "$domain/HakanL/resxtranslator/releases/tag/v2.1"
 $licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
 
 function global:au_BeforeUpdate {
