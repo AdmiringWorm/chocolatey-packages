@@ -14,8 +14,12 @@ function global:au_BeforeUpdate {
   $owner = $Matches[1]
   $repo  = $Matches[2]
   $path  = $Matches[3]
+  $headers = @{}
+	if (Test-Path Env:\github_api_key) {
+		$headers.Authorization = "token " + $env:github_api_key;
+	}
 
-  $json = Invoke-RestMethod -UseBasicParsing "https://api.github.com/repos/$owner/$repo/contents/$path"
+  $json = Invoke-RestMethod -UseBasicParsing "https://api.github.com/repos/$owner/$repo/contents/$path" -Headers $headers
   $sha  = $json.sha
 
   $licenseOutput = "$PSScriptRoot\legal\LICENSE.txt"
