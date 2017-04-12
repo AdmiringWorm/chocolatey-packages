@@ -1,5 +1,7 @@
 # Automatic Chocolatey Packages built by appveyor
 
+[![Join the chat at https://gitter.im/wormie-packages/Lobby](https://badges.gitter.im/wormie-packages/Lobby.svg)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![](https://ci.appveyor.com/api/projects/status/github/AdmiringWorm/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/AdmiringWorm/chocolatey-packages)
 [![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
 [![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg)](https://chocolatey.org/profiles/AdmiringWorm)
