@@ -36,10 +36,10 @@ $Options = [ordered]@{
         Path        = "$PSScriptRoot\Update-AUPackages.md","$PSScriptRoot\Update-History.md"  #List of files to add to gist
     }
 
-    #Git = @{
-    #    User     = ''                                       #Git username, leave empty if github api key is used
-    #    Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-    #}
+    Git = @{
+        User     = ''                                       #Git username, leave empty if github api key is used
+        Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+    }
 
     Gitter = @{
         WebHook = $Env:gitter_webhook
