@@ -23,4 +23,10 @@ function global:au_GetLatest {
     return $Latest;
 }
 
-update -ChecksumFor 32
+try {
+  update -ChecksumFor 32
+} catch {
+  if ($_ -match 'Could not establish trust relationship') {
+    "ignore"
+  } else { throw $_ }
+}
