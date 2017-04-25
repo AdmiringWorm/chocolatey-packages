@@ -190,7 +190,8 @@ function GetPackagesFromDiff() {
     if ($_.StartsWith('..')) {
       $path = Split-Path -Parent $_
     } else {
-      $path = Split-Path -Parent (Resolve-Path -Relative "$PSScriptRoot\..\$_")
+      $root = Resolve-Path "$PSScriptRoot\.." -Relative
+      $path = Split-Path -Parent "$root\$_"
     }
     while ($path -and !(Test-Path "$path\*.nuspec")) {
       $path = Split-Path -Parent $path
@@ -311,11 +312,7 @@ function RunChocoProcess() {
     '--yes'
     "--execution-timeout=$timeout"
   )
-  if ($arguments[0] -eq 'install') {
-    $args += @(
-      '--requirechecksum'
-    )
-  } else {
+  if ($arguments[0] -eq 'uninstall') {
     $args += @(
       '--all-versions'
       '--autouninstaller'
@@ -328,6 +325,17 @@ function RunChocoProcess() {
 
   try {
     RunChocoPackProcess '' | WriteChocoOutput
+    if ($arguments[0] -eq 'install') {
+      $packageName = $arguments[1] -split ' ' | select -first 1
+      $nupkgFile = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName*.nupkg" -Recurse | select -first 1
+      $version = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' } | select -last 1
+      if ($version) {
+        $args += @("--version=$($version)")
+        if ($version -match '\-') {
+          $args += @('--prerelease')
+        }
+      }
+    }
     $failureOccurred = $false
     $previousPercentage = -1;
     $progressRegex = 'Progress\:.*\s+([\d]+)\%'
