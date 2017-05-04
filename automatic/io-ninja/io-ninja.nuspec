@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>io-ninja</id>
-    <version>3.7.0</version>
+    <version>3.7.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>IO Ninja</title>
     <authors>Tibbo Technology Inc</authors>
     <projectUrl>http://tibbo.com/ninja.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/io-ninja.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/0c8c850712fdea352e78af671cf43a9f53160453/icons/io-ninja.png</iconUrl>
     <copyright>2016 IO Ninja Tibbo</copyright>
     <docsUrl>http://tibbo.com/support.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->

@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'IO Ninja'
-$url32          = 'http://tibbo.com/downloads/archive/ioninja/ioninja-3.7.0/ioninja-windows-3.7.0-x86.msi'
-$url64          = 'http://tibbo.com/downloads/archive/ioninja/ioninja-3.7.0/ioninja-windows-3.7.0-amd64.msi'
-$checksum32     = 'f723a57877bfbe2d39db1185afba78109f9ffcdb4b7af9ecf794a490e3b57f5a'
-$checksum64     = 'cd8be7dad1e85938ff4843e1ec4f6794680b5c08eb97964d7133a1f69e8e20d0'
+$url32          = 'http://tibbo.com/downloads/archive/ioninja/ioninja-3.7.2/ioninja-windows-3.7.2-x86.msi'
+$url64          = 'http://tibbo.com/downloads/archive/ioninja/ioninja-3.7.2/ioninja-windows-3.7.2-amd64.msi'
+$checksum32     = 'b7cc8869dc13c7508f336133305ea8ed3aa0d15dd0359d8fe96cf009082f2342'
+$checksum64     = '857d53dc022e3173d60cda334d74fb88c42bd6e514732460dfee2dff7fd8a390'
 $checksumType32 = 'sha256'
 $checksumType64 = 'sha256'
 
