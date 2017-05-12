@@ -36,9 +36,13 @@
   The amount of seconds to sleep after installing/uninstalling a package
   and before taking the screenshot.
 
-.PARAMETER screenShotDir
-  The directory to where the scrip should save all taken screenshots.
+.PARAMETER artifactsDirectory
+  The directory to where the script should save all artifacts (screenshots, logs, etc).
   (The directory does not need to exist before running the script)
+
+.PARAMETER runChocoWithAu
+  When specified we uses AU's Test-Package function instead of installing directly
+  with choco (NOTE: No validation is done by itself in this case)
 
 .EXAMPLE
   .\Test-RepoPackage.ps1
@@ -51,8 +55,65 @@ param(
   [switch]$TakeScreenshots,
   [int]$chocoCommandTimeout = 600,
   [int]$timeoutBeforeScreenshot = 1,
-  [string]$screenShotDir = "$env:TEMP\screenshots"
+  [string]$artifactsDirectory = "$env:TEMP\artifacts",
+  [switch]$runChocoWithAu
 )
+
+function CheckPackageSizes() {
+  $nupkgFiles = Get-ChildItem "$PSScriptRoot\.." -Filter "*.nupkg" -Recurse
+
+  $nupkgFiles | % {
+    $size = $_.Length
+    $maxSize = 150 * 1024 *1024
+    $packageName = $_.Directory.Name
+    if ($size -gt $maxSize) {
+      $friendlySize = $size / 1024 / 1024
+      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 150 MB. Actual size was $friendlySize MB!"
+      SetAppveyorExitCode -ExitCode 2
+    } else {
+      $index = 0
+      $suffix = @('Bytes';'KB';'MB')
+      $friendlySize = $size
+      while ($friendlySize -ge 1024 -and $index -lt ($suffix.Count - 1)) { $index++; $friendlySize /= 1024 }
+      $friendlySize = "{0:N2} {1}" -f $friendlySize,$suffix[$index]
+      WriteOutput "The size of the package $packageName was $friendlySize."
+    }
+  }
+}
+
+function CreateSnapshotArchive() {
+  param($packages, [string]$artifactsDirectory)
+
+  if (!(Get-Command 7z.exe -ea 0)) { WriteOutput -type Warning "7zip was not found in path, skipping creation of 7zip archive."; return }
+
+  if (!(Test-Path $artifactsDirectory)) { mkdir $artifactsDirectory }
+  $directories = $packages | ? {
+    Test-path "$env:ChocolateyInstall\.chocolatey\$($_.Name)*"
+  } | % {
+    $directory = Resolve-Path "$env:ChocolateyInstall\.chocolatey\$($_.Name)*" | select -last 1
+    "`"$directory`""
+  }
+
+  $arguments = @(
+    'a'
+    '-mx9'
+    "`"$artifactsDirectory\install_snapshot.7z`""
+  ) + $directories
+
+  . 7z $arguments
+}
+
+function CreateLogArchive() {
+  param([string]$artifactsDirectory)
+
+  $arguments = @(
+    'a'
+    '-mx9'
+    "`"$artifactsDirectory\choco_logs.7z`""
+    "`"$env:ChocolateyInstall\logs\*`""
+  )
+  . 7z $arguments
+}
 
 function WriteOutput() {
 <#
@@ -89,8 +150,8 @@ function WriteChocoOutput() {
   begin {}
   process {
     switch -Regex ($text) {
-      '^\s*ERROR|\s*Failures|^Uninstall may not be silent' { WriteOutput $text -type ChocoError }
-      '^\s*WARNING' { WriteOutput $text -type ChocoWarning }
+      '(^|==\>.*\:)\s*ERROR|\s*Failures|^Uninstall may not be silent' { WriteOutput $text -type ChocoError }
+      '(^|==\>.*\:)\s*WARNING' { WriteOutput $text -type ChocoWarning }
       Default { WriteOutput $text -type ChocoInfo }
     }
   }
@@ -274,21 +335,6 @@ function SetAppveyorExitCode() {
   }
 }
 
-function UploadAppveyorArtifact() {
-<#
-.SYNOPSIS
-  Uploads the specified filePaths to appveyor when a appveyor build
-  is currently running.
-#>
-  param(
-    [string[]]$filePaths
-  )
-
-  if (Test-Path env:\APPVEYOR) {
-    $filePaths | ? { Test-Path $_ } | % { Push-AppveyorArtifact $_ -FileName (Split-Path -Leaf $_)}
-  }
-}
-
 function RunChocoProcess() {
 <#
   Function responsible for running choco install/uninstall
@@ -382,7 +428,6 @@ function RunChocoProcess() {
       # We take a screenshot when install/uninstall have finished to see if a program have started that isn't monitored by choco
       $filePath = "$screenShotDir\$($arguments[0])_$($arguments[1]).jpg"
       Take-ScreenShot -file $filePath -imagetype jpeg
-      UploadAppveyorArtifact $errorFilePath,$filePath
     }
   }
   return $res
@@ -464,6 +509,32 @@ function TestAuUpdatePackages() {
   }
 }
 
+function RunUpdateScripts {
+  param(
+    $packages
+  )
+  [array]$manualPackages = $packages | ? { !$_.IsAutomatic -and (Test-Path "$($_.Directory)\update.ps1") }
+  # Currently we do not support dependent packages
+  if (!$manualPackages) {
+    WriteOutput "No manual packages that contain an update script"
+    return
+  }
+
+  $manualPackages | % {
+    $name = $_.Name
+    WriteOutput "Running update.ps1 for $name"
+    try {
+      pushd $_.Directory
+      .\update.ps1
+    } catch {
+      SetAppveyorExitCode 1
+      throw "An exception ocurred during the manual update of $name. Cancelling all other checks."
+    } finally {
+      popd
+    }
+  }
+}
+
 function TestInstallAllPackages() {
 <#
 .SYNOPSIS
@@ -486,13 +557,16 @@ function TestInstallAllPackages() {
 
   $packages | % {
     pushd $_.Directory
-    InstallPackage `
-      -package $_ `
-      -chocoCommandTimeout $chocoCommandTimeout `
-      -screenshotTimeout $screenshotTimeout `
-      -takeScreenshot $takeScreenshot `
-      -screenShotDir $screenShotDir
-    MoveLogFile -packageName $_.Name -commandType 'install'
+    if ($runChocoWithAu) { Test-Package -Install | WriteChocoOutput }
+    else {
+      InstallPackage `
+        -package $_ `
+        -chocoCommandTimeout $chocoCommandTimeout `
+        -screenshotTimeout $screenshotTimeout `
+        -takeScreenshot $takeScreenshot `
+        -screenShotDir $screenShotDir
+      MoveLogFile -packageName $_.Name -commandType 'install'
+    }
     popd
   } | ? { $_ -ne $null -and $_ -ne '' }
 }
@@ -575,13 +649,16 @@ function TestUninstallAllPackages() {
       return ""
     } else {
       pushd $_.Directory
-      UninstallPackage `
-        -package $_ `
-        -chocoCommandTimeout $chocoCommandTimeout `
-        -screenshotTimeout $screenshotTimeout `
-        -takeScreenshot $takeScreenshot `
-        -screenShotDir $screenShotDir
-      MoveLogFile -packageName $name -commandType 'uninstall'
+      if ($runChocoWithAu) { Test-Package -Uninstall | WriteChocoOutput }
+      else {
+        UninstallPackage `
+          -package $_ `
+          -chocoCommandTimeout $chocoCommandTimeout `
+          -screenshotTimeout $screenshotTimeout `
+          -takeScreenshot $takeScreenshot `
+          -screenShotDir $screenShotDir
+        MoveLogFile -packageName $name -commandType 'uninstall'
+      }
       popd
     }
   } | ? { $_ -ne $null -and $_ -ne '' }
@@ -596,7 +673,7 @@ if ($packageName) {
 $packages = RemoveDependentPackages -packages $packages
 
 if ($CleanFiles) {
-    CleanFiles -screenShotDir $screenShotDir
+    CleanFiles -screenShotDir $artifactsDirectory
 }
 
 if (!$packages) {
@@ -610,26 +687,21 @@ $arguments = @{
   chocoCommandTimeout = $chocoCommandTimeout
   takeScreenshot = $TakeScreenshots
   screenShotTimeout = $timeoutBeforeScreenshot
-  screenShotDir = $screenShotDir
+  screenShotDir = $artifactsDirectory
 }
 
-switch -Exact ($type) {
-  'update' {
-    TestAuUpdatePackages -packages $packages
-  }
-  'install' {
-    [array]$failedInstalls = TestInstallAllPackages @arguments
-  }
-  'uninstall' {
-    [array]$failedUninstalls = TestUninstallAllPackages @arguments
-   }
-   'none' { WriteOutput "No tests is being run." }
-  Default {
-    TestAuUpdatePackages -packages $packages
-    [array]$failedInstalls = TestInstallAllPackages @arguments
-    [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
-  }
+if (@('all','update').Contains($type)) {
+  TestAuUpdatePackages -packages $packages
+  RunUpdateScripts -packages $packages
 }
+if (@('all','install').Contains($type)) {
+  [array]$failedInstalls = TestInstallAllPackages @arguments
+  if (!$runChocoWithAu) { CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory }
+} else { $failedInstalls = @() }
+if (@('all','uninstall').Contains($type)) {
+  [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
+}
+if (@('all','install','uninstall').Contains($type) -and !$runChocoWithAu) { CreateLogArchive $artifactsDirectory }
 
 if ($failedInstalls.Count -gt 0) {
   WriteOutput "The following packages failed to install:" -type ChocoWarning
@@ -639,3 +711,5 @@ if ($failedUninstalls.Count -gt 0) {
   WriteOutput "The following packages failed to uninstall:" -type ChocoWarning
   WriteOutput "    $($failedUninstalls -join ' ')" -type ChocoWarning
 }
+
+CheckPackageSizes
