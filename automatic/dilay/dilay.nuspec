@@ -13,7 +13,10 @@ you should use an editor that supports UTF-8, not this one. -->
 **Dilay** is a 3D sculpting application that provides an intuitive workflow using a number of powerful modeling tools.
 As each tool locally subdivides the mesh where more details are required, Dilay allows artists to rapidly create complex meshes.
     </description>
-    <releaseNotes>http://abau.org/dilay/index.html#news</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://abau.org/dilay/index.html#news)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/dilay/Changelog.md)
+</releaseNotes>
     <projectUrl>http://abau.org/dilay/</projectUrl>
     <tags>3D sculpting qt admin foss cross-platform</tags>
     <copyright>2016 dilay abau</copyright>
