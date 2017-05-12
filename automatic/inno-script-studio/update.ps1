@@ -1,6 +1,12 @@
 ﻿import-module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://www.kymoto.org/products/inno-script-studio/downloads"
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
+}
 
 function global:au_SearchReplace {
     @{
