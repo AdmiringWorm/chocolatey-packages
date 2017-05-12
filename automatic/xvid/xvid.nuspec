@@ -42,7 +42,10 @@ Xvid is *"lossy"* compression but aims at removing just those picture details th
 perception.
 As such, it be seen as a MP3 for video.
 </description>
-    <releaseNotes>https://labs.xvid.com/source/#Release</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://labs.xvid.com/source/#Release)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/xvid/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>

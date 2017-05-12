@@ -1,11 +1,16 @@
 import-module au
-import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://www.xvid.com/download/"
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
   Get-RemoteFiles -Purge -NoSuffix
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 function global:au_SearchReplace {
