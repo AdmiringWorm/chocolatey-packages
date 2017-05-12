@@ -1,9 +1,15 @@
 ﻿import-module au
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://marketplace.visualstudio.com/items?itemName=RehanSaeed.ASPNETMVCBoilerplate'
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName -DontAppendArch
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -Version $Latest.Version
 }
 
 function global:au_SearchReplace {

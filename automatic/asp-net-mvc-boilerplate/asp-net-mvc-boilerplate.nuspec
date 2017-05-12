@@ -21,13 +21,7 @@
 web applications or sites. It provides the minimum amount of code required on top of
 the default MVC template provided by Microsoft.</summary>
     <description>
-A professional ASP.NET MVC template for building secure, fast, robust and adaptable
-web applications or sites. It provides the minimum of code required on top of the
-default MVC	template provided by Microsoft. Find out more at
-[RehanSaeed.com](http://rehansaeed.com/asp-net-mvc-boilerplate/),
-[Github](https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate) or at
-[The Open Web Security Project (OWASP)](https://www.owasp.org/index.php/OWASP_ASP.NET_MVC_Boilerplate_Project).
-You can also follow me on Twitter at [@RehanSaeedUK](https://twitter.com/rehansaeeduk).
+A professional ASP.NET MVC template for building secure, fast, robust and adaptable web applications or sites. It provides the minimum of code required on top of the default MVC	template provided by Microsoft. Find out more at [RehanSaeed.com](http://rehansaeed.com/asp-net-mvc-boilerplate/), [Github](https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate) or at [The Open Web Security Project (OWASP)](https://www.owasp.org/index.php/OWASP_ASP.NET_MVC_Boilerplate_Project). You can also follow me on Twitter at [@RehanSaeedUK](https://twitter.com/rehansaeeduk).
 
 The main benefits of using this template are:
 - Security
@@ -41,8 +35,11 @@ The main benefits of using this template are:
 - Atom Feed
 - Search
 - Social Media Support
-    </description>
-    <releaseNotes>https://github.com/RehanSaeed/ASP.NET-MVC-Boilerplate/blob/master/Source/Boilerplate.Vsix/Release%20Notes.txt</releaseNotes>
+</description>
+    <releaseNotes>
+[Software Changelog](https://github.com/ASP-NET-MVC-Boilerplate/Templates/blob/master/RELEASE%20NOTES.md#visual-studio-extension-vsix)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/asp-net-mvc-boilerplate/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
