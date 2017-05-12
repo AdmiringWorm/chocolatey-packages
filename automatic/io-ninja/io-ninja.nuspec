@@ -58,6 +58,7 @@ Contact our sales department for details at [sales@tibbo.com](mailto:sales@tibbo
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
+    <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/io-ninja/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
