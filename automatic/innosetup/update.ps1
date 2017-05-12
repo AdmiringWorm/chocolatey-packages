@@ -28,7 +28,7 @@ function global:au_SearchReplace {
     }
     ".\innosetup.nuspec" = @{
       "(\<id\>).*(\<\/id\>)" = "`${1}InnoSetup`${2}"
-      "(\<releaseNotes\>).*" = "`$1$($Latest.ReleaseNotesUrl)</releaseNotes>"
+      "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}$($Latest.ReleaseNotesUrl)`${2}"
     }
   }
 }
