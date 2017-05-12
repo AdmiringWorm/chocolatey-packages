@@ -67,7 +67,10 @@ covering a very wide range of modern statistics.
 R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation,
 both on-line in a number of formats and in hardcopy.
     </description>
-    <releaseNotes>https://cran.r-project.org/doc/manuals/r-release/NEWS.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/r.project/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
