@@ -1,4 +1,5 @@
 ﻿import-module au
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 . $PSScriptRoot\..\scripts\githubHelper.ps1
 
@@ -10,6 +11,11 @@ function global:au_SearchReplace {
             "(^[$]checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
         }
     }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 function global:au_GetLatest {
