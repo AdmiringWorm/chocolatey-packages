@@ -22,6 +22,9 @@ function global:au_SearchReplace {
       "(?i)(^\s*softwareName\s*=\s*)'.*'"   = "`${1}'$softwareName'"
       "(?i)(^\s*packageName\s*=\s*)'.*'" = "`${1}'$($Latest.PackageName)'"
     }
+    ".\r.project.nuspec" = @{
+      "(\<id\>).*(\<\/id\>)" = "`${1}R.Project`${2}"
+    }
   }
 }
 
