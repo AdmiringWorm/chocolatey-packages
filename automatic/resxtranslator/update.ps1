@@ -1,5 +1,6 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain   = 'https://github.com'
 $releases = "$domain/HakanL/resxtranslator/releases/latest"
@@ -30,6 +31,11 @@ function global:au_BeforeUpdate {
   }
 }
 
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
+}
+
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
@@ -43,7 +49,7 @@ function global:au_SearchReplace {
       "(?i)(^[$]filePath\s*=\s*`"[$]toolsPath\\)[^`"]*`""= "`${1}$($Latest.FileName32)`""
     }
     ".\resxtranslator.nuspec" = @{
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseURL)`${2}"
+      "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}$($Latest.ReleaseURL)`${2}"
     }
   }
 }

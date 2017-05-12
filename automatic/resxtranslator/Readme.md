@@ -1,22 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>resxtranslator</id>
-    <version>2.3</version>
-    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/resxtranslator</packageSourceUrl>
-    <owners>AdmiringWorm</owners>
-    <title>Resx Resource Translator</title>
-    <authors>Hakan Lindestaf</authors>
-    <projectUrl>https://github.com/HakanL/resxtranslator</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png</iconUrl>
-    <licenseUrl>https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/HakanL/resxtranslator</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/HakanL/resxtranslator/issues</bugTrackerUrl>
-    <tags>resxtranslator resx resource translating translator</tags>
-    <summary>Tool for non-developers to quickly translate resource files (resx) in .NET projects</summary>
-    <description>
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png" height="48" width="48" /> resxtranslator](https://chocolatey.org/packages/resxtranslator)
+
 Tool for non-developers to quickly translate resource files (resx) in .NET projects to multiple languages in parallel. Shows a tree view of all resources and all translation strings in parallel, one column per language. Compatible with VS2008-VS2015.
 
 ### Usage guidelines
@@ -39,18 +22,3 @@ The rows that are red means one or more languages are missing values. I have a s
 
 These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
-    </description>
-    <releaseNotes>
-[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.3)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/resxtranslator/Changelog.md)
-    </releaseNotes>
-    <dependencies>
-      <dependency id="dotnet4.0" version="4.0" />
-      <dependency id="chocolatey-core.extension" version="1.0.7" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="legal\**" target="legal" />
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
