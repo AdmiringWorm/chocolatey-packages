@@ -1,13 +1,19 @@
 ﻿import-module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://waveengine.net/Downloads"
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
+}
 
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
         }
     }
 }
