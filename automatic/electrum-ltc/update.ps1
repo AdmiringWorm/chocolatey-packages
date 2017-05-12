@@ -1,4 +1,5 @@
 ﻿import-module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://electrum-ltc.org'
 
@@ -9,6 +10,11 @@ function global:au_SearchReplace {
       "(\<dependency .+?`"$($Latest.PackageName).install`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
     }
   }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  if (Test-Path 'Changelog.md') { Update-ChangelogVersion -Version $Latest.Version }
 }
 
 function global:au_GetLatest {

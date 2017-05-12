@@ -1,9 +1,14 @@
-﻿import-module au
-. "$PSScriptRoot\..\electrum-ltc\update.ps1"
+﻿. "$PSScriptRoot\..\electrum-ltc\update.ps1"
 
 $releases = 'https://electrum-ltc.org'
 
 function global:au_BeforeUpdate {
+  cp "$PSScriptRoot\..\electrum-ltc\Readme.md" Readme.md -Force
+  $content = gc Readme.md -Encoding UTF8 -Raw
+  $content = $content -replace '(packages\/electrum-ltc)\)', '$1.install)'
+  $content = $content -replace '( electrum-ltc)\]', '$1.install]'
+  $enc = New-Object System.Text.UTF8Encoding($false)
+  [System.IO.File]::WriteAllText("$PSScriptRoot\Readme.md", $content, $enc)
   $Latest.URL32 = $Latest.URL_I
   $Latest.ChecksumType32 = 'sha256'
 
@@ -30,7 +35,7 @@ function global:au_SearchReplace {
       "(?i)(^[$]packageName\s*=\s*)'.*'" = "`$1'$($Latest.PackageName)'"
     }
     ".\$($Latest.PackageName).nuspec" = @{
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}https://github.com/pooler/electrum-ltc/blob/$($Latest.RemoteVersion)/RELEASE-NOTES`${2}"
+      "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}https://github.com/pooler/electrum-ltc/blob/$($Latest.RemoteVersion)/RELEASE-NOTES`${2}"
     }
   }
 }

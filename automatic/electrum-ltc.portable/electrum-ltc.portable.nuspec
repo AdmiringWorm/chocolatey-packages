@@ -33,7 +33,10 @@ No waiting, no lengthy blockchain downloads and no syncing to the network.
 * **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
 * **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
     </description>
-    <releaseNotes>https://github.com/pooler/electrum-ltc/blob/2.6.4.2/RELEASE-NOTES</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/pooler/electrum-ltc/blob/2.6.4.2/RELEASE-NOTES)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/electrum-ltc.portable/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

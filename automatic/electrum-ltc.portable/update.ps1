@@ -24,7 +24,7 @@ function global:au_SearchReplace {
       "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
     }
     ".\$($Latest.PackageName).nuspec" = @{
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}https://github.com/pooler/electrum-ltc/blob/$($Latest.RemoteVersion)/RELEASE-NOTES`${2}"
+      "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}https://github.com/pooler/electrum-ltc/blob/$($Latest.RemoteVersion)/RELEASE-NOTES`${2}"
     }
   }
 }
