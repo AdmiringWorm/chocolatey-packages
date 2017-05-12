@@ -22,6 +22,7 @@ function global:au_SearchReplace {
       "(?i)(`"[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
     }
     ".\innosetup.nuspec" = @{
+      "(\<id\>).*(\<\/id\>)" = "`${1}InnoSetup`${2}"
       "(\<releaseNotes\>).*" = "`$1$($Latest.ReleaseNotesUrl)</releaseNotes>"
     }
   }
