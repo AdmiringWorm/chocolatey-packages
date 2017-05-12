@@ -1,15 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-    <id>InnoSetup</id>
-    <title>Inno Setup</title>
-    <version>5.5.9.20161208</version>
-    <authors>jrsoftware</authors>
-    <owners>AdmiringWorm,vicneanschi</owners>
-    <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>
-    <description>
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png" height="48" width="48" /> innosetup](https://chocolatey.org/packages/innosetup)
+
+
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
 
 ### Key features:
@@ -27,7 +18,7 @@ Inno Setup is a free installer for Windows programs. First introduced in 1997, I
 * Running other programs before, during or after install.
 * Support for **multilingual** installs, including right-to-left language support.
 * Support for passworded and encrypted installs.
-* Support for **digitally signed** installs and uninstalls, including dual signing (SHA1 &amp; SHA256).
+* Support for **digitally signed** installs and uninstalls, including dual signing (SHA1 & SHA256).
 * Silent install and uninstall.
 * **Unicode** installs.
 * Integrated preprocessor option for advanced compile-time customization.
@@ -39,28 +30,4 @@ Yes, it may be used completely free of charge, even when deploying commercial ap
 However if you wish to show your appreciation and support its development you can make a [donation](http://www.jrsoftware.org/isdonate.php).
 *(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software.
   There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
-    </description>
-    <projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
-    <tags>innosetup admin installer setup exe foss</tags>
-    <copyright>1997-2012 Jordan Russell</copyright>
-    <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
-    <releaseNotes>
-[Software Changelog](http://www.jrsoftware.org/files/is5-whatsnew.htm)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/innosetup/Changelog.md)
-    </releaseNotes>
-    <docsUrl>http://www.jrsoftware.org/ishelp/</docsUrl>
-    <mailingListUrl>http://www.jrsoftware.org/ismail.php</mailingListUrl>
-    <bugTrackerUrl>https://github.com/jrsoftware/issrc/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/innosetup</packageSourceUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.6" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  <file src="legal\**" target="legal" />
-  </files>
-</package>
+    
