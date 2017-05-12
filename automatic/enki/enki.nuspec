@@ -30,7 +30,10 @@ Enki is a text editor for programmers. It is:
 - **Open source.** Created, tested, and designed for community, by the community, and with the community.
 - [More Features](http://enki-editor.org/features.html)
     </description>
-    <releaseNotes>https://github.com/andreikop/enki/releases</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/andreikop/enki/releases)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/enki/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain       = 'https://github.com'
 $releases     = "$domain/andreikop/enki/releases"
@@ -6,6 +7,11 @@ $softwareName = 'Enki*'
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 function global:au_SearchReplace {
@@ -37,7 +43,7 @@ function global:au_GetLatest {
 
   @{
     URL32 = $url32
-    Version = $version32
+    Version = [version]$version32
   }
 }
 
