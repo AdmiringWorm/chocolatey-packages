@@ -1,5 +1,5 @@
 ﻿Import-Module AU
-cd $PSScriptRoot
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain       = 'https://www.syntevo.com'
 $packagePage  = "$domain/deepgit"
@@ -9,6 +9,11 @@ $softwareName = 'DeepGit'
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha512'
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 function global:au_SearchReplace {

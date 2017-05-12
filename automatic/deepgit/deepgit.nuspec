@@ -8,7 +8,7 @@
     <owners>AdmiringWorm</owners>
     <title>DeepGit (Install)</title>
     <authors>syntevo</authors>
-    <projectUrl>https://www.syntevo.com/deepgit/download</projectUrl>
+    <projectUrl>https://www.syntevo.com/deepgit</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7dde21b3f1e1dd5d27ce9e387b2a0da2ee7004fb/icons/deepgit.png</iconUrl>
     <licenseUrl>https://www.syntevo.com/deepgit/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -30,6 +30,9 @@ DeepGit is a tool to investigate the history of source code. It is based on git 
 - [Check out the Tour](https://www.syntevo.com/deepgit/tour) to understand how DeepGit is working.
   [![Tour](https://www.syntevo.com/deepgit/img/index/tour.png)](https://www.syntevo.com/deepgit/tour)
     </description>
+    <releaseNotes>
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/deepgit/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.7" />
     </dependencies>
