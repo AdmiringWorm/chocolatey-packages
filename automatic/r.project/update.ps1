@@ -35,6 +35,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+  throw "Just a single error"
   $download_page = Invoke-WebRequest -Uri $releases
 
   $re       = '\.exe$'
