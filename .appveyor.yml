@@ -130,10 +130,12 @@ on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 notifications:
-- provider: Email
-  to:
-  - '{{commitAuthorEmail}}'
-  on_build_failure: true
+  - provider: Email
+    to:
+    - '{{commitAuthorEmail}}'
+    on_build_failure: true
+  - provider: GitHubPullRequest
+    template: "{{#passed}}:white_check_mark: Package verification completed without issues. PR is now pending human review{{/passed}}{{#failed}}:x: Package verification failed, please review the [Appveyor Logs]({{buildUrl}}) and the provided [Artifacts]({{buildUrl}}/artifacts) before requesting a human reviewer to take a look.{{/failed}}"
 
 cache:
   - '%nupkg_cache_path% -> appveyor.yml'
