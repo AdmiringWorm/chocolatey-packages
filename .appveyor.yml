@@ -131,10 +131,9 @@ on_finish:
 
 notifications:
 - provider: Email
-  to: $(mail_user)
-  on_build_success: false
+  to:
+  - '{{commitAuthorEmail}}'
   on_build_failure: true
-  on_build_status_changed: true
 
 cache:
   - '%nupkg_cache_path% -> appveyor.yml'
