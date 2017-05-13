@@ -1,6 +1,6 @@
 #Name can be 'random N' to randomly force the Nth group of packages.
 
-param( [string[]] $Name, [string] $Root = "$PSScriptRoot\automatic" )
+param( [string[]] $Name, [string] $Root = "$PSScriptRoot\automatic", [switch]$ThrowOnErrors )
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
@@ -40,26 +40,13 @@ $options = [ordered]@{
         Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"       #List of files to add to the gist
         Description = "Update Force Test Report #powershell #chocolatey"
     }
-
-    RunInfo = @{
-        Exclude = 'password', 'apikey', 'UserName', 'To'    #Option keys which contain those words will be removed
-        Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
-    }
-
-    Mail = if ($Env:mail_user) {
-            @{
-                To          = $Env:mail_user
-                Server      = $Env:mail_server
-                UserName    = $Env:mail_user
-                Password    = $Env:mail_pass
-                Port        = $Env:mail_port
-                EnableSsl   = $Env:mail_enablessl -eq 'true'
-                Attachment = "$PSScriptRoot\update_info.xml"
-                UserMessage = ''
-                SendAlways  = $false                        #Send notifications every time
-             }
-           } else {}
 }
 
 
 $global:info = updateall -Name $Name -Options $Options
+
+$au_errors = $global:info | ? { $_.Error } | select -ExpandProperty Error
+
+if ($ThrowOnErrors -and $au_errors.Count -gt 0) {
+    throw 'Errors during update'
+}
