@@ -17,7 +17,10 @@
     <tags>codetrack admin profiler analyzer performance debugging</tags>
     <summary>A free .NET Performance Profile and Execution Analyzer</summary>
     <description>CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution. </description>
-    <releaseNotes>https://www.getcodetrack.com/releases.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog]([Software Changelog](https://www.getcodetrack.com/releases.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codetrack/Changelog.md))
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
