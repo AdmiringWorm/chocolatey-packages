@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <copyright>© Nico Van Goethem. All rights reserved. </copyright>
     <docsUrl>https://www.getcodetrack.com/howto_index.html</docsUrl>
-    <tags>codetrack admin profiler analyzer performance debugging</tags>
+    <tags>codetrack profiler analyzer performance debugging</tags>
     <summary>A free .NET Performance Profile and Execution Analyzer</summary>
     <description>
 CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
@@ -26,7 +26,7 @@ CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of
 </description>
     <releaseNotes>
 [Software Changelog](https://www.getcodetrack.com/releases.html)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codetrack/Changelog.md))
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codetrack/Changelog.md)
     </releaseNotes>
   </metadata>
   <files>
