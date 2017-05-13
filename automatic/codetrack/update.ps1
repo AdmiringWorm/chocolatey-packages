@@ -25,7 +25,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest $releases
 
   $url = $download_page.links | ? href -match 'codetrack.*\.zip$' | select -first 1 -expand href
 
