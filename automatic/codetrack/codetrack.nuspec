@@ -9,7 +9,7 @@
     <title>CodeTrack</title>
     <authors>Nico Van Goethem</authors>
     <projectUrl>https://www.getcodetrack.com/</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/codetrack.png</iconUrl>-->
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/codetrack.png</iconUrl>
     <licenseUrl>https://www.getcodetrack.com/license.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <copyright>© Nico Van Goethem. All rights reserved. </copyright>

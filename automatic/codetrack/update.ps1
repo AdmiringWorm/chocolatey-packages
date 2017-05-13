@@ -1,10 +1,13 @@
 import-module au
-cd $PSScriptRoot
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain   = 'https://www.getcodetrack.com'
 $releases = "$domain/releases.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+}
 
 function global:au_SearchReplace {
   @{
