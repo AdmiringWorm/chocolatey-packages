@@ -55,7 +55,7 @@ let them know the package is no longer updating correctly.
 </description>
   <releaseNotes>
 [Software Changelog](https://github.com/Microsoft/CodeContracts/releases)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/codecontracts/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codecontracts/Changelog.md)
   </releaseNotes>
   <dependencies>
     <dependency id="chocolatey-core.extension" version="1.0.6" />

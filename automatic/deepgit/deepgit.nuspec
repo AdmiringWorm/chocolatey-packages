@@ -31,7 +31,7 @@ DeepGit is a tool to investigate the history of source code. It is based on git 
   [![Tour](https://www.syntevo.com/deepgit/img/index/tour.png)](https://www.syntevo.com/deepgit/tour)
     </description>
     <releaseNotes>
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/deepgit/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/deepgit/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.7" />

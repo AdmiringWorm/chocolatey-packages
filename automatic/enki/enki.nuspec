@@ -32,7 +32,7 @@ Enki is a text editor for programmers. It is:
     </description>
     <releaseNotes>
 [Software Changelog](https://github.com/andreikop/enki/releases)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/enki/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/enki/Changelog.md)
     </releaseNotes>
   </metadata>
   <files>

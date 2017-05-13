@@ -15,8 +15,8 @@ As each tool locally subdivides the mesh where more details are required, Dilay 
     </description>
     <releaseNotes>
 [Software Changelog](http://abau.org/dilay/index.html#news)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/dilay/Changelog.md)
-</releaseNotes>
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dilay/Changelog.md)
+    </releaseNotes>
     <projectUrl>http://abau.org/dilay/</projectUrl>
     <tags>3D sculpting qt admin foss cross-platform</tags>
     <copyright>2016 dilay abau</copyright>

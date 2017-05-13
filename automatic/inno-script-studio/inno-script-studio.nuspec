@@ -22,14 +22,13 @@ If you’ve created a freeware application, or even if it’s a large and comple
     <bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/inno-script-studio.png</iconUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
-
     <dependencies>
       <dependency id="innosetup" version="5.5.9.20161208" />
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>
     <releaseNotes>
 [Software Changelog](https://www.kymoto.org/products/inno-script-studio/release-history)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/inno-script-studio/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/inno-script-studio/Changelog.md)
     </releaseNotes>
   </metadata>
   <files>

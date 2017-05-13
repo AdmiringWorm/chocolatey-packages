@@ -42,7 +42,7 @@ For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
     </description>
     <releaseNotes>
 [Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.3)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/resxtranslator/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/resxtranslator/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="dotnet4.0" version="4.0" />

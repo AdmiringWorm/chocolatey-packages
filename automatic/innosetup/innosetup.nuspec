@@ -48,7 +48,7 @@ However if you wish to show your appreciation and support its development you ca
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
     <releaseNotes>
 [Software Changelog](http://www.jrsoftware.org/files/is5-whatsnew.htm)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/innosetup/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/innosetup/Changelog.md)
     </releaseNotes>
     <docsUrl>http://www.jrsoftware.org/ishelp/</docsUrl>
     <mailingListUrl>http://www.jrsoftware.org/ismail.php</mailingListUrl>

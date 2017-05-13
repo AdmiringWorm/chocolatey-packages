@@ -69,7 +69,7 @@ both on-line in a number of formats and in hardcopy.
     </description>
     <releaseNotes>
 [Software Changelog](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/r.project/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
   </metadata>
   <files>

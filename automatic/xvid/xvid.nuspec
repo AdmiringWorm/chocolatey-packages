@@ -44,7 +44,7 @@ As such, it be seen as a MP3 for video.
 </description>
     <releaseNotes>
 [Software Changelog](https://labs.xvid.com/source/#Release)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/xvid/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/xvid/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
