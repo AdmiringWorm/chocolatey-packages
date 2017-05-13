@@ -5,7 +5,7 @@ $toolsDir = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $packageArgs = @{
   packageName = $env:chocolateyPackageName
   destination = $toolsDir
-  file        = "$toolsDir\"
+  file        = "$toolsDir\codetrack_1_0_1_0.zip"
 }
 Get-ChocolateyUnzip @packageArgs
 
