@@ -65,7 +65,7 @@ install:
         'pngquant'   = '2.8.0'
         'jpegoptim'  = '1.2.4.4'
       }.GetEnumerator() | % {
-        if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/chocolatey/$($_.Value)" }
+        if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" }
         if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
         elseif ($_.Key -eq 'optipng') { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-checksums }
         else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
