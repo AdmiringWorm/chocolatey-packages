@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://www.monogame.net/downloads/>
+location on <http://www.monogame.net/2017/03/01/monogame-3-6/>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <http://www.monogame.net/releases/v3.6/MonoGameSetup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 3D64E13A05E07F8D11A0363F1A207949A16560187F2E70A5C55B17181C1A5753
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/MonoGame/MonoGame/blob/e5a7f25ed21b0859aa69b40412822c354575fe99/LICENSE.txt>
