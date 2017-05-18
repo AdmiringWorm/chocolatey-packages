@@ -17,7 +17,7 @@
     <docsUrl>http://www.monogame.net/documentation/?page=main</docsUrl>
     <mailingListUrl>http://community.monogame.net/</mailingListUrl>
     <bugTrackerUrl>https://github.com/MonoGame/MonoGame/issues</bugTrackerUrl>
-    <tags>monogame gaming games game development xna foss cross-platform</tags>
+    <tags>monogame admin gaming games game development xna foss cross-platform</tags>
     <summary>An open source implementation of the Microsoft XNA Framework.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
