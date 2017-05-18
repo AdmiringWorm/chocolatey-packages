@@ -68,7 +68,7 @@ $Options = [ordered]@{
     UpdateIconScript = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
     BeforeEach = {
         param($PackageName, $Options )
-        . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
+        . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound -Optimize
 
         $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
         if (!$p) { return }

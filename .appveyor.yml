@@ -47,8 +47,6 @@ environment:
   api_key:
     secure: CzGGbCfsVKyCTbY193kYveGQDN5ilsyI30J3FYdo9+IpGsDwi/knjzBqCQbztIzY
 
-  #Chocolatey version we want to use when checing for updates.
-  choco_version: '0.10.1'
   nupkg_cache_path: C:\packages
 
 init:
@@ -61,8 +59,17 @@ install:
     if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) {
       # We only want to update chocolatey if we're running a normal build, not during PR testing
       if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-      if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${env:choco_version}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg" }
-      cup chocolatey --source ${env:nupkg_cache_path}
+      @{
+        'chocolatey' = '0.10.5'
+        'optipng'    = '0.7.5.20141004'
+        'pngquant'   = '2.8.0'
+        'jpegoptim'  = '1.2.4.4'
+      }.GetEnumerator() | % {
+        if (!(Test-Path "${env:nupkg_cache_path")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/chocolatey/$($_.Value)" }
+        if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
+        elseif ($_.Key -eq 'optipng') { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-checksums }
+        else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
+      }
     }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
