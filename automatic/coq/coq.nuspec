@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>coq</id>
+    <version>8.4.0.001</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
+    <owners>AdmiringWorm, murray</owners>
+    <title>The Coq proof assistant</title>
+    <authors>INRIA</authors>
+    <projectUrl>https://coq.inria.fr/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/bbd1a3243911d15ddbb3923ecf38c6c2c71c3819/icons/coq.png</iconUrl>
+    <copyright>Copyright 1999-2016 The Coq development team, INRIA, CNRS, UniversityParis Sud, University Paris 7, Ecole Polytechnique</copyright>
+    <licenseUrl>https://github.com/coq/coq/blob/trunk/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/coq/coq/</projectSourceUrl>
+    <docsUrl>https://coq.inria.fr/documentation</docsUrl>
+    <mailingListUrl>https://sympa.inria.fr/sympa/info/coq-club</mailingListUrl>
+    <bugTrackerUrl>https://coq.inria.fr/bugs/</bugTrackerUrl>
+    <tags>coq admin management mathematical algorithms foss cross-platform</tags>
+    <summary>An interactive theorem proof assistant.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
