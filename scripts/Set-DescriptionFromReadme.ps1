@@ -25,15 +25,5 @@ function Set-DescriptionFromReadme([int]$SkipFirst=0, [int]$SkipLast=0) {
     $endIdx = $description.Length - $SkipLast
     $description = $description | select -Index ($SkipFirst..$endIdx) | Out-String
 
-    $nuspecFileName = Resolve-Path "*.nuspec"
-    # We force gc to read as UTF8, otherwise nuspec files will be treated as ANSI
-    # causing bogus/invalid characters to appear when non-ANSI characters are used.
-    $nu = New-Object xml
-    $nu.PSBase.PreserveWhitespace = $true
-    $nu.Load($nuspecFileName)
-    $nu.package.metadata.description = "$description"
-
-    $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
-    $NuPath = (Resolve-Path $NuspecFileName)
-    [System.IO.File]::WriteAllText($NuPath, $nu.InnerXml, $Utf8NoBomEncoding)
+    Update-Metadata -key "description" -value $description
 }

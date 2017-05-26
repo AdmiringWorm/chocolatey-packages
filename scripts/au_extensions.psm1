@@ -8,7 +8,7 @@ $funcs = @(
   'Get-PaddedVersion'
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
-  'Set-ReleaseNotesFromChangelog'
+  'Update-Metadata'
 )
 
 $funcs | % {
