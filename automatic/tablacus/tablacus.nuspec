@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tablacus</id>
+    <version>14.12.30</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tablacus</packageSourceUrl>
+    <owners>AdmiringWorm, Yoshimov</owners>
+    <title>Tablacus Explorer</title>
+    <authors>Gaku</authors>
+    <projectUrl>http://www.eonet.ne.jp/~gakana/tablacus/explorer_en.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7b7eb7a15b98c1f048a2b45161ff8d3cfe583d24/icons/tablacus.png</iconUrl>
+    <copyright>What is the copyright</copyright>
+    <licenseUrl>https://github.com/tablacus/TablacusExplorer/blob/master/LICENSE.TXT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/tablacus/TablacusExplorer</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/tablacus/TablacusExplorer/issues</bugTrackerUrl>
+    <tags>tablacus filer explorer tab foss portable</tags>
+    <summary>Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes>http://www.eonet.ne.jp/~gakana/tablacus/history/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
