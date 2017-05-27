@@ -58,7 +58,7 @@ let them know the package is no longer updating correctly.
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codecontracts/Changelog.md)
   </releaseNotes>
   <dependencies>
-    <dependency id="chocolatey-core.extension" version="1.0.6" />
+    <dependency id="chocolatey-core.extension" version="1.3.1" />
   </dependencies>
   </metadata>
   <files>
