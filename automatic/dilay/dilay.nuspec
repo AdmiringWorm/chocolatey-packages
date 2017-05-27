@@ -22,7 +22,7 @@ As each tool locally subdivides the mesh where more details are required, Dilay 
     <copyright>2016 dilay abau</copyright>
     <licenseUrl>https://github.com/abau/dilay/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/dilay.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/22264b3c6997e51d3bd809003e409c0dcb84695e/icons/dilay.png</iconUrl>
     <docsUrl>http://abau.org/dilay/manual.html</docsUrl>
     <bugTrackerUrl>https://github.com/abau/dilay/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/abau/dilay</projectSourceUrl>

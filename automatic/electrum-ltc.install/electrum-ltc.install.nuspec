@@ -13,7 +13,7 @@
     <copyright>2013-2016 Electrum Technologies GmbH</copyright>
     <licenseUrl>https://github.com/pooler/electrum-ltc/blob/master/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/82feba9417e5f3a4b8747baa10559f7939ecbe33/icons/electrum-ltc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/b072ad4691b5098a70836ae967c907901b226e19/icons/electrum-ltc.png</iconUrl>
     <bugTrackerUrl>https://github.com/pooler/electrum-ltc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/pooler/electrum-ltc</projectSourceUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/electrum-ltc.install</packageSourceUrl>

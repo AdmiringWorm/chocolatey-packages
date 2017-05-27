@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png" height="48" width="48" /> resxtranslator](https://chocolatey.org/packages/resxtranslator)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/678798af55b2b9e15a70e8bb3db60c9f98328679/icons/resxtranslator.png" height="48" width="48" /> resxtranslator](https://chocolatey.org/packages/resxtranslator)
 
 Tool for non-developers to quickly translate resource files (resx) in .NET projects to multiple languages in parallel. Shows a tree view of all resources and all translation strings in parallel, one column per language. Compatible with VS2008-VS2015.
 

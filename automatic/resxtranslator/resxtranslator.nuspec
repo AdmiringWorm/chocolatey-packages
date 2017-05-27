@@ -9,7 +9,7 @@
     <title>Resx Resource Translator</title>
     <authors>Hakan Lindestaf</authors>
     <projectUrl>https://github.com/HakanL/resxtranslator</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/584d8336cd7309da97418aa00f11c3b1497fb2db/icons/resxtranslator.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/678798af55b2b9e15a70e8bb3db60c9f98328679/icons/resxtranslator.png</iconUrl>
     <licenseUrl>https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/HakanL/resxtranslator</projectSourceUrl>

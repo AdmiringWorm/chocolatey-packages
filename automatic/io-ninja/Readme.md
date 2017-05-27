@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/io-ninja.png" height="48" width="48" /> io-ninja](https://chocolatey.org/packages/io-ninja)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/635c0e790c055543eba7f6e9b4216557ab88b132/icons/io-ninja.png" height="48" width="48" /> io-ninja](https://chocolatey.org/packages/io-ninja)
 
 ## Scriptable/Programmable
 The word *"programmable"* speaks for itself. Now you can turn IO Ninja into your personal IO debugger and tune it to your liking with [Jancy scripting](http://tibbo.com/ninja/features.html#!jancy) Whether you need a non-standard protocol analyzer, a network device emulator or an IO testing utility, IO Ninja can be programmed to do the job. We also provide an [IO Ninja IDE](http://tibbo.com/ninja/features.html#!ide) (Integrated Development Environment) to assist you in exploring and making use of scripting in IO Ninja.

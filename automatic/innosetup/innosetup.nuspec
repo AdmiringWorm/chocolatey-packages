@@ -45,7 +45,7 @@ However if you wish to show your appreciation and support its development you ca
     <copyright>1997-2012 Jordan Russell</copyright>
     <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/0c8c850712fdea352e78af671cf43a9f53160453/icons/innosetup.png</iconUrl>
     <releaseNotes>
 [Software Changelog](http://www.jrsoftware.org/files/is5-whatsnew.htm)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/innosetup/Changelog.md)

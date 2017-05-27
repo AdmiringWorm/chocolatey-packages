@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/innosetup.png" height="48" width="48" /> innosetup](https://chocolatey.org/packages/innosetup)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/0c8c850712fdea352e78af671cf43a9f53160453/icons/innosetup.png" height="48" width="48" /> innosetup](https://chocolatey.org/packages/innosetup)
 
 
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.

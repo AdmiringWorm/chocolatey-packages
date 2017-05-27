@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/de3a93bc8d9c35cdec568ae6041f7b882f07a032/icons/enki.png" height="48" width="48" /> enki](https://chocolatey.org/packages/enki)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e8803f77063b1fb93b7f3db820ecede53fc078b9/icons/enki.png" height="48" width="48" /> enki](https://chocolatey.org/packages/enki)
 
 Enki is a text editor for programmers. It is:
 

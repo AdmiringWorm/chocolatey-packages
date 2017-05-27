@@ -10,7 +10,7 @@ you should use an editor that supports UTF-8, not this one. -->
     <title>herdProtect Anti-Malware Scanner</title>
     <authors>Reason Software Company Inc.</authors>
     <projectUrl>https://www.herdprotect.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/4db8785db246734962b07547bd16eeb43c59535d/icons/herdprotect.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/aff24e8d814e7619a563f7efc3b767055d0644e4/icons/herdprotect.png</iconUrl>
     <copyright>© 2016 Reason Software Company Inc.</copyright>
     <licenseUrl>https://www.herdprotect.com/terms.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

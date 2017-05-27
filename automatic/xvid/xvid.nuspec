@@ -9,7 +9,7 @@
     <title>Xvid</title>
     <authors>Michael Militzer</authors>
     <projectUrl>https://www.xvid.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/xvid.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/22da3a38d0543d07800b83ca3c0b3fdf83d27652/icons/xvid.png</iconUrl>
     <copyright>@ 2016 Xvid</copyright>
     <licenseUrl>http://websvn.xvid.org/cvs/viewvc.cgi/trunk/xvidcore/LICENSE?revision=851</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

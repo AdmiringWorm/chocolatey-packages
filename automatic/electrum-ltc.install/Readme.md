@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/82feba9417e5f3a4b8747baa10559f7939ecbe33/icons/electrum-ltc.png" height="48" width="48" /> electrum-ltc.install](https://chocolatey.org/packages/electrum-ltc.install)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/b072ad4691b5098a70836ae967c907901b226e19/icons/electrum-ltc.png" height="48" width="48" /> electrum-ltc.install](https://chocolatey.org/packages/electrum-ltc.install)
 
 
 Electrum-LTC is a simple, but powerful Litecoin wallet.

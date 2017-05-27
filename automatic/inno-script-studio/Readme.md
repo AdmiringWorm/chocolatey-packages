@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7c22088569b8eaaa7f366216c4a8ca51f0a638ac/icons/inno-script-studio.png" height="48" width="48" /> inno-script-studio](https://chocolatey.org/packages/inno-script-studio)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/116cfb611f3c782e0675f424842f1f3a124f7bea/icons/inno-script-studio.png" height="48" width="48" /> inno-script-studio](https://chocolatey.org/packages/inno-script-studio)
 
 Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.
 
