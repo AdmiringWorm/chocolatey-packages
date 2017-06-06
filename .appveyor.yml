@@ -139,7 +139,7 @@ on_finish:
 notifications:
   - provider: Email
     to:
-    - '{{commitAuthorEmail}}'
+    - kim.nordmo@gmail.com
     on_build_failure: true
   - provider: GitHubPullRequest
     template: "{{#passed}}:white_check_mark: Package verification completed without issues. PR is now pending human review{{/passed}}{{#failed}}:x: Package verification failed, please review the [Appveyor Logs]({{buildUrl}}) and the provided [Artifacts]({{buildUrl}}/artifacts) before requesting a human reviewer to take a look.{{/failed}}"
