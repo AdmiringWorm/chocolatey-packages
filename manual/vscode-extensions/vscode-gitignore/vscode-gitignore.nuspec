@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vscode-gitignore</id>
+    <version>0.5.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/vscode-extensions/vscode-gitignore</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>vscode-gitignore (Install)</title>
+    <authors>CodeZombie</authors>
+    <projectUrl>https://github.com/CodeZombieCH/vscode-gitignore</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/40a94c95d7c52c848cb37036607e635e2fd203a9/icons/vscode-gitignore.png</iconUrl>
+    <copyright>Copyright (c) 2016 Marc-André Bühler</copyright>
+    <licenseUrl>https://marketplace.visualstudio.com/items/codezombiech.gitignore/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/CodeZombieCH/vscode-gitignore</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/CodeZombieCH/vscode-gitignore/issues</bugTrackerUrl>
+    <tags>vscode-gitignore vscode visualstudiocode git ignore gitignore</tags>
+    <summary>A extension for Visual Studio Code that assists you in working with .gitignore files.</summary>
+    <description>DO NOT TOUCH, WILL BE AUTOMATICALLY SET FROM README.md DURING UPDATE. </description>
+    <releaseNotes>https://marketplace.visualstudio.com/items/codezombiech.gitignore/changelog</releaseNotes>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
