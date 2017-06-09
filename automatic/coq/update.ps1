@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$domain       = 'https://coq.inra.fr'
+$domain       = 'https://coq.inria.fr'
 $releases     = "$domain/download"
 $softwareName = 'coq*'
 
