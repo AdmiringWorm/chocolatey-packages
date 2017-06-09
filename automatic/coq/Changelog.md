@@ -1,6 +1,6 @@
 # Package changelog for [coq](https://chocolatey.org/packages/coq)
 
-## Upcoming
+## Version: 8.6 (2017-06-09)
 - Taken over as a new maintainer of the monogame package (previous maintainer: murray)
 - **Metadata ENHANCEMENT:**
   - Added license url

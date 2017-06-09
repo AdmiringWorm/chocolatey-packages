@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7b7eb7a15b98c1f048a2b45161ff8d3cfe583d24/icons/tablacus.png" height="48" width="48" /> tablacus](https://chocolatey.org/packages/tablacus)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/23c507427e532c4407844487480b415895e5edba/icons/tablacus.png" height="48" width="48" /> tablacus](https://chocolatey.org/packages/tablacus)
 
 Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.
 
