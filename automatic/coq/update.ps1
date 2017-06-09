@@ -53,6 +53,7 @@ function global:au_GetLatest {
     URL64        = $url64
     Version      = $version32
     ReleaseNotes = $download_page.links | ? href -match "CHANGES$" | select -first 1 -expand href | % { $domain + $_ }
+    PackageName  = 'Coq'
   }
 }
 
