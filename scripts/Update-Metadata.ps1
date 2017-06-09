@@ -9,7 +9,7 @@ function Update-Metadata() {
     $nu = New-Object xml
     $nu.PSBase.PreserveWhitespace = $true
     $nu.Load($nuspecFileName)
-    $nu.package.metadata["$key"] = $value
+    $nu.package.metadata."$key" = $value
 
     $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($false)
 
