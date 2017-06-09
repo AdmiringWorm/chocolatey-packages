@@ -6,5 +6,5 @@ An extension for Visual Studio Code that assists you in working with `.gitattrib
 - Language support for `.gitattributes` files.
 - Allows adding a `.gitattributes` file by puiing files from [alexkaratarakis/gitattributes](https://github.com/alexkaratarakis/gitattributes) repository.
 
-## NOTES
+## Notes
 - The version used for this package is the latest version available when it was initially created/update, but will install the latest version available at the time of install.
