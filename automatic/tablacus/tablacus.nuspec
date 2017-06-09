@@ -10,7 +10,7 @@
     <authors>Gaku</authors>
     <projectUrl>http://www.eonet.ne.jp/~gakana/tablacus/explorer_en.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7b7eb7a15b98c1f048a2b45161ff8d3cfe583d24/icons/tablacus.png</iconUrl>
-    <copyright>What is the copyright</copyright>
+    <copyright>Copyright (c) 2011 Gaku</copyright>
     <licenseUrl>https://github.com/tablacus/TablacusExplorer/blob/master/LICENSE.TXT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/tablacus/TablacusExplorer</projectSourceUrl>
