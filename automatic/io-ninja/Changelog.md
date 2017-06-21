@@ -1,6 +1,6 @@
 # Package changelog for [io-ninja](https://chocolatey.org/packages/io-ninja)
 
-## Upcoming
+## Version: 3.7.4 (2017-06-21)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 
