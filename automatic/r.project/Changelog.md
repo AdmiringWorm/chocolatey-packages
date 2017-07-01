@@ -1,6 +1,6 @@
 # Package changelog for [r.project](https://chocolatey.org/packages/r.project)
 
-## Upcoming
+## Version: 3.4.1 (2017-07-01)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 

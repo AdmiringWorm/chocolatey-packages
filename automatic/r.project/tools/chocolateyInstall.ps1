@@ -3,10 +3,10 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName   = 'R.Project'
+  packageName   = 'r.project'
   fileType      = 'exe'
   softwareName  = 'R for Windows*'
-  file          = "$toolsDir\R-3.4.0-win.exe"
+  file          = "$toolsDir\R-3.4.1-win.exe"
   silentArgs    = "/SILENT /NORESTART /SP- /SUPPRESSMSGBOXES"
   validExitCodes= @(0)
 }
