@@ -1,6 +1,6 @@
 # Package changelog for [electrum-ltc.portable](https://chocolatey.org/packages/electrum-ltc.portable)
 
-## Upcoming
+## Version: 2.8.3.5 (2017-07-09)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 
