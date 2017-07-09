@@ -30,6 +30,8 @@ function global:au_GetLatest {
 
   $version  = $url_i -split '[-]|\.exe' | select -Last 1 -Skip 1
 
+  if ($version -eq 'setup') { $version = $url_i -split '[-]|\.exe' | select -Last 1 -Skip 2 }
+
   return @{ URL_I = $url_i; URL_P = $url_p; Version = $version; RemoteVersion = $version }
 }
 
