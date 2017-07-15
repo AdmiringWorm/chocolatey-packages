@@ -5,12 +5,31 @@ param([string] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
-    PluginPath    = 'scripts\au_plugins'                    #Path to user plugins
+    WhatIf        = $au_WhatIf                              #Whatif all packages
+    Force         = $false                                  #Force all packages
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
-
+    PluginPath    = 'scripts\au_plugins'                    #Path to user plugins
+    IgnoreOn      = @(                                      #Error message parts to set the package ignore status
+      'Could not create SSL/TLS secure channel'
+      'Could not establish trust relationship'
+      'The operation has timed out'
+      'Internal Server Error'
+    )
+    RepeatOn      = @(                                      #Error message parts on which to repeat package updater
+      'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+      'Could not establish trust relationship'              # -||-
+      'Unable to connect'
+      'The remote name could not be resolved'
+      'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
+      'The operation has timed out'
+      'Internal Server Error'
+      'An exception occurred during a WebClient request'
+    )
+    #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
+    #RepeatCount   = 2         
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
         Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
