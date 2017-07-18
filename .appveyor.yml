@@ -60,8 +60,8 @@ install:
       # We only want to update chocolatey if we're running a normal build, not during PR testing
       if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
       @{
-        'chocolatey' = '0.10.5'
-        'optipng'    = '0.7.5.20141004'
+        #'chocolatey' = '0.10.5'
+        'optipng'    = '0.7.6'
         'pngquant'   = '2.8.0'
         'jpegoptim'  = '1.2.4.4'
       }.GetEnumerator() | % {
