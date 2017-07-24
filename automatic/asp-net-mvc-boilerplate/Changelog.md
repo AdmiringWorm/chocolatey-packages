@@ -1,6 +1,6 @@
 # Package changelog for [asp-net-mvc-boilerplate](https://chocolatey.org/packages/asp-net-mvc-boilerplate)
 
-## Upcoming
+## Version: 6.2.0.289 (2017-07-24)
 - Added changelog for package
 - Extracted Description to its own file
 
