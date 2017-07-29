@@ -20,9 +20,9 @@ function Uninstall-VisualStudioExtension() {
 
   $vsData | % {
     if ($_.displayName) {
-      Write-Host "Installing $packageName for $($_.displayName)..."
+      Write-Host "Uninstalling $packageName for $($_.displayName)..."
     } elseif(!$legacyInstalled) {
-      Write-Host "Installing $packageName for Visual Studio $($_.installationVersion) and below..."
+      Write-Host "Uninstalling $packageName for Visual Studio $($_.installationVersion) and below..."
       $legacyInstalled = $true
     } else { continue; }
 
