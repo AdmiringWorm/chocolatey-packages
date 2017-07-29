@@ -27,8 +27,10 @@ function getVsixData() {
     if ($legacy) { '-legacy' }
   )
 
+  $vswhere = Get-Command vswhere | select -expand Source
+
   Write-Debug "Calling vswhere with the arguments $arguments"
-  $data = convertFrom-Xml (. vshwere $arguments) | ? { $_.vsixInstaller }
+  $data = convertFrom-Xml (. "$vswhere" $arguments) | ? { $_.vsixInstaller }
 
   return $data
 }

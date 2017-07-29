@@ -14,7 +14,7 @@ function Install-VisualStudioExtension() {
   $fileType = 'vsix'
 
   $chocTempDir = $env:TEMP
-  $tempDir = Join-Path $chocTempDir "$($env:chocolateyPackageName)"
+  $tempDir = Join-Path $chocTempDir "$packageName"
   if ($env:chocolateyPackageVersion -ne $null) { $tempDir = Join-Path $tempDir "$($env:chocolateyPackageVersion)" }
   $tempDir = $tempDir -replace '\\chocolatey\\chocolatey\\', '\chocolatey\'
   if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }

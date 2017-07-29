@@ -28,7 +28,7 @@ function Install-VisualStudioInstallExtension() {
     } else { continue; }
 
     $args = @(
-      $file
+      "`"$file`""
       if ($env:chocolateyInstallOverride -ne $true) { '/quiet' }
       if ($_.displayName) { "/skuVersion:$($_.installationVersion)","/skuName:$(getSkuName $_.displayName)" }
     )
