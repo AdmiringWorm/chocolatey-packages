@@ -37,7 +37,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   } catch {
     Write-Host $_.Message
-    return ignore;
+    return "ignore";
   }
 
   $re        = 'i686\.exe$'
