@@ -33,7 +33,12 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  try {
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  } catch {
+    Write-Host $_.Message
+    return ignore;
+  }
 
   $re        = 'i686\.exe$'
   $url32     = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_}
