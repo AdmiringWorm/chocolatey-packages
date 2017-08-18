@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = 'electrum-ltc.install'
   fileType      = 'exe'
   softwareName  = 'Electrum-LTC*'
-  file          = "$toolsDir\electrum-ltc-2.8.3.5-setup.exe"
+  file          = "$toolsDir\electrum-ltc-2.9.3.1-setup.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }

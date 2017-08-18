@@ -4,7 +4,7 @@
   <metadata>
     <id>electrum-ltc</id>
     <title>Electrum-LTC</title>
-    <version>2.8.3.5</version>
+    <version>2.9.3.1</version>
     <authors>Electrum Technologies GmbH</authors>
     <owners>AdmiringWorm</owners>
     <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
@@ -27,9 +27,9 @@ Electrum-LTC is a simple, but powerful Litecoin wallet. A twelve-word security p
 * **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
 * **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
 </description>
-    <releaseNotes>https://github.com/pooler/electrum-ltc/blob/2.8.3.5/RELEASE-NOTES</releaseNotes>
+    <releaseNotes>https://github.com/pooler/electrum-ltc/blob/2.9.3.1/RELEASE-NOTES</releaseNotes>
     <dependencies>
-      <dependency id="electrum-ltc.install" version="[2.8.3.5]" />
+      <dependency id="electrum-ltc.install" version="[2.9.3.1]" />
     </dependencies>
   </metadata>
   <files>
