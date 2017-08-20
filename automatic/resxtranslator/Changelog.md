@@ -1,6 +1,6 @@
 # Package changelog for [resxtranslator](https://chocolatey.org/packages/resxtranslator)
 
-## Upcoming
+## Version: 2.4 (2017-08-20)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 

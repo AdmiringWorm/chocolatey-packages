@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resxtranslator</id>
-    <version>2.3</version>
+    <version>2.4</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/resxtranslator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Resx Resource Translator</title>
@@ -39,9 +39,9 @@ The rows that are red means one or more languages are missing values. I have a s
 
 These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
-    </description>
+</description>
     <releaseNotes>
-[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.3)
+[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.4)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/resxtranslator/Changelog.md)
     </releaseNotes>
     <dependencies>

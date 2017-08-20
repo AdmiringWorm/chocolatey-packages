@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/HakanL/resxtranslator/releases/tag/v2.3>
+location on <https://github.com/HakanL/resxtranslator/releases/tag/v2.4>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/HakanL/resxtranslator/releases/download/v2.3/ResxTranslator_v2.3_release_signed.zip>
+1. Download the following <https://github.com/HakanL/resxtranslator/releases/download/v2.4/ResxTranslator_v2.4_release_signed.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: F43A1125BDCCC5A53678656BFD3890223CE48E9F1F1998610DC084987713F28C
+  checksum: D6997144FCB210735233C03D2744E4421458A747219E444BF77A33C1A7109149
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HakanL/resxtranslator/blob/d97ff3151b3dff86f42353f1459acf08031147a5/src/Licence.txt>
