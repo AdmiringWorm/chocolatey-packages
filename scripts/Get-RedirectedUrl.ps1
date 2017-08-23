@@ -2,10 +2,14 @@
 function Get-RedirectedUrl() {
   param(
     [Parameter(Mandatory = $true)]
-    [uri]$url
+    [uri]$url,
+    [uri]$referer
   )
 
   $req = [System.Net.WebRequest]::CreateDefault($url)
+  if ($referer) {
+    $req.Referer = $referer
+  }
   $resp = $req.GetResponse()
 
   if ($resp -and $resp.ResponseUri.OriginalString -ne $url) {
