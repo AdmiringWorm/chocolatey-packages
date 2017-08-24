@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wave-engine</id>
-    <version>2.3.1</version>
+    <version>2.4.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/wave-engine</packageSourceUrl>
     <owners>Kim Nordmo</owners>
     <title>Wave Engine</title>
@@ -17,11 +17,13 @@
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>wave engine admin development .net</tags>
     <summary>Component based game engine architecture, 2D and 3D physics engine, beautiful visual effects, cross-platform support, advenced layout system and much more.</summary>
-    <description>Wave Engine is a C# component-based modern game engine which allows you to create cross-platform games and apps for many platforms: Windows, Linux, MacOS, IOS, Android, Windows Store and Windows Phone.
+    <description>
+Wave Engine is a C# component-based modern game engine which allows you to create cross-platform games and apps for many platforms: Windows, Linux, MacOS, IOS, Android, Windows Store and Windows Phone.
 
 Wave Engine supports the same set of features in all its platforms to make it easy to port all your projects to other supported platforms.
 
-You also have a great set of extensions with the complete code on Github, to use WaveEngine with Kinect, OculusRift, Vuforia, Cardboard, Leapmotion and much more. </description>
+You also have a great set of extensions with the complete code on Github, to use WaveEngine with Kinect, OculusRift, Vuforia, Cardboard, Leapmotion and much more.
+</description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/wave-engine/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="gtksharp" version="2.12.42" />

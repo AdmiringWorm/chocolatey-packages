@@ -1,6 +1,6 @@
 # Package changelog for [wave-engine](https://chocolatey.org/packages/wave-engine)
 
-## Upcoming
+## Version: 2.4.0 (2017-08-24)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 
