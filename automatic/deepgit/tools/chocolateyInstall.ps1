@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://www.syntevo.com/static/smart/download/deepgit/deepgit-win32-setup-jre-2_0_2.zip'
+  url            = 'https://www.syntevo.com/static/smart/download/deepgit/deepgit-win32-setup-jre-2_0_3.zip'
   softwareName   = 'DeepGit'
-  checksum       = 'bcee471488c149f74e74cc9260c7206af3563d429a506bb3a303b0c443c59b8354de44d0b34654a245c56883c3cd225659c98f346475bd4756adfe18b6e2d819'
+  checksum       = 'a06bbc9f329ee6dfaf39b652623471e07a6b02a9cdea7fab06e1eeb7813017caa1dac13ddd2f6f1e56c3dbf4a4e5f56989bc29f64ec2563bb6c1422936028ab0'
   checksumType   = 'sha512'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
