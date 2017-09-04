@@ -28,6 +28,3 @@ https://www.authy.com/learn-more
 
 ### NOTES
 - Authy Desktop should currently be considered a beta version (which is mentioned on the download page), although they release it using a stable release version.
-- Install is currently not completely silent as the program opens after it have been installed.
-- Uninstall is definitely not silent.
-- This package requires chocolatey 0.9.10 or later
