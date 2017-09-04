@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>authy-desktop</id>
-    <version>1.0.13</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy</packageSourceUrl>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Authy Desktop (Install)</title>
     <authors>Twilio</authors>
