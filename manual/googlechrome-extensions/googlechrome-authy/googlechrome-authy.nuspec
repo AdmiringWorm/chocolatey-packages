@@ -6,7 +6,7 @@
     <version>2.3.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/googlechrome-extensions/googlechrome-authy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
-    <title>Authy Desktop (Install)</title>
+    <title>Authy Google Chrome Extension</title>
     <authors>Twilio</authors>
     <projectUrl>https://authy.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/04f2a920bb17de083b8ae26fb73cefd4ac6c917a/icons/authy-desktop.png</iconUrl>
