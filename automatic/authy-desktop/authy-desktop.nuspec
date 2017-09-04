@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>authy-desktop</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Authy Desktop (Install)</title>
+    <authors>Twilio</authors>
+    <projectUrl>https://authy.com/</projectUrl>
+    <iconUrl>https://empty.com</iconUrl>
+    <copyright>COPYRIGHT © 2017 TWILIO, INC. ALL RIGHTS RESERVED.</copyright>
+    <docsUrl>https://support.authy.com/</docsUrl>
+    <tags>authy authenticator notSilent</tags>
+    <summary>Authy for PC's makes Two-Factor Authentication a truly seamless experience and brings the power and security of strong authentication to users everywhere, anywhere.</summary>
+    <description>Dummy</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
