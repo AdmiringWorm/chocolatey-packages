@@ -29,7 +29,7 @@ $Options = [ordered]@{
       'An exception occurred during a WebClient request'
     )
     #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
-    #RepeatCount   = 2         
+    #RepeatCount   = 2
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
         Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
@@ -87,7 +87,7 @@ $Options = [ordered]@{
     UpdateIconScript = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
     BeforeEach = {
         param($PackageName, $Options )
-        . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound -Optimize
+        . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
 
         $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
         if (!$p) { return }
