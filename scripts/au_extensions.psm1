@@ -9,6 +9,7 @@ $funcs = @(
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
   'Update-Metadata'
+  'Get-RedirectedUrl'
 )
 
 $funcs | % {
