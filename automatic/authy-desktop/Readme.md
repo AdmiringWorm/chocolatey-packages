@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d089b557793f07aec35b0ed8a67149b338e01d6d/icons/authy-desktop.png" height="48" width="48" /> Authy Desktop](https://chocolatey.org/packages/authy-desktop)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/04f2a920bb17de083b8ae26fb73cefd4ac6c917a/icons/authy-desktop.png" height="48" width="48" /> Authy Desktop](https://chocolatey.org/packages/authy-desktop)
 
 Authy brings the future of strong authentication to the convenience of your Desktop.
 
