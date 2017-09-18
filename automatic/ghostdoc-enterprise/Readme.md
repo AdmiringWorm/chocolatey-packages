@@ -1,4 +1,4 @@
-# [<img src="" height="48" width="48" /> GhostDoc Enterprise Edition](https://chocolatey.org/packages/ghostdoc-enterprise)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d309f06f8925d405c5b1d07e9ad1e2ef5b675c61/icons/ghostdoc.png" height="48" width="48" /> GhostDoc Enterprise Edition](https://chocolatey.org/packages/ghostdoc-enterprise)
 
 **GhostDoc** is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.
 

@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName ''
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'GhostDoc Enterprise'
 $toolsDir = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 if ($key.Count -eq 1) {
