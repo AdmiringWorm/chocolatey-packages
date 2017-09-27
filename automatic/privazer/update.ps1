@@ -3,8 +3,6 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://privazer.com/download.php'
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
   @{
     ".\$($Latest.PackageName).nuspec" = @{

@@ -16,10 +16,6 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
-}
-
 function global:au_GetLatest {
   $url32 = Get-RedirectedUrl ($releasesFormat -f "x32")
   $url64 = Get-RedirectedUrl ($releasesFormat -f "x64")

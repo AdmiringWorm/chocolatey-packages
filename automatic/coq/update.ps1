@@ -6,7 +6,6 @@ $releases     = "$domain/download"
 $softwareName = 'coq*'
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
   $releaseNotes = "
 [Software Changelog]($($Latest.ReleaseNotes))

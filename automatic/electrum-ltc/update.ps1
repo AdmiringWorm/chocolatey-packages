@@ -13,7 +13,6 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   if (Test-Path 'Changelog.md') { Update-ChangelogVersion -Version $Latest.Version }
 }
 

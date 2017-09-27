@@ -9,7 +9,6 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

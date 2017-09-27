@@ -1,7 +1,6 @@
 ﻿. "$PSScriptRoot\..\privazer\update.ps1"
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Remove-Item "$PSScriptRoot\tools\*.exe"
 }
 

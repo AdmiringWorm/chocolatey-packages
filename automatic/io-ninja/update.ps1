@@ -4,7 +4,6 @@ import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = "http://tibbo.com/api/downloads.json"
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

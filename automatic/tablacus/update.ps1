@@ -6,8 +6,6 @@ $releases = "${releasesPart}explorer_en.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{

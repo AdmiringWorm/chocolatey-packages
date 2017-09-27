@@ -7,8 +7,6 @@ $referer  = 'http://submain.com/download/ghostdoc/pro/'
 $softwareName = 'GhostDoc Pro'
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
-
   $info_page = Invoke-WebRequest -UseBasicParsing -Uri "http://submain.com/products/ghostdoc.aspx"
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
