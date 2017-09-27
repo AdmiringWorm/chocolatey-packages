@@ -4,7 +4,7 @@
   <metadata>
     <id>privazer.install</id>
     <version>0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.portable</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer (Portable)</title>
     <authors>Goversoft LLC</authors>
