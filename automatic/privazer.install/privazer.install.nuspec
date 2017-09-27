@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer.install</id>
-    <version>0.0</version>
+    <version>3.0.27</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer (Install)</title>
@@ -14,7 +14,14 @@
     <tags>privazer system cleanup freeware admin</tags>
     <summary>Free PC cleaner &amp; Privacy tool</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy</description>
+    <description><![CDATA[Free PC cleaner & Privacy tool that cleans unwanted traces.
+
+Secure cleanup with one click Irreversible cleanups by overwriting techniques
+
+In-depth cleanup of your PC and storage devices *Smart overwriting* : PrivaZer automatically recognizes your storage device type and adapts its overwriting algorithms to the storage medium (magnetic disk, SSD, etc)
+
+Privacy protection: PrivaZer prevents recovery of your activities.
+]]></description>
     <releaseNotes>http://privazer.com/download.php#changelog</releaseNotes>
   </metadata>
   <files>

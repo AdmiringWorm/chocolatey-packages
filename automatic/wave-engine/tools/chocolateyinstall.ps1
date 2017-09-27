@@ -5,8 +5,8 @@ $packageName  = $env:chocolateyPackageName
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'exe'
-  url           = 'https://wave.blob.core.windows.net/waveinstallers/WaveEngineSetup_2_4_0.exe'
-  checksum      = '3e7afc82bf779dead1ed1599c315332bfae458f427f1bf1655c721b243c8d8ef'
+  url           = 'https://wave.blob.core.windows.net/waveinstallers/WaveEngineSetup_2_4_1.exe'
+  checksum      = '8aae5abbc4c3489bad00798cadf027b90c072eb13280106a2c4279971a73adf4'
   checksumType  = 'sha256'
 
   validExitCodes= @(0, 3010, 1641)

@@ -2,13 +2,13 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'privazer.install*'
+  softwareName   = 'PrivaZer'
   fileType       = 'exe'
   silentArgs     = '-silent'
   validExitCodes = @(0)
-  url            = 'http://privazer.com/privazer_free.exe'
-  checksum       = '62EF86C359ED894D447B60F8FEAC14633DFD32FF9A4B7746B91763B50B138E98'
-  checksumType   = ''
+  url            = 'https://privazer.com/privazer_free.exe'
+  checksum       = '49398e34fe86f43a1cca9aebb5e9ebe2201093c9dd2d02aee94ee6e554160192edca113f92b1c344f657538357bff0a97426863df0ffcf70a0e8c160653c07b3'
+  checksumType   = 'sha512'
 }
 
 Install-ChocolateyPackage @packageArgs
