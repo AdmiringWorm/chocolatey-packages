@@ -2,11 +2,11 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>privazer.install</id>
+    <id>privazer</id>
     <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
-    <title>PrivaZer (Install)</title>
+    <title>PrivaZer</title>
     <authors>Goversoft LLC</authors>
     <projectUrl>https://privazer.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/17528bfd469d3642519db241e1ab1e838f226a77/icons/privazer.png</iconUrl>
@@ -16,8 +16,10 @@
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>Dummy</description>
     <releaseNotes>http://privazer.com/download.php#changelog</releaseNotes>
+    <dependencies>
+      <dependency id="privazer.install" version="0.0" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
   </files>
 </package>
