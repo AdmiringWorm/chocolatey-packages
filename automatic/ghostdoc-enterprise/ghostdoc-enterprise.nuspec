@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-enterprise</id>
-    <version>5.7</version>
+    <version>5.8</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-enterprise</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Enterprise Edition</title>
@@ -19,8 +19,7 @@
     <tags>ghostdoc admin notsilent trial documentation extension</tags>
     <summary>GhostDoc is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-**GhostDoc** is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.
+    <description><![CDATA[**GhostDoc** is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.
 
 When generating documentation for class derived from a base class or for interface implementation (e.g. .NET Framework or your custom framework), GhostDoc will use the documentation that Microsoft or the framework vendor has already written for the base class or interface.
 
@@ -39,7 +38,7 @@ If you follow good naming conventions in your code, then you will get very decen
 
 ## Notes
 - Uninstall is not completely silent, after uninstall a browser window pops up
-</description>
+]]></description>
     <releaseNotes>http://support.submain.com/kb/a42/whats-new-in-ghostdoc-v5.aspx</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.26.01" />
