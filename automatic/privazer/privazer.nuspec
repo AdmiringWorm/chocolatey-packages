@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer</id>
-    <version>3.0.27</version>
+    <version>3.0.28</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer</title>
@@ -24,7 +24,7 @@ Privacy protection: PrivaZer prevents recovery of your activities.
 ]]></description>
     <releaseNotes>http://privazer.com/download.php#changelog</releaseNotes>
     <dependencies>
-      <dependency id="privazer.install" version="[3.0.27]" />
+      <dependency id="privazer.install" version="[3.0.28]" />
     </dependencies>
   </metadata>
   <files>
