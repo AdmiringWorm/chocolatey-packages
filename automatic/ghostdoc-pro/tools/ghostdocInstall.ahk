@@ -9,19 +9,19 @@ DetectHiddenText, off
 SetTitleMatchMode, 1
 
 winTitleWelcome = GhostDoc Pro Setup
-winTitleWelcomeText = Welcome to the GhostDoc Pro Setup Wizard
+winTitleWelcomeText = Click Next to continue
 winTitleLicense = GhostDoc Pro Licence Agreement
 winTitleIntegrationText = Visual Studio Intergation
 winTitleReady = Ready to Install
 winTitleCompleted = Completing the GhostDoc Pro Setup Wizard
 
 WinWait, %winTitleWelcome%, %winTitleWelcomeText%
-ControlClick, Button1, %winTitleWelcome%
+ControlClick, Button1, %winTitleWelcome%, %winTitleWelcomeText%
 
 Sleep, 100
 
 WinWait, %winTitleLicense%
-ControlClick, Button2, %winTitleLicense%
+Control, Check,, Button2, %winTitleLicense%
 ControlClick, Button5, %winTitleLicense%
 
 Sleep, 100
