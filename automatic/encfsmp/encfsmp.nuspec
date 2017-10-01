@@ -3,11 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>encfsmp</id>
-    <version>0.11.0</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/encfsmp</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>EncFS MP</title>
-    <authors>AdmiringWorm</authors>
+    <authors>Roman Hiestand</authors>
     <projectUrl>https://encfsmp.sourceforge.io/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5f0cd919f4efe36ff8f82549e7e2ec2fd4594ea4/icons/encfsmp.png</iconUrl>
     <copyright> © 2017 Roman Hiestand</copyright>
