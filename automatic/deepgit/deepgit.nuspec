@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>deepgit</id>
-    <version>2.0.3</version>
+    <version>3.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/deepgit</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DeepGit (Install)</title>
@@ -17,8 +17,7 @@
     <bugTrackerUrl>https://www.syntevo.com/doc/display/DG/Manual</bugTrackerUrl>
     <tags>deepgit git development history admin freeware cross-platform</tags>
     <summary>A tool to investigate the history of source code</summary>
-    <description>
-DeepGit is a tool to investigate the history of source code. It is based on git blame and makes it easy to trace changes to a line or block of code. DeepGit will detect code movements, even if lines are not identical.
+    <description><![CDATA[DeepGit is a tool to investigate the history of source code. It is based on git blame and makes it easy to trace changes to a line or block of code. DeepGit will detect code movements, even if lines are not identical.
 
 ## Features
 - **DeepGit is free:** No licensing, no ads, no collection of email addresses. **DeepGit** is **free** to use for everyone, even in a commercial environment.  
@@ -30,7 +29,7 @@ DeepGit is a tool to investigate the history of source code. It is based on git 
 - [Check out the Tour](https://www.syntevo.com/deepgit/tour) to understand how DeepGit is working.  
   [![Tour](https://www.syntevo.com/deepgit/img/index/tour.png)](https://www.syntevo.com/deepgit/tour)
 
-</description>
+]]></description>
     <releaseNotes>
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/deepgit/Changelog.md)
     </releaseNotes>
