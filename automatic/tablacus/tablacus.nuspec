@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tablacus</id>
-    <version>17.9.17</version>
+    <version>17.10.9</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tablacus</packageSourceUrl>
     <owners>AdmiringWorm, Yoshimov</owners>
     <title>Tablacus Explorer</title>
@@ -18,8 +18,7 @@
     <tags>tablacus filer explorer tab foss portable</tags>
     <summary>Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.
+    <description><![CDATA[Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.
 
 ## Features
 - Tabbed interface
@@ -30,7 +29,7 @@ Tablacus is an alternative of file explorer which provides simple tabbed view an
 - Customizable association, [menus](https://www.penflip.com/LightTempler/tablacus-explorer/blob/master/configuration/customize-right-click.txt), [keys](https://www.penflip.com/LightTempler/tablacus-explorer/blob/master/configuration/customize-keyboard.txt), [mouse gestures](https://www.penflip.com/LightTempler/tablacus-explorer/blob/master/configuration/customize-mouse-buttons-and-gestures.txt), alias
 - [Open source](https://github.com/tablacus/TablacusExplorer)
 - 64-bit(TE64.exe/x64 Edition) and 32-bit(TE32.exe/x86 Edition) versions are available
-</description>
+]]></description>
     <releaseNotes>http://www.eonet.ne.jp/~gakana/tablacus/history/</releaseNotes>
   </metadata>
   <files>
