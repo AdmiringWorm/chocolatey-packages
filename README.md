@@ -1,3 +1,9 @@
+Like my [packages](https://chocolatey.org/profiles/https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
+
+**Want to buy me a beer?**
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/AdmiringWorm)
+
 # Automatic Chocolatey Packages built by appveyor
 
 [![Join the chat at https://gitter.im/wormie-packages/Lobby](https://badges.gitter.im/wormie-packages/Lobby.svg)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
