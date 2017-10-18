@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>Coq</id>
+    <id>coq</id>
     <version>8.6.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
@@ -20,30 +20,19 @@
     <tags>coq admin management mathematical algorithms foss cross-platform</tags>
     <summary>An interactive theorem proof assistant.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Coq is a formal proof management system. It provides a formal language to write mathematical definitions, executable algorithms and theorems together with an environment for semi-interactive development of machine-checked proofs. Typical applications include the [certification of properties of programming languages](https://coq.inria.fr/cocorico/List%20of%20Coq%20PL%20Projects) (e.g. the [CompCert](http://compcert.inria.fr/) compiler certification project, or the [Bedrock](http://plv.csail.mit.edu/bedrock/) verified low-level programming library), the [formalization of mathematics](https://coq.inria.fr/cocorico/List%20of%20Coq%20Math%20Projects) (e.g. the full formalization of the [Feit-Thompson theorem](http://www.msr-inria.fr/news/feit-thomson-proved-in-coq/) or [homotopy type theory](https://coq.inria.fr/cocorico/CoqInTheClassroom)) and [teaching](https://coq.inria.fr/cocorico/CoqInTheClassroom).
-
-Coq implements a program specification and mathematical higher-level language called Gallina that is based on an expressive formal language called the Calculus of Inductive Constructions that itself combines both a higher-order logic and a richly-typed functional programming language. Through a vernacular language of commands, Coq allows:
-
-- to define functions or predicates, that can be evaluated efficiently;
-- to state mathematical theorems and software specifications;
-- to interactively develop formal proofs of these theorems;
-- to machine-check these proofs by a relatively small certification "kernel";
-- to extract certified programs to languages like Objective Caml, Haskell or Scheme.
-
-As a proof development system, Coq provides interactive proof methods, decision and semi-decision algorithms, and a tactic language for - letting the user define its own proof methods. Connection with external computer algebra system or theorem provers is available.
-
-As a platform for the formalization of mathematics or the development of programs, Coq provides support for high-level notations, implicit contents and various other useful kinds of macros.
-</description>
+    <description>Dummy</description>
     <releaseNotes>
 [Software Changelog](https://coq.inria.fr/distrib/V8.6.1/CHANGES)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)
   </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.1" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
