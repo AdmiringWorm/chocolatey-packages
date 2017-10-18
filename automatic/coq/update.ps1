@@ -1,8 +1,8 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$domain       = 'https://coq.inria.fr'
-$releases     = "$domain/download"
+$domain       = 'https://github.com'
+$releases     = "$domain/coq/coq/releases/latest"
 $softwareName = 'coq*'
 
 function global:au_AfterUpdate {
@@ -45,7 +45,7 @@ function global:au_GetLatest {
   $re        = 'x86_64\.exe$'
   $url64     = $download_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_}
 
-  $verRe     = '[-]'
+  $verRe     = '[\/]V?'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
   if ($version32 -ne $version64) {
