@@ -7,15 +7,15 @@ location on <https://github.com/coq/coq/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://github.com/coq/coq/releases/download/V8.7.0/coq-8.7.0-installer-windows-i686.exe>
+  64-Bit software: <https://github.com/coq/coq/releases/download/V8.7.0/coq-8.7.0-installer-windows-x86_64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 63071A7E2758F80370639059D5D13A765CBFB067CA9462CE20BF690222A74095
+  checksum64: CC8B0856870F71ACCA49A8326E2402A02DA52DD5C2AA34B33586D3D1E915F6AC
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/coq/coq/blob/27950e8d20578abb2b348618feb28f0426638820/LICENSE>

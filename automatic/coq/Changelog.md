@@ -1,6 +1,6 @@
 # Package changelog for [coq](https://chocolatey.org/packages/coq)
 
-## Upcoming
+## Version: 8.7.0 (2017-10-18)
 - **ENHANCEMENT:** Embedded the installer
 
 ## Version: 8.6 (2017-06-09)
