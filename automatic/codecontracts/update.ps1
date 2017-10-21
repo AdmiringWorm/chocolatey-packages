@@ -28,7 +28,7 @@ function global:au_GetLatest {
     }
     $url = $releases.latest.Assets | select -First 1
 
-    $Latest = @{ URL32 = $url; Version = $version };
+    $Latest = @{ URL32 = $url; Version = $version; ChecksumType32 = 'sha512' };
     return $Latest;
 }
 
