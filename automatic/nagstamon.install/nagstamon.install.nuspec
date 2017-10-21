@@ -2,11 +2,11 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>Nagstamon</id>
+    <id>nagstamon.install</id>
     <version>1.0.1.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
-    <title>Nagstamon</title>
+    <title>Nagstamon (Install)</title>
     <authors>Henri Wahl</authors>
     <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/TomOne/various/b656efdcedbaca1456033b51df2d48b66a575559/nagstamon.png</iconUrl>
@@ -19,7 +19,8 @@
     <tags>nagstamon nagios monitoring admin</tags>
     <summary>Nagstamon</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Nagstamon is a Nagios status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Check_MK Multisite and Thruk monitoring servers.</description>
+    <description><![CDATA[Nagstamon is a status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Check_MK Multisite and Thruk monitoring servers. It resides in systray, as a floating statusbar or fullscreen at the desktop showing a brief summary of critical, warning, unknown, unreachable and down hosts and services. It pops up a detailed status overview when being touched by the mouse pointer. Connections to displayed hosts and services are easily established by context menu via SSH, RDP, VNC or any self defined actions. Users can be notified by sound. Hosts and services can be filtered by category and regular expressions.
+]]></description>
     <releaseNotes>https://github.com/HenriWahl/Nagstamon/releases/latest</releaseNotes>
     <dependencies>
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
