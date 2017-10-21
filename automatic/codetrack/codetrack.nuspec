@@ -10,12 +10,13 @@
     <authors>Nico Van Goethem</authors>
     <projectUrl>https://www.getcodetrack.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fb1acdf2729f7eaaecb6be2a3f672ccb51f6fe17/icons/codetrack.png</iconUrl>
+    <copyright>© Nico Van Goethem. All rights reserved. </copyright>
     <licenseUrl>https://www.getcodetrack.com/license.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <copyright>© Nico Van Goethem. All rights reserved. </copyright>
     <docsUrl>https://www.getcodetrack.com/howto_index.html</docsUrl>
     <tags>codetrack profiler analyzer performance debugging</tags>
     <summary>A free .NET Performance Profile and Execution Analyzer</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
 
@@ -28,6 +29,9 @@ CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of
 [Software Changelog](https://www.getcodetrack.com/releases.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codetrack/Changelog.md)
     </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
