@@ -1,17 +1,16 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\dilay-1.5.0.msi"
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-	packageName   = 'dilay'
-	fileType      = 'msi'
-	softwareName  = 'Dilay'
-	file          = $filePath
-	silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-	validExitCodes= @(0,3010,1641)
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'msi'
+  file           = "$toolsPath\"
+  softwareName   = 'dilay*'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 010, 1641)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force $filePath
+ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

@@ -2,15 +2,17 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer have been downloaded from their official download link listed on <http://abau.org/dilay/download.html>
-and can be verified like this:
+The embedded software have been downloaded from the listed download
+location on <http://abau.org/dilay/download.html>
+and can be verified by doing the following:
 
 1. Download <https://github.com/abau/dilay/releases/download/1.5.0/dilay-1.5.0.msi>
-2. Then use one of the following methods to obtain the checksum
-  - Use powershell function 'Get-Filehash'
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
 
   checksum type: sha256
   checksum: 365A4538F109B8D5230C5EEFFFBA2D309F7B272EB2017F66996E8BE083A758A9
 
-File 'LICENSE.txt' is obtained from <https://github.com/abau/dilay/blob/138e9e7ea68ecf6c9a8bf36bd6f34918f682a4a7/LICENSE.txt>
+The file 'LICENSE.txt' has been obtained from <https://github.com/abau/dilay/blob/master/LICENSE.txt>
