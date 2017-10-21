@@ -1,7 +1,17 @@
-$packageName = 'Nagstamon'
-$installerType = 'EXE'
-$url = 'https://nagstamon.ifw-dresden.de/files-nagstamon/stable/Nagstamon_1.0.1_setup.exe'
-$url64 = 'https://nagstamon.ifw-dresden.de/files-nagstamon/stable/Nagstamon_1.0.1_setup.exe'
-$silentArgs = '/silent'
-$validExitCodes = @(0)
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  file64         = "$toolsPath\"
+  softwareName   = 'Nagstamon*'
+  silentArgs     = "/SILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

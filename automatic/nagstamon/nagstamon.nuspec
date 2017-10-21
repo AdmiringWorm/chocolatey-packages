@@ -1,19 +1,34 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Nagstamon</id>
     <version>1.0.1.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
     <title>Nagstamon</title>
     <authors>Henri Wahl</authors>
-    <owners>Henri Wahl</owners>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/TomOne/various/b656efdcedbaca1456033b51df2d48b66a575559/nagstamon.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Nagstamon is a Nagios status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Check_MK Multisite and Thruk monitoring servers.</description>
-    <summary>Nagstamon</summary>
-    <releaseNotes />
     <copyright>© 2008-2014 Henri Wahl et al.</copyright>
-    <tags>nagstamon nagios monitoring</tags>
+    <licenseUrl>https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/HenriWahl/Nagstamon</projectSourceUrl>
+    <docsUrl>https://nagstamon.ifw-dresden.de/docs/</docsUrl>
+    <bugTrackerUrl>https://github.com/HenriWahl/Nagstamon/issues</bugTrackerUrl>
+    <tags>nagstamon nagios monitoring admin</tags>
+    <summary>Nagstamon</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Nagstamon is a Nagios status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Check_MK Multisite and Thruk monitoring servers.</description>
+    <releaseNotes>https://github.com/HenriWahl/Nagstamon/releases/latest</releaseNotes>
+    <dependencies>
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
+      <dependency id="kb2999226" version="1.0.20170509" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
