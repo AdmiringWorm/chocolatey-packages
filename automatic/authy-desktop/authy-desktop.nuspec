@@ -14,6 +14,7 @@
     <docsUrl>https://support.authy.com/</docsUrl>
     <tags>authy authenticator</tags>
     <summary>Authy for PC's makes Two-Factor Authentication a truly seamless experience and brings the power and security of strong authentication to users everywhere, anywhere.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Authy brings the future of strong authentication to the convenience of your Desktop.
 
