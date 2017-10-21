@@ -1,0 +1,11 @@
+﻿. "$PSScriptRoot\..\nagstamon\update.ps1"
+
+$packageName = 'nagstamon.portable'
+
+function global:au_BeforeUpdate {
+  $Latest.URL32 = $Latest.URL32_p
+  $Latest.URL64 = $Latest.URL64_p
+  Get-RemoteFiles -Purge -NoSuffix
+}
+
+update -ChecksumFor none

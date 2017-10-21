@@ -36,24 +36,26 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   #region Installer
-  $re = '\/stable.*win32.*\.exe$'
-  $url32_i = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  $re = '\/stable.*win64.*\.exe$'
-  $url64_i = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $re = '\/stable.*\.exe$'
+  $urls_i = $download_page.Links | ? href -match $re | select -first 2 -expand href
   #endregion
 
-  $verRe = '[-]'
-  $version32 = $url32_i -split "$verRe" | select -last 1 -skip 1
+  #region Portable
+  $re = '\/stable.*\.zip$'
+  $urls_p = $download_page.Links | ? href -match $re | select -first 2 -expand href
+  #region
 
-  $result = @{
-    URL32_i      = [uri]$url32_i
-    URL64_i      = [uri]$url64_i
+  $verRe = '[-]'
+  $version32 = $urls_i[0] -split "$verRe" | select -last 1 -skip 1
+
+  @{
+    URL32_i      = [uri]($urls_i | ? { $_ -match 'win32' } )
+    URL64_i      = [uri]($urls_i | ? { $_ -match 'win64' } )
+    URL32_p      = [uri]($urls_p | ? { $_ -match 'win32' } )
+    URL64_p      = [uri]($urls_p | ? { $_ -match 'win64' } )
     Version      = [version]$version32
-    ReleaseNotes = "https://github.com/HenriWahl/Nagstamon/releases/tag/$version32"
     PackageName  = $packageName
   }
-
-  return $result
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
