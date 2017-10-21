@@ -7,15 +7,15 @@ location on <https://sourceforge.net/projects/golly/files/golly/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://sourceforge.net/projects/golly/files/golly/golly-3.1/golly-3.1-win-32bit.zip/download>
+  64-Bit software: <https://sourceforge.net/projects/golly/files/golly/golly-3.1/golly-3.1-win-64bit.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: C18B13C6D6616E8A3CFC8EDF30907E92522C6D356650E69B2C4929924728EC45
+  checksum64: B9EB774AEEA1AC855D4D27C18E9F163E11448FE6659FB7FD46E72E999BCBC7EB
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/golly/code/ci/master/tree/docs/License.html>

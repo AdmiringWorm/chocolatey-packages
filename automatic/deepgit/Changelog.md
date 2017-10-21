@@ -1,6 +1,6 @@
 # Package changelog for [deepgit](https://chocolatey.org/packages/deepgit)
 
-## UPCOMING
+## Version: 3.0.0.20171021 (2017-10-21)
 - **ENHANCEMENT:** Added logging to text file for inno setup installer
 
 ## Version: 2.0.1 (2017-06-03)

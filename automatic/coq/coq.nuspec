@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>0.0</version>
+    <version>8.7.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
