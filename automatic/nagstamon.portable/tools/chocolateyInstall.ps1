@@ -4,8 +4,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  file           = "$toolsPath\"
-  file64         = "$toolsPath\"
+  file           = "$toolsPath\Nagstamon-3.0.2-win32.zip"
+  file64         = "$toolsPath\Nagstamon-3.0.2-win64.zip"
   destination    = $toolsPath
   validExitCodes = @(0)
 }
