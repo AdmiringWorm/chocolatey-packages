@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  softwareName   = 'lilypond*'
+  file           = "$toolsPath\lilypond-2.18.2-1.mingw.exe"
+  softwareName   = 'LilyPond'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }

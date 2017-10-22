@@ -3,18 +3,41 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snapgene-viewer</id>
-    <version>0.0</version>
+    <version>4.0.7</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/snapgene-viewer</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>SnapGene Viewer</title>
     <authors>GSL Biotech LLC</authors>
     <projectUrl>https://www.snapgene.com/products/snapgene_viewer/</projectUrl>
-    <iconUrl>/snapgene-viewer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/08f0916504f78853becbacd93a9a641b0d7e4a1b/icons/snapgene-viewer.png</iconUrl>
     <copyright>Copyright © 2017 GSL Biotech LLC</copyright>
     <tags>snapgene-viewer dna visualization</tags>
     <summary>SnapGene Viewer is revolutionary software that allows molecular biologists to create, browse, and share richly annotated DNA sequence files up to 1 Gb in length.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy</description>
+    <description><![CDATA[Would you like to move beyond hand-drawn plasmid maps?
+
+SnapGene Viewer is revolutionary software that allows molecular biologists to create, browse, and share richly annotated DNA sequence files up to 1 Gb in length.
+
+### Visualize
+- Create a DNA sequence file by either entering a sequence, or importing a record from GenBank, or opening an annotated sequence stored in one of many common [file formats][].
+- Browse or print a DNA sequence and its annotations using customizable Map, Sequence, Enzymes, Features, Primers, and History views.
+- Search a DNA sequence to match either a DNA query, or a protein translation, or an annotation.
+- View and edit DNA sequence traces.
+
+![Trace Viewer][]
+
+### Annotate
+- Automatically annotate common features, or manually annotate coding sequences and other features.
+- Design and annotate primers for PCR, sequencing, or mutagenesis.
+- Identify open reading frames (ORFs) with a single mouse click.
+
+### Share
+- Export a plasmid map as an image, or export an annotated DNA sequence to GenBank format.
+- Freely share data with your colleagues or customers using the universally accessible SnapGene format.
+
+[file formats]: https://www.snapgene.com/products/file_compatibility/you_own_your_data
+[Trace Viewer]: https://www.snapgene.com/products/snapgene_viewer/images/trace_viewer.png "Trace Viewer"
+]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

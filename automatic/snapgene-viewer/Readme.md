@@ -1,4 +1,4 @@
-# [<img src="/snapgene-viewer.png" height="48" width="48" /> SnapGene Viewer](https://chocolatey.org/packages/snapgene-viewer)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/08f0916504f78853becbacd93a9a641b0d7e4a1b/icons/snapgene-viewer.png" height="48" width="48" /> SnapGene Viewer](https://chocolatey.org/packages/snapgene-viewer)
 
 Would you like to move beyond hand-drawn plasmid maps?
 
