@@ -1,4 +1,4 @@
-Like my [packages](https://chocolatey.org/profiles/https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
+Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
 
 **Want to buy me a beer?**
 
