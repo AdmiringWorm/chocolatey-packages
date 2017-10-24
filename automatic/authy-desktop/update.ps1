@@ -1,7 +1,7 @@
 Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releasesFormat = "https://electron.authy.com/download?channel=stable&arch={0}&platform=win32&version=latest"
+$releasesFormat = "https://electron.authy.com/download?channel=stable&arch={0}&platform=win32&version=latest&product=authy"
 
 function global:au_SearchReplace {
   @{
