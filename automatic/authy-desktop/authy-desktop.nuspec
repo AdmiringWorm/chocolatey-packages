@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>authy-desktop</id>
-    <version>1.0.13</version>
+    <version>1.1.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Authy Desktop (Install)</title>
@@ -15,8 +15,7 @@
     <tags>authy authenticator</tags>
     <summary>Authy for PC's makes Two-Factor Authentication a truly seamless experience and brings the power and security of strong authentication to users everywhere, anywhere.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Authy brings the future of strong authentication to the convenience of your Desktop.
+    <description><![CDATA[Authy brings the future of strong authentication to the convenience of your Desktop.
 
 The Authy app generates secure 2 step verification tokens on your device. It help’s you protect your account from hackers and hijackers by adding an additional layer of security.
 
@@ -44,7 +43,7 @@ https://www.authy.com/learn-more
 
 ### NOTES
 - Authy Desktop should currently be considered a beta version (which is mentioned on the download page), although they release it using a stable release version.
-</description>
+]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
