@@ -10,7 +10,7 @@ if (!($Version)) {
 
   if (!($nuspecFile)) {
     # Lets check with choco
-    $Version = ((choco search $NewDependencyName -r) | ? { $_ -match "^$NewDependencyName\|" }) -split '\|' | select -last 1
+    $Version = ((choco search $NewDependencyName -r | select -first 1) | ? { $_ -match "^$NewDependencyName\|" }) -split '\|' | select -last 1
   } else {
     gc $nuspecFile.FullName | ? { $_ -match "\<version\>(.+)\<\/version\>" } | Out-Null
     $Version = $Matches[1]
