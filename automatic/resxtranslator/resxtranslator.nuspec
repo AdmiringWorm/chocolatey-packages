@@ -45,7 +45,7 @@ For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/resxtranslator/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" version="4.0" />
+      <dependency id="dotnet4.0" version="4.0.30319.20141222" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
