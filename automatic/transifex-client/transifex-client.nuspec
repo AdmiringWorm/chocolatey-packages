@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>transifex-client</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/transifex-client</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Transifex Command-Line Tool</title>
+    <authors>The Transifex Team</authors>
+    <projectUrl>https://www.transifex.com/</projectUrl>
+    <iconUrl>What is the link to the icon url</iconUrl>
+    <licenseUrl>https://github.com/transifex/transifex-client/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/transifex/transifex-client</projectSourceUrl>
+    <docsUrl>https://docs.transifex.com/client</docsUrl>
+    <bugTrackerUrl>https://github.com/transifex/transifex-client/issues</bugTrackerUrl>
+    <tags>transifex-client transifex translation cli cross-platform foss</tags>
+    <summary>The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description></description>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
