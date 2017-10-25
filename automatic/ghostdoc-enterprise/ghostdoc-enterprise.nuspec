@@ -42,7 +42,7 @@ If you follow good naming conventions in your code, then you will get very decen
     <releaseNotes>http://support.submain.com/kb/a42/whats-new-in-ghostdoc-v5.aspx</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.26.01" />
-      <dependency id="chocolatey-core.extension" version="1.3.1" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>
