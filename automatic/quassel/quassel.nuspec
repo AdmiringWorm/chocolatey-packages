@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>quassel</id>
+    <version>0.12.4</version>
+    <title>Quassel</title>
+    <authors>Quassel team</authors>
+    <owners>Quassel team</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>http://quassel-irc.org/</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/QuasselIrc.svg/200px-QuasselIrc.svg.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt framework.</description>
+    <tags>quassel irc qt</tags>
+  </metadata>
+</package>
