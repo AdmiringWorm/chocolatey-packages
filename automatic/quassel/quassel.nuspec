@@ -5,7 +5,7 @@
     <id>quassel</id>
     <version>0.12.4.20171027</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/quassel</packageSourceUrl>
-    <owners>AdmiringWorm, Quassel team</owners>
+    <owners>AdmiringWorm, dimqua</owners>
     <title>Quassel IRC</title>
     <authors>Quassel team</authors>
     <projectUrl>http://quassel-irc.org/</projectUrl>
