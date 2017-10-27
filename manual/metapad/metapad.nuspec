@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>metapad</id>
+    <version>3.6</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/metapad</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Metapad</title>
+    <authors>Alexander Davidson</authors>
+    <projectUrl>http://liquidninja.com/metapad/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png</iconUrl>
+    <copyright>©1999-2015 Alexander Davidson</copyright>
+    <licenseUrl>https://github.com/alexd/metapad/blob/master/COPYING-LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/alexd/metapad</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/alexd/metapad/issues</bugTrackerUrl>
+    <tags>metapad editor foss</tags>
+    <summary>Metapad is a small, fast and completely free text editor for Windows (95/98/NT/XP/Vista/7) with similar features to Microsoft Notepad</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+Metapad is a small, fast and completely free text editor for Windows (95/98/NT/XP/Vista/7) with similar features to Microsoft Notepad but with many extra (and rather useful) features. It was designed to completely replace Notepad since it includes all of Notepad's features and much, much more.
+
+## Features
+- Persistent window placement
+- Dirty file notification
+- Intelligent Find and Replace
+- External viewer support (e.g. web browser)
+- Usable accelerator keys (Ctrl+S, Ctrl+N, etc.)
+- Dual customizable font support
+- Optional Quick Exit (Esc key)
+- Configurable tab stop setting
+- Auto-indent mode
+- Go to Line/Column
+- Seamless UNIX text file support
+- Block indent and unindent (Tab, Shift+Tab)
+- Recent files list
+- No file size limit! (under Win9x)
+- Hyperlink support
+- Portability mode (INI mode)
+- Over 30 customized UI language plugins
+</description>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
