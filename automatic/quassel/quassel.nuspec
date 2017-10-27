@@ -1,16 +1,34 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>quassel</id>
     <version>0.12.4</version>
-    <title>Quassel</title>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/quassel</packageSourceUrl>
+    <owners>AdmiringWorm, Quassel team</owners>
+    <title>Quassel IRC</title>
     <authors>Quassel team</authors>
-    <owners>Quassel team</owners>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://quassel-irc.org/</projectUrl>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/QuasselIrc.svg/200px-QuasselIrc.svg.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2f797993200b38f84b794af2a47fca53e15809c0/icons/quassel.png</iconUrl>
+    <copyright>(C) 2013 by the Quassel IRC Team</copyright>
+    <licenseUrl>https://github.com/quassel/quassel/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt framework.</description>
+    <projectSourceUrl>http://github.com/quassel/quassel</projectSourceUrl>
+    <docsUrl>http://bugs.quassel-irc.org/projects/quassel-irc/wiki</docsUrl>
+    <mailingListUrl>http://lists.quassel-irc.org/</mailingListUrl>
+    <bugTrackerUrl>http://bugs.quassel-irc.org/</bugTrackerUrl>
     <tags>quassel irc qt</tags>
+    <summary>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt framework.</description>
+    <releaseNotes>https://github.com/quassel/quassel/blob/master/ChangeLog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="vcredist2013" version="12.0.30501.20150616" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

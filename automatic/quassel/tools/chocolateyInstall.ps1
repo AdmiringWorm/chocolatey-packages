@@ -1,12 +1,16 @@
-﻿$name = 'quassel'
-$installerType = 'exe'
-$url = 'http://quassel-irc.org/pub/quassel-x86-setup-0.12.4.exe'
-$url64 = 'http://quassel-irc.org/pub/quassel-x86-setup-0.12.4.exe'
-$silentArgs = '/s /S /q /Q /quiet /silent /SILENT /VERYSILENT'
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-checksum ='F2ADE0C9541CC5DB2A64DF7456FE158A'
-checksum64 ='F2ADE0C9541CC5DB2A64DF7456FE158A'
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  softwareName   = 'quassel*'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs $name $installerType $silentArgs $url $url64
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
