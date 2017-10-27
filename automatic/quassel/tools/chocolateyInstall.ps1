@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  softwareName   = 'quassel*'
+  file           = "$toolsPath\quassel-x86-setup-0.12.4.exe"
+  softwareName   = 'Quassel*'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
