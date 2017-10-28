@@ -10,6 +10,7 @@ image: WMF 5
 branches:
   only:
   - master
+skip_tags: true
 #build:
 #  verbosity: minimal
 
