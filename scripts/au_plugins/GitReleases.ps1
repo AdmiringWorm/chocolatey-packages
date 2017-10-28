@@ -60,13 +60,13 @@ $headers = @{
 if ($releaseType -eq 'date' -and !$releaseHeader) {
   $releaseHeader = 'Packages updated on <date>'
 } elseif (!$releaseHeader) {
-  $releaseHeader = '<PackageName> v<RemoteVersion> updated on <date>'
+  $releaseHeader = '<PackageName> updated to version <RemoteVersion>'
 }
 
 if ($releaseType -eq 'date' -and !$releaseDescription) {
   $releaseDescription = 'We had packages that was updated on <date>'
 } elseif (!$releaseDescription) {
-  $releaseDescription = '<PackageName> was updated on <date> from <NuspecVersion> to <RemoteVersion>'
+  $releaseDescription = '<PackageName> was updated from version <NuspecVersion> to <RemoteVersion>'
 }
 
 $date = Get-Date -UFormat $dateFormat
