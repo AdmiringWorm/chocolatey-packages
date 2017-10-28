@@ -58,6 +58,8 @@ $uploadUrl = $release.upload_url -replace '\{.*\}$',''
 $packages | % {
   $path = Resolve-Path "$($_.Path)\*.nupkg"
   $fileName = [System.IO.Path]::GetFileName($path)
+  $dirName = [System.IO.Path]::GetFileName($_.Path)
+  $version = $fileName.Replace($dirName, '').Replace('.nupkg', '')
 
   $existing = $release.assets | ? name -eq $fileName
   if ($existing) {
@@ -67,5 +69,5 @@ $packages | % {
 
   $rawContent = [System.IO.File]::ReadAllBytes($path)
   Write-Host "Uploading $fileName asset..."
-  Invoke-RestMethod -UseBasicParsing -Uri "${uploadUrl}?name=${fileName}" -Body $rawContent -Headers $uploadHeaders -Method Post | Out-Null
+  Invoke-RestMethod -UseBasicParsing -Uri "${uploadUrl}?name=${fileName}&label=$($_.Name) v$($_.RemoteVersion)" -Body $rawContent -Headers $uploadHeaders -Method Post | Out-Null
 }
