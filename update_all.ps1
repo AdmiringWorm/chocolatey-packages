@@ -60,12 +60,16 @@ $Options = [ordered]@{
         Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
     }
 
-    Gitter = @{
+    GitReleases      = @{
+        ApiToken = $Env:github_api_key
+    }
+
+    Gitter           = @{
         WebHook = $Env:gitter_webhook
     }
 
-    RunInfo = @{
-        Exclude = 'password', 'apikey', 'UserName', 'To'    #Option keys which contain those words will be removed
+    RunInfo          = @{
+        Exclude = 'password', 'apikey', 'UserName', 'To', 'ApiToken'    #Option keys which contain those words will be removed
         Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
     }
 
