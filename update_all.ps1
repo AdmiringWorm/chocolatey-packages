@@ -61,7 +61,8 @@ $Options = [ordered]@{
     }
 
     GitReleases      = @{
-        ApiToken = $Env:github_api_key
+        ApiToken    = $Env:github_api_key
+        ReleaseType = 'date'
     }
 
     Gitter           = @{
