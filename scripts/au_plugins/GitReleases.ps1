@@ -60,7 +60,7 @@ $headers = @{
 if ($releaseType -eq 'date' -and !$releaseHeader) {
   $releaseHeader = 'Packages updated on <date>'
 } elseif (!$releaseHeader) {
-  $releaseHeader = '<PackageName> updated to version <RemoteVersion>'
+  $releaseHeader = '<PackageName> <RemoteVersion>'
 }
 
 if ($releaseType -eq 'date' -and !$releaseDescription) {
