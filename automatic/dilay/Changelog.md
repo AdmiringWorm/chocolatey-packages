@@ -1,6 +1,6 @@
 # Package changelog for [dilay](https://chocolatey.org/packages/dilay)
 
-## Upcoming
+## Version: 1.6.0 (2017-10-30)
 - **ENHANCEMENT:** Updated chocolatey-core.extension to version 1.0.6
 
 ## Version: 1.5.0.20161208 (2016-12-08)

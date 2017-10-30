@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>onionshare</id>
-    <version>0.0</version>
+    <version>1.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/onionshare</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>OnionShare</title>
     <authors>Micah Lee</authors>
     <projectUrl>https://onionshare.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/b9cad337b9aac277e0e32c7c7de3919409c1a38e/icons/onionshare.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/1cb8d075498e52ac85553234b1212005c53f43dc/icons/onionshare.png</iconUrl>
     <licenseUrl>https://github.com/micahflee/onionshare/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/micahflee/onionshare</projectSourceUrl>
@@ -18,8 +18,11 @@
     <tags>onionshare sharing security privacy</tags>
     <summary>OnionShare is an open source tool that lets you securely and anonymously share a file of any size.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>OnionShare lets you securely and anonymously share files of any size. It works by starting a web server, making it accessible as a Tor onion service, and generating an unguessable URL to access and download the files. It doesn't require setting up a server on the internet somewhere or using a third party file-sharing service. You host the file on your own computer and use a Tor onion service to make it temporarily accessible over the internet. The other user just needs to use Tor Browser to download the file from you.
-    </description>
+    <description><![CDATA[OnionShare lets you securely and anonymously share files of any size. It works by starting a web server, making it accessible as a Tor onion service, and generating an unguessable URL to access and download the files. It doesn't require setting up a server on the internet somewhere or using a third party file-sharing service. You host the file on your own computer and use a Tor onion service to make it temporarily accessible over the internet. The other user just needs to use Tor Browser to download the file from you.
+
+## Notes
+- Uninstall is not completely silen, a dialog pops up asking you to confirm the uninstall.
+]]></description>
     <releaseNotes>https://github.com/micahflee/onionshare/blob/master/CHANGELOG.md</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

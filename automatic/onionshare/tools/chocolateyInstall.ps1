@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  softwareName   = 'onionshare*'
+  file           = "$toolsPath\OnionShare_Setup.exe"
+  softwareName   = 'OnionShare'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }

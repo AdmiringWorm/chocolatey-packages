@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'onionshare*'
+  softwareName  = 'OnionShare'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))

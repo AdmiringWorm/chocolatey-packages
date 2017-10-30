@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dilay</id>
-    <version>1.5.0.20161208</version>
+    <version>1.6.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dilay</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Dilay</title>
@@ -19,10 +19,8 @@
     <tags>dilay 3d sculpting qt admin foss cross-platform</tags>
     <summary>a 3D sculpting application</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-**Dilay** is a 3D sculpting application that provides an intuitive workflow using a number of powerful modeling tools.
-As each tool locally subdivides the mesh where more details are required, Dilay allows artists to rapidly create complex meshes.
-    </description>
+    <description><![CDATA[**Dilay** is a 3D sculpting application that provides an intuitive workflow using a number of powerful modeling tools. As each tool locally subdivides the mesh where more details are required, Dilay allows artists to rapidly create complex meshes.
+]]></description>
     <releaseNotes>
 [Software Changelog](http://abau.org/dilay/index.html#news)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dilay/Changelog.md)
