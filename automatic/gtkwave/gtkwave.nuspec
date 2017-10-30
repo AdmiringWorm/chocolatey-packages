@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gtkwave</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/gtkwave</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>GTKWave</title>
+    <authors>Tony Bybell</authors>
+    <projectUrl>http://gtkwave.sourceforge.net/</projectUrl>
+    <iconUrl></iconUrl>
+    <licenseUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/LICENSE.TXT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>http://gtkwave.sourceforge.net/gtkwave.pdf</docsUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/gtkwave/_list/tickets?source=navbar</bugTrackerUrl>
+    <tags>gtkwave foss cross-platform</tags>
+    <summary>GTKWave is a fully featured GTK+ based wave viewer</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing</description>
+    <releaseNotes>https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/ChangeLog</releaseNotes>
+    <dependencies />
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
