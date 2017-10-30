@@ -2,7 +2,7 @@
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-$exe = "$toolsPath\"
+$exe = "$toolsPath\reshade.exe"
 
 $pp = Get-PackageParameters
 
