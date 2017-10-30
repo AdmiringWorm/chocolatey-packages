@@ -29,9 +29,9 @@ function global:au_GetLatest {
   $re = '\.zip\/download$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $version32 = Get-Version ($url32 -split '\-' | select -last 1 -skip 2)
+  $version32 = $url32 -split '\-' | select -last 1 -skip 2
 
-  @{ Version = $version32.ToString(); URL32 = $url32; FileType = 'zip' }
+  @{ Version = [version]$version32; URL32 = $url32; FileType = 'zip' }
 }
 
 update -ChecksumFor none
