@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>reshade</id>
-    <version>3.0.8</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/reshade</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ReShade</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/crosire/reshade</projectSourceUrl>
     <mailingListUrl>https://reshade.me/forum</mailingListUrl>
-    <tags>reshade space_separated</tags>
+    <tags>reshade foss</tags>
     <summary>ReShade is an advanced, fully generic post-processing injector for games and video software developed by crosire</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[ReShade is an advanced, fully generic post-processing injector for games and video software developed by crosire. Imagine your favorite game with ambient occlusion, real depth of field effects, color correction and more ... ReShade exposes an automated and generic way to access both frame color and depth information (latter is automatically disabled during multiplayer to prevent exploitation) and all the tools to make it happen.
