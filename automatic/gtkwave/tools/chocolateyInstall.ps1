@@ -5,7 +5,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType    = 'zip'
-  file        = "$toolsPath\"
+  file        = "$toolsPath\gtkwave-3.3.86-bin-win32.zip"
   destination = $toolsPath
 }
 
