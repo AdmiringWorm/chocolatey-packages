@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>teeworlds</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/teeworlds</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Teeworlds</title>
+    <authors>Magnus Auvinen</authors>
+    <projectUrl>https://teeworlds.com/?page=downloads</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>Copyright (C) Magnus Auvinen</copyright>
+    <licenseUrl>https://github.com/teeworlds/teeworlds/blob/master/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/teeworlds/teeworlds</projectSourceUrl>
+    <docsUrl>https://teeworlds.com/?page=docs&amp;wiki=docs_overview</docsUrl>
+    <mailingListUrl>https://teeworlds.com/forum/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/teeworlds/teeworlds/issues</bugTrackerUrl>
+    <tags>teeworlds game retro multiplayer</tags>
+    <summary>Teeworlds is a free online multiplayer game</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description></description>
+    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="vcredist2010" version="10.0.40219.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
