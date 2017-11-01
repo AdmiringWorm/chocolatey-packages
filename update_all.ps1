@@ -11,12 +11,14 @@ $Options = [ordered]@{
     UpdateTimeout    = 1200                                    #Update timeout in seconds
     Threads          = 10                                      #Number of background jobs to use
     Push             = $Env:au_Push -eq 'true'                 #Push to chocolatey
+    PushAll          = $true
     PluginPath       = 'scripts\au_plugins'                    #Path to user plugins
     IgnoreOn         = @(                                      #Error message parts to set the package ignore status
         'Could not create SSL/TLS secure channel'
         'Could not establish trust relationship'
         'The operation has timed out'
         'Internal Server Error'
+        'Service Temporarily Unavailable'
     )
     RepeatOn         = @(                                      #Error message parts on which to repeat package updater
         'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
@@ -29,14 +31,15 @@ $Options = [ordered]@{
         'An exception occurred during a WebClient request'
     )
     #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
-    #RepeatCount   = 2
+    #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
+
     Report           = @{
         Type   = 'markdown'                                   #Report type: markdown or text
         Path   = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
         Params = @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
             NoAppVeyor      = $false                            #  Markdown: do not show AppVeyor build shield
-            UserMessage     = "[Weekly Test Results](https://gist.github.com/$Env:gist_id_test) | [History](#update-history) | **USING AU Custom**" #  Markdown, Text: Custom user message to show
+            UserMessage     = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test) | [Releases](https://github.com/AdmiringWorm/chocolatey-packages/releases) | **TESTING AU STREAMS VERSION**"       #  Markdown, Text: Custom user message to show
             NoIcons         = $false                            #  Markdown: don't show icon
             IconSize        = 32                                #  Markdown: icon size
             Title           = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
@@ -83,7 +86,7 @@ $Options = [ordered]@{
             Port        = $Env:mail_port
             EnableSsl   = $Env:mail_enablessl -eq 'true'
             Attachment  = "$PSScriptRoot\update_info.xml"
-            UserMessage = 'Update status: http://gep13.me/choco-au'
+            UserMessage = "Update status: Update status: https://gist.github.com/choco-bot/$Env:gist_id"
             SendAlways  = $false                        #Send notifications every time
         }
     }
