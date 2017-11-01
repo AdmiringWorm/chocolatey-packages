@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qmmp</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qmmp</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Qmmp</title>
+    <authors>Qmmp Development Team</authors>
+    <projectUrl>http://qmmp.ylsoftware.com/</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>© 2006-2017 Qmmp Development Team</copyright>
+    <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/qmmp-dev/wiki/browse_pages/</docsUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/qmmp-dev/tickets/</bugTrackerUrl>
+    <tags>qmmp audio foss cross-platform</tags>
+    <summary>This program is an audio-player, written with the help of the Qt library.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+This program is an audio-player, written with the help of the Qt library. The user interface is similar to winamp or xmms. [Alternative user interface][alt gui] also is available.
+
+## Features
+
+**Formats**
+- MPEG1 layer 2/3
+- Ogg Vorbis
+- Ogg Opus
+- Native FLAC/Ogg FLAC
+- Musepack
+- WavePack
+- tracker modules (mod, s3m, it, xm, etc)
+- ADTS AAC
+- CD Audio
+- WMA, Monkey's Audio (and other formats provided by FFmpeg library)
+- PCM WAVE (and other formats provided by libsndfile library)
+- Midi
+- SID
+- Chiptune formats (AY, GBS, GYM, HES, KSS, NSF, NSFE, SAP, SPC, VGM, VGZ, VTX)
+
+**DSP effects**
+- [BS2B][] effect
+- sample rate conversion
+- [LADSPA][] effects
+- extra stereo
+- crossfade
+
+**Visual effects**
+- [projectM][] visualization
+- spectrum analyzer
+
+**Output system support**
+- JACK
+- WaveOut
+- DirectSound
+- WASAPI
+
+And more...
+
+[alt gui]: http://qmmp.ylsoftware.com/screenshots.php
+[BS2B]: http://bs2b.sourceforge.net/
+[LADSPA]: http://www.ladspa.org/
+[projectM]: http://projectm.sourceforge.net/
+    </description>
+    <releaseNotes>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/ChangeLog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
