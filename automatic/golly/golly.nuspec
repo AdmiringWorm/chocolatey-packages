@@ -9,7 +9,7 @@
     <title>Golly Game of Life</title>
     <authors>The Golly Gang</authors>
     <projectUrl>http://golly.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/0c2bb4e89fe6264e43fc70a53c0d46e25700f812/icons/golly.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5c013c93becbef392df9d15ee70a75c33ca402ed/icons/golly.png</iconUrl>
     <copyright>Copyright (C) 2005-2017 The Golly Gang</copyright>
     <licenseUrl>https://sourceforge.net/p/golly/code/ci/master/tree/docs/License.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

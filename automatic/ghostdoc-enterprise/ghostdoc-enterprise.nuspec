@@ -9,7 +9,7 @@
     <title>GhostDoc Enterprise Edition</title>
     <authors>submain</authors>
     <projectUrl>http://submain.com/products/ghostdoc.aspx</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d309f06f8925d405c5b1d07e9ad1e2ef5b675c61/icons/ghostdoc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9cc5e849e4ac105af5371fdb4c196017ed8fe1a0/icons/ghostdoc.png</iconUrl>
     <copyright>© 1998-2017 SubMain Software.  All rights reserved.</copyright>
     <licenseUrl>http://submain.com/ghostdoc/EULA.aspx</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

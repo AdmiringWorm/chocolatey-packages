@@ -1,4 +1,4 @@
-﻿param($include, $force)
+﻿param($include)
 
 Import-Module AU
 
@@ -43,4 +43,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none -Include $include -Force $force
+update -ChecksumFor none -Include $include

@@ -1,4 +1,4 @@
-﻿param($include = $null, $force = $false)
+﻿param($include = $null)
 
 Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
@@ -44,4 +44,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none -Include $include -Force $force
+update -ChecksumFor none -Include $include
