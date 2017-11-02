@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>teeworlds</id>
-    <version>0.6.4</version>
+    <version>0.6.4.20171102</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/teeworlds</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Teeworlds</title>
