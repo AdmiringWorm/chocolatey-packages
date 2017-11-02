@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Qmmp*'
+  softwareName  = 'Qt-based Multimedia Player'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(0)

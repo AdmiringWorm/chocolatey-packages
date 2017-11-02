@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  softwareName   = 'Qmmp*'
+  file           = "$toolsPath\qmmp-0.10.11-win32.exe"
+  softwareName   = 'Qt-based Multimedia Player'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }

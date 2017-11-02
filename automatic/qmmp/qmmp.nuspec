@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qmmp</id>
-    <version>0.0</version>
+    <version>0.10.11</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qmmp</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qmmp</title>
     <authors>Qmmp Development Team</authors>
     <projectUrl>http://qmmp.ylsoftware.com/</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/ddb7c72d3883fac1a49c6dfb0afaa7560977d0c7/icons/qmmp.png</iconUrl>
     <copyright>© 2006-2017 Qmmp Development Team</copyright>
     <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,8 +19,7 @@
     <tags>qmmp audio foss cross-platform</tags>
     <summary>This program is an audio-player, written with the help of the Qt library.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-This program is an audio-player, written with the help of the Qt library. The user interface is similar to winamp or xmms. [Alternative user interface][alt gui] also is available.
+    <description><![CDATA[This program is an audio-player, written with the help of the Qt library. The user interface is similar to winamp or xmms. [Alternative user interface][alt gui] also is available.
 
 ## Features
 
@@ -63,7 +62,7 @@ And more...
 [BS2B]: http://bs2b.sourceforge.net/
 [LADSPA]: http://www.ladspa.org/
 [projectM]: http://projectm.sourceforge.net/
-    </description>
+]]></description>
     <releaseNotes>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/ChangeLog</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
