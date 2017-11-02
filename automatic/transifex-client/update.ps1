@@ -24,10 +24,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'tx\-32\.exe$'
+  $re = 'tx\.py35\.exe$$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-  $re = 'tx\-64\.exe$'
+  $re = 'tx\.py35\.64\.exe$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
   $verRe = '\/'
