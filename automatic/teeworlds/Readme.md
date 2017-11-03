@@ -7,4 +7,4 @@ Teeworlds is a free online multiplayer game, available for all major operating s
 - `/NoStartMenu`: Disables creation of a shortcut in the start menu
 
 **Example:**
-`choco install reshade --params '"/Desktop /NoStartMenu"'`
+`choco install teeworlds --params '"/Desktop /NoStartMenu"'`
