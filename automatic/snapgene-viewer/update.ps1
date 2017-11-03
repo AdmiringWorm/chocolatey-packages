@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.snapgene.com/products/snapgene_viewer/'
 
@@ -12,6 +13,9 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate {
+  Update-ChangelogVersion -version $Latest.Version
+}
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
