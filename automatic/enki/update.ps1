@@ -31,18 +31,14 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
 
   $re = '\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  [uri]$url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
 
   $verRe = '\/v?'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-
-  if ($url32.StartsWith('/')) {
-    $url32 = $domain + $url32
-  }
+  [version]$version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
   @{
     URL32 = $url32
-    Version = [version]$version32
+    Version = $version32
   }
 }
 
