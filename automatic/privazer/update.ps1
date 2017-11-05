@@ -11,6 +11,14 @@ function global:au_SearchReplace {
   }
 }
 
+if ($MyInvocation.InvocationName -ne '.') {
+  function global:au_BeforeUpdate {
+    $content = Get-Content "$PSScriptRoot\..\privazer.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(privazer)(?:\.install| \(Install\))',"`$1" }
+    $encoding = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
+  }
+}
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
