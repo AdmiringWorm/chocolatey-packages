@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>deepgit</id>
-    <version>3.0.0.20171021</version>
+    <version>3.0.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/deepgit</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DeepGit (Install)</title>
