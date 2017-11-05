@@ -4,6 +4,7 @@
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Changed deprecated chocolatey-uninstall.extension to chocolatey-core.extension
 - **ENHANCEMENT:** Extracted Description to its own file
+- **ENHANCEMENT:** Added ability to load and save an installer configuration file
 
 ## Version: 2.2.2.33 (2016-10-05)
 - Added chocolatey-uninstall.extension for users with choco older than version 0.9.10
