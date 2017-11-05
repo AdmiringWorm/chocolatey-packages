@@ -1,4 +1,5 @@
 ﻿. "$PSScriptRoot\..\nagstamon\update.ps1"
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $packageName = 'nagstamon.install'
 
@@ -7,6 +8,10 @@ function global:au_BeforeUpdate {
   $Latest.URL64 = $Latest.URL64_i
   $Latest.FileType = 'exe'
   Get-RemoteFiles -Purge -NoSuffix
+}
+
+function global:au_AfterUpdate {
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 update -ChecksumFor none
