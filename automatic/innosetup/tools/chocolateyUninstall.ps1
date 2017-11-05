@@ -4,7 +4,7 @@ $packageName = 'innosetup'
 $softwareName = 'Inno Setup*'
 $installerType = 'EXE'
 
-$silentArgs = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
+$silentArgs = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoUninstall.log`""
 $validExitCodes = @(0)
 
 $uninstalled = $false
