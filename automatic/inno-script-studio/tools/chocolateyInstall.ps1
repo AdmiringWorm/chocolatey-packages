@@ -11,7 +11,7 @@ $packageArgs = @{
   url           = $url
   checksum      = $checksum
   checksumType  = $checksumType
-  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes= @(0)
   softwareName  = 'Inno Script Studio*'
 }
