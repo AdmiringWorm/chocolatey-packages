@@ -8,7 +8,7 @@ $packageArgs = @{
 	fileType      = 'exe'
 	softwareName  = 'Inno Setup*'
 	file          = $filePath
-	silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+	silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
 	validExitCodes= @(0,3010,1641)
 }
 
