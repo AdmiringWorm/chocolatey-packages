@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg" height="48" width="48" /> r.project](https://chocolatey.org/packages/r.project)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg" height="48" width="48" /> The R Project for Statistical Computing](https://chocolatey.org/packages/r.project)
 
 ## Introduction to R
 R is a language and environment for statistical computing and graphics. It is a [GNU project](http://www.gnu.org/) which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
@@ -25,3 +25,9 @@ Many users think of R as a statistics system. We prefer to think of it of an env
 R can be extended (easily) via packages. There are about eight packages supplied with the R distribution and many more are available through the CRAN family of Internet sites covering a very wide range of modern statistics.
 
 R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hardcopy.
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install r.project --params "'/UseInf:C:\r.project.inf'"`
