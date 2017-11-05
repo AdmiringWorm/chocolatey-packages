@@ -1,5 +1,8 @@
 # Package changelog for [deepgit](https://chocolatey.org/packages/deepgit)
 
+## UPCOMIMG
+- **ENHANCEMENT:** Added ability to load and save an installer configuration file
+
 ## Version: 3.0.0.20171021 (2017-10-21)
 - **ENHANCEMENT:** Added logging to text file for inno setup installer
 

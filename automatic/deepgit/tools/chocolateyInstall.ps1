@@ -12,6 +12,19 @@ $packageArgs = @{
   destination    = Get-PackageCacheLocation
 }
 
+$pp = Get-PackageParameters
+if (!$pp.UseInf) {
+  $pp.UseInf = "$env:TEMP\$env:chocolateyPackageName.Install.inf"
+}
+
+if (Test-Path "$($pp.UseInf)") {
+  Write-Host "Using existing configuration file at '$($pp.UseInf)'"
+  $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /LOADINF=`"$($pp.UseInf)`""
+} else {
+  Write-Host "Creating new configuration file at '$($pp.UseInf)'"
+  $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /SAVEINF=`"$($pp.UseInf)`""
+}
+
 Install-ChocolateyZipPackage @packageArgs
 
 $packageArgs.file = Get-ChildItem $packageArgs.destination -Filter "*.exe" | % { $_.FullName }
