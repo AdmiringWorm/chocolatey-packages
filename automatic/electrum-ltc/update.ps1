@@ -12,6 +12,14 @@ function global:au_SearchReplace {
   }
 }
 
+if ($MyInvocation.InvocationName -ne '.') {
+  function global:au_BeforeUpdate {
+    $content = Get-Content "$PSScriptRoot\..\$($Latest.PackageName).install\Readme.md" -Encoding UTF8 | % { $_ -replace "($($Latest.PackageName))(?:\.install| \(Install\))","`$1" }
+    $encoding = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
+  }
+}
+
 function global:au_AfterUpdate {
   if (Test-Path 'Changelog.md') { Update-ChangelogVersion -Version $Latest.Version }
 }
