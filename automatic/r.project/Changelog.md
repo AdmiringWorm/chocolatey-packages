@@ -2,6 +2,7 @@
 
 ## Upcoming
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file
+- **ENHANCEMENT:** Changed to log installer to a cached location
 
 ## Version: 3.4.1 (2017-07-01)
 - **ENHANCEMENT:** Added changelog for package
