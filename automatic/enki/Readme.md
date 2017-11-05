@@ -10,3 +10,9 @@ Enki is a text editor for programmers. It is:
 - **High quality.** No long list of fancy features. But, what is done, is done well.
 - **Open source.** Created, tested, and designed for community, by the community, and with the community.
 - [More Features](http://enki-editor.org/features.html)
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install enki --params "'/UseInf:C:\enki.install.inf'"`
