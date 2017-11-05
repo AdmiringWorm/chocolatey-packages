@@ -3,7 +3,7 @@
 
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
 
-### Key features:
+## Key features:
 * Support for **every Windows release since 2000**, including: *Windows 10*, Windows 8.1, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2008, Windows XP, Windows Server 2003, and Windows 2000. (No service packs are required.)
 * Extensive support for installation of **64-bit applications** on the 64-bit editions of Windows. Both the x64 and Itanium architectures are supported. (On the Itanium architecture, Service Pack 1 or later is required on Windows Server 2003 to install in 64-bit mode.)
 * Supports creation of a **single EXE** to install your program for easy online distribution. Disk spanning is also supported.
@@ -30,4 +30,9 @@ Yes, it may be used completely free of charge, even when deploying commercial ap
 However if you wish to show your appreciation and support its development you can make a [donation](http://www.jrsoftware.org/isdonate.php).
 *(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software.
   There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
-    
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install innosetup --params "'/UseInf:C:\innosetup.install.inf'"`
