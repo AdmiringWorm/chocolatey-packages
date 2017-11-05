@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\Install_Enki.exe"
   softwareName   = 'Enki*'
-  silentArgs     = '/SILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs     = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
 }
 
