@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Nagstamon</id>
-    <version>3.0.2</version>
+    <version>3.0.2.20171105</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Nagstamon</title>
@@ -20,10 +20,16 @@
     <summary>Nagstamon is a status monitor for the desktop.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Nagstamon is a status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Check_MK Multisite and Thruk monitoring servers. It resides in systray, as a floating statusbar or fullscreen at the desktop showing a brief summary of critical, warning, unknown, unreachable and down hosts and services. It pops up a detailed status overview when being touched by the mouse pointer. Connections to displayed hosts and services are easily established by context menu via SSH, RDP, VNC or any self defined actions. Users can be notified by sound. Hosts and services can be filtered by category and regular expressions.
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install nagstamon --params "'/UseInf:C:\nagstamon.inf'"`
 ]]></description>
     <releaseNotes>https://nagstamon.ifw-dresden.de/docs/changelog/</releaseNotes>
     <dependencies>
-      <dependency id="nagstamon.install" version="[3.0.2]" />
+      <dependency id="nagstamon.install" version="[3.0.2.20171105]" />
     </dependencies>
   </metadata>
   <files />

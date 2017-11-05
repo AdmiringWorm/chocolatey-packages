@@ -1,6 +1,6 @@
 # Package changelog for [enki](https://chocolatey.org/packages/enki)
 
-## Upcoming
+## Version: 16.4.1.20171105 (2017-11-05)
 - **BUG:** Removed leading zeroes from version number
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file

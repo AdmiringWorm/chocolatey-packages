@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>enki</id>
-    <version>16.04.1</version>
+    <version>16.4.1.20171105</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/enki</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Enki</title>
@@ -18,8 +18,7 @@
     <bugTrackerUrl>https://github.com/hlamer/enki/issues</bugTrackerUrl>
     <tags>enki admin editor text-editor code-editor</tags>
     <summary>A text editor for programmers.</summary>
-    <description>
-Enki is a text editor for programmers. It is:
+    <description><![CDATA[Enki is a text editor for programmers. It is:
 
 - **User friendly.** Intuitive interface. Works out of the box. You don't have to read a lot of docs.
 - **Hacker friendly.** Works as quickly as possible. Navigate efficiently without your mouse.
@@ -29,7 +28,13 @@ Enki is a text editor for programmers. It is:
 - **High quality.** No long list of fancy features. But, what is done, is done well.
 - **Open source.** Created, tested, and designed for community, by the community, and with the community.
 - [More Features](http://enki-editor.org/features.html)
-    </description>
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install enki --params "'/UseInf:C:\enki.install.inf'"`
+]]></description>
     <releaseNotes>
 [Software Changelog](https://github.com/andreikop/enki/releases)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/enki/Changelog.md)

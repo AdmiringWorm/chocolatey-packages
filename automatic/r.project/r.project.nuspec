@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>R.Project</id>
-    <version>3.4.2</version>
+    <version>3.4.2.20171105</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm,zippy1981,yoshimov,jeffmoser</owners>
     <title>The R Project for Statistical Computing</title>
@@ -44,6 +44,12 @@ Many users think of R as a statistics system. We prefer to think of it of an env
 R can be extended (easily) via packages. There are about eight packages supplied with the R distribution and many more are available through the CRAN family of Internet sites covering a very wide range of modern statistics.
 
 R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hardcopy.
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install r.project --params "'/UseInf:C:\r.project.inf'"`
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)

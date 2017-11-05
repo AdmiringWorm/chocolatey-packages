@@ -1,6 +1,6 @@
 # Package changelog for [nagstamon.install](https://chocolatey.org/packages/nagstamon.install)
 
-## Upcoming
+## Version: 3.0.2.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file
 - **ENHANCEMENT:** Extracted Description to its own file

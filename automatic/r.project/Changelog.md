@@ -1,6 +1,6 @@
 # Package changelog for [r.project](https://chocolatey.org/packages/r.project)
 
-## Upcoming
+## Version: 3.4.2.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file
 - **ENHANCEMENT:** Changed to log installer to a cached location
 
