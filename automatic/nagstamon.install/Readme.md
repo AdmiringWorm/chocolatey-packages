@@ -6,4 +6,4 @@ Nagstamon is a status monitor for the desktop. It connects to multiple Nagios, I
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**
-`choco install enki --params "'/UseInf:C:\deepgit.install.inf'"`
+`choco install nagstamon.install --params "'/UseInf:C:\nagstamon.install.inf'"`

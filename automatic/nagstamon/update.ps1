@@ -23,6 +23,13 @@ if ($MyInvocation.InvocationName -eq '.') {
     }
   }
 } else {
+
+  function global:au_BeforeUpdate {
+    $content = Get-Content "$PSScriptRoot\..\nagstamon.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(nagstamon)(?:\.install| \(Install\))',"`$1" }
+    $encoding = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
+  }
+
   function global:au_SearchReplace {
     @{
       ".\$($Latest.PackageName).nuspec" = @{
