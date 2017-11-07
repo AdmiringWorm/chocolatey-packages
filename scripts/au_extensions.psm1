@@ -11,6 +11,7 @@ $funcs = @(
   'Update-ChangelogVersion'
   'Update-Metadata'
   'Get-RedirectedUrl'
+  'Get-LatestGithubReleases'
 )
 
 $funcs | % {

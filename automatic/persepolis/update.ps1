@@ -28,7 +28,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $release = getLatestReleases $repoUser $repoName $false
+  $release = Get-LatestGithubReleases $repoUser $repoName $false
 
   $url32 = $release.latestStable.Assets | ? { $_ -match '32bit\.exe$' } | select -first 1
   $url64 = $release.latestStable.Assets | ? { $_ -match '64bit\.exe$' } | select -first 1

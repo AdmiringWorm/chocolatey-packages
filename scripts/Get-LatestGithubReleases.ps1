@@ -18,7 +18,7 @@ function resolveRelease {
 
   $version = $matches[1];
 
-  $assetUrls = $release.assets | ? name -Match "\.(msi|exe)$" | select -expand browser_download_url;
+  [array]$assetUrls = $release.assets | ? name -Match "\.(msi|exe)$" | select -expand browser_download_url;
   $assetUrls += @($release.tarball_url; $release.zipball_url)
 
   return @{
@@ -31,7 +31,7 @@ function resolveRelease {
   };
 }
 
-function getLatestReleases {
+function Get-LatestGithubReleases {
   param(
     [string]$repoUser,
     [string]$repoName,
