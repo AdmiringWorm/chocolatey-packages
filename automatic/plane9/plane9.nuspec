@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>plane9</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/plane9</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Plane9</title>
+    <authors>Planestate Software</authors>
+    <projectUrl>https://www.plane9.com</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e909a8247388d06469d9f3422c825d5bd318e430/icons/plane9.png</iconUrl>
+    <licenseUrl>https://www.plane9.com/Home/LicenseAgreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.plane9.com/wiki</docsUrl>
+    <bugTrackerUrl>https://plane9.uservoice.com/forums/142055-general</bugTrackerUrl>
+    <tags>plane9 visualizer screensaver freeware</tags>
+    <summary>Plane9 is a 3d visualizer where you never have to settle for just one view ever again</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy Description</description>
+    <releaseNotes>https://www.plane9.com/blog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
