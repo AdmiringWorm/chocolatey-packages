@@ -1,0 +1,1 @@
+Install-ChocolateyPackage 'origin' 'exe' '/S' 'https://eaassets-a.akamaihd.net/Origin-Client-Download/origin/live/OriginThinSetup.exe'

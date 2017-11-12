@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>origin</id>
+    <version>1.0.0.0</version>
+    <title>Origin</title>
+    <authors>Electronic Arts</authors>
+    <owners>Electronic Arts</owners>
+    <licenseUrl>http://tos.ea.com/legalapp/WEBTERMS/US/en/PC</licenseUrl>
+    <projectUrl>http://www.origin.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Origin is a digital distribution and digital rights management system from Electronic Arts.</description>
+    <tags>origin ea games gaming dlc</tags>
+  </metadata>
+</package>
