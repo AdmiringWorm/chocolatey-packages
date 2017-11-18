@@ -1,6 +1,6 @@
 # Package changelog for [inno-script-studio](https://chocolatey.org/packages/inno-script-studio)
 
-## Upcoming
+## Version: 2.2.2.3201 (2017-11-18)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Changed deprecated chocolatey-uninstall.extension to chocolatey-core.extension
 - **ENHANCEMENT:** Extracted Description to its own file

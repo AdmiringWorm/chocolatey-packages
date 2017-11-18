@@ -5,16 +5,22 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>inno-script-studio</id>
     <title>Inno Script Studio</title>
-    <version>2.2.2.3200</version>
+    <version>2.2.2.3201</version>
     <authors>Kymoto Solutions</authors>
     <owners>AdmiringWorm</owners>
     <summary>Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.</summary>
-    <description>
-Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.
+    <description><![CDATA[Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.
 
 Inno Script Studio provides help to simplify the creation of Microsoft Windows installations by allowing the generation of Inno Setup scripts by use of the intuitive interface to reduce the need to manually edit the Inno Setup scripts.
 
-If you’ve created a freeware application, or even if it’s a large and complex application, Inno Script Studio will help you create the perfect Windows installation that fits both you and your customers’ requirements.</description>
+If you’ve created a freeware application, or even if it’s a large and complex application, Inno Script Studio will help you create the perfect Windows installation that fits both you and your customers’ requirements.
+
+## Package Parameters
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+**EXAMPLE**
+`choco install inno-script-studio --params "'/UseInf:C:\inno-script-studio.install.inf'"`
+]]></description>
     <projectUrl>https://www.kymoto.org/products/inno-script-studio</projectUrl>
     <tags>inno-script-studio admin installer script exe</tags>
     <copyright>Copyright © 2013 Kymoto Solutions</copyright>
