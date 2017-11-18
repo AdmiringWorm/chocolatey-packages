@@ -1,16 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'inno-script-studio'
-$url = 'https://www.kymoto.org/downloads/ISStudio_Latest.exe'
-$checksum = '9573ef597f822e7f234efcfc31e9c0cf9956925bf7347495f760a55bc9c440c6'
-$checksumType = 'sha256'
-
 $packageArgs = @{
-  packageName   = $packageName
+  packageName   = $env:chocolateyPackageName
   fileType      = 'exe'
-  url           = $url
-  checksum      = $checksum
-  checksumType  = $checksumType
+  url           = ''
+  checksum      = ''
+  checksumType  = ''
   silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes= @(0)
   softwareName  = 'Inno Script Studio*'
