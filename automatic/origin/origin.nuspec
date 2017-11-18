@@ -1,15 +1,32 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>origin</id>
-    <version>1.0.0.0</version>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/origin</packageSourceUrl>
+    <owners>AdmiringWorm, thaiphan</owners>
     <title>Origin</title>
     <authors>Electronic Arts</authors>
-    <owners>Electronic Arts</owners>
-    <licenseUrl>http://tos.ea.com/legalapp/WEBTERMS/US/en/PC</licenseUrl>
     <projectUrl>http://www.origin.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/77c6845334bc0bdcfe3ec61e9738178f882e6909/icons/origin.png</iconUrl>
+    <copyright>© 2017 Electronic Arts Inc.</copyright>
+    <licenseUrl>http://tos.ea.com/legalapp/WEBTERMS/US/en/PC</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Origin is a digital distribution and digital rights management system from Electronic Arts.</description>
+    <docsUrl>https://help.ea.com/origin/origin/</docsUrl>
     <tags>origin ea games gaming dlc</tags>
+    <summary>Origin is a digital distribution and digital rights management system from Electronic Arts.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Origin is a digital distribution and digital rights management system from Electronic Arts.
+]]></description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="vcredist2010" version="10.0.40219.2" />
+      <dependency id="vcredist2013" version="12.0.30501.20150616" />
+      <dependency id="vcredist2015" version="14.0.24215.20170201" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
