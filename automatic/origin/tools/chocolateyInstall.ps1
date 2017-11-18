@@ -5,10 +5,10 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  url            = ''
+  url            = 'https://download.dm.origin.com/origin/live/OriginSetup.exe'
   softwareName   = 'Origin*' # Probably not needed, but we add registry keys so we keep it
-  checksum       = ''
-  checksumType   = ''
+  checksum       = 'B9E3F69CA53B694DB38CD1D65E4C9A0CAFC3F3FA49364044BD442408C3851D73'
+  checksumType   = 'sha256'
   destination    = Get-PackageCacheLocation
 }
 
@@ -20,9 +20,9 @@ $packageArgs['file'] = $zipFile
 $packageArgs['destination'] = GetInstallLocation $pp
 
 if ($pp.NoAutoUpdate) {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version ''
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version '10.5.6.6235'
 } else {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version ''
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version '10.5.6.6235'
 }
 
 Get-ChocolateyUnzip @packageArgs

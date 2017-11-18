@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://encfsmp.sourceforge.io/download.html>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/encfsmp/files/EncFSMP/0.11.0/EncFSMP_0.11.0_Setup.exe/download>
+1. Download the following <https://sourceforge.net/projects/encfsmp/files/EncFSMP/0.11.1/EncFSMP_0.11.1_Setup.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 47DE579DB268B3E5747DC2F7522C0F37D3B7FD307E87732C225FB5C81EF9A35C
+  checksum: 1E41329AA929379338251F6850F7398AD596E3F8D0FC3709C5FA840DAA10EEB6
 
 The file 'LICENSE.txt' has been obtained from <>
