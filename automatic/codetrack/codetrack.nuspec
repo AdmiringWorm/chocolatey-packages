@@ -36,5 +36,6 @@ CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="icons\**" target="icons" />
   </files>
 </package>
