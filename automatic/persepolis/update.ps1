@@ -1,4 +1,6 @@
-﻿Import-Module AU
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $repoUser = "persepolisdm"
@@ -28,18 +30,24 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $release = Get-LatestGithubReleases $repoUser $repoName $false
+  [array]$releases = Get-AllGithubReleases -repoUser $repoUser -repoName $repoName
 
-  $url32 = $release.latestStable.Assets | ? { $_ -match '32bit\.exe$' } | select -first 1
-  $url64 = $release.latestStable.Assets | ? { $_ -match '64bit\.exe$' } | select -first 1
+  $streams = @{}
+  $releases | % {
+    if (!($streams.ContainsKey($_.Version.ToString(2)))) {
+      [array]$execs = $_.Assets | ? { $_ -match '\.exe$' }
+      if (!($execs.Count -ge 2)) { return ; }
 
-  @{
-    Version = $release.latestStable.Version
-    URL32   = $url32
-    URL64   = $url64
-    ReleaseNotes = $release.latestStable.ReleaseUrl
-    ReleaseUri   = $release.latestStable.ReleaseUrl
+      $streams.Add($_.Version.ToString(2), @{
+          Version      = $_.Version.ToString()
+          URL32        = $execs | ? { $_ -match '(32bit|X32)' } | select -first 1
+          URL64        = $execs | ? { $_ -match '(64bit|X64)' } | select -first 1
+          ReleaseNotes = $_.Body
+        })
+    }
   }
+
+  return @{ Streams = $streams }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force

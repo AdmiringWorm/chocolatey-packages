@@ -1,3 +1,13 @@
+function GetVersion() {
+  param($versionToParse)
+  try {
+    return Get-Version $versionToParse
+  }
+  catch {
+    return $versionToParse
+  }
+}
+
 function resolveRelease {
   param($release)
 
@@ -7,7 +17,7 @@ function resolveRelease {
   try {
     return @{
       Name         = $release.name
-      Version      = Get-Version $release.tag_name
+      Version      = GetVersion $release.tag_name
       Assets       = $assetUrls
       IsPreRelease = $release.prerelease -eq "true"
       ReleaseUrl   = $release.html_url

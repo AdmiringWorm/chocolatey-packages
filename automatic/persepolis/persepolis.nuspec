@@ -9,7 +9,7 @@
     <title>Persepolis Download Manager</title>
     <authors>Alireza AmirSamimi, MohammadAmin Vahedinia, Mostafa Asadi, Sadegh Alirezaie, Mohammadreza Abdollahzadeh, Jafar Akhondali</authors>
     <projectUrl>https://persepolisdm.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2c9d474932973a1092ea739e4c3db1b66f4a8cb6/icons/persepolis.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/60bb51e27cfc056142bdd15ee4b78fff4b7b06d2/automatic/persepolis/icons/128x128.png</iconUrl>
     <copyright>Copyleft © Persepolis Download Manager 2017</copyright>
     <licenseUrl>https://github.com/persepolisdm/persepolis/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -42,5 +42,6 @@
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="..\..\icons\persepolis.png" target="icons" />
   </files>
 </package>
