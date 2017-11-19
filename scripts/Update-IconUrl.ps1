@@ -104,7 +104,7 @@ param(
 
 $counts = @{
   replaced = 0
-  missing = 0
+  missing  = 0
   uptodate = 0
 }
 
@@ -135,7 +135,7 @@ function Format-Size {
   }
   $format = if ($index -eq 0) { "{0:0} {1}" } else { "{0:2} {1}" }
 
-  return $format -f $size,$suffixes[$index]
+  return $format -f $size, $suffixes[$index]
 }
 
 function Optimize-Image {
@@ -146,22 +146,22 @@ function Optimize-Image {
   $supportedOptimizers = @(
     @{
       DisplayName = "pngquant"
-      Arguments   = @('--strip','--force','--output',"`"$iconPath`"", "`"$iconPath`"")
-      Extensions = @('.png')
+      Arguments   = @('--strip', '--force', '--output', "`"$iconPath`"", "`"$iconPath`"")
+      Extensions  = @('.png')
     }
     @{
       DisplayName = "optipng"
-      Arguments   = @('-o7','--strip','all','--quiet', "`"$iconPath`"")
-      Extensions  = @('.png', '.bmp','.gif','.pnm','.tiff')
+      Arguments   = @('-o7', '--strip', 'all', '--quiet', "`"$iconPath`"")
+      Extensions  = @('.png', '.bmp', '.gif', '.pnm', '.tiff')
     }
     @{
       DisplayName = "jpegoptim"
-      Arguments = @('--strip-all', '--preserve', '--quiet','--max=90', "`"$iconPath`"")
-      Extensions = @('.jpg', '.jpeg')
+      Arguments   = @('--strip-all', '--preserve', '--quiet', '--max=90', "`"$iconPath`"")
+      Extensions  = @('.jpg', '.jpeg')
     }
   )
   $extension = [System.IO.Path]::GetExtension($iconPath)
-  $fileName  = [System.IO.Path]::GetFileName($iconPath)
+  $fileName = [System.IO.Path]::GetFileName($iconPath)
 
   $supportedOptimizers | ? {
     $name = if ($_.ExeName) { $_.ExeName } else { $_.DisplayName }
@@ -180,29 +180,32 @@ function Optimize-Image {
     if ($sizeAfter -lt $originalSize) {
       $format = Format-Size ($originalSize - $sizeAfter)
       Write-Host "$fileName size decreased by $format"
-    } elseif($sizeAfter -gt $originalSize) {
+    }
+    elseif ($sizeAfter -gt $originalSize) {
       $format = Format-Size ($sizeAfter - $originalSize)
       Write-Warning "$fileName size increased by $format"
     }
   }
 }
 
-function Test-Icon{
+function Test-Icon {
   param(
     [string]$Name,
     [string]$Extension,
     [string]$IconDir,
-    [bool]$Optimize
+    [bool]$Optimize,
+    [string]$PackageName = $Name
   )
   $path = "$IconDir/$Name.$Extension"
   if (!(Test-Path $path)) { return $false; }
   if ($Optimize) { Optimize-Image $path }
   if ((git status "$path" -s)) {
     git add $path | Out-Null;
-    $message = "($Name) Updated icon"
+    $message = "($PackageName) Updated icon"
     if ((git log --oneline -1) -match "$([regex]::Escape($message))$") {
       git commit --amend -m "$message" "$path" | Out-Null
-    } else {
+    }
+    else {
       git commit -m "$message" "$path" | Out-Null;
     }
   }
@@ -221,41 +224,45 @@ function Update-Readme {
   $content = Get-Content $ReadmePath -Encoding UTF8
   $re = "(^\#+.*\<img.*src=)`"[^`"]*`""
   if ($content.Length -ge 1 -and $content[0] -match $re) {
-    $content[0] = $content[0] -replace $re,"`${1}`"$Url`""
+    $content[0] = $content[0] -replace $re, "`${1}`"$Url`""
   }
 
   $output = $content | Out-String
   [System.IO.File]::WriteAllText("$ReadmePath", $output, $encoding)
 }
 
-function Replace-IconUrl{
+function Replace-IconUrl {
   param(
     [string]$NuspecPath,
     [string]$CommitHash,
     [string]$IconPath,
-    [string]$GithubRepository
+    [string]$GithubRepository,
+    [switch]$NoReadme
   )
 
   $nuspec = gc "$NuspecPath" -Encoding UTF8
 
-  $oldContent = ($nuspec | Out-String) -replace '\r\n?',"`n"
+  $oldContent = ($nuspec | Out-String) -replace '\r\n?', "`n"
 
   $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
 
-  $nuspec = $nuspec -replace '<iconUrl>.*',"<iconUrl>$url</iconUrl>"
+  $nuspec = $nuspec -replace '<iconUrl>.*', "<iconUrl>$url</iconUrl>"
 
-  $output = ($nuspec | Out-String) -replace '\r\n?',"`n"
+  $output = ($nuspec | Out-String) -replace '\r\n?', "`n"
   if ($oldContent -eq $output) {
     $counts.uptodate++;
     return;
   }
   [System.IO.File]::WriteAllText("$NuspecPath", $output, $encoding);
-  $readMePath = (Split-Path -Parent $NuspecPath) + "\Readme.md"
-  Update-Readme -ReadmePath $readMePath -Url $url
+
+  if (!($NoReadme)) {
+    $readMePath = (Split-Path -Parent $NuspecPath) + "\Readme.md"
+    Update-Readme -ReadmePath $readMePath -Url $url
+  }
   $counts.replaced++;
 }
 
-function Update-IconUrl{
+function Update-IconUrl {
   param(
     [string]$Name,
     [string]$IconName,
@@ -264,6 +271,41 @@ function Update-IconUrl{
     [bool]$Quiet,
     [bool]$Optimize
   )
+
+  # Before we do any checking in the fallback icons directory,
+  # we check if there exists an icon directory in the package root path
+  if (Test-Path "$PSScriptRoot/$PackagesDirectory/$Name/icons") {
+    # Get the last item inside the icons directory, we only sort it by the first value splitted by x
+    $iconPath = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$Name/icons" | sort -Descending { [int]($_ -split 'x' | select -first 1) } | select -expand FullName -first 1
+
+    if ($iconPath) {
+      $iconName = [System.IO.Path]::GetFileNameWithoutExtension($iconPath)
+      $extension = [System.IO.Path]::GetExtension($iconPath).TrimStart('.')
+      $commitHash = Test-Icon -Name $iconName -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
+      $resolvedPath = Resolve-Path $iconPath -Relative;
+      $trimming = @(".", "\")
+      $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\', '/';
+      if (Test-Path "$PSscriptRoot/$PackagesDirectory/$Name/icons/48x48.$extension") {
+        Replace-IconUrl `
+          -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
+          -CommitHash $commitHash `
+          -IconPath $iconPath `
+          -GithubRepository $GithubRepository
+        $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
+        $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
+        $readMePath = "$PSScriptRoot/$PackagesDirectory/$Name/Readme.md"
+        Update-Readme -ReadmePath $readMePath -Url $url
+      }
+      else {
+        Replace-IconUrl `
+          -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
+          -CommitHash $commitHash `
+          -IconPath $iconPath `
+          -GithubRepository $GithubRepository
+      }
+      return;
+    }
+  }
 
   $possibleNames = @($Name);
   if ($IconName) { $possibleNames = @($IconName) + $possibleNames }
@@ -304,7 +346,7 @@ function Update-IconUrl{
 
     foreach ($extension in $validExtensions) {
       $iconNameWithExtension = "$possibleName.$extension";
-      $commitHash = Test-Icon -Name $possibleName -Extension $extension -IconDir $IconDir -Optimize $Optimize;
+      $commitHash = Test-Icon -Name $possibleName -Extension $extension -IconDir $IconDir -Optimize $Optimize -PackageName $Name;
       if ($commitHash) { break; }
     }
     if ($commitHash) { break; }
@@ -317,7 +359,7 @@ function Update-IconUrl{
   }
   $resolvedPath = Resolve-Path $IconDir/$iconNameWithExtension -Relative;
   $trimming = @(".", "\")
-  $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\','/';
+  $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\', '/';
   Replace-IconUrl `
     -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
     -CommitHash $commitHash `
@@ -351,7 +393,8 @@ if ($UseStopwatch) {
 }
 if ($counts.replaced -eq 0 -and !$Quiet) {
   Write-Host "Congratulations, all found icon urls is up to date."
-} elseif (!$Quiet) {
+}
+elseif (!$Quiet) {
   Write-Host "Updated $($counts.replaced) icon url(s)";
 }
 if ($counts.uptodate -gt 0 -and !$Quiet) {
@@ -361,25 +404,29 @@ if ($counts.missing -gt 1) {
   Write-Warning "$($counts.missing) icon(s) was not found!"
   if (!$PrintMissingIcons -and !$Quiet) {
     $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Hell Yeah"
-    $no  = New-Object System.Management.Automation.Host.ChoiceDescription "&No","No WAY"
+    $no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "No WAY"
     $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
     [int]$defaultChoice = 1
     $message = "Do you want to view the package names?";
     $choice = $host.ui.PromptForChoice($caption, $message, $options, $defaultChoice);
-  } elseif($Quiet) {
+  }
+  elseif ($Quiet) {
     $choice = 1
-  } else {
+  }
+  else {
     $choice = 0
   }
   if ($choice -eq 0) {
     Write-Warning "We did not found an icon for the following packages"
     $missingIcons -join "`n";
   }
-}elseif ($counts.missing -eq 1) {
+}
+elseif ($counts.missing -eq 1) {
   $package = $missingIcons[0]
   if ($ThrowErrorOnIconNotFound) {
     throw "Unable to find icon url for $package"
-  } else {
+  }
+  else {
     Write-Warning "Unable to find icon url for $package"
   }
 }
