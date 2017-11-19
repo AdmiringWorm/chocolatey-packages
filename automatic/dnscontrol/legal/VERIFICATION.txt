@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/StackExchange/dnscontrol/releases>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://github.com/StackExchange/dnscontrol/releases/download/v0.2.3/dnscontrol.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: F4D19C2FB29072C74AB4E3EC00AC95F3678D76B87783BCF85DAA35043639F2A2
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/StackExchange/dnscontrol/blob/f61c584ddc77ea52ed851b6d24c4e463b7e941f2/LICENSE>

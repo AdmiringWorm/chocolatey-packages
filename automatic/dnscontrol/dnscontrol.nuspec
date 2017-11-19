@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dnscontrol</id>
-    <version>0.0</version>
+    <version>0.2.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DnsControl</title>
@@ -21,8 +21,60 @@
     <tags>dnscontrol </tags>
     <summary>DnsControl is an opinionated platform for seamlessly managing your DNS configuration across any number of DNS hosts</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy DEsc</description>
-    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
+    <description><![CDATA[DnsControl is an [opinionated][] platform for seamlessly managing your DNS configuration across any number of DNS hosts, both in the cloud or in your own infrastructure. It manages all of the domains for the Stack Overflow network, and can do the same for your.
+
+## Features
+- Maintain your DNS data as high-level DS, with macros, and variables for easier updates.
+- Eliminate vendor lock-in. Switch DNS providers easily, any time, with full fidelity.
+- Supports 10+ DNS Providers including BIND, AWS Route 53, Google DNS, and name.com
+- All the benefits of Git (or any VCS) for your DNS zone data. View history. Accept PRs.
+- Runs on Linux, Windows, Mac, or any operating system supported by Go.
+- Assign an IP address to a constant and use the variable name throughout the configuration. Need to change the IP address globally? Just change the variable and "recompile."
+- Super extensible! Plug-in architecture makes adding new DNS providers and Registrars easy!
+- Reduce point of failure: Easily maintain dual DNS providers and easily drop one that is down.
+- Apply CI/CD principles to DNS: Unit-tests, system-tests, automated deployment.
+- Optimize DNS with SPF optimizer. Detect too many lookups. Flatten includes.
+- Enable/disable Cloudflare proxying (the "orange cloud" button) directly from your DNSControl files.
+- Keep similar domains in sync with transforms, macros, and variables.
+
+[opinionated]: https://stackexchange.github.io/dnscontrol/opinions
+]]></description>
+    <releaseNotes>This release adds two new DNS providers! We now support managing domains on Namecheap, thanks to @rbelnap  (was previously just a registrar), and we have Vultr support thanks to @geek1011.
+
+Everything else is mostly a few bug fixes, and some much needed documentation cleanup from @geek1011. 
+
+## Pull Requests Merged:
+
+### DNSimple: ###
+  -  handle pagination appropriately. [#242](https://github.com/StackExchange/dnscontrol/pull/242)
+  -  Adding SRV, CAA, and ALIAS suppport [#243](https://github.com/StackExchange/dnscontrol/pull/243)
+
+### Namecheap: ###
+  -  New Provider! [#202](https://github.com/StackExchange/dnscontrol/pull/202)
+
+### Vultr: ###
+  -  New Provider! [#219](https://github.com/StackExchange/dnscontrol/pull/219)
+
+### other: ###
+  - Website fixes (Part 1) [#223](https://github.com/StackExchange/dnscontrol/pull/223)
+  - Improved consistency of provider documentation [#222](https://github.com/StackExchange/dnscontrol/pull/222)
+  - Fixed Cloudflare docs (#221) [#224](https://github.com/StackExchange/dnscontrol/pull/224)
+  - Fixed Active Directory docs (#221) [#225](https://github.com/StackExchange/dnscontrol/pull/225)
+  - Improve Gandi documentation (#221) [#229](https://github.com/StackExchange/dnscontrol/pull/229)
+  - Improve Google Cloud DNS docs (#221) [#230](https://github.com/StackExchange/dnscontrol/pull/230)
+  - Improve NS1 documentation (#221) [#233](https://github.com/StackExchange/dnscontrol/pull/233)
+  - Improved BIND docs (#221) [#226](https://github.com/StackExchange/dnscontrol/pull/226)
+  - Improve softlayer documentation (#221) [#235](https://github.com/StackExchange/dnscontrol/pull/235)
+  - Improved Name.com documentation (#221) [#231](https://github.com/StackExchange/dnscontrol/pull/231)
+  - Improve DNSimple documentation (#221) [#228](https://github.com/StackExchange/dnscontrol/pull/228)
+  - Improved DigitalOcean documentation (#221) [#227](https://github.com/StackExchange/dnscontrol/pull/227)
+  - update README to include NS1 as a provider [#240](https://github.com/StackExchange/dnscontrol/pull/240)
+
+## Thanks to all contributors:
+
+  - [@captncraig](https://github.com/StackExchange/dnscontrol/commits?author=captncraig)
+  - [@derekargueta](https://github.com/StackExchange/dnscontrol/commits?author=derekargueta)
+  - [@geek1011](https://github.com/StackExchange/dnscontrol/commits?author=geek1011)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
