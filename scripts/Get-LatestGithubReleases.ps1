@@ -1,5 +1,5 @@
 
-function resolveRelease {
+function resolveLatestRelease {
   param(
     $response,
     [boolean] $usePrerelease
@@ -53,8 +53,8 @@ function Get-LatestGithubReleases {
 
   $response = Invoke-RestMethod -Uri $apiUrl -Headers $headers;
 
-  $latestStableRelease = resolveRelease -response $response -usePrerelease $false;
-  $latestRelease = resolveRelease -response $response -usePrerelease $includePreRelease;
+  $latestStableRelease = resolveLatestRelease -response $response -usePrerelease $false;
+  $latestRelease = resolveLatestRelease -response $response -usePrerelease $includePreRelease;
 
   return @{ latest = $latestRelease ; latestStable = $latestStableRelease};
 }
