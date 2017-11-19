@@ -12,6 +12,7 @@ $funcs = @(
   'Update-Metadata'
   'Get-RedirectedUrl'
   'Get-LatestGithubReleases'
+  'Get-AllGithubReleases'
 )
 
 $funcs | % {
