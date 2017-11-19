@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dnscontrol</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>DnsControl</title>
+    <authors>Stack Overflow</authors>
+    <projectUrl>https://stackexchange.github.io/dnscontrol/</projectUrl>
+    <!-- IconUrl: Skip check -->
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/master/copyq/icon.png</iconUrl>
+    <copyright>Copyright (c) 2015 Stack Overflow</copyright>
+    <licenseUrl>https://github.com/StackExchange/dnscontrol/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/StackExchange/dnscontrol</projectSourceUrl>
+    <docsUrl>https://stackexchange.github.io/dnscontrol/getting-started</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/dnscontrol-discuss</mailingListUrl>
+    <bugTrackerUrl>https://github.com/StackExchange/dnscontrol/issues</bugTrackerUrl>
+    <tags>dnscontrol </tags>
+    <summary>DnsControl is an opinionated platform for seamlessly managing your DNS configuration across any number of DNS hosts</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy DEsc</description>
+    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
