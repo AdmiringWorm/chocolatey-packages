@@ -44,6 +44,7 @@ https://www.authy.com/learn-more
 ### NOTES
 - Authy Desktop should currently be considered a beta version (which is mentioned on the download page), although they release it using a stable release version.
 ]]></description>
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/authy-desktop/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

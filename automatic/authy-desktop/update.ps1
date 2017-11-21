@@ -16,6 +16,8 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 function global:au_GetLatest {
   $url32 = Get-RedirectedUrl ($releasesFormat -f "x32")
   $url64 = Get-RedirectedUrl ($releasesFormat -f "x64")
@@ -28,9 +30,9 @@ function global:au_GetLatest {
   }
 
   @{
-    URL32 = $url32
-    URL64 = $url64
-    Version = $version32
+    URL32          = $url32
+    URL64          = $url64
+    Version        = $version32
     ChecksumType32 = 'sha512'
     ChecksumType64 = 'sha512'
   }
