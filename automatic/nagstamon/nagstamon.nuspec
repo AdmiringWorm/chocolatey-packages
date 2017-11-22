@@ -27,7 +27,10 @@
 **EXAMPLE**
 `choco install nagstamon --params "'/UseInf:C:\nagstamon.inf'"`
 ]]></description>
-    <releaseNotes>https://nagstamon.ifw-dresden.de/docs/changelog/</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://nagstamon.ifw-dresden.de/docs/changelog/)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="nagstamon.install" version="[3.0.2.20171105]" />
     </dependencies>
