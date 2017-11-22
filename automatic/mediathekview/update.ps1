@@ -3,14 +3,15 @@
 $releases = 'https://download.mediathekview.de/stabil/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
@@ -27,8 +28,8 @@ function global:au_GetLatest {
   $verRe = '[-]|\.zip'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32 = [uri]$url32
-    Version = [version]$version32
+    URL32       = [uri]$url32
+    Version     = [version]$version32
     PackageName = 'MediathekView'
   }
 }
