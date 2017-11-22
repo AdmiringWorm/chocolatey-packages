@@ -14,14 +14,15 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase 'electrum-ltc'
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 function global:au_SearchReplace {
-  $softwareName = 'Electrum-LTC*'
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"        = @{
       "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
     ".\$($Latest.PackageName).nuspec" = @{
       "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}https://github.com/pooler/electrum-ltc/blob/$($Latest.RemoteVersion)/RELEASE-NOTES`${2}"
