@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName   = 'Origin*'
   fileType       = 'exe'
   silentArgs     = '/noUpdate /uninstall /silent'
-  validExitCodes = @(@(0))
+  validExitCodes = @(0)
 }
 
 $uninstalled = $false
