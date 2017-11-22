@@ -25,29 +25,30 @@ function CreateRegistrySettings() {
   }
 
   $originSettings = @{
-    AutopatchGlobal = 'true'
-    Autoupdate = if ($autoUpdate) { 'true' } else { 'false' }
-    ClientPath = "$installPath\Origin.exe"
-    ClientVersion = $version
+    AutopatchGlobal   = 'true'
+    Autoupdate        = if ($autoUpdate) { 'true' } else { 'false' }
+    ClientPath        = "$installPath\Origin.exe"
+    ClientVersion     = $version
     InstallSuccesfull = 'true'
-    IsBeta = 'false'
-    TelemOO = 'false'
+    IsBeta            = 'false'
+    TelemOO           = 'false'
   }
 
   $uninstallSettings = @{
-    DisplayIcon = "$installPath\OriginUninstall.exe"
-    DisplayName = 'Origin'
-    DisplayVersion = $version
+    DisplayIcon     = "$installPath\OriginUninstall.exe"
+    DisplayName     = 'Origin'
+    DisplayVersion  = $version
     InstallLocation = $installPath
-    Publisher = 'Electronic Arts, Inc.'
+    Publisher       = 'Electronic Arts, Inc.'
     UninstallString = "$installPath\OriginUninstall.exe"
-    URLInfoAbout = 'http://www.ea.com'
+    URLInfoAbout    = 'http://www.ea.com'
   }
 
   if (Get-ProcessorBits -Compare 32) {
     $originRegPath = 'HKLM:\SOFTWARE\Origin'
     $uninstallRegPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Origin'
-  } else {
+  }
+  else {
     $originRegPath = 'HKLM:\SOFTWARE\WOW6432Node\Origin'
     $uninstallRegPath = 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Origin'
   }
