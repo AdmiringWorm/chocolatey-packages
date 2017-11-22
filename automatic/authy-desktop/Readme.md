@@ -25,6 +25,3 @@ Authy is the preferred two factor authentication solution to protect your bitcoi
 **- What is two factor authentication?**
 "Two-factor authentication is one of the best things you can do to make sure your accounts don't get hacked" - LifeHacker
 https://www.authy.com/learn-more
-
-### NOTES
-- Authy Desktop should currently be considered a beta version (which is mentioned on the download page), although they release it using a stable release version.
