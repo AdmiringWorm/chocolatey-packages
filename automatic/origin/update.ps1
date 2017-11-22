@@ -1,5 +1,4 @@
 Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $padUnderVersion = '10.5.5'
@@ -14,6 +13,8 @@ function global:au_BeforeUpdate {
     throw "The download executable do not have the same version as the one we parsed.`nActual Version: $productVersion`nParsed Version: $($Latest.RemoteVersion)"
   }
 }
+
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
