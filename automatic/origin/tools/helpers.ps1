@@ -11,7 +11,7 @@ function GetInstallLocation() {
 }
 
 function GetInstallLocationFromRegistry() {
-  $key = Get-UninstallRegistryKey -SoftwareName 'Origin' | select -first 1
+  $key = Get-UninstallRegistryKey -SoftwareName 'Origin' | Select-Object -first 1
 
   if ($key) {
     return $key.InstallLocation
@@ -60,12 +60,12 @@ function CreateRegistrySettings() {
   }
 
   Write-Host "Creating/Updating Origin Client registry settings..."
-  $originSettings.Keys | % {
+  $originSettings.Keys | ForEach-Object {
     New-ItemProperty -Path $originRegPath -Name $_ -Value $originSettings[$_] -Force | Out-Null
   }
 
   Write-Host "Creating/Updating Origin Client uninstall registry settings..."
-  $uninstallSettings.Keys | % {
+  $uninstallSettings.Keys | ForEach-Object {
     New-ItemProperty -Path $uninstallRegPath -Name $_ -Value $uninstallSettings[$_] -Force | Out-Null
   }
 }

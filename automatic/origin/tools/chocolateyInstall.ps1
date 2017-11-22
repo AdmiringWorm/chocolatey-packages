@@ -15,7 +15,7 @@ $packageArgs = @{
 Install-ChocolateyZipPackage @packageArgs
 
 $pp = Get-PackageParameters
-$zipFile = Get-ChildItem "$($packageArgs['destination'])" "*.zip" -Recurse | select -first 1 -expand FullName
+$zipFile = Get-ChildItem "$($packageArgs['destination'])" "*.zip" -Recurse | Select-Object -first 1 -expand FullName
 $packageArgs['file'] = $zipFile
 $packageArgs['destination'] = GetInstallLocation $pp
 
@@ -28,7 +28,7 @@ if ($pp.NoAutoUpdate) {
 Get-ChocolateyUnzip @packageArgs
 
 Write-Host "Removing cached unzipped directory..."
-Uninstall-ChocolateyZipPackage -packageName $packageArgs['packageName'] -zipFileName ($packageArgs.url -split '\/' | select -last 1)
+Uninstall-ChocolateyZipPackage -packageName $packageArgs['packageName'] -zipFileName ($packageArgs.url -split '\/' | Select-Object -last 1)
 
 if ($pp.LaunchOrigin -or $pp.StartOrigin) {
   $exe = "$($packageArgs["destination"])\Origin.exe"
