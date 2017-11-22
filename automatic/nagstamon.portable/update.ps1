@@ -1,4 +1,4 @@
-﻿. "$PSScriptRoot\..\nagstamon\update.ps1"
+﻿. "$PSScriptRoot\..\nagstamon.install\update.ps1"
 
 $packageName = 'nagstamon.portable'
 

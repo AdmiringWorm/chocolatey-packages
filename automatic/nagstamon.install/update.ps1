@@ -12,4 +12,6 @@ function global:au_BeforeUpdate {
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
-update -ChecksumFor none
+if ($MyInvocation.InvocationName -ne '.') {
+  update -ChecksumFor none
+}
