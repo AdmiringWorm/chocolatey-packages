@@ -1,6 +1,5 @@
 ﻿Import-Module AU
 Import-Module "$env:chocolateyInstall\helpers\chocolateyInstaller.psm1"
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://submain.com/download/ghostdoc/pro/registered/'
 $referer  = 'http://submain.com/download/ghostdoc/pro/'
@@ -11,6 +10,7 @@ function global:au_AfterUpdate {
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
   Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_BeforeUpdate {
