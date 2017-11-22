@@ -4,6 +4,7 @@ $releases = 'https://sourceforge.net/projects/golly/files/golly/'
 $softwareName = 'golly*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
