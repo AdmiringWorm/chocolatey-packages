@@ -47,6 +47,7 @@ function global:au_GetLatest {
           URL32        = $execs | ? { $_ -match '(32bit|X32)' } | select -first 1
           URL64        = $execs | ? { $_ -match '(64bit|X64)' } | select -first 1
           ReleaseNotes = $_.Body
+          ReleaseUri   = $_.ReleaseUrl
         })
     }
   }
