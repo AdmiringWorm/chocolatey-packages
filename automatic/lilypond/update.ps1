@@ -5,16 +5,25 @@ $softwareName = 'LilyPond'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
+function global:au_AfterUpdate {
+  $releaseNotes = (
+    "[Software Changelog](http://lilypond.org/doc/v$($Latest.RemoteVersion -replace '^([\d]+\.[\d]+)','$1')/Documentation/changes/index.html`n" +
+    "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)")
+
+  Update-Changelog -useIssueTitle
+  Update-Metadata -key 'releaseNotes' -value $releaseNotes
+}
+
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+    ".\tools\chocolateyInstall.ps1"   = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
     ".\tools\chocolateyUninstall.ps1" = @{
@@ -32,8 +41,9 @@ function global:au_GetLatest {
   $verRe = '[-]'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32 = [uri]$url32
-    Version = [version]$version32
+    URL32         = [uri]$url32
+    Version       = [version]$version32
+    RemoteVersion = [version]$version32
   }
 }
 

@@ -38,7 +38,10 @@ LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for e
 [customized output]: http://lilypond.org/examples.html#Customized-Output
 [Schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
 ]]></description>
-    <releaseNotes>http://lilypond.org/doc/v2.18/Documentation/changes/index.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://lilypond.org/doc/v2.18/Documentation/changes/index.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
