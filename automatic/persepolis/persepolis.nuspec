@@ -42,6 +42,6 @@
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\persepolis.png" target="icons" />
+    <file src="icons\**" target="icons" />
   </files>
 </package>
