@@ -3,14 +3,17 @@ Import-Module "$env:chocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://submain.com/download/ghostdoc/enterprise/registered/'
-$referer  = 'http://submain.com/download/ghostdoc/enterprise/'
+$referer = 'http://submain.com/download/ghostdoc/enterprise/'
 $softwareName = 'GhostDoc Enterprise'
 
 function global:au_AfterUpdate {
   $info_page = Invoke-WebRequest -UseBasicParsing -Uri "http://submain.com/products/ghostdoc.aspx"
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
-  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  $releaseNotes = ("[Software Changelog]($($Latest.ReleaseNotes)  `n" +
+    "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-enterprise/Changelog.md)")
+
+  Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
 }
 
@@ -27,12 +30,12 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
+    ".\tools\chocolateyInstall.ps1"   = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
-      "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*url\s*=\s*)'.*'"          = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
-      "(?i)^(\s*referer\s*=\s*)'.*'" = "`${1}'$referer'"
+      "(?i)^(\s*referer\s*=\s*)'.*'"      = "`${1}'$referer'"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)(\-SoftwareName\s+)'.*'" = "`${1}'$softwareName'"
@@ -46,7 +49,7 @@ function global:au_GetLatest {
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL32 = $url32
+    URL32   = $url32
     Version = $version32
   }
 }
