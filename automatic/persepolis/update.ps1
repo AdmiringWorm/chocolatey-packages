@@ -1,7 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
 Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $repoUser = "persepolisdm"
 $repoName = "persepolis"
@@ -26,7 +25,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  Update-Changelog -useIssueTitle
+
+  $releaseNotes = "[Software Changelog](https://github.com/persepolisdm/persepolis/releases/tag/2.4.2)`n`n## Software Release Notes`n"
+  $releaseNotes += $Latest.ReleaseNotes
+
+  Update-metadata -key "releaseNotes" -value $releaseNotes
 }
 
 function global:au_GetLatest {
