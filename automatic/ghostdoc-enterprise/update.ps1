@@ -11,6 +11,7 @@ function global:au_AfterUpdate {
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
   Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_BeforeUpdate {
