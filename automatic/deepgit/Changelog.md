@@ -1,6 +1,6 @@
 # Package changelog for [deepgit](https://chocolatey.org/packages/deepgit)
 
-## UPCOMIMG
+## Version: 3.0.1.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file
 
 ## Version: 3.0.0.20171021 (2017-10-21)
