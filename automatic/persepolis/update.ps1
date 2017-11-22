@@ -27,7 +27,7 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
 
-  $releaseNotes = "[Software Changelog](https://github.com/persepolisdm/persepolis/releases/tag/2.4.2)`n`n## Software Release Notes`n"
+  $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)`n`n## Software Release Notes`n"
   $releaseNotes += $Latest.ReleaseNotes
 
   Update-metadata -key "releaseNotes" -value $releaseNotes
