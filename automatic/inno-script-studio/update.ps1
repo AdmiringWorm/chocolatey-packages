@@ -4,9 +4,7 @@ import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = "https://www.kymoto.org/products/inno-script-studio/downloads"
 $padUnderVersion = '2.2.3'
 
-function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
-}
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
