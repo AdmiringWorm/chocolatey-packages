@@ -8,6 +8,7 @@ $funcs = @(
   'Get-PaddedVersion'
   'Get-RedirectedUrl'
   'Set-DescriptionFromReadme'
+  'Update-Changelog'
   'Update-ChangelogVersion'
   'Update-Metadata'
   'Get-RedirectedUrl'
