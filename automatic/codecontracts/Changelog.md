@@ -1,8 +1,6 @@
-# Package changelog for [codecontracts](https://chocolatey.org/packages/codecontracts)
+# Package changelog for [CodeContracts](https://chocolatey.org/packages/codecontracts)
 
 ## Upcoming
-- Added changelog for package
-- Extracted Description to its own file
 - Optimized codecontracts icon
 - Updated chocolatey-core.extension to version 1.0.6
 
