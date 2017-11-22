@@ -4,6 +4,7 @@ $releases = 'https://onionshare.org/'
 $softwareName = 'OnionShare'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{

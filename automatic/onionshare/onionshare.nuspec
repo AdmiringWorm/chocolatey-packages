@@ -23,7 +23,10 @@
 ## Notes
 - Uninstall is not completely silen, a dialog pops up asking you to confirm the uninstall.
 ]]></description>
-    <releaseNotes>https://github.com/micahflee/onionshare/blob/master/CHANGELOG.md</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/micahflee/onionshare/blob/master/CHANGELOG.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/onionshare/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
