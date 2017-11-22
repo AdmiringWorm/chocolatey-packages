@@ -1,7 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
 Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://github.com/StackExchange/dnscontrol/releases'
 $softwareName = 'dnscontrol*'
@@ -20,7 +19,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
+  Update-Changelog -useIssueTitle -createNonExistingFile
+  $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)`n`n## Software Changelog" + $Latest.ReleaseNotes
+  Update-Metadata -key 'releaseNotes' -value $releaseNotes
 }
 
 function global:au_GetLatest {

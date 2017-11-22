@@ -39,7 +39,8 @@
 
 [opinionated]: https://stackexchange.github.io/dnscontrol/opinions
 ]]></description>
-    <releaseNotes>This release adds two new DNS providers! We now support managing domains on Namecheap, thanks to @rbelnap  (was previously just a registrar), and we have Vultr support thanks to @geek1011.
+    <releaseNotes>
+[Software Changelog](This release adds two new DNS providers! We now support managing domains on Namecheap, thanks to @rbelnap  (was previously just a registrar), and we have Vultr support thanks to @geek1011.
 
 Everything else is mostly a few bug fixes, and some much needed documentation cleanup from @geek1011. 
 
@@ -74,7 +75,9 @@ Everything else is mostly a few bug fixes, and some much needed documentation cl
 
   - [@captncraig](https://github.com/StackExchange/dnscontrol/commits?author=captncraig)
   - [@derekargueta](https://github.com/StackExchange/dnscontrol/commits?author=derekargueta)
-  - [@geek1011](https://github.com/StackExchange/dnscontrol/commits?author=geek1011)</releaseNotes>
+  - [@geek1011](https://github.com/StackExchange/dnscontrol/commits?author=geek1011))
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
