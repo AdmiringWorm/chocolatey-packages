@@ -27,7 +27,10 @@ Electrum-LTC is a simple, but powerful Litecoin wallet. A twelve-word security p
 * **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
 * **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
 </description>
-    <releaseNotes>https://github.com/pooler/electrum-ltc/blob/2.9.3.1/RELEASE-NOTES</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/pooler/electrum-ltc/blob/2.9.3.1/RELEASE-NOTES)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/electrum-ltc.install/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="electrum-ltc.install" version="[2.9.3.1]" />
     </dependencies>
