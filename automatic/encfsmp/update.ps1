@@ -4,6 +4,7 @@ $releases = 'https://encfsmp.sourceforge.io/download.html'
 $softwareName = 'EncFS MP'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{

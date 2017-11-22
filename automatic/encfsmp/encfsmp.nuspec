@@ -28,7 +28,10 @@ Since EncFS exists on many platforms, you can access your data from a Windows PC
 - Is 100% compatible with EncFS 1.7.4 on Linux
 - Completely free, no nags, no additional downloads like toolbars etc.
 ]]></description>
-    <releaseNotes>https://github.com/rhiestan/EncFSMP/blob/master/version.txt</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/rhiestan/EncFSMP/blob/master/version.txt)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/encfsmp/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
