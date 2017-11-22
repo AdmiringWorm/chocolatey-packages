@@ -20,7 +20,8 @@ if (!$pp.UseInf) {
 if (Test-Path "$($pp.UseInf)") {
   Write-Host "Using existing configuration file at '$($pp.UseInf)'"
   $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /LOADINF=`"$($pp.UseInf)`""
-} else {
+}
+else {
   Write-Host "Creating new configuration file at '$($pp.UseInf)'"
   $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /SAVEINF=`"$($pp.UseInf)`""
 }
