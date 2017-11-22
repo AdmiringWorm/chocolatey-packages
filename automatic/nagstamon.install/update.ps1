@@ -10,8 +10,6 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
-}
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 update -ChecksumFor none
