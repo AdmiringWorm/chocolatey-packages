@@ -26,7 +26,7 @@ function Get-IssueDetails() {
   }
 
   foreach ($label in $result.Labels) {
-    if ($label -match 'bug|enhancement|feature|documentation') {
+    if ($label -match 'migration|bug|enhancement|feature|documentation') {
       $result.MainLabel = $label
       break
     }
