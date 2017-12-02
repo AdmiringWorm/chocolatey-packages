@@ -42,15 +42,24 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $url32 = Get-RedirectedUrl $releases -referer $referer
-
-  $verRe = '_v|\.zip'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL32   = $url32
-    Version = $version32
+    URL32   = Get-RedirectedUrl $releases -referer $referer
+    Version = GetVersion
   }
 }
 
-update -ChecksumFor none -NoCheckUrl
+function GetVersion {
+  $rss_feed = Invoke-WebRequest -UseBasicParsing -Uri "https://blog.submain.com/category/news/"
+  $link = $rss_feed.links | ? { $_.href -Match "Released" -and $_ -match "ghostdoc" } | select -first 1 -expand href
+
+  $page_data = Invoke-WebRequest -UseBasicParsing -Uri "$link"
+  $match = $page_data.Content -match "GhostDoc v([\d+\.[\d\.]+) update is"
+  if ($match) {
+    return $matches[1]
+  }
+}
+
+if ($MyInvocation.InvocationName -ne '.') {
+  update -ChecksumFor none -NoCheckUrl
+}
