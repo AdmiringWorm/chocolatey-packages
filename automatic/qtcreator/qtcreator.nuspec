@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qtcreator</id>
-    <version>4.1.0</version>
+    <version>4.4.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qtcreator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qt Creator</title>
     <authors>Qt Project</authors>
     <projectUrl>http://wiki.qt.io/Qt_Creator</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/afa9a21618e59edddef7d4515d40e20dad0390e0/icons/qtcreator.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/06e94cf3f4f8031bc908a2e9a6d26c1d00e6b847/icons/qtcreator.png</iconUrl>
     <copyright>© 2016 The Qt Company Ltd.</copyright>
     <licenseUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
