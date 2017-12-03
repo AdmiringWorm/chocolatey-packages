@@ -30,3 +30,4 @@ setup/
 *.msi
 *.vsix
 *.zip
+*.7z

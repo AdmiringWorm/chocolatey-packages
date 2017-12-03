@@ -1,21 +1,29 @@
-﻿. "$PSScriptRoot\common.ps1"
+﻿$ErrorActionPreference = 'Stop'
 
-$ErrorActionPreference = 'Stop';
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$installToolsPath = Get-ToolsLocation
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = "https://download.qt.io/official_releases/qtcreator/{0}/{1}/installer_source/windows_vs2013_32/qtcreator.7z" -f $packageVersionMinor, $packageVersionPatch
-$checksum = 'e0d6f76bc5babd77894e6d0defc42f5b'
-$checksumType = 'md5'
-$unzipLocation = Join-Path "$(Get-ToolsLocation)" $packageName
-$qtcreatorExe = Join-Path $toolsDir "bin\qtcreator.exe"
-
-Install-ChocolateyZipPackage $packageName $url $toolsDir -checksum $checksum -checksumType $checksumType
-
-# generate ignore files, to avoid excessive shims
-$files = get-childitem $toolsDir -include *.exe -exclude qtcreator.exe -recurse
-foreach ($file in $files) {
-  New-Item "$file.ignore" -type file -force | Out-Null
+$packageArgs = @{
+  packageName = $env:ChocolateyPackageName
+  file        = "$toolsPath\qtcreator_x32.7z"
+  file64      = "$toolsPath\qtcreator_x64.7z"
+  destination = "$installToolsPath\$env:ChocolateyPackageName"
 }
 
-Install-ChocolateyShortcut -shortcutFilePath $shortcutFile -targetPath $qtcreatorExe
-Install-ChocolateyFileAssociation ".pro" $qtcreatorExe
+Get-ChocolateyUnzip @packageArgs
+
+Get-ChildItem $packageArgs.destination -Include "*.exe" -Recurse | % {
+  if ($_.Name -eq "qtcreator.exe") {
+    Set-Content -Value "" -LiteralPath "$($_.FullName).gui"
+    $qtCreator = $_.FullName
+  }
+  else {
+    Set-Content -Value "" -LiteralPath "$($_.FullName).ignore"
+  }
+}
+
+# Because chocolatey targets 4.0, we are able to use 'Programs' in the 'GetFolderPath'
+$programs = [System.Environment]::GetFolderPath("Programs")
+
+Install-ChocolateyShortcut -shortcutFile "$programs\QT Creator.lnk" -targetPath $qtCreator
+Install-ChocolateyFileAssociation ".pro" $qtCreator

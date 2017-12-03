@@ -1,29 +1,40 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qtcreator</id>
     <version>4.1.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qtcreator</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
     <title>Qt Creator</title>
     <authors>Qt Project</authors>
-    <owners>Qt Project</owners>
-    <licenseUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
     <projectUrl>http://wiki.qt.io/Qt_Creator</projectUrl>
-    <iconUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/src/app/qtcreator.xcassets/qtcreator.appiconset/icon_256x256.png?h=4.1</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Qt Creator provides a cross-platform, complete integrated development
-      environment (IDE) for application developers to create applications for
-      multiple desktop and mobile device platforms, such as Android and iOS.</description>
-    <summary>Cross-platform IDE for easy creation of connected devices, UIs and applications.</summary>
-    <releaseNotes>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.1.0.md</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/afa9a21618e59edddef7d4515d40e20dad0390e0/icons/qtcreator.png</iconUrl>
     <copyright>© 2016 The Qt Company Ltd.</copyright>
-    <tags>c++ qt ide qtcreator admin</tags>
+    <licenseUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/aportale/chocolatey-packages</packageSourceUrl>
     <docsUrl>https://doc.qt.io/qtcreator/</docsUrl>
     <mailingListUrl>http://lists.qt-project.org/mailman/listinfo/qt-creator/</mailingListUrl>
     <bugTrackerUrl>https://bugreports.qt.io/browse/QTCREATORBUG</bugTrackerUrl>
+    <tags>c++ qt ide qtcreator admin</tags>
+    <summary>Cross-platform IDE for easy creation of connected devices, UIs and applications.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Qt Creator provides a cross-platform, complete integrated development environment (IDE) for application developers to create applications for multiple desktop and mobile device platforms, such as Android and iOS.
+]]></description>
+    <releaseNotes>
+[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.1.0.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator/Changelog.md)
+    </releaseNotes>
     <dependencies>
-      <dependency id="vcredist2013" version="12.0.30501" />
+      <dependency id="vcredist2015" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
