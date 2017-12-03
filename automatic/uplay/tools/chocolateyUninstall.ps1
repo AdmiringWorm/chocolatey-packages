@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'uplay*'
+  softwareName   = 'Uplay'
   fileType       = 'exe'
   silentArgs     = '/S'
   validExitCodes = @(0)

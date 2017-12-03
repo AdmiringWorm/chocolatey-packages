@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/687cc6c3ba57cd8c3b37a7265ee177b9b8db6fe4/icons/uplay.png" height="48" width="48" /> Uplay](https://chocolatey.org/packages/uplay)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/6e1e4cbee5faef8e7168870547f019146ff9d35e/icons/uplay.png" height="48" width="48" /> Uplay](https://chocolatey.org/packages/uplay)
 
 Uplay is a service created by Ubisoft that provides its users with an experience similar to the achievements offered by other game companies. The service is provided across various platforms including: PC, Mac, PS3, Xbox360, Facebook, iPhone, iPad, and most recently revealed, OnLive.
 
