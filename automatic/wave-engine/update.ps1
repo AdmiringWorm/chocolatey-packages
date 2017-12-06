@@ -4,7 +4,7 @@ import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = "https://waveengine.net/Downloads"
 
 function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_SearchReplace {
