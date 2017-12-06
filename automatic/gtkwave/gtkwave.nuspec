@@ -20,7 +20,10 @@
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing
 ]]></description>
-    <releaseNotes>https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/ChangeLog</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/ChangeLog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/gtkwave/Changelog.md)
+    </releaseNotes>
     <dependencies />
   </metadata>
   <files>
