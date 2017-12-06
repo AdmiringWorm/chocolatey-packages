@@ -22,7 +22,10 @@ In-depth cleanup of your PC and storage devices *Smart overwriting* : PrivaZer a
 
 Privacy protection: PrivaZer prevents recovery of your activities.
 ]]></description>
-    <releaseNotes>http://privazer.com/download.php#changelog</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://privazer.com/download.php#changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/privazer.install/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="privazer.install" version="[3.0.33]" />
     </dependencies>
