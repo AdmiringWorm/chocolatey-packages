@@ -2,6 +2,7 @@
 
 function global:au_AfterUpdate {
   Remove-Item "$PSScriptRoot\tools\*.exe"
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_SearchReplace {
