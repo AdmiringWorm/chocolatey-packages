@@ -1,4 +1,4 @@
-# Package changelog for [CodeContracts](https://chocolatey.org/packages/codecontracts)
+# ![CodeContracts Changelog](https://img.shields.io/badge/CodeContracts-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Upcoming
 - Optimized codecontracts icon
