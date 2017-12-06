@@ -13,4 +13,6 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 update -ChecksumFor 32
