@@ -7,7 +7,7 @@ $packageName = $env:ChocolateyPackageName
 $packageArgs = @{
   destination = $toolsDir
   packageName    = $packageName
-  file           = "$toolsPath\"
+  file           = "$toolsPath\codetrack_1_0_3_1.zip"
 }
 
 Get-ChocolateyUnzip @packageArgs

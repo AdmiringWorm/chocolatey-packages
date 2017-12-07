@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dnscontrol</id>
-    <version>0.2.3</version>
+    <version>0.2.4</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DnsControl</title>
@@ -39,45 +39,38 @@
 
 [opinionated]: https://stackexchange.github.io/dnscontrol/opinions
 ]]></description>
-    <releaseNotes>
-[Software Changelog](This release adds two new DNS providers! We now support managing domains on Namecheap, thanks to @rbelnap  (was previously just a registrar), and we have Vultr support thanks to @geek1011.
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
 
-Everything else is mostly a few bug fixes, and some much needed documentation cleanup from @geek1011. 
+## Software ChangelogAnother big release!  Two new providers (Linode, OVH), Gandi now supports registration functions, and my favorite new feature: the SPF optimizer!
 
-## Pull Requests Merged:
+New features:
 
-### DNSimple: ###
-  -  handle pagination appropriately. [#242](https://github.com/StackExchange/dnscontrol/pull/242)
-  -  Adding SRV, CAA, and ALIAS suppport [#243](https://github.com/StackExchange/dnscontrol/pull/243)
+* SPF Optimizer!  dnscontrol's compiler now has an optimizer. Our first optimization is to improve your SPF records.  See https://stackexchange.github.io/dnscontrol/spf-optimizer for info. Thanks to @captncraig for contributing this.
 
-### Namecheap: ###
-  -  New Provider! [#202](https://github.com/StackExchange/dnscontrol/pull/202)
+The language has changed slightly:
 
-### Vultr: ###
-  -  New Provider! [#219](https://github.com/StackExchange/dnscontrol/pull/219)
+* Defining a domain twice is now considered an error.
+* Labels that are FQDNs is now an error. (this is a common typo)
+* Downcase DNS names (#253).  DNSControl is opinionated and we've added a new optinion: All DNS labels and targets should be lowercase.  Uppercase (language permitting) is now downcased silently.
 
-### other: ###
-  - Website fixes (Part 1) [#223](https://github.com/StackExchange/dnscontrol/pull/223)
-  - Improved consistency of provider documentation [#222](https://github.com/StackExchange/dnscontrol/pull/222)
-  - Fixed Cloudflare docs (#221) [#224](https://github.com/StackExchange/dnscontrol/pull/224)
-  - Fixed Active Directory docs (#221) [#225](https://github.com/StackExchange/dnscontrol/pull/225)
-  - Improve Gandi documentation (#221) [#229](https://github.com/StackExchange/dnscontrol/pull/229)
-  - Improve Google Cloud DNS docs (#221) [#230](https://github.com/StackExchange/dnscontrol/pull/230)
-  - Improve NS1 documentation (#221) [#233](https://github.com/StackExchange/dnscontrol/pull/233)
-  - Improved BIND docs (#221) [#226](https://github.com/StackExchange/dnscontrol/pull/226)
-  - Improve softlayer documentation (#221) [#235](https://github.com/StackExchange/dnscontrol/pull/235)
-  - Improved Name.com documentation (#221) [#231](https://github.com/StackExchange/dnscontrol/pull/231)
-  - Improve DNSimple documentation (#221) [#228](https://github.com/StackExchange/dnscontrol/pull/228)
-  - Improved DigitalOcean documentation (#221) [#227](https://github.com/StackExchange/dnscontrol/pull/227)
-  - update README to include NS1 as a provider [#240](https://github.com/StackExchange/dnscontrol/pull/240)
+Provider-specific improvements:
 
-## Thanks to all contributors:
+* New provider: Linode  (#268)
+* New Provider: OVH DNS Provider (#143) (#175)
+* GANDI: Registrar support (#274)
+* NAMECHEAP: Rate limiting now only throttles when needed
+* NS1: Add SRV record support (#277)
+* NS1: TXT records are broken if they contain spaces (#270)
+* ROUTE53: Update aws libraries and remove "waiter" code.
 
-  - [@captncraig](https://github.com/StackExchange/dnscontrol/commits?author=captncraig)
-  - [@derekargueta](https://github.com/StackExchange/dnscontrol/commits?author=derekargueta)
-  - [@geek1011](https://github.com/StackExchange/dnscontrol/commits?author=geek1011))
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
-    </releaseNotes>
+Plus many code cleanups and fixes:
+
+* Upgrade to newest miekg/dns library
+* Rename source files that don't match the name/nameProvider.go standard. (#261)
+* Improved Namecheap documentation (#221) (#232)
+* Improved documentation: Document that creds.json can include env variables, improve Namecheap docs, improve explanation of how to write a new provider, release engineering docs, and a massive overhaul to the website docs by Patrick G
+
+Thanks to everyone for their contributions!</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

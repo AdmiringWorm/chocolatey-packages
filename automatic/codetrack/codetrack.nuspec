@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>codetrack</id>
-    <version>1.0.2.0</version>
+    <version>1.0.3.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/codetrack</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>CodeTrack</title>
     <authors>Nico Van Goethem</authors>
     <projectUrl>https://www.getcodetrack.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fb1acdf2729f7eaaecb6be2a3f672ccb51f6fe17/icons/codetrack.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9d99ec2c93e83c46f0bd942819528df99f2f2e23/icons/64x64.png</iconUrl>
     <copyright>© Nico Van Goethem. All rights reserved. </copyright>
     <licenseUrl>https://www.getcodetrack.com/license.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -17,14 +17,13 @@
     <tags>codetrack profiler analyzer performance debugging</tags>
     <summary>A free .NET Performance Profile and Execution Analyzer</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
+    <description><![CDATA[CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
 
 ![Trace View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/trace.png)
 ![Per Thread View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/per_thread.png)
 ![List View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/list.png)
 ![Timeline View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/timeline.png)
-</description>
+]]></description>
     <releaseNotes>
 [Software Changelog](https://www.getcodetrack.com/releases.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codetrack/Changelog.md)
