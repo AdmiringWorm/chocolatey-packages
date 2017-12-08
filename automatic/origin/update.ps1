@@ -3,17 +3,6 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $padUnderVersion = '10.5.5'
 
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -NoSuffix
-
-  $file = "$PSScriptRoot\tools\$($Latest.FileName32)"
-  $productVersion = Get-Item "$file" | % { $_.VersionInfo.ProductVersion -replace ',', '.' }
-  Remove-Item -Force $file
-  if ($productVersion -ne $Latest.RemoteVersion) {
-    throw "The download executable do not have the same version as the one we parsed.`nActual Version: $productVersion`nParsed Version: $($Latest.RemoteVersion)"
-  }
-}
-
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
@@ -27,19 +16,49 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_GetLatest() {
-  $versionParseUrl = 'http://www.filehorse.com/download-origin/'
-  $download_page = Invoke-WebRequest $versionParseUrl -UseBasicParsing
-  $download_page.Content -match 'Origin\s*([\d]+\.[\d\.]+)' | Out-Null
-
-  $version = $Matches[1]
+function GetResultInformation([string]$url32) {
+  $dest = "$env:TEMP\origin.exe"
+  Get-WebFile $url32 $dest | Out-Null
+  $version = Get-Item $dest | % { Get-FixVersion -version ($_.VersionInfo.ProductVersion -replace ',', '.') -OnlyFixBelowVersion $padUnderVersion }
 
   return @{
-    URL32          = 'https://download.dm.origin.com/origin/live/OriginSetup.exe'
-    Version        = Get-PaddedVersion $version -OnlyBelowVersion $padUnderVersion
+    URL32          = $url32
+    Version        = $version
     RemoteVersion  = $version
+    Checksum32     = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
   }
+}
+
+function global:au_GetLatest() {
+  $url32 = 'https://download.dm.origin.com/origin/live/OriginSetup.exe'
+
+  if (($global:au_Force -ne $true) -and (Test-Path "$PSScriptRoot\info")) {
+    $items = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -first 1 | % { $_ -split '\|' }
+    $headers = Get-WebHeaders $url32
+    if ($items) {
+      $etag = $items[0]
+      $version = $items[1]
+      if ($headers.ETag -ne $etag) {
+        $result = GetResultInformation $url32
+        "$($headers.ETag)|$($result.Version)" | Out-File "$PSScriptRoot\info" -Encoding utf8
+      }
+      else {
+        $result = @{ URL32 = $url32; Version = $version }
+      }
+    }
+    else {
+      $result = GetResultInformation $url32
+      "$($headers.ETag)|$($result.Version)" | Out-File "$PSScriptRoot\info" -Encoding utf8
+    }
+  }
+  else {
+    $headers = Get-WebHeaders $url32
+    $result = GetResultInformation $url32
+    "$($headers.ETag)|$($result.Version)" | Out-File "$PSScriptRoot\info" -Encoding utf8
+  }
+
+  return $result
 }
 
 update -ChecksumFor none
