@@ -1,5 +1,4 @@
 ﻿import-module au
-import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://www.kymoto.org/products/inno-script-studio/downloads"
 $padUnderVersion = '2.2.3'
@@ -23,7 +22,7 @@ function global:au_GetLatest {
   $re = "^\s*[\d_]+"
   $version = $download_page.links | ? href -Match "release-history" | ? innerText -Match $re | select -First 1 -ExpandProperty innerText
 
-  $Latest = @{ URL = $url; Version = Get-PaddedVersion $version -OnlyBelowVersion $padUnderVersion -revisionLength 4 }
+  $Latest = @{ URL = $url; Version = Get-FixVersion $version -OnlyFixBelowVersion $padUnderVersion }
   return $Latest;
 }
 
