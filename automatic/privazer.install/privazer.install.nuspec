@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer.install</id>
-    <version>3.0.33</version>
+    <version>3.0.34</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer (Install)</title>
