@@ -68,6 +68,7 @@ install:
         #'optipng'    = '0.7.6'
         #'pngquant'   = '2.10.1'
         #'jpegoptim'  = '1.2.4.4'
+        'wormies-au-helpers' = '0.1.0'
       }.GetEnumerator() | % {
         if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
         if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
@@ -81,7 +82,6 @@ install:
 - ps: |
     git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
-- ps: Install-Module Wormies-AU-Helpers
 - ps: |
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
