@@ -42,7 +42,7 @@ $options = [ordered]@{
     Description = "Update Force Test Report #powershell #chocolatey"
   }
 
-  ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
+  ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; (Get-Module "Wormies-AU-Helpers" -ListAvailable | % ModuleBase))
 
   BeforeEach  = {
     param($PackageName, $Options )
