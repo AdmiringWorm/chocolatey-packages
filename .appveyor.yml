@@ -81,7 +81,7 @@ install:
 - ps: |
     git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
-    Install-Module Wormies-AU-Helpers
+- ps: Install-Module Wormies-AU-Helpers
 - ps: |
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
