@@ -94,7 +94,7 @@ $Options = [ordered]@{
 
   ForcedPackages   = $ForcedPackages -split ' '
   UpdateIconScript = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
-  ModulePaths      = @("$PSScriptRoot\scripts\au_extensions.psm1")
+  ModulePaths      = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
   BeforeEach       = {
     param($PackageName, $Options )
     $Options.ModulePaths | % { Import-Module $_ }
