@@ -1,6 +1,6 @@
 # Package changelog for [xvid](https://chocolatey.org/packages/xvid)
 
-## Upcoming
+## Version: 1.3.5 (2017-12-12)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 

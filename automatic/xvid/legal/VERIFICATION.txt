@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official mirror on <https://www.xvid.com/download/>
 The installer can be verified with the following:
 
-1. Download <https://assets.xvid.com/assets/Xvid-1.3.4-20150621.exe>
+1. Download <https://downloads.xvid.com/downloads/Xvid-1.3.5-20171208.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 88263578D2C3E2DC1E02116A1FB5D9238843B9D84AA371A0F5B32F1B2507524E
+  checksum: AF52B058AE294A3F8BC0D65EA2F93F30CD847BE2B2307F194544E7A26A7BAE04
 
 File 'LICENSE.txt' is obtained from <http://websvn.xvid.org/cvs/viewvc.cgi/trunk/xvidcore/LICENSE?revision=851>
