@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/persepolisdm/persepolis/releases>
+location on <https://github.com/persepolisdm/persepolis/releases/tag/3.0.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/persepolisdm/persepolis/releases/download/2.4.2/persepolis_2_4_2_windows_32bit.exe>
-  64-Bit software: <https://github.com/persepolisdm/persepolis/releases/download/2.4.2/persepolis_2_4_2_windows_64bit.exe>
+  32-Bit software: <https://github.com/persepolisdm/persepolis/releases/download/3.0.0/persepolis_3_0_0_windows_32bit.exe>
+  64-Bit software: <https://github.com/persepolisdm/persepolis/releases/download/3.0.0/persepolis_3_0_0_windows_64bit.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 82C6DDB791714F47AA162505A09A9E85A0E09516FEF9DE5F3E3CB7500A38FBBF
-  checksum64: 8436CC55CA0712650A2ECFFA5BC55DEF83D92EF8886125B1F56C4FF64F648BA5
+  checksum32: 4974738763CF04498D2DA2D6D3175A37CAF8352BCBF52C8C8EBE231973286BD6
+  checksum64: 8C7D041C52298CFE7C81C1DB4AA96DBE14B0C32632F3FA169EBB9C880B653482
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/persepolisdm/persepolis/blob/master/LICENSE>

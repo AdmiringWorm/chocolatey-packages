@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>persepolis</id>
-    <version>2.4.2</version>
+    <version>3.0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/persepolis</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Persepolis Download Manager</title>
     <authors>Alireza AmirSamimi, MohammadAmin Vahedinia, Mostafa Asadi, Sadegh Alirezaie, Mohammadreza Abdollahzadeh, Jafar Akhondali</authors>
     <projectUrl>https://persepolisdm.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/60bb51e27cfc056142bdd15ee4b78fff4b7b06d2/automatic/persepolis/icons/128x128.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/60cdba448364aed152ef33289320abca8b713f34/icons/128x128.png</iconUrl>
     <copyright>Copyleft © Persepolis Download Manager 2017</copyright>
     <licenseUrl>https://github.com/persepolisdm/persepolis/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -32,10 +32,29 @@
 **EXAMPLE**
 `choco install persepolis --params "'/UseInf:C:\persepolis.inf'"`
 ]]></description>
-    <releaseNotes>
-[Software Changelog](https://github.com/persepolisdm/persepolis/releases/tag/2.4.2)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)
-    </releaseNotes>
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)
+
+## Software Release Notes
+We are happy to announce the release of Persepolis Download Manager 3.0.0 .
+- In this version all codes are rewritten!
+- Now we use python setup tools for installation.
+- We change data base to Sqlite! so in this version persepolis is lighter and faster and more stable than before.
+- Persepolis can integrate into FireFox and Chrome/Chromium and Vivaldi and Opera :)
+From this version we have FireFox extension :) [Read more](https://github.com/persepolisdm/persepolis/wiki/Firefox-Flashgot-Plugin) 
+
+From this version opera and vivaldi users can use our chrome extension for integrating persepolis to their browsers. 
+
+- We have new icons and theme :)
+Thanks to [Papirus team](https://github.com/PapirusDevelopmentTeam/) for designing our new icons.
+
+- Many bugs is fixed.
+
+- Many new requested features is [added](https://github.com/persepolisdm/persepolis/issues?q=label%3Aadded+is%3Aclosed) 
+
+Special thanks to persepolis developers and contributors for pull requests, bug reports and feature requests!
+
+Reagrds
+AliReza AmirSamimi</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->

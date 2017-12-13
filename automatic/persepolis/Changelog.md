@@ -1,6 +1,8 @@
 # Package changelog for [Persepolis Download Manager](https://chocolatey.org/packages/persepolis)
 
-## UPCOMING
+## Version: 3.0.0 (2017-12-13)
+- **COMPATIBILITY:** Expanded aliases in chocolatey script
+- **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)
 - **ENHANCEMENT:** Include software release notes inside the package metadata
 
 ## Version 2.4.2 (2017-11-07)
