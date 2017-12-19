@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>persepolis</id>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/persepolis</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Persepolis Download Manager</title>
@@ -35,23 +35,16 @@
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)
 
 ## Software Release Notes
-We are happy to announce the release of Persepolis Download Manager 3.0.0 .
-- In this version all codes are rewritten!
-- Now we use python setup tools for installation.
-- We change data base to Sqlite! so in this version persepolis is lighter and faster and more stable than before.
-- Persepolis can integrate into FireFox and Chrome/Chromium and Vivaldi and Opera :)
-From this version we have FireFox extension :) [Read more](https://github.com/persepolisdm/persepolis/wiki/Firefox-Flashgot-Plugin) 
+We are happy to announce the release of Persepolis Download Manager 3.0.1 .
 
-From this version opera and vivaldi users can use our chrome extension for integrating persepolis to their browsers. 
+We fix fome bugs in version 3.0.0:
+1- [Compatbility bug with version 2 is fixed](https://github.com/persepolisdm/persepolis/issues/358).
+2- [UI issue with 4K displays](https://github.com/persepolisdm/persepolis/issues/348) is fixed.
+3- Queue crashing problem is fixed.
+4- [Download information wouldn't have been shown after clicking on "Download later" Button](https://github.com/persepolisdm/persepolis/issues/359). It has been fixed! 
+and other minor bugs.
 
-- We have new icons and theme :)
-Thanks to [Papirus team](https://github.com/PapirusDevelopmentTeam/) for designing our new icons.
-
-- Many bugs is fixed.
-
-- Many new requested features is [added](https://github.com/persepolisdm/persepolis/issues?q=label%3Aadded+is%3Aclosed) 
-
-Special thanks to persepolis developers and contributors for pull requests, bug reports and feature requests!
+Special thanks to contributors for  bug reports!
 
 Reagrds
 AliReza AmirSamimi</releaseNotes>

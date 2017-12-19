@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\persepolis_3_0_0_windows_32bit.exe"
-  file64         = "$toolsPath\persepolis_3_0_0_windows_64bit.exe"
+  file           = "$toolsPath\persepolis_3_0_1_windows_32bit.exe"
+  file64         = "$toolsPath\persepolis_3_0_1_windows_64bit.exe"
   softwareName   = 'Persepolis Download Manager*'
   silentArgs     = "/SILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
