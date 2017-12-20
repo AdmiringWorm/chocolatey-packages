@@ -10,3 +10,4 @@ Origin contains social features such as profile management, networking with frie
 - `/LaunchOrigin` - Start Origin Client after installation
 - `/StartOrigin` - Alias for `/LaunchOrigin`
 - `/NoStartMenuIcon` - Don't create a shortcut on the start menu
+- `/DesktopIcon` - Create a shortcut on the desktop

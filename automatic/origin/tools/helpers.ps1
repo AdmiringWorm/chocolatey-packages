@@ -83,11 +83,20 @@ function CreateShortcuts() {
     Write-Host "Creating Origin Start Menu shortcut..."
     Install-ChocolateyShortcut -ShortcutFilePath $link -TargetPath $originExec
   }
+
+  if ($pp.DesktopIcon) {
+    $desktop = [System.Environment]::GetFolderPath("CommonDesktop")
+    $link = "$desktop\Origin.lnk"
+
+    Write-Host "Creating Origin Desktop shortcut..."
+    Install-ChocolateyShortcut -ShortcutFilePath $link -TargetPath $originExec
+  }
 }
 
 function RemoveShortcuts() {
   @(
     [System.Environment]::GetFolderPath('CommonPrograms')
+    [System.Environment]::GetFolderPath('CommonDesktop')
   ) | % {
     if (Test-Path "$_\Origin.lnk") { Remove-Item -Force "$_\Origin.lnk" }
   }
