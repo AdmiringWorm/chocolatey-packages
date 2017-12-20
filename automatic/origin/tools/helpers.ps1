@@ -70,3 +70,25 @@ function CreateRegistrySettings() {
     New-ItemProperty -Path $uninstallRegPath -Name $_ -Value $uninstallSettings[$_] -Force | Out-Null
   }
 }
+
+function CreateShortcuts() {
+  param($pp, $installDir)
+
+  $originExec = Resolve-Path "$installDir/origin.exe"
+
+  if (!($pp.NoStartMenuIcon)) {
+    $startMenu = [System.Environment]::GetFolderPath('CommonPrograms')
+    $link = "$startMenu\Origin.lnk"
+
+    Write-Host "Creating Origin Start Menu shortcut..."
+    Install-ChocolateyShortcut -ShortcutFilePath $link -TargetPath $originExec
+  }
+}
+
+function RemoveShortcuts() {
+  @(
+    [System.Environment]::GetFolderPath('CommonPrograms')
+  ) | % {
+    if (Test-Path "$_\Origin.lnk") { Remove-Item -Force "$_\Origin.lnk" }
+  }
+}

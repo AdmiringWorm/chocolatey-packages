@@ -28,6 +28,8 @@ else {
 
 Get-ChocolateyUnzip @packageArgs
 
+CreateShortcuts -pp $pp -installDir $packageArgs['destination']
+
 Write-Host "Removing cached unzipped directory..."
 Uninstall-ChocolateyZipPackage -packageName $packageArgs['packageName'] -zipFileName ($packageArgs.url -split '\/' | Select-Object -last 1)
 

@@ -9,3 +9,4 @@ Origin contains social features such as profile management, networking with frie
 - `/InstallDir:` - Select the location to where the origin client should be installed (*Defaults to `C:\Program Files\Origin` (32bit), `C:\Program Files (x86)\Origin` (64bit), or the previously installed location*)
 - `/LaunchOrigin` - Start Origin Client after installation
 - `/StartOrigin` - Alias for `/LaunchOrigin`
+- `/NoStartMenuIcon` - Don't create a shortcut on the start menu

@@ -1,4 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+. "$toolsDir\helpers.ps1"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -28,3 +30,5 @@ elseif ($key.Count -gt 1) {
   Write-Warning "Please alert the package maintainer that the following keys were matched:"
   $key | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
 }
+
+RemoveShortcuts
