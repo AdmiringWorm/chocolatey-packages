@@ -9,7 +9,7 @@
     <title>CodeTrack</title>
     <authors>Nico Van Goethem</authors>
     <projectUrl>https://www.getcodetrack.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9d99ec2c93e83c46f0bd942819528df99f2f2e23/icons/64x64.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9d99ec2c93e83c46f0bd942819528df99f2f2e23/automatic/codetrack/icons/64x64.png</iconUrl>
     <copyright>© Nico Van Goethem. All rights reserved. </copyright>
     <licenseUrl>https://www.getcodetrack.com/license.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
