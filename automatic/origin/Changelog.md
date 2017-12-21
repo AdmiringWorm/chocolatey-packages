@@ -1,5 +1,10 @@
 # Package changelog for [Origin](https://chocolatey.org/packages/origin)
 
+## Version: 10.5.8.17910 (2017-12-21)
+- **ENHANCEMENT:** (origin) Create start menu shortcut [#10](https://github.com/AdmiringWorm/chocolatey-packages/issues/10)
+- **ENHANCEMENT:** (origin) Optionally create a desktop icon [#11](https://github.com/AdmiringWorm/chocolatey-packages/issues/11)
+- **IMPROVEMENT:** Changed to detect etag instead of parsing FileHorse
+
 ## Version: 10.5.8.11002 (2017-12-06)
 - **BUG:** Corrected uninstall silent argument
 - **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)

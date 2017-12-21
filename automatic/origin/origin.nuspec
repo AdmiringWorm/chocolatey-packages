@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>origin</id>
-    <version>10.5.8.11002</version>
+    <version>10.5.8.17910</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/origin</packageSourceUrl>
     <owners>AdmiringWorm, thaiphan</owners>
     <title>Origin</title>
@@ -26,6 +26,8 @@ Origin contains social features such as profile management, networking with frie
 - `/InstallDir:` - Select the location to where the origin client should be installed (*Defaults to `C:\Program Files\Origin` (32bit), `C:\Program Files (x86)\Origin` (64bit), or the previously installed location*)
 - `/LaunchOrigin` - Start Origin Client after installation
 - `/StartOrigin` - Alias for `/LaunchOrigin`
+- `/NoStartMenuIcon` - Don't create a shortcut on the start menu
+- `/DesktopIcon` - Create a shortcut on the desktop
 ]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
