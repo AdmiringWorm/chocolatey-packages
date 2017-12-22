@@ -1,5 +1,9 @@
 # Package changelog for [Authy Desktop (Install)](https://chocolatey.org/packages/authy-desktop)
 
+## Version: 1.2.0 (2017-12-22)
+- **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)
+- Removed note about software being 'beta'
+
 ## Version 1.1.0 (2017-10-24)
 - **BUG:** Fixed the url to detect updates [#5](https://github.com/AdmiringWorm/chocolatey-packages/issues/5)
 - **ENHANCEMENT:** Changed to use sha512 as checksums
