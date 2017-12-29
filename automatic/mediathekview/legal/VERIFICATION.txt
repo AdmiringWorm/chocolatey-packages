@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://download.mediathekview.de/stabil/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.mediathekview.de/stabil/MediathekView-13.0.4.zip>
+1. Download the following <https://download.mediathekview.de/stabil/MediathekView-13.0.5.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8C06744847B638882BFFC663683D1A947D9CE63C36744FDC89CA7044F19FB952
+  checksum: 8D172AF1C1A61887286F123BB66809CB8C674DA30DD18B3888D7F2EF5E70F092
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-3.0.txt>
