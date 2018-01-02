@@ -56,7 +56,16 @@ function GetVersion {
   $page_data = Invoke-WebRequest -UseBasicParsing -Uri "$link"
   $match = $page_data.Content -match "GhostDoc v([\d+\.[\d\.]+) update is"
   if ($match) {
-    return $matches[1]
+    [version]$version = $matches[1]
+
+    $matches = $null
+
+    if ($page_data.Content -match "UPDATE\:.*the build ([\d]+)") {
+      $revision = $matches[1]
+      $version = $version.ToString(2) + "." + $revision
+    }
+
+    return $version
   }
 }
 
