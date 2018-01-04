@@ -4,7 +4,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\MediathekView-13.0.5.zip"
+  file        = "$toolsPath\MediathekView-13.0.6.zip"
   destination = $toolsPath
 }
 
