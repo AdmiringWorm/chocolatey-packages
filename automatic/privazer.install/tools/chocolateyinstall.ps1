@@ -7,7 +7,7 @@ $packageArgs = @{
   silentArgs     = '-silent'
   validExitCodes = @(0)
   url            = 'https://privazer.com/privazer_free.exe'
-  checksum       = 'e5376f66dfda353bdc03341275f24868b54658320c936f845c49599121e483fd0c407ec3ae5371eb055d71b9fbe16aec2c35bbf23e5e33d58482c9596fc70132'
+  checksum       = '5718bc81ab41ae37fbab7f673979435d5605f54a8c4a2e41aad11947a1b1a09c627c83e20f1a8f466e12652a4bf3bf8e9387e2db8c2d3f7ebea977f02bbaf0e1'
   checksumType   = 'sha512'
 }
 
