@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases = 'https://www1.qt.io/download-open-source/'
+$releases = 'https://www1.qt.io/offline-installers/'
 $softwareName = 'qtcreator*'
 
 function global:au_BeforeUpdate {
