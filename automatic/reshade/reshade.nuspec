@@ -33,7 +33,10 @@ And that's not it. Write your shaders just once, they'll work everywhere, regard
 **Example:**
 `choco install reshade --params '"/Desktop /NoStartMenu"'`
 ]]></description>
-    <releaseNotes>https://reshade.me/releases</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://reshade.me/releases)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/reshade/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
