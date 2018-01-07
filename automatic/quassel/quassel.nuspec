@@ -35,7 +35,10 @@ By modern we mean that Quassel IRC will have all the features you'd expect from 
 [BNCs]: http://en.wikipedia.org/wiki/Bouncer_(networking)
 [Digia]: http://qt.digia.com/
 ]]></description>
-    <releaseNotes>https://github.com/quassel/quassel/blob/master/ChangeLog</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/quassel/quassel/blob/master/ChangeLog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/quassel/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="vcredist2013" version="12.0.30501.20150616" />
