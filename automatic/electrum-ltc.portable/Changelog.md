@@ -1,4 +1,4 @@
-# Package changelog for [electrum-ltc.portable](https://chocolatey.org/packages/electrum-ltc.portable)
+# ![Electrum-LTC (Portable) Changelog](https://img.shields.io/badge/-Package%20Changelog-blue.svg?style=for-the-badge&label=Electrum-LTC%20(Portable))
 
 ## Version: 2.8.3.5 (2017-07-09)
 - **ENHANCEMENT:** Added changelog for package

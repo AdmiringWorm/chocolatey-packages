@@ -1,4 +1,4 @@
-# Package changelog for [MediathekView](https://chocolatey.org/packages/mediathekview)
+# ![MediathekView Changelog](https://img.shields.io/badge/MediathekView-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 13.0.5 (2017-12-29)
 - **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)

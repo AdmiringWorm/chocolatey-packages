@@ -1,4 +1,4 @@
-# Package changelog for [xvid](https://chocolatey.org/packages/xvid)
+# ![Xvid Changelog](https://img.shields.io/badge/Xvid-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 1.3.5 (2017-12-12)
 - **ENHANCEMENT:** Added changelog for package

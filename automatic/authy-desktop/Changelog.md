@@ -1,4 +1,4 @@
-# Package changelog for [Authy Desktop (Install)](https://chocolatey.org/packages/authy-desktop)
+# ![Authy Desktop (Install) Changelog](https://img.shields.io/badge/Authy%20Desktop%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 1.2.0 (2017-12-22)
 - **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)

@@ -1,4 +1,4 @@
-# Package changelog for [dilay](https://chocolatey.org/packages/dilay)
+# ![Dilay Changelog](https://img.shields.io/badge/Dilay-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 1.6.0 (2017-10-30)
 - **ENHANCEMENT:** Updated chocolatey-core.extension to version 1.0.6

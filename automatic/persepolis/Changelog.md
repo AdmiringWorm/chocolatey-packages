@@ -1,4 +1,4 @@
-# Package changelog for [Persepolis Download Manager](https://chocolatey.org/packages/persepolis)
+# ![Persepolis Download Manager Changelog](https://img.shields.io/badge/Persepolis%20Download%20Manager-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 3.0.0 (2017-12-13)
 - **COMPATIBILITY:** Expanded aliases in chocolatey script

@@ -1,4 +1,4 @@
-# Package changelog for [r.project](https://chocolatey.org/packages/r.project)
+# ![The R Project for Statistical Computing Changelog](https://img.shields.io/badge/The%20R%20Project%20for%20Statistical%20Computing-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 3.4.2.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file

@@ -1,4 +1,4 @@
-# [lilypond](https://chocolatey.org/packages/lilypond)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d035d87e56e1461a692cc6cdeda68b7b4e680509/icons/lilypond.png" height="48" width="48" /> ![LilyPond](https://img.shields.io/chocolatey/v/lilypond.svg?label=LilyPond&style=for-the-badge)](https://chocolatey.org/packages/lilypond)
 
 LilyPond is a music engraving program, devoted to producing the highest-quality sheet music possible. It brings the aesthetics of traditionally engraved music to computer printouts. LilyPond is free software and part of the [GNU Project][].
 

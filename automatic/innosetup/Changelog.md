@@ -1,4 +1,4 @@
-# Package changelog for [innosetup](https://chocolatey.org/packages/innosetup)
+# ![Inno Setup Changelog](https://img.shields.io/badge/Inno%20Setup-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Upcoming
 - **ENHANCEMENT:** Added changelog for package

@@ -1,4 +1,4 @@
-# Package changelog for [deepgit](https://chocolatey.org/packages/deepgit)
+# ![DeepGit (Install) Changelog](https://img.shields.io/badge/DeepGit%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 3.0.1.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file

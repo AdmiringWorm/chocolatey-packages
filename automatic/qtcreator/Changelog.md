@@ -1,4 +1,4 @@
-## Version: 4.5.0 (2017-12-07)
+# ![Qt Creator Changelog](https://img.shields.io/badge/Qt%20Creator-Package%20Changelog-blue.svg?style=for-the-badge)
 - **ENHANCEMENT:** Added version for vcredist2015 dependency
 
 ## Version: 4.4.1 (2017-12-03)

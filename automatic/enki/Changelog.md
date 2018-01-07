@@ -1,4 +1,4 @@
-# Package changelog for [enki](https://chocolatey.org/packages/enki)
+# ![Enki Changelog](https://img.shields.io/badge/Enki-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 16.4.1.20171105 (2017-11-05)
 - **BUG:** Removed leading zeroes from version number

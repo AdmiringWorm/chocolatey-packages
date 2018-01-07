@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/master/copyq/icon.png" height="48" width="48" /> dnscontrol](https://chocolatey.org/packages/dnscontrol)
+# [![DnsControl](https://img.shields.io/chocolatey/v/dnscontrol.svg?label=DnsControl&style=for-the-badge)](https://chocolatey.org/packages/dnscontrol)
 
 DnsControl is an [opinionated][] platform for seamlessly managing your DNS configuration across any number of DNS hosts, both in the cloud or in your own infrastructure. It manages all of the domains for the Stack Overflow network, and can do the same for your.
 

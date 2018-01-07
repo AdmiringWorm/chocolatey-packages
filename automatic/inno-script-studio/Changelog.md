@@ -1,4 +1,4 @@
-# Package changelog for [inno-script-studio](https://chocolatey.org/packages/inno-script-studio)
+# ![Inno Script Studio Changelog](https://img.shields.io/badge/Inno%20Script%20Studio-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 2.2.2.3201 (2017-11-18)
 - **ENHANCEMENT:** Added changelog for package

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/b072ad4691b5098a70836ae967c907901b226e19/icons/electrum-ltc.png" height="48" width="48" /> electrum-ltc](https://chocolatey.org/packages/electrum-ltc)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/b072ad4691b5098a70836ae967c907901b226e19/icons/electrum-ltc.png" height="48" width="48" /> ![Electrum-LTC (Portable)](https://img.shields.io/chocolatey/v/electrum-ltc.portable.svg?label=Electrum-LTC%20(Portable)&style=for-the-badge)](https://chocolatey.org/packages/electrum-ltc.portable)
 
 Electrum-LTC is a simple, but powerful Litecoin wallet. A twelve-word security passphrase (or “seed”) leaves intruders stranded and your peace of mind intact. Keep it on paper, or in your head... and never worry about losing your litecoins to theft or hardware failure. No waiting, no lengthy blockchain downloads and no syncing to the network.
 

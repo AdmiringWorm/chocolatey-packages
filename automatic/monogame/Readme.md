@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a54441ea6a7769b53aadf1980334eb799b9b446d/icons/monogame.png" height="48" width="48" /> monogame](https://chocolatey.org/packages/monogame)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a54441ea6a7769b53aadf1980334eb799b9b446d/icons/monogame.png" height="48" width="48" /> ![MonoGame](https://img.shields.io/chocolatey/v/monogame.svg?label=MonoGame&style=for-the-badge)](https://chocolatey.org/packages/monogame)
 
 MonoGame is an Open Source implementation of the Microsoft XNA 4 Framework. The goal of MonoGame is to allow XNA developers on Xbox 360, Windows & Windows Phone to port their games to the iOS, Android, Mac OS X, Linux and Windows 8/10. As well as PlayStation Vita, Xbox One and PlayStation 4.
 

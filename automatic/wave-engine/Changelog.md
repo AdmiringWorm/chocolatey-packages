@@ -1,4 +1,4 @@
-# Package changelog for [wave-engine](https://chocolatey.org/packages/wave-engine)
+# ![Wave Engine Changelog](https://img.shields.io/badge/Wave%20Engine-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 2.4.0 (2017-08-24)
 - **ENHANCEMENT:** Added changelog for package

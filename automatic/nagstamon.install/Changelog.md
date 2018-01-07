@@ -1,4 +1,4 @@
-# Package changelog for [nagstamon.install](https://chocolatey.org/packages/nagstamon.install)
+# ![Nagstamon (Install) Changelog](https://img.shields.io/badge/Nagstamon%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 3.0.2.20171105 (2017-11-05)
 - **ENHANCEMENT:** Added changelog for package

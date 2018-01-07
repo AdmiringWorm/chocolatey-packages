@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/22da3a38d0543d07800b83ca3c0b3fdf83d27652/icons/xvid.png" height="48" width="48" /> xvid](https://chocolatey.org/packages/xvid)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/22da3a38d0543d07800b83ca3c0b3fdf83d27652/icons/xvid.png" height="48" width="48" /> ![Xvid](https://img.shields.io/chocolatey/v/xvid.svg?label=Xvid&style=for-the-badge)](https://chocolatey.org/packages/xvid)
 
 ## Highest Performance
 Xvid runs very fast as it is optimized for the latest CPUs. Recording videos from a camera in realtime or playing back HD video smoothly are not a problem. Your computer will still have plenty of power left for your other tasks!

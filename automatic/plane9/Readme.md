@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e909a8247388d06469d9f3422c825d5bd318e430/icons/plane9.png" height="48" width="48" /> PLANE9](https://chocolatey.org/packages/plane9)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e909a8247388d06469d9f3422c825d5bd318e430/icons/plane9.png" height="48" width="48" /> ![Plane9](https://img.shields.io/chocolatey/v/plane9.svg?label=Plane9&style=for-the-badge)](https://chocolatey.org/packages/plane9)
 
 Plane9 is a 3d **visualizer** where you never have to settle for just one view ever again. It features over 250 predefined [scenes][] to choose from. But it doesn't end there since the scenes can be [combined][] with one another to form a near endless supply of new views to experience. 39 transition are used to form a continous experience when moving from scene to scene.
 

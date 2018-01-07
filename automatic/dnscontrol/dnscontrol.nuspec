@@ -10,7 +10,6 @@
     <authors>Stack Overflow</authors>
     <projectUrl>https://stackexchange.github.io/dnscontrol/</projectUrl>
     <!-- IconUrl: Skip check -->
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/master/copyq/icon.png</iconUrl>
     <copyright>Copyright (c) 2015 Stack Overflow</copyright>
     <licenseUrl>https://github.com/StackExchange/dnscontrol/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9d99ec2c93e83c46f0bd942819528df99f2f2e23/automatic/codetrack/icons/48x48.png" height="48" width="48" /> codetrack](https://chocolatey.org/packages/codetrack)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9d99ec2c93e83c46f0bd942819528df99f2f2e23/automatic/codetrack/icons/64x64.png" height="48" width="48" /> ![CodeTrack](https://img.shields.io/chocolatey/v/codetrack.svg?label=CodeTrack&style=for-the-badge)](https://chocolatey.org/packages/codetrack)
 
 CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
 
