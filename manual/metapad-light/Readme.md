@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png" height="48" width="48" /> Metapad](https://chocolatey.org/packages/metapad)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png" height="48" width="48" /> ![Metapad Light Edition](https://img.shields.io/chocolatey/v/metapad-light.svg?label=Metapad%20Light%20Edition&style=for-the-badge)](https://chocolatey.org/packages/metapad-light)
 
 Metapad is a small, fast and completely free text editor for Windows (95/98/NT/XP/Vista/7) with similar features to Microsoft Notepad but with many extra (and rather useful) features. It was designed to completely replace Notepad since it includes all of Notepad's features and much, much more.
 

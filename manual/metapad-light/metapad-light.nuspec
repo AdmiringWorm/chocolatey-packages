@@ -40,7 +40,7 @@ Metapad is a small, fast and completely free text editor for Windows (95/98/NT/X
 - Portability mode (INI mode)
 - Over 30 customized UI language plugins
 </description>
-  </metadata>
+  <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/metapad-light/Changelog.md)</releaseNotes></metadata>
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
