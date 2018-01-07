@@ -1,4 +1,4 @@
-# Package changelog for [asp-net-mvc-boilerplate](https://chocolatey.org/packages/asp-net-mvc-boilerplate)
+# ![ASP.NET MVC Boilerplate Changelog](https://img.shields.io/badge/ASP.NET%20MVC%20Boilerplate-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 6.2.0.289 (2017-07-24)
 - Added changelog for package
