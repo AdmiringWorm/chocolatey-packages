@@ -30,7 +30,10 @@
 - [Open source](https://github.com/tablacus/TablacusExplorer)
 - 64-bit(TE64.exe/x64 Edition) and 32-bit(TE32.exe/x86 Edition) versions are available
 ]]></description>
-    <releaseNotes>http://www.eonet.ne.jp/~gakana/tablacus/history/</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://www.eonet.ne.jp/~gakana/tablacus/history/)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/tablacus/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
