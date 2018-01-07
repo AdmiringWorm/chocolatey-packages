@@ -99,6 +99,7 @@ $Options = [ordered]@{
     param($PackageName, $Options )
     $Options.ModulePaths | % { Import-Module $_ }
     . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
+    if (Test-Path tools) { Expand-Aliases -Directory tools }
 
     $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
     if (!$p) { return }
