@@ -18,7 +18,7 @@
     <dependencies>
       <dependency id="googlechrome" version="10.0.0" />
     </dependencies>
-  </metadata>
+  <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/googlechrome-extensions/googlechrome-authy/Changelog.md)</releaseNotes></metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>

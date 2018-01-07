@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/04f2a920bb17de083b8ae26fb73cefd4ac6c917a/icons/authy-desktop.png" height="48" width="48" /> Authy Google Chrome Extension](https://chocolatey.org/packages/googlechrome-authy)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/04f2a920bb17de083b8ae26fb73cefd4ac6c917a/icons/authy-desktop.png" height="48" width="48" /> ![Authy Google Chrome Extension](https://img.shields.io/chocolatey/v/googlechrome-authy.svg?label=Authy%20Google%20Chrome%20Extension&style=for-the-badge)](https://chocolatey.org/packages/googlechrome-authy)
 
 Authy for PC's makes Two-Factor Authentication a truly seamless experience and brings the power and security of strong authentication to users everywhere, anywhere.
 
