@@ -63,7 +63,10 @@ And more...
 [LADSPA]: http://www.ladspa.org/
 [projectM]: http://projectm.sourceforge.net/
 ]]></description>
-    <releaseNotes>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/ChangeLog</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/ChangeLog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qmmp/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
