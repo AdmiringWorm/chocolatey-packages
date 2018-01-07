@@ -29,7 +29,10 @@
 **Example:**
 `choco install teeworlds --params '"/Desktop /NoStartMenu"'`
 ]]></description>
-    <releaseNotes>https://teeworlds.com/?page=downloads&amp;id=12085</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=12085)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/teeworlds/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="vcredist2010" version="10.0.40219.2" />

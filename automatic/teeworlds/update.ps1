@@ -9,11 +9,11 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
@@ -22,7 +22,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  $releaseNotes = "
+[Software Changelog]($($Latest.ReleaseNotes)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)
+    "
+  Update-Metadata -key "releaseNotes" -value $releaseNotes
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_GetLatest {
