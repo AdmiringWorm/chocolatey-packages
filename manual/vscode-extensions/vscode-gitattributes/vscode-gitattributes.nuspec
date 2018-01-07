@@ -18,7 +18,10 @@
     <tags>vscode-gitattributes admin git attributes gitattributes vscode visualstudiocode</tags>
     <summary>An extension for Visual Studio Code that assists you in working with .gitattributes files.</summary>
     <description>DO NOT TOUCH, WILL BE AUTOMATICALLY SET FROM README.md DURING UPDATE. </description>
-    <releaseNotes>https://marketplace.visualstudio.com/items/hashhar.gitattributes/changelog</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://marketplace.visualstudio.com/items/hashhar.gitattributes/changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitattributes/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="VisualStudioCode" version="1.2.0" />
     </dependencies>
