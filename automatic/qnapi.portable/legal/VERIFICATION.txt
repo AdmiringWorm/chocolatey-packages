@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://qnapi.github.io/#download>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://github.com/QNapi/qnapi/releases/download/0.2.3/QNapi-0.2.3-portable.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 03CF7BF82565DE8B31745B1862F751EC9EE789F8E50AF41D361EE9246F99F827
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/QNapi/qnapi/blob/master/doc/LICENSE>

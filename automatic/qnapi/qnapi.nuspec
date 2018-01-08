@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qnapi</id>
-    <version>0.0</version>
+    <version>0.2.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qnapi</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>QNapi</title>
     <authors>Piotr Krzemiński</authors>
     <projectUrl>https://qnapi.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e22951a2f623905613b880e72574ec94b034455b/icons/qnapi.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/90ab7556eb3b37bdd33afd55f9241708e5982093/icons/qnapi.png</iconUrl>
     <copyright>© QNapi 2008-2017. All rights reserved.</copyright>
     <licenseUrl>https://github.com/QNapi/qnapi/blob/master/doc/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,8 +18,7 @@
     <tags>qnapi subtitles movies</tags>
     <summary>A software for downloading and automatic matching subtitles to movies.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-QNapi is free software for automatic fetching subtitles for given movie file. It uses online databases such as NapiProjekt, OpenSubtitles and Napisy24. It is based on Qt5 library, so it can be launched on any supported operating system, including Windows, OSX and Linux.
+    <description><![CDATA[QNapi is free software for automatic fetching subtitles for given movie file. It uses online databases such as NapiProjekt, OpenSubtitles and Napisy24. It is based on Qt5 library, so it can be launched on any supported operating system, including Windows, OSX and Linux.
 
 ## Features
 - matching subtitles for specific movie file
@@ -30,13 +29,11 @@ QNapi is free software for automatic fetching subtitles for given movie file. It
 - directory scanning and batch subtitles download
 - subtitles post-processing: change file encoding, set file permissions
 - provides nice command-line interface
-    </description>
-    <releaseNotes>
-[Software Changelog](https://github.com/QNapi/qnapi/releases/latest)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qnapi.install/Changelog.md)
-    </releaseNotes>
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/QNapi/qnapi/releases/tag/0.2.3)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qnapi.install/Changelog.md)</releaseNotes>
     <dependencies>
-      <dependency id="qnapi.install" version="0.0" />
+      <dependency id="qnapi.install" version="[0.2.3]" />
     </dependencies>
   </metadata>
   <files />
