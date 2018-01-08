@@ -20,21 +20,26 @@ if ($MyInvocation.InvocationName -ne '.') {
 }
 else {
   function global:au_SearchReplace {
-    @{
-      ".\legal\VERIFICATION.txt"        = @{
+    $replaceResult = @{
+      ".\legal\VERIFICATION.txt"      = @{
         "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
         "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
         "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
         "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
       }
-      ".\tools\chocolateyInstall.ps1"   = @{
-        "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
+      ".\tools\chocolateyInstall.ps1" = @{
         "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
       }
-      ".\tools\chocolateyUninstall.ps1" = @{
-        "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      }
     }
+
+    if ($Latest.PackageName -eq 'qnapi.install') {
+      $replaceResult[".\tools\chocolateyInstall.ps1"]["(?i)^(\s*softwareName\s*=\s*)'.*'"] = "`${1}'$softwareName'"
+      $replaceResult.Add(".\tools\chocolateyUninstall.ps1", @{
+          "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+        })
+    }
+
+    return $replaceResult
   }
 }
 

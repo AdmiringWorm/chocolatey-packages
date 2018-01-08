@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qnapi.portable</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qnapi</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>QNapi (Portable)</title>
+    <authors>Piotr Krzemiński</authors>
+    <projectUrl>https://qnapi.github.io/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e22951a2f623905613b880e72574ec94b034455b/icons/qnapi.png</iconUrl>
+    <copyright>© QNapi 2008-2017. All rights reserved.</copyright>
+    <licenseUrl>https://github.com/QNapi/qnapi/blob/master/doc/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/QNapi/qnapi</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/QNapi/qnapi/issues</bugTrackerUrl>
+    <tags>qnapi subtitles movies</tags>
+    <summary>A software for downloading and automatic matching subtitles to movies.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+QNapi is free software for automatic fetching subtitles for given movie file. It uses online databases such as NapiProjekt, OpenSubtitles and Napisy24. It is based on Qt5 library, so it can be launched on any supported operating system, including Windows, OSX and Linux.
+
+## Features
+- matching subtitles for specific movie file
+- automatic matching the best subtitles
+- select target subtitles format (SRT, mDVD, TMP, MPL2) as well as manual conversion
+- select subtitles, when multiple matching has been found
+- download subtitles in one of many supported languages
+- directory scanning and batch subtitles download
+- subtitles post-processing: change file encoding, set file permissions
+- provides nice command-line interface
+    </description>
+    <releaseNotes>
+[Software Changelog](https://github.com/QNapi/qnapi/releases/latest)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qnapi/Changelog.md)
+    </releaseNotes>
+
+    <!-- The following metadata doesn't yet exist, but maybe it does in the future and then we don't need to add these then -->
+    <provides>qnapi</provides>
+    <conflicts>qnapi.install</conflicts>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
