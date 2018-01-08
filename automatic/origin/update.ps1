@@ -23,7 +23,7 @@ function GetResultInformation([string]$url32) {
 
   return @{
     URL32          = $url32
-    Version        = $version
+    Version        = Get-FixVersion -Version $version -OnlyFixBelowVersion $padUnderVersion
     RemoteVersion  = $version
     Checksum32     = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
