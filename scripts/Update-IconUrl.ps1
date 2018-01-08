@@ -91,7 +91,7 @@
 #>
 
 param(
-  [string]$Name = $null,
+  [string]$Name = "qnapi.install",
   [string]$IconName = $null,
   [string]$GithubRepository = "AdmiringWorm/chocolatey-packages",
   [string]$RelativeIconDir = "../icons",
@@ -308,14 +308,10 @@ function Update-IconUrl {
   }
 
   $possibleNames = @($Name);
-  if ($IconName) { $possibleNames = @($IconName) + $possibleNames }
 
-  $validSuffixes = @(".install"; ".portable"; ".commandline")
-
-  $suffixMatch = $validSuffixes | ? { $Name.EndsWith($_) } | select -first 1
-
-  if ($suffixMatch) {
-    $possibleNames += $Name.TrimEnd($suffixMatch)
+  $dotIndex = $Name.IndexOf('.')
+  if ($dotIndex -gt 0) {
+    $possibleNames += $Name.Remove($dotIndex)
   }
 
   # Let check if the package already contains a url, and get the filename from that

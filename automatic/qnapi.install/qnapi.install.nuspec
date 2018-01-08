@@ -45,7 +45,6 @@ QNapi is free software for automatic fetching subtitles for given movie file. It
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
-    <file src="icons\**" target="icons" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
