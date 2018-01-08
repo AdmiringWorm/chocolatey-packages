@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>master-pdf-editor</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/master-pdf-editor</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Master PDF Editor</title>
+    <authors>Code Industry Ltd.</authors>
+    <projectUrl>https://code-industry.net/masterpdfeditor/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/f1b2ad42348e0bf2e6db4af4cf9e752f8cdfedc3/icons/master-pdf-editor.png</iconUrl>
+    <copyright>Copyright © Code Industry Ltd. All rights reserved</copyright>
+    <licenseUrl>https://code-industry.net/terms-and-conditions/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://code-industry.net/masterpdfeditor-help/</docsUrl>
+    <tags>master-pdf-editor pdf editor trial</tags>
+    <summary>Master PDF Editor is straightforward, easy to use application for working with PDF documents equipped with powerful multi-purpose functionality</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+Master PDF Editor is straightforward, easy to use application for working with PDF documents equipped with powerful multi-purpose functionality. With Master PDF Editor you can easily view, create and modify PDF documents. The application enables you to merge several files into one, split a source document into multiple documents, and also to comment, sign and encrypt PDF files.
+
+## Features
+- Edit PDF text, images and pages with full editing features.
+- Create new PDF or edit existing ones.
+- Add and/or edit bookmarks in PDF files.
+- Encrypt and/or protect PDF files using 128 bit encryption.
+- Convert XPS files into PDF.
+- Add PDF controls (like buttons, checkboxes, lists, etc.) into your PDFs.
+- Import/export PDF pages into common graphical formats including BMP, JPG, PNG, and TIFF.
+- Split and merge PDF files.
+- JavaScript support.
+- Dynamic XFA form support.
+- Validation Forms and Calculate Values.
+- Fast and simple PDF forms fill out.
+- Signing PDF documents with digital signature, signatures creation and validation.
+- Changing font attributes (size, family, color etc).
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/master-pdf-editor/Changelog.md)</releaseNotes></metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\..\icons\master-pdf-editor.png" target="icons" />
+  </files>
+</package>
