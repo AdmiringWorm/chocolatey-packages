@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.getcodetrack.com/releases.html>
 and can be verified by doing the following:
 
-1. Download the following <https://www.getcodetrack.com/releases/codetrack_1_0_3_2.zip>
+1. Download the following <https://www.getcodetrack.com/releases/codetrack_1_0_3_3.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 76F0892B8C1A181BDD2B818A9AFE7482448531EAEF514B157B897B2A6C51D7F9
+  checksum: 455ECCFCC568004BF6108BA9AD8DBBC32CDECB84C6C62153C8F181CA984D68CE
 
 The file 'LICENSE.txt' has been obtained from <https://www.getcodetrack.com/license.html>
