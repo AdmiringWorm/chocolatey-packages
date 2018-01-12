@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/f1b2ad42348e0bf2e6db4af4cf9e752f8cdfedc3/icons/master-pdf-editor.png" height="48" width="48" /> ![Master PDF Editor](https://img.shields.io/chocolatey/v/master-pdf-editor.svg?label=Master%20PDF%20Editor&style=for-the-badge)](https://chocolatey.org/packages/master-pdf-editor)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e58c3a6b74fd2ee53362b599ddda17d2843363e6/icons/master-pdf-editor.png" height="48" width="48" /> ![Master PDF Editor](https://img.shields.io/chocolatey/v/master-pdf-editor.svg?label=Master%20PDF%20Editor&style=for-the-badge)](https://chocolatey.org/packages/master-pdf-editor)
 
 Master PDF Editor is straightforward, easy to use application for working with PDF documents equipped with powerful multi-purpose functionality. With Master PDF Editor you can easily view, create and modify PDF documents. The application enables you to merge several files into one, split a source document into multiple documents, and also to comment, sign and encrypt PDF files.
 
