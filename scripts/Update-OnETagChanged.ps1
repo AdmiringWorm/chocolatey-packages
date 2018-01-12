@@ -28,7 +28,6 @@ function Update-OnETagChanged() {
     if ($existingInfo[0] -ne $etag) {
       $result = . $OnETagChanged
       $saveResult = $true
-      $result["Version"] = $existingInfo[1]
     }
     else {
       $result = . $OnUpdated

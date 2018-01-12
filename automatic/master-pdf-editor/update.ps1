@@ -42,9 +42,11 @@ function global:au_GetLatest {
   $re = '\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  return Update-OnETagChanged -execUrl $url32 -OnETagChanged {
+  $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
   } -OnUpdated { @{ URL32 = $url32 } }
+
+  return $result
 }
 
 update -ChecksumFor none
