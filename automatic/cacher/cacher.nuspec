@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cacher</id>
-    <version>0.0</version>
+    <version>1.2.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cacher</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Cacher</title>
     <authors>Penguin Labs, LLC</authors>
     <projectUrl>https://www.cacher.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e2676b06100795498f414240cf827408a96395d8/icons/cacher.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/1b97d18d2b1ace59d330e87f45f5d80221db10c0/icons/cacher.png</iconUrl>
     <copyright>© 2018 Penguin Labs, LLC
 All Rights Reserved</copyright>
     <licenseUrl>https://www.cacher.io/terms/</licenseUrl>
@@ -18,7 +18,7 @@ All Rights Reserved</copyright>
     <tags>cacher code snippets</tags>
     <summary>The code snippet organizer for pro developers</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Cacher is like long term memory for software professionals. Use it to curate a library of useful code snippets for you and your team.
+    <description><![CDATA[Cacher is like long term memory for software professionals. Use it to curate a library of useful code snippets for you and your team.
 
 ## Features
 - Cross-platform sharing
@@ -27,7 +27,10 @@ All Rights Reserved</copyright>
 - Docs with Markdown
 - Snippets in your language
 - Organization accounts
-    </description>
+
+## Notes
+- The software for this package only installs as the current user.
+]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cacher/Changelog.md)</releaseNotes>
   </metadata>
   <files>
