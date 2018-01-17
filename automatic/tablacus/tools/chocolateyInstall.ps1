@@ -4,10 +4,10 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName = 'tablacus'
-  file        = "$toolsPath\te180101.zip"
+  file        = "$toolsPath\te180117.zip"
   destination = "$toolsPath"
 }
 
 Get-ChocolateyUnzip @packageArgs
 
-rm "$toolsPath\*.zip" -ea 0 -Force
+Remove-Item "$toolsPath\*.zip" -ea 0 -Force
