@@ -11,6 +11,3 @@ trim_trailing_whitespace = true
 [*.ps1]
 charset = utf-8-bom
 end_of_line = crlf
-
-[*.nuspec]
-charset = utf-8-bom # AU uses the default UTF-8 encoding (which uses UTF-8 with BOM)
