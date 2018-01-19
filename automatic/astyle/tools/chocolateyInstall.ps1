@@ -1,5 +1,26 @@
-$packageId = 'astyle'
-$url = 'http://downloads.sourceforge.net/project/astyle/astyle/astyle%202.05.1/AStyle_2.05.1_windows.zip'
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyZipPackage "$packageId" "$url" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
+$packageArgs = @{
+  packageName = $env:ChocolateyPackageName
+  file        = "$toolsPath\"
+  destination = $toolsPath
+}
+
+Get-ChocolateyUnzip @packageArgs
+rm $toolsPath\*.zip -ea 0
+
+$pp = Get-PackageParameters
+if (!($pp.KeepAllFiles)) {
+  $pathsToRemove = @(
+    "$toolsPath\AStyle\build"
+    "$toolsPath\AStyle\doc\install.html"
+    "$toolsPath\AStyle\file"
+    "$toolsPath\AStyle\src"
+    "$toolsPath\AStyle\README.md"
+    "$toolsPath\AStyle\CMakeLists.txt"
+  )
+
+  rm $pathsToRemove -Force -Recurse -ea 0
+}
