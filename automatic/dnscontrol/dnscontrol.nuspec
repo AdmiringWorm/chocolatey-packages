@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dnscontrol</id>
-    <version>0.2.4</version>
+    <version>0.2.5</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DnsControl</title>
@@ -40,36 +40,48 @@
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
 
-## Software ChangelogAnother big release!  Two new providers (Linode, OVH), Gandi now supports registration functions, and my favorite new feature: the SPF optimizer!
+## Software ChangelogSo many new features! New record types! Better DKIM support!  Better AWS support!
 
-New features:
+Highlights:
 
-* SPF Optimizer!  dnscontrol's compiler now has an optimizer. Our first optimization is to improve your SPF records.  See https://stackexchange.github.io/dnscontrol/spf-optimizer for info. Thanks to @captncraig for contributing this.
+* Support for the ability to IGNORE() a label if some other system is updating it (all providers)
+* Support for very long DKIM strings. You no longer have to split them yourself.
+* Support for the new CAA record type (GANDI, CLOUDFLARE)
+* Support for TXT records with multiple strings (BIND, ROUTE53, NAMEDOTCOM)
+* Support for AWS ROUTE53 "ALIAS" records.
+* Add the ability to send notifications to chat rooms when updates are done.
+* A lot of code cleanups and documentation fixes.
 
-The language has changed slightly:
 
-* Defining a domain twice is now considered an error.
-* Labels that are FQDNs is now an error. (this is a common typo)
-* Downcase DNS names (#253).  DNSControl is opinionated and we've added a new optinion: All DNS labels and targets should be lowercase.  Uppercase (language permitting) is now downcased silently.
+Detailed list of features and bug fixes:
 
-Provider-specific improvements:
+* Add support for the IGNORE(label) directive (#183)
+* Simple notification framework (#297)
+* Add syntax for very long DKIM strings (#295)
+* Add general support for TXT records with multiple strings (#293)
 
-* New provider: Linode  (#268)
-* New Provider: OVH DNS Provider (#143) (#175)
-* GANDI: Registrar support (#274)
-* NAMECHEAP: Rate limiting now only throttles when needed
-* NS1: Add SRV record support (#277)
-* NS1: TXT records are broken if they contain spaces (#270)
-* ROUTE53: Update aws libraries and remove "waiter" code.
+Provider-specific news:
 
-Plus many code cleanups and fixes:
+* BIND: Add support for TXT records with multiple strings (#289)
+* BIND: Fix bug where SOA serial numbers were not updating
+* CLOUDFLARE: Support CAA rtype (#285)
+* DIGITALOCEAN: Improve example in docs (#281)
+* GANDI: Add support for CAA rtype (#288)
+* NAMEDOTCOM: Add support for TXT records with multiple strings (#299)
+* NAMEDOTCOM: Upgrade to v4 api (#298)
+* ROUTE53: Add support for TXT records with multiple strings (#292)
+* ROUTE53: Support Route53's ALIAS record type (#239) (#301)
+* ROUTE53: Document error messages from various credential issues. (#291)
 
-* Upgrade to newest miekg/dns library
-* Rename source files that don't match the name/nameProvider.go standard. (#261)
-* Improved Namecheap documentation (#221) (#232)
-* Improved documentation: Document that creds.json can include env variables, improve Namecheap docs, improve explanation of how to write a new provider, release engineering docs, and a massive overhaul to the website docs by Patrick G
+Internal cleanups and documentation improvements:
 
-Thanks to everyone for their contributions!</releaseNotes>
+* Improve docs on how to add an DNS record type.
+* Many other small documentation improvements
+* "go vet" and "go lint" the entire system.
+* run helpers.js through Prettier
+* docs: Improve comments related to capabilities. (#287)
+* Update github.com/prasmussen/gandi-api to prepare for LiveDNS support. (#302)
+</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
