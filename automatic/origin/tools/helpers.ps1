@@ -1,4 +1,4 @@
-function GetInstallLocation() {
+﻿function GetInstallLocation() {
   param($pp)
 
   # First check if origin is already installed
@@ -6,7 +6,7 @@ function GetInstallLocation() {
 
   if ($installPath) { return $installPath }
   elseif ($pp.InstallDir) { return $pp.InstallDir }
-  elseif (Get-ProcessorBits -Compare 32) { return "C:\Program Files\Origin" }
+  elseif (Get-OSArchitectureWidth -Compare 32) { return "C:\Program Files\Origin" }
   else { return "C:\Program Files (x86)\Origin" }
 }
 
@@ -44,7 +44,7 @@ function CreateRegistrySettings() {
     URLInfoAbout    = 'http://www.ea.com'
   }
 
-  if (Get-ProcessorBits -Compare 32) {
+  if (Get-OSArchitectureWidth -Compare 32) {
     $originRegPath = 'HKLM:\SOFTWARE\Origin'
     $uninstallRegPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Origin'
   }
@@ -97,7 +97,7 @@ function RemoveShortcuts() {
   @(
     [System.Environment]::GetFolderPath('CommonPrograms')
     [System.Environment]::GetFolderPath('CommonDesktop')
-  ) | % {
+  ) | ForEach-Object {
     if (Test-Path "$_\Origin.lnk") { Remove-Item -Force "$_\Origin.lnk" }
   }
 }
