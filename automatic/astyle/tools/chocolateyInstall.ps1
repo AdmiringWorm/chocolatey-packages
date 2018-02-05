@@ -4,12 +4,12 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\"
+  file        = "$toolsPath\AStyle_3.1_windows.zip"
   destination = $toolsPath
 }
 
 Get-ChocolateyUnzip @packageArgs
-rm $toolsPath\*.zip -ea 0
+Remove-Item $toolsPath\*.zip -ea 0
 
 $pp = Get-PackageParameters
 if (!($pp.KeepAllFiles)) {
@@ -22,5 +22,5 @@ if (!($pp.KeepAllFiles)) {
     "$toolsPath\AStyle\CMakeLists.txt"
   )
 
-  rm $pathsToRemove -Force -Recurse -ea 0
+  Remove-Item $pathsToRemove -Force -Recurse -ea 0
 }

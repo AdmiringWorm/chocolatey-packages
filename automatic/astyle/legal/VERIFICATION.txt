@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://sourceforge.net/projects/astyle/files/astyle/>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.1/AStyle_3.1_windows.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 0759D0A3B3AD768E0F1984B6FAF22C5D9D53C2E081D1CFBD1CC7D6E955E995CB
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/astyle/code/HEAD/tree/trunk/AStyle/LICENSE.md>
