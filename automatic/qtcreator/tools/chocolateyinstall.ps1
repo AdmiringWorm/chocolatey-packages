@@ -12,7 +12,7 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 
-Get-ChildItem $packageArgs.destination -Include "*.exe" -Recurse | % {
+Get-ChildItem $packageArgs.destination -Include "*.exe" -Recurse | ForEach-Object {
   if ($_.Name -eq "qtcreator.exe") {
     Set-Content -Value "" -LiteralPath "$($_.FullName).gui"
     $qtCreator = $_.FullName
