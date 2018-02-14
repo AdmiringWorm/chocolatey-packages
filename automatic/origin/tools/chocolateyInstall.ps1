@@ -7,7 +7,7 @@ $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
   url          = 'https://download.dm.origin.com/origin/live/OriginSetup.exe'
   softwareName = 'Origin*' # Probably not needed, but we add registry keys so we keep it
-  checksum     = '96CC15D0DAF1DDC3E664AEBD28EC47BC0AC9A4BFCEC83A1CCBCB99438CF2ACE9888DF00F4733119EEA5BEAB79CBB8F5B5F3FE4056614667C997BC1EA2798C100'
+  checksum     = '06BB66745DB6D7E6DEC93E3D6804F823FAE390DDB3DAD270EEB3E83325642312AEF7547168BB0E6BCF13CB532BBD1E019C5288F0174BDF2B9F960EAA66017422'
   checksumType = 'sha512'
   destination  = Get-PackageCacheLocation
 }
@@ -20,10 +20,10 @@ $packageArgs['file'] = $zipFile
 $packageArgs['destination'] = GetInstallLocation $pp
 
 if ($pp.NoAutoUpdate) {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version '10.5.10.24870'
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version '10.5.11.27975'
 }
 else {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version '10.5.10.24870'
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version '10.5.11.27975'
 }
 
 Get-ChocolateyUnzip @packageArgs
