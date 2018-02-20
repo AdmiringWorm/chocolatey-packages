@@ -10,6 +10,7 @@ Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them use
 [![](https://ci.appveyor.com/api/projects/status/github/AdmiringWorm/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/AdmiringWorm/chocolatey-packages)
 [![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
 [![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg)](https://chocolatey.org/profiles/AdmiringWorm)
+[![Open Source Helpers](https://www.codetriage.com/admiringworm/chocolatey-packages/badges/users.svg)](https://www.codetriage.com/admiringworm/chocolatey-packages)
 
 If you have any issues with one of the packages hosted in this repository, please feel free to open an issue (preferred instead of using `Contact Maintainers` on chocolatey.org), or jump into my [gitter channel](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).
 
