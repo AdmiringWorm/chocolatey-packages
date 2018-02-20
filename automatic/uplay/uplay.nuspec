@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>uplay</id>
-    <version>49.0.5564.0</version>
+    <version>50.0.5582.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/uplay</packageSourceUrl>
     <owners>AdmiringWorm, Marek</owners>
     <title>Uplay</title>
