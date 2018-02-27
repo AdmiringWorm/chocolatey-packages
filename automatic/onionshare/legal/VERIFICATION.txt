@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://onionshare.org/>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/micahflee/onionshare/releases/download/v1.2/onionshare-setup.exe>
+1. Download the following <https://github.com/micahflee/onionshare/releases/download/v1.3/onionshare-1.3-setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 81C79F4978F142B7D7FC7FD6D1B53D94F470BAB574E3D173F5A6E8A66A4B5E0B
+  checksum: F3A295355D996BC5D846CE93F001EE941B234F92B38BD0D9027D4FC1F95F8FBD
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/micahflee/onionshare/blob/master/LICENSE>
