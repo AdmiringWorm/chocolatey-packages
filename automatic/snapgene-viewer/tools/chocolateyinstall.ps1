@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://www.snapgene.com/products/snapgene_viewer/download.php?&majorRelease=4.1&minorRelease=4.1.6&os=windows'
+  url            = 'https://www.snapgene.com/products/snapgene_viewer/download.php?&majorRelease=4.1&minorRelease=4.1.7&os=windows'
   softwareName   = 'SnapGene Viewer'
-  checksum       = 'a91a74029887ca716a7750f862afd47920c8ee9ba4924815f1893572eda54656f9fb3eb9168da096c2aef09379e7f96e999fa828cd45043dde4303428b6f0e3d'
+  checksum       = '3b2e4f8fa96d8864ac64005d4ebdf800d23aa89c996377cbb510c967b097cb45016655b709685e5d69973da7f3d386fa5fc1e7c3f6dd352f3fc331c9f8089945'
   checksumType   = 'sha512'
   silentArgs     = '/S'
   validExitCodes = @(0)
