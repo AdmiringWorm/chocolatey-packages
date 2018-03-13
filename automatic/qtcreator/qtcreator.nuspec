@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qtcreator</id>
-    <version>4.5.1</version>
+    <version>4.5.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qtcreator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qt Creator</title>
