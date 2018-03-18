@@ -4,7 +4,7 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName = 'tablacus'
-  file        = "$toolsPath\te180317.zip"
+  file        = "$toolsPath\te180318.zip"
   destination = "$toolsPath"
 }
 
