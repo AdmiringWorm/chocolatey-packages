@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resxtranslator</id>
-    <version>2.5</version>
+    <version>2.6</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/resxtranslator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Resx Resource Translator</title>
@@ -16,8 +16,7 @@
     <bugTrackerUrl>https://github.com/HakanL/resxtranslator/issues</bugTrackerUrl>
     <tags>resxtranslator resx resource translating translator</tags>
     <summary>Tool for non-developers to quickly translate resource files (resx) in .NET projects</summary>
-    <description>
-Tool for non-developers to quickly translate resource files (resx) in .NET projects to multiple languages in parallel. Shows a tree view of all resources and all translation strings in parallel, one column per language. Compatible with VS2008-VS2015.
+    <description><![CDATA[Tool for non-developers to quickly translate resource files (resx) in .NET projects to multiple languages in parallel. Shows a tree view of all resources and all translation strings in parallel, one column per language. Compatible with VS2008-VS2015.
 
 ### Usage guidelines
 Launch the Resx Resource Translator, go to the File/Open menu option and browse to the root of your Visual Studio project (basically where your SLN file is located). The tool will now iterate thru all sub folders and look for resx files. (Note that it's not using the SLN or project files, it's just looking for files with file extension resx).
@@ -39,9 +38,9 @@ The rows that are red means one or more languages are missing values. I have a s
 
 These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
-</description>
+]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.5)
+[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.6)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/resxtranslator/Changelog.md)
     </releaseNotes>
     <dependencies>

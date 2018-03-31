@@ -2,7 +2,7 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$filePath = "$toolsPath\ResxTranslator_v2.5_release_signed.zip"
+$filePath = "$toolsPath\ResxTranslator_v2.6_release_signed.zip"
 $packageArgs = @{
   packageName    = 'resxtranslator'
   fileType       = 'zip'
@@ -30,6 +30,6 @@ if ($pp.CreateDesktopIcon) {
 
 Remove-Item $packageArgs.file -Force
 
-Get-ChildItem $toolsPath -Filter "*.exe" | % {
+Get-ChildItem $toolsPath -Filter "*.exe" | ForEach-Object {
   New-Item "$($_.FullName).gui" -ItemType File
 }
