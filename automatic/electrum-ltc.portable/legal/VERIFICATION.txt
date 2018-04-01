@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The standalone executable have been downloaded from their official download link listed on <https://electrum-ltc.org>
 and can be verified like this:
 
-1. Download <https://electrum-ltc.org/download/electrum-ltc-3.0.5.1.exe>
+1. Download <https://electrum-ltc.org/download/electrum-ltc-3.1.2.1.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 435096ECCBA98043E7ADD9F4506CD820715B9F847C9BEE721F2EB53D396E4AEA
+  checksum: A50F7E9BF0FFE4CA62D19A3C423D33BB4F6E1A6DAF8E007E534337005D43A579
 
 File 'LICENSE.txt' is obtained from <https://github.com/pooler/electrum-ltc/blob/305843999eabdb4276109e3dc6b70bf21dbbc29a/LICENCE>
