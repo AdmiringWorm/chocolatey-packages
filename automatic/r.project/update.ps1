@@ -1,7 +1,6 @@
-﻿import-module au
+﻿. "$PSScriptRoot/../r/update.ps1"
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://cran.r-project.org/bin/windows/base/'
 $softwareName = 'R for Windows*'
 
 function global:au_BeforeUpdate {
@@ -15,36 +14,21 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
 
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(`"`[$]toolsDir\\).*`""      = "`${1}$($Latest.FileName32)`""
-      "(?i)(^\s*softwareName\s*=\s*)'.*'"   = "`${1}'$softwareName'"
-      "(?i)(^\s*packageName\s*=\s*)'.*'" = "`${1}'$($Latest.PackageName)'"
+      "(?i)(`"`[$]toolsDir\\).*`""        = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
     }
-    ".\r.project.nuspec" = @{
+    ".\r.project.nuspec"            = @{
       "(\<id\>).*(\<\/id\>)" = "`${1}R.Project`${2}"
     }
-  }
-}
-
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
-
-  $re       = '\.exe$'
-  $fileName = $download_page.links | ? href -match $re | select -First 1 -expand href
-
-  $version  = $fileName -split '[\-]' | select -Last 1 -Skip 1
-
-  return @{
-    URL32 = $releases + $fileName
-    Version = $version
-    FileName32 = $fileName
   }
 }
 
