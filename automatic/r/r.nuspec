@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>r</id>
-    <version>3.0.1</version>
+    <version>3.4.4</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The R Project for Statistical Computing</title>
@@ -49,14 +49,14 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**
-`choco install r.project --params "'/UseInf:C:\r.project.inf'"`
+`choco install r --params "'/UseInf:C:\r.inf'"`
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="r.project" version="[0.0]" />
+      <dependency id="r.project" version="[3.4.4]" />
     </dependencies>
   </metadata>
   <files />
