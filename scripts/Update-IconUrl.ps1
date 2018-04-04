@@ -91,7 +91,7 @@
 #>
 
 param(
-  [string]$Name = "qnapi.install",
+  [string]$Name = $null,
   [string]$IconName = $null,
   [string]$GithubRepository = "AdmiringWorm/chocolatey-packages",
   [string]$RelativeIconDir = "../icons",
@@ -330,7 +330,7 @@ function Update-IconUrl {
     $index = $url.LastIndexOf('/')
     if ($index -gt 0) {
       $fileName = $url.Substring($index + 1)
-      $index = $fileName.IndexOf('.')
+      $index = $fileName.LastIndexOf('.')
       if ($index -gt 0) {
         $fileName = $fileName.Substring(0, $index)
         $possibleNames += @($fileName)
