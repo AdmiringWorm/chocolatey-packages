@@ -41,8 +41,8 @@ function global:au_SearchReplace {
     }
   }
 }
-function global:au_GetLatest {
 
+function global:au_GetLatest {
   @{
     URL32   = Get-RedirectedUrl $releases -referer $referer
     Version = GetVersion
@@ -50,22 +50,15 @@ function global:au_GetLatest {
 }
 
 function GetVersion {
-  $rss_feed = Invoke-WebRequest -UseBasicParsing -Uri "https://blog.submain.com/category/news/"
-  $link = $rss_feed.links | ? { $_.href -Match "Released" -and $_ -match "ghostdoc" } | select -first 1 -expand href
+  $download_page = Invoke-WebRequest "https://submain.com/products/ghostdoc.aspx" -UseBasicParsing
 
-  $page_data = Invoke-WebRequest -UseBasicParsing -Uri "$link"
-  $match = $page_data.Content -match "GhostDoc v([\d+\.[\d\.]+) update is"
-  if ($match) {
-    [version]$version = $matches[1]
+  $download_page.Content -match "product_info[^`"]+`"\>\s*([\d\.]+)" | Out-Null
 
-    $matches = $null
-
-    if ($page_data.Content -match "UPDATE\:.*the build ([\d]+)") {
-      $revision = $matches[1]
-      $version = $version.ToString(2) + "." + $revision
-    }
-
-    return $version
+  if ($matches) {
+    return $matches[1]
+  }
+  else {
+    throw "Unable to get version information"
   }
 }
 
