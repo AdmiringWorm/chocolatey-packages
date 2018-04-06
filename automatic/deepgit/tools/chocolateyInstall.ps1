@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://www.syntevo.com/static/smart/download/deepgit/deepgit-win32-setup-jre-3_0_2.zip'
+  url            = 'https://www.syntevo.com/downloads/deepgit/deepgit-win32-setup-3_0_3.zip'
   softwareName   = 'DeepGit'
-  checksum       = 'bb0c65072d15388a5f6c55de76b4f3a19d1d3613a03d753af1b521f659d960a54701da1055ad59c0eae1e3991c44fdc861fcc4fd5ef9fc9fb2ac7c490e79ae24'
+  checksum       = 'dd77d2d0bd562b6da758bc52bc262ffd0a0801f55b8f99e7d8ff5fab576ff75b6bfa68cdce0570ae51afe7133a164726f19b325685aad88fb75c26028cadade2'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
@@ -27,5 +27,5 @@ if (Test-Path "$($pp.UseInf)") {
 
 Install-ChocolateyZipPackage @packageArgs
 
-$packageArgs.file = Get-ChildItem $packageArgs.destination -Filter "*.exe" | % { $_.FullName }
+$packageArgs.file = Get-ChildItem $packageArgs.destination -Filter "*.exe" | ForEach-Object { $_.FullName }
 Install-ChocolateyInstallPackage @packageArgs
