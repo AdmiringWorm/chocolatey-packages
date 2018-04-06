@@ -7,7 +7,7 @@ $packageArgs = @{
   softwareName   = 'nordvpn*'
   checksum       = ''
   checksumType   = ''
-  silentArgs     = '/exenoui /exenoupdates /qn /norestart'
+  silentArgs     = '/exebasicui /exenoupdates /qb /norestart'
   validExitCodes = @(0)
 }
 
