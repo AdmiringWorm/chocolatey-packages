@@ -5,10 +5,10 @@ $cacheDirectory = Get-PackageCacheLocation
 $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://submain.com/download/GhostDocPro_v5.8.zip'
+  url            = 'https://submain.com/download/GhostDocPro_v5.9.zip'
   unzipLocation  = $cacheDirectory
   softwareName   = 'GhostDoc Pro'
-  checksum       = 'B0233DB986CD8DB87A8229AE07681699626446F6CC017ADB7F14CA9A73ABAB3DB4CD5B018E9D9BD6196E5B062A9ED9320E77570A70990A54D97B42C880477798'
+  checksum       = '52A17DF4A5D92E2535B087255179302CBCE8B1A05620E17671E58524C30503D9D4F1D7E89D134A7D9496C2AC9BBE61028C3055E297E03F5BF454DBDE21370C69'
   checksumType   = 'sha512'
   silentArgs     = ''
   validExitCodes = @(0)
@@ -23,7 +23,7 @@ $packageArgs = @{
 $toolsDir = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 if ($existingKey.Length -eq 1) {
-  $existingKey | % {
+  $existingKey | ForEach-Object {
     . "$toolsDir\helpers.ps1"
     Write-Host "Uninstalling previous version of GhostDoc Pro"
     UninstallGhostDoc "$($_.PSChildName)"
@@ -32,7 +32,7 @@ if ($existingKey.Length -eq 1) {
 
 Install-ChocolateyZipPackage @packageArgs
 
-$packageArgs["file"] = Get-ChildItem $cacheDirectory -Filter "*.exe" -Recurse | select -First 1 -ExpandProperty FullName
+$packageArgs["file"] = Get-ChildItem $cacheDirectory -Filter "*.exe" -Recurse | Select-Object -First 1 -ExpandProperty FullName
 
 if ($env:chocolateyInstallOverride -ne $true) {
   Start-Process "autohotkey.exe" "$toolsDir\ghostdocInstall.ahk"
