@@ -60,20 +60,17 @@ init:
 
 install:
 - ps: |
-    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) {
-      # We only want to update chocolatey if we're running a normal build, not during PR testing
-      if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-      @{
-        'chocolatey' = $Env:choco_version
-        #'optipng'    = '0.7.6'
-        #'pngquant'   = '2.10.1'
-        #'jpegoptim'  = '1.2.4.4'
-        'wormies-au-helpers' = '0.2.0'
-      }.GetEnumerator() | % {
-        if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
-        if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
-        else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
-      }
+    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+    @{
+      'chocolatey' = $Env:choco_version
+      #'optipng'    = '0.7.6'
+      #'pngquant'   = '2.10.1'
+      #'jpegoptim'  = '1.2.4.4'
+      'wormies-au-helpers' = '0.2.0'
+    }.GetEnumerator() | % {
+      if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
+      if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
+      else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
     }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
