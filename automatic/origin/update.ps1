@@ -1,7 +1,7 @@
 Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$padUnderVersion = '10.5.5'
+$padUnderVersion = '10.5.17'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
