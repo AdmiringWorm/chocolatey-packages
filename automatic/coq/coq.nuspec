@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>8.7.2</version>
+    <version>8.8.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
@@ -35,7 +35,7 @@ As a proof development system, Coq provides interactive proof methods, decision 
 As a platform for the formalization of mathematics or the development of programs, Coq provides support for high-level notations, implicit contents and various other useful kinds of macros.
 ]]></description>
     <releaseNotes>
-[Software Changelog]()
+[Software Changelog](https://github.com/coq/coq/blob/V8.8.0/CHANGES)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
