@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>r</id>
-    <version>3.5.0</version>
+    <version>3.5.0.20180424</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The R Project for Statistical Computing</title>
@@ -56,7 +56,7 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="r.project" version="[3.5.0]" />
+      <dependency id="r.project" version="[3.5.0.20180424]" />
     </dependencies>
   </metadata>
   <files />
