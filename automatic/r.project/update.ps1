@@ -8,9 +8,7 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -FileNameBase $Latest.FileName32.TrimEnd('.exe') -NoSuffix -Purge
 }
 
-function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
-}
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
@@ -32,4 +30,5 @@ function global:au_SearchReplace {
   }
 }
 
+$global:au_Force = $true
 update -ChecksumFor none
