@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/1.4.0/win32/x32/authy-installer.exe'
-  url64bit       = 'https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/1.4.0/win32/x64/authy-installer.exe'
+  url            = 'https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/1.5.0/win32/x32/Authy%20Desktop%20Setup%201.5.0.exe'
+  url64bit       = 'https://s3.amazonaws.com/authy-electron-repository-production/authy/stable/1.5.0/win32/x64/Authy%20Desktop%20Setup%201.5.0.exe'
   softwareName   = 'Authy Desktop*'
-  checksum       = 'a589828e4a2523278b84c44823913e70d64b3c420a3c05367e2a7efbee6657e666e1f8d49a9bac2f2cf28316e8f2448d0cedb012bf6b43ee3e5d8646352dc71a'
+  checksum       = '7afcda97b9d0c924d3f260a83f10371a14130142eeb1a9e20e68c7c7f5d51eb26d62a139669597182e22eb95653ad0e2a08febae21b5e1e02e2805445a5a379c'
   checksumType   = 'sha512'
-  checksum64     = '37e4370b2885f8193d25d5fed8f4e4687cacc43e5a84d763da6a246c02840aa63dd4fb7ed25c5faefcd1390ba16c11feea536d03b2667466fc35b0bffa8907ad'
+  checksum64     = '45254378fe2d5d99974329987ca189acff4117d008d47c9ded413ec8d49829d3018a436e798d327da3064b89414be5789b43a83017061b0b6d619bce964d2166'
   checksumType64 = 'sha512'
   silentArgs     = '-s'
   validExitCodes = @(0)
