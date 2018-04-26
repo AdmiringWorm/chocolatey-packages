@@ -1,19 +1,14 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
-  packageName   = ''
-  fileType      = ''
-  softwareName  = ''
-
-  checksum      = ''
-  checksum64    = ''
-  checksumType  = ''
-  checksumType64= ''
-  url           = ''
-  url64bit      = ''
-
-  silentArgs    = "/VERYSILENT"
-  validExitCodes= @()
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  url            = ''
+  softwareName   = 'folder_size*'
+  checksum       = ''
+  checksumType   = ''
+  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  validExitCodes = @(0)
 }
 
 Install-ChocolateyPackage @packageArgs

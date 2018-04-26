@@ -1,29 +1,45 @@
-﻿import-module au
+﻿Import-Module AU
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$releases = ''
+$softwareName = 'folder_size*'
+
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-      "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
   }
 }
 
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+function GetResultInformation([string]$url32) {
+  $dest = "$env:TEMP\FolderSize.exe"
+  Get-WebFile $url32 $dest | Out-Null
+  try {
+    $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
 
-  $re    = ''
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
-
-  $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
-
-  return @{ URL32 = $url; Version = $version; PackageName = 'Folder_Size' }
+    return @{
+      URL32 = $url32
+      Version = $version.Trim()
+      Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
+      ChecksumType32 = 'sha512'
+    }
+  } finally {
+    Remove-Item -Force $dest
+  }
 }
 
-update
+function global:au_GetLatest {
+  $url32 = "http://www.mindgems.com/software/FolderSize.exe"
+
+  $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
+    GetResultInformation $url32
+  } -OnUpdated { @{ URL32 = $url32 }}
+  return $result
+}
+
+update -ChecksumFor 32

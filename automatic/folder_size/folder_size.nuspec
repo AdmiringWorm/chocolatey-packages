@@ -1,84 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>Folder_Size</id>
-        <version>2.9.0.0</version>
-        <title>Folder Size</title>
-        <authors>http://www.mindgems.com</authors>
-        <owners>http://www.mindgems.com AdmiringWorm</owners>
-        <projectUrl>http://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
-        <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/732b01b0c640a2c87edeb2fc1fa02516ea2e1c86/icons/folder_size.gif</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Folder Size FREEWARE will analyze your hard drives and display the file and folder sizes so that you can easily check the distribution of your disk space. The application will display the sizes of the folders and files and also the percentage of the total disk size that they occupy. The neat report can be sorted in order to identify the largest folders and the largest files. You can easily figure out which files or folders have filled up your drive space as Folder Size will also scan the sizes of all the subfolders. The application can scan your entire hard drive in minutes due to its optimized scan algorithms and list details on the tree size. The progressive scan will let you continue the scan from the point of interruption.
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>folder_size</id>
+    <version>2.9.0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
+    <owners>AdmiringWorm, MarkJohnson</owners>
+    <title>Folder Size</title>
+    <authors>http://www.mindgems.com</authors>
+    <projectUrl>http://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/732b01b0c640a2c87edeb2fc1fa02516ea2e1c86/icons/folder_size.gif</iconUrl>
+    <copyright>Copyright © 2001-2015 MindGems Inc. All rights reserved</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.mindgems.com/products/Folder-Size/Folder-Size-Tutorials.htm</docsUrl>
+    <tags>folder_size folder size drive space windows file size freeware</tags>
+    <summary>Folder Size is a powerful FREE utility that can scan and display all the file and folder tree sizes on your hard drives.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Folder Size FREEWARE will analyze your hard drives and display the file and folder sizes so that you can easily check the distribution of your disk space. The application will display the sizes of the folders and files and also the percentage of the total disk size that they occupy. The neat report can be sorted in order to identify the largest folders and the largest files. You can easily figure out which files or folders have filled up your drive space as Folder Size will also scan the sizes of all the subfolders. The application can scan your entire hard drive in minutes due to its optimized scan algorithms and list details on the tree size. The progressive scan will let you continue the scan from the point of interruption.
 Besides scanning an entire hard drive Folder Size can also scan a single folder in order to save time.</description>
-        <summary>Folder Size is a powerful FREE utility that can scan and display all the file and folder tree sizes on your hard drives.</summary>
-        <releaseNotes>Version 2.9.0.0:
-Added: Mixed "Largest files and folders" report
- Added: Option not to list files in order to save memory on large volumes of more than 100 TB
- Added: Increased memory limit to 4GB on x64 OS and 3GB on x86 systems. Read here how to enable 4GT on x86 systems:
-http://msdn.microsoft.com/en-us/library/windows/desktop/bb613473%28v=vs.85%29.aspx
- Added: Selected files and folders count in status bar
- Fixed: File name trimming issue when saving file names containing dots
- Fixed: Print dialog - "Limit printing to one page horizontally" button action fixed in operating systems newer than Windows Vista
- Fixed: Removed "There is no default printer currently selected" message on systems without printer.
-
-Version 2.8.0.0:
-Added: Export details view in CSV format
-Added: Print Preview
-Added: Print - Export to PDF
-Added: Print - Export to multi-page TIFF
-Added: Print - Page and margins setup
-Added: Print - Export to EMF
-Added: Print - Rearrange print order
-Added: Print - Remove pages from print job
-Added: Option to export Owner information
-Added: Option to disable "Scan with Folder Size" context menu during installation
-Fixed: Refresh issue when mixing details view and folder tree navigation
-Fixed: Crash after removing a node from largest folders list
-
-
-Version 2.6.0.0:
-Added: Largest Files Report
- Added: Largest Folders Report
- Added: Scan multiple folders on Drag and Drop (Only in Professional version)
- Added: Scan multiple folders using the -scan command line option. The list of folders is delimited with semicolon. E.g. -scan C:\Folder1;"C:\Folders With Spaces" (Only in Professional version)
- Added: Multiple search masks in filter
- Added: Total size of selected items in status bar
- Added: ESC - clear selection in files list
- Fixed: Some applications were opened in hidden mode on double click. Issue reported on Win7 x64
- Fixed: Corrected navigation button states after New and Load.
-
-Version 2.4.0.0 (See also 2.1.0.0) :
- Added: Reduced project save/load time and size
- Added: Extremely optimized memory consumption during scan
- Added: Extremely optimized memory consumption for XML and CSV export (close to zero)
- Added: Extremely optimized export speed for XML and CSV
- Added: File New, File Open, File Save toolbar buttons
- Added: Option to hide the download buttons from the toolbar
-
-Version 2.1.0.0 (Internal Release) :
-Added: Option to include or exclude the file information in the export
- Added: Option to specify the maximum depth level for the export operation
- Added: Option to export drive or network share size information
- Added: -exp "File Path\Name.xml;File Path1\Name.fsp" - Export command line parameter. Depending on the file extension will export the corresponding file type. Multiple formats can be exported at once by separating the paths with semicolons.
- Added: -s - Silent command line parameter. The application window will not be displayed and the application will exit after the operations are complete
- Fixed: Refresh issue when mixing folder-tree and chart navigation
- Fixed: Missing network machine dates are now exported as NA
- Fixed: Issue when loading projects with network paths
-
-Version 2.0.0.0:
-Added: Filter (only in Personal and Professional versions)
- Added: Save/Load scan results (only in Personal and Professional versions)
- Added: Export to XML and CSV (only in Professional versions)
- Added: Print (only in Personal and Professional versions)
- Added: Directory attribute in attributes column marked with "D"
- Added: Some columns are formatted to the right for easier reading - file size, folder size, file count etc.
- Added: 5 to 50 times faster scan speed
- Fixed: Shift+Delete keyboard shortcut was not working in files list
- Fixed: Removed zero size files and folders from chart in order to prevent overlapping
-Fixed: Folder Size will install for all users. By default Folder Size was installed for the current user and trying to use it with a different user caused errors
-Fixed: Some small GUI improvements</releaseNotes>
-        <copyright>MindGems 2012</copyright>
-        <tags>folder size,drive,space,windows,free,file size,size</tags>
-    </metadata>
+    <releaseNotes>
+[Software Changelog](http://www.mindgems.com/products/Folder-Size/Folder-Size-WhatsNew.htm)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/folder_size/Changelog.md)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
