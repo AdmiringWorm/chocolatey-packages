@@ -23,7 +23,7 @@ function global:au_GetLatest {
 
   $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
 
-  return @{ URL32 = $url; Version = $version }
+  return @{ URL32 = $url; Version = $version; PackageName = 'Folder_Size' }
 }
 
 update
