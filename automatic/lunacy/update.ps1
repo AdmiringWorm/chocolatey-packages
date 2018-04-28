@@ -37,7 +37,7 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
-  $url32 = "http://desk.icons8.com/lunacy/LunacySetup.exe"
+  $url32 = "https://desk.icons8.com/lunacy/LunacySetup.exe"
 
   $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
