@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$softwareName = 'folder_size*'
+$softwareName = 'Lunacy'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
@@ -13,11 +13,14 @@ function global:au_SearchReplace {
       "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+    }
   }
 }
 
 function GetResultInformation([string]$url32) {
-  $dest = "$env:TEMP\FolderSize.exe"
+  $dest = "$env:TEMP\Lunacy.exe"
   Get-WebFile $url32 $dest | Out-Null
   try {
     $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
@@ -34,7 +37,7 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
-  $url32 = "http://www.mindgems.com/software/FolderSize.exe"
+  $url32 = "https://desk.icons8.com/lunacy/LunacySetup.exe"
 
   $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
