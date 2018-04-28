@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$softwareName = 'folder_size*'
+$softwareName = 'Folder Size*'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
