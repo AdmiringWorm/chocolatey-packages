@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lunacy</id>
-    <version>0.0</version>
+    <version>3.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lunacy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Lunacy</title>
     <authors>Icons8</authors>
     <projectUrl>https://icons8.com/lunacy</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fb2bb2d2f5b119043148593aeba7f4c9fea5fb73/icons/lunacy.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/443c6adfe782bddd5640f3f2d082f7bcef211134/icons/lunacy.png</iconUrl>
     <projectSourceUrl>https://github.com/icons8/Lunacy</projectSourceUrl>
     <bugTrackerUrl>https://github.com/icons8/Lunacy/issues</bugTrackerUrl>
     <tags>lunacy sketch freeware</tags>
     <summary>Native Windows app that works offline and supports .sketch files</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Lunacy is a native Windows app that opens, edits, and stores .sketch files.
+    <description><![CDATA[Lunacy is a native Windows app that opens, edits, and stores .sketch files.
 
 In short, it’s long-awaited Sketch for Windows. It solves the big pain of design teams working on different operating systems and improves the process of transition from design to development. And it’s completely free.
 
@@ -25,7 +25,8 @@ In short, it’s long-awaited Sketch for Windows. It solves the big pain of desi
 - Draw, Join, Align objects
 - Use basic Typography tool
 - Export assets in PNG and SVG
-- CSS and XAML code</description>
+- CSS and XAML code
+]]></description>
     <releaseNotes>
 [Software Changelog](https://icons8.github.io/Lunacy/)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lunacy/Changelog.md)
