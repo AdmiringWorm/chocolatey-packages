@@ -4,7 +4,7 @@
   <metadata>
     <id>inno-download-plugin</id>
     <version>1.5.1</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-download-plugin</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/inno-download-plugin</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Inno Download Plugin (IDP)</title>
     <authors>Mitrich Software</authors>
