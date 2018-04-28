@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://mitrichsoftware.wordpress.com/inno-setup-tools/inno-download-plugin/>
+and can be verified by doing the following:
+
+1. Download the following <https://bitbucket.org/mitrich_k/inno-download-plugin/downloads/idpsetup-1.5.1.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: SHA256
+  checksum: E7A7013F533E1F8F9EBBB5138C5C208AF0C58C80590B72ACABDBB337AF8FD060
+
+The file 'LICENSE.txt' has been obtained from <https://bitbucket.org/mitrich_k/inno-download-plugin/src/367e690742061c0859514bcb5302e2a7d917517d/COPYING.txt?at=default&fileviewer=file-view-default>
