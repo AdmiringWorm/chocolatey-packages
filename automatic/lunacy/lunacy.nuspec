@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lunacy</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lunacy</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Lunacy</title>
+    <authors>Icons8</authors>
+    <projectUrl>https://icons8.com/lunacy</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fb2bb2d2f5b119043148593aeba7f4c9fea5fb73/icons/lunacy.png</iconUrl>
+    <projectSourceUrl>https://github.com/icons8/Lunacy</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/icons8/Lunacy/issues</bugTrackerUrl>
+    <tags>lunacy sketch freeware</tags>
+    <summary>Native Windows app that works offline and supports .sketch files</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Lunacy is a native Windows app that opens, edits, and stores .sketch files.
+
+In short, it’s long-awaited Sketch for Windows. It solves the big pain of design teams working on different operating systems and improves the process of transition from design to development. And it’s completely free.
+
+## Features
+- Open and Save Sketch files
+- Organize Pages and artboards
+- Draw, Join, Align objects
+- Use basic Typography tool
+- Export assets in PNG and SVG
+- CSS and XAML code</description>
+    <releaseNotes>
+[Software Changelog](https://icons8.github.io/Lunacy/)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lunacy/Changelog.md)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="dotnet4.6.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\..\icons\lunacy.png" target="icons" />
+  </files>
+</package>
