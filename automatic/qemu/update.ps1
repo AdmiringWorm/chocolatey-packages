@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 
 $releases = 'https://www.qemu.org/download/#windows'
-$softwareName = 'qemu*'
+$softwareName = 'QEMU'
 
 function global:au_SearchReplace {
   @{
