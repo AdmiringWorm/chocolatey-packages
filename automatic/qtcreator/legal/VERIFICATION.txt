@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://download.qt.io/official_releases/qtcreator/4.6/4.6.0/installer_source/>
+location on <https://download.qt.io/official_releases/qtcreator/4.6/4.6.1/installer_source/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://download.qt.io/official_releases/qtcreator/4.6/4.6.0/installer_source/windows_vs2015_32/qtcreator.7z>
-  64-Bit software: <https://download.qt.io/official_releases/qtcreator/4.6/4.6.0/installer_source/windows_vs2015_64/qtcreator.7z>
+  32-Bit software: <https://download.qt.io/official_releases/qtcreator/4.6/4.6.1/installer_source/windows_vs2015_32/qtcreator.7z>
+  64-Bit software: <https://download.qt.io/official_releases/qtcreator/4.6/4.6.1/installer_source/windows_vs2015_64/qtcreator.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 9F53D63978081F4CA3DFD37C83CD80151EB1DAB9D36CEECFF1CF615307B35E82
-  checksum64: 425C4D4C70660EF2144306EF6A8D997B129DE73161F024DE713EA97DCCA6D2C3
+  checksum32: D6F8863B1EB85A6EC00862D01F2AC803410D8F56751027431B4CAACAAD01ABC8
+  checksum64: C144D18ADDCE1BA32235685B1A2C89626415AEEBA53959A374C0E038E8732BD6
 
 The file 'LICENSE.txt' has been obtained from <https://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT>
