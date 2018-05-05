@@ -27,14 +27,13 @@ function global:au_AfterUpdate {
 
 function GetResultInformation([string]$url32) {
   Get-WebFile $url32 $dest | Out-Null
-  #$version = Get-Item $dest | % { Get-FixVersion -version ($_.VersionInfo.ProductVersion) -OnlyFixBelowVersion $padUnderVersion }
   $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
 
   return @{
-    URL32 = $url32
-    Version = $version
-    RemoteVersion = $version
-    Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
+    URL32          = $url32
+    Version        = $version
+    RemoteVersion  = $version
+    Checksum32     = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
   }
 }
@@ -48,6 +47,10 @@ function global:au_GetLatest {
   $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
   } -OnUpdated { @{ URL32 = $url32 }}
+
+  if ($result.RemoteVersion) {
+    $result["URL32"] = $result["URL32"] -replace '\/latest\/', "/$($result["RemoteVersion"])/"
+  }
 
   return $result
 }
