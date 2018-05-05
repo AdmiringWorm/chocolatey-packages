@@ -9,7 +9,7 @@
     <title>Qmmp</title>
     <authors>Qmmp Development Team</authors>
     <projectUrl>http://qmmp.ylsoftware.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/ddb7c72d3883fac1a49c6dfb0afaa7560977d0c7/icons/qmmp.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/166c97b541387d7c60b7797b2d2043989d46af53/icons/qmmp.png</iconUrl>
     <copyright>© 2006-2017 Qmmp Development Team</copyright>
     <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -9,7 +9,7 @@
     <title>Enki</title>
     <authors>Andrei Kopats</authors>
     <projectUrl>http://enki-editor.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e8803f77063b1fb93b7f3db820ecede53fc078b9/icons/enki.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a156fe3617f1408e990cb031faf57c5822e612e9/icons/enki.png</iconUrl>
     <copyright>Copyright (C) 2012 Andrei Kopats</copyright>
     <licenseUrl>https://github.com/andreikop/enki/blob/master/LICENSE.GPL2</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

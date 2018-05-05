@@ -9,7 +9,7 @@
     <title>MediathekView</title>
     <authors>W.Xaver</authors>
     <projectUrl>https://mediathekview.de/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/f5e695dbc1e365c253cede8f9e319cde60cfd27c/icons/mediathekview.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/be0254f2f5af25f47a26e8a041d9f8766934beaa/icons/mediathekview.png</iconUrl>
     <copyright>© 2016-2017 Copyright by MediathekView Team</copyright>
     <licenseUrl>https://github.com/mediathekview/MediathekView/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

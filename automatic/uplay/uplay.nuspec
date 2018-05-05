@@ -9,7 +9,7 @@
     <title>Uplay</title>
     <authors>Ubisoft Entertainment</authors>
     <projectUrl>https://uplay.ubi.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/6e1e4cbee5faef8e7168870547f019146ff9d35e/icons/uplay.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/4b04d1180da5207558832d52738565b019284155/icons/uplay.png</iconUrl>
     <copyright>©2016 Ubisoft Entertainment. All rights reserved. Uplay logo, Ubisoft, Ubi.com,and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S. and/or other countries.</copyright>
     <licenseUrl>https://legal.ubi.com/eula/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

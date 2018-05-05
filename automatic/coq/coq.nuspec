@@ -9,7 +9,7 @@
     <title>The Coq proof assistant</title>
     <authors>INRIA</authors>
     <projectUrl>https://coq.inria.fr/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2887a3d96ef1180ff7794acaf25e1be60330df9e/icons/coq.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e831af6c23d805293f967b7e6640657d3628054e/icons/coq.png</iconUrl>
     <copyright>Copyright 1999-2016 The Coq development team, INRIA, CNRS, UniversityParis Sud, University Paris 7, Ecole Polytechnique</copyright>
     <licenseUrl>https://github.com/coq/coq/blob/trunk/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

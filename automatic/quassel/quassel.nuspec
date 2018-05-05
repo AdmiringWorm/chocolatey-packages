@@ -9,7 +9,7 @@
     <title>Quassel IRC</title>
     <authors>Quassel team</authors>
     <projectUrl>http://quassel-irc.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a7117daa9fc7c11c3931437ac7102d4d7b64004e/icons/quassel.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/666991132c85cfd09e577d6caadd5a6256921012/icons/quassel.png</iconUrl>
     <copyright>(C) 2013 by the Quassel IRC Team</copyright>
     <licenseUrl>https://github.com/quassel/quassel/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -9,7 +9,7 @@
     <title>Nagstamon (Install)</title>
     <authors>Henri Wahl</authors>
     <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/cd0c4e8a38fbfebfdeca8eb337fefe6ebf66bdb6/icons/nagstamon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5470b935d572ee4593af7ece11494ecff9806d16/icons/nagstamon.png</iconUrl>
     <copyright>© 2008-2014 Henri Wahl et al.</copyright>
     <licenseUrl>https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

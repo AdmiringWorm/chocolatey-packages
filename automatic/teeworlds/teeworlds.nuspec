@@ -9,7 +9,7 @@
     <title>Teeworlds</title>
     <authors>Magnus Auvinen</authors>
     <projectUrl>https://teeworlds.com/?page=downloads</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9fd8e45d319a120ce816816b66f10b3a57b3f4ab/icons/teeworlds.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/136615db5277db08fd0e07fd25997c8a32dbf233/icons/teeworlds.png</iconUrl>
     <copyright>Copyright (C) Magnus Auvinen</copyright>
     <licenseUrl>https://github.com/teeworlds/teeworlds/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

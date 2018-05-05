@@ -9,7 +9,7 @@
     <title>CodeContracts</title>
     <authors>RiSE</authors>
     <projectUrl>https://github.com/Microsoft/CodeContracts</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/61e789f1893205ddccecbf3405c686e2fdad331e/icons/codecontracts.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/708102a2e6f271e3cf9fda41c7222f9f6a698e3a/icons/codecontracts.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>https://github.com/Microsoft/CodeContracts/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

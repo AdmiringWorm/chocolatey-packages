@@ -9,7 +9,7 @@
     <title>Plane9</title>
     <authors>Planestate Software</authors>
     <projectUrl>https://www.plane9.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e909a8247388d06469d9f3422c825d5bd318e430/icons/plane9.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d77327cd7de88327bbd40eae9636cf93cd1ce50c/icons/plane9.png</iconUrl>
     <licenseUrl>https://www.plane9.com/Home/LicenseAgreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.plane9.com/wiki</docsUrl>

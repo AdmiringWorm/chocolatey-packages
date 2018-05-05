@@ -9,7 +9,7 @@
     <title>OnionShare</title>
     <authors>Micah Lee</authors>
     <projectUrl>https://onionshare.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/1cb8d075498e52ac85553234b1212005c53f43dc/icons/onionshare.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/738d932e0f7d49eef51c39aae296b7346de6ed41/icons/onionshare.png</iconUrl>
     <licenseUrl>https://github.com/micahflee/onionshare/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/micahflee/onionshare</projectSourceUrl>

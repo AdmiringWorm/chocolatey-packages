@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a7117daa9fc7c11c3931437ac7102d4d7b64004e/icons/quassel.png" height="48" width="48" /> ![Quassel IRC](https://img.shields.io/chocolatey/v/quassel.svg?label=Quassel%20IRC&style=for-the-badge)](https://chocolatey.org/packages/quassel)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/666991132c85cfd09e577d6caadd5a6256921012/icons/quassel.png" height="48" width="48" /> ![Quassel IRC](https://img.shields.io/chocolatey/v/quassel.svg?label=Quassel%20IRC&style=for-the-badge)](https://chocolatey.org/packages/quassel)
 
 Quassel IRC is a modern, cross-platform, distributed [IRC][] client based on the [Qt4 framework][Qt4].
 
