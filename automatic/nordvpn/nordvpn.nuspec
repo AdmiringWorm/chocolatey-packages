@@ -5,7 +5,7 @@
     <id>nordvpn</id>
     <version>6.8.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nordvpn</packageSourceUrl>
-    <owners>AdmiringWorm</owners>
+    <owners>AdmiringWorm, Sanshiro</owners>
     <title>NordVPN</title>
     <authors>NordVPN</authors>
     <projectUrl>https://nordvpn.com</projectUrl>
