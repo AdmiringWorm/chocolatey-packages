@@ -64,7 +64,7 @@ function CheckPackageSizes() {
 
   $nupkgFiles | % {
     $size = $_.Length
-    $maxSize = 150 * 1024 *1024
+    $maxSize = 200 * 1024 *1024
     $packageName = $_.Directory.Name
     if ($size -gt $maxSize) {
       $friendlySize = $size / 1024 / 1024
