@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/6.12.11/NordVPNSetup.exe'
+  url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/6.13.13/NordVPNSetup.exe'
   softwareName   = 'NordVPN*'
-  checksum       = '3E6A03A7F91831479CC6EC0FF1FB7D97350C1ACB9E38BFD2E611C4A748F4602DD4D8F4DC0F501EFE1CEE1C9E0E9E8857BA6781D68B4175D2116475BFF6C236E9'
+  checksum       = '00A1900298D926818D5103562F511DE39B3015913AF5D69A1632C694C366F0941DAD1B46CF9C7D5E832855E20E57B8ED87A3EA668699FC7456B0FBB3488BA58A'
   checksumType   = 'sha512'
   silentArgs     = '/exebasicui /exenoupdates /qb /norestart'
   validExitCodes = @(0)
