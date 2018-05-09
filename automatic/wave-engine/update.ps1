@@ -8,23 +8,26 @@ function global:au_AfterUpdate {
 }
 
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }
+  @{
+    "tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
     }
+  }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = "WaveEngineSetup_[0-9_]+\.exe";
-  $url = $download_page.AllElements | ? { $_.id -match 'installer' -and $_.innerText -match $re } | select -First 1 -expand innerText
+  $re = '\>(https[^\<]+\.exe)\<'
+  if ($download_page.Content -match $re) {
+    $url = $Matches[1]
+  }
 
-  $url -match '_([\d_]+)\.' | Out-Null
-  $version = $Matches[1] -replace '_','.'
+  if ($url -match '_([\d_]+)\.') {
+    $version = $Matches[1] -replace '_', '.'
+  }
 
   $Latest = @{ URL = $url; Version = $version }
   return $Latest;
