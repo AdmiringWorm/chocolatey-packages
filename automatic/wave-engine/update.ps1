@@ -18,10 +18,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases
 
   $re = "WaveEngineSetup_[0-9_]+\.exe";
-  $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $url = $download_page.AllElements | ? { $_.id -match 'installer' -and $_.innerText -match $re } | select -First 1 -expand innerText
 
   $url -match '_([\d_]+)\.' | Out-Null
   $version = $Matches[1] -replace '_','.'
