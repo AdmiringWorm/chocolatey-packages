@@ -30,8 +30,8 @@ $Options = [ordered]@{
     'Internal Server Error'
     'An exception occurred during a WebClient request'
   )
-  #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
-  #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
+  RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
+  RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
 
   Report           = @{
     Type   = 'markdown'                                   #Report type: markdown or text
@@ -86,7 +86,7 @@ $Options = [ordered]@{
       Port        = $Env:mail_port
       EnableSsl   = $Env:mail_enablessl -eq 'true'
       Attachment  = "$PSScriptRoot\update_info.xml"
-      UserMessage = "Update status: Update status: https://gist.github.com/choco-bot/$Env:gist_id"
+      UserMessage = "Update status: Update status: https://gist.github.com/AdmiringWorm/$Env:gist_id"
       SendAlways  = $false                        #Send notifications every time
     }
   }
@@ -108,11 +108,6 @@ $Options = [ordered]@{
     $global:au_Version = ($p -split ':')[1]
   }
 }
-
-[System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
-  768 -bor
-  [System.Net.SecurityProtocolType]::Tls -bor
-  [System.Net.SecurityProtocolType]::Ssl3
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root = $Root                                    #Path to the AU packages
