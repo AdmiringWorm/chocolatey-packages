@@ -12,6 +12,20 @@ $packageArgs = @{
   destination  = Get-PackageCacheLocation
 }
 
+if ($env:ChocolateyForce -ne $true) {
+  try {
+    $InstalledVersion = Get-UninstallRegistryKey $packageArgs['softwareName'] | Select-Object -First 1 -Expand 'DisplayVersion'
+
+    if ([Version]::Parse($InstalledVersion) -ge [Version]::Parse('10.5.18.58059'))
+    {
+      Write-Host "Skipping installation because version $InstalledVersion is already installed."
+      return
+    }
+  } catch {
+    # Installed version couldn't be checked, attempt installation
+  }
+}
+
 Install-ChocolateyZipPackage @packageArgs
 
 $pp = Get-PackageParameters
