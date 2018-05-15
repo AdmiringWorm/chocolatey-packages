@@ -1,0 +1,1 @@
+CMail is provided as-is, free of charge. It may be used for both personal or commercial purposes, and be distributed without restriction, provided the software remains unmodified. Please ensure any acknowlegements in ThirdParty.txt (SSL-enabled version only at present) are preserved.
