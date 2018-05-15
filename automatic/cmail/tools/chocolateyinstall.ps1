@@ -5,9 +5,9 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType    = 'zip'
-  file        = "$toolsPath\"
+  file        = "$toolsPath\CMail_0.8.0-dev-2.zip"
   destination = "$toolsPath"
 }
 
 Get-ChocolateyUnzip @packageArgs
-rm $toolsPath\*.zip -ea 0
+Remove-Item $toolsPath\*.zip -ea 0

@@ -1,4 +1,5 @@
 # ![Cmail Changelog](https://img.shields.io/badge/Cmail-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 0.7.9.1 (2018-05-15)
 - Taken over as a new maintainer of the cmail package (original maintainer: DemonDante)
+
