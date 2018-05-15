@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>boxcli</id>
+    <version>1.1.1</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
+    <owners>AdmiringWorm, William Higgs</owners>
+    <title>Box CLI</title>
+    <authors>Box</authors>
+    <projectUrl>https://developer.box.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/adcaa3c1faa9a2fb90010fa95bb26745ddc55072/icons/boxcli.png</iconUrl>
+    <copyright>©2018 Box</copyright>
+    <licenseUrl>https://github.com/box/boxcli/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
+    <docsUrl>https://developer.box.com/reference</docsUrl>
+    <mailingListUrl>https://community.box.com/t5/Box-Developer-Forum/bd-p/DeveloperForum</mailingListUrl>
+    <bugTrackerUrl>https://github.com/box/boxcli/issues</bugTrackerUrl>
+    <tags>boxcli box commandline foss cross-platform</tags>
+    <summary>A command line interface to interact with the Box api</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>A command line interface to interact with the box api</description>
+    <releaseNotes>
+[Software Changelog](__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
