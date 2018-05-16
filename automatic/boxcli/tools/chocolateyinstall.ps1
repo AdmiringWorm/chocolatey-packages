@@ -11,7 +11,7 @@ $packageArgs = @{
   fileType       = 'msi'
   file           = "$toolsPath\BoxCLI-win10-x64.msi"
   softwareName   = 'BoxCLI'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  silentArgs     = ""
   validExitCodes = @(0, 2010, 1641)
 }
 
