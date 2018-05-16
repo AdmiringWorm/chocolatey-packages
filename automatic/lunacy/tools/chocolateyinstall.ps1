@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://desk.icons8.com/lunacy/LunacySetup.exe'
   softwareName   = 'Lunacy'
-  checksum       = '78BFB022038127C8DF022AE7866706CCAFCC4F5B3AA0B3DF8BD437A8F91D717FC1687BF3DB85BDDD8F92D44204FE5B50391FFD89D0A26EC740A5B22C8158DFE7'
+  checksum       = '8593766F9B64D080FC800B375C5F7D5A1D9FB52E3F727AFECA8A049B61BFB20E8BFE9A7B3BBB4CAD8BC4BD1246B877C7B972D52DCF2C7D0EE2261C4FA5850CC9'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
