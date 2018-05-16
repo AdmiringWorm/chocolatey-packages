@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/00b72bedcfc84a5d4013ed3992b3255f3f64f718/icons/friture.png" height="48" width="48" /> ![Friture](https://img.shields.io/chocolatey/v/friture.svg?label=friture&style=for-the-badge)](https://chocolatey.org/packages/friture)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c8c234b70afd4149b32252df3947de209d092e16/icons/friture.png" height="48" width="48" /> ![Friture](https://img.shields.io/chocolatey/v/friture.svg?label=friture&style=for-the-badge)](https://chocolatey.org/packages/friture)
 
 Friture is an application to visualize and analyze live audio data in real-time.
 Friture displays audio data in several widgets, such as a scope, a spectrum analyzer, or a rolling 2D spectrogram.
