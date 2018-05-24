@@ -26,7 +26,8 @@ function global:au_GetLatest {
   $version64 = $url64 -split '\/' | select -last 1 -skip 3
 
   if ($version32 -ne $version64) {
-    throw "The version for 32bit and the version for 64bit does not match"
+    throw ("The version for 32bit and the version for 64bit does not match" `
+      + "`n32bit Version: $($version32)`n64bit Version: $($version64)")
   }
 
   @{
