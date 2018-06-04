@@ -25,3 +25,7 @@ Authy is the preferred two factor authentication solution to protect your bitcoi
 **- What is two factor authentication?**
 "Two-factor authentication is one of the best things you can do to make sure your accounts don't get hacked" - LifeHacker
 https://www.authy.com/learn-more
+
+## NOTES
+- As of version 1.6.0, the 32bit architecture have been dropped as conversion with the authy support team have said it won't be updated in the future.
+  If you still need to install the 32bit architecture, please install version 1.5.0 and pin the package.
