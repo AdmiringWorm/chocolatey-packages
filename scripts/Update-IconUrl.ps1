@@ -383,7 +383,7 @@ else {
 
 if ($UseStopwatch) {
   $stopWatch.Stop();
-  if (!Quiet) {
+  if (!$Quiet) {
     Write-Host "Time Used: $($stopWatch.Elapsed)"
   }
 }
