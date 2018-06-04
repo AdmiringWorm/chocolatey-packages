@@ -2,7 +2,7 @@
 
 $packageName = 'xvid'
 $softwareName = 'xvid*'
-$installerType = 'EXE' 
+$installerType = 'EXE'
 
 $silentArgs = '--mode unattended'
 $validExitCodes = @(0)
@@ -11,7 +11,7 @@ $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
-  $key | % { 
+  $key | % {
     $file = "$($_.UninstallString)"
 
     Uninstall-ChocolateyPackage -PackageName $packageName `
