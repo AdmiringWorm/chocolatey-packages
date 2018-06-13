@@ -39,6 +39,9 @@ The main benefits of using this template are:
     <releaseNotes>
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/asp-net-mvc-boilerplate/Changelog.md)
     </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-visualstudio.extension" version="1.7.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
