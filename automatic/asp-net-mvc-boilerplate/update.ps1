@@ -10,7 +10,7 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_AfterUpdate {
-  Update-ChangelogVersion -Version $Latest.Version
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_SearchReplace {
