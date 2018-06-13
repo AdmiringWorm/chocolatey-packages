@@ -3,8 +3,10 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://marketplace.visualstudio.com/items?itemName=RehanSaeed.ASPNETMVCBoilerplate'
 
+$padUnderVersion = '6.2.1'
+
 function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName -DontAppendArch
+  Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName -NoSuffix
 }
 
 function global:au_AfterUpdate {
@@ -13,15 +15,14 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"    = @{
       "(?i)(studio gallery\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
-      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
+      "(?i)(1\..+)\<.*\>"             = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*"        = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"             = "`${1} $($Latest.Checksum32)"
     }
     'tools\chocolateyInstall.ps1' = @{
-      "(packageName\s*=\s*)'.*'" = "`$1'$($Latest.PackageName)'"
-      "(^[$]filePath\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
+      "(?i)(^\s*File\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
     }
   }
 }
@@ -37,9 +38,9 @@ function global:au_GetLatest {
   $version = $json.version | Select-Object -first 1
 
   @{
-    Version   = $version
-    URL32     = $url
-    Filename32  = $filename
+    Version    = Get-FixVersion $version -OnlyFixBelowVersion $padUnderVersion
+    URL32      = $url
+    Filename32 = $filename
   }
 }
 
