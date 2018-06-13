@@ -105,11 +105,13 @@ function Parse-GitCommit() {
   $changelogLine = $commitDetail | ? { $_ -match "changelog\:[a-z]*" }
   if ($issueLine) {
     $index = $splits.IndexOf($issueLine)
-    $splits[$index] = $null
+    if ($index -ge 0) {
+      $splits[$index] = $null
+    }
 
     $issueDetails = Get-IssueDetails ($issueLine -replace '.*\#(\d+).*', '$1')
     $title = if ($useIssueTitle) {
-      $issueDetails.title -replace '^\([^\)]\)\s*', ''
+      $issueDetails.Title -replace '^\([^\)]+\)\s*', ''
     }
     else {
       [string]::Join(' ', $splits, 1, $splits.Count - 1)
