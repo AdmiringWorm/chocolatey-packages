@@ -8,3 +8,5 @@ $parameters = @{
 }
 
 Install-VisualStudioVsixExtension @parameters
+
+rm -Force -ea 0 "$toolsPath\*.vsix"
