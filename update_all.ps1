@@ -69,7 +69,7 @@ $Options = [ordered]@{
   }
 
   Gitter           = @{
-    WebHook = $Env:gitter_webhook
+    WebHookUrl = $Env:gitter_webhook
   }
 
   RunInfo          = @{
