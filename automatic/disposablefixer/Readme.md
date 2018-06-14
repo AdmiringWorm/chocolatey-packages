@@ -1,0 +1,3 @@
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d615fe77c2c87ae0b6a8770d3eb5c3ab2e4af31e/icons/disposablefixer.png" height="48" width="48" /> ![DisposableFixer](https://img.shields.io/chocolatey/v/disposablefixer.svg?label=DisposableFixer&style=for-the-badge)](https://chocolatey.org/packages/disposablefixer)
+
+This extension uses the Roslyn compiler plattform to identify IDisposable-instances that are not disposed. IDisposable instances that are not disposed, usually lead to some hard-to-find errors like memoryleaks. The current version is only able to find this undisposed instances, future version should also provide code-fixes.
