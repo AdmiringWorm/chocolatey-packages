@@ -4,9 +4,9 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $parameters = @{
   PackageName = $env:ChocolateyPackageName
-  File        = "$toolsPath\"
+  File        = "$toolsPath\CodeMaid.v10.5.119.vsix"
 }
 
 Install-VisualStudioVsixExtension @parameters
 
-rm -Force -ea 0 "$toolsPath\*.vsix"
+Remove-Item -Force -ea 0 "$toolsPath\*.vsix"

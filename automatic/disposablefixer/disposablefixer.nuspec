@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>disposablefixer</id>
-    <version>0.0</version>
+    <version>0.37</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/disposablefixer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DisposableFixer</title>
     <authors>David Störmer</authors>
     <projectUrl>https://github.com/BADF00D/DisposableFixer</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d615fe77c2c87ae0b6a8770d3eb5c3ab2e4af31e/icons/disposablefixer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2a324519b086feb9d82bf8b3e35543c48b9bfa89/icons/disposablefixer.png</iconUrl>
     <licenseUrl>https://github.com/BADF00D/DisposableFixer/blob/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/BADF00D/DisposableFixer</projectSourceUrl>
@@ -17,7 +17,8 @@
     <tags>disposablefixer visual-studio-extension vsix disposable detection debugging</tags>
     <summary>This is a small Visual Studio Extension that should identify and fix problems as memleaks while using IDisposables</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>This extension uses the Roslyn compiler plattform to identify IDisposable-instances that are not disposed. IDisposable instances that are not disposed, usually lead to some hard-to-find errors like memoryleaks. The current version is only able to find this undisposed instances, future version should also provide code-fixes.</description>
+    <description><![CDATA[This extension uses the Roslyn compiler plattform to identify IDisposable-instances that are not disposed. IDisposable instances that are not disposed, usually lead to some hard-to-find errors like memoryleaks. The current version is only able to find this undisposed instances, future version should also provide code-fixes.
+]]></description>
     <releaseNotes>
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/disposablefixer/Changelog.md)
     </releaseNotes>

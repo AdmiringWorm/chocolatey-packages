@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>codemaid</id>
-    <version>0.0</version>
+    <version>10.5.119</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/codemaid</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>CodeMaid</title>
     <authors>Steve Cadwallader</authors>
     <projectUrl>http://www.codemaid.net</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/f81addd0b30a960dbe4fa7e7bd789a4ab441630a/icons/codemaid.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/38677c493b7bae294eaa44d2e749d1e47ac0b823/icons/codemaid.png</iconUrl>
     <copyright>© 2007 - 2018 CodeMaid</copyright>
     <licenseUrl>https://github.com/codecadwallader/codemaid/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,48 +19,49 @@
     <tags>codemaid visual-studio-extension vsix cleaning c-sharp clean-code</tags>
     <summary>An open source Visual Studio extension to cleanup and simplify code.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, PHP, PowerShell, R, JSON, XAML, XML, ASP, HTML, CSS, LESS, SCSS, JavaScript and TypeScript coding.
+    <description><![CDATA[An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, PHP, PowerShell, R, JSON, XAML, XML, ASP, HTML, CSS, LESS, SCSS, JavaScript and TypeScript coding.
 
 ## Features
-- ![Code Cleaning](http://www.codemaid.net/wp-content/themes/codemaid/images/code-cleaning_thumb.png)
-  **Code Cleaning**
+- **Code Cleaning**  
+  ![Code Cleaning](http://www.codemaid.net/wp-content/themes/codemaid/images/code-cleaning_thumb.png)  
   Cleanup random white space into a simple standard order. Add unspecified access modifiers. Utilize Visual Studio’s built-in formatting capabilities. Remove and sort using statements. And do it all automatically on save or on demand, from an individual file to the entire solution.
-- ![CodeMaid Digging](http://www.codemaid.net/wp-content/themes/codemaid/images/code-digging_thumb.png)
-  **Code Digging**
+- **Code Digging**  
+  ![CodeMaid Digging](http://www.codemaid.net/wp-content/themes/codemaid/images/code-digging_thumb.png)  
   Visualize and navigate through the contents of your C# and C++ files from a tree view hierarchy. Quickly switch between different sorting methods to get a better overview. Drag and drop to reorganize the code. See McCabe complexity scores and informative tooltips.
-- ![CodeMaid Reorganizing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-reorganizing_thumb.png)
-  **Code Reorganizing**
+- **Code Reorganizing**  
+  ![CodeMaid Reorganizing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-reorganizing_thumb.png)  
   Reorganize the layout of members in a C# file to follow Microsoft’s StyleCop convention, or your own preferences. Automatically generate regions to match. Run on demand or automatically during cleanup.
-- ![CodeMaid Formatting](http://www.codemaid.net/wp-content/themes/codemaid/images/code-formatting_thumb.png)
-  **Comment Formatting**
+- **Comment Formatting**  
+  ![CodeMaid Formatting](http://www.codemaid.net/wp-content/themes/codemaid/images/code-formatting_thumb.png)  
   Format comments to wrap at a specified column and arrange tags on separate lines. Run on demand or automatically during cleanup.
-- ![CodeMaid Joining](http://www.codemaid.net/wp-content/themes/codemaid/images/code-joining_thumb.png)
-  **Joining**
+- **Joining**  
+  ![CodeMaid Joining](http://www.codemaid.net/wp-content/themes/codemaid/images/code-joining_thumb.png)  
   Join two adjacent lines, or a highlighted section of code onto a single line.
 - ![CodeMaid Finding](http://www.codemaid.net/wp-content/themes/codemaid/images/code-finding_thumb.png)
   **Finding**
   Find the current file in the solution explorer window.
-- ![CodeMaid Sorting](http://www.codemaid.net/wp-content/themes/codemaid/images/code-sorting_thumb.png)
-  **Sorting**
+- **Sorting**  
+  ![CodeMaid Sorting](http://www.codemaid.net/wp-content/themes/codemaid/images/code-sorting_thumb.png)  
   Sort a highlighted section of code alphabetically.
-- ![CodeMaid Collapsing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-collapsing_thumb.png)
-  **Collapsing**
+- **Collapsing**  
+  ![CodeMaid Collapsing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-collapsing_thumb.png)  
   Recursively collapse nodes or the entire tree in the solution explorer window.
-- ![CodeMaid Progressing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-progressing_thumb.png)
-  **Progressing**
+- **Progressing**  
+  ![CodeMaid Progressing](http://www.codemaid.net/wp-content/themes/codemaid/images/code-progressing_thumb.png)  
   View the overall progress of a build within Visual Studio, or in the Windows taskbar, both with a green/red status indication.
-- ![CodeMaid Configuring](http://www.codemaid.net/wp-content/themes/codemaid/images/code-configuring_thumb.png)
-  **Configuring**
+- **Configuring**  
+  ![CodeMaid Configuring](http://www.codemaid.net/wp-content/themes/codemaid/images/code-configuring_thumb.png)  
   Enable, modify or disable many of the aspects of how CodeMaid does its work.
-- ![CodeMaid Switching](http://www.codemaid.net/wp-content/themes/codemaid/images/code-switching_thumb.png)
-  **Switching**
+- **Switching**  
+  ![CodeMaid Switching](http://www.codemaid.net/wp-content/themes/codemaid/images/code-switching_thumb.png)  
   Switch between related files, such as cpp and header files or xaml and code-behind.
-- ![CodeMaid Toggling](http://www.codemaid.net/wp-content/themes/codemaid/images/code-toggling_thumb.png)
-  **Toggling**
+- **Toggling**  
+  ![CodeMaid Toggling](http://www.codemaid.net/wp-content/themes/codemaid/images/code-toggling_thumb.png)  
   Toggle read-only state of files without jumping into the windows explorer.
-- ![CodeMaid and more](http://www.codemaid.net/wp-content/themes/codemaid/images/code-andmore_thumb.png)
-  **and More!**
-  Remove regions, close read-only files, etc.</description>
+- **and More!**  
+  ![CodeMaid and more](http://www.codemaid.net/wp-content/themes/codemaid/images/code-andmore_thumb.png)  
+  Remove regions, close read-only files, etc.
+]]></description>
     <releaseNotes>
 [Software Changelog](https://github.com/codecadwallader/codemaid/blob/master/CHANGELOG.md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/codemaid/Changelog.md)
