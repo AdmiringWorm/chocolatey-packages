@@ -64,7 +64,7 @@
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://github.com/codecadwallader/codemaid/blob/master/CHANGELOG.md)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/codemaid/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/codemaid/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-visualstudio.extension" version="1.7.0" />
