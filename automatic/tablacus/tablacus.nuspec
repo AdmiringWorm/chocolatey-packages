@@ -8,7 +8,7 @@
     <owners>AdmiringWorm, Yoshimov</owners>
     <title>Tablacus Explorer</title>
     <authors>Gaku</authors>
-    <projectUrl>http://www.eonet.ne.jp/~gakana/tablacus/explorer_en.html</projectUrl>
+    <projectUrl>https://tablacus.github.io/explorer_en.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/23c507427e532c4407844487480b415895e5edba/icons/tablacus.png</iconUrl>
     <copyright>Copyright (c) 2011 Gaku</copyright>
     <licenseUrl>https://github.com/tablacus/TablacusExplorer/blob/master/LICENSE.TXT</licenseUrl>

@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releasesPart = 'http://www.eonet.ne.jp/~gakana/tablacus/'
+$releasesPart = 'https://tablacus.github.io/'
 $releases = "${releasesPart}explorer_en.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
