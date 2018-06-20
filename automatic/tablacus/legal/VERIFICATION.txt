@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://www.eonet.ne.jp/~gakana/tablacus/explorer_en.html>
+location on <https://tablacus.github.io/explorer_en.html>
 and can be verified by doing the following:
 
-1. Download the following <http://www.eonet.ne.jp/~gakana/tablacus/dl/te180607.zip>
+1. Download the following <https://tablacus.github.io/dl/te180613.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 5606C98E9F18814E7AFECCBF8DDD9967AC1A14489C2646A4380D5CCE1C1BF2C1
+  checksum: F983EA0B9B0A7F0110B9D6548263405B83F1AACDBC92B3253853BDE18875A62F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/tablacus/TablacusExplorer/blob/ab02cbc9093498c1a49be851f8c8f72b76651704/LICENSE.TXT>
