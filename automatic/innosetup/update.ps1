@@ -38,7 +38,7 @@ function global:au_GetLatest {
 
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
   $re    = 'innosetup.*unicode\.exe'
-  $file   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $file   = $download_page.links | ? href -match $re | select -Last 1 -expand href
   $url = ($versionDirUrl + $versionReleaseDir + $file)
 
   $version  = $url -split '[_-]|.exe' | select -Last 1 -Skip 2
