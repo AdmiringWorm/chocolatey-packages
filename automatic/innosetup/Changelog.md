@@ -1,6 +1,6 @@
 # ![Inno Setup Changelog](https://img.shields.io/badge/Inno%20Setup-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## Upcoming
+## Version: 5.6.1 (2018-06-25)
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file

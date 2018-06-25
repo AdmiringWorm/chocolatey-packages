@@ -12,12 +12,12 @@ this can be navigated to from the main page by following:
 
 and the checksum can be verified like this:
 
-1. Download <http://files.jrsoftware.org/is/5/innosetup-5.5.9-unicode.exe>
+1. Download <http://files.jrsoftware.org/is/5/innosetup-5.6.1-unicode.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 5B51AE6977BEBBA937AC18E0E80C1899E37DFAA12F51CCD817978EF07AE19CB3
+  checksum: 27D49E9BC769E9D1B214C153011978DB90DC01C2ACD1DDCD9ED7B3FE3B96B538
 
 File 'license.txt' is obtained from <https://github.com/jrsoftware/issrc/blob/d33ce5c66191d2bd359eb8ecdaa0dfb9833fbee8/license.txt>
