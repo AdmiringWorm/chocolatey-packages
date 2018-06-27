@@ -39,7 +39,10 @@ Game Backup Monitor is completely free and open source software.
 ## Notes
 - Game Backup Monitor is currently only available in English.
 ]]></description>
-    <releaseNotes>https://github.com/MikeMaximus/gbm/releases/tag/v1.1.2</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/MikeMaximus/gbm/releases/tag/v1.1.2)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/gbm/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

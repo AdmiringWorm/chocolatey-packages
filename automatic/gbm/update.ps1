@@ -4,7 +4,13 @@ $releases = 'https://github.com/MikeMaximus/gbm/releases/latest'
 $softwareName = 'Game Backup Monitor*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-function global:au_AfterUpdate { Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes }
+function global:au_AfterUpdate {
+  Update-Metadata -key "releaseNotes" -value @"
+[Software Changelog]($($Latest.ReleaseNotes))
+[Package Changelog(https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/gbm/Changelog.md)
+"@
+  Update-Changelog -useIssueTitle
+}
 
 function global:au_SearchReplace {
   @{
