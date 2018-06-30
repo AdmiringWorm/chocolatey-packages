@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://abau.org/dilay/download.html>
 and can be verified by doing the following:
 
-1. Download <https://github.com/abau/dilay/releases/download/1.8.0/dilay-1.8.0.msi>
+1. Download <https://github.com/abau/dilay/releases/download/1.9.0/dilay-1.9.0.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 219AF4BCD4DD292F2A32DC83746C0C7DFD2DAD9E89E6D69857C40CC89401BD91
+  checksum: 961EF5540F2DA8C483B66743031C060B0EB4E5A7F6D6F507B24470F956B41889
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/abau/dilay/blob/master/LICENSE.txt>
