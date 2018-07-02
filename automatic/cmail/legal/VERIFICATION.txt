@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.inveigle.net/cmail/download.shtml>
 and can be verified by doing the following:
 
-1. Download the following <https://www.inveigle.net/downloads/CMail_0.8.0-dev-2.zip>
+1. Download the following <https://www.inveigle.net/downloads/CMail_0.8.0-dev-3.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 2A8F93DC2D8067C55846FF9F53D9688BC8EF12FA66ADC493CD7FCE9417BD503B
+  checksum: 2F9217C9D8638B79D5E6AEA7C52F11073C48645514C2E1F7A26A40CD5B19B16A
 
 The file 'LICENSE.txt' has been obtained from their FAQ located at <https://www.inveigle.net/cmail/faq.shtml>
