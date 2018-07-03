@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>unit-test-boilerplate-generator</id>
-    <version>0.0</version>
+    <version>1.9.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/unit-test-boilerplate-generator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Unit Test Boilerplate Generator</title>
@@ -19,8 +19,7 @@
     <tags>unit-test-boilerplate-generator visual-studio-extension vsix development unit-tests generation</tags>
     <summary>Generates a unit test boilerplate from a given C# class</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies and test outlines for all public methods.
+    <description><![CDATA[Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies and test outlines for all public methods.
 
 Test frameworks supported:
 - Visual Studio
@@ -40,20 +39,18 @@ Dependency injection modes supported:
 
 Right click an item in Solution Explorer and choose "Create Unit Test Boilerplate" .
 
-![Before Screenshot](BeforeScreenshot.png)
+![Before Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/BeforeScreenshot.png)
 
 This will create a test class in the same relative path as the class in a specified unit test project.
 All the dependencies are mocked and saved as fields which are created fresh for each test via [TestInitialize]. In addition, all public methods
 on the tested class are set up with a test method outline:
 
-![After Screenshot](AfterScreenshot.png)
+![After Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/AfterScreenshot.png)
 
 Each mocking framework has its own pattern.
-    </description>
-    <releaseNotes>
-[Software Changelog](https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/master/CHANGELOG.md#)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/unit-test-boilerplate-generator/Changelog.md)
-    </releaseNotes>
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/Microsoft.UnitTestBoilerplateGenerator/blob/master/CHANGELOG.md#)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/unit-test-boilerplate-generator/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-visualstudio.extension" version="1.7.0" />
     </dependencies>
