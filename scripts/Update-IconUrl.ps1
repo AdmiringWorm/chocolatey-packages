@@ -272,6 +272,23 @@ function Update-IconUrl {
     [bool]$Optimize
   )
 
+  $possibleNames = @($Name);
+
+  $dotIndex = $Name.IndexOf('.')
+  if ($dotIndex -gt 0) {
+    $possibleNames += $Name.Remove($dotIndex)
+  }
+
+  # Let check if the package already contains a url, and get the filename from that
+  $content = gc "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" -Encoding UTF8
+
+  if ($content | ? { $_ -match 'Icon(Url)?:\s*Skip( check)?' }) {
+    if (!($Quiet)) {
+      Write-Warning "Skipping icon check for $Name"
+    }
+    return;
+  }
+
   # Before we do any checking in the fallback icons directory,
   # we check if there exists an icon directory in the package root path
   if (Test-Path "$PSScriptRoot/$PackagesDirectory/$Name/icons") {
@@ -305,23 +322,6 @@ function Update-IconUrl {
       }
       return;
     }
-  }
-
-  $possibleNames = @($Name);
-
-  $dotIndex = $Name.IndexOf('.')
-  if ($dotIndex -gt 0) {
-    $possibleNames += $Name.Remove($dotIndex)
-  }
-
-  # Let check if the package already contains a url, and get the filename from that
-  $content = gc "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" -Encoding UTF8
-
-  if ($content | ? { $_ -match 'Icon(Url)?:\s*Skip( check)?' }) {
-    if (!($Quiet)) {
-      Write-Warning "Skipping icon check for $Name"
-    }
-    return;
   }
 
   $content | ? { $_ -match "\<iconUrl\>(.+)\<\/iconUrl\>" } | Out-Null
