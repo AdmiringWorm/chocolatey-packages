@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://code-industry.net/public/MasterPDFEditor-setup.exe'
   softwareName   = 'Master PDF Editor*'
-  checksum       = '20DCEDDB4C36AF1C7C8BC11D88A45FFC88B4B66FD43E62300CFCB8FE596EA49360A20469A272AE40F4D439C4F95F026E3EE7E894A0D2628558B91240B514FD5A'
+  checksum       = 'D715FF1CF6B3D876876D8D0BD6B975A32E351AB82889ED007F8A0BD12C59F153A6187F4E760E7430293F11120E1743ED489833DC616585BB308EDF139B19A22E'
   checksumType   = 'sha512'
   silentArgs     = "/SILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
