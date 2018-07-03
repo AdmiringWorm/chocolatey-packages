@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>unit-test-boilerplate-generator</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/unit-test-boilerplate-generator</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Unit Test Boilerplate Generator</title>
+    <authors>RandomEngy,Microsoft</authors>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=RandomEngy.UnitTestBoilerplateGenerator</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7f25c1838154fe1d1a6d73a052e5d0c351f0fd76/icons/unit-test-boilerplate-generator.png</iconUrl>
+    <copyright>Copyright (c) 2016 Microsoft</copyright>
+    <licenseUrl>https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Microsoft/UnitTestBoilerplateGenerator</projectSourceUrl>
+    <docsUrl>Ahttps://github.com/Microsoft/UnitTestBoilerplateGenerator/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/UnitTestBoilerplateGenerator/issues</bugTrackerUrl>
+    <tags>unit-test-boilerplate-generator visual-studio-extension vsix development unit-tests generation</tags>
+    <summary>Generates a unit test boilerplate from a given C# class</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies and test outlines for all public methods.
+
+Test frameworks supported:
+- Visual Studio
+- NUnit
+- xUnit
+
+Mock frameworks supported:
+- Moq
+- AutoMoq
+- NSubstitute
+- SimpleStubs
+- Rhino Mocks
+
+Dependency injection modes supported:
+- Constructor injection via any IoC framework
+- Property injection via Unity, Ninject or Grace
+
+Right click an item in Solution Explorer and choose "Create Unit Test Boilerplate" .
+
+![Before Screenshot](BeforeScreenshot.png)
+
+This will create a test class in the same relative path as the class in a specified unit test project.
+All the dependencies are mocked and saved as fields which are created fresh for each test via [TestInitialize]. In addition, all public methods
+on the tested class are set up with a test method outline:
+
+![After Screenshot](AfterScreenshot.png)
+
+Each mocking framework has its own pattern.
+    </description>
+    <releaseNotes>
+[Software Changelog](https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/master/CHANGELOG.md#)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/unit-test-boilerplate-generator/Changelog.md)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-visualstudio.extension" version="1.7.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
