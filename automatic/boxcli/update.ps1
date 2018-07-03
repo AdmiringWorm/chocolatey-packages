@@ -2,23 +2,24 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://github.com/box/boxcli/releases'
+$repoUser = 'box'
+$repoName = 'boxcli'
 $softwareName = 'BoxCLI'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
-  $releaseNotesFormat = "[Software Changelog]($($Latest.ReleaseNotes))
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)"
+  $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)`n`n## Software Release Notes`n"
+  $releaseNotes += $Latest.ReleaseNotes
 
-  Update-Metadata -key 'releaseNotes' -value $releaseNotesFormat
+  Update-Metadata -key 'releaseNotes' -value $releaseNotes
 }
 
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUri)>"
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
       "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
@@ -34,22 +35,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '\.msi$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href -First 1 | % { 'https://github.com' + $_ }
+  [array]$releases = Get-AllGithubReleases -repoUser $repoUser -repoName $repoName
 
   $streams = @{}
-  $urls32 | % {
-    $verRe = '\/v?'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    $version = Get-Version $version
+  $releases | % {
+    if (!($streams.ContainsKey(($_.Version.ToString(2))))) {
+      [array]$execs = $_.Assets | ? { $_ -match '\.msi' }
+      if ($execs.Count -ne 1) { return ; }
 
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-          Version      = $version.ToString()
-          URL64        = $_
-          ReleaseNotes = "https://github.com/box/boxcli/releases/tag/v$($version.ToString())"
+      $streams.Add($_.Version.ToString(2), @{
+          Version      = $_.Version.ToString()
+          URL64        = $execs | select -first 1
+          ReleaseNotes = $_.Body
+          ReleaseUri   = $_.ReleaseUrl
         })
     }
   }
