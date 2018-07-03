@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>1.2.0</version>
+    <version>1.0.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
@@ -27,8 +27,13 @@ Box is a cloud-based enterprise content management platform trusted by thousands
 - **Build a Custom Integration**: Use the Box Platform APIs to connect an application with Box to upload, access and manage content in Box — just for your business.
 - **Build a Partner Integration**: Use the Box Platform APIs to connect an application with Box and publish to the [Box App Gallery](https://cloud.app.box.com/apps) for millions of users to discover and use.
 ]]></description>
-    <releaseNotes>[Software Changelog](https://github.com/box/boxcli/releases/tag/v1.2.0)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)</releaseNotes>
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)
+
+## Software Release Notes
+- Added shared link commands for Create, Get, Update, and Delete. Located as standalone commands under `box shared-links` as well as under `box folders shared-links` and `box files shared-links`.
+- Fixed UTF-8 issue obscuring characters when saving CSV reports.
+- Added autopaging for events and fixed faulty event Get command.
+- Added date options `w` for weeks and `now` when using date options with commands.</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
