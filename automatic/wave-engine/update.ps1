@@ -20,14 +20,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\>(https[^\<]+\.exe)\<'
-  if ($download_page.Content -match $re) {
-    $url = $Matches[1]
-  }
+  $re = "\.exe$"
+  $url = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  if ($url -match '_([\d_]+)\.') {
-    $version = $Matches[1] -replace '_', '.'
-  }
+  $version = $url -split 'Setup_|\.exe$' | select -last 1 -skip 1 | % { $_ -replace '_','.' }
 
   $Latest = @{ URL = $url; Version = $version }
   return $Latest;
