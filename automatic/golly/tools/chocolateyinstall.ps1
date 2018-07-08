@@ -6,15 +6,15 @@ $packageName = $env:ChocolateyPackageName
 
 $packageArgs = @{
   packageName    = $packageName
-  file           = "$toolsPath\golly-3.1-win-32bit.zip"
-  file64         = "$toolsPath\golly-3.1-win-64bit.zip"
+  file           = "$toolsPath\golly-3.2-win-32bit.zip"
+  file64         = "$toolsPath\golly-3.2-win-64bit.zip"
   destination    = "$toolsPath"
 }
 
 Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
 
-$exeLocation = Get-ChildItem $toolsPath "Golly.exe" -Recurse | select -first 1
+$exeLocation = Get-ChildItem $toolsPath "Golly.exe" -Recurse | Select-Object -first 1
 if ($exeLocation) {
   Set-Content "$($exeLocation.FullName).gui" -Value ''
   Register-Application "$($exeLocation.FullName)"
