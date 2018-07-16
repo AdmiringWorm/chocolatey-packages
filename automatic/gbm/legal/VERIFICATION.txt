@@ -7,15 +7,15 @@ location on <https://github.com/MikeMaximus/gbm/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.1.2/GBM.v1.1.2.32-bit.Installer.exe>
-  64-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.1.2/GBM.v1.1.2.64-bit.Installer.exe>
+  32-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.1.3/GBM.v1.1.3.32-bit.Installer.exe>
+  64-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.1.3/GBM.v1.1.3.64-bit.Installer.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 9EC4A16E1F891B20CCF8B203225DA8769033F6F41ED5166D6D6EEFAD298F4224
-  checksum64: 897E507D6F9F9819A39186DEE883C15623AF4895CBD98E63374C2047013368CB
+  checksum32: 72581FC1DF10E0122B044B8FA17FCC3B211EFF81CFB49B0A5512E7F18F029858
+  checksum64: B779B36A7EEC8E439E9A8B3C2106E67E4ECA45D66206A10E6B62A819EAA8E512
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/MikeMaximus/gbm/blob/master/LICENSE>
