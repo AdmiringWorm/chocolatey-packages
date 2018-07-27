@@ -37,7 +37,7 @@ function GetResultInformation([string]$url32) {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url32 = $download_page.Links | ? outerHTML -match "\>Download Uplay"| select -first 1 -expand href
+  $url32 = $download_page.Links | ? outerHTML -match "\>Download Uplay"| select -first 1 -expand href | % { Get-RedirectedUrl $_ }
 
   return Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
