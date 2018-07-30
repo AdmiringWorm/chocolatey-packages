@@ -30,16 +30,18 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe$'
-  $urls = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'http://qmmp.ylsoftware.com/files/windows/' + $_ }
+  $re = '[\d\.]+\/$'
+  $versions = $download_page.Links | ? href -match $re | select -expand href | % { 'http://qmmp.ylsoftware.com/files/windows/' + $_ }
 
   $streams = @{ }
 
-  $urls | % {
+  $versions | % {
+    $version_url = $_
+    $urls_page = Invoke-WebRequest -Uri "${version_url}?C=M;O=D" -UseBasicParsing
+    $url = $urls_page.Links | ? href -match '\.exe$' | select -first 1 -expand href | % { $version_url + $_ }
     $verRe = '[-]'
-    $version = $_ -split $verRe | select -last 1 -skip 1
-
-    $streams.Add($version, @{ URL32 = [uri]$_ ; Version = [version]$version } )
+    $version = Get-Version ($url -split $verRe | select -last 1 -skip 1)
+    $streams.Add($version.ToString(2), @{ URL32 = $url; Version = $version.ToString() })
   }
 
   return @{ Streams = $streams }
