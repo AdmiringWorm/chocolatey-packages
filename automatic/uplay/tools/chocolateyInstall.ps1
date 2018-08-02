@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'http://ubi.li/4vxt9'
+  url            = 'https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe'
   softwareName   = 'Uplay'
-  checksum       = 'E02D8C38305649E288DB5F65A9A3C0C69388F5F38F638905FEFEF11150E9F6F4C18C056DC5DAC9D99C6E6ACDC496A34135A9682D6DB247F8D68B3FEDF55F93C0'
+  checksum       = 'FB4302CE3FFC810BFFA9234C13E0A3D9FD71C7E519EA30F645B42FB248E510BE7E4D9E896366B88310170E027A811F30A819008B74F884F058E2AC421C037677'
   checksumType   = 'sha512'
   silentArgs     = '/S'
   validExitCodes = @(0)
