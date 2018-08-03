@@ -4,14 +4,14 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\MediathekView-13.0.6.zip"
+  file        = "$toolsPath\MediathekView-13.1.1.zip"
   destination = $toolsPath
 }
 
 Get-ChocolateyUnzip @packageArgs
-rm $toolsPath\*.zip -ea 0
+Remove-Item $toolsPath\*.zip -ea 0
 
-Get-ChildItem "$toolsPath" "*.exe" -Recurse | % {
+Get-ChildItem "$toolsPath" "*.exe" -Recurse | ForEach-Object {
   if ($_.Name -eq 'MediathekView.exe') {
     $desktopLink = "$([System.Environment]::GetFolderPath('DesktopDirectory'))\$env:ChocolateyPackageName.lnk"
     Install-ChocolateyShortcut -shortcutFilePath "$desktopLink" `
