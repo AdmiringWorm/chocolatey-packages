@@ -2,7 +2,10 @@
 
 $releases = 'https://download.mediathekview.de/stabil/'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  sleep -Seconds 2
+  Get-RemoteFiles -Purge -NoSuffix
+}
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
@@ -34,4 +37,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -NoCheckUrl
