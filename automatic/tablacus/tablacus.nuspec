@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tablacus</id>
-    <version>18.8.2</version>
+    <version>18.9.9</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tablacus</packageSourceUrl>
     <owners>AdmiringWorm, Yoshimov</owners>
     <title>Tablacus Explorer</title>
