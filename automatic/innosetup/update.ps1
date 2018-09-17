@@ -15,7 +15,7 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(file server\s*)\<.*\>" = "`${1}<$($Latest.Releases)>"
       "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"     = "`${1} $($Latest.ChecksumType32)"
@@ -25,8 +25,8 @@ function global:au_SearchReplace {
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(`"[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
     }
-    ".\innosetup.nuspec" = @{
-      "(\<id\>).*(\<\/id\>)" = "`${1}InnoSetup`${2}"
+    ".\innosetup.nuspec"            = @{
+      "(\<id\>).*(\<\/id\>)"                     = "`${1}InnoSetup`${2}"
       "(?i)(^\s*\[Software Changelog\]\().*(\))" = "`${1}$($Latest.ReleaseNotesUrl)`${2}"
     }
   }
@@ -34,17 +34,41 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $versionDirResponse = Invoke-WebRequest -UseBasicParsing -Uri $versionDirUrl;
-  $versionReleaseDir = $versionDirResponse.Links | ? href -match "^[0-9]+\/$" | select -Last 1 -ExpandProperty href
+  $versionReleaseDirs = $versionDirResponse.Links | ? href -match "^[0-9]+\/$" | select -Last 2 -ExpandProperty href
 
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
-  $re    = 'innosetup.*unicode\.exe'
-  $file   = $download_page.links | ? href -match $re | select -Last 1 -expand href
-  $url = ($versionDirUrl + $versionReleaseDir + $file)
+  $streams = @{}
+  $versionReleaseDirs | % {
+    $versionReleaseDir = $_
 
-  $version  = $url -split '[_-]|.exe' | select -Last 1 -Skip 2
-  $releaseNotes = "http://www.jrsoftware.org/files/is$($versionReleaseDir.TrimEnd('/'))-whatsnew.htm"
+    $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
+    $re = 'innosetup.*unicode(\-dev\-[\d]*)?\.exe'
+    $file = $download_page.links | ? href -match $re | select -Last 1 -expand href
+    $url = ($versionDirUrl + $versionReleaseDir + $file)
 
-  return @{ URL32 = $url; Version = $version; ReleaseNotesUrl = $releaseNotes ; Releases = ($versionDirUrl + $versionReleaseDir) }
+    $version = $url -split 'setup\-|\-unicode|.exe' | select -Last 2 -Skip 1
+    $releaseNotes = "http://www.jrsoftware.org/files/is$($versionReleaseDir.TrimEnd('/'))-whatsnew.htm"
+    try {
+      iwr -UseBasicParsing -Uri $releaseNotes
+    } catch {
+      $releaseNotes = "https://jrsoftware.github.io/issrc/whatsnew.htm"
+    }
+
+    if ($version[0] -and $version[1]) {
+      $version = Get-Version ($version[0] + $version[1])
+    }
+    else {
+      $version = Get-Version $version[0]
+    }
+
+    $streams.Add('major-' + ($version.ToString(1)), @{
+      URL32 = $url
+      Version = $version
+      ReleaseNotesUrl = $releaseNotes
+      Releases = ($versionDirUrl + $versionReleaseDir)
+    })
+  }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none
