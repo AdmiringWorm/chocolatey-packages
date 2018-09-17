@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\innosetup-5.6.1-unicode.exe"
+$filePath = "$toolsDir\innosetup-6.0.0-unicode-dev-2.exe"
 
 $packageArgs = @{
 	packageName   = 'innosetup'
