@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>5.9.18240</version>
+    <version>2018.1.18250</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
@@ -39,7 +39,7 @@ If you follow good naming conventions in your code, then you will get very decen
 ## Notes
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
-    <releaseNotes>[Software Changelog](http://support.submain.com/kb/a42/whats-new-in-ghostdoc-v5.aspx  
+    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.28.01" />
