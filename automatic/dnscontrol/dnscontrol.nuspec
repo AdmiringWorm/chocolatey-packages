@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dnscontrol</id>
-    <version>0.2.5</version>
+    <version>0.2.7</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DnsControl</title>
@@ -40,48 +40,67 @@
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
 
-## Software ChangelogSo many new features! New record types! Better DKIM support!  Better AWS support!
+## Software Changelog## Major Features: ###
+  - Let's Encrypt Certificate Generation! [#327](https://github.com/StackExchange/dnscontrol/pull/327) [Documentation](https://stackexchange.github.io/dnscontrol/lets-encrypt)
+  - Refactoring of most fields in the internal representation of domains. Most code now accesses fields on records through getters and setters, which should help us maintain better consistency throughout the system. [#337](https://github.com/StackExchange/dnscontrol/pull/337)
+  - New Provider HEXONET [#373](https://github.com/StackExchange/dnscontrol/pull/373)
 
-Highlights:
+### BIND: ###
+  -  Fix panic on CNAME [#347](https://github.com/StackExchange/dnscontrol/pull/347)
 
-* Support for the ability to IGNORE() a label if some other system is updating it (all providers)
-* Support for very long DKIM strings. You no longer have to split them yourself.
-* Support for the new CAA record type (GANDI, CLOUDFLARE)
-* Support for TXT records with multiple strings (BIND, ROUTE53, NAMEDOTCOM)
-* Support for AWS ROUTE53 "ALIAS" records.
-* Add the ability to send notifications to chat rooms when updates are done.
-* A lot of code cleanups and documentation fixes.
+### Cloudflare: ###
+  -  Fix parsing of priority field in record (fixes #367) [#368](https://github.com/StackExchange/dnscontrol/pull/368)
 
+### Route 53: ###
+  -  Fix corner case when deleting r53_alias records [#394](https://github.com/StackExchange/dnscontrol/pull/394)
+  -  Added token to NewStaticCredentials [#401](https://github.com/StackExchange/dnscontrol/pull/401)
+  -  Fix bug in Route 53 ALIAS record [#336](https://github.com/StackExchange/dnscontrol/pull/336)
 
-Detailed list of features and bug fixes:
+### Documentation: ###
+  -  Improve spfcache.json instructions [#375](https://github.com/StackExchange/dnscontrol/pull/375)
+  -  Clarify the when to implement certain interfaces [#376](https://github.com/StackExchange/dnscontrol/pull/376)
+  -  update documentation for Gandi to mention the LiveDNS provider [#385](https://github.com/StackExchange/dnscontrol/pull/385)
+  -  Review Maintainers of contributed providers [#400](https://github.com/StackExchange/dnscontrol/pull/400)
+  -  AWS Token options documented [#403](https://github.com/StackExchange/dnscontrol/pull/403)
+  - Add Gandi registrar to example [#335](https://github.com/StackExchange/dnscontrol/pull/335)
+  - Document SRV, CF*REDIRECT, and note where docs are needed. [#346](https://github.com/StackExchange/dnscontrol/pull/346)
 
-* Add support for the IGNORE(label) directive (#183)
-* Simple notification framework (#297)
-* Add syntax for very long DKIM strings (#295)
-* Add general support for TXT records with multiple strings (#293)
+### Misc / Bugs: ###
+  -  convertzone produces deprecated NAMESERVER entries [#363](https://github.com/StackExchange/dnscontrol/pull/363)
+  - Fix #339 prevent the ovh provider to panic on SPF and DKIM record types [#340](https://github.com/StackExchange/dnscontrol/pull/340)
+  - Fix #341 do not erase all records labels [#342](https://github.com/StackExchange/dnscontrol/pull/342)
+  - Better validate NAMESERVER format. [#350](https://github.com/StackExchange/dnscontrol/pull/350)
+  - Update AD integration failures [#353](https://github.com/StackExchange/dnscontrol/pull/353)
+  - fix names for internal transformed records [#358](https://github.com/StackExchange/dnscontrol/pull/358)
+  - Include support for exists element in SPF. [#356](https://github.com/StackExchange/dnscontrol/pull/356)
+  - Work around extra whitespace in spf records [#361](https://github.com/StackExchange/dnscontrol/pull/361)
+  - sort returned nameservers [#369](https://github.com/StackExchange/dnscontrol/pull/369)
+  - Add support for MX priorities of "" (0) [#374](https://github.com/StackExchange/dnscontrol/pull/374)
+  - Include PTR types in SPF Builder [#378](https://github.com/StackExchange/dnscontrol/pull/378)
+  - Create directories with execute permissions so they can be opened [#395](https://github.com/StackExchange/dnscontrol/pull/395)
+  - Correctly group R53_ALIAS records during IncrementalDiff. [#399](https://github.com/StackExchange/dnscontrol/pull/399)
+  - Add NAMESERVER_TTL and associated documentation. [#398](https://github.com/StackExchange/dnscontrol/pull/398)
+  - update go version to 1.10 [#409](https://github.com/StackExchange/dnscontrol/pull/409)
 
-Provider-specific news:
+## Thanks to all contributors:
 
-* BIND: Add support for TXT records with multiple strings (#289)
-* BIND: Fix bug where SOA serial numbers were not updating
-* CLOUDFLARE: Support CAA rtype (#285)
-* DIGITALOCEAN: Improve example in docs (#281)
-* GANDI: Add support for CAA rtype (#288)
-* NAMEDOTCOM: Add support for TXT records with multiple strings (#299)
-* NAMEDOTCOM: Upgrade to v4 api (#298)
-* ROUTE53: Add support for TXT records with multiple strings (#292)
-* ROUTE53: Support Route53's ALIAS record type (#239) (#301)
-* ROUTE53: Document error messages from various credential issues. (#291)
-
-Internal cleanups and documentation improvements:
-
-* Improve docs on how to add an DNS record type.
-* Many other small documentation improvements
-* "go vet" and "go lint" the entire system.
-* run helpers.js through Prettier
-* docs: Improve comments related to capabilities. (#287)
-* Update github.com/prasmussen/gandi-api to prepare for LiveDNS support. (#302)
-</releaseNotes>
+  - [@f110](https://github.com/StackExchange/dnscontrol/commits?author=f110)
+  - [@ashleyhull-versent](https://github.com/StackExchange/dnscontrol/commits?author=ashleyhull-versent)
+  - [@papakai](https://github.com/StackExchange/dnscontrol/commits?author=papakai)
+  - [@ebardsley](https://github.com/StackExchange/dnscontrol/commits?author=ebardsley)
+  - [@arafferty](https://github.com/StackExchange/dnscontrol/commits?author=arafferty)
+  - [@captncraig](https://github.com/StackExchange/dnscontrol/commits?author=captncraig)
+  - [@greut](https://github.com/StackExchange/dnscontrol/commits?author=greut)
+  - [@vincentbernat](https://github.com/StackExchange/dnscontrol/commits?author=vincentbernat)
+  - [@kjacobsen](https://github.com/StackExchange/dnscontrol/commits?author=kjacobsen)
+  - [@tlimoncelli](https://github.com/StackExchange/dnscontrol/commits?author=tlimoncelli)
+  - [@onlyhavecans](https://github.com/StackExchange/dnscontrol/commits?author=onlyhavecans)
+  - [@geek1011](https://github.com/StackExchange/dnscontrol/commits?author=geek1011)
+  - [@Jamie96](https://github.com/StackExchange/dnscontrol/commits?author=Jamie96)
+  - [@masterzen](https://github.com/StackExchange/dnscontrol/commits?author=masterzen)
+  - [@Coeur](https://github.com/StackExchange/dnscontrol/commits?author=Coeur)
+  - [@koenrh](https://github.com/StackExchange/dnscontrol/commits?author=koenrh)
+  - [@bfirsh](https://github.com/StackExchange/dnscontrol/commits?author=bfirsh)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
