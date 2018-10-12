@@ -5,7 +5,7 @@
 .DESCRIPTION
   Searches for icons matching the package name and
   extracts the latest commit hash for that icon (committing it first if it has changed).
-  It then updates the package nuspec file with the correct rawgit url.
+  It then updates the package nuspec file with the correct jsdelivr url.
 
 .PARAMETER Name
   If specified it only updates the package matching the specified name
@@ -15,7 +15,7 @@
   Is ignored if no Name parameter is specified.
 
 .PARAMETER GithubRepository
-  The github user/repository to use in the rawgit url
+  The github user/repository to use in the jsdelivr url
 
 .PARAMETER RelativeIconDir
   The relative path to where icons are located (relative to the location of this script)
@@ -51,20 +51,20 @@
 .EXAMPLE
   ps> .\Update-IconUrl.ps1
   Updates all nuspec files with matching icons
--    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/thunderbird.png</iconUrl>
-+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
+-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/thunderbird.png</iconUrl>
++    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
 
 .EXAMPLE
   ps> .\Update-IconUrl.ps1 -Name 'SQLite'
   Updates only a single nuspec file with the specified name with its matching icon
--    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
-+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/speccy.png</iconUrl>
+-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
++    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/speccy.png</iconUrl>
 
 .EXAMPLE
   ps> .\Updates-IconUrl.ps1 -Name 'youtube-dl' -IconName 'y-dl'
   Updates only a single nuspec file with the specified name with the icon matching the specified IconName
--    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/y-dl.svg</iconUrl>
-+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a42da86c9cc480a5f3f23677e0d73d88416a3b3c/icons/y-dl.svg</iconUrl>
+-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/y-dl.svg</iconUrl>
++    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a42da86c9cc480a5f3f23677e0d73d88416a3b3c/icons/y-dl.svg</iconUrl>
 
 .EXAMPLE
   ps> .\Updates-IconUrl.ps1 -Name "thunderbird" -UseStopwatch
@@ -244,7 +244,9 @@ function Replace-IconUrl {
 
   $oldContent = ($nuspec | Out-String) -replace '\r\n?', "`n"
 
-  $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
+  # Old rawgit url, just for history purposes
+  # $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
+  $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${CommitHash}/$iconPath"
 
   $nuspec = $nuspec -replace '<iconUrl>.*', "<iconUrl>$url</iconUrl>"
 
@@ -309,7 +311,10 @@ function Update-IconUrl {
           -IconPath $iconPath `
           -GithubRepository $GithubRepository
         $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
-        $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
+        # Old rawgit url, just for history purposes
+        #$url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
+        $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${CommitHash}/$($iconPath -replace "$iconName",'48x48')"
+
         $readMePath = "$PSScriptRoot/$PackagesDirectory/$Name/Readme.md"
         Update-Readme -ReadmePath $readMePath -Url $url
       }
