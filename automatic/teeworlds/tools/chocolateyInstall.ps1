@@ -4,7 +4,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  file           = "$toolsPath\teeworlds-0.6.4-win32.zip"
+  file           = "$toolsPath\teeworlds-0.6.5-win32.zip"
   destination    = "$toolsPath"
 }
 
@@ -12,8 +12,8 @@ Get-ChocolateyUnzip @packageArgs
 
 Remove-Item $packageArgs.file -Force
 
-$gameFile = Get-ChildItem $toolsPath "teeworlds.exe" -Recurse | % { $_.FullName }
-$serverFile = Get-ChildItem $toolsPath "teeworlds_srv.exe" -Recurse | % { $_.FullName }
+$gameFile = Get-ChildItem $toolsPath "teeworlds.exe" -Recurse | ForEach-Object { $_.FullName }
+$serverFile = Get-ChildItem $toolsPath "teeworlds_srv.exe" -Recurse | ForEach-Object { $_.FullName }
 
 $pp = Get-PackageParameters
 

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>teeworlds</id>
-    <version>0.6.4</version>
+    <version>0.6.5</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/teeworlds</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Teeworlds</title>
     <authors>Magnus Auvinen</authors>
     <projectUrl>https://teeworlds.com/?page=downloads</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/136615db5277db08fd0e07fd25997c8a32dbf233/icons/teeworlds.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@136615db5277db08fd0e07fd25997c8a32dbf233/icons/teeworlds.png</iconUrl>
     <copyright>Copyright (C) Magnus Auvinen</copyright>
     <licenseUrl>https://github.com/teeworlds/teeworlds/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -30,8 +30,8 @@
 `choco install teeworlds --params '"/Desktop /NoStartMenu"'`
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=12085)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/teeworlds/Changelog.md)
+[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=12543
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

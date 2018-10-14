@@ -1,6 +1,7 @@
 # ![Teeworlds Changelog](https://img.shields.io/badge/Teeworlds-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 0.6.5 (2018-10-14)
+- **ENHANCEMENT:** Add package changelogs [#6](https://github.com/AdmiringWorm/chocolatey-packages/issues/6)
 - **ENHANCEMENT:** Added changelog for package
 
 ## Version  (2017-11-03)
