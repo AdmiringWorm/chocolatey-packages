@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer</id>
-    <version>3.0.54</version>
+    <version>3.0.55</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer</title>
     <authors>Goversoft LLC</authors>
     <projectUrl>https://privazer.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/95bf314957cfef45ec98f1bf618248395a58bede/icons/privazer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@95bf314957cfef45ec98f1bf618248395a58bede/icons/privazer.png</iconUrl>
     <copyright>© Goversoft LLC 2012-2017</copyright>
     <tags>privazer system cleanup freeware</tags>
     <summary>Free PC cleaner &amp; Privacy tool</summary>
@@ -27,7 +27,7 @@ Privacy protection: PrivaZer prevents recovery of your activities.
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/privazer.install/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="privazer.install" version="[3.0.54]" />
+      <dependency id="privazer.install" version="[3.0.55]" />
     </dependencies>
   </metadata>
   <files>
