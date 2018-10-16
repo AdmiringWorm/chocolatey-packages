@@ -6,6 +6,13 @@ $releases = 'https://github.com/martinrotter/rssguard/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
+  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/rssguard/Changelog.md)"
+
+  Update-Changelog -useIssueTitle
+}
+
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
@@ -34,9 +41,10 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-          Version     = $version.ToString()
-          URL64       = $_
-          PackageName = 'RssGuard'
+          Version      = $version.ToString()
+          URL64        = $_
+          PackageName  = 'RssGuard'
+          ReleaseNotes = "https://github.com/martinrotter/rssguard/releases/tag/$($version.ToString())"
         })
     }
   }
