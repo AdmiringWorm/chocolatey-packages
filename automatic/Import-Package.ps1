@@ -1,13 +1,19 @@
 param(
   [Parameter(Mandatory = $true)]
   [string]$Name,
+  [string]$Version,
   [switch]$SkipIcon
 )
 
 function Import-Package() {
-  param([string]$Name, [string]$GithubRepository)
+  param([string]$Name, [string]$Version, [string]$GithubRepository)
   If (!(Test-Path "$Name.zip")) {
-    $baseUrl = "https://chocolatey.org/packages/$Name"
+    if ($Version) {
+      $baseUrl = "https://chocolatey.org/packages/$Name/$Version"
+    }
+    else {
+      $baseUrl = "https://chocolatey.org/packages/$Name"
+    }
     $response = Invoke-WebRequest -UseBasicParsing -Uri $baseUrl;
     $downloadUrl = $response.Links | ? title -match "Download.*raw nupkg" | select -first 1 -ExpandProperty href;
 
@@ -53,8 +59,8 @@ function Import-Package() {
       $commitHash = git log -1 --format="%H" "../icons/$Name.$extension";
     }
 
-    $iconUrl = "https://cdn.rawgit.com/$GithubRepository/$commitHash/icons/$Name.$extension"
-    $nuspec = $nuspec -replace '<iconUrl>.+', "<iconUrl>https://cdn.rawgit.com/$GithubRepository/$commitHash/icons/$Name.$extension</iconUrl>"
+    $iconUrl = "https://cdn.jsdelivr.net/gh/$GithubRepository@$commitHash/icons/$Name.$extension"
+    $nuspec = $nuspec -replace '<iconUrl>.+', "<iconUrl>https://cdn.jsdelivr1.net/gh/$GithubRepository@$commitHash/icons/$Name.$extension</iconUrl>"
   }
 
   if ($nuspec -match '<packageSourceUrl>.+') {
@@ -102,4 +108,4 @@ function Import-Package() {
   Copy-Item "$PSScriptRoot/_template/update.ps1" "$PSScriptRoot/$Name/update.ps1"
 }
 
-Import-Package -Name $Name -GithubRepository "AdmiringWorm/chocolatey-packages"
+Import-Package -Name $Name -Version $Version -GithubRepository "AdmiringWorm/chocolatey-packages"
