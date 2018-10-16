@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>fstar</id>
+    <version>0.9.6.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/fstar</packageSourceUrl>
+    <owners>AdmiringWorm, chantisnake AdmiringWorm</owners>
+    <title>F* language</title>
+    <authors>FStarLang</authors>
+    <projectUrl>https://www.fstar-lang.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9ccc1bd8a9b4d7010facb296948c70aa3b3125c7/icons/fstar.png</iconUrl>
+    <copyright>What is the copyright</copyright>
+    <licenseUrl>https://github.com/FStarLang/FStar/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/FStarLang/FStar</projectSourceUrl>
+    <docsUrl>https://github.com/FStarLang/FStar/wikis</docsUrl>
+    <mailingListUrl>What is the link to the mailing list or forum?</mailingListUrl>
+    <bugTrackerUrl>https://github.com/FStarLang/FStar/issues</bugTrackerUrl>
+    <tags>fstar programming_language proof_assistant dependent_type fsharp ocaml foss cross-platform</tags>
+    <summary>An ML-like language aimed at program verification</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>F*: An ML-like language aimed at program verification =====================================================
+
+[![Build status](https://travis-ci.org/FStarLang/FStar.svg?branch=master)](https://travis-ci.org/FStarLang/FStar)
+
+## Notice
+This package will install F* language with compatable version of z3.
+It is recommended that you remove your z3 package and then install F*
+
+### F\* website
+
+More information on F\* can be found at www.fstar-lang.org
+
+### Installation
+
+See [INSTALL.md](https://github.com/FStarLang/FStar/blob/master/INSTALL.md)
+
+### Tutorial
+
+The [F\* tutorial](https://www.fstar-lang.org/tutorial/) provides a first taste of verified programming in
+F\*, explaining things by example.
+
+### Wiki
+
+The [F\* wiki](https://github.com/FStarLang/FStar/wiki) contains additional, usually more in-depth, technical
+documentation on F\*.
+
+### Editing F* code
+
+You can edit F\* code using your favourite text editor, but Emacs,
+Atom, and Vim have extensions that add special support for F\*,
+including syntax highlighting and interactive development. More
+details on [editor support](https://github.com/FStarLang/FStar/wiki/Editor-support-for-F*) on the [F\* wiki](https://github.com/FStarLang/FStar/wiki) .
+
+### Executing F* code
+
+By default F* only verifies the input code, it does not compile or execute it.
+To execute F* code one needs to translate it to either OCaml or F\#, using
+F\*'s code extraction facility---this is invoked using the command line
+argument `--codegen OCaml` or `--codegen FSharp`. More details on
+[executing F\* code](https://github.com/FStarLang/FStar/wiki/Executing-F*-code) on the [F\* wiki](https://github.com/FStarLang/FStar/wiki) .
+
+### Community mailing list
+
+The [fstar-club mailing list](http://lists.gforge.inria.fr/mailman/listinfo/fstar-club) is dedicated to F* users. Here is where
+all F* announcements are made to the general public (e.g. for
+releases, new papers, etc) and where users can ask questions, ask for
+help, discuss, provide feedback, announce jobs requiring at least 10
+years of F* experience, etc.
+
+[List archives](https://lists.gforge.inria.fr/pipermail/fstar-club/) are public, but only members can post.
+[Join here](http://lists.gforge.inria.fr/mailman/listinfo/fstar-club)!
+
+
+### Slack channel
+
+Users can also ask questions on the `#fstar` Slack channel at
+&lt; http://fpchat.com/ &gt;
+
+### Reporting issues
+
+Please report issues using the [F\* issue tracker](https://github.com/FStarLang/FStar/issues) on GitHub.
+Before filing please use search to make sure the issue doesn't already exist.
+We don't maintain old releases, so if possible please use the
+[online F\* editor](https://www.fstar-lang.org/run.php) or directly [the GitHub sources](https://github.com/FStarLang/FStar/blob/master/INSTALL.md#building-f-from-source) to check
+that your problem still exists on the `master` branch.
+
+
+### Blog
+
+The [F\* for the masses](https://fstarlang.github.io/) blog is also expected to become an important
+source of information and news on the F\* project.
+
+
+### License
+
+This new variant of F* is released under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0);
+see `LICENSE` for more details.</description>
+    <releaseNotes>A large number of people contributed to this release: thanks to all!
+
+Here are a few highlights:
+
+# Main new features
+
+- Meta-F*: A metaprogramming and tactic framework, as described in this [report](https://arxiv.org/abs/1803.06547). Code samples are in examples/tactics, examples/native_tactics and the `FStar.Tactics` and `FStar.Reflection` libraries. Many people contributed a lot to this work, especially Guido Martinez.
+
+- Improved type inference with two-phase typechecking: We now build verification conditions for a program after a first phase of type inference. This improves inference of implicit arguments and reduces our trust in the type inference. Thanks to Aseem Rastogi!
+
+- Caching typechecked modules: F* emits ".checked" files, an on-disk representation of a typechecked module that can be read back later. This significantly reduces the time to load a module's dependences.
+
+# Many other improvements
+
+A sampling of improvements across the entire tool chain:
+
+- Resolving several syntactic ambiguities in the parser
+
+- A correct pretty printer for surface terms, using `fstar --indent`
+
+- A new dependence analysis to support incremental compilation for larger projects
+
+- Overhauling the higher order unification algorithm, both in the representation of meta-variables and in the handling of unfolding, leading to significant performance and robustness improvements (see https://github.com/FStarLang/FStar/wiki/Design-note:-Revising-the-unifier)
+
+- Automatic generation of interfaces for modules and tighter enforcement of abstraction boundaries (see https://github.com/FStarLang/FStar/wiki/Revised-checking-of-a-module's-interface)
+
+- Improvements to the SMT encoding, removing axioms that lead to performance problems and reducing brittleness related to optimizations in the encoding, notably shallow vs deep encodings
+
+- Improved type-based erasure for extraction
+
+- Several new and improved libraries, including a revised treatment of footprints for Low* programs, in `FStar.Modifies`
+
+- And work by many people in Project Everest whose use of F* drove a lot of the work in this release.
+
+- Plus many other improvements and changes as described in https://github.com/FStarLang/FStar/blob/v0.9.6.0/CHANGES.md
+
+- And [180 closed github issues](https://github.com/FStarLang/FStar/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aclosed+closed%3A%222017-08-23+..+2018-05-17%22+)</releaseNotes>
+    <dependencies />
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+    <file src="..\..\icons\fstar.png" target="icons" />
+  </files>
+</package>

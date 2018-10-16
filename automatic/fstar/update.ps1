@@ -1,0 +1,36 @@
+﻿Import-Module AU
+
+$releases = 'https://www.fstar-lang.org/#download'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
+function global:au_SearchReplace {
+  @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
+    }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+  }
+}
+
+function global:au_GetLatest {
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+  $re = '\.zip$'
+  $url64 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+
+  $verRe = '\/v?'
+  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  @{
+    URL64       = $url64
+    Version     = $version64
+    PackageName = 'FStar'
+  }
+}
+
+update -ChecksumFor none
