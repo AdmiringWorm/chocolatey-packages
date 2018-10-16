@@ -1,6 +1,8 @@
 ﻿Import-Module AU
 
 $releases = 'https://www.fstar-lang.org/#download'
+$padUnderVersion = '0.9.7'
+
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -35,7 +37,7 @@ function global:au_GetLatest {
   $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
   @{
     URL64        = $url64
-    Version      = $version64
+    Version      = Get-FixVersion $version64 -OnlyFixBelowVersion $padUnderVersion
     PackageName  = 'FStar'
     ReleaseNotes = "https://github.com/FStarLang/FStar/releases/tag/v$($version64)"
   }
