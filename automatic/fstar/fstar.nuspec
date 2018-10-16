@@ -19,7 +19,7 @@
     <summary>An ML-like language aimed at program verification</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description></description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>s</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
