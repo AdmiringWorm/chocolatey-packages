@@ -97,43 +97,7 @@ source of information and news on the F\* project.
 
 This new variant of F* is released under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0);
 see `LICENSE` for more details.</description>
-    <releaseNotes>A large number of people contributed to this release: thanks to all!
-
-Here are a few highlights:
-
-# Main new features
-
-- Meta-F*: A metaprogramming and tactic framework, as described in this [report](https://arxiv.org/abs/1803.06547). Code samples are in examples/tactics, examples/native_tactics and the `FStar.Tactics` and `FStar.Reflection` libraries. Many people contributed a lot to this work, especially Guido Martinez.
-
-- Improved type inference with two-phase typechecking: We now build verification conditions for a program after a first phase of type inference. This improves inference of implicit arguments and reduces our trust in the type inference. Thanks to Aseem Rastogi!
-
-- Caching typechecked modules: F* emits ".checked" files, an on-disk representation of a typechecked module that can be read back later. This significantly reduces the time to load a module's dependences.
-
-# Many other improvements
-
-A sampling of improvements across the entire tool chain:
-
-- Resolving several syntactic ambiguities in the parser
-
-- A correct pretty printer for surface terms, using `fstar --indent`
-
-- A new dependence analysis to support incremental compilation for larger projects
-
-- Overhauling the higher order unification algorithm, both in the representation of meta-variables and in the handling of unfolding, leading to significant performance and robustness improvements (see https://github.com/FStarLang/FStar/wiki/Design-note:-Revising-the-unifier)
-
-- Automatic generation of interfaces for modules and tighter enforcement of abstraction boundaries (see https://github.com/FStarLang/FStar/wiki/Revised-checking-of-a-module's-interface)
-
-- Improvements to the SMT encoding, removing axioms that lead to performance problems and reducing brittleness related to optimizations in the encoding, notably shallow vs deep encodings
-
-- Improved type-based erasure for extraction
-
-- Several new and improved libraries, including a revised treatment of footprints for Low* programs, in `FStar.Modifies`
-
-- And work by many people in Project Everest whose use of F* drove a lot of the work in this release.
-
-- Plus many other improvements and changes as described in https://github.com/FStarLang/FStar/blob/v0.9.6.0/CHANGES.md
-
-- And [180 closed github issues](https://github.com/FStarLang/FStar/issues?utf8=%E2%9C%93&amp;q=is%3Aissue+is%3Aclosed+closed%3A%222017-08-23+..+2018-05-17%22+)</releaseNotes>
+    <releaseNotes></releaseNotes>
     <dependencies />
   </metadata>
   <files>

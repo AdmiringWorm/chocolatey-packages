@@ -18,6 +18,13 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/fstar/Changelog.md)"
+
+  Update-Changelog -useIssueTitle
+}
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
@@ -27,9 +34,10 @@ function global:au_GetLatest {
   $verRe = '\/v?'
   $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL64       = $url64
-    Version     = $version64
-    PackageName = 'FStar'
+    URL64        = $url64
+    Version      = $version64
+    PackageName  = 'FStar'
+    ReleaseNotes = "https://github.com/FStarLang/FStar/releases/tag/v$($version64)"
   }
 }
 
