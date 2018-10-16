@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RssGuard</id>
+    <version>3.5.6</version>
+    <title>Rss Guard</title>
+    <authors>martinrotter</authors>
+    <owners>chantisnake AdmiringWorm</owners>
+    <licenseUrl>https://github.com/martinrotter/rssguard/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/martinrotter/rssguard</projectUrl>
+    <iconUrl>https://github.com/martinrotter/rssguard/raw/master/resources/graphics/rssguard_256.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>RSS Guard
+=========
+
+[![AppVeyor](https://img.shields.io/appveyor/ci/martinrotter/rssguard.svg?maxAge=360)](https://ci.appveyor.com/project/martinrotter/rssguard)
+[![Travis CI](https://img.shields.io/travis/martinrotter/rssguard.svg?maxAge=360)](https://travis-ci.org/martinrotter/rssguard)
+[![Total downloads](https://img.shields.io/github/downloads/martinrotter/rssguard/total.svg?maxAge=360)](#)
+[![Version](https://img.shields.io/github/release/martinrotter/rssguard.svg?maxAge=360)](#)
+[![GitHub issues](https://img.shields.io/github/issues/martinrotter/rssguard.svg?maxAge=360)](#)
+[![AUR](https://img.shields.io/aur/votes/rssguard.svg?maxAge=3600)](https://aur.archlinux.org/packages/rssguard/)
+[![License](https://img.shields.io/github/license/martinrotter/rssguard.svg?maxAge=360000)](#)
+
+Welcome to RSS Guard website. You can find here basic information.
+
+RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator developed using Qt framework which supports online feed synchronization.
+
+#### You can support this project via donations [HERE](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XMWPLPK893VH4).
+
+#### See [Wiki](https://github.com/martinrotter/rssguard/wiki) for more information about features, download links and other stuff.</description>
+    <summary>RSS Guard is simple (yet powerful) feed reader. This is the official project repository.</summary>
+    <releaseNotes>Fixed:
+â–ª Some minor stuff fixes.
+â–ª Unnecessary "Welcome" notifications. (bug #176)
+â–ª Bad handling of null/empty strings when inserting messages into DB. (bug #169)
+â–ª Bad conversion of "created on" date/time in TT-RSS plugin. (bug #172)
+â–ª Missing obligatory attribute in OPML 2.0 files. (bug #166)</releaseNotes>
+    <tags>rssguard rss Qt</tags>
+    <projectSourceUrl>https://github.com/martinrotter/rssguard</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rssguard</packageSourceUrl>
+    <docsUrl>https://github.com/martinrotter/rssguard/wikis</docsUrl>
+    <bugTrackerUrl>https://github.com/martinrotter/rssguard/issues</bugTrackerUrl>
+  </metadata>
+</package>
