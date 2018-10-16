@@ -32,7 +32,10 @@
 
 ## Requirements
 - Windows 10 with the Windows Spotlight feature</description>
-    <releaseNotes>https://github.com/onlineth/Spotlight-Desktop/releases/latest</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/onlineth/Spotlight-Desktop/releases/latest)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

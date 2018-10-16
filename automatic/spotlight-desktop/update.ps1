@@ -18,6 +18,15 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate {
+  Update-Metadata -key "releaseNotes" -value @"
+[Software Changelog]($($Latest.ReleaseNotes))
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)
+"@
+
+  Update-Changelog -useIssueTitle
+}
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
@@ -27,8 +36,9 @@ function global:au_GetLatest {
   $verRe = '\/'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32   = $url32
-    Version = $version32
+    URL32        = $url32
+    Version      = $version32
+    ReleaseNotes = Get-RedirectedUrl -url $releases
   }
 }
 
