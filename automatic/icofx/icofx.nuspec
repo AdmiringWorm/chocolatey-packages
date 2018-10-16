@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>icofx</id>
+    <version>1.6.4.02</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/icofx</packageSourceUrl>
+    <owners>AdmiringWorm, H. Alan Stevens AdmiringWorm</owners>
+    <title>Icofx</title>
+    <authors>Attila Kovrig</authors>
+    <projectUrl>https://www.icofx.ro/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1f01d57acb30bccbfd80c9a95c58c32a0e7cbe0d/icons/icofx.png</iconUrl>
+    <copyright>Copyright © 2005-2018 IcoFX Software</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.icofx.ro/help3/index.html</docsUrl>
+    <tags>icofx icon editor trial</tags>
+    <summary>IcoFX is an all-in-one solution for icon creation, extraction and editing.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>IcoFX is an all-in-one solution for icon creation, extraction and editing. With IcoFX you can extract icons from other files, including Windows Vista and Windows 7 files. You can easily work with multiple files using the batch processing capability of IcoFX.</description>
+    <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/icofx/Changelog.md)</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
