@@ -2,8 +2,8 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>icofx</id>
-    <version>1.6.4.02</version>
+    <id>IcoFX</id>
+    <version>3.2.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/icofx</packageSourceUrl>
     <owners>AdmiringWorm, H. Alan Stevens AdmiringWorm</owners>
     <title>Icofx</title>
@@ -16,7 +16,20 @@
     <tags>icofx icon editor trial</tags>
     <summary>IcoFX is an all-in-one solution for icon creation, extraction and editing.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>IcoFX is an all-in-one solution for icon creation, extraction and editing. With IcoFX you can extract icons from other files, including Windows Vista and Windows 7 files. You can easily work with multiple files using the batch processing capability of IcoFX.</description>
+    <description><![CDATA[Icofx is an award winning professional icon and cursor editor for Windows. It is an all-in-one solution for icon creation, extraction and editing. It is designed to work with Windows and Macintosh icons supporting transparency.
+
+## Features
+- **Create icons and cursors:** Create icons for Windows and Macintosh. Support for Windows icons with resolution up to 1024x1024 with PNG compression. Convert your Macintosh icons to Windows icons and vice versa. Support for static and animated cursors. Create a favicon for your website or blog.
+- **Import, export and extract:** You can easily convert your favorite images into icons or cursors, or icons into images. Supported image formats SVG, BMP, PNG, JPG, JPG2000, TIF and GIF. You can extract icons from other files, including Windows Vista, Windows 7 and Macintosh files.
+- **Advanced editor:** Icofx features a full blown image editor with many useful tools. You can use different brush sizes, shapes, hardness, even blending modes when painting. With more than 40 effects at your fingertips, there’s virtually no limit to the icons you can create.
+- **Image objects:** Using pre-made image object icon creation has never been easier. You can combine the image objects in layer based images using icofx. It allows you to rearrange, blend layers and change their opacity.
+- **Batch process files:** You can easily work with multiple files using the batch processing capability of icofx (Business License). Create, convert, extract or export all your icons or cursors with just a few clicks.
+- **Icon libraries:** Icofx gives you the possibility to create and edit icon and cursor libraries using the built in resource editor. Using the resource editor you can also change icons inside exe files.
+
+
+## Notes
+- The developers uses the same url for every version, as such only the latest version is supported for this package.
+]]></description>
     <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/icofx/Changelog.md)</releaseNotes>
   </metadata>
   <files>
