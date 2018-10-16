@@ -1,29 +1,47 @@
-﻿import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 
-$releases = ''
+$releases = 'https://github.com/martinrotter/rssguard/releases'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
+    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-      "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = ''
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re = '(?<!nowebengine\-)win64\.7z'
+  $urls64 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
 
-  $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
+  $streams = @{}
+  $urls64 | % {
+    $verRe = '\/'
+    $version = $_ -split "$verRe" | select -last 1 -skip 1
+    $version = Get-Version $version
 
-  return @{ URL32 = $url; Version = $version }
+    if (!($streams.ContainsKey($version.ToString(2)))) {
+      $streams.Add($version.ToString(2), @{
+          Version     = $version.ToString()
+          URL64       = $_
+          PackageName = 'RssGuard'
+        })
+    }
+  }
+
+  return @{ Streams = $streams }
 }
 
-update
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force

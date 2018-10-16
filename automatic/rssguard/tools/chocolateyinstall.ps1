@@ -1,19 +1,13 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName   = ''
-  fileType      = ''
-  softwareName  = ''
-
-  checksum      = ''
-  checksum64    = ''
-  checksumType  = ''
-  checksumType64= ''
-  url           = ''
-  url64bit      = ''
-
-  silentArgs    = "/VERYSILENT"
-  validExitCodes= @()
+  packageName = $env:ChocolateyPackageName
+  file        = ''
+  file64      = "$toolsPath\"
+  destination = $toolsPath
 }
 
-Install-ChocolateyPackage @packageArgs
+Get-ChocolateyUnzip @packageArgs
+rm $toolsPath\*.zip -ea 0

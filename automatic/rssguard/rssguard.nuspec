@@ -1,15 +1,23 @@
-﻿<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>RssGuard</id>
+    <id>rssguard</id>
     <version>3.5.6</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rssguard</packageSourceUrl>
+    <owners>AdmiringWorm, chantisnake</owners>
     <title>Rss Guard</title>
     <authors>martinrotter</authors>
-    <owners>chantisnake AdmiringWorm</owners>
-    <licenseUrl>https://github.com/martinrotter/rssguard/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/martinrotter/rssguard</projectUrl>
-    <iconUrl>https://github.com/martinrotter/rssguard/raw/master/resources/graphics/rssguard_256.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@752bfa80d1bad1a4cc05b50d2d2bda7ccb2732f0/icons/rssguard.png</iconUrl>
+    <licenseUrl>https://github.com/martinrotter/rssguard/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/martinrotter/rssguard</projectSourceUrl>
+    <docsUrl>https://github.com/martinrotter/rssguard/wikis</docsUrl>
+    <bugTrackerUrl>https://github.com/martinrotter/rssguard/issues</bugTrackerUrl>
+    <tags>rssguard rss qt foss cross-platform</tags>
+    <summary>RSS Guard is simple (yet powerful) feed reader. This is the official project repository.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>RSS Guard
 =========
 
@@ -28,17 +36,13 @@ RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator developed us
 #### You can support this project via donations [HERE](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XMWPLPK893VH4).
 
 #### See [Wiki](https://github.com/martinrotter/rssguard/wiki) for more information about features, download links and other stuff.</description>
-    <summary>RSS Guard is simple (yet powerful) feed reader. This is the official project repository.</summary>
-    <releaseNotes>Fixed:
-â–ª Some minor stuff fixes.
-â–ª Unnecessary "Welcome" notifications. (bug #176)
-â–ª Bad handling of null/empty strings when inserting messages into DB. (bug #169)
-â–ª Bad conversion of "created on" date/time in TT-RSS plugin. (bug #172)
-â–ª Missing obligatory attribute in OPML 2.0 files. (bug #166)</releaseNotes>
-    <tags>rssguard rss Qt</tags>
-    <projectSourceUrl>https://github.com/martinrotter/rssguard</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rssguard</packageSourceUrl>
-    <docsUrl>https://github.com/martinrotter/rssguard/wikis</docsUrl>
-    <bugTrackerUrl>https://github.com/martinrotter/rssguard/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/martinrotter/rssguard/releases/tag/3.5.6</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
