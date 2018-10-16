@@ -1,11 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$installPath = $toolsPath
+
+$pp = Get-PackageParameters
+
+if ($pp.InstallDir) {
+  $installPath = $pp.InstallDir
+}
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   file        = "$toolsPath\MediathekView-13.2.1.zip"
-  destination = $toolsPath
+  destination = $installPath
 }
 
 Get-ChocolateyUnzip @packageArgs
