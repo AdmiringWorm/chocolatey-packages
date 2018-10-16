@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spotlight-desktop</id>
-    <version>0.0</version>
+    <version>2.0.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/spotlight-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Spotlight Desktop</title>
     <authors>onlineth</authors>
     <projectUrl>https://wallpaper.onlineth.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@40a41aeca9a20cc05e877f5ef7e9ef0b93b7f1f0/icons/spotlight-desktop.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@949858caa05dd8821de3954b7fcfc2a7321f4332/icons/spotlight-desktop.png</iconUrl>
     <licenseUrl>https://github.com/onlineth/Spotlight-Desktop/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/onlineth/Spotlight-Desktop</projectSourceUrl>
@@ -18,7 +18,7 @@
     <tags>spotlight-desktop lockscreen desktop wallpaper foss</tags>
     <summary>A simple app for setting Spotlight Lock Screen image as your desktop wallpaper</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>This is a simple app that will take the current Spotlight Lock Screen image and set it to your desktop wallpaper.
+    <description><![CDATA[This is a simple app that will take the current Spotlight Lock Screen image and set it to your desktop wallpaper.
 
 ## Features
 - Very low memory footprint
@@ -31,11 +31,13 @@
 - Updated for Windows Insider preview builds
 
 ## Requirements
-- Windows 10 with the Windows Spotlight feature</description>
-    <releaseNotes>
-[Software Changelog](https://github.com/onlineth/Spotlight-Desktop/releases/latest)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)
-    </releaseNotes>
+- Windows 10 with the Windows Spotlight feature
+
+## Notes
+- This application installs itself into the current users Application Data (typically `%AppData%\onlineth\Spotlight Desktop`)
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/onlineth/Spotlight-Desktop/releases/tag/2.0.1)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
