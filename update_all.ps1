@@ -101,11 +101,13 @@ $Options = [ordered]@{
     . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
     if (Test-Path tools) { Expand-Aliases -Directory tools }
 
-    $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
+    $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
+    $p = $Options.ForcedPackages | ? { $_ -match $pattern }
     if (!$p) { return }
 
-    $global:au_Force = $true
-    $global:au_Version = ($p -split ':')[1]
+    $global:au_Force   = $true
+    $global:au_IncludeStream = $Matches['stream']
+    $global:au_Version = $Matches['version']
   }
 }
 
