@@ -21,7 +21,7 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate {
   Update-Metadata -key "releaseNotes" -value @"
 [Software Changelog]($($Latest.ReleaseNotes))
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/spotlight-desktop/Changelog.md)
 "@
 
   Update-Changelog -useIssueTitle
