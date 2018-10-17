@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>1.0.2</version>
+    <version>1.1.1.20181017</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
     <authors>Box</authors>
     <projectUrl>https://developer.box.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/19c4e51a2be54f917c2c61d69d806a3e647d49f4/icons/boxcli.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@19c4e51a2be54f917c2c61d69d806a3e647d49f4/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
     <licenseUrl>https://github.com/box/boxcli/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -30,10 +30,11 @@ Box is a cloud-based enterprise content management platform trusted by thousands
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)
 
 ## Software Release Notes
-- Added shared link commands for Create, Get, Update, and Delete. Located as standalone commands under `box shared-links` as well as under `box folders shared-links` and `box files shared-links`.
-- Fixed UTF-8 issue obscuring characters when saving CSV reports.
-- Added autopaging for events and fixed faulty event Get command.
-- Added date options `w` for weeks and `now` when using date options with commands.</releaseNotes>
+- Fixed bug preventing removal of a user from an Enterprise and conversion to a free user account.
+- Fixed bug that returned incorrect total count when using `box list users -m` to only list managed users.
+- Added CreatedAt field to CSV output for events.
+- Removed SyncState from CSV for creating folders.
+- Enabled setting a description for a folder when creating the folder.</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
