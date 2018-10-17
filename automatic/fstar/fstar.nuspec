@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>FStar</id>
-    <version>0.9.6.001</version>
+    <version>0.9.6.000</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/fstar</packageSourceUrl>
     <owners>AdmiringWorm, chantisnake</owners>
     <title>F* language</title>
