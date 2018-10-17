@@ -8,7 +8,7 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate {
   Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
-  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/rssguard/Changelog.md)"
+  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/rssguard/Changelog.md)"
 
   Update-Changelog -useIssueTitle
 }
