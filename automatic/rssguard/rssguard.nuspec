@@ -21,7 +21,7 @@
     <description><![CDATA[RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator developed using Qt framework which supports online feed synchronization.
 ]]></description>
     <releaseNotes>[Software Changelog](https://github.com/martinrotter/rssguard/releases/tag/3.5.6)
-  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/rssguard/Changelog.md)</releaseNotes>
+  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/rssguard/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
