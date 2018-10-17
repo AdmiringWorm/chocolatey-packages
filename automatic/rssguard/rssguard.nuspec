@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>rssguard</id>
-    <version>3.5.6</version>
+    <id>RssGuard</id>
+    <version>3.5.6.20181017</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rssguard</packageSourceUrl>
     <owners>AdmiringWorm, chantisnake</owners>
     <title>Rss Guard</title>
     <authors>martinrotter</authors>
     <projectUrl>https://github.com/martinrotter/rssguard</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@752bfa80d1bad1a4cc05b50d2d2bda7ccb2732f0/icons/rssguard.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@65eb2336a848018e45cd35b91549c0feec221dd8/icons/rssguard.png</iconUrl>
     <licenseUrl>https://github.com/martinrotter/rssguard/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/martinrotter/rssguard</projectSourceUrl>
@@ -18,28 +18,10 @@
     <tags>rssguard rss qt foss cross-platform</tags>
     <summary>RSS Guard is simple (yet powerful) feed reader. This is the official project repository.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>RSS Guard
-=========
-
-[![AppVeyor](https://img.shields.io/appveyor/ci/martinrotter/rssguard.svg?maxAge=360)](https://ci.appveyor.com/project/martinrotter/rssguard)
-[![Travis CI](https://img.shields.io/travis/martinrotter/rssguard.svg?maxAge=360)](https://travis-ci.org/martinrotter/rssguard)
-[![Total downloads](https://img.shields.io/github/downloads/martinrotter/rssguard/total.svg?maxAge=360)](#)
-[![Version](https://img.shields.io/github/release/martinrotter/rssguard.svg?maxAge=360)](#)
-[![GitHub issues](https://img.shields.io/github/issues/martinrotter/rssguard.svg?maxAge=360)](#)
-[![AUR](https://img.shields.io/aur/votes/rssguard.svg?maxAge=3600)](https://aur.archlinux.org/packages/rssguard/)
-[![License](https://img.shields.io/github/license/martinrotter/rssguard.svg?maxAge=360000)](#)
-
-Welcome to RSS Guard website. You can find here basic information.
-
-RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator developed using Qt framework which supports online feed synchronization.
-
-#### You can support this project via donations [HERE](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XMWPLPK893VH4).
-
-#### See [Wiki](https://github.com/martinrotter/rssguard/wiki) for more information about features, download links and other stuff.</description>
-    <releaseNotes>
-[Software Changelog](https://github.com/martinrotter/rssguard/releases/tag/3.5.6)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/rssguard/Changelog.md)
-    </releaseNotes>
+    <description><![CDATA[RSS Guard is simple, light and easy-to-use RSS/ATOM feed aggregator developed using Qt framework which supports online feed synchronization.
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/martinrotter/rssguard/releases/tag/3.5.6)
+  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/rssguard/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

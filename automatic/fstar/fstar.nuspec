@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>fstar</id>
-    <version>0.9.6.0</version>
+    <id>FStar</id>
+    <version>0.9.6.001</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/fstar</packageSourceUrl>
     <owners>AdmiringWorm, chantisnake</owners>
     <title>F* language</title>
     <authors>FStarLang</authors>
     <projectUrl>https://www.fstar-lang.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9ccc1bd8a9b4d7010facb296948c70aa3b3125c7/icons/fstar.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0557123379b71b0c289d0ca43351bc9f743141e4/icons/fstar.png</iconUrl>
     <licenseUrl>https://github.com/FStarLang/FStar/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/FStarLang/FStar</projectSourceUrl>
@@ -18,8 +18,12 @@
     <tags>fstar programming_language proof_assistant dependent_type fsharp ocaml foss cross-platform</tags>
     <summary>An ML-like language aimed at program verification</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description></description>
-    <releaseNotes>s</releaseNotes>
+    <description><![CDATA[F* (pronounced F star) is a general-purpose functional programming language with effects aimed at program verification. It puts together the automation of an SMT-backed deductive verification tool with the expressive power of a proof assistant based on dependent types. After verification, F* programs can be extracted to efficient OCaml, F#, or C code. This enables verifying the functional correctness and security of realistic applications, such as a verified HTTPS stack.
+
+F*'s type system includes dependent types, monadic effects, refinement types, and a weakest precondition calculus. Together, these features allow expressing precise and compact specifications for programs, including functional correctness and security properties. The F* type-checker aims to prove that programs meet their specifications using a combination of SMT solving and interactive proofs.
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/FStarLang/FStar/releases/tag/v0.9.6.0)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/fstar/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
