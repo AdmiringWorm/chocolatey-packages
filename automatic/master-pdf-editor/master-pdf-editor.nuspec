@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>master-pdf-editor</id>
-    <version>5.1.60</version>
+    <version>5.1.68</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/master-pdf-editor</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Master PDF Editor</title>
     <authors>Code Industry Ltd.</authors>
     <projectUrl>https://code-industry.net/masterpdfeditor/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e58c3a6b74fd2ee53362b599ddda17d2843363e6/icons/master-pdf-editor.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e58c3a6b74fd2ee53362b599ddda17d2843363e6/icons/master-pdf-editor.png</iconUrl>
     <copyright>Copyright © Code Industry Ltd. All rights reserved</copyright>
     <licenseUrl>https://code-industry.net/terms-and-conditions/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
