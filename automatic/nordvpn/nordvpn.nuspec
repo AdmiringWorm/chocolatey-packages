@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nordvpn</id>
-    <version>6.17.6</version>
+    <version>6.18.5</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nordvpn</packageSourceUrl>
     <owners>AdmiringWorm, Sanshiro</owners>
     <title>NordVPN</title>
     <authors>NordVPN</authors>
     <projectUrl>https://nordvpn.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/faa11d24ea57cf3a32030d78cc07b04b98250498/icons/nordvpn.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@faa11d24ea57cf3a32030d78cc07b04b98250498/icons/nordvpn.png</iconUrl>
     <copyright>Copyright © 2012-2018 NordVPN.com</copyright>
     <licenseUrl>https://nordvpn.com/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
