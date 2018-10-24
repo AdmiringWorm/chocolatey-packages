@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cacher</id>
-    <version>1.6.11</version>
+    <version>1.6.13</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cacher</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Cacher</title>
     <authors>Penguin Labs, LLC</authors>
     <projectUrl>https://www.cacher.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/1b97d18d2b1ace59d330e87f45f5d80221db10c0/icons/cacher.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1b97d18d2b1ace59d330e87f45f5d80221db10c0/icons/cacher.png</iconUrl>
     <copyright>© 2018 Penguin Labs, LLC
 All Rights Reserved</copyright>
     <licenseUrl>https://www.cacher.io/terms/</licenseUrl>
