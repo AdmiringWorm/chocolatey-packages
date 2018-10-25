@@ -38,6 +38,7 @@ function global:au_GetLatest {
     URL32        = $release.Assets | ? { $_ -match '\.7z$' }
     ReleaseNotes = $release.Body
     ReleaseUrl   = $release.ReleaseUrl
+    PackageName  = 'Cmder'
   }
 }
 
