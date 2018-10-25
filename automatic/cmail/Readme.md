@@ -1,4 +1,4 @@
-# [![Cmail](https://img.shields.io/chocolatey/v/cmail.svg?label=Cmail&style=for-the-badge)](https://chocolatey.org/packages/cmail)
+# [![CMail](https://img.shields.io/chocolatey/v/cmail.svg?label=CMail&style=for-the-badge)](https://chocolatey.org/packages/cmail)
 
 CMail is a freeware command line e-mail sending tool for Windows, primarily intended for sending scripted e-mail, but it is simple enough to be used interactively. If you are looking for an alternative to Blat with SSL support, or more control over message formatting, CMail may be a good choice.
 

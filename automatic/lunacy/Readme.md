@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@443c6adfe782bddd5640f3f2d082f7bcef211134/icons/lunacy.png" height="48" width="48" /> ![Lunacy](https://img.shields.io/chocolatey/v/lunacy.svg?label=lunacy%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/lunacy)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@443c6adfe782bddd5640f3f2d082f7bcef211134/icons/lunacy.png" height="48" width="48" /> ![Lunacy](https://img.shields.io/chocolatey/v/lunacy.svg?label=Lunacy&style=for-the-badge)](https://chocolatey.org/packages/lunacy)
 
 Lunacy is a native Windows app that opens, edits, and stores .sketch files.
 

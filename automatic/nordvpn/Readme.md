@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@faa11d24ea57cf3a32030d78cc07b04b98250498/icons/nordvpn.png" height="48" width="48" /> ![nordvpn (Install)](https://img.shields.io/chocolatey/v/nordvpn.svg?label=nordvpn%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/nordvpn)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@faa11d24ea57cf3a32030d78cc07b04b98250498/icons/nordvpn.png" height="48" width="48" /> ![NordVPN](https://img.shields.io/chocolatey/v/nordvpn.svg?label=NordVPN&style=for-the-badge)](https://chocolatey.org/packages/nordvpn)
 
 **Enjoy secure and private access to the Internet**
 
