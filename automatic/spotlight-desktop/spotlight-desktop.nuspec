@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spotlight-desktop</id>
-    <version>0.0</version>
+    <version>2.0.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/spotlight-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Spotlight Desktop</title>
@@ -37,7 +37,7 @@
 - This application installs itself into the current users Application Data (typically `%AppData%\onlineth\Spotlight Desktop`)
 ]]></description>
     <releaseNotes>[Software Changelog](https://github.com/onlineth/Spotlight-Desktop/releases/tag/2.0.1)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/spotlight-desktop/Changelog.md)</releaseNotes>
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/spotlight-desktop/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
