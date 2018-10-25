@@ -18,7 +18,7 @@ function resolveLatestRelease {
 
   $version = $matches[1];
 
-  [array]$assetUrls = $release.assets | ? name -Match "\.(msi|exe)$" | select -expand browser_download_url;
+  [array]$assetUrls = $release.assets | ? name -Match "\.(msi|exe|zip|7z)$" | select -expand browser_download_url;
   $assetUrls += @($release.tarball_url; $release.zipball_url)
 
   return @{
