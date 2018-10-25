@@ -3,11 +3,19 @@
 $releases = 'https://github.com/coq/coq/releases/latest'
 $softwareName = 'coq*'
 
+$repoInfo = @{
+  repoUser = 'coq'
+  repoName = 'coq'
+}
+
 function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
   $releaseNotes = "
-[Software Changelog]($($Latest.ReleaseNotes))
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/$($Latest.PackageName.ToLowerInvariant())/Changelog.md)"
+## [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/$($Latest.PackageName.ToLowerInvariant())/Changelog.md)
+
+## Software Release Notes
+$($Latest.ReleaseNotes)
+"
 
   Update-Metadata -key "releaseNotes" -value $releaseNotes
 }
@@ -30,26 +38,14 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $latestRelease = Get-LatestGithubReleases @repoInfo | % latest
+  $releaseNotes = $latestRelease.Body.Substring(0, $latestRelease.Body.IndexOf("Distribution"))
 
-  $re = 'i686\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
-
-  $re = 'x86_64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
-
-  $verRe = '\/V?'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
-  if ($version32 -ne $version64) {
-    throw "32bit version do not match the 64bit version"
-  }
   @{
-    URL32        = $url32
-    URL64        = $url64
-    Version      = $version32
-    ReleaseNotes = $download_page.links | ? href -match "CHANGES$" | select -first 1 -expand href | % { 'https://github.com' + $_ }
-    PackageName  = 'Coq'
+    Version = $latestRelease.Version
+    ReleaseNotes = $releaseNotes
+    URL32 = $latestRelease.Assets | ? { $_ -match "i686\.exe$" }
+    URL64 = $latestRelease.Assets | ? { $_ -match "x86_64\.exe$" }
   }
 }
 
