@@ -5,10 +5,10 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   destination = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
-  file        = "$toolsPath\"
+  file        = "$toolsPath\cmder.7z"
 }
 
 Get-ChocolateyUnzip @packageArgs
-rm $toolsPath\*.7z -ea 0
+Remove-Item $toolsPath\*.7z -ea 0
 
 Install-ChocolateyPath $packageArgs['destination'] 'User'

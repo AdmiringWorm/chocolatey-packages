@@ -9,5 +9,5 @@ Import-Module $unScriptPath
 Uninstall-ChocolateyPath $installPath 'User'
 
 if (Test-Path $installPath) {
-  rm -path $installPath -Recurse -Force
+  Remove-Item -path $installPath -Recurse -Force
 }

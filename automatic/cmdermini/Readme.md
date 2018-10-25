@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8de5298ea8e9a8b144f2c7be074be60e298144dd/icons/cmder.png" height="48" width="48" /> ![Cmder Mini](https://img.shields.io/chocolatey/v/cmdermini.svg?label=Cmder%20Mini&style=for-the-badge)](https://chocolatey.org/packages/cmdermini)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@19f0c1f2c90aeb944905ec1f42a61e925f82e0be/icons/cmder.png" height="48" width="48" /> ![Cmder Mini](https://img.shields.io/chocolatey/v/cmdermini.svg?label=Cmder%20Mini&style=for-the-badge)](https://chocolatey.org/packages/cmdermini)
 
 CmderMini (no bundled msysgit) is a software package created out of pure frustration over absence of usable console emulator on Windows. It is based on ConEmu with major config overhaul. Monokai color scheme, amazing clink and custom prompt layout.
 
