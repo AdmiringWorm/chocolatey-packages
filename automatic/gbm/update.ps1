@@ -1,13 +1,19 @@
 ﻿Import-Module AU
 
-$releases = 'https://github.com/MikeMaximus/gbm/releases/latest'
 $softwareName = 'Game Backup Monitor*'
+$repoInfo = @{
+  repoUser = 'MikeMaximus'
+  repoName = 'gbm'
+}
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_AfterUpdate {
   Update-Metadata -key "releaseNotes" -value @"
-[Software Changelog]($($Latest.ReleaseNotes))
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/gbm/Changelog.md)
+### [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/gbm/Changelog.md)
+
+### Software Release notes
+
+$($Latest.ReleaseNotes)
 "@
   Update-Changelog -useIssueTitle
 }
@@ -15,7 +21,7 @@ function global:au_AfterUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
@@ -34,25 +40,20 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $latest = Get-LatestGithubReleases @repoInfo | % latest
 
   $re = '32\-bit\.Installer\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url32 = $latest.Assets | ? { $_ -match $re }
 
   $re = '64\-bit\.Installer\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url64 = $latest.Assets | ? { $_ -match $re }
 
-  $verRe = '\.v|\.(32|64)'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 2
-  if ($version32 -ne $version64) {
-    throw "32bit version do not match the 64bit version"
-  }
   @{
     URL32   = $url32
     URL64   = $url64
-    Version = $version32
-    ReleaseNotes = Get-RedirectedUrl $releases
+    Version = $latest.Version
+    ReleaseNotes = $latest.Body
+    ReleaseUrl = $latest.ReleaseUrl
   }
 }
 
