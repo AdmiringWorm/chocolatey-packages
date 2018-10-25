@@ -11,7 +11,14 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate {
+  Update-Changelog -useIssueTitle
+
+  Update-Metadata -key "releaseNotes" -value "
+  [Software Changelog]($($Latest.ReleaseUrl))
+  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/enki/Changelog.md)
+"
+}
 
 function global:au_SearchReplace {
   @{
@@ -28,13 +35,22 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $latest = Get-LatestGithubReleases @repoInfo | % latest
+  $versions = Get-AllGithubReleases @repoInfo | ? { $_.Assets | ? { $_ -match '\.exe$' }} | select -first 2
 
-  @{
-    Version    = $latest.Version
-    URL32      = $latest.Assets | ? { $_ -match '\.exe$' }
-    ReleaseUrl = $latest.ReleaseUrl
+  $streams = @{}
+  $versions | % {
+    $version = Get-Version $_.Version
+
+    if (!($streams.ContainsKey($version.ToString(2)))) {
+      $streams.Add($version.ToString(2), @{
+        Version = $version
+        URL32 = $_.Assets | ? { $_ -match '\.exe$' }
+        ReleaseUrl = $_.ReleaseUrl
+      })
+    }
   }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none
