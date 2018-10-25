@@ -64,11 +64,11 @@ function CheckPackageSizes() {
 
   $nupkgFiles | % {
     $size = $_.Length
-    $maxSize = 200 * 1024 *1024
+    $maxSize = 200MB
     $packageName = $_.Directory.Name
     if ($size -gt $maxSize) {
       $friendlySize = $size / 1024 / 1024
-      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 150 MB. Actual size was $friendlySize MB!"
+      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 200 MB. Actual size was $friendlySize MB!"
       SetAppveyorExitCode -ExitCode 2
     } else {
       $index = 0
