@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gtkwave</id>
-    <version>0.0</version>
+    <version>3.3.95</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/gtkwave</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GTKWave</title>
     <authors>Tony Bybell</authors>
     <projectUrl>http://gtkwave.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a69b83191347d61ddfc3aa9ed2320dd98df76932/icons/gtkwave.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a69b83191347d61ddfc3aa9ed2320dd98df76932/icons/gtkwave.png</iconUrl>
     <licenseUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/LICENSE.TXT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/</projectSourceUrl>
