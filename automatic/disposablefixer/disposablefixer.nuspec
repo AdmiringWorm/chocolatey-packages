@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>disposablefixer</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/disposablefixer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DisposableFixer</title>
     <authors>David Störmer</authors>
     <projectUrl>https://github.com/BADF00D/DisposableFixer</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2a324519b086feb9d82bf8b3e35543c48b9bfa89/icons/disposablefixer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2a324519b086feb9d82bf8b3e35543c48b9bfa89/icons/disposablefixer.png</iconUrl>
     <licenseUrl>https://github.com/BADF00D/DisposableFixer/blob/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/BADF00D/DisposableFixer</projectSourceUrl>
