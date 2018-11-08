@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Qemu</id>
-    <version>2018.08.15</version>
+    <version>2018.11.08</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qemu</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Qemu</title>
     <authors>Fabrice Bellard</authors>
     <projectUrl>https://www.qemu.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/890d7b8921600c8081a2b5b2e488cb17c1459f81/icons/qemu.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@890d7b8921600c8081a2b5b2e488cb17c1459f81/icons/qemu.png</iconUrl>
     <licenseUrl>http://wiki.qemu.org/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://git.qemu.org/?p=qemu.git;a=tree</projectSourceUrl>
