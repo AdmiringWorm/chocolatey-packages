@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <>
+location on <https://www.inveigle.net/cmail/download.shtml>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.0_x86-dev-5.zip>
+  64-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.0_amd64-dev-5.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 627A183B8DFBDEDF954B4060C44EA4B48B00A31F148A65E430A56641098B3F80
+  checksum64: A3FA7A4A2B7F811D31D44949FDF58A79A955CA77902DCB491D84F18D045B225D
 
 The file 'LICENSE.txt' has been obtained from their FAQ located at <https://www.inveigle.net/cmail/faq.shtml>
