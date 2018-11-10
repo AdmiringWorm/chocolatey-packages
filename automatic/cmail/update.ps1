@@ -7,7 +7,7 @@ $releases = 'https://www.inveigle.net/cmail/download.shtml'
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
   # Extract the archive so we can grab the ThirdParty.txt file
-  $archive = Get-Item "$PSScriptRoot\tools\*.zip"
+  $archive = gci "$PSScriptRoot\tools\*.zip" | select -first 1
   $tempLoc = "$env:TEMP\cmail"
   Expand-Archive -Path $archive -DestinationPath $tempLoc
   $tpFile = Get-ChildItem $tempLoc -Recurse -Filter "ThirdParty.txt" | select -First 1 -Expand FullName
@@ -19,14 +19,17 @@ function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"        = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
-    ".\tools\chocolateyInstall.ps1"   = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
   }
 }
@@ -34,31 +37,28 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.zip$'
-  $urls32 = $download_page.Links | ? { $_.href -match $re -and $_.href -notmatch 'NoSSL' } | select -expand href | % { 'https://www.inveigle.net' + $_ }
+  $urls = $download_page.Links | ? href -match '(amd64|x86).*\.zip$' | select -first 2 -expand href | % { 'https://www.inveigle.net' + $_ }
 
-  $streams = @{}
-  $urls32 | % {
-    $verRe = '_|\.zip'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    if ($version -match "^[\d\.]+[a-zA-Z]$") {
-      [char]$letter = $version.substring($version.Length - 1, 1)
-      [int]$num = $letter - [char]'a'
-      $version = $version -replace $letter, ".$num"
-    }
+  $url32 = $urls | ? { $_ -match 'x86' }
+  $url64 = $urls | ? { $_ -match 'amd64' }
 
-    $version = Get-Version $version
+  $verRe = 'CMail_([\d\.]+)_(?:x86|amd64)\-(.*)\.zip$'
 
-    $key = if ($version.PreRelease) { 'unstable' } else { 'stable' }
-    if (!($streams.ContainsKey($key))) {
-      $streams[$key] = @{
-        Version = $version.ToString()
-        URL32   = $_
-      }
-    }
+  if ($url32 -match $verRe) {
+    $version32 = $Matches[1] + '-' + $Matches[2]
   }
 
-  return @{ Streams = $streams }
+  if ($url64 -match $verRe) {
+    $version64 = $Matches[1] + '-' + $Matches[2]
+  }
+
+  if ($version32 -ne $version64) { throw "32bit and 64bit version do not match" }
+
+  return @{
+    URL32   = $url32
+    URL64   = $url64
+    Version = $version32
+  }
 }
 
 update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
