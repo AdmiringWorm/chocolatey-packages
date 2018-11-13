@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Cmder</id>
-    <version>1.3.7</version>
+    <version>1.3.8</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmder</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder</title>
@@ -39,156 +39,9 @@ See [cmdermini](https://chocolatey.org/packages/cmdermini) (8 MB) for basic cons
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmder/Changelog.md)
 
 ### Software changelog
-# [v1.3.7](https://github.com/cmderdev/cmder/tree/v1.3.7) (2018-11-10)
+### Fixes
 
-[Full Changelog](https://github.com/cmderdev/cmder/compare/v1.3.6...v1.3.7)
-
-## Highlights
-
- Tagging as v1.3.7 
-
-## Commits
-
-Aaron Arney (1):
-
-- Update README
-
-Arion Roberto Krause (1):
-
-- Fixed typo
-
-Benjamin Staneck (8):
-
-- :arrow_up: ConEmu to 180626
-- :arrow_up: Update Git to 2.19.0
-- Revert "replace user-aliases with user_aliases"
-- replace user-aliases with user_aliases
-- better fix for #1265
-- Revert "sanitize dir before assigning to prompt"
-- sanitize dir before assigning to prompt
-- Update CHANGELOG.md
-
-Bob Hood (1):
-
-- Refactored the Mercurial prompt code to be more efficient.
-
-David Refoua (1):
-
-- fix some spelling issues
-
-Dax T Games (8):
-
-- Revert "Ignore `%cmder_root%\config` (#1945)"
-- Ignore `%cmder_root%\config` (#1945)
-- Add /f for fast init. (#1942)
-- add diag helper scripts and adds to the path (#1918)
-- Fix #1806 #1675 (#1870)
-- Profile.ps1 (#1796)
-- Fix lib base (#1794)
-- Little Changes
-
-Dax T. Games (42):
-
-- Fixed move of default conemu.xml to the vendor folder
-- cleanup
-- ignore all of config folder
-- move default comemu.xml to vendor folder
-- fixes
-- more headers
-- init.bat update for cexec
-- git prompt yellow
-- cleanup
-- fix user lua and git detection
-- allow conditionally setting environment variables
-- cleanup
-- readme.md
-- readme.md
-- readme.md
-- added exit codes
-- flag_exists.cmd to flag_exec.cmd, also to lib as an option
-- cleanup
-- cleanup
-- fixed
-- handle start dir args with trailing \"
-- cleanup
-- '.gitignore'
-- cleanup
-- '.gitignore'
-- cleanup
-- cleanup
-- verbos output
-- cmder_shell settings
-- add cmder_shell method
-- replace - with _ in debug-output and verbose-output
-- trying to get tcc working
-- Trying to get tcc working
-- rename
-- modify message
-- move user-aliases.cmd to user_aliases.cmd
-- gitignore
-- move bin\alias.bat to vendor\bin\alias.cmd
-- cleanup
-- run user lua afer cmder lua
-- fix /unregister
-- load user clink
-
-Dmitri S. Guskov (2):
-
-- Powershell 5.1 compatibility
-- Update profile.ps1
-
-Gregory Lucas (1):
-
-- Initialize time_init to fix init error message
-
-Josef Pihrt (2):
-
-- Fix typos, remove escaping inside inline code, replace single quote with backtick
-- Fix typo and broken link
-
-Merlin (1):
-
-- Remove duplicate `Install-Module` detection
-
-Nicolas Arnaud-Cormos (1):
-
-- Ensure the right git path is found in case of shim.
-
-Thorsten Sommer (1):
-
-- Fixed spelling
-
-gaoslin (1):
-
-- Update init.bat
-
-leochien0102 (1):
-
-- fix the 'was unexpected at this time.'
-
-xiazeyu (4):
-
-- chore: unite slash
-- docs: update to latest useage
-- refactor: reduce global varible useage, fixed quote issue, added parameters support
-- doc: fix typo
-
-xiazeyu_2011 (8):
-
-- docs: migrated instructions to the wiki pages
-- rename /bin/have.bat to /vendor/lib/flag_exists.cmd
-- fix: bug when no argument is passed in
-- docs: update doc for have.bat
-- feat: add have.bat as a wrapper
-- Optimize comments of using arguments in user-profile.cmd
-- fix conflict with init.bat build-in command parser, update user-profile.cmd
-- Pass arguments to user-profile.cmd
-
-刘祺 (1):
-
-- add LANG support
-
-
+* Fix `\vendor\bin\timer.cmd was unexpected at this time.` on session start.
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
