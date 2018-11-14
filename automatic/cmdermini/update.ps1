@@ -28,6 +28,8 @@ function global:au_AfterUpdate {
 ### Software changelog
 $($Latest.ReleaseNotes)
   "
+
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_GetLatest {
@@ -35,7 +37,7 @@ function global:au_GetLatest {
 
   return @{
     Version      = $release.Version
-    URL32        = $release.Assets | ? { $_ -match '\.7z$' }
+    URL32        = $release.Assets | ? { $_ -match 'cmder_mini\.zip$' }
     ReleaseNotes = $release.Body
     ReleaseUrl   = $release.ReleaseUrl
   }
