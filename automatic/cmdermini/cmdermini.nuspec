@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmdermini</id>
-    <version>1.3.6</version>
+    <version>1.3.8</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmdermini</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder Mini</title>
@@ -38,7 +38,9 @@ See [cmder](https://chocolatey.org/packages/cmder) (250 MB) for enhanced console
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmdermini/Changelog.md)
 
 ### Software changelog
-See https://github.com/cmderdev/cmder/blob/master/CHANGELOG.md
+### Fixes
+
+* Fix `\vendor\bin\timer.cmd was unexpected at this time.` on session start.
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
