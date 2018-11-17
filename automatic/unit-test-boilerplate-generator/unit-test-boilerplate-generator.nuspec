@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>unit-test-boilerplate-generator</id>
-    <version>1.9.10</version>
+    <version>1.9.11</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/unit-test-boilerplate-generator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Unit Test Boilerplate Generator</title>
     <authors>RandomEngy,Microsoft</authors>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=RandomEngy.UnitTestBoilerplateGenerator</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/7f25c1838154fe1d1a6d73a052e5d0c351f0fd76/icons/unit-test-boilerplate-generator.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@7f25c1838154fe1d1a6d73a052e5d0c351f0fd76/icons/unit-test-boilerplate-generator.png</iconUrl>
     <copyright>Copyright (c) 2016 Microsoft</copyright>
     <licenseUrl>https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
