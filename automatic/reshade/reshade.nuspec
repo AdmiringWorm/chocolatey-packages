@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>reshade</id>
-    <version>3.4.1</version>
+    <version>4.0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/reshade</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ReShade</title>
     <authors>Patrick Mours,crosire</authors>
     <projectUrl>https://reshade.me/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2e8b9eb0b465415e629a31cade96590b4a0960d9/icons/reshade.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2e8b9eb0b465415e629a31cade96590b4a0960d9/icons/reshade.png</iconUrl>
     <copyright>ReShade © 2014 - 2017</copyright>
     <licenseUrl>https://github.com/crosire/reshade/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
