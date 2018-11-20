@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmail</id>
-    <version>0.8.0-dev-5</version>
+    <version>0.8.0-dev-6</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmail</packageSourceUrl>
     <owners>AdmiringWorm, whiggs</owners>
     <title>CMail</title>
