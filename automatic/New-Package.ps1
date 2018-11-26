@@ -2,7 +2,8 @@ param(
     [Parameter(Mandatory = $true)]
     $Name,
     [ValidateSet('Portable', 'Installer')]
-    [string] $Type='Installer'
+    [string] $Type='Installer',
+    [string]$iconUrl = $null
 )
 # Original Source: <https://github.com/majkinetor/chocolatey/blob/master/New-Package.ps1>
 
@@ -22,7 +23,10 @@ function New-Package{
         [string] $Type,
 
         #Github repository in the form username/repository
-        [string] $GithubRepository
+        [string] $GithubRepository,
+
+        # The url to the icon
+        [string]$iconUrl
     )
 
     if ($Name -eq $null) { throw "Name can't be empty" }
@@ -31,8 +35,13 @@ function New-Package{
     $LowerName = $Name.ToLower() -replace ' ','-'
     cp _template $LowerName -Recurse
 
+    if ($iconUrl) {
+      $extension = [System.IO.Path]::GetExtension($iconUrl)
+      iwr $iconUrl -OutFile "../icons/${LowerName}${extension}" -UseBasicParsing
+    }
+
     Move-Item "$LowerName/template.nuspec" "$LowerName/$LowerName.nuspec" -Force;
-    ../setup/Update-IconUrl.ps1 -Name "$LowerName" -GithubRepository $GithubRepository;
+    ../scripts/Update-IconUrl.ps1 -Name "$LowerName" -GithubRepository $GithubRepository -Optimize;
     $nuspec = gc -Encoding utf8 "$LowerName/$LowerName.nuspec";
 
     Write-Verbose 'Fixing nuspec'
@@ -61,4 +70,4 @@ function New-Package{
     $installer -replace "(?i)(^\s*packageName\s*=\s*)('.*')", "`$1'$($LowerName)'" | sc "$LowerName\tools\chocolateyInstall.ps1"
 }
 
-New-Package $Name $Type -GithubRepository AdmiringWorm/chocolatey-packages -Verbose
+New-Package $Name $Type -GithubRepository AdmiringWorm/chocolatey-packages -Verbose -iconUrl $iconUrl
