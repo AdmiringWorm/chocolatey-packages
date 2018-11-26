@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>vacuum-im</id>
     <version>0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vacuum-im</packageSourceUrl>
@@ -18,6 +17,7 @@
     <bugTrackerUrl>https://github.com/Vacuum-IM/vacuum-im/issues</bugTrackerUrl>
     <tags>vacuum-im jabber xmpp chat</tags>
     <summary>Full-featured crossplatform Jabber/XMPP client</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Full-featured crossplatform Jabber/XMPP client.
 The core program is just a plugin loader, all functionality is made available
@@ -41,9 +41,14 @@ interaction via interfaces.
 * Support for avatars with the ability to specify a contact an arbitrary image as an avatar
 * Ability to add annotation to contact
     </description>
-    <releaseNotes>https://github.com/Vacuum-IM/vacuum-im/releases</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://github.com/Vacuum-IM/vacuum-im/releases)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vacuum-im/Changelog.md)
+    </releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="..\..\icons\vacuum-im.ico" target="icons" />
   </files>
 </package>

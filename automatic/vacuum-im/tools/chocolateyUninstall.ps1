@@ -1,19 +1,21 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
-$packageName = ''
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  softwareName  = 'vacuum-im*'
+  fileType      = 'msi'
+  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes= @(@(0, 2010, 1641))
+}
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName ''
+
+[array]$key = Get-UninstallRegistryKey @packageArgs
 
 if ($key.Count -eq 1) {
   $key | % {
-  $packageArgs = @{
-    packageName    = $packageName
-    fileType       = 'EXE'
-    silentArgs     = '/VERYSILENT'
-    validExitCodes = @(0)
-    file           = "$($_.UninstallString)"
-  }
+    $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
+    $packageArgs['file'] = ''
 
     Uninstall-ChocolateyPackage @packageArgs
   }
@@ -22,6 +24,6 @@ if ($key.Count -eq 1) {
 } elseif ($key.Count -gt 1) {
   Write-Warning "$($key.Count) matches found!"
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
-  Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $($_.DisplayName)"}
+  Write-Warning "Please alert the package maintainer that the following keys were matched:"
+  $key | % { Write-Warning "- $($_.DisplayName)" }
 }

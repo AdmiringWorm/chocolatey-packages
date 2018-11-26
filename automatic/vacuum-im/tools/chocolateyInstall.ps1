@@ -1,19 +1,22 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName   = 'vacuum-im'
-  fileType      = 'exe'
-  softwareName  = 'Vacuum-IM'
-
-  checksum      = ''
-  checksum64    = ''
-  checksumType  = ''
-  checksumType64= ''
-  url           = ''
-  url64bit      = ''
-
-  silentArgs    = "/VERYSILENT"
-  validExitCodes= @(0)
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'msi'
+  file           = "$toolsPath\"
+  softwareName   = 'vacuum-im*'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 2010, 1641)
 }
 
-Install-ChocolateyPackage @packageArgs
+$pp = Get-PackageParameters
+if ($pp.GPO) {
+  "Switching to GPO edition..."
+  $packageArgs['file'] = "$toolsPath\"
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
