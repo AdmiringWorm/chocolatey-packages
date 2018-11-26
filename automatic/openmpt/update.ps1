@@ -31,8 +31,8 @@ function global:au_GetLatest {
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://openmpt.org' + $_ }
 
   $verRe = '[-]'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 2
+  [version]$version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  [version]$version64 = $url64 -split "$verRe" | select -last 1 -skip 2
   if ($version32 -ne $version64) {
     throw "32bit version do not match the 64bit version"
   }
