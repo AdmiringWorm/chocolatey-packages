@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vacuum-im</id>
-    <version>0.0</version>
+    <version>1.2.5</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vacuum-im</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Vacuum-IM</title>
     <authors>Sergey Potapov,Maxim Ignatenko,Mikhail Borisov,Andrey Karepin,Alexey Ivanov</authors>
     <projectUrl>http://www.vacuum-im.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f18e1d35a7eedd6e367ace7c1dd267ae858ad47a/icons/vacuum-im.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c20f2a17e916fd4bfd2e30946f8f015c9de3b0d0/icons/vacuum-im.ico</iconUrl>
     <licenseUrl>https://github.com/Vacuum-IM/vacuum-im/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Vacuum-IM/vacuum-im</projectSourceUrl>
@@ -18,8 +18,7 @@
     <tags>vacuum-im jabber xmpp chat</tags>
     <summary>Full-featured crossplatform Jabber/XMPP client</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Full-featured crossplatform Jabber/XMPP client.
+    <description><![CDATA[Full-featured crossplatform Jabber/XMPP client.
 The core program is just a plugin loader, all functionality is made available
 via plugins. This enforces modularity and ensures well defined component
 interaction via interfaces.
@@ -40,10 +39,15 @@ interaction via interfaces.
 * Ability to set different status icons for individual contacts, and groups of contacts are connected through transport
 * Support for avatars with the ability to specify a contact an arbitrary image as an avatar
 * Ability to add annotation to contact
-    </description>
+
+## Package Parameters
+* `/GPO` - Install the GPO edition of Vacuum-IM
+
+Example: `choco install vacuum-im --package-parameters="'/GPO'"`
+]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/Vacuum-IM/vacuum-im/releases)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vacuum-im/Changelog.md)
+[Software Changelog](https://github.com/Vacuum-IM/vacuum-im/releases/tag/1.2.5)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/vacuum-im/Changelog.md)
     </releaseNotes>
   </metadata>
   <files>

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f18e1d35a7eedd6e367ace7c1dd267ae858ad47a/icons/vacuum-im.ico" height="48" width="48" /> ![Vacuum-IM](https://img.shields.io/chocolatey/v/vacuum-im.svg?label=Vacuum-IM&style=for-the-badge)](https://chocolatey.org/packages/vacuum-im)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c20f2a17e916fd4bfd2e30946f8f015c9de3b0d0/icons/vacuum-im.ico" height="48" width="48" /> ![Vacuum-IM](https://img.shields.io/chocolatey/v/vacuum-im.svg?label=Vacuum-IM&style=for-the-badge)](https://chocolatey.org/packages/vacuum-im)
 
 Full-featured crossplatform Jabber/XMPP client.
 The core program is just a plugin loader, all functionality is made available
