@@ -1,0 +1,3 @@
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@36f480238c82ed040dee8926cf562c1c78e73ac3/icons/openmpt.png" height="48" width="48" /> ![OpenMPT](https://img.shields.io/chocolatey/v/openmpt.svg?label=OpenMPT&style=for-the-badge)](https://chocolatey.org/packages/openmpt)
+
+OpenMPT is being developed since 1997 (initially named ModPlug Tracker) and has grown a lot since then. It can be used as a "classic" sample-based tracker to edit and play your favourite tracked music, but also as a modern DAW with plugin support and other great features. Here, you can find some of the key features of the tracker.
