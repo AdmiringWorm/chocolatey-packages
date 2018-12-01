@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>2018.1.18250</version>
+    <version>2018.1.18330</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
     <authors>submain</authors>
     <projectUrl>http://submain.com/products/ghostdoc.aspx</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/9cc5e849e4ac105af5371fdb4c196017ed8fe1a0/icons/ghostdoc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9cc5e849e4ac105af5371fdb4c196017ed8fe1a0/icons/ghostdoc.png</iconUrl>
     <copyright>© 1998-2017 SubMain Software.  All rights reserved.</copyright>
     <licenseUrl>http://submain.com/ghostdoc/EULA.aspx</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -39,7 +39,7 @@ If you follow good naming conventions in your code, then you will get very decen
 ## Notes
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
-    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  
+    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.28.01" />
