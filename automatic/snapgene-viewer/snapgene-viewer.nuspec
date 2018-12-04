@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snapgene-viewer</id>
-    <version>4.2.6</version>
+    <version>4.2.7</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/snapgene-viewer</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>SnapGene Viewer</title>
     <authors>GSL Biotech LLC</authors>
     <projectUrl>https://www.snapgene.com/products/snapgene_viewer/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c41ccac1ed8c0477487dff021853b519eab9e855/icons/snapgene-viewer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c41ccac1ed8c0477487dff021853b519eab9e855/icons/snapgene-viewer.png</iconUrl>
     <copyright>Copyright © 2017 GSL Biotech LLC</copyright>
     <tags>snapgene-viewer dna visualization</tags>
     <summary>SnapGene Viewer is revolutionary software that allows molecular biologists to create, browse, and share richly annotated DNA sequence files up to 1 Gb in length.</summary>
