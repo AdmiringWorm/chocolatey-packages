@@ -1,31 +1,29 @@
 ﻿Import-Module AU
 
 $releases = 'https://www1.qt.io/offline-installers/'
-$softwareName = 'qtcreator*'
-
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -FileNameBase "qtcreator"
-}
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleasesLocation)>"
-      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
-      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
-    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
-      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)^(\s*url\s*=\s*)'.*'"            = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*url64(bit)?\s*=\s*)'.*'"    = "`${1}'$($Latest.URL64)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"       = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'"   = "`${1}'$($Latest.ChecksumType32)'"
+      "(?i)^(\s*checksum64\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum64)'"
+      "(?i)^(\s*checksumType64\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType64)'"
     }
   }
 }
 
 function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
+
+  $releaseNotes = @"
+[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-$($Latest.RemoteVersion).md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator/Changelog.md)
+"@
+
+  Update-Metadata -key "releaseNotes" -value $releaseNotes
 }
 
 function global:au_GetLatest {
@@ -44,11 +42,11 @@ function global:au_GetLatest {
   $url64 = ($links -match '_64\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
 
   return @{
-    URL32            = $url32
-    URL64            = $url64
-    Version          = $version
-    ReleasesLocation = $url
+    URL32         = $url32
+    URL64         = $url64
+    Version       = $version
+    RemoteVersion = $version
   }
 }
 
-update -ChecksumFor none
+update
