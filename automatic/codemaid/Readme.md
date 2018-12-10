@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/38677c493b7bae294eaa44d2e749d1e47ac0b823/icons/codemaid.png" height="48" width="48" /> ![CodeMaid](https://img.shields.io/chocolatey/v/codemaid.svg?label=CodeMaid&style=for-the-badge)](https://chocolatey.org/packages/codemaid)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@38677c493b7bae294eaa44d2e749d1e47ac0b823/icons/codemaid.png" height="48" width="48" /> ![CodeMaid](https://img.shields.io/chocolatey/v/codemaid.svg?label=CodeMaid&style=for-the-badge)](https://chocolatey.org/packages/codemaid)
 
 An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, PHP, PowerShell, R, JSON, XAML, XML, ASP, HTML, CSS, LESS, SCSS, JavaScript and TypeScript coding.
 
