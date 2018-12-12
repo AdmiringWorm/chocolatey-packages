@@ -36,6 +36,10 @@ function New-Package{
     cp _template $LowerName -Recurse
 
     if ($iconUrl) {
+      [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
+        768 -bor
+        [System.Net.SecurityProtocolType]::Tls -bor
+        [System.Net.SecurityProtocolType]::Ssl3
       $extension = [System.IO.Path]::GetExtension($iconUrl)
       iwr $iconUrl -OutFile "../icons/${LowerName}${extension}" -UseBasicParsing
     }
