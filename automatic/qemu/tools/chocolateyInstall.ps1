@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20181128.exe'
-  url64bit       = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20181128.exe'
+  url            = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20181211.exe'
+  url64bit       = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20181211.exe'
   softwareName   = 'QEMU'
-  checksum       = '90bc45f50d6d53804a9c89bce460b7751331ecd59ffa946bff77b5bfa2bcc36f'
+  checksum       = '07093b8b8cf063c3a96f145668a6264598e756dac9a40fd725b8fed9c34dd439'
   checksumType   = 'sha256'
-  checksum64     = 'c2286dc73fc1f7f0f274725ab73e713681f7b9eb049e654995dc0879262a409f'
+  checksum64     = '0d4f824cb436f0e13038d750b1065197a2027386ede2326e0bd62a0a0702b228'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
