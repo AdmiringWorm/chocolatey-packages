@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\"
   softwareName   = 'stretchly*'
-  silentArgs     = '/S'
+  silentArgs     = '/S /allusers'
   validExitCodes = @(0)
 }
 
