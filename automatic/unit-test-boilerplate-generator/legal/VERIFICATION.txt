@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The extension has been downloaded from visual studio gallery <https://marketplace.visualstudio.com/items?itemName=RandomEngy.UnitTestBoilerplateGenerator>
 and can be verified like this:
 
-1. Download <https://randomengy.gallerycdn.vsassets.io/extensions/randomengy/unittestboilerplategenerator/1.9.13/1544168429384/Unit_Test_Boilerplate_Generator_v1.9.13.vsix>
+1. Download <https://randomengy.gallerycdn.vsassets.io/extensions/randomengy/unittestboilerplategenerator/1.9.15/1545185626734/Unit_Test_Boilerplate_Generator_v1.9.15.vsix>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: F562F07CA4D3E4215D460A53F069F38C86FE357868F00087F6ED168D31049BAC
+  checksum: 4AB81B03248C069D691BD34BA13A3DCA5E712CF41BFC83CC41777E3DFB64979A
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/46b546e65c20786ffdcba04a6011b638f79e6d25/LICENSE>
