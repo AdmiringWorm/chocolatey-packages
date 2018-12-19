@@ -1,7 +1,6 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$releases = 'https://uplay.ubi.com/'
 $softwareName = 'Uplay'
 
 function global:au_SearchReplace {
@@ -35,9 +34,7 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $url32 = $download_page.Links | ? outerHTML -match "\>Download Uplay"| select -first 1 -expand href | % { Get-RedirectedUrl $_ }
+  $url32 = Get-RedirectedUrl "http://ubi.li/4vxt9"
 
   return Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
