@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>r</id>
-    <version>3.5.1</version>
+    <version>3.5.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The R Project for Statistical Computing</title>
     <authors>R Core Team</authors>
     <projectUrl>http://www.r-project.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg</iconUrl>
     <copyright>Copyright (C) 2016 The R Foundation for Statistical Computing</copyright>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -56,7 +56,7 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="r.project" version="[3.5.1]" />
+      <dependency id="r.project" version="[3.5.2]" />
     </dependencies>
   </metadata>
   <files />
