@@ -7,15 +7,15 @@ location on <https://nagstamon.ifw-dresden.de/download/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.0.2-win32_setup.exe>
-  64-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.0.2-win64_setup.exe>
+  32-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.2-win32_setup.exe>
+  64-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.2-win64_setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 7DD95685A7F18ECAA60197E299D16B290DDA421C969619C32F77CE6F4511AD69
-  checksum64: 6AD8A0511628F9E8721A6EF87A7FFF680B43629CB46BD34A2344A9D7B34E99C3
+  checksum32: C83BB96E07803864433194CAEFC6D2511A793C2E0EC80903F0C6C99D7FCB8980
+  checksum64: 7F16BF2F03A22D874E18E7FF664EB86F796D5D2062B2B32F64BB3354AA94DD3E
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE>

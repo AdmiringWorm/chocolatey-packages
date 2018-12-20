@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nagstamon.install</id>
-    <version>3.0.2.20171105</version>
+    <version>3.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Nagstamon (Install)</title>
     <authors>Henri Wahl</authors>
     <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5470b935d572ee4593af7ece11494ecff9806d16/icons/nagstamon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@5470b935d572ee4593af7ece11494ecff9806d16/icons/nagstamon.png</iconUrl>
     <copyright>© 2008-2014 Henri Wahl et al.</copyright>
     <licenseUrl>https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
