@@ -1,3 +1,9 @@
+## Important Notes
+
+**Between the dates of 21st of December, and 4th of January failing packages will unfortunately not be fixed.**
+This is because of me being away for the holidays during those days.
+This will include any opened Pull Requests/Issues, as well as any form of contact (most likely).
+
 Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
 
 **Want to buy me a beer?**
