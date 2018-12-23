@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmdermini</id>
-    <version>1.3.10</version>
+    <version>1.3.11</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmdermini</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder Mini</title>
@@ -38,21 +38,27 @@ See [cmder](https://chocolatey.org/packages/cmder) (250 MB) for enhanced console
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmdermini/Changelog.md)
 
 ### Software changelog
-## Fixes
+## [1.3.11](https://github.com/cmderdev/cmder/tree/v1.3.11) (2018-12-22)
 
-* Replaces Cmder Release v1.3.9 which has been removed.
+### Fixes
 
-* `/c` now completely separates user config including Conemu configuration.  This enables true multi-user Cmder with no configuration collisions.  See PR #1949.
+* Fix uncommenting `call ssh-agent` in `user_profile.cmd` breaks Cmder prompt. [#1990](https://github.com/cmderdev/cmder/issues/1990), [#1807](https://github.com/cmderdev/cmder/issues/1807), [#1785](https://github.com/cmderdev/cmder/issues/1785), [#1885](https://github.com/cmderdev/cmder/issues/1885)
+  * Pull Request: [#1999](https://github.com/cmderdev/cmder/issues/1999) fix ssh-agent call in user_profile.cmd.default
+* Unable to use '%' character in git branch names [#1779](https://github.com/cmderdev/cmder/issues/1779)
+  * Pull Request: [#1991](https://github.com/cmderdev/cmder/issues/1991) add percent escaping for string.gsub 
+* sort command, unix vs windows (/usr/bin/sort vs sort.exe) [#1931](https://github.com/cmderdev/cmder/issues/1931)
+  * Pull Request: [#1988](https://github.com/cmderdev/cmder/issues/1988) Prefer /nix_tools option
 
-* Fix #1959 Start cmder "find" errors. See PR #1961.
+### Adds
 
-* Fix #1956 Git detection should use env from git install root. See PR #1969
+* [#1988](https://github.com/cmderdev/cmder/issues/1988) Prefer /nix_tools option
+* [#1982](https://github.com/cmderdev/cmder/issues/1982) make /register work with /single
+* [#1975](https://github.com/cmderdev/cmder/issues/1975) Add `/nix_tools 0` option to init.bat to prevent adding !GIT_INSTALL_ROOT!\usr\bin to PATH
 
-## Adds
 
-* `/m` initially creates `%cmder_root%/config/conemu-%computername%.xml` for users that want per computer Conemu configuration with shared init scripts.  See PR #1949.
+### Changes
 
-* `/register` now recognizes `/c [path]` and creates an appropriate `Cmder Here` shell context menu.  See PR #1949.
+* [#1987](https://github.com/cmderdev/cmder/issues/1987) Use default files for default user profiles
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
