@@ -52,7 +52,7 @@ function global:au_GetLatest {
 function GetVersion {
   $download_page = Invoke-WebRequest "https://submain.com/products/ghostdoc.aspx" -UseBasicParsing
 
-  $download_page.Content -match "product_info[^`"]+`"\>\s*([\d\.]+)" | Out-Null
+  $download_page.Content -match "product_info[^`"]+`"\>\s*v?([\d\.]+)" | Out-Null
 
   if ($matches) {
     return $matches[1]
