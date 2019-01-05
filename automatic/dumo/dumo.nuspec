@@ -29,6 +29,9 @@
 #### Freeware
 This package installs the Free version.  A supported version with enhanced performance is available for purchase.</description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dumo/Changelog.md)</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.27.06" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
