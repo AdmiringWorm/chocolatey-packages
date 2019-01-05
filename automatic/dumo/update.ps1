@@ -2,7 +2,7 @@
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = 'https://www.kcsoftwares.com/?download'
-$softwareName = 'dumo*'
+$softwareName = 'KC Softwares DUMo'
 
 function global:au_SearchReplace {
   @{
