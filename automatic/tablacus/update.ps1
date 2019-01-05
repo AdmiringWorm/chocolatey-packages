@@ -5,7 +5,7 @@ $releasesPart = 'https://tablacus.github.io/'
 $releases = "${releasesPart}explorer_en.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-function glboal:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
