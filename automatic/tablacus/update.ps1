@@ -24,7 +24,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'te.*\.zip$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $releasesPart + $_ }
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $verRe = '\>\s*Version ([\d]+\.[\d\.]+)\s*\<'
   $Matches = $null
