@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
@@ -15,4 +15,7 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-Start-Process "AutoHotKey" "$toolsPath\install.ahk" -Wait
+$ahkExec = Get-Command "AutoHotKey" | select -ExpandProperty Path
+
+Write-Host "Closing DUmo..."
+Start-ChocolateyProcess -exeToRun $ahkExec -statements "$toolsPath\install.ahk" -elevated:$false
