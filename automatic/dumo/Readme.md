@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@57838e0bcea6650944b51eda610c53b542d54d92/icons/dumo.png" height="48" width="48" /> ![DUMo](https://img.shields.io/chocolatey/v/dumo.svg?label=DUMo&style=for-the-badge)](https://chocolatey.org/packages/dumo)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6dff717aa056c553175b5911393ff58ca11d5ed7/icons/dumo.png" height="48" width="48" /> ![DUMo](https://img.shields.io/chocolatey/v/dumo.svg?label=DUMo&style=for-the-badge)](https://chocolatey.org/packages/dumo)
 
 DUMo (**D**rivers **U**pdate **Mo**nitor) keeps your PC **up-to-date & safe** by using the **most recent** version of required hardware drivers!
 
