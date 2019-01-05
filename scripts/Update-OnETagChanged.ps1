@@ -6,41 +6,10 @@ function Update-OnETagChanged() {
     [scriptblock]$OnUpdated
   )
 
-  $request = [System.Net.WebRequest]::CreateDefault($execUrl)
-
-  try {
-    $response = $request.GetResponse()
-    $etag = $response.Headers.Get("ETag")
-  }
-  finally {
-    $response.Dispose()
-    $response = $null
-  }
-
-  $saveResult = $false
-  if (!(Test-Path $saveFile) -or ($global:au_Force -eq $true)) {
-    $result = . $OnETagChanged
-    $saveResult = $true
-  }
-  else {
-    $existingInfo = (Get-Content $saveFile -Encoding UTF8 -TotalCount 1) -split '\|'
-
-    if ($existingInfo[0] -ne $etag) {
-      $result = . $OnETagChanged
-      $saveResult = $true
-    }
-    else {
-      $result = . $OnUpdated
-      $result["Version"] = $existingInfo[1]
-      $result["ETAG"] = $existingInfo[0]
-      $saveResult = $false
-    }
-  }
-
-  if ($saveResult) {
-    $result["ETAG"] = $etag
-    "$($result["ETAG"])|$($result["Version"])" | Out-File $saveFile -Encoding utf8 -NoNewline
-  }
-
-  return $result
+  return Update-OnHeaderChanged `
+    -execUrl $execUrl `
+    -saveFile $saveFile `
+    -headerName 'ETag' `
+    -OnHeaderChanged $OnETagChanged `
+    -OnUpdated $OnUpdated
 }
