@@ -12,9 +12,6 @@ function global:au_SearchReplace {
       "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
-    ".\tools\chocolateyUninstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-    }
   }
 }
 
@@ -26,7 +23,7 @@ function GetResultInformation([string]$url32) {
 
   return @{
     URL32 = $url32
-    Version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
+    Version = [version](Get-Item $dest | % { $_.VersionInfo.ProductVersion })
     Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
   }
