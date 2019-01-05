@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://www.snapgene.com/products/snapgene_viewer/'
+$releases = 'https://www.snapgene.com/snapgene-viewer/'
 
 function global:au_SearchReplace {
   @{
@@ -20,7 +20,9 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'download.*os=windows$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://www.snapgene.com/' + $_.TrimStart('.','/') }
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  Add-Type -AssemblyName System.Web -ea 0 | Out-Null
+  $url32 = [System.Web.HttpUtility]::HtmlDecode($url32)
 
   $verRe = 'minorRelease=|&'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
