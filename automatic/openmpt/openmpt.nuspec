@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openmpt</id>
-    <version>1.27.05.00</version>
+    <version>1.28.1.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/openmpt</packageSourceUrl>
     <owners>AdmiringWorm, nipsky AdmiringWorm</owners>
     <title>OpenMPT</title>
     <authors>ModPlug Central</authors>
     <projectUrl>http://openmpt.org</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@36f480238c82ed040dee8926cf562c1c78e73ac3/icons/openmpt.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@abc1aeedc7fd4e466d99f084b878fc616e79129c/icons/openmpt.png</iconUrl>
     <copyright>ModPlug Central</copyright>
     <licenseUrl>https://source.openmpt.org/browse/openmpt/trunk/OpenMPT/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,45 +20,15 @@
     <tags>openmpt music mod tracker notsilent admin</tags>
     <summary>OpenMPT is a powerful audio application that makes writing music fun, easy and efficient.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>OpenMPT is being developed since 1997 (initially named ModPlug Tracker) and has grown a lot since then. It can be used as a "classic" sample-based tracker to edit and play your favourite tracked music, but also as a modern DAW with plugin support and other great features. Here, you can find some of the key features of the tracker.</description>
-    <releaseNotes>v1.27.05.00 (11 February 2018, revision 9643)
-	---------------------------------------------
-	Pattern tab
-	   [Imp] &lt;js&gt; Seeking with sample sync now supports fine volume slides.
-	   [Mod] &lt;js&gt; Interpolating the note column no longer overwrites existing instrument numbers.
-	   [Fix] &lt;js&gt; Possible crash when trying to enter notes after deleting all patterns.
+    <description><![CDATA[**OpenMPT** is a popular [tracker](https://en.wikipedia.org/wiki/Tracker_%28music_software%29) software for Windows. OpenMPT (short hand for **Open ModPlug Tracker**) is completely free and allows you to create and play back some great music on your computer. Based on the original ModPlug Tracker written by Olivier Lapicque, OpenMPT is free software, can import a wide variety of module formats and offers an intuitive, native GUI as well as advanced features such as [VST][] plugins and [ASIO][] output. In addition to its own song format, OpenMPT can natively edit Impulse Tracker, FastTracker, Scream Tracker and ProTracker module files
 
-	Pattern tab::Find/Replace
-	   [Imp] &lt;js&gt; If no pattern selection is made, pre-fill the Find fields with values from the current pattern cell if they have not been used in a previous search (http://bugs.openmpt.org/view.php?id=1082).
-	   [Fix] &lt;js&gt; After an unsuccessful search, show the correct search strings when searching for PC events.
-	   [Fix] &lt;js&gt; When repeating a search for PC events, the previous parameter value was not filled in correctly.
-	   [Fix] &lt;js&gt; Searching for specific plugin parameter values did not work correctly.
-	   [Fix] &lt;js&gt; Searching for PC events sometimes found normal events and vice versa.
-
-	Sample tab
-	   [Imp] &lt;js&gt; Add drop-down menu for saving all samples.
-	   [Fix] &lt;js&gt; Upsampling a sample selection did not scale the new selection correctly if its end exceeded the old sample length (tx Xemogasa).
-
-	Instrument tab
-	   [Imp] &lt;js&gt; Add drop-down menu for saving all instruments.
-
-	Comments tab
-	   [Fix] &lt;js&gt; Soft tabs did not have the correct size most of the time (http://bugs.openmpt.org/view.php?id=1083).
-
-	Tree view
-	   [Mod] &lt;js&gt; Do not enforce dragged-over items to be completely visible when using drag and drop (tx sincx).
-	   [Fix] &lt;js&gt; Duplicating or inserting instruments or samples did not refresh the pattern view properly.
-	   [Fix] &lt;js&gt; Even after removing all patterns, they were still visible.
-
-	Other formats
-	   [Fix] &lt;js&gt; IMF: Filter cutoff was upside down.
-	   [Fix] &lt;js&gt; MED: Correctly import patterns with less channels than the maximum used amount.
-	   [Fix] &lt;js&gt; STM: More accurate tempo calculation and better support for old format versions.
-	   [Fix] &lt;js&gt; Possible small memory leaks and crashes with malformed STP files.
-
-	Misc
-	   [Fix] &lt;js&gt; Loading the default keyboard configuration didn't load all default keys since OpenMPT 1.27.01.00, causing issues such as making instrument number entry with the regular number keys impossible.
-	   [Fix] &lt;js&gt; More accurate song length calculation for pattern loops that have no start command (SB0).</releaseNotes>
+[ASIO]: https://en.wikipedia.org/wiki/Audio_Stream_Input/Output
+[VST]: https://en.wikipedia.org/wiki/Virtual_Studio_Technology
+*[ASIO]: Audio Stream Input/Output, a common low-latency audio driver protocol  
+*[VST]: Virtual Studio Technology, a common audio plugin interface
+]]></description>
+    <releaseNotes>[Software Changelog](https://openmpt.org/release_notes/)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/openmpt/Changelog.md)</releaseNotes>
     <dependencies>
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
       <dependency id="chocolatey" version="0.10.5" />
