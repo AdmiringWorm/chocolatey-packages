@@ -18,6 +18,8 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 function GetResultInformation([string]$url32) {
   $dest = "$env:TEMP\dumo.exe"
   Get-WebFile $url32 $dest | Out-Null
