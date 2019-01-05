@@ -1,4 +1,14 @@
 {
   "editor.tabSize": 2,
-  "editor.trimAutoWhitespace": true
+  "editor.trimAutoWhitespace": true,
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+    "powershell",
+    "text",
+    "yml"
+  ],
+  "cSpell.words": [
+    "Qilin",
+    "laniewski"
+  ]
 }

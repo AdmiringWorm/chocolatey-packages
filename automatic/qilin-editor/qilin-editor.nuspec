@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qilin-editor</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qilin-editor</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Qilin Editor</title>
+    <authors>Bartozzz</authors>
+    <projectUrl>https://github.com/qilin-editor/qilin-app</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@b10e4bb14293ac0dfdfc236386d4ed61b81d0886/icons/qilin-editor.png</iconUrl>
+    <copyright>Copyright (c) 2018 Qilin</copyright>
+    <licenseUrl>https://github.com/qilin-editor/qilin-app/blob/development/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/qilin-editor/qilin-app</projectSourceUrl>
+    <docsUrl>https://github.com/qilin-editor/qilin-app/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/qilin-editor/qilin-app/issues</bugTrackerUrl>
+    <tags>qilin-editor editor physics mathematics</tags>
+    <summary>A free, open-source and fully hackable text editor developed for exact sciences in mind.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+**Qilin** is a free, open-source and fully hackable text editor developed for exact sciences in mind. It fully supports [KaTeX](https://khan.github.io/KaTeX/) and [AsciiMath](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the [*MIT license*](https://github.com/qilin-editor/qilin-app#license). Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager). Created documents can be exported as **HTML**, **PDF** and **Markdown**.
+
+![Qilin editor](https://i.imgur.com/VOGLGv5.png)
+    </description>
+    <releaseNotes>
+[Software Changelog](https://github.com/qilin-editor/qilin-app/releases/tag/v$version$)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qilin-editor/Changelog.md)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
