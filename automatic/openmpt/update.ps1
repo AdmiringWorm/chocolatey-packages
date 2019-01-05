@@ -4,6 +4,16 @@ $releases = 'https://openmpt.org/download'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
+function global:au_AfterUpdate {
+  $releaseNotes = @"
+[Software Changelog](https://openmpt.org/release_notes/)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/openmpt/Changelog.md)
+"@
+
+  Update-Metadata -key "releaseNotes" -value $releaseNotes
+  Update-Changelog -useIssueTitle
+}
+
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
