@@ -13,3 +13,4 @@ DUMo (**D**rivers **U**pdate **Mo**nitor) keeps your PC **up-to-date & safe** by
 ## Notes
 
 - This package installs the Free version.  A supported version with enhanced performance is available for purchase.
+- After the package is uninstall, a web page is shown. This is not being handled in the package.

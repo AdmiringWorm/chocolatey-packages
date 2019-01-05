@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
@@ -12,3 +14,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+Start-Process "AutoHotKey" "$toolsPath\install.ahk" -Wait
