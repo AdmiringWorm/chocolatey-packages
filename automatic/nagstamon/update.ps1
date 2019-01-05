@@ -7,20 +7,24 @@ if ($MyInvocation.InvocationName -ne '.') {
 
 if ($MyInvocation.InvocationName -eq '.') {
   function global:au_SearchReplace {
-    @{
+    $replaceArgs = @{
       ".\legal\VERIFICATION.txt"      = @{
         "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-        "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
         "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-        "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-        "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+        "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
         "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
       }
       ".\tools\chocolateyInstall.ps1" = @{
-        "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
         "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
       }
     }
+
+    if ($packageName -eq 'nagstamon.install') {
+      $replaceArgs['.\legal\VERIFICATION.txt']["(?i)(\s*32\-Bit Software.*)\<.*\>"] = "`${1}<$($Latest.URL32)>"
+      $replaceArgs['.\legal\VERIFICATION.txt']["(?i)(^\s*checksum(32)?\:).*"] = "`${1} $($Latest.Checksum32)"
+      $replaceArgs['.\tools\chocolateyInstall.ps1']["(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"] = "`${1}$($Latest.FileName32)`""
+    }
+    return $replaceArgs
   }
 } else {
 
@@ -58,7 +62,7 @@ function global:au_GetLatest {
   @{
     URL32_i      = [uri]($urls_i | ? { $_ -match 'win32' } )
     URL64_i      = [uri]($urls_i | ? { $_ -match 'win64' } )
-    URL32_p      = [uri]($urls_p | ? { $_ -match 'win32' } )
+    #URL32_p      = [uri]($urls_p | ? { $_ -match 'win32' } )
     URL64_p      = [uri]($urls_p | ? { $_ -match 'win64' } )
     Version      = [version]$version32
     PackageName  = $packageName
