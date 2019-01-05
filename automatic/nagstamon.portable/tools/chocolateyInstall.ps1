@@ -2,7 +2,7 @@
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-if ((Get-ProcessorArchitecture 32) -or $env:ChocolateyForceX86) {
+if ((Get-OSBitness 32) -or $env:ChocolateyForceX86) {
   throw ("32bit archive have been removed from package until issue regarding high virus count number is resolved.`n" +
          "See issue for more to monitor situation: https://github.com/HenriWahl/Nagstamon/issues/528")
 }
