@@ -8,7 +8,7 @@ and can be verified by doing the following:
 
 1. Download the following:
   32-Bit software: <PLACEHOLDER until virus count gets lower>
-  64-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.0.2-win64.zip>
+  64-Bit software: <https://nagstamon.ifw-dresden.de/files/stable/Nagstamon-3.2-win64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32:
-  checksum64: 133F1D6C3F3080B1D59E46EDDD38F7643FDDCDE616C0C8A9225AB3D9CB4EB187
+  checksum64: 160FAF75C7C636A427394A7255E5EE16ABD355EBDE1376B90E3B6AA248CB7269
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE>
