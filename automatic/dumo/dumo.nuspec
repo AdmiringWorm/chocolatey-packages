@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dumo</id>
+    <version>2.16.1.81</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
+    <owners>AdmiringWorm, dtgm</owners>
+    <title>DUMo</title>
+    <authors>KC Softwares</authors>
+    <projectUrl>https://www.kcsoftwares.com/?dumo</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@57838e0bcea6650944b51eda610c53b542d54d92/icons/dumo.png</iconUrl>
+    <copyright>© KC Softwares - All rights reserved - 2004 - 2019</copyright>
+    <licenseUrl>https://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://www.kcsoftwares.com/forum</mailingListUrl>
+    <bugTrackerUrl>https://www.kcsoftwares.com/bugs</bugTrackerUrl>
+    <tags>dumo freeware driver updater admin</tags>
+    <summary>Drivers Update Monitor</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>DUMo (Drivers Update Monitor) keeps your PC up-to-date and safe by using the most recent version of required hardware drivers!
+
+#### Features
+* Automatic detection of installed hardware
+* Detects required drivers according to your version of Microsoft Windows
+* More compatibility and less false positive than others Drivers Monitors (according to users feedback ;-)
+* Internationalization support
+
+#### Freeware
+This package installs the Free version.  A supported version with enhanced performance is available for purchase.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
