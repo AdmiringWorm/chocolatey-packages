@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The extension has been downloaded from visual studio gallery <https://marketplace.visualstudio.com/items?itemName=DavidStormer.DisposableFixer>
 and can be verified like this:
 
-1. Download <https://davidstormer.gallerycdn.vsassets.io/extensions/davidstormer/disposablefixer/1.2.0/1545476674296/DisposableFixer.vsix>
+1. Download <https://davidstormer.gallerycdn.vsassets.io/extensions/davidstormer/disposablefixer/1.4.0/1546777786794/DisposableFixer.vsix>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 3830E4FF739206EF4408355308403ACFB771A5FD496B76574FECF3D89CD9B29D
+  checksum: 4B8E442E998B45373BF69B2E907BE0309555E55BC6448E0399F483EB76CA1657
 
 File 'LICENSE.txt' is obtained from <https://github.com/BADF00D/DisposableFixer/blob/24d83f777495bdac0cd48905b740b35f343f9696/License.txt>
