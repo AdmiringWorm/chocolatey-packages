@@ -5,7 +5,7 @@
     <id>openmpt</id>
     <version>1.28.2.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/openmpt</packageSourceUrl>
-    <owners>AdmiringWorm, nipsky AdmiringWorm</owners>
+    <owners>AdmiringWorm, nipsky</owners>
     <title>OpenMPT</title>
     <authors>ModPlug Central</authors>
     <projectUrl>http://openmpt.org</projectUrl>
