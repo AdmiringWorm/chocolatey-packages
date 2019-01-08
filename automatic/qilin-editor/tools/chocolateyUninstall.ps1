@@ -1,8 +1,8 @@
-$toolsPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
+﻿$toolsPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
 
 Uninstall-BinFile -Name "qilin" -Path (Join-Path $toolsPath "qilin.exe")
 
 if (Test-Path $toolsPath) {
   Write-Host "Removing qilin editor directory"
-  rm -Recurse -Force $toolsPath
+  Remove-Item -Recurse -Force $toolsPath
 }

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qilin-editor</id>
-    <version>0.0</version>
+    <version>0.4.0-alpha</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qilin-editor</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qilin Editor</title>
@@ -19,15 +19,13 @@
     <tags>qilin-editor editor physics mathematics</tags>
     <summary>A free, open-source and fully hackable text editor developed for exact sciences in mind.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-**Qilin** is a free, open-source and fully hackable text editor developed for exact sciences in mind. It fully supports [KaTeX](https://khan.github.io/KaTeX/) and [AsciiMath](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the [*MIT license*](https://github.com/qilin-editor/qilin-app#license). Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager). Created documents can be exported as **HTML**, **PDF** and **Markdown**.
+    <description><![CDATA[**Qilin** is a free, open-source and fully hackable text editor developed for exact sciences in mind. It fully supports [KaTeX](https://khan.github.io/KaTeX/) and [AsciiMath](http://asciimath.org/). Qilin works on each desktop platform - it is based on `Chromium` and `Node.js`, licensed under the [*MIT license*](https://github.com/qilin-editor/qilin-app#license). Qilin is extensible via several [plugins and themes](https://github.com/qilin-editor/qilin-manager). Created documents can be exported as **HTML**, **PDF** and **Markdown**.
 
-![Qilin editor](https://i.imgur.com/VOGLGv5.png)
-    </description>
-    <releaseNotes>
-[Software Changelog](https://github.com/qilin-editor/qilin-app/releases/tag/v$version$)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qilin-editor/Changelog.md)
-    </releaseNotes>
+![Qilin  light mode](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@b000c6858f2f049c6d8255cefb85c6f288495c30/automatic/qilin-editor/screenshots/1.png)
+![Qilin dark mode](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@b000c6858f2f049c6d8255cefb85c6f288495c30/automatic/qilin-editor/screenshots/2.png)
+]]></description>
+    <releaseNotes>[Software Changelog](https://github.com/qilin-editor/qilin-app/releases/tag/v0.4.0-alpha)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qilin-editor/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $installPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -11,8 +11,8 @@ $packageArgs = @{
 }
 
 Get-ChocolateyUnzip @packageArgs
-rm $packageArgs.file -ea 0
+Remove-Item $packageArgs.file -ea 0
 
 $execPath = "$installPath/win64/qilin.exe"
-mv "$installPath/win64/me.laniewski.qilin.exe" $execPath -Force
+Move-Item "$installPath/win64/me.laniewski.qilin.exe" $execPath -Force
 Install-BinFile -Name "qilin" -Path $execPath -UseStart

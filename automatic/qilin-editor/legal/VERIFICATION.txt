@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/qilin-editor/qilin-app/releases>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://github.com/qilin-editor/qilin-app/releases/download/v0.4.0-alpha/qilin-windows.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: DF27D35E915D822311B6FD71D99A228DBEE389C2374450BB36C7D9D9E254C81F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/qilin-editor/qilin-app/blob/development/LICENSE>
