@@ -94,7 +94,7 @@ function Parse-Changelog() {
 function Parse-GitCommit() {
   param($line, [switch]$useIssueTitle)
 
-  if ($line -contains 'skip:copyright') { return }
+  if ($line -contains 'skip:changelog') { return }
 
   $splits = $line -split ' '
   $commitHash = $splits[0]
@@ -102,7 +102,7 @@ function Parse-GitCommit() {
   $commitDetail = git show -s --format=%B $commitHash
 
   $issueLine = $commitDetail | ? { $_ -match "\#[\d]+" }
-  $changelogLine = $commitDetail | ? { $_ -match "changelog\:[a-z]*" }
+  $changelogLine = $commitDetail | ? { $_ -match "changelog\:\s*[a-z]*" }
   if ($issueLine) {
     $index = $splits.IndexOf($issueLine)
     if ($index -ge 0) {
@@ -131,7 +131,7 @@ function Parse-GitCommit() {
 
     @{
       Title = [string]::Join(' ', $splits, 1, $splits.Count - 1 ).Trim()
-      Type  = if ($type) { $type } else { 'general' }
+      Type  = if ($type) { $type.Trim() } else { 'general' }
     }
 
   }
