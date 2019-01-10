@@ -1,17 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>powder-toy</id>
     <version>0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/the-powder-toy</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/powder-toy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The Powder Toy</title>
     <!-- Link used as there doesn't seem to be 1 or 2 main authors, but rather the whole community -->
     <authors>https://github.com/ThePowderToy/The-Powder-Toy/graphs/contributors</authors>
     <projectUrl>https://powdertoy.co.uk/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ThePowderToy/The-Powder-Toy/master/resources/icon/powder-256.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0ec433f8c29b638f4ca360952b360c887af8a170/icons/powder-toy.png</iconUrl>
     <licenseUrl>https://github.com/ThePowderToy/The-Powder-Toy/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ThePowderToy/The-Powder-Toy</projectSourceUrl>
@@ -20,6 +19,7 @@
     <bugTrackerUrl>https://github.com/ThePowderToy/The-Powder-Toy/issues</bugTrackerUrl>
     <tags>powder-toy game foss cross-platform sandbox simulation</tags>
     <summary>Create landscapes and cities ... then blow them up!</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Have you ever wanted to blow something up? Or maybe you always dreamt of operating an atomic power plant? Do you have a will to develop your own CPU? The Powder Toy lets you to do all of these, and even more!
 
@@ -32,9 +32,15 @@ There is a Lua API – you can automate your work or even make plugins for the g
 - **Browse and search** through thousands of saves created by the community, upload your own!
 - **Create:** Build needlessly complex machines to do simple tasks ... the blow them up!
     </description>
-    <releaseNotes>https://powdertoy.co.uk/Download/Changelog.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://powdertoy.co.uk/Download/Changelog.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/powder-toy/Changelog.md)
+    </releaseNotes>
+    <dependencies />
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="..\..\icons\powder-toy.png" target="icons" />
   </files>
 </package>

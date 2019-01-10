@@ -1,17 +1,13 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName    = 'the-powder-toy'
-  unzipLocation  = $toolsPath
-  softwareName   = 'The Powder Toy'
-
-  checksum       = ''
-  checksum64     = ''
-  checksumType   = ''
-  checksumType64 = ''
-  url            = ''
-  url64Bit       = ''
+  packageName = $env:ChocolateyPackageName
+  fileType    = 'zip'
+  file        = "$toolsPath\"
+  destination = "$toolsPath"
 }
-Install-ChocolateyZipPackage @packageArgs
+
+Get-ChocolateyUnzip @packageArgs
+rm $packageArgs['file'] -ea 0

@@ -1,29 +1,47 @@
-﻿import-module au
+﻿Import-Module AU
 
-$releases = ''
+$releases = 'https://powdertoy.co.uk/Download/Platforms.html'
+$changelog = 'https://powdertoy.co.uk/Download/Changelog.html'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-      "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
   }
 }
 
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
-
-  $re    = ''
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
-
-  $version  = $url -split '[._-]|.exe' | select -Last 1 -Skip 2
-
-  return @{ URL32 = $url; Version = $version }
+function global:au_AfterUpdate {
+  Update-Metadata -key "releaseNotes" -value @"
+[Software Changelog]($changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/$($Latest.PackageName)/Changelog.md)
+"@
+  Update-Changelog -useIssueTitle
 }
 
-update
+function global:au_GetLatest {
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+  $re = 'win32\.zip$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://powdertoy.co.uk' + $_ }
+
+  $version_page = Invoke-WebRequest -Uri $changelog -UseBasicParsing
+  if ($version_page.Content -match '\>\s*Version\s*(\d+\.[\d\.]+)') {
+    $version32 = $Matches[1]
+  }
+
+  @{
+    URL32   = $url32
+    Version = $version32
+  }
+}
+
+update -ChecksumFor none
