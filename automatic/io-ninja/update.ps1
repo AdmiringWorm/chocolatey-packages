@@ -21,7 +21,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_GetLatest {
