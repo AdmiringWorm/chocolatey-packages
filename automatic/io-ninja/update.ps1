@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 
 $releases = 'http://ioninja.com/downloads.html'
-$softwareName = 'IO Ninja'
+$softwareName = 'IO Ninja*'
 
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
