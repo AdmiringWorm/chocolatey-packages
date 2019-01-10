@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://powdertoy.co.uk/Download/Platforms.html>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://powdertoy.co.uk/Download/powder-win32.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 59053F5F4594FA97DE9234E3D54ED8216D7A8CCF4E56C903E100788FD380C955
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/ThePowderToy/The-Powder-Toy/blob/master/LICENSE>
