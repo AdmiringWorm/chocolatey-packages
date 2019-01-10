@@ -1,6 +1,9 @@
 # ![IO Ninja Changelog](https://img.shields.io/badge/IO%20Ninja-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 3.10.1 (2019-01-10)
+- **BREAKING CHANGE:** Removed uneeded dependency on chocolatey-core.extension
+- **BUG:** Fixed changelog not being updated
+- **FEATURE:** Added importing trusted certificate before installing
 - **IMPROVEMENT:** Update install/uninstall scripts to latest edition
 
 ## Version: 3.7.4 (2017-06-21)
