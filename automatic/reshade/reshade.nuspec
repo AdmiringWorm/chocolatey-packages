@@ -10,7 +10,7 @@
     <authors>Patrick Mours,crosire</authors>
     <projectUrl>https://reshade.me/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2e8b9eb0b465415e629a31cade96590b4a0960d9/icons/reshade.png</iconUrl>
-    <copyright>ReShade © 2014 - 2017</copyright>
+    <copyright>ReShade © 2014 - 2019</copyright>
     <licenseUrl>https://github.com/crosire/reshade/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/crosire/reshade</projectSourceUrl>
