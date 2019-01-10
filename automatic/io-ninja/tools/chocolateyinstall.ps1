@@ -1,4 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+. "$toolsPath\helpers.ps1"
+Write-Host "Importing necessary certificate..."
+Import-Certificate -FilePath "$toolsPath\io-ninja.cer" -CertStoreLocation "Cert:\LocalMachine\TrustedPublisher"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
