@@ -35,9 +35,6 @@ IO Ninja features [session linking](http://tibbo.com/ninja/features.html#!linkin
 Last, but not least, IO Ninja is free for non-commercial usage. However, if you plan to use IO Ninja for work-related purposes, you have to [purchase a license](http://tibbo.com/ninja/purchase.html). If you already have a license for IO Ninja version 2.x.x, you can upgrade it to a commercial license for IO Ninja version 3.x.x free of charge. Contact our sales department for details at [sales@tibbo.com](mailto:sales@tibbo.com)
 </description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/io-ninja/Changelog.md)</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
