@@ -68,7 +68,7 @@ function CheckPackageSizes() {
     $packageName = $_.Directory.Name
     if ($size -gt $maxSize) {
       $friendlySize = $size / 1024 / 1024
-      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 200 MB. Actual size was $friendlySize MB!"
+      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is $($maxSize / 1024 / 1024) MB. Actual size was $friendlySize MB!"
       SetAppveyorExitCode -ExitCode 2
     } else {
       $index = 0
@@ -98,7 +98,7 @@ function CreateSnapshotArchive() {
     'a'
     '-mx9'
     "`"$artifactsDirectory\install_snapshot.7z`""
-  ) + $directories
+  ) + ($directories | select -Unique)
 
   . 7z $arguments
 }
@@ -357,24 +357,31 @@ function RunChocoProcess() {
   $args = @($arguments) + @(
     '--yes'
     "--execution-timeout=$timeout"
+    "--ignorepackagecodes"
   )
   if ($arguments[0] -eq 'uninstall') {
     $args += @(
       '--all-versions'
       '--autouninstaller'
       '--fail-on-autouninstaller'
+      #'--force'
     )
   }
   $packFailed = $false
   $errorFilePath = "$screenShotDir\$($arguments[0])Error_$($arguments[1]).jpg"
   if (!(Test-Path "$screenShotDir")) { mkdir "$screenShotDir" -Force | Out-Null }
 
+  $packageName = $arguments[1] -split ' ' | select -first 1
+  $pkgDir = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName" -Recurse -Directory | select -first 1
+  $nupkgFile = Get-ChildItem -Path $pkgDir.FullName -Filter "*.nupkg" | select -first 1
+  $pkgNameVersion = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' }
+  $packageName = $pkgNameVersion | select -first 1
+  $version     = $pkgNameVersion | select -last 1
+  if ($packageName -ne $arguments[1]) { $args[1] = $packageName }
+
   try {
     RunChocoPackProcess '' | WriteChocoOutput
     if ($arguments[0] -eq 'install') {
-      $packageName = $arguments[1] -split ' ' | select -first 1
-      $nupkgFile = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName*.nupkg" -Recurse | select -first 1
-      $version = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' } | select -last 1
       if ($version) {
         $args += @("--version=$($version)")
         if ($version -match '\-') {
@@ -387,7 +394,7 @@ function RunChocoProcess() {
     $progressRegex = 'Progress\:.*\s+([\d]+)\%'
     . choco $args | % {
       $matches = $null
-      if ($failureOccurred) { WriteOutput $_ -type ChocoError }
+      if ($failureOccurred) { WriteOutput "$_" -type ChocoError }
        # We are only showing progress per 10th value
       elseif([regex]::IsMatch($_, $progressRegex)) {
         $progressMatch = [regex]::Match($_, $progressRegex).Groups[1].Value
@@ -456,7 +463,7 @@ function InstallPackage() {
     try {
       RunChocoPackProcess -path $dependentSource | WriteChocoOutput
     } catch {
-      WriteOutput $_ -type Error
+      WriteOutput "$_" -type Error
       return $package.Name
     }
     $sources = "$($_.Directory);$dependentSource;chocolatey"
@@ -475,7 +482,7 @@ function InstallPackage() {
   try {
   if (!(RunChocoProcess @arguments)) { return $package.Name }
   } catch {
-    WriteOutput $_ -type Error
+    WriteOutput "$_" -type Error
     return $package.Name
   }
 
@@ -594,7 +601,7 @@ function UninstallPackage() {
     try {
       RunChocoPackProcess -path $dependentSource | WriteOutput
     } catch {
-      WriteOutput $_ -type Error
+      WriteOutput "$_" -type Error
       return $package.Name
     }
     $packageNames = @($package.Name ; $package.DependentPackage)
@@ -612,7 +619,7 @@ function UninstallPackage() {
   try {
     if (!(RunChocoProcess @arguments)) { return $package.Name }
   } catch {
-    WriteOutput $_ -type Error
+    WriteOutput "$_" -type Error
     return $package.Name
   }
 
