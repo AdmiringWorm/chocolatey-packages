@@ -11,7 +11,8 @@
     "Qilin",
     "laniewski",
     "nupkg",
-    "choco"
+    "choco",
+    "sheepit"
   ],
   "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1"
 }
