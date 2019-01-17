@@ -36,3 +36,11 @@ if (!$pp['NoStartMenu']) {
     -ShortcutFilePath "$startMenu\SheepIt Client.lnk" `
     -TargetPath $clientOutputPath
 }
+
+if ($pp['Desktop']) {
+  Write-Host "Creating $env:ChocolateyPackageName Desktop icon..."
+  $desktop = [System.Environment]::GetFolderPath("CommonDesktopDirectory")
+  Install-ChocolateyShortcut `
+    -ShortcutFilePath "$desktop\SheepIt Client.lnk" `
+    -TargetPath $clientOutputPath
+}

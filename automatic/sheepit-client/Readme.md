@@ -12,6 +12,7 @@ SheepIt Render Farm Client is an Open Source client for the distributed render f
 ## Package Parameters
 
 - `/NoStartMenu` - Don't create a shortcut in the Start Menu
+- `/Desktop`     - Create a shortcut on the Desktop
 
 **Example**
-`choco install sheepit-client --package-parameters="/NoStartMenu"`
+`choco install sheepit-client --package-parameters="/NoStartMenu /Desktop"`
