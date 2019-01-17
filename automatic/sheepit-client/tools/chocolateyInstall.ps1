@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86) {
   throw "The SheepIt windows client does not support 32bit windows..."
@@ -26,3 +26,13 @@ mv -Path $packageClientPath $clientOutputPath -Force
 Write-Host "Registering $env:ChocolateyPackageName to App Paths..."
 Register-Application "$clientOutputPath"
 Write-Host "$env:ChocolateyPackageName registered as $(Split-Path -Leaf $clientOutputPath)"
+
+$pp = Get-PackageParameters
+
+if (!$pp['NoStartMenu']) {
+  Write-Host "Creating $env:ChocolateyPackageName Start Menu icon..."
+  $startMenu = [System.Environment]::GetFolderPath("CommonStartMenu")
+  Install-ChocolateyShortcut `
+    -ShortcutFilePath "$startMenu\SheepIt Client.lnk" `
+    -TargetPath $clientOutputPath
+}

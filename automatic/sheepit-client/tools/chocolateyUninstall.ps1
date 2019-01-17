@@ -6,18 +6,15 @@ if ($runningProcess) {
 }
 
 $toolsDir = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
-if (Test-Path $toolsDir) {
-  Write-Host "Removing $env:ChocolateyPackageName tools directory..."
-  Remove-Item -Recurse -Force $toolsDir
+$paths = @{
+  "$toolsDir" = "tools directory"
+  "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\sheepit.exe" = "App Path registration"
+  "$([System.Environment]::GetFolderPath('CommonStartMenu'))\SheepIt Client.lnk" = "Start Menu Shortcut"
 }
 
-$appPath = "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\sheepit.exe"
-
-if (Test-Path "HKLM:\$appPath") {
-  Write-Host "Removing App Path registration..."
-  Remove-Item -Force "HKLM:\$appPath"
-}
-if (Test-Path "HKCU:\$appPath") {
-  Write-Host "Removing User App Path registration..."
-  Remove-Item -Force "HKCU:\$appPath"
+$paths.GetEnumerator() | % {
+  if (Test-Path $_.Key) {
+    Write-Host "Removing $env:ChocolateyPackageName $($_.Value)..."
+    Remove-Item -Recurse -Force $_.Key
+  }
 }

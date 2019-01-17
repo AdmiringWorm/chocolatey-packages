@@ -8,3 +8,10 @@ SheepIt Render Farm Client is an Open Source client for the distributed render f
 - **User-Friendly:** Manage your project easily on a web based admin panel. Real time updates on your projects. No need to have Blender to help render.
 - **GPU supported:** CPU and GPU are supported.
 - **Free:** Free registration. Free project adding. Free rendering
+
+## Package Parameters
+
+- `/NoStartMenu` - Don't create a shortcut in the Start Menu
+
+**Example**
+`choco install sheepit-client --package-parameters="/NoStartMenu"`
