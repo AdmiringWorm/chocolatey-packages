@@ -29,6 +29,9 @@ SheepIt Render Farm Client is an Open Source client for the distributed render f
 - **Free:** Free registration. Free project adding. Free rendering
     </description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/sheepit-client/Changelog.md)</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

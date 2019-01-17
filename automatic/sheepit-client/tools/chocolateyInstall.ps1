@@ -22,3 +22,7 @@ if (!(Test-path $toolsPath)) {
 }
 Write-Host "Moving $env:ChocolateyPackageName executable to tools directory..."
 mv -Path $packageClientPath $clientOutputPath -Force
+
+Write-Host "Registering $env:ChocolateyPackageName to App Paths..."
+Register-Application "$clientOutputPath"
+Write-Host "$env:ChocolateyPackageName registered as $(Split-Path -Leaf $clientOutputPath)"
