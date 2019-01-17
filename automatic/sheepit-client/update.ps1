@@ -1,7 +1,6 @@
 ﻿Import-Module AU
 
 $releases = 'https://www.sheepit-renderfarm.com/getstarted.php'
-$softwareName = 'sheepit-client*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
