@@ -340,7 +340,6 @@ function RunChocoProcess() {
   Function responsible for running choco install/uninstall
   and handling choco failures.
 #>
-  [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", Scope="Function")]
   param(
     [Parameter(Mandatory = $true)]
     [string[]]$arguments,
