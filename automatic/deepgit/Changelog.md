@@ -1,5 +1,9 @@
 # ![DeepGit (Install) Changelog](https://img.shields.io/badge/DeepGit%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 3.2 (2019-01-18)
+
+- **BUG:** Fixes images in description
+
 ## Version: 3.0.1.20171105 (2017-11-05)
 
 - **ENHANCEMENT:** Added ability to load and save an installer configuration file
