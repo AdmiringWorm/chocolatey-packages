@@ -50,7 +50,10 @@ To address this problem, Artistic Style was created - a filter written in C++ th
 **Example**
 `choco install astyle --params '"/KeepAllFiles"'
 ]]></description>
-    <releaseNotes>http://astyle.sourceforge.net/notes.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://astyle.sourceforge.net/notes.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/astyle/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
