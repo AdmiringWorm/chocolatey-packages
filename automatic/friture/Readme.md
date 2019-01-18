@@ -19,5 +19,4 @@ Friture helps you to understand audio data with several [widgets](http://friture
 
 - The uninstall is not completely silent, a dialog asking to remove Friture settings shows up
 
-
 ![Friture Screenshot](http://friture.org/images/friture_20150824_small.png)
