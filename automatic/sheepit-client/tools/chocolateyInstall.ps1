@@ -12,7 +12,7 @@ if ($runningProcess) {
 }
 
 $packageToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$packageClientPath = "$packageToolsPath\sheepit-5.1274.2958.exe"
+$packageClientPath = "$packageToolsPath\sheepit-5.1275.2959.exe"
 $toolsPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
 $clientOutputPath = "$toolsPath\sheepit.exe"
 
