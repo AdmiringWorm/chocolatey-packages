@@ -14,7 +14,6 @@ DeepGit is a tool to investigate the history of source code. It is based on git 
 - [Check out the Tour](https://www.syntevo.com/deepgit/tour) to understand how DeepGit is working.
   [![Tour](https://www.syntevo.com/assets/images/products/deepgit/tour-7d0a5121.png)](https://www.syntevo.com/deepgit/tour)
 
-
 ## Package Parameters
 
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing

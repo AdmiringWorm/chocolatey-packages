@@ -19,4 +19,4 @@ LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for e
 [educational materials]: http://lilypond.org/examples.html#Educational-Applications
 [large orchestral projects]: http://lilypond.org/examples.html#Large-Projects
 [customized output]: http://lilypond.org/examples.html#Customized-Output
-[Schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
+[schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
