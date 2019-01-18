@@ -5,13 +5,13 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  file64         = "$toolsPath\"
-  softwareName   = 'claws-mail*'
+  file           = "$toolsPath\claws-mail-3.17.3-1-32bit.exe"
+  file64         = "$toolsPath\claws-mail-3.17.3-1-64bit.exe"
+  softwareName   = 'Claws Mail*'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
