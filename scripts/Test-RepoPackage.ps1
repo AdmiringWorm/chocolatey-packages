@@ -418,10 +418,12 @@ function RunChocoProcess() {
           sleep -Seconds 1
         }
         if ($arguments[0] -eq 'uninstall') {
-          Stop-Process -ProcessName "unins*" -ErrorAction Ignore
+          Write-Verbose "Stopping any processes matching uninst*"
+          Stop-Process -ProcessName "unins*" -ErrorAction Ignore -Force
         }
 
-        Stop-Process -ProcessName "*$($arguments[1])*" -ErrorAction Ignore
+        Write-Verbose "Stopping any processes matching *$($arguments[1])*"
+        Stop-Process -ProcessName "*$($arguments[1])*" -ErrorAction Ignore -Force
       }
     }
   } finally {
