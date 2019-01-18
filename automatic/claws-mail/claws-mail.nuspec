@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>claws-mail</id>
+    <version>3.17.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/claws-mail</packageSourceUrl>
+    <owners>AdmiringWorm, dtgm</owners>
+    <title>Claws Mail</title>
+    <authors>Claws Mail Team</authors>
+    <projectUrl>http://www.claws-mail.org/win32/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f55a5c21da287defb439a173b1b3bd3c97ecc7b3/icons/claws-mail.png</iconUrl>
+    <copyright>© 2001,2005 Claws Mail Team</copyright>
+    <licenseUrl>http://www.claws-mail.org/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://git.claws-mail.org/?p=claws.git;a=tree</projectSourceUrl>
+    <docsUrl>http://www.claws-mail.org/documentation.php</docsUrl>
+    <mailingListUrl>http://www.claws-mail.org/MLs.php</mailingListUrl>
+    <bugTrackerUrl>http://www.thewildbeast.co.uk/claws-mail/bugzilla/index.cgi</bugTrackerUrl>
+    <tags>claws-mail email client mua mh smtp imap nntp ldap gpg i18n gtk admin foss cross-platform</tags>
+    <summary>The user-friendly, lightweight, and fast email client</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Claws Mail is a GTK+ based, lightweight, and fast e-mail client and newsreader. Supports POP3, APOP, IMAP, SMTP, SMTP AUTH, NNTP, LDAP, multiple accounts, spell-checking, addressbook, SSL, GPG, filtering, i18n, &amp; more. It is further extended by plugins.
+
+#### Documentation
+* [Features](http://www.claws-mail.org/features.php)
+* [Screenshots](http://www.claws-mail.org/screenshots.php?section=general)
+* [FAQ](http://www.claws-mail.org/faq/index.php/Main_Page)
+
+#### Community
+* irc.freenode.net, channel #claws
+
+#### Customization
+* [Themes](http://www.claws-mail.org/themes.php)
+* [Plugins](http://www.claws-mail.org/plugins.php)
+* [Tools](http://www.claws-mail.org/tools.php)</description>
+    <releaseNotes>
+[Software Changelog](https://git.claws-mail.org/?p=claws.git;a=blob;f=RELEASE_NOTES;hb=HEAD)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/claws-mail/Changelog.md)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+    <file src="..\..\icons\claws-mail.png" target="icons" />
+  </files>
+</package>
