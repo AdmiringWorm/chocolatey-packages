@@ -7,6 +7,7 @@ Game Backup Monitor was designed with gaming in mind, but it can be used to moni
 Game Backup Monitor is completely free and open source software.
 
 ## Features
+
 - Backup your saves automatically and immediately after playing a game. No scheduling or input required!
 - Backup to a cloud folder and add cloud save support to any game.
 - GBM can detect and backup saves from games running on emulators or interpreters such as DOSBox, ScummVM or Wine.
@@ -18,4 +19,5 @@ Game Backup Monitor is completely free and open source software.
 - Track individual gaming sessions, know exactly when and how much you've played any monitored game. (Optional)
 
 ## Notes
+
 - Game Backup Monitor is currently only available in English.

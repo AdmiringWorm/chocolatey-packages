@@ -12,6 +12,7 @@ The module is usually automatically installed as a dependency.
 ## Usage
 
 To create a package that uses an extension function, add the following to the `nuspec` specification:
+
 ```xml
 <dependencies>
     <dependency id="wormie-visualstudio.extension" version="SPECIFY_LATEST_VERSION" />

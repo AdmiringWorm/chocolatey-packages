@@ -3,6 +3,7 @@
 Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.
 
 ## Features
+
 - Tabbed interface
 - [Add-on](http://tablacus.github.io/TablacusExplorerAddons/) support
 - Completely portable, No installation required

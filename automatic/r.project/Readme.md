@@ -1,6 +1,7 @@
 # [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg" height="48" width="48" /> ![The R Project for Statistical Computing](https://img.shields.io/chocolatey/v/r.project.svg?label=The%20R%20Project%20for%20Statistical%20Computing&style=for-the-badge)](https://chocolatey.org/packages/r.project)
 
 ## Introduction to R
+
 R is a language and environment for statistical computing and graphics. It is a [GNU project](http://www.gnu.org/) which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
 
 R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
@@ -10,6 +11,7 @@ One of R’s strengths is the ease with which well-designed publication-quality 
 R is available as Free Software under the terms of the [Free Software Foundation](http://www.gnu.org/)’s [GNU General Public License](https://www.r-project.org/COPYING) in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
 
 ## The R environment
+
 R is an integrated suite of software facilities for data manipulation, calculation and graphical display. It includes
 
 - an effective data handling and storage facility,
@@ -27,6 +29,7 @@ R can be extended (easily) via packages. There are about eight packages supplied
 R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hardcopy.
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**

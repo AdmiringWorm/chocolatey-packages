@@ -3,6 +3,7 @@
 Golly is an open source, cross-platform application for exploring Conway's Game of Life and many other types of cellular automata. The primary authors are Andrew Trevorrow and Tom Rokicki, with code contributions by Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo, Brenton Bostick and Chris Rowett.
 
 ## Key Features
+
 - Supports bounded and unbounded universes, with cells of up to 256 states.
 - Supports multiple algorithms, including Bill Gosper's super fast [hashlife][] algorithm.
 - Many different types of CA are included: John von Neumann's 29-state CA, Wolfram's 1D rules, WireWorld, Generations, Paterson's Worms, Larger than Life, etc.

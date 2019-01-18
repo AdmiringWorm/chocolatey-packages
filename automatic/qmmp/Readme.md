@@ -4,7 +4,8 @@ This program is an audio-player, written with the help of the Qt library. The us
 
 ## Features
 
-**Formats**
+### Formats
+
 - MPEG1 layer 2/3
 - Ogg Vorbis
 - Ogg Opus
@@ -20,18 +21,21 @@ This program is an audio-player, written with the help of the Qt library. The us
 - SID
 - Chiptune formats (AY, GBS, GYM, HES, KSS, NSF, NSFE, SAP, SPC, VGM, VGZ, VTX)
 
-**DSP effects**
+### DSP effects
+
 - [BS2B][] effect
 - sample rate conversion
 - [LADSPA][] effects
 - extra stereo
 - crossfade
 
-**Visual effects**
+### Visual effects
+
 - [projectM][] visualization
 - spectrum analyzer
 
-**Output system support**
+### Output system support
+
 - JACK
 - WaveOut
 - DirectSound
@@ -40,6 +44,6 @@ This program is an audio-player, written with the help of the Qt library. The us
 And more...
 
 [alt gui]: http://qmmp.ylsoftware.com/screenshots.php
-[BS2B]: http://bs2b.sourceforge.net/
-[LADSPA]: http://www.ladspa.org/
-[projectM]: http://projectm.sourceforge.net/
+[bs2b]: http://bs2b.sourceforge.net/
+[ladspa]: http://www.ladspa.org/
+[projectm]: http://projectm.sourceforge.net/

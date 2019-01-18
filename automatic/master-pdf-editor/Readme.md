@@ -3,6 +3,7 @@
 Master PDF Editor is straightforward, easy to use application for working with PDF documents equipped with powerful multi-purpose functionality. With Master PDF Editor you can easily view, create and modify PDF documents. The application enables you to merge several files into one, split a source document into multiple documents, and also to comment, sign and encrypt PDF files.
 
 ## Features
+
 - Edit PDF text, images and pages with full editing features.
 - Create new PDF or edit existing ones.
 - Add and/or edit bookmarks in PDF files.

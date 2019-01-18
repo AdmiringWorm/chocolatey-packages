@@ -8,6 +8,7 @@ Persepolis is a Download Manager & a GUI For `aria2`. It's written in Python. Pe
 - Download queuing
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**

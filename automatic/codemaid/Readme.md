@@ -3,6 +3,7 @@
 An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, PHP, PowerShell, R, JSON, XAML, XML, ASP, HTML, CSS, LESS, SCSS, JavaScript and TypeScript coding.
 
 ## Features
+
 - **Code Cleaning**  
   ![Code Cleaning](http://www.codemaid.net/wp-content/themes/codemaid/images/code-cleaning_thumb.png)  
   Cleanup random white space into a simple standard order. Add unspecified access modifiers. Utilize Visual Studio’s built-in formatting capabilities. Remove and sort using statements. And do it all automatically on save or on demand, from an individual file to the entire solution.

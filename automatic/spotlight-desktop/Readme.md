@@ -3,6 +3,7 @@
 This is a simple app that will take the current Spotlight Lock Screen image and set it to your desktop wallpaper.
 
 ## Features
+
 - Very low memory footprint
 - Automatically changes the wallpaper
 - Simple install
@@ -13,7 +14,9 @@ This is a simple app that will take the current Spotlight Lock Screen image and 
 - Updated for Windows Insider preview builds
 
 ## Requirements
+
 - Windows 10 with the Windows Spotlight feature
 
 ## Notes
+
 - This application installs itself into the current users Application Data (typically `%AppData%\onlineth\Spotlight Desktop`)

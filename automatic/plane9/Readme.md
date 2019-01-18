@@ -7,6 +7,7 @@ The visualizer can be used either as standalone window, screensaver, **oculus ri
 If you feel stressed out over how all this content can fit in such a neat little package then you can always view the [relaxing music video][] to find your center again.
 
 ## Features
+
 - Reacts to music that you play or get from any input
 - The scene concept where one scene act as a screensaver/visualizer in itself so you get a lot of variety in a small size
 - It detects when the monitor goes into standby and pauses/shuts down to save power
@@ -15,6 +16,7 @@ If you feel stressed out over how all this content can fit in such a neat little
 - Is still actively being developed
 
 ## Notes
+
 - After installation, the screensaver settings dialog pops up. It was decided not to forcibly close this dialog.
 
 [scenes]: https://www.plane9.com/scenes

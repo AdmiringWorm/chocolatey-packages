@@ -5,6 +5,7 @@ Origin is an online gaming, digital distribution and digital rights management (
 Origin contains social features such as profile management, networking with friends with chat and direct game joining along with an in-game overlay, streaming via TwitchTV and sharing of game library and community integration with networking sites like Facebook, Xbox Live, PlayStation Network, and Nintendo Network.
 
 ## Package Parameters
+
 - `/NoAutoUpdate` - Disable the auto updating of the origin client. *NOTE: May also disable auto updating of installed games, but that is not tested*
 - `/InstallDir:` - Select the location to where the origin client should be installed (*Defaults to `C:\Program Files\Origin` (32bit), `C:\Program Files (x86)\Origin` (64bit), or the previously installed location*)
 - `/LaunchOrigin` - Start Origin Client after installation

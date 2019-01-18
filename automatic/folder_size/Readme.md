@@ -6,6 +6,7 @@ Besides scanning an entire hard drive Folder Size can also scan a single folder 
 Folder Size can list backup folders, system folders and also the system volume information folder - all missing disk space will be revealed instantly.
 
 ## Features
+
 - Find and display all file sizes and folder sizes.
 - Scan entire storage device or a chosen folder.
 - Display the file sizes and folder sizes in different charts - Bar Chart, Pie Chart etc.
@@ -50,4 +51,5 @@ Folder Size can list backup folders, system folders and also the system volume i
 - Save/Load the scanned data for the file sizes and folder sizes so that you can compare it with subsequent scans.
 
 ## Notes
+
 - A license needs to be purchased when running on server OS's.

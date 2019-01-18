@@ -2,4 +2,3 @@
 
 ## Version: 1.2.1 (2018-01-12)
 - Added new package
-

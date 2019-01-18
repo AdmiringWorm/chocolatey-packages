@@ -12,6 +12,7 @@ Enki is a text editor for programmers. It is:
 - [More Features](http://enki-editor.org/features.html)
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**

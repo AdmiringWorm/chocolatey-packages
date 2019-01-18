@@ -3,11 +3,13 @@
 Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies and test outlines for all public methods.
 
 Test frameworks supported:
+
 - Visual Studio
 - NUnit
 - xUnit
 
 Mock frameworks supported:
+
 - Moq
 - AutoMoq
 - NSubstitute
@@ -15,6 +17,7 @@ Mock frameworks supported:
 - Rhino Mocks
 
 Dependency injection modes supported:
+
 - Constructor injection via any IoC framework
 - Property injection via Unity, Ninject or Grace
 
@@ -23,7 +26,7 @@ Right click an item in Solution Explorer and choose "Create Unit Test Boilerplat
 ![Before Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/BeforeScreenshot.png)
 
 This will create a test class in the same relative path as the class in a specified unit test project.
-All the dependencies are mocked and saved as fields which are created fresh for each test via [TestInitialize]. In addition, all public methods
+All the dependencies are mocked and saved as fields which are created fresh for each test via \[TestInitialize]. In addition, all public methods
 on the tested class are set up with a test method outline:
 
 ![After Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/AfterScreenshot.png)

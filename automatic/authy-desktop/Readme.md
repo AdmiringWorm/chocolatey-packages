@@ -4,7 +4,6 @@ Authy brings the future of strong authentication to the convenience of your Desk
 
 The Authy app generates secure 2 step verification tokens on your device. It help’s you protect your account from hackers and hijackers by adding an additional layer of security.
 
-
 Why Authy is the best multi factor authentication app:
 
 **- Secure Cloud Backups:**

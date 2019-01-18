@@ -6,7 +6,9 @@ This program can be useful to analyze and equalize the audio response of a hall,
 The name Friture is a french word for frying, also used for noise in a sound.
 
 ## Features
+
 Friture helps you to understand audio data with several [widgets](http://friture.org/features.html)
+
 - spectrum analyzer
 - rolling 2D spectogram
 - fraction-of-octave analyzer
@@ -14,7 +16,7 @@ Friture helps you to understand audio data with several [widgets](http://friture
 - [More](http://friture.org/features.html)
 
 ## Notes
-- The uninstall is not completely silent, a dialog asking to remove Friture settings shows up
 
+- The uninstall is not completely silent, a dialog asking to remove Friture settings shows up
 
 ![Friture Screenshot](http://friture.org/images/friture_20150824_small.png)
