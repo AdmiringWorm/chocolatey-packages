@@ -16,6 +16,6 @@ function Update-ChangelogVersion([string]$version, [string]$format = "## Version
   }
 
   $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($false)
-  $changelogText = ($changelog -join '`n').Trim()
+  $changelogText = ($changelog -join "`n").Trim()
   [System.IO.File]::WriteAllText($path, "$changelogText`n", $utf8NoBomEncoding)
 }
