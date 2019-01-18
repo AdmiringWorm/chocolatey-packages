@@ -1,8 +1,8 @@
-## Automatic Folder ##
+# Automatic Folder
 
 This is where you put your Chocolatey packages that are automatically packaged up by [AU](https://chocolatey.org/packages/au).
 
-### Automatic Updater (AU) ##
+## Automatic Updater (AU)
 
 AU Works with packages without automatic package tokens necessary. So you can treat the packages as normal.
 

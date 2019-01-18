@@ -16,7 +16,7 @@ The top part will show the translated languages identified for this resx file. T
 - No Language Value - the string value from the main resx file (without a language identifier)
 - Comments - comments that is never visible in the application, but can help translators understand what is meant. I use it to list what parameters I use in *string.Format*.
 
-The rows that are red means one or more languages are missing values. I have a special case in here where {"\[]"} around a value means it's not translated. For example if I haven't done the translation for the *ErrorHeader* value then I just enter {"[ErrorHeader]"} under that language. That way I will still see something when I develop using that value, but the ResxTranslator will show it red since it's not translated because of the brackets.
+The rows that are red means one or more languages are missing values. I have a special case in here where {"\[]"} around a value means it's not translated. For example if I haven't done the translation for the *ErrorHeader* value then I just enter {"\[ErrorHeader]"} under that language. That way I will still see something when I develop using that value, but the ResxTranslator will show it red since it's not translated because of the brackets.
 
 ## Package Parameters
 

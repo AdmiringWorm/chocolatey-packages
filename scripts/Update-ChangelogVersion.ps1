@@ -1,5 +1,5 @@
 
-function Update-ChangelogVersion([string]$version, [string]$format = '## Version: {VERSION} ({DATE})') {
+function Update-ChangelogVersion([string]$version, [string]$format = "## Version: {VERSION} ({DATE})`n") {
 
   if (!(Test-Path "Changelog.md")) { return }
 
@@ -16,5 +16,6 @@ function Update-ChangelogVersion([string]$version, [string]$format = '## Version
   }
 
   $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($false)
-  [System.IO.File]::WriteAllText($path, ($changelog -join "`n") + "`n", $utf8NoBomEncoding)
+  $changelogText = ($changelog -join '`n').Trim()
+  [System.IO.File]::WriteAllText($path, "$changelogText`n", $utf8NoBomEncoding)
 }
