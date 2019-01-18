@@ -60,3 +60,6 @@ if ($replaceInfo) {
 }
 
 Set-DescriptionFromReadme -SkipFirst 1
+
+# Uncomment the following line before doing a manual update
+#Update-Changelog -useIssueTitle

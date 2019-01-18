@@ -28,6 +28,7 @@ function global:au_AfterUpdate {
 ### Software changelog
 $($Latest.ReleaseNotes)
   "
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_GetLatest {
