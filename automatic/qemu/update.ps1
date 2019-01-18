@@ -20,6 +20,8 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 function GetDataFrom($releasesUrl) {
   $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
 
