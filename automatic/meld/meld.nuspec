@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>meld</id>
+    <version>3.16.2</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/meld</packageSourceUrl>
+    <owners>AdmiringWorm, dtgm</owners>
+    <title>Meld</title>
+    <authors>Kai Willadsen</authors>
+    <projectUrl>https://meldmerge.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@305ebe5b15634985b7fff0b99cfa337a3cb1fe48/icons/meld.png</iconUrl>
+    <copyright>Copyright © 2011-2012 Kai Willadsen</copyright>
+    <licenseUrl>https://gitlab.gnome.org/GNOME/meld/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://gitlab.gnome.org/GNOME/meld</projectSourceUrl>
+    <docsUrl>https://meldmerge.org/help/</docsUrl>
+    <mailingListUrl>https://mail.gnome.org/mailman/listinfo/meld-list</mailingListUrl>
+    <bugTrackerUrl>https://gitlab.gnome.org/GNOME/meld/issues</bugTrackerUrl>
+    <tags>meld compare diff merge admin foss cross-platform</tags>
+    <summary>Visual diff and merge file/folder tool</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Meld is a visual diff and merge tool. You can compare two or three files and edit them in place (diffs update dynamically).
+You can compare two or three folders and launch file comparisons. You can browse and view a working copy from popular version control systems such such as CVS, Subversion, Bazaar-ng and Mercurial.
+
+Written with Python and GTK. While in theory meld could be compiled for Windows and OS X currently there is no download for these platforms so we do not list it as cross platform.</description>
+    <releaseNotes>
+[Software Changelog](https://meldmerge.org/news.html)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/meld/Changelog.md)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+    <file src="..\..\icons\meld.png" target="icons" />
+  </files>
+</package>
