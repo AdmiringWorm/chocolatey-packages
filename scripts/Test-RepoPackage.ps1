@@ -295,8 +295,8 @@ function RemoveDependentPackages() {
     [object]$packages
   )
 
-  [array]$dependentPackages = $packages | ? { $_.DependentPackage -ne $null -and $_.DependentPackage -ne '' } | select -expand DependentPackage
-  if ($dependentPackages -ne $null -and $dependentPackages.Count -gt 0) {
+  [array]$dependentPackages = $packages | ? { $null -ne $_.DependentPackage -and $_.DependentPackage -ne '' } | select -expand DependentPackage
+  if ($null -ne $dependentPackages -and $dependentPackages.Count -gt 0) {
     $packages = $packages | ? { !$dependentPackages.Contains($_.Name) }
   }
   return $packages
@@ -313,7 +313,7 @@ function RunChocoPackProcess() {
     . choco pack | WriteChocoOutput
     if ($LastExitCode -ne 0) { popd; throw "Choco pack failed with code: $LastExitCode"; return }
   }
-  if ($path -ne $null -and $path -ne '') { popd}
+  if ($null -ne $path -and $path -ne '') { popd}
 }
 
 function SetAppveyorExitCode() {
@@ -340,6 +340,7 @@ function RunChocoProcess() {
   Function responsible for running choco install/uninstall
   and handling choco failures.
 #>
+  [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", Scope="Function")]
   param(
     [Parameter(Mandatory = $true)]
     [string[]]$arguments,
@@ -498,7 +499,7 @@ function TestAuUpdatePackages() {
     $packages
   )
   [array]$packageNames = $packages | ? IsAutomatic | select -expand Name
-  $packageNames += $packages | ? { $_.DependentPackage -ne $null -and $_.DependentPackage -ne '' } | select -expand DependentPackage
+  $packageNames += $packages | ? { $null -ne $_.DependentPackage -and $_.DependentPackage -ne '' } | select -expand DependentPackage
   if (!$packageNames) {
     WriteOutput "No Automatic packages was found. Skipping AU update test."
     return

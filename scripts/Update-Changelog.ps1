@@ -156,7 +156,7 @@ function Parse-GitHistory() {
 function HaveItemWithTitle() {
   param([System.Collections.Generic.List[hashtable]]$collection, [string]$title)
 
-  return (GetItemWithTitle -collection $collection -title $title) -ne $null
+  return $null -ne (GetItemWithTitle -collection $collection -title $title)
 }
 
 function GetItemWithTitle() {

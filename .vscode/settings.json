@@ -9,6 +9,9 @@
   ],
   "cSpell.words": [
     "Qilin",
-    "laniewski"
-  ]
+    "laniewski",
+    "nupkg",
+    "choco"
+  ],
+  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1"
 }

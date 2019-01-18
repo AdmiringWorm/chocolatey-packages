@@ -15,12 +15,12 @@ function Install-VisualStudioExtension() {
 
   $chocTempDir = $env:TEMP
   $tempDir = Join-Path $chocTempDir "$packageName"
-  if ($env:chocolateyPackageVersion -ne $null) { $tempDir = Join-Path $tempDir "$($env:chocolateyPackageVersion)" }
+  if ($null -ne $env:chocolateyPackageVersion) { $tempDir = Join-Path $tempDir "$($env:chocolateyPackageVersion)" }
   $tempDir = $tempDir -replace '\\chocolatey\\chocolatey\\', '\chocolatey\'
   if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
   $downloadFilePath = Join-Path $tempDir "$($packageName)Install.$fileType"
 
-  if ($url -eq '' -or $url -eq $null) {
+  if ($url -eq '' -or $null -eq $url) {
     throw "A url needs to be specified."
   }
 
