@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sheepit-client</id>
-    <version>0.0</version>
+    <version>5.1274.2958</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/sheepit-client</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>SheepIt Render Farm Client</title>
     <authors>Laurent Clouet</authors>
     <projectUrl>https://www.sheepit-renderfarm.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@27efe1585c76fa54ef1998fa9d7f903cacb28a71/icons/sheepit-client.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e60406a15bd056274a5c69d9cfa15745f3a1d53d/icons/sheepit-client.png</iconUrl>
     <copyright>2007-2019 Sheep it Render Farm.</copyright>
     <licenseUrl>https://github.com/laurent-clouet/sheepit-client/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,15 +19,23 @@
     <tags>sheepit-client rendering blender render-farm foss cross-platform</tags>
     <summary>An Open Source client for the distributed render farm SheepIt.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-SheepIt Render Farm Client is an Open Source client for the distributed render farm [SheepIt](https://www.sheepit-renderfarm.com/).
+    <description><![CDATA[SheepIt Render Farm Client is an Open Source client for the distributed render farm [SheepIt](https://www.sheepit-renderfarm.com/).
 
 ## Features
+
 - **Collaborative:** Instantly become a worker to help other users render. 550 machines are connected on average.
 - **User-Friendly:** Manage your project easily on a web based admin panel. Real time updates on your projects. No need to have Blender to help render.
 - **GPU supported:** CPU and GPU are supported.
 - **Free:** Free registration. Free project adding. Free rendering
-    </description>
+
+## Package Parameters
+
+- `/NoStartMenu` - Don't create a shortcut in the Start Menu
+- `/Desktop`     - Create a shortcut on the Desktop
+
+**Example**
+`choco install sheepit-client --package-parameters="/NoStartMenu /Desktop"`
+]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/sheepit-client/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

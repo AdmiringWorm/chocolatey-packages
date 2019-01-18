@@ -1,6 +1,6 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
-if ((Get-ProcessorBits 32) -or $env:ChocolateyForceX86) {
+if ((Get-OSArchitectureWidth 32) -or $env:ChocolateyForceX86) {
   throw "The SheepIt windows client does not support 32bit windows..."
 }
 
@@ -12,7 +12,7 @@ if ($runningProcess) {
 }
 
 $packageToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$packageClientPath = "$packageToolsPath\"
+$packageClientPath = "$packageToolsPath\sheepit-5.1274.2958.exe"
 $toolsPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
 $clientOutputPath = "$toolsPath\sheepit.exe"
 
@@ -21,7 +21,7 @@ if (!(Test-path $toolsPath)) {
   mkdir $toolsPath -Force
 }
 Write-Host "Moving $env:ChocolateyPackageName executable to tools directory..."
-mv -Path $packageClientPath $clientOutputPath -Force
+Move-Item -Path $packageClientPath $clientOutputPath -Force
 
 Write-Host "Registering $env:ChocolateyPackageName to App Paths..."
 Register-Application "$clientOutputPath"

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@27efe1585c76fa54ef1998fa9d7f903cacb28a71/icons/sheepit-client.png" height="48" width="48" /> ![SheepIt Render Farm Client](https://img.shields.io/chocolatey/v/sheepit-client.svg?label=SheepIt%20Render%20Farm%20Client&style=for-the-badge)](https://chocolatey.org/packages/sheepit-client)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e60406a15bd056274a5c69d9cfa15745f3a1d53d/icons/sheepit-client.png" height="48" width="48" /> ![SheepIt Render Farm Client](https://img.shields.io/chocolatey/v/sheepit-client.svg?label=SheepIt%20Render%20Farm%20Client&style=for-the-badge)](https://chocolatey.org/packages/sheepit-client)
 
 SheepIt Render Farm Client is an Open Source client for the distributed render farm [SheepIt](https://www.sheepit-renderfarm.com/).
 

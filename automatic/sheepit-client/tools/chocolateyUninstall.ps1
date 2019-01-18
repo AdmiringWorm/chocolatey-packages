@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $runningProcess = Get-Process -Name "sheepit*"
 if ($runningProcess) {
@@ -13,7 +13,7 @@ $paths = @{
   "$([System.Environment]::GetFolderPath('CommonDesktopDirectory'))\SheepIt Client.lnk" = "Desktop Shortcut"
 }
 
-$paths.GetEnumerator() | % {
+$paths.GetEnumerator() | ForEach-Object {
   if (Test-Path $_.Key) {
     Write-Host "Removing $env:ChocolateyPackageName $($_.Value)..."
     Remove-Item -Recurse -Force $_.Key
