@@ -3,6 +3,7 @@
 Cacher is like long term memory for software professionals. Use it to curate a library of useful code snippets for you and your team.
 
 ## Features
+
 - Cross-platform sharing
 - Color-coded labels
 - Create and manage teams
@@ -11,4 +12,5 @@ Cacher is like long term memory for software professionals. Use it to curate a l
 - Organization accounts
 
 ## Notes
+
 - The software for this package only installs as the current user.

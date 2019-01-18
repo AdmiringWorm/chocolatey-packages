@@ -2,4 +2,3 @@
 
 ## Version: 1.1.2 (2018-06-27)
 - Initial implementation of the gbm chocolatey package
-

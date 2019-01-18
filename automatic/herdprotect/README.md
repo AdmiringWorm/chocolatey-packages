@@ -1,6 +1,7 @@
 # [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/aff24e8d814e7619a563f7efc3b767055d0644e4/icons/herdprotect.png" height="48" width="48" /> ![herdProtect Anti-Malware Scanner](https://img.shields.io/chocolatey/v/herdprotect.svg?label=herdProtect%20Anti-Malware%20Scanner&style=for-the-badge)](https://chocolatey.org/packages/herdprotect)
 
-## What is herdProtect?
+## What is herdProtect
+
 herdProtect is a second line of defense malware scanning platform powered by [68 anti-malware engines](https://www.herdprotect.com/engines.aspx) in
 the cloud.
 Since no single anti-malware program is perfect 100% of the time, herdProtect utilizes a *'herd'* of multiple engines to
@@ -9,7 +10,8 @@ As a second line of defense anti-malware solution, herdProtect is designed to ru
 already installed on a user's PC.
 herdProtect is a free service to help user's find and remove malicious software.
 
-## How does it work?
+## How does it work
+
 The herdProtect scanning engine works by monitoring the active objects (processes, modules, drivers, etc.) on a user's PC
 as well as the hundreds of auto-start execution points (ASEPs).
 As new objects such as processes become active in the system, herdProtect will use a secured network tunnel to scan the
@@ -18,7 +20,8 @@ By scanning in the cloud all processor intensive activites are performed indepen
 Depending on the aggregate results of the scan,
 the user can then take the appropriate actions and keep their PC free from any known malware threats.
 
-## Why do I need it?
+## Why do I need it
+
 One anti-virus product is just not enough these days.
 The top 10 anti-virus engines only detect around 90% ([see knowledgeBase](https://www.herdprotect.com/knowledgebase.aspx)) of known and zero-day
 threats which leaves your PC open to numerous viruses, trojans, rootkits, dialers

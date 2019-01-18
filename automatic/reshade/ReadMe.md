@@ -9,6 +9,7 @@ ReShade features its very own shading language and transcompiler, called ReShade
 And that's not it. Write your shaders just once, they'll work everywhere, regardless of your target being Direct3D or OpenGL: ReShade takes care of compiling them to the right shader model and language.
 
 ## Package Parameters
+
 - `/Desktop`: Create a shortcut on the desktop
 - `/NoStartMenu`: Disables creation of a shortcut in the start menu
 

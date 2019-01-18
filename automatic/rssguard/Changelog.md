@@ -3,4 +3,3 @@
 ## Version: 3.5.6.20181017 (2018-10-17)
 - **ENHANCEMENT:** Embedded the rssguard package
 - Taken over as the maintainer of the rssguard package
-

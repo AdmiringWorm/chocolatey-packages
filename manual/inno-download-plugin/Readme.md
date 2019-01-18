@@ -3,6 +3,7 @@
 IDP is a plugin for [Inno Setup](http://www.jrsoftware.org/isinfo.php), which allows you to download files as part of your installation.
 
 ## Features
+
 - Supports Unicode & ANSI Inno Setup versions
 - FTP, HTTP and HTTPS protocols
 - Configurable proxy settings

@@ -6,10 +6,9 @@ The main advantage of Cmder is portability. It is designed to be totally self-co
 
 Combines utility of 3 distinct tools:
 
-* Console emulator = Conemu
-* Cmd.exe enhancements = clink
-* Unix tools on windows = msysgit
-
+- Console emulator = Conemu
+- Cmd.exe enhancements = clink
+- Unix tools on windows = msysgit
 
 ## Notes
 

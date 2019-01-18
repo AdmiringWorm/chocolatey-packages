@@ -2,4 +2,3 @@
 
 ## Version: 1.2.5 (2018-11-26)
 - Initial implementation of the vacuum-im chocolatey package
-

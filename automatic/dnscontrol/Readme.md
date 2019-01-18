@@ -3,6 +3,7 @@
 DnsControl is an [opinionated][] platform for seamlessly managing your DNS configuration across any number of DNS hosts, both in the cloud or in your own infrastructure. It manages all of the domains for the Stack Overflow network, and can do the same for your.
 
 ## Features
+
 - Maintain your DNS data as high-level DS, with macros, and variables for easier updates.
 - Eliminate vendor lock-in. Switch DNS providers easily, any time, with full fidelity.
 - Supports 10+ DNS Providers including BIND, AWS Route 53, Google DNS, and name.com

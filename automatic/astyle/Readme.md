@@ -9,6 +9,7 @@ Since the NUMBER of space characters showed on screen for each tab character in 
 To address this problem, Artistic Style was created - a filter written in C++ that automatically re-indents and re-formats C / C++ / Objective-C / C++/CLI / C# / Java source files. It can be used from a command line, or it can be incorporated as classes in another C++ program.
 
 ## Features
+
 - It's free and open source!
 - Cross-platform application works on Windows, Linux, Mac OS X, and others.
 - Supports 15 popular bracket styles.
@@ -25,6 +26,7 @@ To address this problem, Artistic Style was created - a filter written in C++ th
 - Can be included in C#, Python, Pascal, and other projects as a shared library (DLL).
 
 ## Package Parameters
+
 - `/KeepAllFiles` - Don't remove any of the source/build files and other unneeded files.
 
 **Example**

@@ -2,4 +2,3 @@
 
 ## Version: 1.2.0 (2018-05-15)
 - Taken over as a new maintainer of the boxcli package (original maintainer: DemonDante)
-

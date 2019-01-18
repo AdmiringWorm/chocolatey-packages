@@ -7,6 +7,7 @@ Inno Script Studio provides help to simplify the creation of Microsoft Windows i
 If you’ve created a freeware application, or even if it’s a large and complex application, Inno Script Studio will help you create the perfect Windows installation that fits both you and your customers’ requirements.
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**

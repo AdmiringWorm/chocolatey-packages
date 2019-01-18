@@ -1,16 +1,21 @@
 # [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@13951d0ab865e9acb6447433194294dd671649ce/icons/io-ninja.png" height="48" width="48" /> ![IO Ninja](https://img.shields.io/chocolatey/v/io-ninja.svg?label=IO%20Ninja&style=for-the-badge)](https://chocolatey.org/packages/io-ninja)
 
 ## Scriptable/Programmable
+
 The word *"programmable"* speaks for itself. Now you can turn IO Ninja into your personal IO debugger and tune it to your liking with [Jancy scripting](http://tibbo.com/ninja/features.html#!jancy) Whether you need a non-standard protocol analyzer, a network device emulator or an IO testing utility, IO Ninja can be programmed to do the job. We also provide an [IO Ninja IDE](http://tibbo.com/ninja/features.html#!ide) (Integrated Development Environment) to assist you in exploring and making use of scripting in IO Ninja.
 
 ## IPV6 Support
+
 IO Ninja is now [IPv6-enabled](http://tibbo.com/ninja/features.html#!ipv6)! All socket-based IO Ninja sessions can listen on IPv6 or IPv4 adapters and connect to IPv6 or IPv4 addresses. So if you are looking for a terminal emulator to test IPv6-connectivity of your products, you have just found one.
 
 ## Binary Data Support
+
 Need low-level IO terminal to send binary data over TCP? Or send hex to serial port? Ninja would be the best tool for [binary packets](http://tibbo.com/ninja/features.html#!packet-builder) transmission. We not only have a modern and convenient hex-editor. Dig this - you can actually copy-paste C-language defintions of packet structs and edit them using property grid! Binary data transmission capabilities are matched by equally good support for displaying both incoming and outgoing (RX/TX) binary data in a [communication log](http://tibbo.com/ninja/features.html#!advanced-logging).
 
 ## Redirect Anything-to-Anything
+
 IO Ninja features [session linking](http://tibbo.com/ninja/features.html#!linking) which turns it to a universal redirector. Create two sessions (possibly, of completely different nature), configure and link them together. All the data will be passed-through from one end to another and vice versa. Need to access a serial device attached to your PC from another machine across the Internet? In IO Ninja it's done with a couple of clicks.
 
 ## Free For Personal Use
+
 Last, but not least, IO Ninja is free for non-commercial usage. However, if you plan to use IO Ninja for work-related purposes, you have to [purchase a license](http://tibbo.com/ninja/purchase.html). If you already have a license for IO Ninja version 2.x.x, you can upgrade it to a commercial license for IO Ninja version 3.x.x free of charge. Contact our sales department for details at [sales@tibbo.com](mailto:sales@tibbo.com)

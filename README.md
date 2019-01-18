@@ -1,4 +1,4 @@
-## Important Notes
+# AdmiringWorm's Chocolatey Community packages
 
 Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
 
@@ -6,10 +6,10 @@ Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them use
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/AdmiringWorm)
 
-# Automatic Chocolatey Packages built by appveyor
+## Automatic Chocolatey Packages built by appveyor
 
 [![Join the chat at https://gitter.im/wormie-packages/Lobby](https://badges.gitter.im/wormie-packages/Lobby.svg)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![](https://ci.appveyor.com/api/projects/status/github/AdmiringWorm/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/AdmiringWorm/chocolatey-packages)
+[![AppVeyor Update Status](https://ci.appveyor.com/api/projects/status/github/AdmiringWorm/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/AdmiringWorm/chocolatey-packages)
 [![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
 [![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg)](https://chocolatey.org/profiles/AdmiringWorm)
 [![Open Source Helpers](https://www.codetriage.com/admiringworm/chocolatey-packages/badges/users.svg)](https://www.codetriage.com/admiringworm/chocolatey-packages)
@@ -34,7 +34,6 @@ To create a new package see [Creating the package updater script](https://github
 ## Testing the package
 
 In a package directory run: `Test-Package`. This function can be used to start testing in [chocolatey-test-environment](https://github.com/majkinetor/chocolatey-test-environment) via `Vagrant` parameter or it can test packages locally.
-
 
 ## Automatic package update
 
@@ -77,9 +76,13 @@ You can force package update and push using git commit message. AppVeyor build i
 If commit message includes `[AU <forced_packages>]` message on the first line, the `forced_packages` string will be sent to the updater.
 
 Examples:
+
 - `[AU pkg1 pkg2]`
+
 Force update ONLY packages `pkg1` and `pkg2`.
+
 - `[AU pkg1:ver1 pkg2 non_existent]`
+
 Force `pkg1` and use explicit version `ver1`, force `pkg2` and ignore `non_existent`.
 
 To see how versions behave when package update is forced see the [force documentation](https://github.com/majkinetor/au/blob/master/README.md#force-update).

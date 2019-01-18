@@ -3,6 +3,7 @@
 MonoGame is an Open Source implementation of the Microsoft XNA 4 Framework. The goal of MonoGame is to allow XNA developers on Xbox 360, Windows & Windows Phone to port their games to the iOS, Android, Mac OS X, Linux and Windows 8/10. As well as PlayStation Vita, Xbox One and PlayStation 4.
 
 ## Features
+
 - **Managed Code:** By leveraging C# and other .NET languages on Microsoft and Mono platforms you can write modern, fast, and reliable game code.
 - **Cross-Platform:** MonoGame currently support iOS, Android, MacOS, Linux, all Windows platforms, PS4, PSVita, Xbox One, and Switch with more platforms on the way.
 - **Open-Source:** All the code is available to you ensuring you'll have the ability to make changes when you need to or even port to whole new platforms.

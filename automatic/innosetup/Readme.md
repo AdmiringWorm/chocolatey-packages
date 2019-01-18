@@ -1,37 +1,37 @@
 # [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4dd8ea6c20bb4c744dff620f0a379fe76a9a1931/icons/innosetup.png" height="48" width="48" /> ![Inno Setup](https://img.shields.io/chocolatey/v/innosetup.svg?label=Inno%20Setup&style=for-the-badge)](https://chocolatey.org/packages/innosetup)
 
-
 Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.
 
-## Key features:
-* Support for **every Windows release since 2000**, including: *Windows 10*, Windows 8.1, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2008, Windows XP, Windows Server 2003, and Windows 2000. (No service packs are required.)
-* Extensive support for installation of **64-bit applications** on the 64-bit editions of Windows. Both the x64 and Itanium architectures are supported. (On the Itanium architecture, Service Pack 1 or later is required on Windows Server 2003 to install in 64-bit mode.)
-* Supports creation of a **single EXE** to install your program for easy online distribution. Disk spanning is also supported.
-* Standard Windows wizard interface.
-* **Customizable setup types**, e.g. Full, Minimal, Custom.
-* Complete **uninstall** capabilities.
-* Installation of files:
+## Key features
+
+- Support for **every Windows release since 2000**, including: *Windows 10*, Windows 8.1, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2008, Windows XP, Windows Server 2003, and Windows 2000. (No service packs are required.)
+- Extensive support for installation of **64-bit applications** on the 64-bit editions of Windows. Both the x64 and Itanium architectures are supported. (On the Itanium architecture, Service Pack 1 or later is required on Windows Server 2003 to install in 64-bit mode.)
+- Supports creation of a **single EXE** to install your program for easy online distribution. Disk spanning is also supported.
+- Standard Windows wizard interface.
+- **Customizable setup types**, e.g. Full, Minimal, Custom.
+- Complete **uninstall** capabilities.
+- Installation of files:
   Includes integrated support for "deflate", bzip2, and **7-Zip LZMA/LZMA2 file compression**. The installer has the ability to compare file version info, replace in-use files, use shared file counting,
   register DLL/OCX's and type libraries, and install fonts.
-* Creation of shortcuts anywhere, including in the Start Menu and on the desktop.
-* Creation of registry and .INI entries.
-* Running other programs before, during or after install.
-* Support for **multilingual** installs, including right-to-left language support.
-* Support for passworded and encrypted installs.
-* Support for **digitally signed** installs and uninstalls, including dual signing (SHA1 & SHA256).
-* Silent install and uninstall.
-* **Unicode** installs.
-* Integrated preprocessor option for advanced compile-time customization.
-* Integrated Pascal scripting engine option for advanced run-time install and uninstall customization.
-* Full *source code* is available (Borland Delphi 2.0-5.0 and 2009).
+- Creation of shortcuts anywhere, including in the Start Menu and on the desktop.
+- Creation of registry and .INI entries.
+- Running other programs before, during or after install.
+- Support for **multilingual** installs, including right-to-left language support.
+- Support for passworded and encrypted installs.
+- Support for **digitally signed** installs and uninstalls, including dual signing (SHA1 & SHA256).
+- Silent install and uninstall.
+- **Unicode** installs.
+- Integrated preprocessor option for advanced compile-time customization.
+- Integrated Pascal scripting engine option for advanced run-time install and uninstall customization.
+- Full *source code* is available (Borland Delphi 2.0-5.0 and 2009).
 
 **Is it really free of charge, even for commercial use?**
 Yes, it may be used completely free of charge, even when deploying commercial applications.
 However if you wish to show your appreciation and support its development you can make a [donation](http://www.jrsoftware.org/isdonate.php).
-*(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software.
-  There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
+*(Note: "Completely free of charge" must not be confused with "completely free". Inno Setup is copyrighted software, not public domain software. There are some restrictions on distribution and use; see the [LICENSE.TXT](http://www.jrsoftware.org/files/is/license.txt) file for details.)*
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**

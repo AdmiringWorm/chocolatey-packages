@@ -2,4 +2,3 @@
 
 ## Version: 0.18.0 (2018-12-13)
 - Initial implementation of the stretchly chocolatey package
-

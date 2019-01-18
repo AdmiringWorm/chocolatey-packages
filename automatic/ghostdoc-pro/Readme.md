@@ -5,6 +5,7 @@
 When generating documentation for class derived from a base class or for interface implementation (e.g. .NET Framework or your custom framework), GhostDoc will use the documentation that Microsoft or the framework vendor has already written for the base class or interface.
 
 ## Benefits
+
 - Save keystrokes and time; simplify documenting your code
 - Automatically generate a starting point for your help documentation
 - Benefit of the base class documentation
@@ -18,4 +19,5 @@ When generating documentation for class derived from a base class or for interfa
 If you follow good naming conventions in your code, then you will get very decent results on the summary GhostDoc generates.  When I see code that is not documented, it is as simple as hit Ctrl-Shift-D to have GhostDoc document it.
 
 ## Notes
+
 - Uninstall is not completely silent, after uninstall a browser window pops up

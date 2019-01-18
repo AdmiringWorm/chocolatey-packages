@@ -2,4 +2,3 @@
 
 ## Version: 1.0 (2018-10-25)
 - Initial implementation of the hardentools chocolatey package
-

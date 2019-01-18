@@ -2,4 +2,3 @@
 
 ## Version: 1.9.0 (2018-07-03)
 - Initial implementation of the unit-test-boilerplate-generator chocolatey package
-

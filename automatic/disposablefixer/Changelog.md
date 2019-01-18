@@ -2,4 +2,3 @@
 
 ## Version: 0.37 (2018-06-14)
 - Initial implementation of the disposablefixer chocolatey package
-

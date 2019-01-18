@@ -5,6 +5,7 @@ Lunacy is a native Windows app that opens, edits, and stores .sketch files.
 In short, it’s long-awaited Sketch for Windows. It solves the big pain of design teams working on different operating systems and improves the process of transition from design to development. And it’s completely free.
 
 ## Features
+
 - Open and Save Sketch files
 - Organize Pages and artboards
 - Draw, Join, Align objects

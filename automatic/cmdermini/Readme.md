@@ -9,7 +9,6 @@ Combines utility of 2 distinct tools:
 Console emulator = Conemu
 Cmd.exe enhancements = clink
 
-
 ## Notes
 
 This package uncompresses to 8 MB and does not include Unix integration via msysgit.

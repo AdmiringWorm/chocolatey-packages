@@ -8,6 +8,7 @@ With NordVPN, encrypt your online activity to protect your private data from hac
 Online security is the biggest challenge in today's interconnected world, so it's important to take it seriously. With NordVPN, you can choose from Double VPN combinations to encrypt your Internet traffic, protect yourself from snoopy advertisers with the CyberSec technology, and do it witht he most advanced security technologies available today.
 
 ## Features
+
 - **Military-grade encyrption:** Secure your Internet traffic with cutting-edge encryption technologies.
 - **CyberSec:** Shield yourself from intrusive advertisements and malicious online threats.
 - **Double VPN:** Encrypt your Internet traffic twice to create an extra layer of online privacy.

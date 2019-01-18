@@ -3,6 +3,7 @@
 Metapad is a small, fast and completely free text editor for Windows (95/98/NT/XP/Vista/7) with similar features to Microsoft Notepad but with many extra (and rather useful) features. It was designed to completely replace Notepad since it includes all of Notepad's features and much, much more.
 
 ## Features
+
 - Persistent window placement
 - Dirty file notification
 - Intelligent Find and Replace
