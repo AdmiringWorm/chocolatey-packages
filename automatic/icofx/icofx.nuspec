@@ -5,7 +5,7 @@
     <id>IcoFX</id>
     <version>3.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/icofx</packageSourceUrl>
-    <owners>AdmiringWorm, H. Alan Stevens AdmiringWorm</owners>
+    <owners>AdmiringWorm, H. Alan Stevens</owners>
     <title>Icofx</title>
     <authors>Attila Kovrig</authors>
     <projectUrl>https://www.icofx.ro/index.html</projectUrl>
