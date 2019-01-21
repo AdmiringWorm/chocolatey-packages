@@ -43,6 +43,9 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
     $re = 'innosetup.*unicode(\-dev\-[\d]*)?\.exe'
     $file = $download_page.links | ? href -match $re | select -Last 1 -expand href
+    if (!$file) {
+      return
+    }
     $url = ($versionDirUrl + $versionReleaseDir + $file)
 
     $version = $url -split 'setup\-|\-unicode|.exe' | select -Last 2 -Skip 1
@@ -67,6 +70,8 @@ function global:au_GetLatest {
       Releases = ($versionDirUrl + $versionReleaseDir)
     })
   }
+
+  if ($streams.Count -eq 0) { throw "No versions of Inno Setup was found" }
 
   return @{ Streams = $streams }
 }
