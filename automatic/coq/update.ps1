@@ -39,7 +39,12 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $latestRelease = Get-LatestGithubReleases @repoInfo | % latest
-  $releaseNotes = $latestRelease.Body.Substring(0, $latestRelease.Body.IndexOf("Distribution"))
+  $distIndex = $latestRelease.Body.Indexof("Distribution")
+  if ($distIndex -gt 0) {
+    $releaseNotes = $latestRelease.Body.Substring(0, $distIndex)
+  } else {
+    $releaseNotes = $latestRelease.Body
+  }
 
   @{
     Version = $latestRelease.Version
