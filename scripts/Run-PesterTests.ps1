@@ -17,6 +17,7 @@ function Run-PesterTests() {
       $packageName
       "--source=`"$packagePath;chocolatey`""
       "--ignorepackagecodes"
+      "--cache-location=C:\chocolatey-cache"
       "-y"
     )
     if ($additionalArguments) { $arguments += $additionalArguments }
@@ -82,54 +83,54 @@ function Run-PesterTests() {
           $_.Length | Should -BeLessOrEqual $maxSize
         }
       }
-    }
 
-    if (!$metaPackage) {
-      It "Nuspec should include tools directory" {
-        $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
+      if (!$metaPackage) {
+        It "Nuspec should include tools directory" {
+          $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
 
-        $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
+          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
 
-        $hasMatch | Should -BeTrue
-      }
-    }
-
-    if ($expectedEmbeddedMatch) {
-      It "All embedded files should match" {
-        [array]$allFiles = ls "$packagePath\tools" | ? { $_.Extension -match "^.*\.(exe|msi|zip|vsix|7z)$" }
-
-        $allFiles.Count | Should -BeGreaterThan 0
-
-        $allFiles | % {
-          $_.Name | Should -MatchExactly $expectedEmbeddedMatch
+          $hasMatch | Should -BeTrue
         }
       }
 
-      It "Nuspec should include legal directory" {
-        $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
+      if ($expectedEmbeddedMatch) {
+        It "All embedded files should match" {
+          [array]$allFiles = ls "$packagePath\tools" | ? { $_.Extension -match "^.*\.(exe|msi|zip|vsix|7z)$" }
 
-        $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
+          $allFiles.Count | Should -BeGreaterThan 0
 
-        $hasMatch | Should -BeTrue
-      }
-
-      It "LICENSE.txt file should be inside legal directory" {
-        $legalDir = "$packagePath\legal"
-        $licensePath = "$legalDir\LICENSE.txt"
-
-        $legalDir | Should -Exist
-        $licensePath | Should -Exist
-        if ($licenseShouldMatch) {
-          $licensePath | Should -FileContentMatch $licenseShouldMatch
+          $allFiles | % {
+            $_.Name | Should -MatchExactly $expectedEmbeddedMatch
+          }
         }
-      }
 
-      It "VERIFICATION.txt file should be inside legal directory" {
-        $legalDir = "$packagePath\legal"
-        $verificationPath = "$legalDir\VERIFICATION.txt"
+        It "Nuspec should include legal directory" {
+          $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
 
-        $legalDir | Should -Exist
-        $verificationPath | Should -Exist
+          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
+
+          $hasMatch | Should -BeTrue
+        }
+
+        It "LICENSE.txt file should be inside legal directory" {
+          $legalDir = "$packagePath\legal"
+          $licensePath = "$legalDir\LICENSE.txt"
+
+          $legalDir | Should -Exist
+          $licensePath | Should -Exist
+          if ($licenseShouldMatch) {
+            $licensePath | Should -FileContentMatch $licenseShouldMatch
+          }
+        }
+
+        It "VERIFICATION.txt file should be inside legal directory" {
+          $legalDir = "$packagePath\legal"
+          $verificationPath = "$legalDir\VERIFICATION.txt"
+
+          $legalDir | Should -Exist
+          $verificationPath | Should -Exist
+        }
       }
     }
 
