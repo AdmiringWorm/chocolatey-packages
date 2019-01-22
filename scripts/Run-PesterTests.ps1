@@ -8,6 +8,7 @@ function Run-PesterTests() {
     [string]$expectedDefaultDirectory,
     [string]$customDirectoryArgument,
     [string[]]$expectedShimFiles,
+    [string[]]$filesAvailableOnPath,
     [switch]$metaPackage,
     [switch]$test32bit
   )
@@ -120,8 +121,11 @@ function Run-PesterTests() {
 
           $legalDir | Should -Exist
           $licensePath | Should -Exist
-          if ($licenseShouldMatch) {
-            $licensePath | Should -FileContentMatch $licenseShouldMatch
+        }
+
+        if ($licenseShouldMatch) {
+          It "LICENSE.txt file should match the $licenseShouldMatch value" {
+            "$packagePath\legal\LICENSE.txt" | Should -FileContentMatch $licenseShouldMatch
           }
         }
 
@@ -157,6 +161,19 @@ function Run-PesterTests() {
           }
         }
 
+        if ($filesAvailableOnPath) {
+          Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+          Update-SessionEnvironment
+          $filesAvailableOnPath | % {
+            $file = $_
+            It "$file should be available on path." {
+              $file = Get-Command $file
+
+              $file.Source | Should -Exist
+            }
+          }
+        }
+
         It "Should uninstall package with default arguments" {
           uninstallPackage | Should -Be 0
 
@@ -170,6 +187,19 @@ function Run-PesterTests() {
             $shimFile = $_
             It "Should have removed shimfile $shimFile" {
               "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            }
+          }
+        }
+
+        if ($filesAvailableOnPath) {
+          Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+          Update-SessionEnvironment
+          $filesAvailableOnPath | % {
+            $file = $_
+            It "$file should be removed from path." {
+              $file = Get-Command $file -ea 0
+
+              $file.Source | Should -BeNullOrEmpty
             }
           }
         }
@@ -192,6 +222,19 @@ function Run-PesterTests() {
             }
           }
 
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be available on path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -Exist
+              }
+            }
+          }
+
           It "Should uninstall package with custom path" {
             uninstallPackage | Should -Be 0
 
@@ -203,6 +246,19 @@ function Run-PesterTests() {
               $shimFile = $_
               It "Should have removed shimfile $shimFile" {
                 "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
+            }
+          }
+
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be removed from path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -BeNullOrEmpty
               }
             }
           }
@@ -227,6 +283,19 @@ function Run-PesterTests() {
             }
           }
 
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be available on path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -Exist
+              }
+            }
+          }
+
           It "Should uninstall package with default arguments in 32bit mode" {
             uninstallPackage | Should -Be 0
 
@@ -244,11 +313,24 @@ function Run-PesterTests() {
             }
           }
 
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be removed from path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -BeNullOrEmpty
+              }
+            }
+          }
+
 
           if ($customDirectoryArgument) {
             $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
             It "Should install package with custom path in 32bit mode" {
-              installPackage -additionalArguments "--x86","--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
+              installPackage -additionalArguments "--x86", "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
 
               $customPath | Should -Exist
             }
@@ -258,6 +340,19 @@ function Run-PesterTests() {
                 $shimFile = $_
                 It "Should have created shimfile $shimFile when using custom directory in 32bit mode" {
                   "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+                }
+              }
+            }
+
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be available on path." {
+                  $file = Get-Command $file
+
+                  $file.Source | Should -Exist
                 }
               }
             }
@@ -273,6 +368,19 @@ function Run-PesterTests() {
                 $shimFile = $_
                 It "Should have removed shimfile $shimFile in 32bit mode" {
                   "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
+              }
+            }
+
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be removed from path." {
+                  $file = Get-Command $file
+
+                  $file.Source | Should -BeNullOrEmpty
                 }
               }
             }
