@@ -10,17 +10,17 @@ $packageArgs = @{
   file        = "$toolsPath\codetrack_1_0_3_3.zip"
 }
 
-Get-ChocolateyUnzip @packageArgs
+$outputDir = Get-ChocolateyUnzip @packageArgs
 
-$target = "$toolsDir\CodeTrack.exe"
+$target = "$outputDir\CodeTrack.exe"
 Remove-Item $packageArgs.file -Force -ea 0
 
 if (Test-Path $target) {
   $startMenu = [System.Environment]::GetFolderPath('Programs')
-  New-Item -ItemType File -Path "$target.gui"
+  New-Item -ItemType File -Path "$target.gui" | Out-Null
   Install-ChocolateyShortcut "$startMenu\CodeTrack.lnk" -TargetPath $target
 
-  Register-Application "$installLocation\$packageName.exe"
+  Register-Application "$target"
   Write-Host "$packageName registered as CodeTrack"
 }
 else {
