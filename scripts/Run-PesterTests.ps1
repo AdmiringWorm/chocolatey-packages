@@ -53,14 +53,14 @@ function Run-PesterTests() {
       if ($streams) {
         # First remove the existing nupkg files
         $streams | % {
-          $streamName
+          $streamName = $_
           It "Should update and create a new nupkg file with stream: $streamName" {
             # First gather the current package count
-            $currentPkgCount = ([array]"ls $packagePath\*.nupkg").Count
+            $currentPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
             $expectedPkgCount = $currentPkgCount + 1
             . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName\$streamName"
 
-            $nowPkgCount = ([array]"ls $packagePath\*.nupkg").Count
+            $nowPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
 
             $nowPkgCount | Should -BeExactly $expectedPkgCount
           }
@@ -134,6 +134,7 @@ function Run-PesterTests() {
     }
 
     if (!$metaPackage) {
+      # TODO: Need to test every nupkg package in the folder
 
       Context "Installing/Uninstalling" {
 
@@ -167,6 +168,40 @@ function Run-PesterTests() {
             $shimFile = $_
             It "Should have removed shimfile $shimFile" {
               "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            }
+          }
+        }
+
+
+        if ($customDirectoryArgument) {
+          $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
+          It "Should install package with custom path" {
+            installPackage -additionalArguments "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
+
+            $customPath | Should -Exist
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have created shimfile $shimFile when using custom directory" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+              }
+            }
+          }
+
+          It "Should uninstall package with custom path" {
+            uninstallPackage | Should -Be 0
+
+            $customPath | Should -Not -Exist
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have removed shimfile $shimFile" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
             }
           }
         }
