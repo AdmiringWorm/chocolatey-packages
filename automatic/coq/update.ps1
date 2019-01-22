@@ -51,6 +51,7 @@ function global:au_GetLatest {
     ReleaseNotes = $releaseNotes
     URL32 = $latestRelease.Assets | ? { $_ -match "i686\.exe$" }
     URL64 = $latestRelease.Assets | ? { $_ -match "x86_64\.exe$" }
+    PackageName = 'Coq'
   }
 }
 

@@ -17,6 +17,12 @@ if ($key.Count -eq 1) {
     $packageArgs['file'] = "$($_.UninstallString)"
 
     Uninstall-ChocolateyPackage @packageArgs
+
+    $process = Get-Process "*" | ? { $_.MainWindowTitle -match 'Coq' }
+
+    if ($process -and !$process.HasExited) {
+      $process.WaitForExit()
+    }
   }
 }
 elseif ($key.Count -eq 0) {
