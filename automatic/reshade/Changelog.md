@@ -1,6 +1,6 @@
 # ![ReShade Changelog](https://img.shields.io/badge/ReShade-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 4.1.0 (2019-01-22)
 
 - Added link to ReShade website in package description (requested by software maintainer)
 - Permission to embed binaries included in package

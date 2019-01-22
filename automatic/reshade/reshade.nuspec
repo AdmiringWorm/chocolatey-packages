@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>reshade</id>
-    <version>4.0.2</version>
+    <version>4.1.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/reshade</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ReShade</title>
@@ -18,7 +18,7 @@
     <tags>reshade foss</tags>
     <summary>ReShade is an advanced, fully generic post-processing injector for games and video software developed by crosire</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[ReShade is an advanced, fully generic post-processing injector for games and video software developed by crosire. Imagine your favorite game with ambient occlusion, real depth of field effects, color correction and more ... ReShade exposes an automated and generic way to access both frame color and depth information (latter is automatically disabled during multiplayer to prevent exploitation) and all the tools to make it happen.
+    <description><![CDATA[ReShade (https://reshade.me) is an advanced, fully generic post-processing injector for games and video software developed by crosire. Imagine your favorite game with ambient occlusion, real depth of field effects, color correction and more ... ReShade exposes an automated and generic way to access both frame color and depth information (latter is automatically disabled during multiplayer to prevent exploitation) and all the tools to make it happen.
 
 The possibilities are endless! Add advanced depth-edge-detection-driven SMAA antialiasing, screen space ambient occlusion, depth of field effects, chromatic aberration, dynamic film grain, automatic saturation and color correction, cross processing, multi-pass blurring ... you name it.
 
@@ -27,6 +27,7 @@ ReShade features its very own shading language and transcompiler, called ReShade
 And that's not it. Write your shaders just once, they'll work everywhere, regardless of your target being Direct3D or OpenGL: ReShade takes care of compiling them to the right shader model and language.
 
 ## Package Parameters
+
 - `/Desktop`: Create a shortcut on the desktop
 - `/NoStartMenu`: Disables creation of a shortcut in the start menu
 
