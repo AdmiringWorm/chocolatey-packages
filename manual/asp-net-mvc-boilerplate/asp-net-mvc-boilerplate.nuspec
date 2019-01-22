@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>asp-net-mvc-boilerplate</id>
     <version>6.2.0.28901</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/asp-net-mvc-boilerplate</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/asp-net-mvc-boilerplate</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>ASP.NET MVC Boilerplate</title>
     <authors>Rehan Saeed</authors>
