@@ -10,7 +10,8 @@ function Run-PesterTests() {
     [string[]]$expectedShimFiles,
     [string[]]$filesAvailableOnPath,
     [switch]$metaPackage,
-    [switch]$test32bit
+    [switch]$test32bit,
+    [switch]$installWithPreRelease
   )
 
   function installPackage([string[]]$additionalArguments) {
@@ -20,6 +21,7 @@ function Run-PesterTests() {
       "--source=`"$packagePath;chocolatey`""
       "--ignorepackagecodes"
       "--cache-location=C:\chocolatey-cache"
+      if ($installWithPreRelease) { "--prerelease" }
       "-y"
     )
     if ($additionalArguments) { $arguments += $additionalArguments }
