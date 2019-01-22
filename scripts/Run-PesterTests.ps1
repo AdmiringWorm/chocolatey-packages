@@ -8,7 +8,8 @@ function Run-PesterTests() {
     [string]$expectedDefaultDirectory,
     [string]$customDirectoryArgument,
     [string[]]$expectedShimFiles,
-    [switch]$metaPackage
+    [switch]$metaPackage,
+    [switch]$test32bit
   )
 
   function installPackage([string[]]$additionalArguments) {
@@ -206,9 +207,80 @@ function Run-PesterTests() {
             }
           }
         }
+
+        if ($test32bit) {
+
+          It "Should install package with default arguments in 32bit mode" {
+            installPackage -additionalArguments "--x86" | Should -Be 0
+
+            if ($expectedDefaultDirectory) {
+              $expectedDefaultDirectory | Should -Exist
+            }
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have created shimfile $shimFile in 32bit mode" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+              }
+            }
+          }
+
+          It "Should uninstall package with default arguments in 32bit mode" {
+            uninstallPackage | Should -Be 0
+
+            if ($expectedDefaultDirectory) {
+              $expectedDefaultDirectory | Should -Not -Exist
+            }
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have removed shimfile $shimFile in 32bit mode" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
+            }
+          }
+
+
+          if ($customDirectoryArgument) {
+            $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
+            It "Should install package with custom path in 32bit mode" {
+              installPackage -additionalArguments "--x86","--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
+
+              $customPath | Should -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have created shimfile $shimFile when using custom directory in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+                }
+              }
+            }
+
+            It "Should uninstall package with custom path in 32bit mode" {
+              uninstallPackage | Should -Be 0
+
+              $customPath | Should -Not -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have removed shimfile $shimFile in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
+              }
+            }
+          }
+        }
       }
     }
+
+
   }
-
-
 }
