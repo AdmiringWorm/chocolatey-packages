@@ -1,0 +1,6 @@
+[Setup]
+Lang=default
+Dir=C:\Testing\DeepGit
+Group=NewDeepGit
+NoIcons=0
+Tasks=!desktopicon

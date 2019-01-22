@@ -1,3 +1,49 @@
+function Install-Package() {
+  param(
+    [Parameter(Mandatory = $true)][string]$packageName,
+    [Parameter(Mandatory = $true)][string]$packagePath,
+    [string[]]$additionalArguments,
+    [switch]$installWithPreRelease
+  )
+
+  $arguments = @(
+      "install"
+      $packageName
+      "--source=`"$packagePath;chocolatey`""
+      "--ignorepackagecodes"
+      "--cache-location=C:\chocolatey-cache"
+      if ($installWithPreRelease) { "--prerelease" }
+      "-y"
+    )
+    if ($additionalArguments) { $arguments += $additionalArguments }
+
+    $chocoPath = Get-Command choco.exe | % Source
+
+    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
+
+    return $LASTEXITCODE
+}
+
+function Uninstall-Package() {
+  param(
+    [Parameter(Mandatory = $true)][string]$packageName,
+    [string[]]$additionalArguments
+  )
+  $arguments = @(
+      "uninstall"
+      $packageName
+      "--allversions"
+      "-y"
+    )
+    if ($additionalArguments) { $arguments += $additionalArguments }
+
+    $chocoPath = Get-Command choco.exe | % Source
+
+    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
+
+    return $LASTEXITCODE
+}
+
 function Run-PesterTests() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
@@ -15,38 +61,17 @@ function Run-PesterTests() {
   )
 
   function installPackage([string[]]$additionalArguments) {
-    $arguments = @(
-      "install"
-      $packageName
-      "--source=`"$packagePath;chocolatey`""
-      "--ignorepackagecodes"
-      "--cache-location=C:\chocolatey-cache"
-      if ($installWithPreRelease) { "--prerelease" }
-      "-y"
-    )
-    if ($additionalArguments) { $arguments += $additionalArguments }
-
-    $chocoPath = Get-Command choco.exe | % Source
-
-    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
-
-    return $LASTEXITCODE
+    Install-Package `
+      -packageName $packageName `
+      -packagePath $packagePath `
+      -additionalArguments $additionalArguments `
+      -installWithPreRelease:$installWithPreRelease
   }
 
   function uninstallPackage([string[]]$additionalArguments) {
-    $arguments = @(
-      "uninstall"
-      $packageName
-      "--allversions"
-      "-y"
-    )
-    if ($additionalArguments) { $arguments += $additionalArguments }
-
-    $chocoPath = Get-Command choco.exe | % Source
-
-    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
-
-    return $LASTEXITCODE
+    Uninstall-Package `
+      -packageName $packageName `
+      -additionalArguments $additionalArguments
   }
 
   Import-Module Pester
