@@ -300,20 +300,24 @@ function Update-IconUrl {
     if ($iconPath) {
       $iconName = [System.IO.Path]::GetFileNameWithoutExtension($iconPath)
       $extension = [System.IO.Path]::GetExtension($iconPath).TrimStart('.')
+      $packageIconDir = "$PSScriptRoot/$PackagesDirectory/$Name/icons"
       $commitHash = Test-Icon -Name $iconName -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
+      pushd ..
+      $relativeIconDir = Resolve-Path $packageIconDir -Relative
       $resolvedPath = Resolve-Path $iconPath -Relative;
+      popd
       $trimming = @(".", "\")
       $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\', '/';
-      if (Test-Path "$PSscriptRoot/$PackagesDirectory/$Name/icons/48x48.$extension") {
+      if (Test-Path "$packageIconDir/48x48.$extension") {
         Replace-IconUrl `
           -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
           -CommitHash $commitHash `
-          -IconPath $iconPath `
+          -IconPath "$iconPath" `
           -GithubRepository $GithubRepository
-        $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
+        $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$packageIconDir" -Optimize $Optimize -PackageName $Name;
         # Old rawgit url, just for history purposes
         #$url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
-        $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${CommitHash}/$($iconPath -replace "$iconName",'48x48')"
+        $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${commitHash}/$($iconPath -replace "$iconName","48x48")"
 
         $readMePath = "$PSScriptRoot/$PackagesDirectory/$Name/Readme.md"
         Update-Readme -ReadmePath $readMePath -Url $url
