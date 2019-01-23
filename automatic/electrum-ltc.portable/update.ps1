@@ -3,7 +3,7 @@
 
 $releases = 'https://electrum-ltc.org'
 
-function global:au_BeforeUpdate {
+function global:au_BeforeUpdate($Package) {
   $Latest.URL32 = $Latest.URL_P
   $Latest.ChecksumType32 = 'sha256'
 

@@ -192,41 +192,45 @@ function Run-PesterTests() {
         }
 
         It "All dependencies should specify minimum version" {
-          [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
+          [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
             $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
             $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
 
-          $dependencies | % {
-            $_.Version | Should -Not -BeNullOrEmpty
-            $_.Version | Should -Match '^\d+\.[\d\.]+(\-[\-a-z\d]+)?$'
+          if ($dependencies.Count -gt 0) {
+            $dependencies | % {
+              $_.Version | Should -Not -BeNullOrEmpty
+              $_.Version | Should -Match '^\d+\.[\d\.]+(\-[\-a-z\d]+)?$'
+            }
           }
         }
 
         It "All dependencies should exist on chocolatey.org" {
-          [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
+          [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
             $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
             $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
 
-          $dependencies | % {
-            $dependency = $_
-            try {
-              $url = "https://chocolatey.org/packages/$($dependency.Id)/$($dependency.Version)"
-              Write-Verbose "Calling $url"
-              iwr -UseBasicParsing -Uri "$url" | Out-Null
-            }
-            catch [System.Net.WebException] {
-              $statusCode = [int]$_.Exception.Response.StatusCode
-              if ($statusCode -eq 404) {
-                throw "Package $($dependency.Id) with version $($dependency.Version) doesn't exist on chocolatey.org"
+          if ($dependencies.Count -gt 0) {
+            $dependencies | % {
+              $dependency = $_
+              try {
+                $url = "https://chocolatey.org/packages/$($dependency.Id)/$($dependency.Version)"
+                Write-Verbose "Calling $url"
+                iwr -UseBasicParsing -Uri "$url" | Out-Null
               }
-              else {
-                throw $_.Exception
+              catch [System.Net.WebException] {
+                $statusCode = [int]$_.Exception.Response.StatusCode
+                if ($statusCode -eq 404) {
+                  throw "Package $($dependency.Id) with version $($dependency.Version) doesn't exist on chocolatey.org"
+                }
+                else {
+                  throw $_.Exception
+                }
               }
             }
           }
