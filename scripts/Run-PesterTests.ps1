@@ -85,6 +85,7 @@ function Run-PesterTests() {
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
     [boolean]$testChoco = $true,
+    [switch]$skipUpdate,
     [switch]$metaPackage,
     [switch]$test32bit,
     [switch]$installWithPreRelease
@@ -110,28 +111,30 @@ function Run-PesterTests() {
     rm "$packagePath\*.nupkg"
 
     Context "Updating" {
-      if ($streams) {
-        # First remove the existing nupkg files
-        $streams | % {
-          $streamName = $_
-          It "Should update and create a new nupkg file with stream: $streamName" {
-            # First gather the current package count
-            $currentPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
-            $expectedPkgCount = $currentPkgCount + 1
-            . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName\$streamName"
+      if (!$skipUpdate) {
+        if ($streams) {
+          # First remove the existing nupkg files
+          $streams | % {
+            $streamName = $_
+            It "Should update and create a new nupkg file with stream: $streamName" {
+              # First gather the current package count
+              $currentPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
+              $expectedPkgCount = $currentPkgCount + 1
+              . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName\$streamName"
 
-            $nowPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
+              $nowPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
 
-            $nowPkgCount | Should -BeExactly $expectedPkgCount
+              $nowPkgCount | Should -BeExactly $expectedPkgCount
+            }
           }
         }
-      }
-      else {
-        It "Should update and create a new nupkg file" {
-          . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName"
+        else {
+          It "Should update and create a new nupkg file" {
+            . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName"
 
-          $nowPkgCount = ([array]"ls $packagePath\*.nupkg").Count
-          $nowPkgCount | Should -BeExactly 1
+            $nowPkgCount = ([array]"ls $packagePath\*.nupkg").Count
+            $nowPkgCount | Should -BeExactly 1
+          }
         }
       }
 
@@ -187,19 +190,47 @@ function Run-PesterTests() {
 
           $hasMatch | Should -BeTrue
         }
-      } else {
+
+        It "All dependencies should specify minimum version" {
+          [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
+            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*","`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*","`$1"
+
+            return @{ Id = $id ; Version = $version }
+          }
+
+          $dependencies | % {
+            $_.Version | Should -Not -BeNullOrEmpty
+            $_.Version | Should -Match '^\d+\.[\d\.]+(\-[\-a-z\d]+)?$'
+          }
+        }
+
+        It "All dependencies should exist on chocolatey.org" {
+          [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
+            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*","`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*","`$1"
+
+            return @{ Id = $id ; Version = $version }
+          }
+
+          $dependencies | % {
+            $dependency = $_
+            try {
+              $url = "https://chocolatey.org/packages/$($dependency.Id)/$($dependency.Version)"
+              Write-Verbose "Calling $url"
+              iwr -UseBasicParsing -Uri "$url" | Out-Null
+            }
+            catch {
+              throw "Package $($dependency.Id) with version $($dependency.Version) doesn't exist on chocolatey.org"
+            }
+          }
+        }
+      }
+      else {
         It "Nuspec should have empty files section" {
           $validMatch = $nuspecContent | ? { $_ -match '\<files' } | select -first 1
 
           $validMatch | Should -MatchExactly '^\s*\<files\s*\/\>\s*$'
-        }
-      }
-
-      if ($expectedEmbeddedMatch) {
-        It "Nuspec should include legal directory" {
-          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
-
-          $hasMatch | Should -BeTrue
         }
 
         It "Should use explicit version for dependency" {
@@ -208,10 +239,18 @@ function Run-PesterTests() {
           $dependencies.Count | Should -BeGreaterOrEqual 1
 
           $dependencies | % {
-            $version = $_ -replace '^.*version="([\d\.\[\]]+).*$',"`$1"
+            $version = $_ -replace '^.*version="([\d\.\[\]]+).*$', "`$1"
 
             $version | Should -Match "^\[\d+\.[\d\.]+\]$"
           }
+        }
+      }
+
+      if ($expectedEmbeddedMatch) {
+        It "Nuspec should include legal directory" {
+          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
+
+          $hasMatch | Should -BeTrue
         }
       }
       It "Should have 'AdmiringWorm' as first owner" {
