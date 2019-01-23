@@ -1,4 +1,4 @@
-﻿Import-Module AU
+Import-Module AU
 
 $releases = 'https://encfsmp.sourceforge.io/download.html'
 $softwareName = 'EncFS MP'
