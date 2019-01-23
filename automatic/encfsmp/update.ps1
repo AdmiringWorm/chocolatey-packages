@@ -1,9 +1,17 @@
-Import-Module AU
+﻿Import-Module AU
 
 $releases = 'https://encfsmp.sourceforge.io/download.html'
 $softwareName = 'EncFS MP'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+function global:au_BeforeUpdate($Package) {
+  $content = iwr -UseBasicParsing -Uri ($Package.NuspecXml.package.metadata.licenseUrl -replace 'blob','raw') | % Content
+
+  $isCorrectLicense = $content | ? { $_ -match 'MIT license' } | select -first 1
+
+  if (!$isCorrectLicense) { throw "License has changed, please update..." }
+
+  Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1
+}
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
@@ -46,7 +54,7 @@ function GetPreReleaseStream($download_page) {
     $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
     return @{
       URL32 = $url32
-      Version = $version32
+      Version = $version32 + "-beta"
       FileType = "exe"
     }
   }
