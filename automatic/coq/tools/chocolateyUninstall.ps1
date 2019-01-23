@@ -18,10 +18,14 @@ if ($key.Count -eq 1) {
 
     Uninstall-ChocolateyPackage @packageArgs
 
-    $process = Get-Process "*" | ? { $_.MainWindowTitle -match 'Coq' }
+    # Sleep a few seconds to allow the uninstall process to spawn
+    sleep -seconds 5
 
-    if ($process -and !$process.HasExited) {
-      $process.WaitForExit()
+    $process = Get-Process "AU_" # Yes, this is the name of the uninstaller process
+
+    if ($process) {
+      Write-Host "Waiting for the uninstall process to close."
+      $process | Wait-Process
     }
   }
 }
