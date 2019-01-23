@@ -484,8 +484,14 @@ function Run-PesterTests() {
           }
 
           if ($expectedDefaultDirectory) {
+            $re = [regex]::Escape("$env:ProgramFiles\")
+            if ($expectedDefaultDirectory -match "$re") {
+              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re,"${env:ProgramFiles(x86)}\"
+            } else {
+              $expectedDefault32Directory = $expectedDefaultDirectory
+            }
             It "Should have created default directory in 32bit mode" {
-              $expectedDefaultDirectory | Should -Exist
+              $expectedDefault32Directory | Should -Exist
             }
           }
 
@@ -529,8 +535,14 @@ function Run-PesterTests() {
           }
 
           if ($expectedDefaultDirectory) {
+            $re = [regex]::Escape("$env:ProgramFiles\")
+            if ($expectedDefaultDirectory -match "$re") {
+              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re,"${env:ProgramFiles(x86)}\"
+            } else {
+              $expectedDefault32Directory = $expectedDefaultDirectory
+            }
             It "Should have removed default install directory in 32bit mode" {
-              $expectedDefaultDirectory | Should -Not -Exist
+              $expectedDefault32Directory | Should -Not -Exist
             }
           }
 
