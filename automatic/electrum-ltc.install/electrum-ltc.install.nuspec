@@ -31,7 +31,7 @@
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/electrum-ltc.install/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="kb2999226" version="1.0.20181019" />
     </dependencies>
   </metadata>
   <files>
