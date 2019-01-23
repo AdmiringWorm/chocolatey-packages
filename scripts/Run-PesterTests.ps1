@@ -142,16 +142,6 @@ function Run-PesterTests() {
         }
       }
 
-      if (!$metaPackage) {
-        It "Nuspec should include tools directory" {
-          $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
-
-          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
-
-          $hasMatch | Should -BeTrue
-        }
-      }
-
       if ($expectedEmbeddedMatch) {
         It "All embedded files should match" {
           [array]$allFiles = ls "$packagePath\tools" | ? { $_.Extension -match "^.*\.(exe|msi|zip|vsix|7z)$" }
@@ -161,14 +151,6 @@ function Run-PesterTests() {
           $allFiles | % {
             $_.Name | Should -MatchExactly $expectedEmbeddedMatch
           }
-        }
-
-        It "Nuspec should include legal directory" {
-          $nuspecContent = Get-Content "$packagePath\$packageName.nuspec" -Encoding UTF8
-
-          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
-
-          $hasMatch | Should -BeTrue
         }
 
         It "LICENSE.txt file should be inside legal directory" {
@@ -192,6 +174,49 @@ function Run-PesterTests() {
           $legalDir | Should -Exist
           $verificationPath | Should -Exist
         }
+      }
+    }
+
+    Context "Nuspec validation" {
+      $nuspecContent = gc -Encoding UTF8 -Path "$packagePath\$packageName.nuspec"
+
+      if (!$metaPackage) {
+        It "Nuspec should include tools directory" {
+          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
+
+          $hasMatch | Should -BeTrue
+        }
+      }
+
+      if ($expectedEmbeddedMatch) {
+        It "Nuspec should include legal directory" {
+          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="legal\\\*\*"' }
+
+          $hasMatch | Should -BeTrue
+        }
+
+        It "Should use explicit version for dependency" {
+          [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' }
+
+          $dependencies.Count | Should -BeGreaterOrEqual 1
+
+          $dependencies | % {
+            $version = $_ -replace '^.*version="([\d\.\[\]]+).*$',"`$1"
+
+            $version | Should -Match "^\[\d+\.[\d\.]+\]$"
+          }
+        }
+      }
+      It "Should have 'AdmiringWorm' as first owner" {
+        $nuspecContent | ? { $_ -match '\<owners\>'} | Should -Match "\<owners\>AdmiringWorm"
+      }
+
+      It "Should only have 'AdmiringWorm' set once as owner" {
+        $re = "^\s*\<owners\>(.*)\<\/owners\>"
+        [array]$owners = $nuspecContent | ? { $_ -match $re } | select -first 1 | % { ($_ -replace $re, "`$1") -split '[, ]' } | ? { $_ -notmatch "^\s*$" }
+
+        [array]$matches = $owners | ? { $_ -eq 'AdmiringWorm' }
+        $matches.Count | Should -BeExactly 1
       }
     }
 
@@ -248,7 +273,7 @@ function Run-PesterTests() {
 
         if ($expectedDefaultDirectory) {
           It "Should have removed default installation directory" {
-          $expectedDefaultDirectory | Should -Not -Exist
+            $expectedDefaultDirectory | Should -Not -Exist
           }
         }
 
