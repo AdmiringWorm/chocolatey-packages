@@ -1,0 +1,6 @@
+[Setup]
+Lang=default
+Dir=C:\Testing\Enki
+Group=NewEnki
+NoIcons=0
+Tasks=

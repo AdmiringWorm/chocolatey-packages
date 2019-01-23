@@ -108,7 +108,10 @@ function Run-PesterTests() {
   Import-Module Pester
 
   Describe "$packageName package verification" {
-    rm "$packagePath\*.nupkg"
+    if (!$skipUpdate) { rm "$packagePath\*.nupkg" }
+    elseif (!(Test-Path "$packagePath\*.nupkg")) {
+      Start-Process -Wait -FilePath "choco" -ArgumentList "pack",$(Resolve-Path "$packagePath\*.nuspec"),"$packagePath"
+    }
 
     Context "Updating" {
       if (!$skipUpdate) {
@@ -357,7 +360,7 @@ function Run-PesterTests() {
 
 
         if ($customDirectoryArgument) {
-          $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
+          $customPath = "C:\Testing\$([System.Guid]::NewGuid().ToString())"
           It "Should install package with custom path" {
             installPackage -additionalArguments "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
 
