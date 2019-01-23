@@ -34,7 +34,7 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
-  $url32 = "http://www.mindgems.com/software/FolderSize.exe"
+  $url32 = "https://www.mindgems.com/software/FolderSize.exe"
 
   $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32

@@ -7,12 +7,12 @@
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
     <owners>AdmiringWorm, MarkJohnson</owners>
     <title>Folder Size</title>
-    <authors>http://www.mindgems.com</authors>
-    <projectUrl>http://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
+    <authors>https://www.mindgems.com</authors>
+    <projectUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/bd9c0c9b85841cf5e41af8232b8d98e73e40301f/icons/folder_size.png</iconUrl>
-    <copyright>Copyright © 2001-2015 MindGems Inc. All rights reserved</copyright>
+    <copyright>Copyright © 2001-2019 MindGems Inc. All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://www.mindgems.com/products/Folder-Size/Folder-Size-Tutorials.htm</docsUrl>
+    <docsUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size-Tutorials.htm</docsUrl>
     <tags>folder_size folder size drive space windows file size freeware trial</tags>
     <summary>Folder Size is a powerful FREE utility that can scan and display all the file and folder tree sizes on your hard drives.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -69,7 +69,7 @@ Folder Size can list backup folders, system folders and also the system volume i
 - A license needs to be purchased when running on server OS's.
 ]]></description>
     <releaseNotes>
-[Software Changelog](http://www.mindgems.com/products/Folder-Size/Folder-Size-WhatsNew.htm)
+[Software Changelog](https://www.mindgems.com/products/Folder-Size/Folder-Size-WhatsNew.htm)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/folder_size/Changelog.md)
     </releaseNotes>
   </metadata>
