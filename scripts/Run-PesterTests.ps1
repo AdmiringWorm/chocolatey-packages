@@ -193,8 +193,8 @@ function Run-PesterTests() {
 
         It "All dependencies should specify minimum version" {
           [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
-            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*","`$1"
-            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*","`$1"
+            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
@@ -207,8 +207,8 @@ function Run-PesterTests() {
 
         It "All dependencies should exist on chocolatey.org" {
           [array]$dependencies = [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
-            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*","`$1"
-            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*","`$1"
+            $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
@@ -220,8 +220,14 @@ function Run-PesterTests() {
               Write-Verbose "Calling $url"
               iwr -UseBasicParsing -Uri "$url" | Out-Null
             }
-            catch {
-              throw "Package $($dependency.Id) with version $($dependency.Version) doesn't exist on chocolatey.org"
+            catch [System.Net.WebException] {
+              $statusCode = [int]$_.Exception.Response.StatusCode
+              if ($statusCode -eq 404) {
+                throw "Package $($dependency.Id) with version $($dependency.Version) doesn't exist on chocolatey.org"
+              }
+              else {
+                throw $_.Exception
+              }
             }
           }
         }

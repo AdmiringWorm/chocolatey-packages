@@ -50,6 +50,4 @@ function global:au_SearchReplace {
   }
 }
 
-$global:au_Force = $true
 update -ChecksumFor none
-$global:au_Force = $null
