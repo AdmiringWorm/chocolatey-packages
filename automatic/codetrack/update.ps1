@@ -5,7 +5,16 @@ Import-Module AU
 $releases = 'https://www.getcodetrack.com/releases.html'
 $softwareName = 'codetrack*'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+
+  $content = iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') | % Content
+  $hasMatch = $content | ? { $_ -match 'The Software can be copied and distributed under the condition' }
+  if (!$hasMatch) {
+    throw "The license has changed. Please verify it still allows distribution"
+  }
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_SearchReplace {
   @{
