@@ -8,7 +8,8 @@ Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
   -expectedDefaultDirectory "${env:ProgramFiles(x86)}\DeepGit" `
-  -customDirectoryArgument "/DIR="
+  -customDirectoryArgument "/DIR=" `
+  -customUninstallChecks @( { It "Sleeping" { sleep -Seconds 5 } })
 
 # TODO: Added parameter testing
 
@@ -30,8 +31,10 @@ Describe "$packageName configuration verification" {
 
     It "Should uninstall package after creating configuration file" {
       Uninstall-Package `
-        -packageName $packageName
+        -packageName $packageName | Should -Be 0
     }
+
+    It "Sleeping" { sleep -Seconds 5 }
 
     It "Should use existing configuration file when 'UseInf' is specified" {
       Install-Package `
@@ -49,6 +52,8 @@ Describe "$packageName configuration verification" {
     It "Should uninstall package after creating configuration file" {
       Uninstall-Package `
         -packageName $packageName
+
+      sleep -Seconds 5
 
       "C:\Testing\DeepGit" | Should -Not -Exist
       $startMenu = [System.Environment]::GetFolderPath('CommonStartMenu')
