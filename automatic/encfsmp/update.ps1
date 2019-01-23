@@ -1,4 +1,4 @@
-﻿Import-Module AU
+Import-Module AU
 
 $releases = 'https://encfsmp.sourceforge.io/download.html'
 $softwareName = 'EncFS MP'
@@ -23,19 +23,45 @@ function global:au_SearchReplace {
     }
   }
 }
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
+function GetStableStream($download_page) {
   $re = '\.exe\/download$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $_ -replace "^(ht|f)tp\:",'https:' }
 
   $verRe = '\/'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
-  @{
+  return @{
     URL32 = $url32
     Version = $version32
     FileType = "exe"
   }
+}
+
+function GetPreReleaseStream($download_page) {
+  $re = "Beta\:\s*\<a[^\>]*href=`"(?<url>[^`"]+)`"[`\>]*\>"
+
+  if ($download_page.Content -match $re) {
+    $verRe = '\/'
+    $url32 = $Matches['url']
+    $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
+    return @{
+      URL32 = $url32
+      Version = $version32
+      FileType = "exe"
+    }
+  }
+}
+
+function global:au_GetLatest {
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+  $streams = @{}
+
+  $streams.Add("stable", (GetStableStream $download_page))
+  $prereleaseStream = GetPreReleaseStream $download_page
+  if ($prereleaseStream) { $streams.Add("beta", $prereleaseStream) }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none
