@@ -7,21 +7,35 @@ function Install-Package() {
   )
 
   $arguments = @(
-      "install"
-      $packageName
-      "--source=`"$packagePath;chocolatey`""
-      "--ignorepackagecodes"
-      "--cache-location=C:\chocolatey-cache"
-      if ($installWithPreRelease) { "--prerelease" }
-      "-y"
-    )
-    if ($additionalArguments) { $arguments += $additionalArguments }
+    "install"
+    $packageName
+    "--source=`"$packagePath;chocolatey`""
+    "--ignorepackagecodes"
+    "--cache-location=C:\chocolatey-cache"
+    if ($installWithPreRelease) { "--prerelease" }
+    "-y"
+  )
+  if ($additionalArguments) { $arguments += $additionalArguments }
 
-    $chocoPath = Get-Command choco.exe | % Source
+  $chocoPath = Get-Command choco.exe | % Source
 
-    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
+  $process = Start-Process -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments -PassThru
 
-    return $LASTEXITCODE
+  $timeouted = $null
+  $process | Wait-Process -TimeoutSec 300 -ea 0 -ErrorVariable timeouted
+
+  if ($timeouted -or ($process -and !$process.HasExited)) {
+    $process | kill
+    $exitCode = 1460
+  }
+  elseif ($process) {
+    $exitCode = $process.ExitCode
+  }
+  else {
+    $exitCode = $LASTEXITCODE
+  }
+
+  return $exitCode
 }
 
 function Uninstall-Package() {
@@ -30,18 +44,31 @@ function Uninstall-Package() {
     [string[]]$additionalArguments
   )
   $arguments = @(
-      "uninstall"
-      $packageName
-      "--allversions"
-      "-y"
-    )
-    if ($additionalArguments) { $arguments += $additionalArguments }
+    "uninstall"
+    $packageName
+    "--allversions"
+    "-y"
+  )
+  if ($additionalArguments) { $arguments += $additionalArguments }
 
-    $chocoPath = Get-Command choco.exe | % Source
+  $chocoPath = Get-Command choco.exe | % Source
 
-    Start-Process -Wait -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments
+  $process = Start-Process -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments -PassThru
+  $timeouted = $null
+  $process | Wait-Process -TimeoutSec 300 -ea 0 -ErrorVariable timeouted
 
-    return $LASTEXITCODE
+  if ($timeouted -or ($process -and !$process.HasExited)) {
+    $process | kill
+    $exitCode = 1460
+  }
+  elseif ($process) {
+    $exitCode = $process.ExitCode
+  }
+  else {
+    $exitCode = $LASTEXITCODE
+  }
+
+  return $exitCode
 }
 
 function Run-PesterTests() {
@@ -55,13 +82,15 @@ function Run-PesterTests() {
     [string]$customDirectoryArgument,
     [string[]]$expectedShimFiles,
     [string[]]$filesAvailableOnPath,
+    [scriptblock[]] $customInstallChecks,
+    [scriptblock[]] $customUninstallChecks,
     [switch]$metaPackage,
     [switch]$test32bit,
     [switch]$installWithPreRelease
   )
 
   function installPackage([string[]]$additionalArguments) {
-    Install-Package `
+    return Install-Package `
       -packageName $packageName `
       -packagePath $packagePath `
       -additionalArguments $additionalArguments `
@@ -69,7 +98,7 @@ function Run-PesterTests() {
   }
 
   function uninstallPackage([string[]]$additionalArguments) {
-    Uninstall-Package `
+    return Uninstall-Package `
       -packageName $packageName `
       -additionalArguments $additionalArguments
   }
@@ -174,7 +203,15 @@ function Run-PesterTests() {
         It "Should install package with default arguments" {
           installPackage | Should -Be 0
 
-          if ($expectedDefaultDirectory) {
+
+        }
+
+        if ($customInstallChecks) {
+          $customInstallChecks | % { . $_ }
+        }
+
+        if ($expectedDefaultDirectory) {
+          It "Should have created default installation directory" {
             $expectedDefaultDirectory | Should -Exist
           }
         }
@@ -203,9 +240,15 @@ function Run-PesterTests() {
 
         It "Should uninstall package with default arguments" {
           uninstallPackage | Should -Be 0
+        }
 
-          if ($expectedDefaultDirectory) {
-            $expectedDefaultDirectory | Should -Not -Exist
+        if ($customUninstallChecks) {
+          $customUninstallChecks | % { . $_ }
+        }
+
+        if ($expectedDefaultDirectory) {
+          It "Should have removed default installation directory" {
+          $expectedDefaultDirectory | Should -Not -Exist
           }
         }
 
@@ -237,6 +280,14 @@ function Run-PesterTests() {
           It "Should install package with custom path" {
             installPackage -additionalArguments "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
 
+
+          }
+
+          if ($customInstallChecks) {
+            $customInstallChecks | % { . $_ }
+          }
+
+          It "Should have created custom directory path" {
             $customPath | Should -Exist
           }
 
@@ -264,7 +315,13 @@ function Run-PesterTests() {
 
           It "Should uninstall package with custom path" {
             uninstallPackage | Should -Be 0
+          }
 
+          if ($customUninstallChecks) {
+            $customUninstallChecks | % { . $_ }
+          }
+
+          It "Should have removed custom installation directory" {
             $customPath | Should -Not -Exist
           }
 
@@ -295,8 +352,14 @@ function Run-PesterTests() {
 
           It "Should install package with default arguments in 32bit mode" {
             installPackage -additionalArguments "--x86" | Should -Be 0
+          }
 
-            if ($expectedDefaultDirectory) {
+          if ($customInstallChecks) {
+            $customInstallChecks | % { . $_ }
+          }
+
+          if ($expectedDefaultDirectory) {
+            It "Should have created default directory in 32bit mode" {
               $expectedDefaultDirectory | Should -Exist
             }
           }
@@ -325,8 +388,14 @@ function Run-PesterTests() {
 
           It "Should uninstall package with default arguments in 32bit mode" {
             uninstallPackage | Should -Be 0
+          }
 
-            if ($expectedDefaultDirectory) {
+          if ($customUninstallChecks) {
+            $customUninstallChecks | % { . $_ }
+          }
+
+          if ($expectedDefaultDirectory) {
+            It "Should have removed default install directory in 32bit mode" {
               $expectedDefaultDirectory | Should -Not -Exist
             }
           }
@@ -358,7 +427,13 @@ function Run-PesterTests() {
             $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
             It "Should install package with custom path in 32bit mode" {
               installPackage -additionalArguments "--x86", "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
+            }
 
+            if ($customInstallChecks) {
+              $customInstallChecks | % { . $_ }
+            }
+
+            It "Should have created custom installation directory in 32bit mode" {
               $customPath | Should -Exist
             }
 
@@ -386,7 +461,13 @@ function Run-PesterTests() {
 
             It "Should uninstall package with custom path in 32bit mode" {
               uninstallPackage | Should -Be 0
+            }
 
+            if ($customUninstallChecks) {
+              $customUninstallChecks | % { . $_ }
+            }
+
+            It "Should have removed custom installation directory in 32bit mode" {
               $customPath | Should -Not -Exist
             }
 
