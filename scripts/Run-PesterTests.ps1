@@ -186,6 +186,12 @@ function Run-PesterTests() {
 
           $hasMatch | Should -BeTrue
         }
+      } else {
+        It "Nuspec should have empty files section" {
+          $validMatch = $nuspecContent | ? { $_ -match '\<files' } | select -first 1
+
+          $validMatch | Should -MatchExactly '^\s*\<files\s*\/\>\s*$'
+        }
       }
 
       if ($expectedEmbeddedMatch) {
