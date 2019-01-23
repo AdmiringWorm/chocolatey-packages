@@ -6,14 +6,13 @@ $padUnderVersion = '0.9.7'
 
 
 function global:au_BeforeUpdate($Package) {
-  # Download the latest License, and verify it is still an Apache License
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
-  if (Test-Path $licenseFile) { rm $licenseFile }
-  iwr -UseBasicParsing -Uri ($Package.NuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  $isCorrectLicense = Get-Content $licenseFile -Encoding UTF8 | ? { $_ -match 'Apache License' } | select -first 1
-
-  if (!$isCorrectLicense) { throw "License has changed, please update..." }
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
 
   Get-RemoteFiles -Purge -NoSuffix
 }
