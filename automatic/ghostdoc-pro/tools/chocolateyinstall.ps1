@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $cacheDirectory = Get-PackageCacheLocation
 
@@ -35,6 +35,6 @@ Install-ChocolateyZipPackage @packageArgs
 $packageArgs["file"] = Get-ChildItem $cacheDirectory -Filter "*.exe" -Recurse | Select-Object -First 1 -ExpandProperty FullName
 
 if ($env:chocolateyInstallOverride -ne $true) {
-  Start-Process "autohotkey.exe" "$toolsDir\ghostdocInstall.ahk"
+  Start-Process "autohotkey.exe" "$toolsDir\ghostdocInstall.ahk","Pro"
 }
 Install-ChocolateyInstallPackage @packageArgs

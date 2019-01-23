@@ -48,5 +48,6 @@ If you follow good naming conventions in your code, then you will get very decen
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="..\ghostdoc-enterprise\tools\ghostdocInstall.ahk" target="tools" />
   </files>
 </package>
