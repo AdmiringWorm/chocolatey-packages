@@ -4,14 +4,13 @@ $releases = 'http://abau.org/dilay/download.html'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 function global:au_BeforeUpdate($Package) {
-  # Download the latest License, and verify it is still an GNU license
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
-  if (Test-Path $licenseFile) { rm $licenseFile }
-  iwr -UseBasicParsing -Uri ($Package.NuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  $isApacheLicense = Get-Content $licenseFile -Encoding UTF8 | ? { $_ -match 'GNU GENERAL PUBLIC LICENSE' }
-
-  if (!$isApacheLicense) { throw "License has changed, please update..." }
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
 
   Get-RemoteFiles -Purge -NoSuffix
 }
