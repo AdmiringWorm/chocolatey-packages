@@ -84,6 +84,7 @@ function Run-PesterTests() {
     [string[]]$filesAvailableOnPath,
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
+    [boolean]$testChoco = $true,
     [switch]$metaPackage,
     [switch]$test32bit,
     [switch]$installWithPreRelease
@@ -226,7 +227,7 @@ function Run-PesterTests() {
       }
     }
 
-    if (!$metaPackage) {
+    if (!$metaPackage -and $testChoco) {
       # TODO: Need to test every nupkg package in the folder
 
       Context "Installing/Uninstalling" {

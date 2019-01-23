@@ -9,4 +9,4 @@ Run-PesterTests `
     -packagePath "$PSScriptRoot" `
     -expectedEmbeddedMatch "^DisposableFixer.vsix$" `
     -licenseShouldMatch "Creative Commons Public Licenses" `
-    -metaPackage:$(!(Test-Path Env:\APPVEYOR))
+    -testChoco:$((Test-Path Env:\APPVEYOR))

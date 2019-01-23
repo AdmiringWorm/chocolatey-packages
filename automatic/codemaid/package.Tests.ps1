@@ -9,4 +9,4 @@ Run-PesterTests `
     -packagePath "$PSScriptRoot" `
     -expectedEmbeddedMatch "^CodeMaid\.v[\d\.]+\.vsix$" `
     -licenseShouldMatch "GNU LESSER GENERAL PUBLIC LICENSE" `
-    -metaPackage:$(!(Test-Path Env:\APPVEYOR))
+    -testChoco:$((Test-Path Env:\APPVEYOR))
