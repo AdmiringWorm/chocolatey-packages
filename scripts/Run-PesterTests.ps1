@@ -81,6 +81,7 @@ function Run-PesterTests() {
     [string]$expectedDefaultDirectory,
     [string]$customDirectoryArgument,
     [string[]]$expectedShimFiles,
+    [string[]]$notExpectedShimFiles,
     [string[]]$filesAvailableOnPath,
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
@@ -88,7 +89,8 @@ function Run-PesterTests() {
     [switch]$skipUpdate,
     [switch]$metaPackage,
     [switch]$test32bit,
-    [switch]$installWithPreRelease
+    [switch]$installWithPreRelease,
+    [switch]$failsOn32bit
   )
 
   function installPackage([string[]]$additionalArguments) {
@@ -110,7 +112,7 @@ function Run-PesterTests() {
   Describe "$packageName package verification" {
     if (!$skipUpdate) { rm "$packagePath\*.nupkg" }
     elseif (!(Test-Path "$packagePath\*.nupkg")) {
-      Start-Process -Wait -FilePath "choco" -ArgumentList "pack",$(Resolve-Path "$packagePath\*.nuspec"),"$packagePath"
+      Start-Process -Wait -FilePath "choco" -ArgumentList "pack", $(Resolve-Path "$packagePath\*.nuspec"), "$packagePath"
     }
 
     Context "Updating" {
@@ -309,6 +311,15 @@ function Run-PesterTests() {
           }
         }
 
+        if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+          $notExpectedShimFiles | % {
+            $shimFile = $_
+            It "Should NOT have created shimfile $shimFile" {
+              "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            }
+          }
+        }
+
         if ($filesAvailableOnPath) {
           Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
           Update-SessionEnvironment
@@ -380,6 +391,15 @@ function Run-PesterTests() {
               $shimFile = $_
               It "Should have created shimfile $shimFile when using custom directory" {
                 "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+              }
+            }
+          }
+
+          if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+            $notExpectedShimFiles | % {
+              $shimFile = $_
+              It "Should NOT have created shimfile $shimFile when using custom directory" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
               }
             }
           }
@@ -457,6 +477,15 @@ function Run-PesterTests() {
             }
           }
 
+          if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+            $notExpectedShimFiles | % {
+              $shimFile = $_
+              It "Should NOT have created shimfile $shimFile in 32bit mode" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
+            }
+          }
+
           if ($filesAvailableOnPath) {
             Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
             Update-SessionEnvironment
@@ -530,6 +559,15 @@ function Run-PesterTests() {
               }
             }
 
+            if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+              $notExpectedShimFiles | % {
+                $shimFile = $_
+                It "Should NOT have created shimfile $shimFile when using custom directory in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
+              }
+            }
+
             if ($filesAvailableOnPath) {
               Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
               Update-SessionEnvironment
@@ -578,9 +616,13 @@ function Run-PesterTests() {
             }
           }
         }
+
+        if ($failsOn32bit) {
+          It "Should fail when trying to install in 32bit mode" {
+            installPackage -additionalArguments '--x86' | Should -Not -Be 0
+          }
+        }
       }
     }
-
-
   }
 }
