@@ -13,6 +13,7 @@ $funcs = @(
   'Get-AllGithubReleases'
   "Update-OnETagChanged"
   "Update-OnHeaderChanged"
+  "Get-ValidOpenSourceLicense"
 )
 
 $funcs | % {
