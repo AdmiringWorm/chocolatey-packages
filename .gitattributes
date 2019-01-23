@@ -8,3 +8,5 @@
 
 *.md whitespace=-trailing-space
 *.pdf binary
+
+LICENSE.txt binary diff=text
