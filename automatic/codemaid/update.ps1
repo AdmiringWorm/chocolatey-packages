@@ -4,7 +4,17 @@ Import-Module AU
 
 $releases = 'https://github.com/codecadwallader/codemaid/releases'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_SearchReplace {
   @{
