@@ -14,9 +14,9 @@ function global:au_BeforeUpdate($Package) {
     throw "Unknown license download. Please verify it still contains distribution rights."
   }
 
-  Get-RemoteFiles -Purge -NoSuffix
 }
 
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase "dnscontrol"
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
