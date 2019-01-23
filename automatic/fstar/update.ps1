@@ -14,7 +14,7 @@ function global:au_BeforeUpdate($Package) {
     throw "Unknown license download. Please verify it still contains distribution rights."
   }
 
-  Get-RemoteFiles -Purge -NoSuffix -FileNameBase $Latest.PackageName
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
