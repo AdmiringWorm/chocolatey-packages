@@ -11,3 +11,7 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
+
+gci $toolsPath -Filter "*.exe" -Recurse | ? { $_.Name -ne "fstar.exe" } | % {
+  New-Item -Path "$($_.FullName).ignore" -Value ""
+}
