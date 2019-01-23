@@ -17,6 +17,12 @@ function Install-Package() {
   )
   if ($additionalArguments) { $arguments += $additionalArguments }
 
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+  $line = "START CHOCOLATEY INSTALL COMMAND"
+  Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+
+
   $chocoPath = Get-Command choco.exe | % Source
 
   $process = Start-Process -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments -PassThru
@@ -34,6 +40,11 @@ function Install-Package() {
   else {
     $exitCode = $LASTEXITCODE
   }
+
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+  $line = "END CHOCOLATEY INSTALL COMMAND"
+  Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
 
   return $exitCode
 }
@@ -53,6 +64,11 @@ function Uninstall-Package() {
 
   $chocoPath = Get-Command choco.exe | % Source
 
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+  $line = "START CHOCOLATEY UNINSTALL COMMAND"
+  Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+
   $process = Start-Process -NoNewWindow -FilePath $chocoPath -ArgumentList $arguments -PassThru
   $timeouted = $null
   $process | Wait-Process -TimeoutSec 300 -ea 0 -ErrorVariable timeouted
@@ -67,6 +83,11 @@ function Uninstall-Package() {
   else {
     $exitCode = $LASTEXITCODE
   }
+
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
+  $line = "END CHOCOLATEY UNINSTALL COMMAND"
+  Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
+  Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
 
   return $exitCode
 }
