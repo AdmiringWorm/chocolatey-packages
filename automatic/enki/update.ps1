@@ -8,16 +8,15 @@ $repoInfo = @{
 }
 
 function global:au_BeforeUpdate($Package) {
-  # Download the latest License, and verify it is still an GNU GENERAL PUBLIC LICENSE
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
-  if (Test-Path $licenseFile) { rm $licenseFile }
-  iwr -UseBasicParsing -Uri ($Package.NuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  $isCorrectLicense = Get-Content $licenseFile -Encoding UTF8 | ? { $_ -match 'GNU GENERAL PUBLIC LICENSE' } | select -first 1
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
 
-  if (!$isCorrectLicense) { throw "License has changed, please update..." }
-
-  Get-RemoteFiles -Purge -NoSuffix
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase $Latest.PackageName
 }
 
 function global:au_AfterUpdate {
