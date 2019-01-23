@@ -5,7 +5,18 @@ $releases = "$domain/FStarLang/FStar/releases"
 $padUnderVersion = '0.9.7'
 
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  # Download the latest License, and verify it is still an Apache License
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm $licenseFile }
+  iwr -UseBasicParsing -Uri ($Package.NuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+
+  $isCorrectLicense = Get-Content $licenseFile -Encoding UTF8 | ? { $_ -match 'Apache License' } | select -first 1
+
+  if (!$isCorrectLicense) { throw "License has changed, please update..." }
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_SearchReplace {
   @{
