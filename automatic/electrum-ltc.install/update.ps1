@@ -2,7 +2,7 @@
 
 $releases = 'https://electrum-ltc.org'
 
-function global:au_BeforeUpdate {
+function global:au_BeforeUpdate($Package) {
   cp "$PSScriptRoot\..\electrum-ltc\Readme.md" Readme.md -Force
   $content = gc Readme.md -Encoding UTF8 -Raw
   $content = $content -replace '(packages\/electrum-ltc)\)', '$1.install)'
@@ -11,6 +11,14 @@ function global:au_BeforeUpdate {
   [System.IO.File]::WriteAllText("$PSScriptRoot\Readme.md", $content, $enc)
   $Latest.URL32 = $Latest.URL_I
   $Latest.ChecksumType32 = 'sha256'
+
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob','raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
 
   Get-RemoteFiles -Purge -NoSuffix
 }
