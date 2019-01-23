@@ -62,6 +62,10 @@ function global:au_GetLatest {
     }
   }
 
+  $key = $streams.Keys | sort -Descending | select -First 1
+  $streams.Add('latest', $streams[$key])
+  $streams.Remove($key)
+
   return @{ Streams = $streams }
 }
 
