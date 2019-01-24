@@ -1,0 +1,74 @@
+version: '{build}'
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  except:
+  - master
+skip_tags: true
+skip_branch_with_pr: true
+image:
+- Visual Studio 2017
+- Visual Studio 2015
+- Visual Studio 2013
+init:
+- cmd: >-
+    git config --global user.email "chocolatey@realdimensions.net"
+
+    git config --global user.name "Chocolatey"
+
+    git config --global core.safecrlf false
+environment:
+  au_version: master
+  au_push: false
+  github_user_repo: AdmiringWorm/chocolatey-packages
+  github_api_key:
+    secure: pmwNf8f5uDVc1IdjM+mRpfMsYW6dieBT0znGf6NRUCjE+9LyWUYSQqVcRNPafSx6
+  gist_id: 30a8b66d4c02ecacce2da3c8734ac61f
+  choco_version: 0.10.8
+  nupkg_cache_path: C:\nupkg_cache
+install:
+- ps: >-
+    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+
+    @{
+        'chocolatey' = $Env:choco_version
+        'wormies-au-helpers' = '0.2.2'
+    }.GetEnumerator() | % {
+      if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) {
+        rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg"
+        iwr "https://chocolatey.org/api/v2/packages/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg"
+      }
+      if ($_.Key -eq "chocolatey") { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade }
+      else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
+    }
+
+
+    Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
+
+    $PSVersionTable
+
+    git --version
+
+    choco --version
+
+
+    git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
+
+    . "$Env:/au/scripts/Install-AU.ps1" $Env:au_version
+cache: C:\chocolatey-cache
+nuget:
+  disable_publish_on_pr: true
+  disable_publish_octopus: true
+build: off
+test_script:
+- ps: >-
+    if ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') {
+      .\scripts\Invoke-PesterTests.ps1
+    }
+
+    else {
+      .\scripts\Invoke-PesterTests.ps1 -runAllTests
+    }
+artifacts:
+- path: '**\*.nupkg'
+deploy: off

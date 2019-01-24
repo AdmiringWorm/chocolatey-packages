@@ -11,6 +11,7 @@ branches:
   only:
   - master
 skip_tags: true
+skip_branch_with_pr: true
 #build:
 #  verbosity: minimal
 
@@ -90,16 +91,8 @@ build_script:
 
     . ./scripts/EventLogs.ps1
     Clear-EventLogs
-
-    if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
-    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
-      Set-Service wuauserv -StartupType Manual
-      ./scripts/Test-RepoPackage.ps1 -CleanFiles -TakeScreenshots
-      return
-    } else {
       # Clean the choco logs as it's quite large
       rm "$env:ChocolateyInstall\logs\*.log"
-    }
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
