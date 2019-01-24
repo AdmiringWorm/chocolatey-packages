@@ -21,7 +21,7 @@ Describe "$packageName configuration verification" {
       Install-Package `
         -packageName $packageName `
         -packagePath $PSScriptRoot `
-        -additionalArguments "--params '`"/UseInf:${confFile}`"'" | Should -Be 0
+        -additionalArguments "--package-parameters='`"/UseInf:${confFile}`"'" | Should -Be 0
 
       ${confFile} | Should -Exist
 
@@ -39,7 +39,7 @@ Describe "$packageName configuration verification" {
       Install-Package `
         -packageName $packageName `
         -packagePath $PSScriptRoot `
-        -additionalArguments "--params '`"/UseInf:${PSScriptRoot}\test.inf`"'" | Should -Be 0
+        -additionalArguments "--package-parameters='`"/UseInf:${PSScriptRoot}\test.inf`"'" | Should -Be 0
     }
 
     It "Should have created installation directory" {
