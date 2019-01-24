@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "slevesque.vscode-autohotkey",
+    "gep13.chocolatey-vscode",
+    "editorconfig.editorconfig",
+    "ms-vscode.powershell"
+  ]
+}
