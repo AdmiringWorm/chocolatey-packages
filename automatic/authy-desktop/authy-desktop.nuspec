@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>authy-desktop</id>
-    <version>1.6.0</version>
+    <version>1.7.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Authy Desktop (Install)</title>
@@ -18,7 +18,6 @@
     <description><![CDATA[Authy brings the future of strong authentication to the convenience of your Desktop.
 
 The Authy app generates secure 2 step verification tokens on your device. It help’s you protect your account from hackers and hijackers by adding an additional layer of security.
-
 
 Why Authy is the best multi factor authentication app:
 
