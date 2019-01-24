@@ -5,9 +5,10 @@ $packageName = Split-Path -Leaf $PSScriptRoot
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
+  -streams 'latest' `
   -expectedEmbeddedMatch "^teeworlds-[\d\.]+-win32\.zip$" `
   -licenseShouldMatch "CC-BY-SA 3.0" `
-  -expectedDefaultDirectory "${env:ChocolateyInstall}\lib\teeworlds\tools\teeworlds-[\d\.]+-win32" `
+  -expectedDefaultDirectory "${env:ChocolateyInstall}\lib\teeworlds\tools\teeworlds-*-win32" `
   -customInstallChecks @({
     It "Should have created Start Menu shortcut for teeworlds" {
       $startMenu = [System.Environment]::GetFolderPath("CommonStartMenu")
@@ -40,7 +41,7 @@ Describe "$packageName Package Validation" {
     }
 
     It "Should Remove desktop shortcuts if they are created" {
-      Uninstall-Package -packageName $packageName -packagePath $PSScriptRoot | Should -Be 0
+      Uninstall-Package -packageName $packageName | Should -Be 0
 
       $desktop = [System.Environment]::GetFolderPath('CommonDesktopDirectory')
       "$desktop\Teeworlds.lnk" | Should -Not -Exist
@@ -53,6 +54,10 @@ Describe "$packageName Package Validation" {
       $startMenu = [System.Environment]::GetFolderPath("CommonStartMenu")
       "$startMenu\Teeworlds.lnk" | Should -Not -Exist
       "$startMenu\Teeworlds Server.lnk" | Should -Not -Exist
+    }
+
+    It "Cleanup by running chocolatey uninstall" {
+      Uninstall-Package -packageName $packageName
     }
   }
 }

@@ -52,6 +52,10 @@ function global:au_GetLatest {
     $streams.Add($versionTwoPart, @{ URL32 = $_ ; Version = $version32; ReleaseNotes = $releaseNotes })
   }
 
+  $key = $streams.Keys | sort -Descending
+  $streams.Add('latest', $streams[$key])
+  $streams.Remove($key)
+
   return @{ Streams = $streams }
 }
 
