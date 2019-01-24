@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>encfsmp</id>
-    <version>0.11.1</version>
+    <version>0.99.1-beta</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/encfsmp</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>EncFS MP</title>
     <authors>Roman Hiestand</authors>
     <projectUrl>https://encfsmp.sourceforge.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/20142bc38d0ec9aa2d81fd14cc6053acb03d16c7/icons/encfsmp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@20142bc38d0ec9aa2d81fd14cc6053acb03d16c7/icons/encfsmp.png</iconUrl>
     <copyright> © 2017 Roman Hiestand</copyright>
     <licenseUrl>https://encfsmp.sourceforge.io/index.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -23,6 +23,7 @@
 Since EncFS exists on many platforms, you can access your data from a Windows PC, from an Apple computer, from Linux (using the built-in EncFS), or even from an Android device (using Cryptonite).
 
 ## Features
+
 - Mounts EncFS folders on Windows and OS X
 - Can create, edit, export and change the password of EncFS folders
 - Is 100% compatible with EncFS 1.7.4 on Linux
