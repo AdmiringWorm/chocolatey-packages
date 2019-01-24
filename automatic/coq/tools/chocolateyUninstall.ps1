@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -18,14 +18,16 @@ if ($key.Count -eq 1) {
 
     Uninstall-ChocolateyPackage @packageArgs
 
+    Write-Host "^^ No it hasn't just yet..."
+    Write-Host "Waiting for the uninstall process to close..."
     # Sleep a few seconds to allow the uninstall process to spawn
     sleep -seconds 5
 
-    $process = Get-Process "AU_" # Yes, this is the name of the uninstaller process
+    while (($process = Get-Process "AU_*", "Coq*" -ea 0)) {
 
-    if ($process) {
-      Write-Host "Waiting for the uninstall process to close."
-      $process | Wait-Process
+      if ($process) {
+        $process | Wait-Process
+      }
     }
   }
 }
