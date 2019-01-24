@@ -12,6 +12,7 @@ function Install-Package() {
     "--source=`"$packagePath;chocolatey`""
     "--ignorepackagecodes"
     "--cache-location=C:\chocolatey-cache"
+    "--no-progress"
     if ($installWithPreRelease) { "--prerelease" }
     "-y"
   )
