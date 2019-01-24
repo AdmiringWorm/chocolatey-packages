@@ -53,6 +53,7 @@ nuget:
   disable_publish_octopus: true
 build: off
 test_script:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: |
     if ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') {
       .\scripts\Invoke-PesterTests.ps1
@@ -63,3 +64,7 @@ test_script:
 artifacts:
 - path: '**\*.nupkg'
 deploy: off
+#on_failure:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+on_finish:
+- ps: gci -Recurse "*.nupkg" | % { Push-AppveyorArtifact $_ }
