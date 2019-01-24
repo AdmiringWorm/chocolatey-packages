@@ -54,7 +54,7 @@ install:
 
     git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
 
-    . "$Env:/au/scripts/Install-AU.ps1" $Env:au_version
+    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 cache: C:\nupkg_cache
 nuget:
   disable_publish_on_pr: true
