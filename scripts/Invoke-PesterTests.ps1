@@ -56,11 +56,10 @@ function Invoke-PesterTests() {
     if (Test-Path Env:\APPVEYOR_JOB_ID) {
       $wc = New-Object 'System.Net.WebClient'
       $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path $testFile))
-      if ($res -gt 0) { $shouldFail = $true }
     }
   }
 
-  if ($shouldFail) {
+  if ($failedCount -gt 0) {
     if (Test-Path Env:\APPVEYOR_JOB_ID) {
       throw "$($failedCount) tests failed"
     }
