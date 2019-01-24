@@ -38,9 +38,6 @@ SnapGene Viewer is revolutionary software that allows molecular biologists to cr
 [file formats]: https://www.snapgene.com/products/file_compatibility/you_own_your_data
 [Trace Viewer]: https://www.snapgene.com/products/snapgene_viewer/images/trace_viewer.png "Trace Viewer"
 ]]></description>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/snapgene-viewer/Changelog.md)</releaseNotes>
   </metadata>
   <files>
