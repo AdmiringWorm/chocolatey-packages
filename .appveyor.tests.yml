@@ -55,7 +55,7 @@ install:
     git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
 
     . "$Env:/au/scripts/Install-AU.ps1" $Env:au_version
-cache: C:\chocolatey-cache
+cache: C:\nupkg_cache
 nuget:
   disable_publish_on_pr: true
   disable_publish_octopus: true
