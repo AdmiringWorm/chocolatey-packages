@@ -13,6 +13,7 @@ function Get-ValidOpenSourceLicense() {
     '^MIT License'
     '^ISC License'
     '\<http\:\/\/unlicense\.org\>\s*$'
+    'CC-BY-SA 3.0'
   )
 
   if ($path) {
