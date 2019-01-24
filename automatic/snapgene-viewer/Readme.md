@@ -11,8 +11,6 @@ SnapGene Viewer is revolutionary software that allows molecular biologists to cr
 - Search a DNA sequence to match either a DNA query, or a protein translation, or an annotation.
 - View and edit DNA sequence traces.
 
-![Trace Viewer][]
-
 ### Annotate
 
 - Automatically annotate common features, or manually annotate coding sequences and other features.
@@ -25,4 +23,3 @@ SnapGene Viewer is revolutionary software that allows molecular biologists to cr
 - Freely share data with your colleagues or customers using the universally accessible SnapGene format.
 
 [file formats]: https://www.snapgene.com/products/file_compatibility/you_own_your_data
-[trace viewer]: https://www.snapgene.com/products/snapgene_viewer/images/trace_viewer.png "Trace Viewer"
