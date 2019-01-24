@@ -4,6 +4,7 @@ Import-Module AU
 
 $releases = 'https://www.getcodetrack.com/releases.html'
 $softwareName = 'codetrack*'
+$fixUnderVersion = '1.0.4'
 
 function global:au_BeforeUpdate($Package) {
 
@@ -46,7 +47,7 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($versionTwoPart))) {
       $streams.Add($versionTwoPart, @{
-          Version = $version.ToString()
+          Version = Get-FixVersion -Version $version.ToString() -OnlyFixBelowVersion $fixUnderVersion
           URL32   = $_
         })
     }
