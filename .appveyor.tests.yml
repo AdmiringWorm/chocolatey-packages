@@ -7,7 +7,6 @@ branches:
 skip_tags: true
 skip_branch_with_pr: true
 image:
-- Visual Studio 2019 Preview
 - Visual Studio 2017
 - Visual Studio 2015
 - Visual Studio 2013
@@ -53,7 +52,6 @@ nuget:
   disable_publish_octopus: true
 build: off
 test_script:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: |
     if ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') {
       .\scripts\Invoke-PesterTests.ps1
