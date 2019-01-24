@@ -7,6 +7,7 @@ branches:
 skip_tags: true
 skip_branch_with_pr: true
 image:
+#- Visual Studio 2019 Preview
 - Visual Studio 2017
 #- Visual Studio 2015
 #- Visual Studio 2013
