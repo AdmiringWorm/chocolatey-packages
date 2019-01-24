@@ -4,7 +4,7 @@
     <id>wave-engine</id>
     <version>2.5.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/wave-engine</packageSourceUrl>
-    <owners>Kim Nordmo</owners>
+    <owners>AdmiringWorm</owners>
     <title>Wave Engine</title>
     <authors>Wave Corporation</authors>
     <projectUrl>https://waveengine.net/</projectUrl>
