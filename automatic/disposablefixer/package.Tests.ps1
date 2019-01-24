@@ -7,6 +7,6 @@ $packageName = Split-Path -Leaf $PSScriptRoot
 Run-PesterTests `
     -packageName "$packageName" `
     -packagePath "$PSScriptRoot" `
-    -expectedEmbeddedMatch "^DisposableFixer.vsix$" `
+    -expectedEmbeddedMatch "^disposablefixer.vsix$" `
     -licenseShouldMatch "Creative Commons Public Licenses" `
     -testChoco:$((Test-Path Env:\APPVEYOR))
