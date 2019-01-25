@@ -5,11 +5,11 @@ $cacheDirectory = Get-PackageCacheLocation
 $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://submain.s3.amazonaws.com/Download/GhostDocEnt_v2018.1.18330.zip?AWSAccessKeyId=AKIAITSGJRBAOEKGU26Q&Expires=1548449721&Signature=pokOX2fYB%2BXQn2q505f59i6euSA%3D'
+  url            = 'http://submain.com/download/ghostdoc/enterprise/registered/'
   unzipLocation  = $cacheDirectory
   softwareName   = 'GhostDoc Enterprise'
-  checksum       = '7FCD43F31863179E9A72F421158B3A3DFFACF9A2C259CBDBE2A4CC282CB2C19C17DAA8D52B42239994644A5AC5CB065E22B630CE70D096ACCF688099E56A98CB'
-  checksumType   = 'sha512'
+  checksum       = ''
+  checksumType   = ''
   silentArgs     = ''
   validExitCodes = @(0)
   options        = @{
