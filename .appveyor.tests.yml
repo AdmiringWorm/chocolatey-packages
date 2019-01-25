@@ -59,8 +59,6 @@ test_script:
     else {
       .\scripts\Invoke-PesterTests.ps1 -runAllTests
     }
-artifacts:
-- path: '**\*.nupkg'
 deploy: off
 #on_failure:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
