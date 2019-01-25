@@ -26,7 +26,7 @@ If you’ve created a freeware application, or even if it’s a large and comple
     <copyright>Copyright © 2013 Kymoto Solutions</copyright>
     <docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
     <bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/df3f90921ab5eac2a670c3d160fbd96aca6deaaa/icons/inno-script-studio.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9fc82edc10bdab9525d1a8e8035cc66406b5fe3f/chocolatey-packages/automatic/inno-script-studio/icons/128x128.png</iconUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
     <dependencies>
       <dependency id="innosetup" version="5.5.9.20161208" />

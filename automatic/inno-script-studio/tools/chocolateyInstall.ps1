@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName   = $env:chocolateyPackageName
@@ -12,16 +12,15 @@ $packageArgs = @{
 }
 
 $pp = Get-PackageParameters
-if (!$pp.UseInf) {
-  $pp.UseInf = "$env:TEMP\$env:chocolateyPackageName.Install.inf"
-}
-
-if (Test-Path "$($pp.UseInf)") {
-  Write-Host "Using existing configuration file at '$($pp.UseInf)'"
-  $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /LOADINF=`"$($pp.UseInf)`""
-} else {
-  Write-Host "Creating new configuration file at '$($pp.UseInf)'"
-  $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /SAVEINF=`"$($pp.UseInf)`""
+if ($pp.UseInf) {
+  if (Test-Path "$($pp.UseInf)") {
+    Write-Host "Using existing configuration file at '$($pp.UseInf)'"
+    $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /LOADINF=`"$($pp.UseInf)`""
+  }
+  else {
+    Write-Host "Creating new configuration file at '$($pp.UseInf)'"
+    $packageArgs['silentArgs'] = "$($packageArgs['silentArgs']) /SAVEINF=`"$($pp.UseInf)`""
+  }
 }
 
 Install-ChocolateyPackage @packageArgs

@@ -1,0 +1,6 @@
+[Setup]
+Lang=english
+Dir=C:\Testing\Inno Script Studio
+Group=Inno Script Studio
+NoIcons=0
+Tasks=desktopicon,issfileassociation
