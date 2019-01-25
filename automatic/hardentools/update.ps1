@@ -30,9 +30,12 @@ function global:au_SearchReplace {
 
 function global:au_AfterUpdate {
   Update-Metadata -key 'releaseNotes' -value "
-  [Software Changelog]($($Latest.ReleaseUrl))
-  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/hardentools/Changelog.md)
-  "
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/hardentools/Changelog.md)
+
+## Software Changelog
+
+$($Latest.ReleaseNotes)
+"
 
   Update-Changelog -useIssueTitle
 }
@@ -40,9 +43,9 @@ function global:au_AfterUpdate {
 function addStream($release, $stream, $name) {
   if (!($stream | ? Version -eq $release.Version)) {
     $stream.Add($name, @{
-        Version    = $release.Version
-        URL32      = $release.Assets | ? { $_ -match '\.exe$' }
-        ReleaseUrl = $release.ReleaseUrl
+        Version      = $release.Version
+        URL32        = $release.Assets | ? { $_ -match '\.exe$' }
+        ReleaseNotes = $release.Body
       })
   }
 }
