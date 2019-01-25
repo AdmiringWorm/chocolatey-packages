@@ -1,5 +1,9 @@
 # ![Inno Script Studio Changelog](https://img.shields.io/badge/Inno%20Script%20Studio-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.3.0.20190125 (2019-01-25)
+
+- **BREAKING CHANGE:** Changed to only use configuration if specified by user
+
 ## Version: 2.2.2.3201 (2017-11-18)
 
 - **ENHANCEMENT:** Added changelog for package

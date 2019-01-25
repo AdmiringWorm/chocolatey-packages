@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>inno-script-studio</id>
     <title>Inno Script Studio</title>
-    <version>2.3.0</version>
+    <version>2.3.0.20190125</version>
     <authors>Kymoto Solutions</authors>
     <owners>AdmiringWorm</owners>
     <summary>Inno Script Studio is a new intuitive graphical interface for generating and compiling scripts for the award winning Inno Setup compiler from Jordan Russell.</summary>
@@ -16,6 +16,7 @@ Inno Script Studio provides help to simplify the creation of Microsoft Windows i
 If you’ve created a freeware application, or even if it’s a large and complex application, Inno Script Studio will help you create the perfect Windows installation that fits both you and your customers’ requirements.
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**
@@ -26,7 +27,7 @@ If you’ve created a freeware application, or even if it’s a large and comple
     <copyright>Copyright © 2013 Kymoto Solutions</copyright>
     <docsUrl>https://www.kymoto.org/products/inno-script-studio/documentation</docsUrl>
     <bugTrackerUrl>https://www.kymoto.org/bugtracker</bugTrackerUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9fc82edc10bdab9525d1a8e8035cc66406b5fe3f/chocolatey-packages/automatic/inno-script-studio/icons/128x128.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@cae07b3c83c678af6ed8e5b0f7e24f27081c2dc7/inno-script-studio/icons/128x128.png</iconUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-script-studio</packageSourceUrl>
     <dependencies>
       <dependency id="innosetup" version="5.5.9.20161208" />
