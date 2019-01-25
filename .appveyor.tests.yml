@@ -14,6 +14,7 @@ init:
     git config --global user.email "chocolatey@realdimensions.net"
     git config --global user.name "Chocolatey"
     git config --global core.safecrlf false
+- ps: Set-Service wuauserv -StartupType Manual
 environment:
   au_version: master
   au_push: false
