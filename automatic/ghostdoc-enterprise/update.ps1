@@ -7,7 +7,7 @@ $softwareName = 'GhostDoc Enterprise'
 
 function global:au_GetLatest {
   @{
-    URL32   = Get-RedirectedUrl $releases -referer $referer
+    URL32   = $releases
     Version = GetVersion
   }
 }

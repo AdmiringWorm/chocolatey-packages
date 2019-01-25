@@ -16,16 +16,7 @@ function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
 }
 
-function global:au_BeforeUpdate {
-  $tmpFile = [System.IO.Path]::GetTempFileName()
-
-  Get-WebFile $Latest.URL32 $tmpFile -options @{Headers = @{ Referer = $referer}}
-
-  $Latest.ChecksumType32 = 'sha512'
-  $Latest.Checksum32 = Get-FileHash $tmpFile -Algorithm $Latest.ChecksumType32 | % Hash
-
-  Remove-Item $tmpFile
-}
+function global:au_BeforeUpdate { Get-RemoteChecksum $Latest.URL32 -Headers @{ Referer = $referer } -Algorithm 'sha512' }
 
 function global:au_SearchReplace {
   @{
@@ -44,7 +35,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   @{
-    URL32   = Get-RedirectedUrl $releases -referer $referer
+    URL32   = $releases
     Version = GetVersion
   }
 }
