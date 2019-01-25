@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>0.0</version>
+    <version>2.0-rc1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
     <authors>Claudio Guarnieri, Mariano Graziano, Florian Probst</authors>
     <projectUrl>https://github.com/securitywithoutborders/hardentools</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0863e5e7649730147921d3c4f6df36d717ed9d1c/icons/hardentools.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@136801eea7ea398d0599d3e5f50f67a0058b8845/hardentools/icons/128x128.png</iconUrl>
     <licenseUrl>https://github.com/securitywithoutborders/hardentools/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/securitywithoutborders/hardentools</projectSourceUrl>
@@ -22,12 +22,20 @@
 Bear in mind, after running Hardentools you won't be able, for example, to do complex calculations with Microsoft Office Excel or use the Command-line terminal, but those are pretty much the only considerable "downsides" of having a slightly safer Windows environment. Before deciding to use it, make sure you read this document thoroughly and understand that yes, something might break. In case you experience malfunctions as a result of the modifications implemented by this tool, please do let us know.
 
 ## Notes
+
 **WARNING:** This is just an experiment, it is not meant for public distribution yet. Also, this tool disables a number of features, including of Microsoft Office, Adobe Reader, and Windows, that might cause malfunctions to certain applications. Use this at your own risk.
 ]]></description>
     <releaseNotes>
-  [Software Changelog](https://github.com/securitywithoutborders/hardentools/releases/tag/v1.0)
-  [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/hardentools/Changelog.md)
-  </releaseNotes>
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/hardentools/Changelog.md)
+
+## Software Changelog
+
+- [x] Major refactor of the codebase
+- [x] Added ability to run tool with and without administrator privileges
+- [x] Updated to new version of Go and Go Modules
+- [x] Changed icon
+- [x]  Various hardening fixes
+</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

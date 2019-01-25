@@ -163,7 +163,7 @@ function Run-PesterTests() {
           It "Should update and create a new nupkg file" {
             . (Resolve-Path "$PSScriptRoot\..\update_all.ps1") -Name $packageName -ForcedPackage "$packageName"
 
-            $nowPkgCount = ([array]"ls $packagePath\*.nupkg").Count
+            $nowPkgCount = ([array](ls "$packagePath\*.nupkg")).Count
             $nowPkgCount | Should -BeExactly 1
           }
         }
