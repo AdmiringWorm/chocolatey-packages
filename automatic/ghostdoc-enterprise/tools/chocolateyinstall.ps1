@@ -1,14 +1,14 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $cacheDirectory = Get-PackageCacheLocation
 
 $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://submain.com/download/GhostDocEnt_v2018.1.18330.zip'
+  url            = 'https://submain.s3.amazonaws.com/Download/GhostDocEnt_v2018.1.18330.zip?AWSAccessKeyId=AKIAITSGJRBAOEKGU26Q&Expires=1548449721&Signature=pokOX2fYB%2BXQn2q505f59i6euSA%3D'
   unzipLocation  = $cacheDirectory
   softwareName   = 'GhostDoc Enterprise'
-  checksum       = 'F35B59AD2530D056981D40BCD02C7672A4EB3CE321A1DAE549528BD76E0046896EE1DBC1A76C1B7A8147175EDA620DD80930B317C913C82535504116B2C27AD7'
+  checksum       = '7FCD43F31863179E9A72F421158B3A3DFFACF9A2C259CBDBE2A4CC282CB2C19C17DAA8D52B42239994644A5AC5CB065E22B630CE70D096ACCF688099E56A98CB'
   checksumType   = 'sha512'
   silentArgs     = ''
   validExitCodes = @(0)

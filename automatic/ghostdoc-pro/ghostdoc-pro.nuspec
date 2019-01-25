@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>2018.1.18330</version>
+    <version>2018.1.18330.20190125</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
@@ -24,6 +24,7 @@
 When generating documentation for class derived from a base class or for interface implementation (e.g. .NET Framework or your custom framework), GhostDoc will use the documentation that Microsoft or the framework vendor has already written for the base class or interface.
 
 ## Benefits
+
 - Save keystrokes and time; simplify documenting your code
 - Automatically generate a starting point for your help documentation
 - Benefit of the base class documentation
@@ -37,6 +38,7 @@ When generating documentation for class derived from a base class or for interfa
 If you follow good naming conventions in your code, then you will get very decent results on the summary GhostDoc generates.  When I see code that is not documented, it is as simple as hit Ctrl-Shift-D to have GhostDoc document it.
 
 ## Notes
+
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
     <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  

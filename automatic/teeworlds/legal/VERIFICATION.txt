@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 147A02C924DC13911099763BCD972D971886C73542A6026F1B24C205DAC0E55F
+  checksum: FD70ED43E325E6218BA5ECC90B1F1A6FDB1DED893D65440528B5374BEA3864E8
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/teeworlds/teeworlds/blob/master/license.txt>
