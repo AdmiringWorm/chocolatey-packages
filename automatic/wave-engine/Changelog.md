@@ -1,5 +1,11 @@
 # ![Wave Engine Changelog](https://img.shields.io/badge/Wave%20Engine-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.5.0.20190125 (2019-01-25)
+
+- **BUGFIX:** Corrected uninstall software name
+- Enabled directx dependency
+- **IMPROVEMENT:** Added gtksharp as a dependency
+
 ## Version: 2.4.1.20180406 (2018-04-06)
 
 - **ENHANCEMENT:** Changed vcredist2017 dependency to vcredist140 and updated version

@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wave-engine</id>
-    <version>2.5.0</version>
+    <version>2.5.0.20190125</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/wave-engine</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Wave Engine</title>
     <authors>Wave Corporation</authors>
     <projectUrl>https://waveengine.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/545f19a08e889d7d9e35664023aea80771af43c7/icons/wave-engine.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@545f19a08e889d7d9e35664023aea80771af43c7/icons/wave-engine.png</iconUrl>
     <copyright>© 2016 WAVE CORPORATIONr</copyright>
     <licenseUrl>https://www.plainconcepts.com/privacy/#legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

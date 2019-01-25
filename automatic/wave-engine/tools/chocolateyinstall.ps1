@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = 'exe'
   url           = 'https://waveenginefiles.blob.core.windows.net/installers/WaveEngineSetup_2_5_0.exe'
-  checksum      = '00fcad5db799b6731db76ea7401f34ccd999b558d6a67dfe48baf06ad437b091'
+  checksum      = '29b17c94bc4fe021b34dbe55f7ac337b8669fd86dcd36e122ed3aa703e80849b'
   checksumType  = 'sha256'
 
   validExitCodes= @(0, 3010, 1641)
