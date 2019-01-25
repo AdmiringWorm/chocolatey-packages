@@ -43,7 +43,7 @@ function global:au_GetLatest {
   $streams = @{}
 
   addStream $release.latestStable $streams 'stable'
-  #addStream $release.latest $streams 'latest' # Temporarily disabled, until first version is approved
+  addStream $release.latest $streams 'latest' # Temporarily disabled, until first version is approved
 
   return @{ Streams = $streams }
 }
