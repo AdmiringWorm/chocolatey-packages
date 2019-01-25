@@ -1,0 +1,6 @@
+[Setup]
+Lang=english
+Dir=C:\Testing\Inno Setup
+Group=Inno Setup
+NoIcons=1
+Tasks=desktopicon
