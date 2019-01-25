@@ -46,6 +46,7 @@ function addStream($release, $stream, $name) {
         Version      = $release.Version
         URL32        = $release.Assets | ? { $_ -match '\.exe$' }
         ReleaseNotes = $release.Body
+        ReleaseUrl   = $release.ReleaseUrl
       })
   }
 }
