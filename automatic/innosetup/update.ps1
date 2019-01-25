@@ -34,15 +34,24 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $versionDirResponse = Invoke-WebRequest -UseBasicParsing -Uri $versionDirUrl;
-  $versionReleaseDirs = $versionDirResponse.Links | ? href -match "^[0-9]+\/$" | select -Last 2 -ExpandProperty href
+  $versionReleaseDirs = $versionDirResponse.Links | ? href -match "^[\d\.]+\/$" | select -ExpandProperty href
 
   $streams = @{}
   $versionReleaseDirs | % {
     $versionReleaseDir = $_
 
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
-    $re = 'innosetup.*unicode(\-dev\-[\d]*)?\.exe'
-    $file = $download_page.links | ? href -match $re | select -Last 1 -expand href
+
+    $res = @(
+      'innosetup.*unicode(\-dev\-[\d]*)?\.exe'
+      'isetup\-[\d\.]+\.exe'
+    )
+
+    for ($i = 0; $i -lt $res.Count; $i++) {
+      $file = $download_page.links | ? href -match $res[$i] | select -Last 1 -expand href
+      if ($file) { break };
+    }
+
     if (!$file) {
       return
     }
@@ -72,6 +81,10 @@ function global:au_GetLatest {
   }
 
   if ($streams.Count -eq 0) { throw "No versions of Inno Setup was found" }
+
+  $key = $streams.Keys | ? { $streams[$_].Version -notmatch '\-' } | sort -Descending | select -first 1
+  $streams.Add("latest", $streams[$key])
+  $streams.Remove($key)
 
   return @{ Streams = $streams }
 }

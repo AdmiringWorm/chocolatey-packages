@@ -5,6 +5,7 @@ $packageName = Split-Path -Leaf $PSScriptRoot
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
+  -streams "latest","major-1","major-2","major-3","major-4" `
   -expectedDefaultDirectory "${env:ProgramFiles(x86)}\Inno Setup*" `
   -customDirectoryArgument "/DIR=" `
   -expectedShimFiles "ISCC.exe" `
