@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'Wave Engine'
-$softwareName = 'WaveEngine'
+$packageName = $env:ChocolateyPackageName
+$softwareName = 'Wave Engine'
 $installerType = 'MSI'
 
 $silentArgs = '/qn /norestart'
@@ -12,7 +12,7 @@ $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
-  $key | ForEach-Object { 
+  $key | ForEach-Object {
     $file = ''
 	$silentArgs = "$($_.PSChildName) $silentArgs"
 
