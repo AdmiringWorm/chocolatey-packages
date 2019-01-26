@@ -1,4 +1,4 @@
-### MIT License
+### Fake PR License
 
 Copyright (c) 2018 by Jim Pattee <jimp03@email.com>.
 
