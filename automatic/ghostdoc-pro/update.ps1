@@ -1,12 +1,12 @@
 ﻿Import-Module AU
 Import-Module "$env:chocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$releases = 'http://submain.com/download/ghostdoc/pro/registered/'
-$referer = 'http://submain.com/download/ghostdoc/pro/'
+$releases = 'https://submain.com/download/ghostdoc/pro/registered/'
+$referer = 'https://submain.com/download/ghostdoc/pro/'
 $softwareName = 'GhostDoc Pro'
 
 function global:au_AfterUpdate {
-  $info_page = Invoke-WebRequest -UseBasicParsing -Uri "http://submain.com/products/ghostdoc.aspx"
+  $info_page = Invoke-WebRequest -UseBasicParsing -Uri "https://submain.com/products/ghostdoc.aspx"
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
   $releaseNotes = ("[Software Changelog]($($Latest.ReleaseNotes)  `n" +
