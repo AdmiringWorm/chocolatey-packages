@@ -16,7 +16,10 @@ function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
 }
 
-function global:au_BeforeUpdate { Get-RemoteChecksum $Latest.URL32 -Headers @{ Referer = $referer } -Algorithm 'sha512' }
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha512'
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Headers @{ Referer = $referer } -Algorithm 'sha512'
+}
 
 function global:au_SearchReplace {
   @{

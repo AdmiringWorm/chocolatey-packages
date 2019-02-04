@@ -41,7 +41,7 @@ If you follow good naming conventions in your code, then you will get very decen
 
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
-    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  
+    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.28.01" />
