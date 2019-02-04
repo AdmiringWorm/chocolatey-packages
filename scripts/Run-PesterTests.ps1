@@ -86,7 +86,7 @@ function Uninstall-Package() {
   #   $exitCode = $process.ExitCode
   # }
   # else {
-    $exitCode = $LASTEXITCODE
+  $exitCode = $LASTEXITCODE
   # }
 
   Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
@@ -308,13 +308,15 @@ function Run-PesterTests() {
     }
 
     if (!$metaPackage -and !$expectedEmbeddedMatch) {
-      $installScriptContent = gc -Encoding UTF8 -Path "$packagePath\tools\chocolateyInstall.ps1"
-      It "Should add/update checksums when not embedding packages" {
-          $re = "^\s*checksum(?:32|64)\s*=\s*['`"](?<checksum>.+)['`"]"
+      Context "Install script validation" {
+        $installScriptContent = gc -Encoding UTF8 -Path "$packagePath\tools\chocolateyInstall.ps1"
+        It "Should add/update checksums when not embedding packages" {
+          $re = "^\s*checksum(?:32|64)?\s*=\s*['`"](?<checksum>.+)['`"]"
 
           [array]$matches = $installScriptContent | ? { $_ -match $re }
 
           $matches.Count | Should -BeGreaterOrEqual 1
+        }
       }
     }
 
@@ -502,8 +504,9 @@ function Run-PesterTests() {
           if ($expectedDefaultDirectory) {
             $re = [regex]::Escape("$env:ProgramFiles\")
             if ($expectedDefaultDirectory -match "$re") {
-              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re,"${env:ProgramFiles(x86)}\"
-            } else {
+              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+            }
+            else {
               $expectedDefault32Directory = $expectedDefaultDirectory
             }
             It "Should have created default directory in 32bit mode" {
@@ -553,8 +556,9 @@ function Run-PesterTests() {
           if ($expectedDefaultDirectory) {
             $re = [regex]::Escape("$env:ProgramFiles\")
             if ($expectedDefaultDirectory -match "$re") {
-              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re,"${env:ProgramFiles(x86)}\"
-            } else {
+              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+            }
+            else {
               $expectedDefault32Directory = $expectedDefaultDirectory
             }
             It "Should have removed default install directory in 32bit mode" {
