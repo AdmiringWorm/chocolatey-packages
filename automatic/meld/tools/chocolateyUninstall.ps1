@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName   = 'Meld'
   fileType       = 'msi'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-  validExitCodes = @(@(0, 2010, 1641))
+  validExitCodes = @(0, 2010, 1641)
 }
 
 $uninstalled = $false
