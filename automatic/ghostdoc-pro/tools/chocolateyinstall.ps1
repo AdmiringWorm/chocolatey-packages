@@ -5,16 +5,16 @@ $cacheDirectory = Get-PackageCacheLocation
 $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   fileType       = 'exe'
-  url            = 'http://submain.com/download/ghostdoc/pro/registered/'
+  url            = 'https://submain.com/download/ghostdoc/pro/registered/'
   unzipLocation  = $cacheDirectory
   softwareName   = 'GhostDoc Pro'
-  checksum       = ''
-  checksumType   = ''
+  checksum       = '3f47738c1e08a46e0049e79b18376f434d0c1cff0a4694e887882c759fde65f1f8dd6c647415d011d2b726cfbe360627e42aeec972572c13cb078240e103070f'
+  checksumType   = 'sha512'
   silentArgs     = ''
   validExitCodes = @(0)
   options        = @{
     Headers = @{
-      Referer = 'http://submain.com/download/ghostdoc/pro/'
+      Referer = 'https://submain.com/download/ghostdoc/pro/'
     }
   }
 }

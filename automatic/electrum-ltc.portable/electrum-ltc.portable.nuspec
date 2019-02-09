@@ -4,7 +4,7 @@
   <metadata>
     <id>electrum-ltc.portable</id>
     <title>Electrum-LTC (Portable)</title>
-    <version>3.1.3.1</version>
+    <version>3.3.3.1</version>
     <authors>Electrum Technologies GmbH</authors>
     <owners>AdmiringWorm</owners>
     <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
@@ -13,21 +13,22 @@
     <copyright>2013-2016 Electrum Technologies GmbH</copyright>
     <licenseUrl>https://github.com/pooler/electrum-ltc/blob/master/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/fd348b564a2cc7085358212e49793b2db65d9909/icons/electrum-ltc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@fd348b564a2cc7085358212e49793b2db65d9909/icons/electrum-ltc.png</iconUrl>
     <bugTrackerUrl>https://github.com/pooler/electrum-ltc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/pooler/electrum-ltc</projectSourceUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/electrum-ltc.install</packageSourceUrl>
     <description><![CDATA[Electrum-LTC is a simple, but powerful Litecoin wallet. A twelve-word security passphrase (or “seed”) leaves intruders stranded and your peace of mind intact. Keep it on paper, or in your head... and never worry about losing your litecoins to theft or hardware failure. No waiting, no lengthy blockchain downloads and no syncing to the network.
 
 ## Features
-* **Use instantly:** Electrum doesn't download the blockchain or require your computer to sync with the network. instead, it is maintained on a tamper-proof, remote server.
-* **Safe:** Your unique twelve word pass-phrase and private keys are never sent to the Electrum-LTC servers. All information received from the server is verified using [Simplified Payment Verification (SPV)](https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients).
-* **Forgiving:** Never be concerned about losing your wallet! With your unique twelve-word seed, you can always recover and restore your wallet... even if you sustain the worst of hardware and software failures.
-* **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
-* **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
+
+- **Use instantly:** Electrum doesn't download the blockchain or require your computer to sync with the network. instead, it is maintained on a tamper-proof, remote server.
+- **Safe:** Your unique twelve word pass-phrase and private keys are never sent to the Electrum-LTC servers. All information received from the server is verified using [Simplified Payment Verification (SPV)](https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients).
+- **Forgiving:** Never be concerned about losing your wallet! With your unique twelve-word seed, you can always recover and restore your wallet... even if you sustain the worst of hardware and software failures.
+- **Cold storage:** Use Electrum-LTC to generate and manage your security offline wallets, enable you to take some or all of your funds completely offline.
+- **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/pooler/electrum-ltc/blob/3.1.3.1/RELEASE-NOTES)
+[Software Changelog](https://github.com/pooler/electrum-ltc/blob/3.3.3.1/RELEASE-NOTES)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/electrum-ltc.portable/Changelog.md)
     </releaseNotes>
   </metadata>
