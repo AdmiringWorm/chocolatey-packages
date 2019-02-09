@@ -6,29 +6,16 @@ $domain   = 'https://github.com'
 $releases = "$domain/HakanL/resxtranslator/releases/latest"
 $licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
 
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -NoSuffix
+function global:au_BeforeUpdate($Package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  # Lets download the latest url
-  $Matches = $null
-  $licenseUrl -match 'https?://github.com/([^/]+)/([^/]+)/(?:blob|raw)/[^/]+/(.+)' | Out-Null
-  $owner = $Matches[1]
-  $repo  = $Matches[2]
-  $path  = $Matches[3]
-  $headers = @{}
-	if (Test-Path Env:\github_api_key) {
-		$headers.Authorization = "token " + $env:github_api_key;
-	}
-
-  $json = Invoke-RestMethod -UseBasicParsing "https://api.github.com/repos/$owner/$repo/contents/$path" -Headers $headers
-  $sha  = $json.sha
-
-  $licenseOutput = "$PSScriptRoot\legal\LICENSE.txt"
-  Remove-Item $licenseOutput
-  Invoke-WebRequest -UseBasicParsing -Uri "$($json.download_url)" -OutFile "$licenseOutput"
-  if (!((gc $licenseOutput -Encoding UTF8) -match "GNU General Public License")) {
-    throw "License type have changed, please verify it still allows distribution"
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
   }
+
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_AfterUpdate {
