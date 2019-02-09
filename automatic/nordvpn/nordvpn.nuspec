@@ -37,5 +37,6 @@ Online security is the biggest challenge in today's interconnected world, so it'
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="..\io-ninja\tools\helpers.ps1" target="tools" />
   </files>
 </package>
