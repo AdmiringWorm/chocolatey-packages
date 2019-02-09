@@ -368,7 +368,7 @@ function Run-PesterTests() {
             It "Should have created uninstall registry key '$key" {
               [array]$foundKeys = Get-UninstallRegistryKey $key
 
-              $foundKeys.Count | Should -Be 1
+              $foundKeys.Count | Should -BeGreaterOrEqual 1
             }
           }
         }
@@ -478,7 +478,7 @@ function Run-PesterTests() {
               It "Should have created uninstall registry key '$key" {
                 [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                $foundKeys.Count | Should -Be 1
+                $foundKeys.Count | Should -BeGreaterOrEqual 1
               }
             }
           }
@@ -593,7 +593,7 @@ function Run-PesterTests() {
               It "Should have created uninstall registry key '$key" {
                 [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                $foundKeys.Count | Should -Be 1
+                $foundKeys.Count | Should -BeGreaterOrEqual 1
               }
             }
           }
@@ -708,7 +708,7 @@ function Run-PesterTests() {
                 It "Should have created uninstall registry key '$key" {
                   [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                  $foundKeys.Count | Should -Be 1
+                  $foundKeys.Count | Should -BeGreaterOrEqual 1
                 }
               }
             }
