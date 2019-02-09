@@ -11,7 +11,7 @@ Run-PesterTests `
   -customInstallChecks @(
     {
       It "Should create ResxTranslator Start Menu shortcut" {
-        $startMenu = [System.Environment]::GetFolderPath('StartMenu')
+        $startMenu = [System.Environment]::GetFolderPath('Programs')
         "$startMenu\Resx Resource Translator.lnk" | Should -Exist
       }
 
@@ -24,7 +24,7 @@ Run-PesterTests `
   -customUninstallChecks @(
     {
       It "Should remove ResxTranslator Start Menu shortcut" {
-        $startMenu = [System.Environment]::GetFolderPath('StartMenu')
+        $startMenu = [System.Environment]::GetFolderPath('Programs')
         "$startMenu\Resx Resource Translator.lnk" | Should -Not -Exist
       }
     }
@@ -56,7 +56,7 @@ Describe "$packageName configuration verification" {
         -packagePath $PSScriptRoot `
         -additionalArguments "--package-parameters='`"/NoStartMenuIcon`"'" | Should -Be 0
 
-        $startMenu = [System.Environment]::GetFolderPath('StartMenu')
+        $startMenu = [System.Environment]::GetFolderPath('Programs')
         "$startMenu\Resx Resource Translator.lnk" | Should -Not -Exist
     }
 
