@@ -12,7 +12,7 @@ if ($runningProcess) {
 }
 
 $packageToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$packageClientPath = "$packageToolsPath\sheepit-5.1275.2959.exe"
+$packageClientPath = "$packageToolsPath\sheepit-5.1285.2966.exe"
 $toolsPath = Join-Path (Get-ToolsLocation) $env:ChocolateyPackageName
 $clientOutputPath = "$toolsPath\sheepit.exe"
 
@@ -27,7 +27,7 @@ Write-Host "Registering $env:ChocolateyPackageName to App Paths..."
 Register-Application "$clientOutputPath"
 Write-Host "$env:ChocolateyPackageName registered as $(Split-Path -Leaf $clientOutputPath)"
 
-$pp = Get-PackageParameters
+$pp = Get-PackageParametersBuiltIn
 
 if (!$pp['NoStartMenu']) {
   Write-Host "Creating $env:ChocolateyPackageName Start Menu icon..."
