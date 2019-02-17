@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName  = 'MonoGame SDK'
   fileType      = 'exe'
   silentArgs    = '/S'
-  validExitCodes= @(@(0))
+  validExitCodes= @(0)
 }
 
 $uninstalled = $false
