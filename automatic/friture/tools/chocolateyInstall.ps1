@@ -1,11 +1,11 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\friture-0.35-20180401.exe"
+  file           = "$toolsPath\friture-0.36-20190201.exe"
   softwareName   = 'Friture*'
   silentArgs     = '/S'
   validExitCodes = @(0)
