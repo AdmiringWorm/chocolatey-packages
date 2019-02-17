@@ -5,7 +5,21 @@ cd $PSScriptRoot
 $domain = 'http://www.monogame.net'
 $releases = "$domain/downloads/"
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  $newLicenseUrl = $Package.nuspecXml.package.metadata.licenseUrl -replace 'develop|v[\d]+\.[\d\.]+', "v$($Latest.RemoteVersion)"
+
+  iwr -UseBasicParsing -Uri $($newLicenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
+
+  $Package.nuspecXml.package.metadata.licenseUrl = $newLicenseUrl
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
@@ -42,9 +56,10 @@ function global:au_GetLatest {
   $verRe = '[\/]v?'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32       = $url32
-    Version     = [version]$version32
-    ReleasesUrl = $releasesUrl
+    URL32         = $url32
+    Version       = [version]$version32
+    ReleasesUrl   = $releasesUrl
+    RemoteVersion = $version32
   }
 }
 
