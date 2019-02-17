@@ -5,11 +5,23 @@ Import-Module AU
 $releases = 'https://github.com/tlecomte/friture/releases'
 $softwareName = 'Friture*'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_AfterUpdate {
   Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/friture/Changelog.md)"
+
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_SearchReplace {
@@ -44,12 +56,17 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-          Version = $version.ToString()
-          URL32   = $_
+          Version      = $version.ToString()
+          URL32        = $_
           ReleaseNotes = "https://github.com/tlecomte/friture/releases/tag/$tag"
         })
     }
   }
+
+  # Update the latest version to be the latest stream
+  $key = $streams.Keys | sort -Descending | select -first 1
+  $streams.Add("latest", $streams[$key])
+  $streams.Remove($key)
 
   return @{ Streams = $streams }
 }
