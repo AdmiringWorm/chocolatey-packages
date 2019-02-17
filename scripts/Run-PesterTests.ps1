@@ -106,6 +106,7 @@ function Run-PesterTests() {
     [string]$licenseShouldMatch,
     [string]$expectedDefaultDirectory,
     [string]$customDirectoryArgument,
+    [string]$customDirectoryParameter,
     [string[]]$expectedShimFiles,
     [string[]]$notExpectedShimFiles,
     [string[]]$filesAvailableOnPath,
@@ -546,6 +547,114 @@ function Run-PesterTests() {
           }
         }
 
+        if ($customDirectoryParameter) {
+          $customPath = "C:\Testing\$([System.Guid]::NewGuid().ToString())"
+          It "Should install package with custom path" {
+            installPackage -additionalArguments "--package-parameters=`"${customDirectoryParameter}$customPath`"" | Should -Be 0
+
+
+          }
+
+          if ($customInstallChecks) {
+            $customInstallChecks | % { . $_ }
+          }
+
+          It "Should have created custom directory path" {
+            $customPath | Should -Exist
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have created shimfile $shimFile when using custom directory" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+              }
+            }
+          }
+
+          if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+            $notExpectedShimFiles | % {
+              $shimFile = $_
+              It "Should NOT have created shimfile $shimFile when using custom directory" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
+            }
+          }
+
+          if ($expectedUninstallKeys) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+
+            $expectedUninstallKeys | % {
+              $key = $_
+              It "Should have created uninstall registry key '$key" {
+                [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                $foundKeys.Count | Should -BeGreaterOrEqual 1
+              }
+            }
+          }
+
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be available on path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -Exist
+              }
+            }
+          }
+
+          It "Should uninstall package with custom path" {
+            uninstallPackage | Should -Be 0
+          }
+
+          if ($customUninstallChecks) {
+            $customUninstallChecks | % { . $_ }
+          }
+
+          It "Should have removed custom installation directory" {
+            $customPath | Should -Not -Exist
+          }
+
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have removed shimfile $shimFile" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
+            }
+          }
+
+          if ($expectedUninstallKeys) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+
+            $expectedUninstallKeys | % {
+              $key = $_
+              It "Should have removed uninstall registry key '$key" {
+                [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                $foundKeys.Count | Should -Be 0
+              }
+            }
+          }
+
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be removed from path." {
+                $file = Get-Command $file
+
+                $file.Source | Should -BeNullOrEmpty
+              }
+            }
+          }
+        }
+
         if ($test32bit) {
 
           It "Should install package with default arguments in 32bit mode" {
@@ -674,6 +783,112 @@ function Run-PesterTests() {
             $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
             It "Should install package with custom path in 32bit mode" {
               installPackage -additionalArguments "--x86", "--install-arguments=`"${customDirectoryArgument}$customPath`"" | Should -Be 0
+            }
+
+            if ($customInstallChecks) {
+              $customInstallChecks | % { . $_ }
+            }
+
+            It "Should have created custom installation directory in 32bit mode" {
+              $customPath | Should -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have created shimfile $shimFile when using custom directory in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Exist
+                }
+              }
+            }
+
+            if ($notExpectedShimFiles -and $notExpectedShimFiles.Count -gt 0) {
+              $notExpectedShimFiles | % {
+                $shimFile = $_
+                It "Should NOT have created shimfile $shimFile when using custom directory in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
+              }
+            }
+
+            if ($expectedUninstallKeys) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+
+              $expectedUninstallKeys | % {
+                $key = $_
+                It "Should have created uninstall registry key '$key" {
+                  [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                  $foundKeys.Count | Should -BeGreaterOrEqual 1
+                }
+              }
+            }
+
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be available on path." {
+                  $file = Get-Command $file
+
+                  $file.Source | Should -Exist
+                }
+              }
+            }
+
+            It "Should uninstall package with custom path in 32bit mode" {
+              uninstallPackage | Should -Be 0
+            }
+
+            if ($customUninstallChecks) {
+              $customUninstallChecks | % { . $_ }
+            }
+
+            It "Should have removed custom installation directory in 32bit mode" {
+              $customPath | Should -Not -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have removed shimfile $shimFile in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
+              }
+            }
+
+            if ($expectedUninstallKeys) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+
+              $expectedUninstallKeys | % {
+                $key = $_
+                It "Should have removed uninstall registry key '$key" {
+                  [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                  $foundKeys.Count | Should -Be 0
+                }
+              }
+            }
+
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be removed from path." {
+                  $file = Get-Command $file
+
+                  $file.Source | Should -BeNullOrEmpty
+                }
+              }
+            }
+          }
+
+          if ($customDirectoryParameter) {
+            $customPath = "C:\$([System.Guid]::NewGuid().ToString())"
+            It "Should install package with custom path in 32bit mode" {
+              installPackage -additionalArguments "--x86", "--package-parameters=`"${customDirectoryParameter}$customPath`"" | Should -Be 0
             }
 
             if ($customInstallChecks) {
