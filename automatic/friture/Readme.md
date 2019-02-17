@@ -17,6 +17,7 @@ Friture helps you to understand audio data with several [widgets](http://friture
 
 ## Notes
 
+- The installer causes quite a few positives for several anti-viruses, this seems to be caused by the usage of an unsigned installer.
 - The uninstall is not completely silent, a dialog asking to remove Friture settings shows up
 
 ![Friture Screenshot](http://friture.org/images/friture_20150824_small.png)
