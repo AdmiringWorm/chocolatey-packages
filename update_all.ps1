@@ -19,6 +19,7 @@ $Options = [ordered]@{
     'The operation has timed out'
     'Internal Server Error'
     'Service Temporarily Unavailable'
+    'Simple OData Server'
   )
   RepeatOn         = @(                                      #Error message parts on which to repeat package updater
     'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
