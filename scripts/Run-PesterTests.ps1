@@ -110,6 +110,7 @@ function Run-PesterTests() {
     [string[]]$notExpectedShimFiles,
     [string[]]$filesAvailableOnPath,
     [string[]]$expectedUninstallKeys,
+    [string[]]$customUninstallArgs,
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
     [boolean]$testChoco = $true,
@@ -129,6 +130,7 @@ function Run-PesterTests() {
   }
 
   function uninstallPackage([string[]]$additionalArguments) {
+    if ($customUninstallArgs) { $additionalArguments += $customUninstallArgs }
     return Uninstall-Package `
       -packageName $packageName `
       -additionalArguments $additionalArguments
