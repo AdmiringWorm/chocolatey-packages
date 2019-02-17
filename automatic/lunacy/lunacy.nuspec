@@ -38,6 +38,5 @@ In short, it’s long-awaited Sketch for Windows. It solves the big pain of desi
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\lunacy.png" target="icons" />
   </files>
 </package>
