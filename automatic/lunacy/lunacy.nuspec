@@ -33,8 +33,7 @@ In short, it’s long-awaited Sketch for Windows. It solves the big pain of desi
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lunacy/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="dotnet4.6.2" />
+      <dependency id="dotnet4.6.2" version="4.6.01590.20170129" />
     </dependencies>
   </metadata>
   <files>
