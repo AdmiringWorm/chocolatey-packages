@@ -47,7 +47,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\/monogame[\d\-]+(\-release\/.*|\/)$'
-  $releasesUrl = $download_page.Links | ? href -match $re | select -first 1 -Skip 1 -expand href | % { addDomainIfNeeded $_ $releases }
+  $releasesUrl = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { addDomainIfNeeded $_ $releases }
   $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
 
   $re = '\.exe$'
