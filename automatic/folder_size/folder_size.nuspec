@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>folder_size</id>
-    <version>3.8.0.0</version>
+    <version>4.0.0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
     <owners>AdmiringWorm, MarkJohnson</owners>
     <title>Folder Size</title>
     <authors>https://www.mindgems.com</authors>
     <projectUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/bd9c0c9b85841cf5e41af8232b8d98e73e40301f/icons/folder_size.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@bd9c0c9b85841cf5e41af8232b8d98e73e40301f/icons/folder_size.png</iconUrl>
     <copyright>Copyright © 2001-2019 MindGems Inc. All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size-Tutorials.htm</docsUrl>
@@ -22,6 +22,7 @@ Besides scanning an entire hard drive Folder Size can also scan a single folder 
 Folder Size can list backup folders, system folders and also the system volume information folder - all missing disk space will be revealed instantly.
 
 ## Features
+
 - Find and display all file sizes and folder sizes.
 - Scan entire storage device or a chosen folder.
 - Display the file sizes and folder sizes in different charts - Bar Chart, Pie Chart etc.
@@ -66,6 +67,7 @@ Folder Size can list backup folders, system folders and also the system volume i
 - Save/Load the scanned data for the file sizes and folder sizes so that you can compare it with subsequent scans.
 
 ## Notes
+
 - A license needs to be purchased when running on server OS's.
 ]]></description>
     <releaseNotes>
