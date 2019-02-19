@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from their source releases section
-location on <https://onionshare.org/>
+location on <https://github.com/micahflee/onionshare/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/micahflee/onionshare/releases/download/v1.3.1/onionshare-1.3.1-setup.exe>
+1. Download the following <https://github.com/micahflee/onionshare/releases/download/v2.0/onionshare-2-setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D089E9F521F49E55A81D988C314DC4B8F5E0B83A78264BD7342082ECACE511DD
+  checksum: 6265FDB5AD2C51767D40B9E06AE40681FD64A827CE81911BB4DBC14B25B9BA36
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/micahflee/onionshare/blob/master/LICENSE>
