@@ -3,7 +3,21 @@
 $releases = 'https://github.com/micahflee/onionshare/releases'
 $softwareName = 'OnionShare'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  $newLicenseUrl = $Package.nuspecXml.package.metadata.licenseUrl -replace 'master|v[\d]+\.[\d\.]+', "v$($Latest.RemoteVersion)"
+
+  iwr -UseBasicParsing -Uri $($newLicenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
+
+  $Package.nuspecXml.package.metadata.licenseUrl = $newLicenseUrl
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
@@ -38,8 +52,9 @@ function global:au_GetLatest {
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
 
   @{
-    URL32   = [uri]$url32
-    Version = [version]$version32
+    URL32         = [uri]$url32
+    Version       = [version]$version32
+    RemoteVersion = $version32
   }
 }
 
