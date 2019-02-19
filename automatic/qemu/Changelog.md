@@ -1,6 +1,6 @@
 # ![Qemu Changelog](https://img.shields.io/badge/Qemu-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 2019.02.18 (2019-02-19)
 
 - **ENHANCEMENT:** Added changelog for package
 
