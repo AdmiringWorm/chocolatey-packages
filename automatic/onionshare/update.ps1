@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases = 'https://onionshare.org/'
+$releases = 'https://github.com/micahflee/onionshare/releases'
 $softwareName = 'OnionShare'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -24,14 +24,19 @@ function global:au_SearchReplace {
   }
 }
 
+function forceDomain([uri]$releaseUrl, [string]$fileUrl) {
+  return New-Object uri($releaseUrl, $fileUrl)
+}
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { forceDomain $releases $_ }
 
-  $verRe = '\/'
+  $verRe = '\/v?'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
+
   @{
     URL32   = [uri]$url32
     Version = [version]$version32
