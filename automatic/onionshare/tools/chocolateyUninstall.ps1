@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'OnionShare'
@@ -17,6 +18,7 @@ if ($key.Count -eq 1) {
     $packageArgs['file'] = "$($_.UninstallString)"
 
     Uninstall-ChocolateyPackage @packageArgs
+    Start-Process -Wait "autohotkey" -ArgumentList "$toolsDir\uninstall.ahk"
   }
 }
 elseif ($key.Count -eq 0) {
