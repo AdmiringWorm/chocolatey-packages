@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName   = 'OnionShare'
   fileType       = 'exe'
   silentArgs     = '/S'
-  validExitCodes = @(@(0))
+  validExitCodes = @(0)
 }
 
 $uninstalled = $false
