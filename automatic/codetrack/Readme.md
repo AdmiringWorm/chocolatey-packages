@@ -2,7 +2,7 @@
 
 CodeTrack is a versatile profile with some extra tricks up its sleeve. On top of the profiling features it also allows debugging and analyzing code execution.
 
-![Trace View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/trace.png)
-![Per Thread View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/per_thread.png)
-![List View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/list.png)
-![Timeline View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/2749520dfe4a1f8fbe02b1513334f429211c84ce/automatic/codetrack/screenshots/timeline.png)
+![Trace View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c592d0f5d2e6af4318160c2a37dae0a8d49e754c/automatic/codetrack/screenshots/trace.png)
+![Per Thread View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c592d0f5d2e6af4318160c2a37dae0a8d49e754c/automatic/codetrack/screenshots/per_thread.png)
+![List View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c592d0f5d2e6af4318160c2a37dae0a8d49e754c/automatic/codetrack/screenshots/list.png)
+![Timeline View](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c592d0f5d2e6af4318160c2a37dae0a8d49e754c/automatic/codetrack/screenshots/timeline.png)
