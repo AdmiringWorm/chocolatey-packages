@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>monogame</id>
-    <version>3.7</version>
+    <version>3.7.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/monogame</packageSourceUrl>
     <owners>AdmiringWorm, Thai Phan</owners>
     <title>MonoGame</title>
@@ -11,7 +11,7 @@
     <projectUrl>http://www.monogame.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2a3a568be9e9efef0b65c3fe381a0d34f04c17f7/icons/monogame.png</iconUrl>
     <copyright>Copyright © 2009-2017 MonoGame Team</copyright>
-    <licenseUrl>https://github.com/MonoGame/MonoGame/blob/v3.7/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/MonoGame/MonoGame/blob/v3.7.1/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/MonoGame/MonoGame</projectSourceUrl>
     <docsUrl>http://www.monogame.net/documentation/?page=main</docsUrl>
