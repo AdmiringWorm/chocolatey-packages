@@ -1,0 +1,101 @@
+{
+  "projectName": "chocolatey-packages",
+  "projectOwner": "AdmiringWorm",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 7,
+  "types": {
+    "bug": {
+      "symbol": "🐛",
+      "description": "Bug reports",
+      "link": "<%= options.repoHost %>/<%= options.projectOwner %>/<%= options.projectName %>/issues?q=author%3A<%= contributor.login %>+label%3Abug"
+    },
+    "ideas": {
+      "symbol": "🤔",
+      "description": "Ideas, Planning, & Feedback",
+      "link": "<%= options.repoHost %>/<%= options.projectOwner %>/<%= options.projectName %>/issues?q=author%3A<%= contributor.login %>"
+    }
+  },
+  "contributors": [
+    {
+      "login": "ericbn",
+      "name": "Eric Nielsen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4120606?v=4",
+      "profile": "https://github.com/ericbn",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rgl",
+      "name": "Rui Lopes",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43356?v=4",
+      "profile": "http://ruilopes.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "pauby",
+      "name": "Paul Broadwith",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12760779?v=4",
+      "profile": "https://pauby.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "scw",
+      "name": "Shaun Walbridge",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1314?v=4",
+      "profile": "https://twitter.com/scw",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "tylerszabo",
+      "name": "Tyler Szabo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/315343?v=4",
+      "profile": "https://github.com/tylerszabo",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "quincunx",
+      "name": "Christian Schuerer-Waldheim",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/279130?v=4",
+      "profile": "https://github.com/quincunx",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "MathNum",
+      "name": "MathNum",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/30048020?v=4",
+      "profile": "https://github.com/MathNum",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "imgbot[bot]",
+      "name": "imgbot[bot]",
+      "avatar_url": "https://avatars0.githubusercontent.com/in/4706?v=4",
+      "profile": "https://github.com/apps/imgbot",
+      "contributions": [
+        "content"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 # AdmiringWorm's Chocolatey Community packages
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
 
 Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
 
@@ -93,3 +94,14 @@ If there are no changes in the repository use `--allow-empty` git parameter:
 
     git commit -m '[AU copyq less:2.0]' --allow-empty
     git push
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/ericbn"><img src="https://avatars3.githubusercontent.com/u/4120606?v=4" width="100px;" alt="Eric Nielsen"/><br /><sub><b>Eric Nielsen</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Aericbn+label%3Abug" title="Bug reports">🐛</a></td><td align="center"><a href="http://ruilopes.com"><img src="https://avatars3.githubusercontent.com/u/43356?v=4" width="100px;" alt="Rui Lopes"/><br /><sub><b>Rui Lopes</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Argl+label%3Abug" title="Bug reports">🐛</a></td><td align="center"><a href="https://pauby.com"><img src="https://avatars2.githubusercontent.com/u/12760779?v=4" width="100px;" alt="Paul Broadwith"/><br /><sub><b>Paul Broadwith</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Apauby+label%3Abug" title="Bug reports">🐛</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=pauby" title="Code">💻</a></td><td align="center"><a href="https://twitter.com/scw"><img src="https://avatars3.githubusercontent.com/u/1314?v=4" width="100px;" alt="Shaun Walbridge"/><br /><sub><b>Shaun Walbridge</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Ascw" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/tylerszabo"><img src="https://avatars0.githubusercontent.com/u/315343?v=4" width="100px;" alt="Tyler Szabo"/><br /><sub><b>Tyler Szabo</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Atylerszabo" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=tylerszabo" title="Code">💻</a></td><td align="center"><a href="https://github.com/quincunx"><img src="https://avatars2.githubusercontent.com/u/279130?v=4" width="100px;" alt="Christian Schuerer-Waldheim"/><br /><sub><b>Christian Schuerer-Waldheim</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Aquincunx+label%3Abug" title="Bug reports">🐛</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=quincunx" title="Code">💻</a></td><td align="center"><a href="https://github.com/MathNum"><img src="https://avatars2.githubusercontent.com/u/30048020?v=4" width="100px;" alt="MathNum"/><br /><sub><b>MathNum</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3AMathNum" title="Ideas, Planning, & Feedback">🤔</a></td></tr><tr><td align="center"><a href="https://github.com/apps/imgbot"><img src="https://avatars0.githubusercontent.com/in/4706?v=4" width="100px;" alt="imgbot[bot]"/><br /><sub><b>imgbot[bot]</b></sub></a><br /><a href="#content-imgbot[bot]" title="Content">🖋</a></td></tr></table>
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
