@@ -28,7 +28,7 @@ branches:
         # Required. The list of status checks to require in order to merge into this branch
         contexts: [WIP, continuous-integration/appveyor/pr, Codacy/PR Quality Review]
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
-      enforce_admins: true
+      enforce_admins: false
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
       restrictions:
         users: []
