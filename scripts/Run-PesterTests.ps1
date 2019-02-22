@@ -325,7 +325,7 @@ function Run-PesterTests() {
     }
 
     if (!$metaPackage -and $testChoco) {
-      # TODO: Need to test every nupkg package in the folder
+       # TODO: Need to test every nupkg package in the folder
 
       Context "Installing/Uninstalling" {
 
