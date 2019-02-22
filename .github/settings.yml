@@ -3,3 +3,4 @@ _extends: github-assets
 repository:
   name: chocolatey-packages
   description: AdmiringWorm's automatic chocolatey packages using AU
+  topics: appveyor, au, automatic, chocolatey, packages, powershell
