@@ -11,7 +11,7 @@ Run-PesterTests `
   -customDirectoryArgument "/DIR=" `
   -customUninstallChecks @( { It "Sleeping" { sleep -Seconds 5 } })
 
-# TODO: Added parameter testing
+# TODO: Add parameter testing
 
 Describe "$packageName configuration verification" {
   Context "Parameters" {
