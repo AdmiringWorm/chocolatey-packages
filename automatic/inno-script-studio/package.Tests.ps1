@@ -46,7 +46,7 @@ Describe "$packageName configuration verification" {
     }
 
     It "Should have associated iss files during install" -Skip {
-      # TODO: Not sure how to test this
+      # TODO: Add ability to test iss file assocation during install
     }
 
     It "Should uninstall package after creating configuration file" {
@@ -64,7 +64,7 @@ Describe "$packageName configuration verification" {
     }
 
     It "Should have remove iss file association during uninstall" -Skip {
-      # TODO: Not sure how to test this
+      # TODO: Add ability to test iss file assocation during uninstall
     }
   }
 }
