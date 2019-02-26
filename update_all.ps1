@@ -30,6 +30,7 @@ $Options = [ordered]@{
     'The operation has timed out'
     'Internal Server Error'
     'An exception occurred during a WebClient request'
+    "Origin Time-out"
   )
   RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
   RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
