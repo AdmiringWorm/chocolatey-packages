@@ -23,7 +23,7 @@
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitignore/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="VisualStudioCode" version="1.2.0" />
+      <dependency id="vscode" version="1.2.0" />
     </dependencies>
   </metadata>
   <files>
