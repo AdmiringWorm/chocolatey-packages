@@ -1,6 +1,3 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
-. "$toolsDir\Install-VsCodeExtension.ps1"
-
-Install-VsCodeExtension -packageName $env:ChocolateyPackageName -extensionName "codezombiech.gitignore"
+Install-VsCodeExtension -extensionId 'codezombiech.gitignore@0.5.0'

@@ -24,6 +24,7 @@
     </releaseNotes>
     <dependencies>
       <dependency id="vscode" version="1.2.0" />
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
