@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-gitignore</id>
     <version>0.5.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/vscode-extensions/vscode-gitignore</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-gitignore</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>vscode-gitignore (Install)</title>
     <authors>CodeZombie</authors>
