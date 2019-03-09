@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c40da18b7c334d5b028f5a43e6492a05e8208d6f/icons/vscode-gitattributes.png" height="48" width="48" /> ![vscode-gitattributes (Install)](https://img.shields.io/chocolatey/v/vscode-gitattributes.svg?label=vscode-gitattributes%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/vscode-gitattributes)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c40da18b7c334d5b028f5a43e6492a05e8208d6f/icons/vscode-gitattributes.png" height="48" width="48" /> ![vscode-gitattributes (Install)](https://img.shields.io/chocolatey/v/vscode-gitattributes.svg?label=vscode-gitattributes%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/vscode-gitattributes)
 
 An extension for Visual Studio Code that assists you in working with `.gitattributes` files.
 
