@@ -23,8 +23,8 @@
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitattributes/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="VisualStudioCode" version="1.2.0" />
-      <dependency id="chocolatey-vscode.extension" version="0.1.0" />
+      <dependency id="vscode" version="1.2.0" />
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
