@@ -6,7 +6,7 @@
     <version>0.4.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/vscode-extensions/vscode-gitattributes</packageSourceUrl>
     <owners>AdmiringWorm</owners>
-    <title>vscode-gitattributes (Install)</title>
+    <title>gitattributes VSCode extension</title>
     <authors>Ashar Hasan</authors>
     <projectUrl>https://github.com/hashhar/vscode-gitattributes</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c40da18b7c334d5b028f5a43e6492a05e8208d6f/icons/vscode-gitattributes.png</iconUrl>
@@ -24,13 +24,12 @@
     </releaseNotes>
     <dependencies>
       <dependency id="VisualStudioCode" version="1.2.0" />
+      <dependency id="chocolatey-vscode.extension" version="0.1.0" />
     </dependencies>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <file src="..\vscode-gitignore\tools\Install-VsCodeExtension.ps1" target="tools" />
-    <file src="..\vscode-gitignore\tools\Uninstall-VsCodeExtension.ps1" target="tools" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
