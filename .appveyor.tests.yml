@@ -9,6 +9,8 @@ skip_branch_with_pr: true
 image:
 - Visual Studio 2017
 - Visual Studio 2015
+matrix:
+  fast_finish: true
 init:
 - cmd: |
     git config --global user.email "chocolatey@realdimensions.net"
