@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vscode-gitattributes</id>
-    <version>0.4.1</version>
+    <version>0.4.1.20190310</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-gitattributes</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>gitattributes VSCode extension</title>

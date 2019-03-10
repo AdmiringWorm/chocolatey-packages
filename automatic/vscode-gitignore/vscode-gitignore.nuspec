@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vscode-gitignore</id>
-    <version>0.6.0.20190310</version>
+    <version>0.6.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-gitignore</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>vscode-gitignore (Install)</title>
