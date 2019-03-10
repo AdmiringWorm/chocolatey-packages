@@ -143,7 +143,7 @@ function Run-PesterTests() {
   Describe "$packageName package verification" {
     if (!$skipUpdate) { rm "$packagePath\*.nupkg" }
     elseif (!(Test-Path "$packagePath\*.nupkg")) {
-      Start-Process -Wait -FilePath "choco" -ArgumentList "pack", $(Resolve-Path "$packagePath\*.nuspec"), "$packagePath"
+      Start-Process -Wait -FilePath "choco" -ArgumentList "pack", $(Resolve-Path "$packagePath\*.nuspec"), "--output-directory=$packagePath"
     }
 
     Context "Updating" {
