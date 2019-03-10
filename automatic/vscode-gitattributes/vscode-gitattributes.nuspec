@@ -26,7 +26,7 @@
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://marketplace.visualstudio.com/items/hashhar.gitattributes/changelog)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitattributes/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vscode-gitattributes/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="vscode" version="1.30.0" />
