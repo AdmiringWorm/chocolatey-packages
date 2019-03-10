@@ -7,7 +7,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <!-- This section is about this package, although id and version have ties back to the software -->
     <id>vscode-appveyor</id>
-    <version>0.0</version>
+    <version>1.0.1</version>
     <packageSourceUrl>http://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-appveyor</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <!-- ============================== -->
@@ -28,7 +28,13 @@
     <bugTrackerUrl>https://github.com/ivangabriele/vscode-appveyor/issues</bugTrackerUrl>
     <tags>vscode-appveyor extension vscode SPACE_SEPARATED</tags>
     <summary>Check your project's AppVeyor status</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
+    <description><![CDATA[Check your project's AppVeyor status.
+
+## Requirements
+
+- You need to have an `appveyor.yml` file present at the root of your current workspace.
+- Your project's AppVeyor status needs to be public.
+]]></description>
     <releaseNotes>
 [Software Changelog](https://marketplace.visualstudio.com/items/ivangabriele.vscode-appveyor/changelog)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vscode-appveyor/Changelog.md)
