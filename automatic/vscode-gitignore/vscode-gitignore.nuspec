@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vscode-gitignore</id>
-    <version>0.5.0</version>
+    <version>0.6.0.20190310</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-gitignore</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>vscode-gitignore (Install)</title>
     <authors>CodeZombie</authors>
     <projectUrl>https://github.com/CodeZombieCH/vscode-gitignore</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/40a94c95d7c52c848cb37036607e635e2fd203a9/icons/vscode-gitignore.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@40a94c95d7c52c848cb37036607e635e2fd203a9/icons/vscode-gitignore.png</iconUrl>
     <copyright>Copyright (c) 2016 Marc-André Bühler</copyright>
     <licenseUrl>https://marketplace.visualstudio.com/items/codezombiech.gitignore/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,13 +17,19 @@
     <bugTrackerUrl>https://github.com/CodeZombieCH/vscode-gitignore/issues</bugTrackerUrl>
     <tags>vscode-gitignore vscode visualstudiocode git ignore gitignore</tags>
     <summary>A extension for Visual Studio Code that assists you in working with .gitignore files.</summary>
-    <description>DO NOT TOUCH, WILL BE AUTOMATICALLY SET FROM README.md DURING UPDATE. </description>
+    <description><![CDATA[A extension for Visual Studio Code that assists you in working with `.gitignore` files.
+
+## Features
+
+- Language support for `.gitignore` files
+- Add local `.gitignore` by pulling from the [github/gitignore](https://github.com/github/gitignore) repository.
+]]></description>
     <releaseNotes>
 [Software Changelog](https://marketplace.visualstudio.com/items/codezombiech.gitignore/changelog)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitignore/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="vscode" version="1.2.0" />
+      <dependency id="vscode" version="1.30.0" />
       <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>

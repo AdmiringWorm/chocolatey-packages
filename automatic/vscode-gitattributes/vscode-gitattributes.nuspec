@@ -9,7 +9,7 @@
     <title>gitattributes VSCode extension</title>
     <authors>Ashar Hasan</authors>
     <projectUrl>https://github.com/hashhar/vscode-gitattributes</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c40da18b7c334d5b028f5a43e6492a05e8208d6f/icons/vscode-gitattributes.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c40da18b7c334d5b028f5a43e6492a05e8208d6f/icons/vscode-gitattributes.png</iconUrl>
     <copyright>Copyright (c) 2016 Ashhar Hasan</copyright>
     <licenseUrl>https://marketplace.visualstudio.com/items/hashhar.gitattributes/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,13 +17,19 @@
     <bugTrackerUrl>https://github.com/hashhar/vscode-gitattributes/issues</bugTrackerUrl>
     <tags>vscode-gitattributes admin git attributes gitattributes vscode visualstudiocode</tags>
     <summary>An extension for Visual Studio Code that assists you in working with .gitattributes files.</summary>
-    <description>DO NOT TOUCH, WILL BE AUTOMATICALLY SET FROM README.md DURING UPDATE. </description>
+    <description><![CDATA[An extension for Visual Studio Code that assists you in working with `.gitattributes` files.
+
+## Features
+
+- Language support for `.gitattributes` files.
+- Allows adding a `.gitattributes` file by puiing files from [alexkaratarakis/gitattributes](https://github.com/alexkaratarakis/gitattributes) repository.
+]]></description>
     <releaseNotes>
 [Software Changelog](https://marketplace.visualstudio.com/items/hashhar.gitattributes/changelog)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitattributes/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="vscode" version="1.2.0" />
+      <dependency id="vscode" version="1.30.0" />
       <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>
