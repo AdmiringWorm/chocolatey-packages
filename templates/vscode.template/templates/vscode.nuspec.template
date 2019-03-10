@@ -8,7 +8,7 @@
     <!-- This section is about this package, although id and version have ties back to the software -->
     <id>[[PackageNameLower]]</id>
     <version>[[PackageVersion]]</version>
-    <packageSourceUrl>http://github.com/[[MaintainerRepo]]/[[PackageNameLower]]</packageSourceUrl>
+    <packageSourceUrl>https://github.com/[[MaintainerRepo]]/[[PackageNameLower]]</packageSourceUrl>
     <owners>[[MaintainerName]]</owners>
     <!-- ============================== -->
 
