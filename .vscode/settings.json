@@ -14,5 +14,14 @@
     "choco",
     "sheepit"
   ],
-  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1"
+  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+  "chocolatey.commands": {
+    "new": {
+      "properties": {
+        "maintainerName": "AdmiringWorm",
+        "maintainerRepo": "AdmiringWorm/chocolatey-packages/tree/master/automatic",
+        //"extensionId": "ivangabriele.vscode-appveyor"
+      }
+    }
+  }
 }
