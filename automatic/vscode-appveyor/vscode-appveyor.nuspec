@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+<!-- Do not remove this test for UTF-8: if â€œÎ©â€ doesnâ€™t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- This section is about this package, although id and version have ties back to the software -->
+    <id>vscode-appveyor</id>
+    <version>0.0</version>
+    <packageSourceUrl>http://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-appveyor</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>AppVeyor VSCode Extension</title>
+    <authors>Ivan Gabriele</authors>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=ivangabriele.vscode-appveyor</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6b0fc3c6252cdb8a1bc6aaf7a29d20ee6c1ecea5/icons/vscode-appveyor.svg</iconUrl>
+    <copyright>Copyright (c) 2018 Ivan Gabriele</copyright>
+    <!-- If there is a license Url available, it is is required for the community feed -->
+    <licenseUrl>https://marketplace.visualstudio.com/items/ivangabriele.vscode-appveyor/license</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ivangabriele/vscode-appveyor</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/ivangabriele/vscode-appveyor/issues</bugTrackerUrl>
+    <tags>vscode-appveyor extension vscode SPACE_SEPARATED</tags>
+    <summary>Check your project's AppVeyor status</summary>
+    <description>__REPLACE__MarkDown_Okay </description>
+    <releaseNotes>
+[Software Changelog](https://marketplace.visualstudio.com/items/ivangabriele.vscode-appveyor/changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vscode-appveyor/Changelog.md)
+    </releaseNotes>
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <dependencies>
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
+      <dependency id="vscode" version="1.30.0" />
+    </dependencies>
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
