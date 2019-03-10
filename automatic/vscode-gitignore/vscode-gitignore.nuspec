@@ -26,7 +26,7 @@
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://marketplace.visualstudio.com/items/codezombiech.gitignore/changelog)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/manual/vscode-extensions/vscode-gitignore/Changelog.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vscode-gitignore/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="vscode" version="1.30.0" />
