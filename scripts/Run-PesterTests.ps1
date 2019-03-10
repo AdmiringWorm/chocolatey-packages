@@ -221,10 +221,19 @@ function Run-PesterTests() {
       $nuspecContent = gc -Encoding UTF8 -Path "$packagePath\$packageName.nuspec"
 
       if (!$metaPackage) {
-        It "Nuspec should include tools directory" {
-          $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
+        if ($packageName.EndsWith('.template')) {
+          It "Nuspec should include templates directory" {
+            $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="templates\\\*\*"' }
 
-          $hasMatch | Should -BeTrue
+            $hasMatch | Should -BeTrue
+          }
+        }
+        else {
+          It "Nuspec should include tools directory" {
+            $hasMatch = $nuspecContent | ? { $_ -match '^\s*<file.*src="tools\\\*\*"' }
+
+            $hasMatch | Should -BeTrue
+          }
         }
 
         It "All dependencies should specify minimum version" {
@@ -326,7 +335,7 @@ function Run-PesterTests() {
     }
 
     if (!$metaPackage -and $testChoco) {
-       # TODO: Need to test every nupkg package in the folder
+      # TODO: Need to test every nupkg package in the folder
 
       Context "Installing/Uninstalling" {
 
