@@ -8,7 +8,7 @@
     <owners>AdmiringWorm</owners>
     <title>Metapad</title>
     <authors>Alexander Davidson</authors>
-    <projectUrl>http://liquidninja.com/metapad/</projectUrl>
+    <projectUrl>https://liquidninja.com/metapad/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png</iconUrl>
     <copyright>©1999-2015 Alexander Davidson</copyright>
     <licenseUrl>https://github.com/alexd/metapad/blob/master/COPYING-LICENSE.txt</licenseUrl>
