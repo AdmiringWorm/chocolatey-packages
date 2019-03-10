@@ -8,7 +8,7 @@
     <!-- This section is about this package, although id and version have ties back to the software -->
     <id>vscode-appveyor</id>
     <version>1.0.1</version>
-    <packageSourceUrl>http://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-appveyor</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-appveyor</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <!-- ============================== -->
 
@@ -26,7 +26,7 @@
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/ivangabriele/vscode-appveyor/issues</bugTrackerUrl>
-    <tags>vscode-appveyor extension vscode SPACE_SEPARATED</tags>
+    <tags>vscode-appveyor extension vscode</tags>
     <summary>Check your project's AppVeyor status</summary>
     <description><![CDATA[Check your project's AppVeyor status.
 
