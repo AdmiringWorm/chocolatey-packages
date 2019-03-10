@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-gitattributes</id>
     <version>0.4.1</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/manual/vscode-extensions/vscode-gitattributes</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-gitattributes</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>gitattributes VSCode extension</title>
     <authors>Ashar Hasan</authors>
