@@ -119,7 +119,8 @@ function Run-PesterTests() {
     [switch]$metaPackage,
     [switch]$test32bit,
     [switch]$installWithPreRelease,
-    [switch]$failsOn32bit
+    [switch]$failsOn32bit,
+    [switch]$skipChecksumCheck
   )
 
   function installPackage([string[]]$additionalArguments) {
@@ -311,7 +312,7 @@ function Run-PesterTests() {
       }
     }
 
-    if (!$metaPackage -and !$expectedEmbeddedMatch) {
+    if (!$skipChecksumCheck -and !$metaPackage -and !$expectedEmbeddedMatch) {
       Context "Install script validation" {
         $installScriptContent = gc -Encoding UTF8 -Path "$packagePath\tools\chocolateyInstall.ps1"
         It "Should add/update checksums when not embedding packages" {
