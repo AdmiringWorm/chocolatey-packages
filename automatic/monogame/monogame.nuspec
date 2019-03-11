@@ -33,9 +33,6 @@
 [Software Changelog](http://www.monogame.net/documentation/?page=Change_log)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/monogame/Changelog.md)
     </releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
