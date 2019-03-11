@@ -1,14 +1,14 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  fileType       = 'msi'
-  file           = "$toolsPath\"
-  file64         = "$toolsPath\BoxCLI-win10-x64.msi"
-  softwareName   = 'BoxCLI'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""#
+  fileType       = 'exe'
+  file           = "$toolsPath\box-v2.0.0-x86.exe"
+  file64         = "$toolsPath\box-v2.0.0-x64.exe"
+  softwareName   = '@box/cli'
+  silentArgs     = "/S"#
   validExitCodes = @(0, 3010, 1641)
 }
 

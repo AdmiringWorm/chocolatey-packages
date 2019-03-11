@@ -2,9 +2,9 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'BoxCLI'
-  fileType       = 'msi'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiUninstall.log`""#
+  softwareName   = '@box/cli'
+  fileType       = 'exe'
+  silentArgs     = "/S"#
   validExitCodes = @(0, 3010, 1641)
 }
 
