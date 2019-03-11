@@ -17,6 +17,7 @@ function global:au_BeforeUpdate($Package) {
   }
 
   $Package.nuspecXml.package.metadata.licenseUrl = $newLicenseUrl
+  $Latest.licenseUrl = $newLicenseUrl
 
   Get-RemoteFiles -Purge -NoSuffix
 }
@@ -32,6 +33,7 @@ function global:au_SearchReplace {
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(LICENSE\.txt.*)\<[^\>]*\>"    = "`${1}<$($Latest.LicenseUrl)>"
     }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
