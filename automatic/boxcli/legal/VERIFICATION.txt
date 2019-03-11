@@ -6,13 +6,16 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/box/boxcli/releases/tag/v1.1.1>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/box/boxcli/releases/download/v1.1.1/BoxCLI-win10-x64.msi>
+1. Download the following:
+  32-Bit software: <>
+  64-Bit software: <>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: sha256
-  checksum: 35857CADA2BE9866662CB887F75FAADFEF167F540E48039AB5AA4BB3D69A22B4
+  checksum type:
+  checksum32:
+  checksum64:
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/box/boxcli/blob/066158db5c7a357b2ea513e36c3e845226133a7b/LICENSE>
