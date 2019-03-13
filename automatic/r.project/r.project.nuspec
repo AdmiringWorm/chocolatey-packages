@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>R.Project</id>
-    <version>3.5.2</version>
+    <version>3.5.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm,zippy1981,yoshimov,jeffmoser</owners>
     <title>The R Project for Statistical Computing</title>
@@ -20,6 +20,7 @@
     statistical-analysis statistical data-acquisition statistical-graphics data-automation</tags>
     <summary>R is a language and environment for statistical computing and graphics</summary>
     <description><![CDATA[## Introduction to R
+
 R is a language and environment for statistical computing and graphics. It is a [GNU project](http://www.gnu.org/) which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
 
 R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
@@ -29,6 +30,7 @@ One of R’s strengths is the ease with which well-designed publication-quality 
 R is available as Free Software under the terms of the [Free Software Foundation](http://www.gnu.org/)’s [GNU General Public License](https://www.r-project.org/COPYING) in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
 
 ## The R environment
+
 R is an integrated suite of software facilities for data manipulation, calculation and graphical display. It includes
 
 - an effective data handling and storage facility,
@@ -46,6 +48,7 @@ R can be extended (easily) via packages. There are about eight packages supplied
 R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hardcopy.
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**
