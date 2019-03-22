@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://sourceforge.net/projects/gtkwave/files/>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/gtkwave/files/gtkwave-3.3.99-bin-win32/gtkwave-3.3.99-bin-win32.zip/download>
+1. Download the following <https://sourceforge.net/projects/gtkwave/files/gtkwave-3.3.100-bin-win32/gtkwave-3.3.100-bin-win32.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8AD918DEFB237C06D97671A028026B9CFE91F7F8136C13A83783D57FF3C62813
+  checksum: 2E77C67AEFBF466618D60365987F3F9152FA7DB24A9A270F51A1D4B5954F2828
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/LICENSE.TXT?format=raw>
