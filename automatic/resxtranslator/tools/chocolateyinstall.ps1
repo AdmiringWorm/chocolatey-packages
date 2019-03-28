@@ -2,7 +2,7 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$filePath = "$toolsPath\ResxTranslator_v2.6_release_signed.zip"
+$filePath = "$toolsPath\ResxTranslator_v2.7_release_signed.zip"
 $packageArgs = @{
   packageName    = 'resxtranslator'
   fileType       = 'zip'
