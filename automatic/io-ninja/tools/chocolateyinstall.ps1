@@ -8,12 +8,12 @@ Import-Certificate -FilePath "$toolsPath\io-ninja.cer" -CertStoreLocation "Cert:
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://tibbo.com/downloads/archive/ioninja/ioninja-3.10.3/ioninja-3.10.3-windows-x86.msi'
-  url64bit       = 'https://tibbo.com/downloads/archive/ioninja/ioninja-3.10.3/ioninja-3.10.3-windows-amd64.msi'
+  url            = 'https://tibbo.com/downloads/archive/ioninja/ioninja-3.10.4/ioninja-3.10.4-windows-x86.msi'
+  url64bit       = 'https://tibbo.com/downloads/archive/ioninja/ioninja-3.10.4/ioninja-3.10.4-windows-amd64.msi'
   softwareName   = 'IO Ninja*'
-  checksum       = 'c5b6d33e3ebbefdcb4a9a0042a4baad6edf8aa5e2829611957ffe798ea5e839c139cd1c7a1fac4a4fc72a89fd3ea343cf98140f6afcf661b8d160cd64e481244'
+  checksum       = 'c6e32908c2366714bac7f4bd9bbd18e7674040e3fd6b6b8554241e8541dd837dbda4ac6798a0f9083fcd2df2fe28005baf8c5cb42b78a8a7d44f70b82a48fbf8'
   checksumType   = 'sha512'
-  checksum64     = '993ac9296ddb7662c1c5afdfa220194bb447a94f27eb6bb40ebe7bc49fd195426d088a7fe9c74eb6253161c5f49cc34546ba958195f0319852b4c3e2cdd440af'
+  checksum64     = '4a22ee6d51b33f29bb7d24a4e80e178d6f5c6c518ab81cb9e6efefee4aabcabdbff9bf067f88d91dcb8667d739e126cfc2e624f931b34f7ffcb0c16c5c507f73'
   checksumType64 = 'sha512'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 3010, 1641)
