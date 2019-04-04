@@ -5,7 +5,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   file        = ''
-  file64      = "$toolsPath\rssguard-3.5.6-50af26f-win64.7z"
+  file64      = "$toolsPath\rssguard-3.5.7-c28dc5a-win64.7z"
   destination = $toolsPath
 }
 
