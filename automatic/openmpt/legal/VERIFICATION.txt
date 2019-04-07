@@ -7,15 +7,15 @@ location on <https://openmpt.org/download>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://download.openmpt.org/OpenMPT-1.28.03.00-Setup.exe>
-  64-Bit software: <https://download.openmpt.org/OpenMPT-1.28.03.00-Setup-x64.exe>
+  32-Bit software: <https://download.openmpt.org/OpenMPT-1.28.04.00-Setup.exe>
+  64-Bit software: <https://download.openmpt.org/OpenMPT-1.28.04.00-Setup-x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 77D038DA25995D57F026FE833A0AA31BD3BB2A6E68B04AAF7DE37AAEF6010A16
-  checksum64: 167689D2C3E937F3E233404EF2D2E950E167812476EC9B15B0C6E8AAD403F3E3
+  checksum32: E5AD0D9CA2B37DFA09F772102CC8D4797DA4CC2FC13A68D1D2C1312099F7FE12
+  checksum64: A8D8FD8CA5DFAF88B6A792026B8B73067BB9957FB4569D9795E74FB66CE930A5
 
 The file 'LICENSE.txt' has been obtained from <https://source.openmpt.org/browse/openmpt/trunk/OpenMPT/LICENSE>
