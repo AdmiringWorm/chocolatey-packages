@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>2018.2.19060</version>
+    <version>2019.1.19100</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
