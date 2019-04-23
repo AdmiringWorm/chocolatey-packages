@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://teeworlds.com/?page=downloads>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/teeworlds/teeworlds/releases/download/0.7.3/teeworlds-0.7.3-win32.zip>
+1. Download the following <https://github.com/teeworlds/teeworlds/releases/download/0.7.3.1/teeworlds-0.7.3.1-win32.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 68A5EC4F44C3FDBE8B6FF331809EE2113B57DAE7665F98D308B514644E95242F
+  checksum: DFFB53045EFD4DA00DC7E219185E55EB1D281658F761885FD14C6ACB483C90B4
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/teeworlds/teeworlds/blob/master/license.txt>

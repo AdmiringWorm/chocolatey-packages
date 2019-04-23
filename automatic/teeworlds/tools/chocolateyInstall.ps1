@@ -4,7 +4,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  file           = "$toolsPath\teeworlds-0.7.3-win32.zip"
+  file           = "$toolsPath\teeworlds-0.7.3.1-win32.zip"
   destination    = "$toolsPath"
 }
 
