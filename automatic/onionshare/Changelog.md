@@ -1,5 +1,9 @@
 # ![OnionShare Changelog](https://img.shields.io/badge/OnionShare-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.1-dev1 (2019-04-24)
+
+- **BUG:** updater is unable to check for update [#65](https://github.com/AdmiringWorm/chocolatey-packages/issues/65)
+
 ## Version: 2.0 (2019-02-19)
 
 - **BREAKING CHANGE:** Removed chocolatey-core.extension as a dependency
