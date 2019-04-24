@@ -25,7 +25,7 @@
     <releaseNotes>[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.8.2.md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator/Changelog.md)</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2015" version="14.0.24215.20170201" />
+      <dependency id="vcredist2017" version="14.16.27027.20190415" />
     </dependencies>
   </metadata>
   <files>
