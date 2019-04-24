@@ -38,8 +38,8 @@ function global:au_GetLatest {
   $url = "https://download.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
   $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
   $links = $download_page.links | ? href -match '^windows' | select -expand href
-  $url32 = ($links -match '_32\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
-  $url64 = ($links -match '_64\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
+  $url32 = ($links -match '(x86|_32)\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
+  $url64 = ($links -match '[x_]64\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
 
   return @{
     URL32         = $url32
