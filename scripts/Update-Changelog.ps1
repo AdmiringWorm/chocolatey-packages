@@ -94,7 +94,7 @@ function Parse-Changelog() {
 function Parse-GitCommit() {
   param($line, [switch]$useIssueTitle)
 
-  if ($line -contains 'skip:changelog') { return }
+  if ($line -contains 'skip:changelog' -or $line -contains 'changelog:skip') { return }
 
   $splits = $line -split ' '
   $commitHash = $splits[0]
