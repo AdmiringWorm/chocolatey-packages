@@ -51,14 +51,30 @@ function GetVsixIdFromManifest() {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
 
-  $json = $download_page.Scripts | ? class -eq 'vss-extension' | Select-Object -expand innerHtml | ConvertFrom-Json | Select-Object -expand versions
-  $url = $json.files | ? source -match "\.vsix$" | Select-Object -expand source -first 1
+  if ($download_page.Content -match 'AssetUri":"([^"]+)') {
+    $assetUri = $Matches[1]
+  }
+  else {
+    throw "Unable to grab asset uri file"
+  }
 
-  $version = $json.version | Select-Object -first 1
+  if ($download_page.Content -match 'Payload.FileName":"([^"]+vsix)') {
+    $filename = $Matches[1]
+  }
+  else {
+    throw "Unable to grab the filename"
+  }
+
+  if ($download_page.Content -match 'Version":"([\d]\.[\d\.]+)') {
+    $version = $Matches[1]
+  }
+  else {
+    throw "Unable to grab the version"
+  }
 
   @{
     Version = $version
-    URL32   = $url
+    URL32   = "$assetUri/$filename"
     VsixId  = GetVsixIdFromManifest
   }
 }
