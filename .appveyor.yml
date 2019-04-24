@@ -51,7 +51,7 @@ environment:
     secure: CzGGbCfsVKyCTbY193kYveGQDN5ilsyI30J3FYdo9+IpGsDwi/knjzBqCQbztIzY
 
   #Chocolatey version we want to use when checking for updates.
-  choco_version: '0.10.8'
+  choco_version: '0.10.14-beta-20190418'
   nupkg_cache_path: C:\packages
 
 init:
