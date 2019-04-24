@@ -6,6 +6,6 @@ Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
   -licenseShouldMatch "GNU GENERAL PUBLIC LICENSE" `
-  -expectedEmbeddedMatch "^onionshare-[\d\.]+-setup\.exe$" `
+  -expectedEmbeddedMatch "^onionshare-[\d\.](\.[a-z\d])?+-setup\.exe$" `
   -customDirectoryArgument "/D=" `
   -expectedDefaultDirectory "${env:ProgramFiles(x86)}\OnionShare"
