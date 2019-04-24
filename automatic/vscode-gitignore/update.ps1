@@ -1,5 +1,7 @@
 Import-Module "AU"
 
+$releases = 'https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore'
+
 function global:au_BeforeUpdate($Package) {
   $vscode = $Package.nuspecXml.package.metadata.dependencies.dependency | ? id -Match '^vscode$'
 
@@ -24,18 +26,19 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing "https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore"
+  $download_page = Invoke-WebRequest -UseBasicParsing $releases
 
-  if ($download_page.Content -match 'source":"([^"]+)') {
-    $manifestFile = $Matches[1]
+  if ($download_page.Content -match 'assetUri":"([^"]+)') {
+    $assetUri = $Matches[1]
   }
   else {
-    throw "Unable to grab manifest file"
+    throw "Unable to grab asset uri file"
   }
 
-  $json = Invoke-RestMethod -UseBasicParsing $manifestFile
+  $json = Invoke-RestMethod -UseBasicParsing "$assetUri/Microsoft.VisualStudio.Code.Manifest"
 
   $vsCodeVersion = $json.engines.vscode.TrimStart('^')
+  if ($vsCodeVersion -eq '1.5.0') { $vsCodeVersion = '1.5' }
 
   @{
     Version       = $json.version
