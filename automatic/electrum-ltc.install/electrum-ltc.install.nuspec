@@ -4,7 +4,7 @@
   <metadata>
     <id>electrum-ltc.install</id>
     <title>Electrum-LTC (Install)</title>
-    <version>3.3.4.1</version>
+    <version>3.3.5.1</version>
     <authors>Electrum Technologies GmbH</authors>
     <owners>AdmiringWorm</owners>
     <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
@@ -28,7 +28,7 @@
 - **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/pooler/electrum-ltc/blob/3.3.4.1/RELEASE-NOTES)
+[Software Changelog](https://github.com/pooler/electrum-ltc/blob/3.3.5.1/RELEASE-NOTES)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/electrum-ltc.install/Changelog.md)
     </releaseNotes>
     <dependencies>
