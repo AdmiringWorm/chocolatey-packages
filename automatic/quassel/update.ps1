@@ -30,7 +30,7 @@ function global:au_GetLatest {
 
   @{
     URL32   = [uri]$url32
-	URL64   = [uri]$url64
+    URL64   = [uri]$url64
     Version = [version]$version
   }
 }
