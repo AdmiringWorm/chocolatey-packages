@@ -10,8 +10,8 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(^\s*x32:).*"                  = "`${1} $($Latest.URL32)"
-      "(?i)(^\s*x64:).*"                  = "`${1} $($Latest.URL64)"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum32\:).*"          = "`${1} $($Latest.Checksum32)"
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
