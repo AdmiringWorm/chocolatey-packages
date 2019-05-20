@@ -1,5 +1,9 @@
 # ![The Coq proof assistant Changelog](https://img.shields.io/badge/The%20Coq%20proof%20assistant-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 8.9.1 (2019-05-20)
+
+- **BUG:** Added ability to wait for uninstaller to finish
+
 ## Version: 8.7.0 (2017-10-18)
 
 - **ENHANCEMENT:** Embedded the installer
