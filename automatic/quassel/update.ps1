@@ -35,6 +35,11 @@ function global:au_GetLatest {
 
   $verRe = '[setup-]|\.exe$'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+
+  if ($version32 -ne $version64) {
+    throw "32-bit and 64-bit version do not match. Please investigate"
+  }
 
   @{
     URL32   = [uri]$url32
