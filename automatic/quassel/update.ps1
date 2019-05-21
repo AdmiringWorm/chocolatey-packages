@@ -33,7 +33,7 @@ function global:au_GetLatest {
   $url32 = $download_page.Links | ? href -match 'x86.*\.exe$' | select -first 1 -expand href | % { $baseURL + $_ }
   $url64 = $download_page.Links | ? href -match 'x64.*\.exe$' | select -first 1 -expand href | % { $baseURL + $_ }
 
-  $verRe = '[-]|\.exe$'
+  $verRe = '[setup-]|\.exe$'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
   @{
