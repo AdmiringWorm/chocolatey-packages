@@ -6,13 +6,16 @@ The embedded software have been downloaded from the listed download
 location on <http://quassel-irc.org/downloads>
 and can be verified by doing the following:
 
-1. Download the following <http://quassel-irc.org/pub/quassel-x86-setup-0.13.1.exe>
+1. Download the following:
+  32-Bit software: <http://quassel-irc.org/pub/quassel-x86-setup-0.13.1.exe>
+  64-Bit software: <http://quassel-irc.org/pub/quassel-x64-setup-0.13.1.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 11CF6F9F6FD481F98AFDECFFD9804A71E0AD7424FA54F3E94585097D56E62D1A
+  checksum32: 11CF6F9F6FD481F98AFDECFFD9804A71E0AD7424FA54F3E94585097D56E62D1A
+  checksum64: 11D67D1F54422C25A1EBDC6C0CB143B9AE9B997E2ED83368C53C15F56FAF6A95
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/quassel/quassel/blob/master/COPYING>

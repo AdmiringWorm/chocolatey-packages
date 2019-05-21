@@ -6,6 +6,7 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   file           = "$toolsPath\quassel-x86-setup-0.13.1.exe"
+  file64         = "$toolsPath\quassel-x64-setup-0.13.1.exe"
   softwareName   = 'Quassel*'
   silentArgs     = '/S'
   validExitCodes = @(0)
