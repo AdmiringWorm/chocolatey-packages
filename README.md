@@ -1,6 +1,6 @@
 # AdmiringWorm's Chocolatey Community packages
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
-[![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)]()
+[![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)](https://liberapay.com/AdmiringWorm)
 
 ## Automatic Chocolatey Packages built by appveyor
 
