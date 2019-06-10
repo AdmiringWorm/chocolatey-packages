@@ -1,11 +1,6 @@
 # AdmiringWorm's Chocolatey Community packages
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
-
-Like my [packages](https://chocolatey.org/profiles/AdmiringWorm)?  Find them useful?
-
-**Want to buy me a beer?**
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/AdmiringWorm)
+[![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)]()
 
 ## Automatic Chocolatey Packages built by appveyor
 
