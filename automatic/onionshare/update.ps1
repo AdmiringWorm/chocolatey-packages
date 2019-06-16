@@ -51,7 +51,7 @@ function global:au_GetLatest {
   $verRe = '\/v?'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
 
-  if ($version32 -match "([\d\.]+)\.([a-z\d-]+)") {
+  if ($version32 -match "([\d\.]+)\.([a-z-][a-z\d-]+)") {
     $version = "$($Matches[1])-$($Matches[2])"
   }
 
