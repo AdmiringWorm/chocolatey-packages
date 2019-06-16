@@ -43,10 +43,8 @@ function global:au_GetLatest {
   $re = 'te.*\.zip$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = '\>\s*Version ([\d]+\.[\d\.]+)\s*\<'
-  $Matches = $null
-  $download_page.Content -match $verRe | Out-Null
-  if ($Matches) { $version32 = $Matches[1] }
+  $version32 = $url32 -split "\/" | select -last 1 -skip 1
+
   @{
     URL32         = $url32
     Version       = $version32
