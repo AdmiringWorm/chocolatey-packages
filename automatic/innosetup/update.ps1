@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
@@ -23,7 +23,9 @@ function global:au_SearchReplace {
     }
 
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(`"[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
+      "(?i)(`"[$]toolsDir\\).*`""           = "`${1}$($Latest.FileName32)`""
+      "(?i)^(\s*checksum\s*=\s*)'.*'"       = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'"   = "`${1}'$($Latest.ChecksumType32)'"
     }
     ".\innosetup.nuspec"            = @{
       "(\<id\>).*(\<\/id\>)"                     = "`${1}InnoSetup`${2}"

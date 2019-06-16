@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $filePath = "$toolsDir\isetup-4.2.7.exe"
@@ -7,6 +7,8 @@ $packageArgs = @{
 	packageName   = 'innosetup'
 	fileType      = 'exe'
 	softwareName  = 'Inno Setup*'
+  checksum      = ''
+  checksumType  = ''
 	file          = $filePath
 	silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
 	validExitCodes= @(0,3010,1641)
