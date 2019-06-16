@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
