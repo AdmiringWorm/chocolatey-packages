@@ -2,6 +2,14 @@
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 
+Write-Host "Ensuring that $packageName is not already installed"
+Install-Package `
+        -packageName $packageName `
+        -packagePath "$PSScriptRoot" `
+        -additionalArguments "-n"
+
+Uninstall-Package -packageName $packageName
+
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
