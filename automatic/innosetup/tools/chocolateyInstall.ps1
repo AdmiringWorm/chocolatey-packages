@@ -4,14 +4,14 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $filePath = "$toolsDir\innosetup-6.0.2.exe"
 
 $packageArgs = @{
-	packageName   = 'innosetup'
-	fileType      = 'exe'
-	softwareName  = 'Inno Setup*'
+  packageName   = 'innosetup'
+  fileType      = 'exe'
+  softwareName  = 'Inno Setup*'
   checksum      = '4AF479BD44E2BFB2A4BFAB6A19F9563E370EF52D86362E7B3D198E9DAFF62B64'
   checksumType  = 'sha256'
-	file          = $filePath
-	silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
-	validExitCodes= @(0,3010,1641)
+  file          = $filePath
+  silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  validExitCodes= @(0,3010,1641)
 }
 
 $pp = Get-PackageParameters
