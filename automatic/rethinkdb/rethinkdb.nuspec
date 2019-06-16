@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>rethinkdb</id>
+    <version>2.3.2</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rethinkdb</packageSourceUrl>
+    <owners>AdmiringWorm,rainbowhyphen</owners>
+    <title>RethinkDB</title>
+    <authors>Sam Hughes, Daniel Mewes, Timothy Maxwell</authors>
+    <projectUrl>https://www.rethinkdb.com/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/rethinkdb.png</iconUrl>
+    <copyright>Copyright 2010-2019 RethinkDB, all rights reserved.</copyright>
+    <licenseUrl>https://github.com/rethinkdb/rethinkdb/blob/next/COPYRIGHT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rethinkdb/rethinkdb</projectSourceUrl>
+    <docsUrl>https://www.rethinkdb.com/docs/</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/rethinkdb</mailingListUrl>
+    <bugTrackerUrl>https://github.com/rethinkdb/rethinkdb/issues</bugTrackerUrl>
+    <tags>rethinkdb database json realtime nosql cross-platform foss</tags>
+    <summary>The open-source database for the realtime web</summary>
+    <description>__REPLACE__MarkDown_Okay </description>
+    <releaseNotes>https://github.com/rethinkdb/rethinkdb/releases/tag/v1.0</releaseNotes>
+
+    <provides>rethinkdb</provides>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
