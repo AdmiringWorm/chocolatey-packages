@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dnscontrol</id>
-    <version>0.2.8</version>
+    <version>2.9</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dnscontrol</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DnsControl</title>
@@ -23,6 +23,7 @@
     <description><![CDATA[DnsControl is an [opinionated][] platform for seamlessly managing your DNS configuration across any number of DNS hosts, both in the cloud or in your own infrastructure. It manages all of the domains for the Stack Overflow network, and can do the same for your.
 
 ## Features
+
 - Maintain your DNS data as high-level DS, with macros, and variables for easier updates.
 - Eliminate vendor lock-in. Switch DNS providers easily, any time, with full fidelity.
 - Supports 10+ DNS Providers including BIND, AWS Route 53, Google DNS, and name.com
@@ -40,21 +41,46 @@
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dnscontrol/Changelog.md)
 
-## Software ChangelogNew features:
+## Software ChangelogIts been a while since the last release!  This release rolls up a number of big changes: IGNORE() now supports wildcards/globs, require() can be used to load JSON. New provider: Exoscale. New rTypes: SSHFP and NAPTR. The duplicate record check now happens in preview, not just in push. A new flag makes it easier to use dnscontrol in a CI/CD pipeline. Plus a lot, lot, more!
 
-* Warn (but don't fail) if creds.json file does not exist (#425)
-* Documentation: Added brew installation method to README (#426)
-* BUGFIX: Fix SRV record handling when target is shortname (#422)
-* SECURITY: Many improvements related to LetsEncrypt  (#406) (#411)
-* Verbose debug logging via the ConsolePrinter and printer package. (#404)
-* Codestyle: Fix formatting on parse_test JSON (#427)
-* OVH: Fix caching issue  (#412) (#417)
-* GCLOUD: Support TXTMulti (#415)
-* BIND: Warn if output directory does not exist. (#424)
-* NAMEDOTCOM: Documented some error messages.
-* GANDI-LIVE: Document "no such zone" error.
-* DNSIMPLE: Update DNSimple-go to v0.20.0 and fix provider (#414)
-* DNSIMPLE: Fix DNSimple SRV and MX records (#413)</releaseNotes>
+Major features:
+
+* NEW PROVIDER: Exoscale (#390)
+* Add SSHFP DNS record support. (#439)
+* Add NAPTR support. (#461)
+* Add --expect-no-changes flag to preview (#449)
+* IGNORE() now supports glob pattern/wildcards (#463)
+* require() now supports loading JSON too (#474)
+* SPF_BUILDER() now supports setting the TTL (#476)
+* CAA_BUILDER() makes it easier to add CAA records  (#478)
+* Check for duplicate records much earlier (#467)
+* Add SIP/JABBER labels to underscore exception list (#453)
+* require() now handles paths as relative (like nodeJS) (#443)
+
+Provider-specific changes:
+
+* ACTIVEDIRECTORY: Full support for managing NS records. (#450)
+* NAMEDOTCOM: Improve error docs
+* CLOUDFLARE: Added TLSA and SSHFP support (#484)
+* CLOUDFLARE: Added options to set the target account for new domains (#430)
+* CLOUDFLARE: Fix CF trying to update non-changeable TTL (#489)
+* CLOUDFLARE: SPF records should be converted to TXT Fixes #446 (#480)
+* ROUTE53/GCLOUD: Add Delegation/nameserver Sets (#448)
+* DIGITALOCEAN: Fix #479: Filter SOA records from Digitalocean (#485)
+* OVH: Fixed registrar ns correction (#486)
+* OVH: Fixed DKIM when having longer keys (#487) (#488)
+* OVH: Update to use newer client library (#445)
+* OVH: Certify SSHFP support (#482)
+* OVH: Certify that CAA support (#477)
+* OVH: Documentation: Fix OVH API First Steps link (#416)
+
+Minor cleanups:
+
+* General docs improvements (#481)
+* DOC: Apply brand-preferred case (#429)
+* DOCUMENTATION: Document bugid 491 (#492)
+* DOCS: Fix many spelling errors (#471)
+</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
