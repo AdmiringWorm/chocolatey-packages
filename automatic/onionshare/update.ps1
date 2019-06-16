@@ -7,7 +7,7 @@ function global:au_BeforeUpdate($Package) {
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
   if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  $newLicenseUrl = $Package.nuspecXml.package.metadata.licenseUrl -replace 'master|v[\d]+\.[\d\.]+', "v$($Latest.RemoteVersion)"
+  $newLicenseUrl = $Package.nuspecXml.package.metadata.licenseUrl -replace '\/master|\/v[^\/]+', "/v$($Latest.RemoteVersion)"
 
   iwr -UseBasicParsing -Uri $($newLicenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
   if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
