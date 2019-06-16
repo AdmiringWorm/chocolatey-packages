@@ -53,6 +53,8 @@ function global:au_GetLatest {
 
   if ($version32 -match "([\d\.]+)\.([a-z-][a-z\d-]+)") {
     $version = "$($Matches[1])-$($Matches[2])"
+  } else {
+    $version = $version32
   }
 
   @{
