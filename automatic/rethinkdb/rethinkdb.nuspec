@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rethinkdb</id>
-    <version>2.3.2</version>
+    <version>2.3.6</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/rethinkdb</packageSourceUrl>
     <owners>AdmiringWorm,rainbowhyphen</owners>
     <title>RethinkDB</title>
     <authors>Sam Hughes, Daniel Mewes, Timothy Maxwell</authors>
     <projectUrl>https://www.rethinkdb.com/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/rethinkdb.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e2b844c94b052109fa3a17c25c7ab383e571ec62/rethinkdb/icons/rethinkdb.svg</iconUrl>
     <copyright>Copyright 2010-2019 RethinkDB, all rights reserved.</copyright>
-    <licenseUrl>https://github.com/rethinkdb/rethinkdb/blob/next/COPYRIGHT</licenseUrl>
+    <licenseUrl>https://github.com/rethinkdb/rethinkdb/blob/v2.3.6/COPYRIGHT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rethinkdb/rethinkdb</projectSourceUrl>
     <docsUrl>https://www.rethinkdb.com/docs/</docsUrl>
@@ -19,7 +19,17 @@
     <bugTrackerUrl>https://github.com/rethinkdb/rethinkdb/issues</bugTrackerUrl>
     <tags>rethinkdb database json realtime nosql cross-platform foss</tags>
     <summary>The open-source database for the realtime web</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
+    <description><![CDATA[RethinkDB is the first open-source scalable database built for realtime applications. It exposes a new database access model -- instead of polling for changes, the developer can tell the database to continuously push updated query results to applications in realtime. RethinkDB allows developers to build scalable realtime apps in a fraction of the time with less effort.
+
+To learn more, check out [rethinkdb.com](https://rethinkdb.com/).
+
+## Features
+
+- **Open-source** database for building reastime web applications
+- **NoSQL** database that stores schemaless JSON documents
+- **Distributed** database that is easy to scale
+- **High availability** database with automatic failover and robust fault tolerance
+]]></description>
     <releaseNotes>https://github.com/rethinkdb/rethinkdb/releases/tag/v1.0</releaseNotes>
 
     <provides>rethinkdb</provides>
