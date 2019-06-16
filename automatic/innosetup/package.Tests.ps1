@@ -17,6 +17,7 @@ Run-PesterTests `
   -expectedDefaultDirectory "${env:ProgramFiles(x86)}\Inno Setup*" `
   -customDirectoryArgument "/DIR=" `
   -expectedShimFiles "ISCC.exe" `
+  -expectedEmbeddedMatch "innosetup-[\d\.]+(-unicode)?(-beta|-dev-[\d]+)?\.exe" `
   -customInstallChecks @(
     {
       It "Should create iss file extension in registry" {
