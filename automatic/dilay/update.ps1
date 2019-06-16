@@ -1,6 +1,6 @@
 ﻿import-module au
 
-$releases = 'http://abau.org/dilay/download.html'
+$releases = 'https://github.com/abau/dilay/releases/latest'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 function global:au_BeforeUpdate($Package) {
@@ -26,14 +26,20 @@ function global:au_SearchReplace {
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
+
+
   }
+}
+
+function addDomainIfNeeded([string]$url, [uri]$oldUrl) {
+  return New-Object uri($oldUrl, $url)
 }
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { addDomainIfNeeded $_ $releases }
 
   $verRe = '\/'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
