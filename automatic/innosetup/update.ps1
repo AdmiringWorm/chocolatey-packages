@@ -43,6 +43,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri ($versionDirUrl + $versionReleaseDir)
 
     $res = @(
+      'innosetup-[6-9][\d\.]+(\-beta)?\.exe'
       'innosetup.*unicode(\-dev\-[\d]*)?\.exe'
       'isetup\-[\d\.]+\.exe'
     )
