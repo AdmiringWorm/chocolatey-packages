@@ -9,7 +9,7 @@
     <title>RethinkDB</title>
     <authors>Sam Hughes, Daniel Mewes, Timothy Maxwell</authors>
     <projectUrl>https://www.rethinkdb.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e2b844c94b052109fa3a17c25c7ab383e571ec62/rethinkdb/icons/rethinkdb.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e2b844c94b052109fa3a17c25c7ab383e571ec62/automatic/rethinkdb/icons/rethinkdb.svg</iconUrl>
     <copyright>Copyright 2010-2019 RethinkDB, all rights reserved.</copyright>
     <licenseUrl>https://github.com/rethinkdb/rethinkdb/blob/v2.3.6/COPYRIGHT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
