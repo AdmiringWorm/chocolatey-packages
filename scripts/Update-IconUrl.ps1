@@ -306,7 +306,7 @@ function Update-IconUrl {
       $extension = [System.IO.Path]::GetExtension($iconPath).TrimStart('.')
       $packageIconDir = "$PSScriptRoot/$PackagesDirectory/$Name/icons"
       $commitHash = Test-Icon -Name $iconName -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
-      pushd ..
+      pushd "$PSScriptRoot\.."
       $relativeIconDir = Resolve-Path $packageIconDir -Relative
       $resolvedPath = Resolve-Path $iconPath -Relative;
       popd
