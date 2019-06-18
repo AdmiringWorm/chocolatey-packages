@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lunacy</id>
-    <version>3.16.4</version>
+    <version>4.0.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lunacy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Lunacy</title>
     <authors>Icons8</authors>
     <projectUrl>https://icons8.com/lunacy</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@5827d64c2fa1d367e9cea0182638b097ea678bc9/lunacy/icons/128x128.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@5827d64c2fa1d367e9cea0182638b097ea678bc9/automatic/lunacy/icons/128x128.png</iconUrl>
     <projectSourceUrl>https://github.com/icons8/Lunacy</projectSourceUrl>
     <bugTrackerUrl>https://github.com/icons8/Lunacy/issues</bugTrackerUrl>
     <tags>lunacy sketch freeware</tags>
