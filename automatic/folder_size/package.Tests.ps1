@@ -5,6 +5,5 @@ $packageName = Split-Path -Leaf $PSScriptRoot
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
-  -expectedDefaultDirectory "${env:ProgramFiles(x86)}\Folder Size" `
-  -customDirectoryArgument "/DIR=" `
+  -expectedDefaultDirectory "${env:ProgramFiles}\Folder Size" `
   -customUninstallChecks @({ It "Sleeping" { sleep -Seconds 5 } })
