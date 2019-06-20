@@ -291,50 +291,58 @@ function Update-IconUrl {
     return;
   }
 
-  # Before we do any checking in the fallback icons directory,
-  # we check if there exists an icon directory in the package root path
-  if (Test-Path "$PSScriptRoot/$PackagesDirectory/$Name/icons") {
-    # Get the last item inside the icons directory, we only sort it by the first value splitted by x
-    $iconPath = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$Name/icons" | ? Name -match "^[\d]+x" | sort -Descending { [int]($_ -split 'x' | select -first 1) } | select -expand FullName -first 1
-    if (!$iconPath) {
-      # We assume that there is only one file in the icons directory
-      $iconPath = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$Name/icons" | select -expand FullName -first 1
-    }
-
-    if ($iconPath) {
-      $iconName = [System.IO.Path]::GetFileNameWithoutExtension($iconPath)
-      $extension = [System.IO.Path]::GetExtension($iconPath).TrimStart('.')
-      $packageIconDir = "$PSScriptRoot/$PackagesDirectory/$Name/icons"
-      $commitHash = Test-Icon -Name $iconName -Extension $extension -IconDir "$PSScriptRoot/$PackagesDirectory/$Name/icons" -Optimize $Optimize -PackageName $Name;
-      pushd "$PSScriptRoot\.."
-      $relativeIconDir = Resolve-Path $packageIconDir -Relative
-      $resolvedPath = Resolve-Path $iconPath -Relative;
-      popd
-      $trimming = @(".", "\")
-      $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\', '/';
-      if (Test-Path "$packageIconDir/48x48.$extension") {
-        Replace-IconUrl `
-          -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
-          -CommitHash $commitHash `
-          -IconPath "$iconPath" `
-          -GithubRepository $GithubRepository
-        $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$packageIconDir" -Optimize $Optimize -PackageName $Name;
-        # Old rawgit url, just for history purposes
-        #$url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
-        $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${commitHash}/$($iconPath -replace "$iconName","48x48")"
-
-        $readMePath = "$PSScriptRoot/$PackagesDirectory/$Name/Readme.md"
-        Update-Readme -ReadmePath $readMePath -Url $url
+  $possiblePkgNames = @($Name)
+  if ($Name.EndsWith(".install") -or $Name.EndsWith(".portable")) {
+    $possiblePkgNames += @($Name -replace "(.install|.portable)$", "")
+  }
+  $iconPath = $possiblePkgNames | % {
+    if (Test-Path "$PSScriptRoot/$PackagesDirectory/$_/icons") {
+      $result = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$_/icons" | ? Name -match "^[\d]+x" | sort -Descending { [int]($_ -split 'x' | select -first 1) } | select -expand FullName -first 1
+      if (!$result) {
+        # We assume that there is only one file in the icons directory
+        $result = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$_/icons" | select -expand FullName -first 1
       }
-      else {
-        Replace-IconUrl `
-          -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
-          -CommitHash $commitHash `
-          -IconPath $iconPath `
-          -GithubRepository $GithubRepository
+      if ($result) {
+        return $result
       }
-      return;
     }
+  } | select -First 1
+
+  # Get the last item inside the icons directory, we only sort it by the first value splitted by x
+
+  if ($iconPath) {
+    $iconName = [System.IO.Path]::GetFileNameWithoutExtension($iconPath)
+    $extension = [System.IO.Path]::GetExtension($iconPath).TrimStart('.')
+    $packageIconDir = Split-Path -Parent $iconPath
+    $commitHash = Test-Icon -Name $iconName -Extension $extension -IconDir $packageIconDir -Optimize $Optimize -PackageName $Name;
+    pushd "$PSScriptRoot\.."
+    $relativeIconDir = Resolve-Path $packageIconDir -Relative
+    $resolvedPath = Resolve-Path $iconPath -Relative;
+    popd
+    $trimming = @(".", "\")
+    $iconPath = $resolvedPath.TrimStart($trimming) -replace '\\', '/';
+    if (Test-Path "$packageIconDir/48x48.$extension") {
+      Replace-IconUrl `
+        -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
+        -CommitHash $commitHash `
+        -IconPath "$iconPath" `
+        -GithubRepository $GithubRepository
+      $commitHash = Test-Icon -Name "48x48" -Extension $extension -IconDir "$packageIconDir" -Optimize $Optimize -PackageName $Name;
+      # Old rawgit url, just for history purposes
+      #$url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$($iconPath -replace "$iconName",'48x48')"
+      $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${commitHash}/$($iconPath -replace "$iconName","48x48")"
+
+      $readMePath = "$PSScriptRoot/$PackagesDirectory/$Name/Readme.md"
+      Update-Readme -ReadmePath $readMePath -Url $url
+    }
+    else {
+      Replace-IconUrl `
+        -NuspecPath "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" `
+        -CommitHash $commitHash `
+        -IconPath $iconPath `
+        -GithubRepository $GithubRepository
+    }
+    return;
   }
 
   $content | ? { $_ -match "\<iconUrl\>(.+)\<\/iconUrl\>" } | Out-Null
