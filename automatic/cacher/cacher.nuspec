@@ -37,6 +37,5 @@ All Rights Reserved</copyright>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\cacher.png" target="icons" />
   </files>
 </package>

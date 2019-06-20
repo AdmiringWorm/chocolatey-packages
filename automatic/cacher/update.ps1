@@ -24,14 +24,10 @@ function global:au_GetLatest {
 
   $regexFormat = "{0}\:\s*[`"']([^`"']+)"
 
-  if ($download_page.Content -match ($regexFormat -f "downloadHost")) {
+  if ($download_page.Content -match ($regexFormat -f "windowsDownloadHost")) {
     $downloadHost = $matches[1]
   }
   else { throw "The download host was not found!!!" }
-
-  if ($download_page.Content -match ($regexFormat -f "windowsDownloadHost")) {
-    $windowsDownloadHost = $matches[1]
-  }
 
   $download_page = Invoke-WebRequest -uri ($downloadHost + "/latest.yml") -UseBasicParsing
 
@@ -48,7 +44,7 @@ function global:au_GetLatest {
   }
 
   if ($download_page -match ($regexFormat -f 'Path')) {
-    $url = "$windowsDownloadHost/$($matches[1])"
+    $url = "$downloadHost/$($matches[1])"
   }
 
   return @{
