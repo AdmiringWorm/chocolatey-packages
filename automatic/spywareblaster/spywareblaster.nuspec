@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>spywareblaster</id>
+    <version>0.0</version>
+    <owners>AdmiringWorm</owners>
+    <title>SpywareBlaster</title>
+    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <projectUrl>https://www.brightfort.com/spywareblaster.html</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/sypwareblaster.png</iconUrl>
+    <copyright>Copyright (C) 2002-2016 BrightFort LLC. All Rights Reserved.</copyright>
+    <licenseUrl>https://www.brightfort.com/sbnv/licenseagreement.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.brightfort.com/support/index.php?/Knowledgebase/List/Index/4/spywareblaster</docsUrl>
+    <bugTrackerUrl>https://www.brightfort.com/support/</bugTrackerUrl>
+    <tags>sypwareblaster security protection prevention</tags>
+    <summary>Keep your system secure, without interfering with the "good side" of the web.</summary>
+    <description>__REPLACE__MarkDown_Okay </description>
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/spywareblaster/Changelog.md)</releaseNotes>
+
+    <provides>spywareblaster</provides>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.30.03" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

@@ -23,5 +23,8 @@
         //"extensionId": "ivangabriele.vscode-appveyor"
       }
     }
+  },
+  "[powershell]": {
+    "files.encoding": "utf8bom"
   }
 }
