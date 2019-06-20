@@ -2,6 +2,7 @@
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $softwareName = 'Folder Size*'
+$padUnderVersion = "4.2.1"
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
@@ -24,7 +25,7 @@ function GetResultInformation([string]$url32) {
 
     return @{
       URL32 = $url32
-      Version = $version.Trim()
+      Version = Get-FixVersion $version.Trim() -OnlyFixBelowVersion $padUnderVersion
       Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
       ChecksumType32 = 'sha512'
     }
