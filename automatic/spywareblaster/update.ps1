@@ -3,6 +3,11 @@ Import-Module AU
 $releases = 'https://www.brightfort.com/sbdownload_free.html'
 $softwareName = 'SpywareBlaster *'
 
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha512'
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1"   = @{
@@ -33,4 +38,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
