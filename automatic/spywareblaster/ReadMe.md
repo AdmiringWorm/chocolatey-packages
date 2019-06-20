@@ -17,3 +17,4 @@ SpywareBlaster can help keep your system secure, without interfering with the "g
 ## Notes
 
 - This package uses the free edition of SpywareBlaster and can only be used for personal & educational purposes.
+- There is a problem if the installation directory already exist with a prompt being shown asking wether to really install to the directory or not. Any help for getting around this would be appreciated.

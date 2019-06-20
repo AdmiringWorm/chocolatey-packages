@@ -33,7 +33,7 @@ function global:au_GetLatest {
   }
 
   @{
-    URL32   = $url32
+    URL32   = $url32 -replace "http:","https:"
     Version = $version32
   }
 }
