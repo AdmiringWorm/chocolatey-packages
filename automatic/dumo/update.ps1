@@ -4,6 +4,8 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 $releases = 'https://www.kcsoftwares.com/?download'
 $softwareName = 'KC Softwares DUMo'
 
+$padBelowVersion = "2.17.6"
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -23,7 +25,7 @@ function GetResultInformation([string]$url32) {
 
   return @{
     URL32 = $url32
-    Version = [version](Get-Item $dest | % { $_.VersionInfo.ProductVersion })
+    Version = Get-FixVersion (Get-Item $dest | % { $_.VersionInfo.ProductVersion }).Trim() -OnlyFixBelowVersion $padBelowVersion
     Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
   }
