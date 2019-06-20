@@ -19,6 +19,9 @@
     <description>__REPLACE__MarkDown_Okay </description>
 
     <provides>spywareblaster</provides>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.30.03" />
+    </dependencies>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
