@@ -17,6 +17,7 @@
     <tags>sypwareblaster security protection prevention</tags>
     <summary>Keep your system secure, without interfering with the "good side" of the web.</summary>
     <description>__REPLACE__MarkDown_Okay </description>
+    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/spywareblaster/Changelog.md)</releaseNotes>
 
     <provides>spywareblaster</provides>
     <dependencies>

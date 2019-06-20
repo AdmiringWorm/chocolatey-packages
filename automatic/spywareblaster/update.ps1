@@ -22,6 +22,8 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
