@@ -46,6 +46,5 @@
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\claws-mail.png" target="icons" />
   </files>
 </package>
