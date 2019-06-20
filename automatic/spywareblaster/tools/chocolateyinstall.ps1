@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -12,11 +12,11 @@ $packageArgs = @{
   checksum64     = ''
   checksumType64 = 'sha256'
 
-  silentArgs     = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  silentArgs     = "/SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0, 3010, 1641)
 }
 
-$pp = Get-PackageParameters
+$toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 if ($pp.UseInf) {
   if (Test-Path "$($pp.UseInf)") {
     Write-Host "Using existing configuration file at '$($pp.UseInf)'"
@@ -28,4 +28,5 @@ if ($pp.UseInf) {
   }
 }
 
+Start-Process "autohotkey.exe" "$toolsPath\install.ahk"
 Install-ChocolateyPackage @packageArgs
