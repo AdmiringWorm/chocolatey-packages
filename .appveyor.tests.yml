@@ -65,4 +65,6 @@ deploy: off
 #on_failure:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 on_finish:
-- ps: gci -Recurse "*.nupkg" | % { Push-AppveyorArtifact $_ }
+- cmd: git add .
+- cmd: git diff --cached > unsaved_changes.patch
+- ps: gci -Recurse "*.nupkg","*.patch" | % { Push-AppveyorArtifact $_ }
