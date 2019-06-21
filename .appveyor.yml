@@ -118,6 +118,8 @@ build_script:
     ./update_all.ps1 -ForcedPackages $forced
     Get-EventLogs * | ? Source -eq 'Schannel' | fl * |  out-file eventlogs.txt
 on_finish:
+- cmd: git add .
+- cmd: git diff --cached > unsaved_changes.patch
 - ps: |
     if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
     $paths = @(
@@ -126,6 +128,7 @@ on_finish:
       'update_info.xml'
       'Update-AUPackages.md'
       'eventlogs.txt'
+      'unsaved_changes.patch'
     )
     $paths | ? { Test-Path $_ } | % { Push-AppveyorArtifact $_ }
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
