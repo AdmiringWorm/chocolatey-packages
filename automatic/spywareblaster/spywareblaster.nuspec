@@ -4,6 +4,7 @@
   <metadata>
     <id>spywareblaster</id>
     <version>5.5</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/spywareblaster</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>SpywareBlaster</title>
     <authors>BrightFort LLC</authors>
