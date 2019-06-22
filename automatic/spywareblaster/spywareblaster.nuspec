@@ -6,7 +6,7 @@
     <version>5.5</version>
     <owners>AdmiringWorm</owners>
     <title>SpywareBlaster</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <authors>BrightFort LLC</authors>
     <projectUrl>https://www.brightfort.com/spywareblaster.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ce5b94c36d002e69d93d44283712e5645f87d860/automatic/spywareblaster/icons/spywareblaster.png</iconUrl>
     <copyright>Copyright (C) 2002-2016 BrightFort LLC. All Rights Reserved.</copyright>
