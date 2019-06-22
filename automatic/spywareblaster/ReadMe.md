@@ -14,6 +14,13 @@ The most important step you can take is to secure your system. And SpywareBlaste
 
 SpywareBlaster can help keep your system secure, without interfering with the "good side" of the web. And unlike other programs, SpywareBlaster does not have to remain running in the background. It works alongside the programs you have to help secure your system.
 
+## Package Parameters
+
+- `/UseInf:` - Use the specified configuration file to when installing (will be created if it does not exist)
+
+**EXAMPLE**
+`choco install spywareblaster --params "'/UseInf:C:\spywareblaster.install.inf'"`
+
 ## Notes
 
 - This package uses the free edition of SpywareBlaster and can only be used for personal & educational purposes.
