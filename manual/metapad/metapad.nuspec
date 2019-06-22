@@ -9,7 +9,7 @@
     <title>Metapad</title>
     <authors>Alexander Davidson</authors>
     <projectUrl>https://liquidninja.com/metapad/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e25bbb09a6a796ee32f2e436ca57520950b5446e/manual/metapad/icons/128x128.png</iconUrl>
     <copyright>©1999-2015 Alexander Davidson</copyright>
     <licenseUrl>https://github.com/alexd/metapad/blob/master/COPYING-LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

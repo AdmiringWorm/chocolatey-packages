@@ -9,7 +9,7 @@
     <title>Metapad Light Edition</title>
     <authors>Alexander Davidson</authors>
     <projectUrl>http://liquidninja.com/metapad/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/a52bba21db13c816b13a088638b42dae25404c5e/icons/metapad.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a068ef3f5b5e6a659f3a38b06128d66fd56912e8/manual/metapad-light/icons/128x128.png</iconUrl>
     <copyright>©1999-2015 Alexander Davidson</copyright>
     <licenseUrl>https://github.com/alexd/metapad/blob/master/COPYING-LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
