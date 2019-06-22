@@ -42,6 +42,5 @@
   <releaseNotes xmlns="">[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/master-pdf-editor/Changelog.md)</releaseNotes></metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\master-pdf-editor.png" target="icons" />
   </files>
 </package>
