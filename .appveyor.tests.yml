@@ -1,22 +1,22 @@
-version: '{build}'
+version: "{build}"
 pull_requests:
   do_not_increment_build_number: true
 branches:
   except:
-  - master
+    - master
 skip_tags: true
 skip_branch_with_pr: true
 image:
-- Visual Studio 2017
-- Visual Studio 2015
+  - Visual Studio 2017
+  - Visual Studio 2015
 matrix:
   fast_finish: true
 init:
-- cmd: |
-    git config --global user.email "chocolatey@realdimensions.net"
-    git config --global user.name "Chocolatey"
-    git config --global core.safecrlf false
-- ps: Set-Service wuauserv -StartupType Manual
+  - cmd: |
+      git config --global user.email "chocolatey@realdimensions.net"
+      git config --global user.name "Chocolatey"
+      git config --global core.safecrlf false
+  - ps: Set-Service wuauserv -StartupType Manual
 environment:
   au_version: master
   au_push: false
@@ -27,44 +27,45 @@ environment:
   choco_version: 0.10.8
   nupkg_cache_path: C:\nupkg_cache
 install:
-- ps: |
-    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-    @{
-      'chocolatey' = $Env:choco_version
-      #'optipng'    = '0.7.6'
-      #'pngquant'   = '2.10.1'
-      #'jpegoptim'  = '1.2.4.4'
-      'wormies-au-helpers' = '0.3.2'
-    }.GetEnumerator() | % {
-      if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
-      if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade }
-      else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
-    }
-    Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
-- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
-- ps: $PSVersionTable
-- cmd: git --version
-- cmd: choco --version
-- ps: |
-    git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
-    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+  - yarn install
+  - ps: |
+      if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+      @{
+        'chocolatey' = $Env:choco_version
+        #'optipng'    = '0.7.6'
+        #'pngquant'   = '2.10.1'
+        #'jpegoptim'  = '1.2.4.4'
+        'wormies-au-helpers' = '0.3.2'
+      }.GetEnumerator() | % {
+        if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
+        if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade }
+        else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
+      }
+      Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+  - ps: "Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version"
+  - ps: $PSVersionTable
+  - cmd: git --version
+  - cmd: choco --version
+  - ps: |
+      git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
+      . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 cache: C:\nupkg_cache
 nuget:
   disable_publish_on_pr: true
   disable_publish_octopus: true
 build: off
 test_script:
-- ps: |
-    if ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') {
-      .\scripts\Invoke-PesterTests.ps1
-    }
-    else {
-      .\scripts\Invoke-PesterTests.ps1 -runAllTests
-    }
+  - ps: |
+      if ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') {
+        .\scripts\Invoke-PesterTests.ps1
+      }
+      else {
+        .\scripts\Invoke-PesterTests.ps1 -runAllTests
+      }
 deploy: off
 #on_failure:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 on_finish:
-- cmd: git add automatic extensions manual templates
-- cmd: git diff --cached > unsaved_changes.patch
-- ps: gci -Recurse "*.nupkg","*.patch" | % { Push-AppveyorArtifact $_ }
+  - cmd: git add automatic extensions manual templates
+  - cmd: git diff --cached > unsaved_changes.patch
+  - ps: gci -Recurse "*.nupkg","*.patch" | % { Push-AppveyorArtifact $_ }
