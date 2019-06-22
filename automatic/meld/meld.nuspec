@@ -41,6 +41,5 @@ Meld helps you review code changes and understand patches. It might even help yo
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\meld.png" target="icons" />
   </files>
 </package>
