@@ -5,7 +5,19 @@ Import-Module AU
 $releases = 'http://qmmp.ylsoftware.com/files/windows/?C=M;O=D'
 $softwareName = 'Qt-based Multimedia Player'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+
+  $licenseUrl = $Package.nuspecXml.package.metadata.licenseUrl -replace "qmmp-[\d\.]+\/","qmmp-$($Latest.RemoteVersion)/"
+  iwr -UseBasicParsing -Uri ($licenseUrl + "?format=raw") -OutFile $licenseFile
+  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+    throw "Unknown license download. Please verify it still contains distribution rights."
+  }
+  $Package.nuspecXml.package.metadata.licenseUrl = $licenseUrl
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
@@ -41,7 +53,7 @@ function global:au_GetLatest {
     $url = $urls_page.Links | ? href -match '\.exe$' | select -first 1 -expand href | % { $version_url + $_ }
     $verRe = '[-]'
     $version = Get-Version ($url -split $verRe | select -last 1 -skip 1)
-    $streams.Add($version.ToString(2), @{ URL32 = $url; Version = $version.ToString() })
+    $streams.Add($version.ToString(2), @{ URL32 = $url; Version = $version.ToString(); RemoteVersion = $version.ToString() })
   }
 
   return @{ Streams = $streams }
