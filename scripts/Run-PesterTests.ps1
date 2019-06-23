@@ -4,7 +4,7 @@ function Install-Package() {
     [Parameter(Mandatory = $true)][string]$packagePath,
     [string[]]$additionalArguments,
     [switch]$installWithPreRelease,
-    [int] $installSleep = 100
+    [int] $installSleep = 1
   )
 
   $arguments = @(
@@ -60,7 +60,7 @@ function Uninstall-Package() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
     [string[]]$additionalArguments,
-    [int] $uninstallSleep = 100
+    [int] $uninstallSleep = 1
   )
   $arguments = @(
     "uninstall"
@@ -120,7 +120,7 @@ function Run-PesterTests() {
     [string[]]$customUninstallArgs,
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
-    [int] $installUninstallSleep = 100,
+    [int] $installUninstallSleep = 1,
     [boolean]$testChoco = $true,
     [switch]$skipUpdate,
     [switch]$metaPackage,
@@ -327,6 +327,19 @@ function Run-PesterTests() {
 
         [array]$matches = $owners | ? { $_ -eq 'AdmiringWorm' }
         $matches.Count | Should -BeExactly 1
+      }
+
+      It "Should link to current repository directory" {
+        $relDir = ($packagePath -replace $([regex]::Escape((Resolve-Path $PSScriptRoot/..))),"" -replace '\\','/').Trim('/')
+        $re = "^\s*\<packageSourceUrl\>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/$relDir\<\/packageSourceUrl\>"
+
+        "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
+      }
+
+      It "Should have $($packagename.ToLowerInvariant()) as first tag" {
+        $re = "^\s*\<tags\>$($packageName.ToLowerInvariant())\s.*\<\/tags\>"
+
+        "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
       }
     }
 
