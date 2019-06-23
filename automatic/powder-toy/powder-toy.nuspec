@@ -43,6 +43,5 @@ There is a Lua API – you can automate your work or even make plugins for the g
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
-    <file src="..\..\icons\powder-toy.png" target="icons" />
   </files>
 </package>
