@@ -2,7 +2,20 @@
 
 $releases = 'https://openmpt.org/download'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function downloadLicense {
+  $license = "https://source.openmpt.org/svn/openmpt/trunk/OpenMPT/LICENSE"
+  $outPath = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $outPath) {
+    rm -force $outPath
+  }
+
+  iwr -Uri $license -OutFile $outPath -UseBasicParsing
+}
+
+function global:au_BeforeUpdate {
+  downloadLicense
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_AfterUpdate {
   $releaseNotes = @"
@@ -16,16 +29,16 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
-      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
   }
@@ -47,8 +60,8 @@ function global:au_GetLatest {
     throw "32bit version do not match the 64bit version"
   }
   @{
-    URL32 = Get-RedirectedUrl $url32
-    URL64 = Get-RedirectedUrl $url64
+    URL32   = Get-RedirectedUrl $url32
+    URL64   = Get-RedirectedUrl $url64
     Version = $version32
   }
 }
