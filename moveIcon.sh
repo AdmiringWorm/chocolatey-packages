@@ -6,7 +6,7 @@ if [ -z "$file" ]; then
   exit 1
 fi
 
-directory=$(find . -type d -name $1)
+directory=$(find automatic manual extensions templates -type d -name $1)
 
 if [ -z "$directory" ]; then
   echo "ERROR: No package directory named $1 was found"
