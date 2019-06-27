@@ -3,7 +3,8 @@ function Install-Package() {
     [Parameter(Mandatory = $true)][string]$packageName,
     [Parameter(Mandatory = $true)][string]$packagePath,
     [string[]]$additionalArguments,
-    [switch]$installWithPreRelease
+    [switch]$installWithPreRelease,
+    [int] $installSleep = 1
   )
 
   $arguments = @(
@@ -45,6 +46,8 @@ function Install-Package() {
   # }
   $exitCode = $LASTEXITCODE
 
+  sleep $installSleep
+
   Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
   $line = "END CHOCOLATEY INSTALL COMMAND"
   Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
@@ -56,7 +59,8 @@ function Install-Package() {
 function Uninstall-Package() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
-    [string[]]$additionalArguments
+    [string[]]$additionalArguments,
+    [int] $uninstallSleep = 1
   )
   $arguments = @(
     "uninstall"
@@ -89,6 +93,8 @@ function Uninstall-Package() {
   $exitCode = $LASTEXITCODE
   # }
 
+  sleep $uninstallSleep
+
   Write-Host ("{0}" -f ('=' * ([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width))))
   $line = "END CHOCOLATEY UNINSTALL COMMAND"
   Write-Host ("{0}{1}" -f (' ' * (([Math]::Max(0, $Host.UI.RawUI.BufferSize.Width / 2) - [Math]::Floor($line.Length / 2)))), $line)
@@ -114,6 +120,7 @@ function Run-PesterTests() {
     [string[]]$customUninstallArgs,
     [scriptblock[]] $customInstallChecks,
     [scriptblock[]] $customUninstallChecks,
+    [int] $installUninstallSleep = 1,
     [boolean]$testChoco = $true,
     [switch]$skipUpdate,
     [switch]$metaPackage,
@@ -128,14 +135,16 @@ function Run-PesterTests() {
       -packageName $packageName `
       -packagePath $packagePath `
       -additionalArguments $additionalArguments `
-      -installWithPreRelease:$installWithPreRelease
+      -installWithPreRelease:$installWithPreRelease `
+      -installSleep $installUninstallSleep
   }
 
   function uninstallPackage([string[]]$additionalArguments) {
     if ($customUninstallArgs) { $additionalArguments += $customUninstallArgs }
     return Uninstall-Package `
       -packageName $packageName `
-      -additionalArguments $additionalArguments
+      -additionalArguments $additionalArguments `
+      -uninstallSleep $installUninstallSleep
   }
 
   Import-Module Pester
@@ -318,6 +327,19 @@ function Run-PesterTests() {
 
         [array]$matches = $owners | ? { $_ -eq 'AdmiringWorm' }
         $matches.Count | Should -BeExactly 1
+      }
+
+      It "Should link to current repository directory" {
+        $relDir = ($packagePath -replace $([regex]::Escape((Resolve-Path $PSScriptRoot/..))),"" -replace '\\','/').Trim('/')
+        $re = "^\s*\<packageSourceUrl\>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/$relDir\<\/packageSourceUrl\>"
+
+        "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
+      }
+
+      It "Should have $($packagename.ToLowerInvariant()) as first tag" {
+        $re = "^\s*\<tags\>$($packageName.ToLowerInvariant())\s.*\<\/tags\>"
+
+        "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
       }
     }
 

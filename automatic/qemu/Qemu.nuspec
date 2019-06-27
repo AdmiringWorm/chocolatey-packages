@@ -25,9 +25,6 @@
 [Software Changelog](https://git.qemu.org/?p=qemu.git;a=blob;f=Changelog;hb=HEAD)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qemu/Changelog.md)
     </releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

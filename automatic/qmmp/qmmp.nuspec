@@ -11,7 +11,7 @@
     <projectUrl>http://qmmp.ylsoftware.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@166c97b541387d7c60b7797b2d2043989d46af53/icons/qmmp.png</iconUrl>
     <copyright>© 2006-2017 Qmmp Development Team</copyright>
-    <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/COPYING</licenseUrl>
+    <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/tags/qmmp-1.1.7/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/qmmp-dev/wiki/browse_pages/</docsUrl>
