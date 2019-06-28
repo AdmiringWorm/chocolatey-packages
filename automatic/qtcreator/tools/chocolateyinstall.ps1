@@ -4,12 +4,12 @@ $installToolsPath = Get-ToolsLocation
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  url            = 'https://download.qt.io/official_releases/qtcreator/4.9/4.9.1/installer_source/windows_msvc2017_x86/qtcreator.7z'
-  url64bit       = 'https://download.qt.io/official_releases/qtcreator/4.9/4.9.1/installer_source/windows_msvc2017_x64/qtcreator.7z'
+  url            = 'https://download.qt.io/official_releases/qtcreator/4.9/4.9.2/installer_source/windows_msvc2017_x86/qtcreator.7z'
+  url64bit       = 'https://download.qt.io/official_releases/qtcreator/4.9/4.9.2/installer_source/windows_msvc2017_x64/qtcreator.7z'
   destination    = "$installToolsPath\$env:ChocolateyPackageName"
-  checksum       = 'b9c303fef2c3e0cab4c0881e9c3b7a665f016699870c88fcc889bc3dd6caf564'
+  checksum       = 'cc0a689dc050de9aba98c33f950f0571106439f379d6f91e330df6a84dcf4c87'
   checksumType   = 'sha256'
-  checksum64     = '60ac6961036a660b6c3d2fd359451d809632489a9e6aff2c327962ea95a2de8b'
+  checksum64     = '61953fe78c756c7b07b03a5fb9f686c106a27867577d289c1d1a9b2f38761488'
   checksumType64 = 'sha256'
 }
 
