@@ -1,5 +1,9 @@
 # ![IO Ninja Changelog](https://img.shields.io/badge/IO%20Ninja-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 3.11.0 (2019-06-30)
+
+- Move all icons to their respective package directory [#47](https://github.com/AdmiringWorm/chocolatey-packages/issues/47)
+
 ## Version: 3.10.1 (2019-01-10)
 
 - **BREAKING CHANGE:** Removed uneeded dependency on chocolatey-core.extension

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@13951d0ab865e9acb6447433194294dd671649ce/icons/io-ninja.png" height="48" width="48" /> ![IO Ninja](https://img.shields.io/chocolatey/v/io-ninja.svg?label=IO%20Ninja&style=for-the-badge)](https://chocolatey.org/packages/io-ninja)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6002fde9a9b502970066436309b0f35d5305d79c/automatic/io-ninja/icons/128x128.png" height="48" width="48" /> ![IO Ninja](https://img.shields.io/chocolatey/v/io-ninja.svg?label=IO%20Ninja&style=for-the-badge)](https://chocolatey.org/packages/io-ninja)
 
 ## Scriptable/Programmable
 
