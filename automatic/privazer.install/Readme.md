@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@95bf314957cfef45ec98f1bf618248395a58bede/icons/privazer.png" height="48" width="48" /> ![PrivaZer (Install)](https://img.shields.io/chocolatey/v/privazer.install.svg?label=PrivaZer%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/privazer.install)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4186f9b8e5f01268d77ce22ee9ce679345b31a1c/automatic/privazer/icons/128x128.png" height="48" width="48" /> ![PrivaZer (Install)](https://img.shields.io/chocolatey/v/privazer.install.svg?label=PrivaZer%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/privazer.install)
 
 Free PC cleaner & Privacy tool that cleans unwanted traces.
 

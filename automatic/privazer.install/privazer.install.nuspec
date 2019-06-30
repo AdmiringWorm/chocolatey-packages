@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer.install</id>
-    <version>3.0.72</version>
+    <version>3.0.73</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer (Install)</title>
     <authors>Goversoft LLC</authors>
     <projectUrl>https://privazer.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@95bf314957cfef45ec98f1bf618248395a58bede/icons/privazer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4186f9b8e5f01268d77ce22ee9ce679345b31a1c/automatic/privazer/icons/128x128.png</iconUrl>
     <copyright>© Goversoft LLC 2012-2017</copyright>
     <tags>privazer system cleanup freeware admin</tags>
     <summary>Free PC cleaner &amp; Privacy tool</summary>
