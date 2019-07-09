@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8a6d25834cf98f5df36d4b3fa67a6e5677f61700/icons/origin.png" height="48" width="48" /> ![Origin](https://img.shields.io/chocolatey/v/origin.svg?label=Origin&style=for-the-badge)](https://chocolatey.org/packages/origin)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@33b382c0eebf3fe77983183c92db676f87cb7b0f/automatic/origin/icons/128x128.png" height="48" width="48" /> ![Origin](https://img.shields.io/chocolatey/v/origin.svg?label=Origin&style=for-the-badge)](https://chocolatey.org/packages/origin)
 
 Origin is an online gaming, digital distribution and digital rights management (DRM) platform developed by Electronic Arts that allows users to purchase games on the internet for PC and mobile platforms, and download them with the Origin client (formerly EA Download Manager, EA Downloader and EA Link).
 
