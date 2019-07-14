@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@7f25c1838154fe1d1a6d73a052e5d0c351f0fd76/icons/unit-test-boilerplate-generator.png" height="48" width="48" /> ![Unit Test Boilerplate Generator](https://img.shields.io/chocolatey/v/unit-test-boilerplate-generator.svg?label=Unit%20Test%20Boilerplate%20Generator&style=for-the-badge)](https://chocolatey.org/packages/unit-test-boilerplate-generator)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1a49dac9d37d4ff887f5bf5a145425f5e87fb081/automatic/unit-test-boilerplate-generator/icons/128x128.png" height="48" width="48" /> ![Unit Test Boilerplate Generator](https://img.shields.io/chocolatey/v/unit-test-boilerplate-generator.svg?label=Unit%20Test%20Boilerplate%20Generator&style=for-the-badge)](https://chocolatey.org/packages/unit-test-boilerplate-generator)
 
 Generates a unit test boilerplate from a given C# class, setting up mocks for all dependencies and test outlines for all public methods.
 

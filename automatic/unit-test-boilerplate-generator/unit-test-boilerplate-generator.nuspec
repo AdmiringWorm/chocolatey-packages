@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>unit-test-boilerplate-generator</id>
-    <version>1.10.5</version>
+    <version>2.0.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/unit-test-boilerplate-generator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Unit Test Boilerplate Generator</title>
     <authors>RandomEngy,Microsoft</authors>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=RandomEngy.UnitTestBoilerplateGenerator</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@7f25c1838154fe1d1a6d73a052e5d0c351f0fd76/icons/unit-test-boilerplate-generator.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1a49dac9d37d4ff887f5bf5a145425f5e87fb081/automatic/unit-test-boilerplate-generator/icons/128x128.png</iconUrl>
     <copyright>Copyright (c) 2016 Microsoft</copyright>
     <licenseUrl>https://github.com/Microsoft/UnitTestBoilerplateGenerator/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -42,13 +42,13 @@ Dependency injection modes supported:
 
 Right click an item in Solution Explorer and choose "Create Unit Test Boilerplate" .
 
-![Before Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/BeforeScreenshot.png)
+![Before Screenshot](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/BeforeScreenshot.png)
 
 This will create a test class in the same relative path as the class in a specified unit test project.
 All the dependencies are mocked and saved as fields which are created fresh for each test via \[TestInitialize]. In addition, all public methods
 on the tested class are set up with a test method outline:
 
-![After Screenshot](https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/AfterScreenshot.png)
+![After Screenshot](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@97e1459ab29627e3f745789c45bed85ef3f67f29/automatic/unit-test-boilerplate-generator/screenshots/AfterScreenshot.png)
 
 Each mocking framework has its own pattern.
 ]]></description>
