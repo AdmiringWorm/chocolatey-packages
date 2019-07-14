@@ -25,6 +25,9 @@
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^9.2.0"
   },
+  "resolutions": {
+    "lodash": "^4.7.14"
+  },
   "lint-staged": {
     "*.{md,json,yml,yaml}": [
       "prettier --write",
