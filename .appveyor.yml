@@ -60,6 +60,7 @@ init:
   - git config --global core.safecrlf false
 
 install:
+  - ps: Install-Product node 10
   - yarn install
   - ps: |
       if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
