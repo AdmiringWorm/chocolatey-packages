@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/AdmiringWorm/chocolatey-packages#readme",
   "dependencies": {
-    "@commitlint/config-angular": "^8.0.0",
+    "@commitlint/config-angular": "^8.1.0",
     "@commitlint/config-conventional": "^8.0.0",
     "commitizen": "^3.1.1",
     "commitlint": "^8.1.0",
