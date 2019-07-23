@@ -1,5 +1,9 @@
 # ![GhostDoc Enterprise Edition Changelog](https://img.shields.io/badge/GhostDoc%20Enterprise%20Edition-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2019.2.19200 (2019-07-23)
+
+- Move all icons to their respective package directory [#47](https://github.com/AdmiringWorm/chocolatey-packages/issues/47)
+
 ## Version: 2018.2.19060 (2019-03-06)
 
 - **BUG:** Not replacing checksums during update [#51](https://github.com/AdmiringWorm/chocolatey-packages/issues/51)

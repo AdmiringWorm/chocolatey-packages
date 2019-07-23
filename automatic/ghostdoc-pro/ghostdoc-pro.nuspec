@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>2019.1.19150</version>
+    <version>2019.2.19200</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
     <authors>submain</authors>
     <projectUrl>http://submain.com/products/ghostdoc.aspx</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9cc5e849e4ac105af5371fdb4c196017ed8fe1a0/icons/ghostdoc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4f51ac8f5a2beb847f7672f2c5110ba4cab1b27b/automatic/ghostdoc-pro/icons/32x32.png</iconUrl>
     <copyright>© 1998-2017 SubMain Software.  All rights reserved.</copyright>
     <licenseUrl>http://submain.com/ghostdoc/EULA.aspx</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
