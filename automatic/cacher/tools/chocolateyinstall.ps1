@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://s3.amazonaws.com/download.cacher.io/Cacher%20Setup%202.12.4.exe'
+  url            = 'https://s3.amazonaws.com/download.cacher.io/Cacher%20Setup%202.13.0.exe'
   softwareName   = 'Cacher*'
-  checksum       = '57db28887434dd2c531e2e31a7323a117a3fa4f1958ad9cb14df44a430cd5bf0ba2fce9ddf286e0ea9663466ab7631ccc952075259e77fe45b113594def61b7d'
+  checksum       = 'efd7ab71a062f0198445a97e98be5250c331ad7b1a295a523dab19ba0ab048d960a911d2d4f550ed6e58e833d9aa24b085fac54efd6e5318bd3bded221b99a38'
   checksumType   = 'sha512'
   silentArgs     = '/S'
   validExitCodes = @(0)
