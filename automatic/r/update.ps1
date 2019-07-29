@@ -1,6 +1,6 @@
 ﻿import-module au
 
-$releases = 'https://cran.r-project.org/bin/windows/base/'
+$releases = 'https://cloud.r-project.org/bin/windows/base/'
 
 function global:au_SearchReplace {
   @{
