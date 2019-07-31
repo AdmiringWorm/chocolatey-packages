@@ -105,6 +105,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jimhester",
+      "name": "Jim Hester",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/205275?v=4",
+      "profile": "http://www.jimhester.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ]
 }
