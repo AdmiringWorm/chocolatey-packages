@@ -13,7 +13,7 @@
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://svn.r-project.org/R/</projectSourceUrl>
-    <docsUrl>https://cran.r-project.org/manuals.html</docsUrl>
+    <docsUrl>https://cloud.r-project.org/manuals.html</docsUrl>
     <mailingListUrl>https://www.r-project.org/mail.html</mailingListUrl>
     <bugTrackerUrl>https://bugs.r-project.org/bugzilla3/</bugTrackerUrl>
     <tags>r r-project r-base admin statistics programming data-analysis programming-language mathematics data-mining
@@ -55,7 +55,7 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 `choco install r --params "'/UseInf:C:\r.inf'"`
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://cran.r-project.org/doc/manuals/r-release/NEWS.html)
+[Software Changelog](https://cloud.r-project.org/doc/manuals/r-release/NEWS.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
     <dependencies>
