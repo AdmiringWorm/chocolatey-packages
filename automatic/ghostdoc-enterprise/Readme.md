@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9cc5e849e4ac105af5371fdb4c196017ed8fe1a0/icons/ghostdoc.png" height="48" width="48" /> ![GhostDoc Enterprise Edition](https://img.shields.io/chocolatey/v/ghostdoc-enterprise.svg?label=GhostDoc%20Enterprise%20Edition&style=for-the-badge)](https://chocolatey.org/packages/ghostdoc-enterprise)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@011752c0bd870e56ecac19ecc925994c93233dd4/automatic/ghostdoc-enterprise/icons/32x32.png" height="48" width="48" /> ![GhostDoc Enterprise Edition](https://img.shields.io/chocolatey/v/ghostdoc-enterprise.svg?label=GhostDoc%20Enterprise%20Edition&style=for-the-badge)](https://chocolatey.org/packages/ghostdoc-enterprise)
 
 **GhostDoc** is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.
 
