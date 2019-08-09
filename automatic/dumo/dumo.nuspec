@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dumo</id>
-    <version>2.17.5.9101</version>
+    <version>2.18.0.95</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
     <owners>AdmiringWorm, dtgm, adgellida</owners>
     <title>DUMo</title>
     <authors>KC Softwares</authors>
     <projectUrl>https://www.kcsoftwares.com/?dumo</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6dff717aa056c553175b5911393ff58ca11d5ed7/icons/dumo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@3173958a10f1d39094aa3e4dbf75a5a7637c9b49/automatic/dumo/icons/dumo.png</iconUrl>
     <copyright>© KC Softwares - All rights reserved - 2004 - 2019</copyright>
     <licenseUrl>https://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
