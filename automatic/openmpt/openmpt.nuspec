@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openmpt</id>
-    <version>1.28.5.0</version>
+    <version>1.28.6.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/openmpt</packageSourceUrl>
     <owners>AdmiringWorm, nipsky</owners>
     <title>OpenMPT</title>
     <authors>ModPlug Central</authors>
     <projectUrl>http://openmpt.org</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@abc1aeedc7fd4e466d99f084b878fc616e79129c/icons/openmpt.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@907f94922206eee2f76ffb6c7aadbdf292db0def/automatic/openmpt/icons/128x128.png</iconUrl>
     <copyright>ModPlug Central</copyright>
     <licenseUrl>https://source.openmpt.org/browse/openmpt/trunk/OpenMPT/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,7 +22,7 @@
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[**OpenMPT** is a popular [tracker](https://en.wikipedia.org/wiki/Tracker_%28music_software%29) software for Windows. OpenMPT (short hand for **Open ModPlug Tracker**) is completely free and allows you to create and play back some great music on your computer. Based on the original ModPlug Tracker written by Olivier Lapicque, OpenMPT is free software, can import a wide variety of module formats and offers an intuitive, native GUI as well as advanced features such as [VST][] plugins and [ASIO][] output. In addition to its own song format, OpenMPT can natively edit Impulse Tracker, FastTracker, Scream Tracker and ProTracker module files
 
-*[ASIO]: Audio Stream Input/Output, a common low-latency audio driver protocol
+*[ASIO]: Audio Stream Input/Output, a common low-latency audio driver protocol  
 *[VST]: Virtual Studio Technology, a common audio plugin interface
 
 [asio]: https://en.wikipedia.org/wiki/Audio_Stream_Input/Output
