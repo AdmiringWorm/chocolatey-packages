@@ -6,6 +6,6 @@ Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
   -licenseShouldMatch "GNU GENERAL PUBLIC LICENSE" `
-  -expectedEmbeddedMatch "^MediathekView\-[\d\.]+\.zip$" `
-  -expectedDefaultDirectory "${env:ChocolateyInstall}\lib\MediathekView\tools\MediathekView-*" `
+  -expectedEmbeddedMatch "^MediathekViewFull\-[\d\.]+\-win\.zip$" `
+  -expectedDefaultDirectory "${env:ChocolateyInstall}\lib\MediathekView\tools\MediathekViewFull-*" `
   -expectedShimFiles "MediaThekView.exe"
