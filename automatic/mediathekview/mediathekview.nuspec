@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>MediathekView</id>
-    <version>13.2.1.20181016</version>
+    <version>13.3.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/mediathekview</packageSourceUrl>
     <owners>AdmiringWorm, W.Xaver</owners>
     <title>MediathekView</title>
     <authors>W.Xaver</authors>
     <projectUrl>https://mediathekview.de/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@be0254f2f5af25f47a26e8a041d9f8766934beaa/icons/mediathekview.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ac8908c1006563d5904e571271ae0d1ddb755d49/automatic/mediathekview/icons/128x128.png</iconUrl>
     <copyright>© 2016-2017 Copyright by MediathekView Team</copyright>
     <licenseUrl>https://github.com/mediathekview/MediathekView/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -23,6 +23,7 @@
     <description><![CDATA[The MediathekView program (abbreviated: MV) is a kind of search engine for films of various libraries of public service broadcasters in Germany (3sat, ARD, arte.de, arte.fr, BR, HR, KiKA, MDR, NDR, ORF, Phoenix, rbb, SR, SRF, SWR, WDR, ZDF, ZDFtivi). The MediathekView software allows to play or download videos directly from the media libraries (with VLC Media Player or with a program of their own choice) as well as to subscribe to series . MediathekView can only download programs that are offered in the media libraries of the broadcaster itself or as videos.
 
 ## Package Parameters
+
 - `/InstallDir:` - The path to use when installing MediaThekView
 
 Example: `choco install --package-parameters="'/InstallDir:C:\Program Files\MediaThekView'"`
