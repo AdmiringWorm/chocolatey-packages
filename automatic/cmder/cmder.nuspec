@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Cmder</id>
-    <version>1.3.8</version>
+    <version>1.3.12</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmder</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder</title>
     <authors>Samuel Vasko</authors>
     <projectUrl>http://cmder.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@19f0c1f2c90aeb944905ec1f42a61e925f82e0be/icons/cmder.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@080159cc943e64b1784b3847e24f5a9db219642e/automatic/cmder/icons/cmder.png</iconUrl>
     <copyright>Copyright (c) 2016 Samuel Vasko</copyright>
     <licenseUrl>https://github.com/cmderdev/cmder/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,10 +25,9 @@ The main advantage of Cmder is portability. It is designed to be totally self-co
 
 Combines utility of 3 distinct tools:
 
-* Console emulator = Conemu
-* Cmd.exe enhancements = clink
-* Unix tools on windows = msysgit
-
+- Console emulator = Conemu
+- Cmd.exe enhancements = clink
+- Unix tools on windows = msysgit
 
 ## Notes
 
@@ -39,9 +38,38 @@ See [cmdermini](https://chocolatey.org/packages/cmdermini) (8 MB) for basic cons
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmder/Changelog.md)
 
 ### Software changelog
+## [1.3.12](https://github.com/cmderdev/cmder/tree/v1.3.12) (2019-08-18)
+
 ### Fixes
 
-* Fix `\vendor\bin\timer.cmd was unexpected at this time.` on session start.
+* Pull Request: [#2113](https://github.com/cmderdev/cmder/pull/2113)
+  * Add `vendor\bin\vscode_init.cmd` for use with Visual Studio Code
+  * Fixes [#2118](https://github.com/cmderdev/cmder/issues/2118)
+  * Fixes [#1985](https://github.com/cmderdev/cmder/issues/1985)
+* Pull Request: [#2106](https://github.com/cmderdev/cmder/pull/2106)
+  * Portable Git requires running `post-install.bat` which deletes itself when done.  This was not happening.
+  * Resolves [#2105](https://github.com/cmderdev/cmder/issues/2105) 
+* Pull Request: [#2002](https://github.com/cmderdev/cmder/pull/2002)
+  * Updated the HG prompt code to use the '-ib' option to 'hg id' so the branch name is always available, regardless of the state of the working copy
+
+### Changes
+
+* Pull Request: [#2055](https://github.com/cmderdev/cmder/pull/2055)
+  * Upgrade git to 2.21.0
+  * Provide default settings for Clink that updates the history file in real time
+    * Turn this on in existing Cmder using `clink set history_io 1`
+  * Allow clink disable by setting CMDER_CLINK=0 before starting task
+* Pull Request: [#2068](https://github.com/cmderdev/cmder/pull/2068)
+  * Print Index in History Command Output.
+  * Sets default `history_expand_mode = 3` in initial Clink Settings.
+
+### Adds
+
+* Pull Request  : [#2096](https://github.com/cmderdev/cmder/pull/2096)
+  * Question issue: [#2094](https://github.com/cmderdev/cmder/issues/2094)
+  * New argument created to ConEmu forwarding arguments.
+    * Syntax: `/x [ConEmu extras arguments]`
+    *   e.g.: `Cmder.exe /x "-min -tsa"`
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
