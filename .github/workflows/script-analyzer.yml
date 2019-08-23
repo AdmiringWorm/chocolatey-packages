@@ -9,4 +9,4 @@ jobs:
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
         env:
-          PSSCRIPTANALYZER_SETTINGS_PATH: "./PSScriptAnalyzerSettings.psd1"
+          PSSCRIPTANALYZER_SETTINGS_PATH: "PSScriptAnalyzerSettings.psd1"
