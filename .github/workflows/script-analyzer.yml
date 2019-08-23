@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   label:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: devblackops/github-action-psscriptanalyzer@v1.2.1
         with:
