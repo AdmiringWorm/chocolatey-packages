@@ -1,0 +1,14 @@
+name: Labeler
+on: [push, pull_request]
+
+jobs:
+  label: "Analyze Powershell Scripts"
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: devblackops/github-action-psscriptanalyzer@v1.2.1
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      env:
+        PSSCRIPTANALYZER_SETTINGS_PATH: "./PSScriptAnalyzerSettings.psd1"
