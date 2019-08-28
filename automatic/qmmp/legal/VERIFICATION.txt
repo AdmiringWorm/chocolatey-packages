@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://qmmp.ylsoftware.com/files/windows/?C=M;O=D>
 and can be verified by doing the following:
 
-1. Download the following <http://qmmp.ylsoftware.com/files/windows/1.3/qmmp-1.3.3-win32.exe>
+1. Download the following <http://qmmp.ylsoftware.com/files/windows/1.3/qmmp-1.3.4-win32.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 07E441022ED731C535ACF0EA8B31171D8D74035C3C37F28B462888896D781A6E
+  checksum: 4DFDA7DEA2144DA450A07160B4D6F5CB1239A8E5D44D565314995F1929530FDE
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/qmmp/COPYING>

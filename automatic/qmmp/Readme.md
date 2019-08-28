@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@166c97b541387d7c60b7797b2d2043989d46af53/icons/qmmp.png" height="48" width="48" /> ![Qmmp](https://img.shields.io/chocolatey/v/qmmp.svg?label=Qmmp&style=for-the-badge)](https://chocolatey.org/packages/qmmp)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f1275bb403fe853787430a0f46d3fafdfcacba91/automatic/qmmp/icons/48x48.png" height="48" width="48" /> ![Qmmp](https://img.shields.io/chocolatey/v/qmmp.svg?label=Qmmp&style=for-the-badge)](https://chocolatey.org/packages/qmmp)
 
 This program is an audio-player, written with the help of the Qt library. The user interface is similar to winamp or xmms. [Alternative user interface][alt gui] also is available.
 
