@@ -7,13 +7,13 @@ location on <https://www.sheepit-renderfarm.com/getstarted.php>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://www.sheepit-renderfarm.com/media/applet/sheepit-5.1676.3035.exe>
+  64-Bit software: <https://www.sheepit-renderfarm.com/media/applet/sheepit-5.1678.3038.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: D5D0E63C047AE188928122F7E74FF1D8072E929C4BE4755816F50AB6F3C865F8
+  checksum64: 5F62B475290904DCF1B5E3F7D861345C42BB882741A828F0365C067EACD5516E
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/laurent-clouet/sheepit-client/blob/master/LICENSE>
