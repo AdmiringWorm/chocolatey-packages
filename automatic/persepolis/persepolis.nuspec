@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>persepolis</id>
-    <version>3.1.0</version>
+    <version>3.2.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/persepolis</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Persepolis Download Manager</title>
@@ -28,6 +28,7 @@
 - Download queuing
 
 ## Package Parameters
+
 - `/UseInf:` - Change the inno setup configuration file to use/save when installing
 
 **EXAMPLE**
@@ -36,27 +37,54 @@
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)
 
 ## Software Release Notes
-We are happy to announce the release of Persepolis Download Manager 3.1.0 .
-In this Version we have some good new features!
-1- You can download from Youtube and ... with persepolis video finder! 
-Question: How? 
-Answer: Read [this](https://github.com/persepolisdm/persepolis/wiki/How-can-I-download-videos-from-youtube).
-Special thanks to @chitholian
+## We are happy to announce the release of Persepolis Download Manager 3.2.0 .
+### In this Version we have some new features :)
 
-2- We add Persian and chinese and french language translation to persepolis!
-It's experimental now! Go to preferences window for changing language.
-Question: How can I translate persepolis to my language? 
-Answer: [Read this](https://github.com/persepolisdm/persepolis/wiki/translators-guide) 
-Special thanks to [translation team](https://github.com/persepolisdm/persepolis/issues/437)
+- #### Persepolis video finder is improved. You can download videos from YouTube with high quality.
 
-3- Many reported bugs are fixed!. Thanks to all bug reportes!
-4 - You can select multiple download items with highlighting them by mouse or control key and ... . No need to check any checkbox :)
+- #### You can select audio and video format or audio and video quality separately. Persepolis will download selected video and audio separately and mix it for you :). Please check out [Persepolis wiki](https://github.com/persepolisdm/persepolis/wiki/How-can-I-download-videos-from-youtube) for more information.
 
-Thanks to contributors for pull requests and bug reports!
+&lt;img src="https://persepolisdm.github.io/img/screen/youtube.gif" alt="drawing" width="800"/&gt;
 
-Reagrds
+- #### We add Arabic, Dutch (Netherlands), Hungarian, Polish (Poland), Portuguese (Brazil) and Spanish (Spain) (es_ES) language support. Special thanks to our translators :)
+
+- #### Persepolis is lighter than before and It's more friendlier with your hard disk than before.
+
+- #### You can minimize Persepolis to system tray with closing main window. [check out this issue for more information](https://github.com/persepolisdm/persepolis/issues/530). You can disable this feature from preferences window.
+
+&lt;img src="https://persepolisdm.github.io/img/screen/tray.gif" alt="drawing" width="600"/&gt;
+
+- #### Persepolis will be opened automatically when you open browser. It's help to add your download faster. You can disable this feature from preferences window.
+
+- #### New themes are added. You can select "Dark Fusion" and "Light Fusion". [check out Persepolis wiki for more information.](https://github.com/persepolisdm/persepolis/wiki/How-to-change-Persepolis-theme)
+
+&lt;img  src="https://persepolisdm.github.io/img/screen/windows.png" alt="drawing" width="600"/&gt;
+
+- #### Your downloaded file will shown highlighted in your file manager. This feature works in MS Windows and Mac and Some modern look DE(KDE Plasma, Gnome, ...) in Linux and BSD.
+
+- #### You can transfer downloaded files after downloading to another destination folder. Just select your download items and right click on them and select "Move selected download file to another folder" from menu. [check out this issue for more information.](https://github.com/persepolisdm/persepolis/issues/597)
+
+&lt;img src="https://persepolisdm.github.io/img/screen/move_to_another_folder.jpg" alt="drawing" width="600"/&gt;
+
+- #### We fix some of reported bugs. [check out reported bugs](https://github.com/persepolisdm/persepolis/issues?q=is%3Aissue+label%3Afixed+is%3Aclosed).
+
+- #### Make sure that you installed [Persepolis web extension](https://github.com/persepolisdm/persepolis/wiki/Home-en#extensions) on your browser. It's updated and many nice features are added to it by [Jafar AkhondAli](https://github.com/JafarAkhondali). With the new version of Persepolis web-extension, it is now possible to filter links based on name, and file extension. For example you can download a series based on their video quality and file extension with couple of clicks and ignoring irrelevant urls.
+
+- #### Mac users can install Persepolis from brew.[check out Persepolis wiki for more information](https://github.com/persepolisdm/persepolis/wiki/MacOS-Installer). Special thanks to [Ehsan Titish](https://github.com/Maders).
+
+Special thanks to contributors for pull requests and bug reports!
+
+Windows and Mac and Debian packages will be uploaded soon and repositories will be updated soon. 
+
+### ffmpeg is added to the dependencies for Linux and BSD. 
+
+## Known bugs:
+- Firefox in MS Windows can't open Persepolis. Persepolis must be executed manually by user.
+- Refreshing GUI in mac has some problems.
+
+Regards
 AliReza AmirSamimi
- </releaseNotes>
+</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
