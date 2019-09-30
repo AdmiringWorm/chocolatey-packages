@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/AdmiringWorm/chocolatey-packages#readme",
   "dependencies": {
-    "@commitlint/config-angular": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "commitizen": "^4.0.3",
-    "commitlint": "^8.1.0",
+    "commitlint": "^8.2.0",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.4",
+    "husky": "^3.0.7",
     "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^9.4.0",
     "prettier": "^1.18.2"
   },
   "resolutions": {
