@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>claws-mail</id>
-    <version>3.17.3</version>
+    <version>3.17.4</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/claws-mail</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Claws Mail</title>
