@@ -18,7 +18,9 @@ function global:au_SearchReplace {
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
       "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
-
+    ".\tools\chocolateyBeforeModify.ps1" = @{
+      "(?i)(Get-AppInstallLocation\s*)'.*'" = "`${1}'$softwareName'"
+    }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(`"`[$]toolsDir\\).*`""        = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"

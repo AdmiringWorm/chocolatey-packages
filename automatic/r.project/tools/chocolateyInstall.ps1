@@ -23,3 +23,14 @@ if ($pp.UseInf) {
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+
+if ($pp.AddToPath) {
+  # Get the location of R.Project install directory
+  $installDir = Get-AppInstallLocation $packageArgs["softwareName"]
+  if ($installDir -and (Test-Path "$installDir\bin")) {
+    Install-ChocolateyPath "$installDir\bin"
+  } else {
+    Write-Warning "Unable to detect installation directory, or directory do not have a bin directory."
+    Write-Warning "Skipping adding bin directory to PATH..."
+  }
+}

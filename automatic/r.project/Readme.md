@@ -30,7 +30,8 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 
 ## Package Parameters
 
-- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing.
+- `/AddToPath` - Add the R.Project bin directory to the `PATH` environment variable.
 
 **EXAMPLE**
 `choco install r.project --params "'/UseInf:C:\r.project.inf'"`

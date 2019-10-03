@@ -58,9 +58,13 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 [Software Changelog](https://cloud.r-project.org/doc/manuals/r-release/NEWS.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/r.project/Changelog.md)
     </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="..\cmder\tools\Uninstall-ChocolateyPath.psm1" target="tools\Uninstall-ChocolateyPath.psm1" />
   </files>
 </package>
