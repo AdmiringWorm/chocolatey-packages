@@ -8,9 +8,9 @@ Import-Certificate -FilePath "$toolsPath\nordvpn.cer" -CertStoreLocation "Cert:\
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/6.23.11/NordVPNSetup.exe'
+  url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/6.24.14/NordVPNSetup.exe'
   softwareName   = 'NordVPN*'
-  checksum       = '8678CE3CAF0373C51A738A625C2A572CFB2152A7CE946EFD2E85151510200D7B536C3FBDC38A7BFC376B81A3EF894A3DA863C9BF1C923D062DEB893AD7F61531'
+  checksum       = '27523390DE1A35D79E3F60777E10EFB0E7A9FFA2DD8AB0BDF443A62D1980131FD0BCA4A8396F005913F72527B8337EF462403A810CAC0B7AC864C5E41C706909'
   checksumType   = 'sha512'
   silentArgs     = '/exebasicui /exenoupdates /qb /norestart'
   validExitCodes = @(0)
