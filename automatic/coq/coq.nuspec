@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>8.9.1</version>
+    <version>8.10.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
     <authors>INRIA</authors>
     <projectUrl>https://coq.inria.fr/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e831af6c23d805293f967b7e6640657d3628054e/icons/coq.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2e9dbcb40526f1fc91054d4e1883a59ae07375f9/automatic/coq/icons/coq.png</iconUrl>
     <copyright>Copyright 1999-2016 The Coq development team, INRIA, CNRS, UniversityParis Sud, University Paris 7, Ecole Polytechnique</copyright>
     <licenseUrl>https://github.com/coq/coq/blob/trunk/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -38,11 +38,20 @@ As a platform for the formalization of mathematics or the development of program
 ## [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)
 
 ## Software Release Notes
-Coq 8.9.1 contains
-- some quality-of-life bug fixes,
-- many improvements to the documentation,
-- a critical bug fix related to primitive projections and `native_compute`,
-- several additional Coq libraries shipped with the Windows installer.
+Coq 8.10.0 contains:
+
+ -  some quality-of-life bug fixes;
+ -  a critical bug fix related to template polymorphism;
+ -  native 63-bit machine integers;
+ -  a new sort of definitionally proof-irrelevant propositions: SProp;
+ -  private universes for opaque polymorphic constants;
+ -  string notations and numeral notations;
+ -  a new simplex-based proof engine for the tactics lia, nia, lra and nra;
+ -  new introduction patterns for SSReflect;
+ -  a tactic to rewrite under binders: under;
+ -  easy input of non-ASCII symbols in CoqIDE, which now uses GTK3.
+
+All details can be found in the [user manual](https://coq.github.io/doc/V8.10.0/refman/changes.html#version-8-10).
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

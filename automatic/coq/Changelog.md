@@ -1,5 +1,9 @@
 # ![The Coq proof assistant Changelog](https://img.shields.io/badge/The%20Coq%20proof%20assistant-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 8.10.0 (2019-10-08)
+
+- Move all icons to their respective package directory [#47](https://github.com/AdmiringWorm/chocolatey-packages/issues/47)
+
 ## Version: 8.9.1 (2019-05-20)
 
 - **BUG:** Added ability to wait for uninstaller to finish
