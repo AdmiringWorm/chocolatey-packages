@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>InnoSetup</id>
     <title>Inno Setup</title>
-    <version>6.0.2</version>
+    <version>6.0.3</version>
     <authors>jrsoftware</authors>
     <owners>AdmiringWorm,vicneanschi</owners>
     <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>
@@ -51,7 +51,7 @@ However if you wish to show your appreciation and support its development you ca
     <copyright>1997-2012 Jordan Russell</copyright>
     <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4dd8ea6c20bb4c744dff620f0a379fe76a9a1931/icons/innosetup.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@7768f5c45680a37546fd9996a26ecced383ecfd7/automatic/innosetup/icons/128x128.png</iconUrl>
     <releaseNotes>
 [Software Changelog](http://www.jrsoftware.org/files/is6-whatsnew.htm)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/innosetup/Changelog.md)
