@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5c013c93becbef392df9d15ee70a75c33ca402ed/icons/golly.png" height="48" width="48" /> ![Golly Game of Life](https://img.shields.io/chocolatey/v/golly.svg?label=Golly%20Game%20of%20Life&style=for-the-badge)](https://chocolatey.org/packages/golly)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1fdb1423291e924b4984bfa69080abbf133487a8/automatic/golly/icons/golly.png" height="48" width="48" /> ![Golly Game of Life](https://img.shields.io/chocolatey/v/golly.svg?label=Golly%20Game%20of%20Life&style=for-the-badge)](https://chocolatey.org/packages/golly)
 
 Golly is an open source, cross-platform application for exploring Conway's Game of Life and many other types of cellular automata. The primary authors are Andrew Trevorrow and Tom Rokicki, with code contributions by Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo, Brenton Bostick and Chris Rowett.
 

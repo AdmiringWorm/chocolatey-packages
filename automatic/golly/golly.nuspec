@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>golly</id>
-    <version>3.2</version>
+    <version>3.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/golly</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Golly Game of Life</title>
     <authors>The Golly Gang</authors>
     <projectUrl>http://golly.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/5c013c93becbef392df9d15ee70a75c33ca402ed/icons/golly.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1fdb1423291e924b4984bfa69080abbf133487a8/automatic/golly/icons/golly.png</iconUrl>
     <copyright>Copyright (C) 2005-2017 The Golly Gang</copyright>
     <licenseUrl>https://sourceforge.net/p/golly/code/ci/master/tree/docs/License.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,6 +22,7 @@
     <description><![CDATA[Golly is an open source, cross-platform application for exploring Conway's Game of Life and many other types of cellular automata. The primary authors are Andrew Trevorrow and Tom Rokicki, with code contributions by Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo, Brenton Bostick and Chris Rowett.
 
 ## Key Features
+
 - Supports bounded and unbounded universes, with cells of up to 256 states.
 - Supports multiple algorithms, including Bill Gosper's super fast [hashlife][] algorithm.
 - Many different types of CA are included: John von Neumann's 29-state CA, Wolfram's 1D rules, WireWorld, Generations, Paterson's Worms, Larger than Life, etc.
