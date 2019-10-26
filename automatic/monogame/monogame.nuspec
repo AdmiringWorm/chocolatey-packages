@@ -9,7 +9,7 @@
     <title>MonoGame</title>
     <authors>MonoGame Team</authors>
     <projectUrl>http://www.monogame.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2a3a568be9e9efef0b65c3fe381a0d34f04c17f7/icons/monogame.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@76039eb3ea92b61859160b0740b30c2951f655c6/automatic/monogame/icons/128x128.png</iconUrl>
     <copyright>Copyright © 2009-2017 MonoGame Team</copyright>
     <licenseUrl>https://github.com/MonoGame/MonoGame/blob/v3.7.1/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

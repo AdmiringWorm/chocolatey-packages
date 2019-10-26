@@ -9,7 +9,7 @@
     <title>Icofx</title>
     <authors>Attila Kovrig</authors>
     <projectUrl>https://www.icofx.ro/index.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1f01d57acb30bccbfd80c9a95c58c32a0e7cbe0d/icons/icofx.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@10ccf58059196f26c0ec3e578d439850a2e9273d/automatic/icofx/icons/128x128.png</iconUrl>
     <copyright>Copyright © 2005-2018 IcoFX Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.icofx.ro/help3/index.html</docsUrl>

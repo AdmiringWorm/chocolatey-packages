@@ -9,7 +9,7 @@
     <title>Folder Size</title>
     <authors>https://www.mindgems.com</authors>
     <projectUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@bd9c0c9b85841cf5e41af8232b8d98e73e40301f/icons/folder_size.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@326c35b16940e459917efa504bf3a48ed6fc3d8d/automatic/folder_size/icons/folder_size.png</iconUrl>
     <copyright>Copyright © 2001-2019 MindGems Inc. All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.mindgems.com/products/Folder-Size/Folder-Size-Tutorials.htm</docsUrl>

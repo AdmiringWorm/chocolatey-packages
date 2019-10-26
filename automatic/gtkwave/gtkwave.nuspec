@@ -9,7 +9,7 @@
     <title>GTKWave</title>
     <authors>Tony Bybell</authors>
     <projectUrl>http://gtkwave.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a69b83191347d61ddfc3aa9ed2320dd98df76932/icons/gtkwave.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4d22f1be3796bb3e2e0441d0f03b6d1780356b3d/automatic/gtkwave/icons/gtkwave.png</iconUrl>
     <licenseUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/gtkwave3/LICENSE.TXT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/gtkwave/code/HEAD/tree/</projectSourceUrl>

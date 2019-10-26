@@ -9,7 +9,7 @@
     <title>Friture</title>
     <authors>tlecomte</authors>
     <projectUrl>http://friture.org</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@3c4dce7efc41c98a4144917c01ef770014c8a4a2/friture/icons/128x128.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@3c4dce7efc41c98a4144917c01ef770014c8a4a2/automatic/friture/icons/128x128.png</iconUrl>
     <copyright><![CDATA[Copyright (C) 2009 Timothée Lecomte]]></copyright>
     <licenseUrl>https://github.com/tlecomte/friture/blob/master/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

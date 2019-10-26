@@ -9,7 +9,7 @@
     <title>Qilin Editor</title>
     <authors>Bartozzz</authors>
     <projectUrl>https://github.com/qilin-editor/qilin-app</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@b10e4bb14293ac0dfdfc236386d4ed61b81d0886/icons/qilin-editor.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@d78af6e0af855928306a58af1c1fbeb8fc8c6a17/automatic/qilin-editor/icons/128x128.png</iconUrl>
     <copyright>Copyright (c) 2018 Qilin</copyright>
     <licenseUrl>https://github.com/qilin-editor/qilin-app/blob/development/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

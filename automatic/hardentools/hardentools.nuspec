@@ -9,7 +9,7 @@
     <title>Hardentools</title>
     <authors>Claudio Guarnieri, Mariano Graziano, Florian Probst</authors>
     <projectUrl>https://github.com/securitywithoutborders/hardentools</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@136801eea7ea398d0599d3e5f50f67a0058b8845/hardentools/icons/128x128.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@136801eea7ea398d0599d3e5f50f67a0058b8845/automatic/hardentools/icons/128x128.png</iconUrl>
     <licenseUrl>https://github.com/securitywithoutborders/hardentools/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/securitywithoutborders/hardentools</projectSourceUrl>
