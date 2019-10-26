@@ -9,7 +9,7 @@
     <title>Dilay</title>
     <authors>abau</authors>
     <projectUrl>http://abau.org/dilay/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/f6bb7eed02ef65a6b2e5dabc2eea1745c927d183/icons/dilay.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0a149d943d89003ea133cf7546fa99e816ec19c1/automatic/dilay/icons/dilay.png</iconUrl>
     <copyright>2016 dilay abau</copyright>
     <licenseUrl>https://github.com/abau/dilay/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

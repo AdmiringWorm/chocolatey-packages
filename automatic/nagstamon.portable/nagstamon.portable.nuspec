@@ -9,7 +9,7 @@
     <title>Nagstamon (Portable)</title>
     <authors>Henri Wahl</authors>
     <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@5470b935d572ee4593af7ece11494ecff9806d16/icons/nagstamon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@612b4f83873a31681e7fd54bd99b0737dc906d52/automatic/nagstamon/icons/256x256.png</iconUrl>
     <copyright>© 2008-2014 Henri Wahl et al.</copyright>
     <licenseUrl>https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

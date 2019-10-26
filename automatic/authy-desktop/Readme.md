@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/861d6ec172140f6ff2b30f0c69db42a6a0bc0a43/icons/authy-desktop.png" height="48" width="48" /> ![Authy Desktop (Install)](https://img.shields.io/chocolatey/v/authy-desktop.svg?label=Authy%20Desktop%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/authy-desktop)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@33b1fe9fae09a9f801ff3c6c7431ace2233c8139/automatic/authy-desktop/icons/48x48.png" height="48" width="48" /> ![Authy Desktop (Install)](<https://img.shields.io/chocolatey/v/authy-desktop.svg?label=Authy%20Desktop%20(Install)&style=for-the-badge>)](https://chocolatey.org/packages/authy-desktop)
 
 Authy brings the future of strong authentication to the convenience of your Desktop.
 
@@ -26,5 +26,6 @@ Authy is the preferred two factor authentication solution to protect your bitcoi
 https://www.authy.com/learn-more
 
 ## NOTES
+
 - As of version 1.6.0, the 32bit architecture have been dropped as conversion with the authy support team have said it won't be updated in the future.
   If you still need to install the 32bit architecture, please install version 1.5.0 and pin the package.

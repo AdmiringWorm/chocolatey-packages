@@ -9,7 +9,7 @@
     <title>F* language</title>
     <authors>FStarLang</authors>
     <projectUrl>https://www.fstar-lang.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0557123379b71b0c289d0ca43351bc9f743141e4/icons/fstar.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f60250eb91925e4aafa8cd69d4af9d50a067d5ca/automatic/fstar/icons/fstar.png</iconUrl>
     <licenseUrl>https://github.com/FStarLang/FStar/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/FStarLang/FStar</projectSourceUrl>

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a156fe3617f1408e990cb031faf57c5822e612e9/icons/enki.png" height="48" width="48" /> ![Enki](https://img.shields.io/chocolatey/v/enki.svg?label=Enki&style=for-the-badge)](https://chocolatey.org/packages/enki)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6264cf879dd13bf30a1bc559a5d42b0ddbe4ed28/automatic/enki/icons/enki.png" height="48" width="48" /> ![Enki](https://img.shields.io/chocolatey/v/enki.svg?label=Enki&style=for-the-badge)](https://chocolatey.org/packages/enki)
 
 Enki is a text editor for programmers. It is:
 

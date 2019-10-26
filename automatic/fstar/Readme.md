@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0557123379b71b0c289d0ca43351bc9f743141e4/icons/fstar.png" height="48" width="48" /> ![F* language](https://img.shields.io/chocolatey/v/fstar.svg?label=F*%20language&style=for-the-badge)](https://chocolatey.org/packages/fstar)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f60250eb91925e4aafa8cd69d4af9d50a067d5ca/automatic/fstar/icons/fstar.png" height="48" width="48" /> ![F* language](https://img.shields.io/chocolatey/v/fstar.svg?label=F*%20language&style=for-the-badge)](https://chocolatey.org/packages/fstar)
 
 F* (pronounced F star) is a general-purpose functional programming language with effects aimed at program verification. It puts together the automation of an SMT-backed deductive verification tool with the expressive power of a proof assistant based on dependent types. After verification, F* programs can be extracted to efficient OCaml, F#, or C code. This enables verifying the functional correctness and security of realistic applications, such as a verified HTTPS stack.
 

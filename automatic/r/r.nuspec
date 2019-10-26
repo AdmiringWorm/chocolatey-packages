@@ -3,7 +3,7 @@
   <metadata>
     <id>r</id>
     <version>3.6.1</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The R Project for Statistical Computing</title>
     <authors>R Core Team</authors>

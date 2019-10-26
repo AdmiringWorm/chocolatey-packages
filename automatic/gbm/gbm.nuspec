@@ -4,12 +4,12 @@
   <metadata>
     <id>gbm</id>
     <version>1.1.9</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/game-backup-monitor</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
     <authors>Michael J. Seiferling</authors>
     <projectUrl>https://mikemaximus.github.io/gbm-web/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@39ee4d7cbeacfa14a8094db0e524a3557c9b9774/icons/game-backup-monitor.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a22c15bb78813121e46588781213a42634288d4c/automatic/gbm/icons/gbm.png</iconUrl>
     <copyright>GBM - Game Backup Monitor © 2018 Michael J. Seiferling</copyright>
     <licenseUrl>https://github.com/MikeMaximus/gbm/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -10,7 +10,7 @@
     <!-- Link used as there doesn't seem to be 1 or 2 main authors, but rather the whole community -->
     <authors>https://github.com/ThePowderToy/The-Powder-Toy/graphs/contributors</authors>
     <projectUrl>https://powdertoy.co.uk/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0ec433f8c29b638f4ca360952b360c887af8a170/icons/powder-toy.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@54dfc64815f03b2a064f1f420c5715e59c5bd725/automatic/powder-toy/icons/128x105.png</iconUrl>
     <licenseUrl>https://github.com/ThePowderToy/The-Powder-Toy/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ThePowderToy/The-Powder-Toy</projectSourceUrl>

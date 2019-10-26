@@ -3,19 +3,53 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>superposition-benchmark</id>
-    <version>0.0</version>
+    <version>1.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/superposition-benchmark</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>UNIGINE SUPERPOSITION Benchmark</title>
     <authors>UNIGINE</authors>
     <projectUrl>https://benchmark.unigine.com/superposition</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e37ae69753b7e0297c72133e4a081227d390795d/automatic/superposition-benchmark/icons/64x64.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@abf46f64d842811d7ab0977b820a23d8c979444b/automatic/superposition-benchmark/icons/128x128.png</iconUrl>
     <copyright>UNIGINE © 2005-2019. All rights reserved. Legal Notice: All trademarks are the properties of their respective owners</copyright>
     <licenseUrl>https://benchmark.unigine.com/policies/privacy</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>superposition cross-platform freeware benchmark unigine</tags>
     <summary>Extreme performance and stability test for PC hardware: video card, power supply, cooling system.</summary>
-    <description>Will be replaced</description>
+    <description><![CDATA[A lone professor performs dangerous experiments in an abandoned classroom, day in and day out. Obsessed with inventions and discoveries beyond the wildest dreams, he strives to prove his ideas.
+
+Once you come to this place in the early morning, you would not meet him there. The eerie thing is a loud bang from the laboratory heard a few moments ago. What was that? You have the only chance to cast some light upon this incident by going deeply into the matter of quantum theory: thorough visual inspection of professor's records and instruments will help to lift the veil on the mystery.
+
+## Key Features
+
+- Top-notch visuals powered by UNIGINE 2 Engine
+- Extreme hardware stability testing
+- GPU temperature and clock monitoring
+- Unique SSRTGI (Screen-Space Ray-Traced Global Illumination) dynamic lighting technology
+- VR experience (Oculus Rift and HTC Vive)
+- Free exploration mode with mini-games
+- Over 900 interactive objects
+- Global leaderboards integration
+
+## System Requirements
+
+- **Hardware**
+  - GPU
+    - ATI Radeon HD 7xxx and higher
+    - Intel HD 5xxx and higher
+    - NVIDIA GeForce GTX 6xx and higher
+  - Video memory: 2 GB
+  - Disk space: 5 GB
+- **VR Headset**
+- HTC Vive Pro
+- HTC Vive
+- Oculus Rift
+- SteamVR compatible HMDs
+
+## NOTES
+
+- This is the free version of the SUPERPOSITION Benchmark utility, payed edition will not be provided.
+- Uninstall is not completely silent as it asks you to remove certain files that some do not want to remove.
+]]></description>
     <dependencies>
       <dependency id="kb2533623" />
       <dependency id="vcredist2015" />

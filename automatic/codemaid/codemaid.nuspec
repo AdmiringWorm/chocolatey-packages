@@ -9,7 +9,7 @@
     <title>CodeMaid</title>
     <authors>Steve Cadwallader</authors>
     <projectUrl>http://www.codemaid.net</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@38677c493b7bae294eaa44d2e749d1e47ac0b823/icons/codemaid.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@25274468d2ef287a6069b81fd3ad403bd1e7d52b/automatic/codemaid/icons/codemaid.png</iconUrl>
     <copyright>© 2007 - 2018 CodeMaid</copyright>
     <licenseUrl>https://github.com/codecadwallader/codemaid/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

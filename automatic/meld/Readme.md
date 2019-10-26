@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0e467f051e98f601b2cb42337c8f31ecc18f924c/icons/meld.png" height="48" width="48" /> ![Meld](https://img.shields.io/chocolatey/v/meld.svg?label=Meld&style=for-the-badge)](https://chocolatey.org/packages/meld)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c388f026ccee70abd444a9e167cd741731a38d19/automatic/meld/icons/48x48.png" height="48" width="48" /> ![Meld](https://img.shields.io/chocolatey/v/meld.svg?label=Meld&style=for-the-badge)](https://chocolatey.org/packages/meld)
 
 Meld is a visual diff and merge tool targeted at developers. Meld helps you compare files, directories, and version controlled projects. It provides two- and three-way comparison of both files and directories, and has support for many popular version control systems.
 

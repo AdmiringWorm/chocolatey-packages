@@ -9,7 +9,7 @@
     <title>Meld</title>
     <authors>Kai Willadsen</authors>
     <projectUrl>https://meldmerge.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@0e467f051e98f601b2cb42337c8f31ecc18f924c/icons/meld.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c388f026ccee70abd444a9e167cd741731a38d19/automatic/meld/icons/120x120.png</iconUrl>
     <copyright>Copyright © 2011-2012 Kai Willadsen</copyright>
     <licenseUrl>https://gitlab.gnome.org/GNOME/meld/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

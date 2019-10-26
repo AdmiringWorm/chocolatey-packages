@@ -9,7 +9,7 @@
     <title>Authy Desktop (Install)</title>
     <authors>Twilio</authors>
     <projectUrl>https://authy.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/861d6ec172140f6ff2b30f0c69db42a6a0bc0a43/icons/authy-desktop.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@33b1fe9fae09a9f801ff3c6c7431ace2233c8139/automatic/authy-desktop/icons/128x128.png</iconUrl>
     <copyright>COPYRIGHT © 2017 TWILIO, INC. ALL RIGHTS RESERVED.</copyright>
     <docsUrl>https://support.authy.com/</docsUrl>
     <tags>authy authenticator</tags>

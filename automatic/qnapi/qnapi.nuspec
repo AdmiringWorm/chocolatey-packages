@@ -9,7 +9,7 @@
     <title>QNapi</title>
     <authors>Piotr Krzemiński</authors>
     <projectUrl>https://qnapi.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/90ab7556eb3b37bdd33afd55f9241708e5982093/icons/qnapi.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4b3737a1629d626cc6c256573ed26feb6054be03/automatic/qnapi/icons/128x128.png</iconUrl>
     <copyright>© QNapi 2008-2017. All rights reserved.</copyright>
     <licenseUrl>https://github.com/QNapi/qnapi/blob/master/doc/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
