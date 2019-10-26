@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>heaven</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/heaven</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>UNIGINE Heaven Benchmark</title>
+    <authors>UNIGINE</authors>
+    <projectUrl>https://benchmark.unigine.com/heaven</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/heaven.png</iconUrl>
+    <copyright>UNIGINE © 2005-2019. All rights reserved. Legal Notice: All trademarks are the properties of their respective owners</copyright>
+    <licenseUrl>https://benchmark.unigine.com/policies/privacy</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>heaven cross-platform freeware benchmark unigine</tags>
+    <summary>Extreme performance and stability test for PC hardware: video card, power supply, cooling system.</summary>
+    <description>Will be replaced</description>
+    <dependencies>
+      <dependency id="vcredist2010" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
