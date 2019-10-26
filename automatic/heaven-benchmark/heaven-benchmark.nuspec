@@ -2,20 +2,50 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>heaven</id>
-    <version>0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/heaven</packageSourceUrl>
+    <id>heaven-benchmark</id>
+    <version>4.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/heaven-benchmark</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>UNIGINE Heaven Benchmark</title>
     <authors>UNIGINE</authors>
     <projectUrl>https://benchmark.unigine.com/heaven</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/heaven.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@12f2fa1fd9b1705318dabdd379382e2af702f316/automatic/heaven-benchmark/icons/64x64.png</iconUrl>
     <copyright>UNIGINE © 2005-2019. All rights reserved. Legal Notice: All trademarks are the properties of their respective owners</copyright>
     <licenseUrl>https://benchmark.unigine.com/policies/privacy</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>heaven cross-platform freeware benchmark unigine</tags>
     <summary>Extreme performance and stability test for PC hardware: video card, power supply, cooling system.</summary>
-    <description>Will be replaced</description>
+    <description><![CDATA[Heaven Benchmark is a GPU-intensive benchmark that hammers graphics cards to the limits. This powerful tool can be effectively used to determine the stability of a GPU under extremely stressful conditions, as well as check the cooling system's potential under maximum heat output.
+
+The benchmark immerses a user into a magical steampunk world of shiny brass, wood and gears. Nested on flying islands, a tiny village with its cozy, sun-heated cobblestone streets, and a majestic dragon on the central square gives a true sense of adventure. An interactive experience with fly-by and walk-through modes allows for exploring all corners of this world powered by the cutting-edge UNIGINE Engine that leverages the most advanced capabilities of graphics APIs and turns this bench into a visual masterpiece.
+
+## Key Features
+
+- Extreme hardware stability testing
+- Accurate results due to 100% GPU-bound benchmarking
+- Support for DirectX 9, DirectX 11 and OpenGL 4.0
+- GPU temperature and clock monitoring
+- Comprehensive use of [adaptive hardware tessellation](https://www.youtube.com/watch?v=bkKtY2G3FbU)s
+- Dynamic sky with volumetric clouds and tweakable day-night cycle
+- Real-time global illumination and screen-space ambient occlusion
+- Support for stereo 3D and multi-monitor configurations
+- Cinematic and interactive fly/walk-through camera modes
+- Powered by UNIGINE 1 Engine
+
+## System Requirements
+
+- **Hardware**
+  - GPU
+    - ATI Radeon HD 4xxx and higher
+    - Intel HD 3000 and higher
+    - NVIDIA GeForce 8xxx and higher
+  - Video memory: 512 MB
+  - Disk space: 1 GB
+
+## NOTES
+
+- This is the free version of the Heaven Benchmark utility, payed edition will not be provided.
+]]></description>
     <dependencies>
       <dependency id="vcredist2010" />
     </dependencies>
