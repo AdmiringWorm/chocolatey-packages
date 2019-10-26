@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e37ae69753b7e0297c72133e4a081227d390795d/automatic/superposition-benchmark/icons/64x64.png" height="48" width="48" /> ![UNIGINE Superposition Benchmark](https://img.shields.io/chocolatey/v/superposition-benchmark.svg?label=UNIGINE%20Superposition%20Benchmarks&style=for-the-badge)](https://chocolatey.org/packages/superposition-benchmark)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@abf46f64d842811d7ab0977b820a23d8c979444b/automatic/superposition-benchmark/icons/48x48.png" height="48" width="48" /> ![UNIGINE Superposition Benchmark](https://img.shields.io/chocolatey/v/superposition-benchmark.svg?label=UNIGINE%20Superposition%20Benchmarks&style=for-the-badge)](https://chocolatey.org/packages/superposition-benchmark)
 
 A lone professor performs dangerous experiments in an abandoned classroom, day in and day out. Obsessed with inventions and discoveries beyond the wildest dreams, he strives to prove his ideas.
 
