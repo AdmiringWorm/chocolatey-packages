@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ca920d29684953eee0d28ddf776fe60a1c10a848/icons/claws-mail.png" height="48" width="48" /> ![Claws Mail](https://img.shields.io/chocolatey/v/claws-mail.svg?label=Claws%20Mail&style=for-the-badge)](https://chocolatey.org/packages/claws-mail)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ebcb3edcbed575bde91ccc2bd696138f2e2b571f/automatic/claws-mail/icons/48x48.png" height="48" width="48" /> ![Claws Mail](https://img.shields.io/chocolatey/v/claws-mail.svg?label=Claws%20Mail&style=for-the-badge)](https://chocolatey.org/packages/claws-mail)
 
 Claws Mail is a GTK+ based, lightweight, and fast e-mail client and newsreader. Supports POP3, APOP, IMAP, SMTP, SMTP AUTH, NNTP, LDAP, multiple accounts, spell-checking, addressbook, SSL, GPG, filtering, i18n, & more. It is further extended by plugins.
 

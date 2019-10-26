@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>claws-mail</id>
-    <version>3.17.4</version>
+    <version>3.17.4.20191026</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/claws-mail</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Claws Mail</title>
     <authors>Claws Mail Team</authors>
     <projectUrl>http://www.claws-mail.org/win32/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ca920d29684953eee0d28ddf776fe60a1c10a848/icons/claws-mail.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ebcb3edcbed575bde91ccc2bd696138f2e2b571f/automatic/claws-mail/icons/48x48.png</iconUrl>
     <copyright>© 2001,2005 Claws Mail Team</copyright>
     <licenseUrl>http://www.claws-mail.org/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
