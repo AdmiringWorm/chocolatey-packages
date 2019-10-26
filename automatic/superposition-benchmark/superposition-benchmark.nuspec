@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>superposition-benchmark</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/superposition-benchmark</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>UNIGINE SUPERPOSITION Benchmark</title>
+    <authors>UNIGINE</authors>
+    <projectUrl>https://benchmark.unigine.com/superposition</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e37ae69753b7e0297c72133e4a081227d390795d/automatic/superposition-benchmark/icons/64x64.png</iconUrl>
+    <copyright>UNIGINE © 2005-2019. All rights reserved. Legal Notice: All trademarks are the properties of their respective owners</copyright>
+    <licenseUrl>https://benchmark.unigine.com/policies/privacy</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>superposition cross-platform freeware benchmark unigine</tags>
+    <summary>Extreme performance and stability test for PC hardware: video card, power supply, cooling system.</summary>
+    <description>Will be replaced</description>
+    <dependencies>
+      <dependency id="kb2533623" />
+      <dependency id="vcredist2015" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
