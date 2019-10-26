@@ -20,11 +20,12 @@ if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
 }
 
 $options = [ordered]@{
-  Force       = $true
-  Push        = $false
-  PluginPath  = 'scripts\au_plugins'                    #Path to user plugins
+  Force         = $true
+  Push          = $false
+  PluginPath    = 'scripts\au_plugins'                    #Path to user plugins
+  UpdateTimeout = 1800                                    #Update timeout in seconds
 
-  Report      = @{
+  Report        = @{
     Type   = 'markdown'                                   #Report type: markdown or text
     Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"      #Path where to save the report
     Params = @{                                          #Report parameters:
@@ -35,25 +36,25 @@ $options = [ordered]@{
     }
   }
 
-  Gist        = @{
+  Gist          = @{
     Id          = $Env:gist_id_test                          #Your gist id; leave empty for new private or anonymous gist
     ApiKey      = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
     Path        = "$PSScriptRoot\Update-Force-Test-${n}.md"       #List of files to add to the gist
     Description = "Update Force Test Report #powershell #chocolatey"
   }
 
-  ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
+  ModulePaths   = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
 
-  BeforeEach  = {
+  BeforeEach    = {
     param($PackageName, $Options )
     $Options.ModulePaths | % { Import-Module $_ }
   }
 }
 
 [System.Net.ServicePointManager]::SecurityProtocol = 3072 -bor
-  768 -bor
-  [System.Net.SecurityProtocolType]::Tls -bor
-  [System.Net.SecurityProtocolType]::Ssl3
+768 -bor
+[System.Net.SecurityProtocolType]::Tls -bor
+[System.Net.SecurityProtocolType]::Ssl3
 
 $global:info = updateall -Name $Name -Options $Options
 

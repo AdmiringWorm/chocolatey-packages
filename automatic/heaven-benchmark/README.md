@@ -1,4 +1,4 @@
-# [<img src="/icons/48x48.png" height="48" width="48" /> ![UNIGINE Heaven Benchmark](https://img.shields.io/chocolatey/v/heaven.svg?label=UNIGINE%20Heaven%20Benchmarks&style=for-the-badge)](https://chocolatey.org/packages/heaven-benchmark)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@12f2fa1fd9b1705318dabdd379382e2af702f316/automatic/heaven-benchmark/icons/64x64.png" height="48" width="48" /> ![UNIGINE Heaven Benchmark](https://img.shields.io/chocolatey/v/heaven.svg?label=UNIGINE%20Heaven%20Benchmarks&style=for-the-badge)](https://chocolatey.org/packages/heaven-benchmark)
 
 Heaven Benchmark is a GPU-intensive benchmark that hammers graphics cards to the limits. This powerful tool can be effectively used to determine the stability of a GPU under extremely stressful conditions, as well as check the cooling system's potential under maximum heat output.
 
