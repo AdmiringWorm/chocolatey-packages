@@ -1,12 +1,13 @@
 name: ScriptAnalyzer
-on: [push, pull_request]
-
+on: [push]
 jobs:
-  analyze:
+  lint:
+    name: Run PSSA
     runs-on: ubuntu-latest
     steps:
-      - uses: devblackops/github-action-psscriptanalyzer@v1.2.1
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        env:
-          PSSCRIPTANALYZER_SETTINGS_PATH: "PSScriptAnalyzerSettings.psd1"
+    - uses: actions/checkout@v1
+    - name: lint
+      uses: docker://devblackops/github-action-psscriptanalyzer:2.0.0
+      with:
+        repoToken: ${{ secrets.GITHUB_TOKEN }}
+        settingsPath: PSScriptAnalyzerSettings.psd1
