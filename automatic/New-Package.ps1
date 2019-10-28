@@ -33,7 +33,7 @@ function New-Package{
         [string]$id
     )
 
-    if ($Name -eq $null) { throw "Name can't be empty" }
+    if ($null -eq $Name) { throw "Name can't be empty" }
     if (Test-Path $Name) { throw "Package with that name already exists" }
     if (!(Test-Path _template)) { throw "Template for the packages not found" }
     if (!$id) {

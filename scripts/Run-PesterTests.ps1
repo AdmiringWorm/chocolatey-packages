@@ -130,7 +130,9 @@ function Run-PesterTests() {
     [switch]$skipChecksumCheck
   )
 
-  function installPackage([string[]]$additionalArguments) {
+  function installPackage {
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification="Usage is correct")]
+    param([string[]]$additionalArguments)
     return Install-Package `
       -packageName $packageName `
       -packagePath $packagePath `
@@ -139,7 +141,9 @@ function Run-PesterTests() {
       -installSleep $installUninstallSleep
   }
 
-  function uninstallPackage([string[]]$additionalArguments) {
+  function uninstallPackage {
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification="Usage is correct")]
+    param([string[]]$additionalArguments)
     if ($customUninstallArgs) { $additionalArguments += $customUninstallArgs }
     return Uninstall-Package `
       -packageName $packageName `

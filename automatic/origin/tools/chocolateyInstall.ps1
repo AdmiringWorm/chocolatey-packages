@@ -23,6 +23,7 @@ if ($env:ChocolateyForce -ne $true) {
     }
   } catch {
     # Installed version couldn't be checked, attempt installation
+    Write-Warning "Unable to check for existing origin version, assuming it do not exist..."
   }
 }
 

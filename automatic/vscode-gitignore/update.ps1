@@ -26,7 +26,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing $releases
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   if ($download_page.Content -match 'assetUri":"([^"]+)') {
     $assetUri = $Matches[1]
@@ -35,7 +35,7 @@ function global:au_GetLatest {
     throw "Unable to grab asset uri file"
   }
 
-  $json = Invoke-RestMethod -UseBasicParsing "$assetUri/Microsoft.VisualStudio.Code.Manifest"
+  $json = Invoke-RestMethod -UseBasicParsing -Uri "$assetUri/Microsoft.VisualStudio.Code.Manifest"
 
   $vsCodeVersion = $json.engines.vscode.TrimStart('^')
   if ($vsCodeVersion -eq '1.5.0') { $vsCodeVersion = '1.5' }

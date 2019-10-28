@@ -23,5 +23,5 @@ function Take-Screenshot {
   $screen = [System.Windows.Forms.Screen]::PrimaryScreen
   $bounds = $screen.Bounds
 
-  screenshot $bounds $file $imagetype
+  screenshot -bounds $bounds -path $file -imageFormat $imagetype
 }

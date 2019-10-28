@@ -14,7 +14,7 @@ function Get-IssueDetails() {
 
   $repoUrl = $repoUrl -replace "^.*github\.com\/(.*)$", '$1'
 
-  $response = Invoke-RestMethod -UseBasicParsing "https://api.github.com/repos/$repoUrl/issues/$issueId" -Headers $headers
+  $response = Invoke-RestMethod -UseBasicParsing -Uri "https://api.github.com/repos/$repoUrl/issues/$issueId" -Headers $headers
 
 
   $result = @{
