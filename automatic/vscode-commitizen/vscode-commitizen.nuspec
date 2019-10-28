@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if â€œÎ©â€ doesnâ€™t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <!-- Icon Skip check -->
+  <metadata>
+    <id>vscode-appveyor</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-commitizen</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Visual Studio Code Commitizen Support</title>
+    <authors>Markus Wolf</authors>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen</projectUrl>
+    <copyright>Copyright (c) 2016 Markus Wolf</copyright>
+    <licenseUrl>https://marketplace.visualstudio.com/items/KnisterPeter.vscode-commitizen/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/KnisterPeter/vscode-commitizen</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/KnisterPeter/vscode-commitizen/issues</bugTrackerUrl>
+    <tags>vscode-commitizen extension vscode git commit commitizen</tags>
+    <summary>Adds support for commitizen to vscode</summary>
+    <description><![CDATA[Check your project's AppVeyor status.
+
+## Requirements
+
+- You need to have an `appveyor.yml` file present at the root of your current workspace.
+- Your project's AppVeyor status needs to be public.
+]]></description>
+    <releaseNotes>
+[Software Changelog](https://marketplace.visualstudio.com/items/KnisterPeter.vscode-commitizen/changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/vscode-commitizen/Changelog.md)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
+      <dependency id="vscode" version="1.15.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
