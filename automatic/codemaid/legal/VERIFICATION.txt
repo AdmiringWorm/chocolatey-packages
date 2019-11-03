@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/codecadwallader/codemaid/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/codecadwallader/codemaid/releases/download/v11.0/CodeMaid.v11.0.183.vsix>
+1. Download the following <https://github.com/codecadwallader/codemaid/releases/download/v11.1/CodeMaid.v11.1.204.vsix>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 910865A73496DBAC5313E77FDDEE72C41C64D2DE9A200F9C6A6011BC3C3D3BC5
+  checksum: 816B60E877063BD5B14D8082EF82A31F7682A4404B1CFB0F36CFDEBF2F70ECDD
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/codecadwallader/codemaid/blob/master/LICENSE.txt>
