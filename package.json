@@ -27,7 +27,7 @@
     "husky": "^3.0.9",
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "resolutions": {
     "lodash": "^4.7.14"
