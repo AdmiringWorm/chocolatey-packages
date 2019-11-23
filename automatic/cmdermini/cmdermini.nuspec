@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmdermini</id>
-    <version>1.3.12</version>
+    <version>1.3.13</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cmdermini</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder Mini</title>
@@ -37,7 +37,37 @@ See [cmder](https://chocolatey.org/packages/cmder) (250 MB) for enhanced console
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmdermini/Changelog.md)
 
 ### Software changelog
+## 1.3.13 (2019-11-23)
 
+### Changes
+
+* Update to Conemu 19.10.12
+
+### Adds
+
+* #2197, #1364, #447 Add ability to disable git status either globally or for individual repos.
+  * To disable git status globally add the following to `~/.gitconfig` or locally for a single repo `[repo]/.git/config`:
+
+    ```
+    [cmder]
+      status = false      # Opt out of Git status for 'ALL' Cmder supported shells.
+      cmdstatus = false   # Opt out of Git status for 'Cmd.exe' shells.
+      psstatus = false    # Opt out of Git status for 'Powershell.exe and 'Pwsh.exe' shells.
+      shstatus = false    # Opt out of Git status for 'bash.exe' shells.
+    ```
+
+* #2174 `--` Syntax to pass command line options to Conemu.
+* Disable Clink Logging
+* Add `~` tab completion.
+
+
+### Fixes
+
+* Fix #2191: profile.ps1: CheckGit does not export $gitLoaded
+* Fix #2192: Set default prompt hooks before loading user profile
+* Fix #2097, #1899: powershell foreground color changing to green
+* Fix #1979: Update Clink Completions to 0.3.4
+* Fix #1678: Cmder corrupting path with `!` in Cmder folder path.
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
