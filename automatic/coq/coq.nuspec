@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>8.10.1</version>
+    <version>8.10.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
@@ -38,13 +38,15 @@ As a platform for the formalization of mathematics or the development of program
 ## [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)
 
 ## Software Release Notes
-Coq 8.10.1 brings a few bug fixes and documentation improvements, in particular:
+Coq 8.10.2 brings a few bug fixes and documentation improvements, in particular:
 
- -  Fix proof of False when using SProp
- -  Fix an anomaly when unsolved evar in Add Ring
- -  Fix Ltac regression in binding free names in uconstr
- -  Fix handling of unicode input before space
- -  Fix custom extraction of inductives to JSON
+ -  Fixed a critical bug of template polymorphism and nonlinear universes
+ -  Fixed a few anomalies
+ -  Fixed an 8.10 regression related to the printing of coercions associated to notations
+ -  Fixed uneven dimensions of CoqIDE panels when window has been resized
+ -  Fixed queries in CoqIDE
+
+More details can be found in the [reference manual](https://coq.github.io/doc/V8.10.2/refman/changes.html#changes-in-8-10-2).
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
