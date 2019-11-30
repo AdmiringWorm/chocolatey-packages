@@ -1,30 +1,34 @@
 {
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
-  "cSpell.enabledLanguageIds": [
-    "markdown",
-    "powershell",
-    "text",
-    "yml"
-  ],
-  "cSpell.words": [
-    "Qilin",
-    "laniewski",
-    "nupkg",
-    "choco",
-    "sheepit"
-  ],
+  "cSpell.enabledLanguageIds": ["markdown", "powershell", "text", "yml"],
+  "cSpell.words": ["Qilin", "laniewski", "nupkg", "choco", "sheepit"],
   "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
   "chocolatey.commands": {
     "new": {
       "properties": {
         "maintainerName": "AdmiringWorm",
-        "maintainerRepo": "AdmiringWorm/chocolatey-packages/tree/master/automatic",
+        "maintainerRepo": "AdmiringWorm/chocolatey-packages/tree/master/automatic"
         //"extensionId": "ivangabriele.vscode-appveyor"
       }
     }
   },
   "[powershell]": {
     "files.encoding": "utf8bom"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#aacdec",
+    "activityBar.activeBorder": "#6F3215",
+    "activityBar.foreground": "#242c5c",
+    "activityBar.inactiveForeground": "#242c5c99",
+    "activityBarBadge.background": "#6F3215",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#80b5e3",
+    "titleBar.inactiveBackground": "#80b5e399",
+    "titleBar.activeForeground": "#242c5c",
+    "titleBar.inactiveForeground": "#242c5c99",
+    "statusBar.background": "#884B2E",
+    "statusBarItem.hoverBackground": "#6F3215",
+    "statusBar.foreground": "#FDCEA5"
   }
 }
