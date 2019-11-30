@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: BA56CE413AC90A62CFDF2C2968AE53CF2D4BD82E1BFF869969F023C46DAD9DB0
+  checksum: 9D1A2D50AF8C335E29F7A2BA4536D3AC1CE2423C030486AF184D91A5BA77A021
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/cmderdev/cmder/blob/master/LICENSE>
