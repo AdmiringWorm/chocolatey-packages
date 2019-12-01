@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gbm</id>
-    <version>1.1.9</version>
+    <version>1.2.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
@@ -45,29 +45,46 @@ Game Backup Monitor is completely free and open source software.
 
 ### Software Release notes
 
-Visit http://mikemaximus.github.io/gbm-web/index.html for news and updates regarding new releases.
+This is the final release of v1.2.0.  There were no new bug reports for the pre-release over 3 weeks and my own testing didn't turn up anything new.
 
-***New in 1.1.9***
+Happy Holidays!
+
+***New in 1.2.0***
 
 All Platforms:
 
-- Fixed a bug on the Game Manager that caused the "Save Entire Folder" checkbox to be unchecked anytime the "Save Path" field was changed.
-- The "Add Game Wizard" now allows you to set an unlimited number of backups.
-- The "Backup Limit" label has been updated to indicate that 0 means unlimited.
-- The "Open Backup File" button on the Game Manager is now called "Open Backup".  It now gives a choice between opening the backup file or the folder containing the file.
-- Set rules are now used for backup folder and file names, regardless of the operating system GBM is running on.
-	- GBM now always filters out NTFS reserved characters and allows a maximum file name length of 255.
-	- This will prevent various problems when using a backup drive with a non-standard file system in Linux or Windows.
-	- These rules will be applied to new backup files or folders, existing backups not be modified.
-- Made improvements to the Start-Up Wizard.
-	- The default backup location now includes a "Game Backup Monitor" sub-folder.
-	- The wizard will now automatically create the backup location if it doesn't exist.
-	- You can no longer attempt to Import Backup Files during the Start-Up Wizard.
+- Added the ability to easily backup or restore the entire game list.
+	- Use the "Run Full Backup" or "Run Full Restore" options in the File menu or Tray menu to easily backup or restore your entire game list.
+	- Any confirmations or checks requiring user input are automatically handled when using these tools.  See the "Full Backup and Restore" section of the manual for details.
+- Added the ability to "link" game configurations.
+	- This allows any linked configuration(s) to automatically run a backup or restore each time their parent is triggered.  This can continue in a chain.
+	- This feature allows for the proper configuration of rare games that stored their saved games in multiple unique locations.  It may also have other creative uses.
+	- Please read "Link -&gt; Configuration" in the "Game Manager" section of the manual for details on exactly how this feature works.
+- Metadata is now added to all backup files.
+	- This is a small XML file that contains important information about the archive and the configuration used to make the backup.
+	- This allows GBM and possibly any other software to easily identify and use GBM backup files.
+	- This file is not extracted when restoring a backup, it will not be cluttering up your saved game folders.
+- All backup operations are now performed in a temporary folder before the resulting file is moved to the backup folder.
+	- This change was required to fix periodic issues with cloud software (Dropbox) locking backup files while they were being created.
+	- The temporary folder can be manually set in "Settings -&gt; Backup and Restore", it defaults to %LOCALAPPDATA%\gbm (~/.local/share/gbm).
+- Improved the ability to import backup files using metadata.
+	- There is a now a global tool to import backup files or entire folders available in the "Tools" menu.
+	- Only backup files with GBM metadata can be imported using this new tool.
+	- You may still force the import of any 7z archive using the "Import Backup Files" tool in the Game Manager.
+- GBM now properly checks for available disk space when doing batch operations.
+- GBM no longer attempts to search for a game when the process name is a regular expression, it isn't supported.
+- Fixed various long-standing problems with the "Cancel" button.
+	- Using "Cancel" during a backup or restore now properly cancels out of batch operations.
+	- Using the "Cancel" button no longer prevents future operations from executing properly.
+- The Help menu is no longer disabled unnecessarily when the application is busy.
+- Various other small improvements have been made to the GUI and messages to improve usability.
 
-Linux:
+***Changes from 1.2.0 Pre-Release 1***
 
-- Fixed a bug that caused the "Available Disk Space" check to fail if the backup folder contained one or more spaces.
-	
+All Platforms:
+
+- Fixed various issues when linking to or from "Monitor Only" configurations.
+
 The entire version history of GBM releases is available at http://mikemaximus.github.io/gbm-web/versionhistory.html</releaseNotes>
   </metadata>
   <files>
