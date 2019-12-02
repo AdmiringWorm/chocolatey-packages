@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>authy-desktop</id>
-    <version>1.7.0</version>
+    <version>1.7.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Authy Desktop (Install)</title>
@@ -41,6 +41,7 @@ Authy is the preferred two factor authentication solution to protect your bitcoi
 https://www.authy.com/learn-more
 
 ## NOTES
+
 - As of version 1.6.0, the 32bit architecture have been dropped as conversion with the authy support team have said it won't be updated in the future.
   If you still need to install the 32bit architecture, please install version 1.5.0 and pin the package.
 ]]></description>

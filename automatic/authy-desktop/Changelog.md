@@ -1,5 +1,9 @@
 # ![Authy Desktop (Install) Changelog](https://img.shields.io/badge/Authy%20Desktop%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 1.7.1 (2019-12-02)
+
+- Move all icons to their respective package directory [#47](https://github.com/AdmiringWorm/chocolatey-packages/issues/47)
+
 ## Version: 1.6.0 (2018-06-04)
 
 - **BREAKING CHANGE:** Removed 32bit architecture support
