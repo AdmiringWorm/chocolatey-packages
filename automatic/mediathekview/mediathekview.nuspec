@@ -34,7 +34,7 @@ Example: `choco install --package-parameters="'/InstallDir:C:\Program Files\Medi
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="javaruntime" version="8.0.40" />
+      <dependency id="adoptopenjdkjre" version="12.0.0.33" />
     </dependencies>
   </metadata>
   <files>

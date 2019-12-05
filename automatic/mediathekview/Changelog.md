@@ -1,5 +1,9 @@
 # ![MediathekView Changelog](https://img.shields.io/badge/MediathekView-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## UPCOMING
+
+- **BREAKING CHANGE:** Change java dependency to adoptopenjdkjre
+
 ## Version: 13.2.1.20181016 (2018-10-16)
 
 - **ENHANCEMENT:** Allow changing the installation path [#25](https://github.com/AdmiringWorm/chocolatey-packages/issues/25)
