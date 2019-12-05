@@ -1,5 +1,8 @@
 # AdmiringWorm's Chocolatey Community packages
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 [![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)](https://liberapay.com/AdmiringWorm)
 
 ## Automatic Chocolatey Packages built by appveyor
