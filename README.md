@@ -113,12 +113,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.jimhester.com"><img src="https://avatars3.githubusercontent.com/u/205275?v=4" width="100px;" alt="Jim Hester"/><br /><sub><b>Jim Hester</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=jimhester" title="Documentation">📖</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=jimhester" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/phihub"><img src="https://avatars2.githubusercontent.com/u/6604490?v=4" width="100px;" alt="Philipp"/><br /><sub><b>Philipp</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Aphihub" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://ghuser.io/jayvdb"><img src="https://avatars1.githubusercontent.com/u/15092?v=4" width="100px;" alt="John Vandenberg"/><br /><sub><b>John Vandenberg</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Ajayvdb" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/kintrupf"><img src="https://avatars3.githubusercontent.com/u/8496344?v=4" width="100px;" alt="Frank Kintrup"/><br /><sub><b>Frank Kintrup</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Akintrupf+label%3Abug" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
