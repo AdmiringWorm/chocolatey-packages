@@ -95,7 +95,8 @@ If there are no changes in the repository use `--allow-empty` git parameter:
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://github.com/ericbn"><img src="https://avatars3.githubusercontent.com/u/4120606?v=4" width="100px;" alt="Eric Nielsen"/><br /><sub><b>Eric Nielsen</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Aericbn+label%3Abug" title="Bug reports">🐛</a></td>
@@ -110,9 +111,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/apps/imgbot"><img src="https://avatars0.githubusercontent.com/in/4706?v=4" width="100px;" alt="imgbot[bot]"/><br /><sub><b>imgbot[bot]</b></sub></a><br /><a href="#content-imgbot[bot]" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/AeliusSaionji"><img src="https://avatars3.githubusercontent.com/u/4342746?v=4" width="100px;" alt="Aelius"/><br /><sub><b>Aelius</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=AeliusSaionji" title="Code">💻</a></td>
     <td align="center"><a href="http://www.jimhester.com"><img src="https://avatars3.githubusercontent.com/u/205275?v=4" width="100px;" alt="Jim Hester"/><br /><sub><b>Jim Hester</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=jimhester" title="Documentation">📖</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=jimhester" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/phihub"><img src="https://avatars2.githubusercontent.com/u/6604490?v=4" width="100px;" alt="Philipp"/><br /><sub><b>Philipp</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Aphihub" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
