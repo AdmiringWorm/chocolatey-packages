@@ -133,6 +133,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "kintrupf",
+      "name": "Frank Kintrup",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8496344?v=4",
+      "profile": "https://github.com/kintrupf",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "skipCi": false
