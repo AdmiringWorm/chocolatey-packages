@@ -7,7 +7,7 @@
     "README.md"
   ],
   "imageSize": 100,
-  "commit": false,
+  "commit": true,
   "contributorsPerLine": 7,
   "types": {
     "bug": {
@@ -126,5 +126,5 @@
       ]
     }
   ],
-  "skipCi": true
+  "skipCi": false
 }
