@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+import-module "$PSScriptRoot/../../scripts/au_extensions.psm1"
 
 $releases = 'https://download.mediathekview.de/stabil/'
 
@@ -13,7 +14,9 @@ function global:au_BeforeUpdate($Package) {
 
   Get-RemoteFiles -Purge -NoSuffix
 }
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate {
+  Update-Changelog -useIssueTitle
+}
 
 function global:au_SearchReplace {
   @{
