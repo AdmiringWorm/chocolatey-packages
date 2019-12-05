@@ -33,7 +33,6 @@ Example: `choco install --package-parameters="'/InstallDir:C:\Program Files\Medi
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/mediathekview/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="adoptopenjdkjre" version="12.0.0.33" />
     </dependencies>
   </metadata>
