@@ -1,4 +1,4 @@
-﻿$installDir = Get-AppInstallLocation ''
+﻿$installDir = Get-AppInstallLocation 'R for Windows*'
 
 if ($installDir) {
   $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition

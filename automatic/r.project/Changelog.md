@@ -1,5 +1,9 @@
 # ![The R Project for Statistical Computing Changelog](https://img.shields.io/badge/The%20R%20Project%20for%20Statistical%20Computing-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 3.6.2 (2019-12-12)
+
+- **FEATURE:** add bin directory to PATH [#70](https://github.com/AdmiringWorm/chocolatey-packages/issues/70)
+
 ## Version: 3.5.0.20180424 (2018-04-24)
 
 - **ENHANCEMENT:** Installing will try to reuse existing inf file [#17](https://github.com/AdmiringWorm/chocolatey-packages/issues/17)

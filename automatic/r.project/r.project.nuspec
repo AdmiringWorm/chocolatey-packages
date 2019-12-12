@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>R.Project</id>
-    <version>3.6.1</version>
+    <version>3.6.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/r.project</packageSourceUrl>
     <owners>AdmiringWorm,zippy1981,yoshimov,jeffmoser</owners>
     <title>The R Project for Statistical Computing</title>
     <authors>R Core Team</authors>
     <projectUrl>http://www.r-project.org</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@fa76599c2dfd84cf594450d57f1a54395af134b7/icons/r.project.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8ab22ac35365e0e5cdcac1707299643d7fb3e759/icons/r.project.svg</iconUrl>
     <copyright>Copyright (C) 2016 The R Foundation for Statistical Computing</copyright>
     <licenseUrl>http://www.r-project.org/Licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -49,7 +49,8 @@ R has its own LaTeX-like documentation format, which is used to supply comprehen
 
 ## Package Parameters
 
-- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing.
+- `/AddToPath` - Add the R.Project bin directory to the `PATH` environment variable.
 
 **EXAMPLE**
 `choco install r.project --params "'/UseInf:C:\r.project.inf'"`
