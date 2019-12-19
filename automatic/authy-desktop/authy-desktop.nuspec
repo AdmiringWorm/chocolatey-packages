@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>authy-desktop</id>
-    <version>1.7.1</version>
+    <version>1.7.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/authy-desktop</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Authy Desktop (Install)</title>
