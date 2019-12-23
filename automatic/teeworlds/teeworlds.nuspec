@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>teeworlds</id>
-    <version>0.7.3.1</version>
+    <version>0.7.4</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/teeworlds</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Teeworlds</title>
@@ -31,7 +31,7 @@
 `choco install teeworlds --params '"/Desktop /NoStartMenu"'`
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=12809
+[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=13356
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)
     </releaseNotes>
     <dependencies>
