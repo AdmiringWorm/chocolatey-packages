@@ -34,11 +34,11 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate {
   if ($Latest.ReleaseNotes) {
     $releaseNotes = "
-[Software Changelog]($($Latest.ReleaseNotes)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)
+[Software Changelog]($($Latest.ReleaseNotes))
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/teeworlds/Changelog.md)
     "
   } else {
-    $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)"
+    $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/teeworlds/Changelog.md)"
   }
   Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
