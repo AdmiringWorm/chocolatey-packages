@@ -31,8 +31,8 @@
 `choco install teeworlds --params '"/Desktop /NoStartMenu"'`
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=13356
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/teeworlds/Changelog.md)
+[Software Changelog](https://teeworlds.com/?page=downloads&amp;id=13356)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/teeworlds/Changelog.md)
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
