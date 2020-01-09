@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/cmderdev/cmder/releases/tag/1.3.13>
+location on <https://github.com/cmderdev/cmder/releases/tag/v1.3.14>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/cmderdev/cmder/releases/download/1.3.13/cmder.7z>
+1. Download the following <https://github.com/cmderdev/cmder/releases/download/v1.3.14/cmder.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 11846F850DC27A7BA770E50A35879E85A6A9451AD4B14FF5120BD5593C140FF9
+  checksum: 3C5A02228F33ACD2DB92ABA367A2B7F2DFBA560BAF5D117C125401E9FF52403F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/cmderdev/cmder/blob/master/LICENSE>
