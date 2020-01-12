@@ -1,0 +1,10 @@
+version: "1"
+rules:
+  - base: master
+    upstream: AdmiringWorm:master
+    mergeMethod: hardreset
+  - base: develop
+    upstream: develop
+  - base: develop
+    upstream: AdmiringWorm:develop
+    mergeMethod: hardreset
