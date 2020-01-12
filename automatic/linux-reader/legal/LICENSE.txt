@@ -1,0 +1,84 @@
+DiskInternals Linux Reader Copyright(c) 2003-2020 DiskInternals Research.
+All rights reserved. 
+
+END-USER LICENSE AGREEMENT
+IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal
+agreement between you (either an individual or a single entity) later referred
+to as "LICENSEE" and DiskInternals Research later referred to as "DiskInternals" for
+the software product DiskInternals Linux Reader later referred to as "SOFTWARE". By
+installing, copying, or otherwise using the SOFTWARE, you agree to be bound by
+the terms of this EULA. If you do not agree to the terms of this EULA, do not
+purchase, install or use the SOFTWARE.
+
+The DiskInternals may have patents, patent applications, trademarks, copyrights, or
+other intellectual property rights covering subject matter in this document.
+The furnishing of this document does not give you any license to these
+patents, trademarks, copyrights, or other intellectual property.
+
+SOFTWARE LICENSE 
+
+Copyright laws and international copyright treaties, as well as other
+intellectual property laws and treaties protect the SOFTWARE. The SOFTWARE is
+FREE. 
+
+1. GRANT OF LICENSE. 
+This EULA grants you the following rights: 
+-You may use this SOFTWARE. "Use" of the SOFTWARE means that you have loaded,
+installed or run the SOFTWARE on to a computer or server.
+-You may use this SOFTWARE in compliance with all applicable laws and not for
+any unlawful purpose. Without limiting the foregoing, use, display or
+distribution of this SOFTWARE together with material that is pornographic,
+racist, vulgar, obscene, defamatory, libelous, abusive, promoting hatred,
+discriminating or displaying prejudice based on religion, ethnic heritage,
+race sexual orientation or age is strictly prohibited.
+
+2. DISTRIBUTION.
+This SOFTWARE may be distributed, provided that:
+- Such distribution includes only the original distributive file supplied by
+DiskInternals. You may not alter, delete or add any files in the distributive file or modify the SOFTWARE in any way.
+- No money is charged to the person receiving this SOFTWARE, beyond
+reasonable cost of packaging and other overhead.
+
+3. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS. 
+- You may not reverse engineer, recompile, and disassembly, modify, translate
+the SOFTWARE and make any attempt to discover the source code of the SOFTWARE. 
+- You may not transfer, sell, re-sell, offer for sale or distribute the
+SOFTWARE in any way except in accordance with paragraph 2 above. For
+information about distribution of DiskInternals Software, contact us at
+sales@DiskInternals.com.
+
+4. DISCLAIMER OF WARRANTY.
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS"
+AND WITHOUT WARRANTIES AS TO PERFORMANCE OR MERCHANTABILITY
+OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED.
+YOU USE THE SOFTWARE AT YOUR OWN RISK.
+
+NO LIABILITY FOR CONSEQUENTIAL DAMAGES. To the maximum extent permitted by
+applicable law, in no event shall the DiskInternals or its employees, contractors,
+agents, distributors or suppliers be liable for any special, incidental,
+indirect, or consequential damages whatsoever (including, without limitation,
+damages for loss of business profits, business interruption, loss of business
+information, loss of data, loss of business opportunity, loss or damages to
+property, injuries to any person or any pecuniary loss,) arising out of the
+use of or inability to use the SOFTWARE, even if the DiskInternals has been advised on
+the possibility of such damages. In any case, the DiskInternals entire liability under
+any provision of this EULA shall be limited EXCLUSIVELY TO PRODUCT
+REPLACEMENT. 
+
+5. GOVERNING LAW
+This agreement shall by laws of the Province of Ontario and the laws of
+Canada applicable therein. You hereby irrevocably attorn and submit to the
+non-exclusive jurisdiction of the court of Toronto, Ontario, and any competent
+Courts of Appeal there from. If any provision shall be considered unlawful,
+void or otherwise unenforceable, then that provision shall be deemed severable
+from this license and not affect the validity and enforceability of any other
+provisions. 
+
+The DiskInternals reserves all rights not expressly granted here.
+
+ACKNOWLEDGEMENT
+
+I, the LICENSEE, acknowledge that I have read the above EULA and agree with
+the terms and conditions of the agreement. I also agree that the EULA
+supersedes any prior agreement, written or verbal, which may exist between me
+and the DiskInternals on the subject of the SOFTWARE.
