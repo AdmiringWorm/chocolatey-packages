@@ -3,18 +3,18 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <>
+location on <https://www.diskinternals.com/linux-reader/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
+  32-Bit software: <https://eu.diskinternals.com/download/Linux_Reader.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: ABF8A09F5F6C3D0391C305ABA22240A4106D2D830D1E37076B942CDEA6513278
+  checksum32: 2CC9D61CA24BE81A357C476A18BA7A61A21BC32AA496D5E03741CD6858508540
 
 The license is not available online, can only be verified by installing the package and look at the included license.txt file.
 In most cases, this license should be available in: ${env:ProgramFiles(x86)}\DiskInternals\Linux Reader

@@ -4,10 +4,10 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  file           = "$toolsPath\"
+  file           = "$toolsPath\Linux_Reader.exe"
   silentArgs     = '/S'
   validExitCodes = @(0)
-  softwareName   = ''
+  softwareName   = 'DiskInternals Linux Reader'
 }
 
 Install-ChocolateyInstallPackage @packageArgs

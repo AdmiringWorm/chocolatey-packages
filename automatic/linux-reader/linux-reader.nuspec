@@ -2,18 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>linux-reader</id>
-    <version>4.0.15</version>
+    <version>4.0.20</version>
     <title>Linux Reader</title>
     <authors>DiskInternals</authors>
     <owners>TheCakeIsNaOH</owners>
     <projectUrl>https://www.diskinternals.com/linux-reader</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/TheCakeIsNaOH/chocolatey-packages/8a8042da4bdde88fadd4ce409feb142595b75b14/Icons/LinuxReader_0000.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@da4df523c9fe1aadb649906f6311b9bb539fff20/automatic/linux-reader/icons/64x64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>EULA not available online, see license.txt in Program files (x86)\DiskInternals\Linux Reader or in LICENSE.txt in the nupkg
+    <description><![CDATA[How to get safe and quick access to alternative file systems? DiskInternals Linux Reader is a new easy way to do this. This program plays the role of a bridge between your Windows and Ext2/Ext3/Ext4, HFS and ReiserFS file systems.
 
-How to get safe and quick access to alternative file systems? DiskInternals Linux Reader is a new easy way to do this. This program plays the role of a bridge between your Windows and Ext2/Ext3/Ext4, HFS and ReiserFS file systems.
-
- This easy-to-use tool runs under Windows and allows you to browse Ext2/3/4, HFS and ReiserFS file systems
+This easy-to-use tool runs under Windows and allows you to browse Ext2/3/4, HFS and ReiserFS file systems
 There are a number of evident merits of the program, which you should know. First of all, DiskInternals Linux Reader is absolutely free. Secondly, the program provides for read-only access and does not allow you to make records in file system partitions. This guarantees that the interference in an alterative file system will not affect the work of Linux later. Apart from this, it is necessary to note, that it gives you an opportunity to use common Windows Explorer for extracting data. A preview option for pictures is one more pleasant point, which is worth mentioning.
 
 How to get safe and quick access to any file systems? DiskInternals Linux Reader is an easy and short way to solve the problem!
@@ -22,19 +20,22 @@ While saving, it ignores file security policies. It means that it is possible to
 
 Linux Reader is 100% FREE. Try it now.
 
-### Package Specific
-#### Package Parameters
+## Package Parameters
+
 The following package parameters can be set:
 
- * `/NOICON` - Remove the desktop icon
+- `/NOICON` - Remove the desktop icon
 
-To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
+**EXAMPLE**
+`choco install innosetup --params "'/NOICON'"`
+
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+]]></description>
     <summary>Ext 2/3/4, UFS2, HFS and ReiserFS/4 for Windows</summary>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/innosetup/Changelog.md)</releaseNotes>
     <copyright>2019 DiskInternals</copyright>
     <tags>linux reader</tags>
-    <packageSourceUrl>https://github.com/TheCakeIsNaOH/chocolatey-packages/tree/master/Linux%20Reader</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/linux-reader</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

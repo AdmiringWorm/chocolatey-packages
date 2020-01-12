@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = ''
+  softwareName   = 'DiskInternals Linux Reader'
   fileType       = 'exe'
   silentArgs     = "/S"
   validExitCodes = @(0, 3010, 1641)
