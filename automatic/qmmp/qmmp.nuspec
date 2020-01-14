@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qmmp</id>
-    <version>1.3.5</version>
+    <version>1.3.6</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/qmmp</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qmmp</title>
@@ -11,7 +11,7 @@
     <projectUrl>http://qmmp.ylsoftware.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6bb6be12cbdda21ba3f7e4bf5ba49e87d8414420/automatic/qmmp/icons/64x64.png</iconUrl>
     <copyright>© 2006-2017 Qmmp Development Team</copyright>
-    <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/tags/qmmp-1.3.5/COPYING</licenseUrl>
+    <licenseUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/tags/qmmp-1.3.6/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/qmmp-dev/wiki/browse_pages/</docsUrl>
