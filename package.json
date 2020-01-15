@@ -22,7 +22,7 @@
     "@commitlint/config-angular": "8.3.4",
     "@commitlint/config-conventional": "8.3.4",
     "commitizen": "4.0.3",
-    "commitlint": "8.3.4",
+    "commitlint": "8.3.5",
     "cz-conventional-changelog": "3.0.2",
     "eclint": "^2.8.1",
     "husky": "4.0.10",
