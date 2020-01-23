@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\Nagstamon-3.2.1-win32_setup.exe"
-  file64         = "$toolsPath\Nagstamon-3.2.1-win64_setup.exe"
+  file           = "$toolsPath\Nagstamon-3.4-win32_setup.exe"
+  file64         = "$toolsPath\Nagstamon-3.4-win64_setup.exe"
   softwareName   = 'Nagstamon*'
   silentArgs     = "/SILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)

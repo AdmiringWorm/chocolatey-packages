@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\innosetup-6.0.3.exe"
+$filePath = "$toolsDir\innosetup-5.6.1-unicode.exe"
 
 $packageArgs = @{
-	packageName   = 'innosetup'
-	fileType      = 'exe'
-	softwareName  = 'Inno Setup*'
-	file          = $filePath
-	silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
-	validExitCodes= @(0,3010,1641)
+  packageName   = 'innosetup'
+  fileType      = 'exe'
+  softwareName  = 'Inno Setup*'
+  file          = $filePath
+  silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  validExitCodes= @(0,3010,1641)
 }
 
 $pp = Get-PackageParameters
