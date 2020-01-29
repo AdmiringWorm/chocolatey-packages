@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nagstamon.install</id>
-    <version>3.4.1</version>
+    <version>3.4.1.20200129</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nagstamon.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Nagstamon (Install)</title>
