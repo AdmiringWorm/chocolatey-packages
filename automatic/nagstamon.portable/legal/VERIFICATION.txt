@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32:
-  checksum64: AE1E13C104B3A928C5AF67AB26EE8C8C04654D2B62503EF31A72E4C9701D7EA4
+  checksum64: 6D7E1F169EBC5F247F4CD58DB161C882AA53528D42E31DCEA6D082C8887790AF
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE>
