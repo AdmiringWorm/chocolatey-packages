@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>linux-reader</id>
-    <version>4.0.29</version>
+    <version>4.0.41</version>
     <title>Linux Reader</title>
     <authors>DiskInternals</authors>
     <owners>TheCakeIsNaOH</owners>
