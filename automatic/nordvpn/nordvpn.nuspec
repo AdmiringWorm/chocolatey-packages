@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nordvpn</id>
-    <version>6.26.17</version>
+    <version>6.27.10</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nordvpn</packageSourceUrl>
     <owners>AdmiringWorm, Sanshiro</owners>
     <title>NordVPN</title>
