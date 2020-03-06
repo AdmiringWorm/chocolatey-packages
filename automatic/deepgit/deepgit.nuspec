@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>deepgit</id>
-    <version>3.2</version>
+    <version>4.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/deepgit</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>DeepGit (Install)</title>
@@ -30,7 +30,6 @@
 
 - [Check out the Tour](https://www.syntevo.com/deepgit/tour) to understand how DeepGit is working.
   [![Tour](https://www.syntevo.com/assets/images/products/deepgit/tour-7d0a5121.png)](https://www.syntevo.com/deepgit/tour)
-
 
 ## Package Parameters
 
