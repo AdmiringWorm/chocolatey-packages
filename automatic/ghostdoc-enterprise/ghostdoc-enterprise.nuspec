@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-enterprise</id>
-    <version>2019.3.19260</version>
+    <version>2020.1.20070</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-enterprise</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Enterprise Edition</title>
