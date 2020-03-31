@@ -2,24 +2,46 @@
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
+$repoUser = 'HakanL'
+$repoName = 'resxtranslator'
 $domain   = 'https://github.com'
-$releases = "$domain/HakanL/resxtranslator/releases/latest"
-$licenseUrl = "https://github.com/HakanL/resxtranslator/blob/master/src/Licence.txt"
+$releases = "$domain/$repoUser/$repoName/releases/latest"
+
+function Get-RepositoryLicense($repoUser, $repoName) {
+  $headers = @{}
+  If (Test-Path Env:\github_api_key) {
+    $headers.Authorization = "token " + $env:github_api_key;
+  }
+
+  $response = Invoke-RestMethod -Uri "https://api.github.com/repos/$repoUser/$repoName/license" -Headers $headers
+
+  return @{
+    Url = $response.html_url
+    Content = [System.Convert]::FromBase64String($response.content)
+    SPDX = $response.license.spdx_id
+  }
+}
 
 function global:au_BeforeUpdate($Package) {
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
   if (Test-Path $licenseFile) { rm -Force $licenseFile }
 
-  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
-  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
+  $licenseInfo = Get-RepositoryLicense "$repoUser" "$repoName"
+
+  [System.IO.File]::WriteAllBytes($licenseFile, $licenseInfo.Content)
+
+  if ($licenseInfo.SPDX -ne 'GPL-2.0') {
     throw "Unknown license download. Please verify it still contains distribution rights."
   }
+
+  $Latest.LicenseUrl = $licenseInfo.Url
 
   Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_AfterUpdate {
   Update-ChangelogVersion -version $Latest.Version
+  Update-Metadata "licenseUrl" $Latest.LicenseUrl
 }
 
 function global:au_SearchReplace {
@@ -29,6 +51,7 @@ function global:au_SearchReplace {
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(LICENSE\.txt.*)\<.*\>"        = "`${1}<$($Latest.LicenseUrl)>"
     }
     ".\tools\chocolateyInstall.ps1"   = @{
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
@@ -53,6 +76,7 @@ function global:au_GetLatest {
     URL32 = $url32
     Version = $version32.TrimStart('v')
     ReleaseURL = $releaseUrl
+    LicenseUrl = 'https://github.com/HakanL/resxtranslator/blob/master/LICENSE'
   }
 }
 
