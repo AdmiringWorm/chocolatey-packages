@@ -1,8 +1,9 @@
 # ![Qemu Changelog](https://img.shields.io/badge/Qemu-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## Upcoming
+## Version: 2020.2.1.20200331 (2020-03-31)
 
 - **ENHANCEMENT:** Change to using SHA512 checksums
+- **FEATURE:** Older versions do not install due to changed download location [#173](https://github.com/AdmiringWorm/chocolatey-packages/issues/173)
 
 ## Version: 2019.07.12 (2019-07-13)
 
