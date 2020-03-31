@@ -3,6 +3,12 @@
 $releases = 'https://www.qemu.org/download/#windows'
 $softwareName = 'QEMU'
 
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = $Latest.ChecksumType64 = 'SHA512'
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
+  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType64
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -13,6 +19,8 @@ function global:au_SearchReplace {
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
       "(?i)^(\s*checksum64\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum64)'"
       "(?i)^(\s*checksumType64\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType64)'"
+      "(?i)=\s*'.*'(\s*# fallback32)" = "= '$($Latest.FallBackUrl32)'`${1}"
+      "(?i)=\s*'.*'(\s*# fallback64)" = "= '$($Latest.FallBackUrl64)'`${1}"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
@@ -26,10 +34,12 @@ function GetDataFrom($releasesUrl) {
   $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
 
   $url = $download_page.Links | ? href -match "\.exe$" | select -last 1 -expand href | % { $releasesUrl + $_ }
+  $fallBackUrl = $url -replace "(w64|w32)\/","`$1/$(Get-Date -Format "yyyy")/"
+
   if($url -match "(\d{4})(\d{2})(\d{2})\.exe$") {
     $version = "$($matches[1]).$($matches[2]).$($matches[3])"
 
-    return @{URL = $url ; Version = $version }
+    return @{URL = $url ; FallBackUrl = $fallBackUrl ; Version = $version }
   } else {
     throw "Unable to parse version information from '$releasesUrl'"
   }
@@ -52,9 +62,11 @@ function global:au_GetLatest {
   @{
     URL32 = $url32Data.URL
     URL64 = $url64Data.URL
+    FallBackUrl32 = $url32Data.FallBackUrl
+    FallBackUrl64 = $url64Data.FallBackUrl
     Version = $url32Data.version
     PackageName = 'Qemu'
   }
 }
 
-update
+update -ChecksumFor none

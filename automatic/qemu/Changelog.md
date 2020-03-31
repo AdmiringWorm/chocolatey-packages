@@ -1,5 +1,9 @@
 # ![Qemu Changelog](https://img.shields.io/badge/Qemu-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Upcoming
+
+- **ENHANCEMENT:** Change to using SHA512 checksums
+
 ## Version: 2019.07.12 (2019-07-13)
 
 - **BREAKING CHANGE:** Removed dependency on chocolatey-core.extension

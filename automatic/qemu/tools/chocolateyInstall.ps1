@@ -14,4 +14,15 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
+try {
+  # No need to test both 32bit and 64bit
+  # if one have been moved, then other should have as well
+  $headers = Get-WebHeaders -Url $packageArgs['url64bit']
+
+  # We will just continue, as there is nothing to do when previous command succeed
+} catch {
+  $packageArgs['url'] = '' # fallback32
+  $packageArgs['url64bit'] = '' # fallback64
+}
+
 Install-ChocolateyPackage @packageArgs
