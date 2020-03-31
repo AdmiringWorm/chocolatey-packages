@@ -40,7 +40,7 @@ function global:au_BeforeUpdate($Package) {
 }
 
 function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
+  Update-Changelog -useIssueTitle
   Update-Metadata "licenseUrl" $Latest.LicenseUrl
 }
 
