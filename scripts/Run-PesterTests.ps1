@@ -1,4 +1,4 @@
-function Install-Package() {
+﻿function Install-Package() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
     [Parameter(Mandatory = $true)][string]$packagePath,
@@ -335,7 +335,7 @@ function Run-PesterTests() {
 
       It "Should link to current repository directory" {
         $relDir = ($packagePath -replace $([regex]::Escape((Resolve-Path $PSScriptRoot/..))),"" -replace '\\','/').Trim('/')
-        $re = "^\s*\<packageSourceUrl\>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/$relDir\<\/packageSourceUrl\>"
+        $re = "^\s*\<packageSourceUrl\>https://github.com/admiringworm/chocolatey-packages/tree/master/$relDir\<\/packageSourceUrl\>"
 
         "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
       }
