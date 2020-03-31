@@ -32,16 +32,13 @@
   },
   "lint-staged": {
     "*": [
-      "eclint fix",
-      "git add"
+      "eclint fix"
     ],
     "*.{md,json,yml,yaml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{jpeg,jpg,gif,png,svg}": [
-      "imagemin-lint-staged",
-      "git add"
+      "imagemin-lint-staged"
     ]
   },
   "husky": {
