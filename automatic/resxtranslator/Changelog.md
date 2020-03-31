@@ -1,5 +1,9 @@
 # ![Resx Resource Translator Changelog](https://img.shields.io/badge/Resx%20Resource%20Translator-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.9 (2020-03-31)
+
+- Corrected new path of the software license
+
 ## Version: 2.4 (2017-08-20)
 
 - **ENHANCEMENT:** Added changelog for package
