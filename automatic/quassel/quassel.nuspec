@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://github.com/quassel/quassel</projectSourceUrl>
     <docsUrl>http://bugs.quassel-irc.org/projects/quassel-irc/wiki</docsUrl>
-    <mailingListUrl>http://lists.quassel-irc.org/</mailingListUrl>
     <bugTrackerUrl>http://bugs.quassel-irc.org/</bugTrackerUrl>
     <tags>quassel irc qt</tags>
     <summary>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</summary>
