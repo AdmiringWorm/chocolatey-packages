@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://reshade.me/>
 and can be verified by doing the following:
 
-1. Download the following <https://reshade.me//downloads/ReShade_Setup_4.5.4.exe> (requires the following referer header: https://reshade.me/)
+1. Download the following <https://reshade.me//downloads/ReShade_Setup_4.6.1.exe> (requires the following referer header: https://reshade.me/)
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 5F26CE490784C29688B2D4CEF35D7CC056BA419847D5AB18737B854094F57D4A
+  checksum: 75F6E952C2EA89139A6F30F9702CAA283BC2DBBBA0B1EE9C5A9402318569AB42
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/crosire/reshade/blob/master/LICENSE.md>
