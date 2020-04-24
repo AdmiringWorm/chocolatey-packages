@@ -22,7 +22,7 @@ environment:
   au_push: false
   github_user_repo: AdmiringWorm/chocolatey-packages
   github_api_key:
-    secure: pmwNf8f5uDVc1IdjM+mRpfMsYW6dieBT0znGf6NRUCjE+9LyWUYSQqVcRNPafSx6
+    secure: vudN7TALdiPCJL1JjaBVTjmUFPSEKB01C5zKEXWjR5d7k0KwKJh296dn4i83mdKq
   gist_id: 30a8b66d4c02ecacce2da3c8734ac61f
   choco_version: 0.10.11
   nupkg_cache_path: C:\nupkg_cache
