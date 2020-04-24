@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://lilypond.org/windows.html>
 and can be verified by doing the following:
 
-1. Download the following <http://download.linuxaudio.org/lilypond/binaries/mingw/lilypond-2.18.2-1.mingw.exe>
+1. Download the following <https://lilypond.org/download/binaries/mingw/lilypond-2.20.0-1.mingw.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 606413B751506830A86EFBD8A18225A8862B628E7A49DAF1A9C9CB953E1956AB
+  checksum: 3A0EF9ACD7AA82D32A7A7952F28EB430B5EF437F06AFCA8BD3F4F945C327E805
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl.txt>

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lilypond</id>
-    <version>2.18.2</version>
+    <version>2.20.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lilypond</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>LilyPond</title>
     <authors>Han-Wen Nienhuys,Jan Nieuwenhuizen</authors>
     <projectUrl>https://lilypond.org/index.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@9e244636583ba04b7cd82ff2116aa9a1f879e36e/manual/lilypond/icons/48x48.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@44be8c047e7f069cd6fcc8e3e5ac47eba5d41474/automatic/lilypond/icons/48x48.png</iconUrl>
     <licenseUrl>https://lilypond.org/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://lilypond.org/source.html</projectSourceUrl>
@@ -21,11 +21,12 @@
     <description><![CDATA[LilyPond is a music engraving program, devoted to producing the highest-quality sheet music possible. It brings the aesthetics of traditionally engraved music to computer printouts. LilyPond is free software and part of the [GNU Project][].
 
 ## Beutiful Sheet Music
+
 ![Music Sheet][]
 LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for example [classical music][] (like the example above by J.S. Bach), [complex notation][], [early music][], [modern music][], [tablature][], [vocal music][], [lead sheets][], [educational materials][], [large orchestral projects][], [customized output][], and even [Schenker graphs][].
 
-[GNU Project]: http://gnu.org/
-[Music Sheet]: http://lilypond.org/pictures/bwv861-lilypond.png
+[gnu project]: http://gnu.org/
+[music sheet]: http://lilypond.org/pictures/bwv861-lilypond.png
 [classical music]: http://lilypond.org/examples.html#Classical-Music
 [complex notation]: http://lilypond.org/examples.html#Complex-Notation
 [early music]: http://lilypond.org/examples.html#Early-Music
@@ -36,12 +37,10 @@ LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for e
 [educational materials]: http://lilypond.org/examples.html#Educational-Applications
 [large orchestral projects]: http://lilypond.org/examples.html#Large-Projects
 [customized output]: http://lilypond.org/examples.html#Customized-Output
-[Schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
+[schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
 ]]></description>
-    <releaseNotes>
-[Software Changelog](http://lilypond.org/doc/v2.18/Documentation/changes/index.html)
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)
-    </releaseNotes>
+    <releaseNotes>[Software Changelog](http://lilypond.org/doc/v2.20.0/Documentation/changes/index.html
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
