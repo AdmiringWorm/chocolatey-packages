@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://kcsoftwares.com/files/dumo_lite.exe'
   softwareName   = 'KC Softwares DUMo'
-  checksum       = 'B9BC92AE20DA6395A5E41C85296A4A9D5BAD2A400E4CBCF056DBFE7E0CBCDA8CB86F14452A8498EAE156A89A0723BD8A9B1060690AE8869AA64A1767BD71A303'
+  checksum       = '3465271206E8D729FE89C8750B96A547E3C25E1F603B8849B4F7E6A7AC2FF0AAB110927EBFC78C0BE79EFDE2CD4FAA4209CB55B44BC05C519EA000F20A12A9A1'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
