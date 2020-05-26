@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tablacus</id>
-    <version>20.5.25</version>
+    <version>20.5.26</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tablacus</packageSourceUrl>
     <owners>AdmiringWorm, Yoshimov</owners>
     <title>Tablacus Explorer</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://tablacus.github.io/explorer_en.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@23c507427e532c4407844487480b415895e5edba/icons/tablacus.png</iconUrl>
     <copyright>Copyright (c) 2011 Gaku</copyright>
-    <licenseUrl>https://github.com/tablacus/TablacusExplorer/blob/20.5.25/LICENSE.TXT</licenseUrl>
+    <licenseUrl>https://github.com/tablacus/TablacusExplorer/blob/20.5.26/LICENSE.TXT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/tablacus/TablacusExplorer</projectSourceUrl>
     <bugTrackerUrl>https://github.com/tablacus/TablacusExplorer/issues</bugTrackerUrl>
@@ -23,7 +23,7 @@
 ## Features
 
 - Tabbed interface
-- [Add-on](http://tablacus.github.io/TablacusExplorerAddons/) support
+- [Add-on](https://tablacus.github.io/TablacusExplorerAddons/) support
 - Completely portable, No installation required
 - Multiple language and Unicode support
 - Columns: [Total file size](https://www.penflip.com/LightTempler/tablacus-explorer/blob/master/tips/totalfilesize.txt), Label
