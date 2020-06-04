@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gbm</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
@@ -45,45 +45,25 @@ Game Backup Monitor is completely free and open source software.
 
 ### Software Release notes
 
-This is the final release of v1.2.0.  There were no new bug reports for the pre-release over 3 weeks and my own testing didn't turn up anything new.
-
-Happy Holidays!
-
-***New in 1.2.0***
+***New in 1.2.1***
 
 All Platforms:
 
-- Added the ability to easily backup or restore the entire game list.
-	- Use the "Run Full Backup" or "Run Full Restore" options in the File menu or Tray menu to easily backup or restore your entire game list.
-	- Any confirmations or checks requiring user input are automatically handled when using these tools.  See the "Full Backup and Restore" section of the manual for details.
-- Added the ability to "link" game configurations.
-	- This allows any linked configuration(s) to automatically run a backup or restore each time their parent is triggered.  This can continue in a chain.
-	- This feature allows for the proper configuration of rare games that stored their saved games in multiple unique locations.  It may also have other creative uses.
-	- Please read "Link -&gt; Configuration" in the "Game Manager" section of the manual for details on exactly how this feature works.
-- Metadata is now added to all backup files.
-	- This is a small XML file that contains important information about the archive and the configuration used to make the backup.
-	- This allows GBM and possibly any other software to easily identify and use GBM backup files.
-	- This file is not extracted when restoring a backup, it will not be cluttering up your saved game folders.
-- All backup operations are now performed in a temporary folder before the resulting file is moved to the backup folder.
-	- This change was required to fix periodic issues with cloud software (Dropbox) locking backup files while they were being created.
-	- The temporary folder can be manually set in "Settings -&gt; Backup and Restore", it defaults to %LOCALAPPDATA%\gbm (~/.local/share/gbm).
-- Improved the ability to import backup files using metadata.
-	- There is a now a global tool to import backup files or entire folders available in the "Tools" menu.
-	- Only backup files with GBM metadata can be imported using this new tool.
-	- You may still force the import of any 7z archive using the "Import Backup Files" tool in the Game Manager.
-- GBM now properly checks for available disk space when doing batch operations.
-- GBM no longer attempts to search for a game when the process name is a regular expression, it isn't supported.
-- Fixed various long-standing problems with the "Cancel" button.
-	- Using "Cancel" during a backup or restore now properly cancels out of batch operations.
-	- Using the "Cancel" button no longer prevents future operations from executing properly.
-- The Help menu is no longer disabled unnecessarily when the application is busy.
-- Various other small improvements have been made to the GUI and messages to improve usability.
+- Fixed a possible crash when renaming a game with existing backup files while a cloud client is monitoring the backup folder. (#197)
+- Fixed a rare issue that could cause the wrong game to be pre-selected when opening the Game Manager.  (#198)
+- Fixed an issue causing the ampersand character to be hidden in certain controls.  
+	- Ex. Mount &amp; Blade II: Bannerlords will now be displayed correctly.
+- Various changes for debugging and building releases.
 
-***Changes from 1.2.0 Pre-Release 1***
+Windows:
 
-All Platforms:
+- Installers are now built with NSIS 3.05
 
-- Fixed various issues when linking to or from "Monitor Only" configurations.
+Linux:
+
+- The system tray icon is now enabled for desktop environments that support it (Cinnamon, LXDE).	 (#200)
+	- You'll need an up-to-date version of Mono for the tray icon to work, tested with Mono 6.8.0.	
+- Fixed an issue that caused opening external apps to fail when using the latest versions of Mono. (#199)
 
 The entire version history of GBM releases is available at http://mikemaximus.github.io/gbm-web/versionhistory.html</releaseNotes>
   </metadata>
