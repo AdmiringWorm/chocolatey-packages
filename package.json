@@ -27,7 +27,7 @@
     "eclint": "^2.8.1",
     "husky": "4.2.5",
     "imagemin-lint-staged": "0.4.0",
-    "lint-staged": "10.2.6",
+    "lint-staged": "10.2.9",
     "prettier": "2.0.5"
   },
   "lint-staged": {
