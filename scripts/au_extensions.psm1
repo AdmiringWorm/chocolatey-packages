@@ -14,6 +14,7 @@ $funcs = @(
   "Update-OnETagChanged"
   "Update-OnHeaderChanged"
   "Get-ValidOpenSourceLicense"
+  "Get-GithubRepositoryLicense"
 )
 
 $funcs | % {

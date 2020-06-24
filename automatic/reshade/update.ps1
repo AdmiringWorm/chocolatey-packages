@@ -9,9 +9,20 @@ function global:au_BeforeUpdate {
   Invoke-WebRequest -UseBasicParsing -Uri $Latest.URL32 -OutFile $output -Headers @{ Referer = $releases }
   $Latest.ChecksumType32 = 'sha256'
   $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $output | % Hash
+
+  $licenseData = Get-GithubRepositoryLicense -repoUser crosire -repoName reshade
+  $licensePath = "$PSScriptRoot\legal\LICENSE.txt"
+  if (Test-Path $licensePath) { rm $licensePath }
+
+  Invoke-WebRequest -Uri $licenseData.download_url -UseBasicParsing -OutFile "$licensePath"
+  $Latest.LicenseUrl = $licenseData.html_url
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate {
+  Update-Changelog -useIssueTitle
+
+  Update-Metadata -key "licenseUrl" -value $Latest.LicenseUrl
+}
 
 function global:au_SearchReplace {
   @{
