@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/securitywithoutborders/hardentools/releases/tag/v2.0-rc2>
+location on <https://github.com/securitywithoutborders/hardentools/releases/tag/v2.0>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/securitywithoutborders/hardentools/releases/download/v2.0-rc2/hardentools.exe>
+1. Download the following <https://github.com/securitywithoutborders/hardentools/releases/download/v2.0/hardentools.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C5DB3A80A18E9BDBA8AFD6220B9C5DF799EF9D814BD62DB45031FEAD5A877D87
+  checksum: 2B44B52C3A3B669DE81E0AE57E4595F7D632304A91B9FF79AE82C2B70AB03F7A
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/securitywithoutborders/hardentools/blob/master/LICENSE.txt>
