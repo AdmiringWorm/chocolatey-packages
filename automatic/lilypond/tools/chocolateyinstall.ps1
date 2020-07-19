@@ -2,6 +2,8 @@
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
+. "$toolsPath/helpers.ps1"
+
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
@@ -9,6 +11,14 @@ $packageArgs = @{
   softwareName   = 'LilyPond'
   silentArgs     = '/S'
   validExitCodes = @(0)
+}
+
+$key = Get-UninstallRegistryKey @packageArgs | select -First 1
+
+if ($key) {
+  Write-Host "Removing previously installed LilyPond application."
+  Uninstall-LilyPond $key
+  sleep -Seconds 3
 }
 
 Install-ChocolateyInstallPackage @packageArgs
