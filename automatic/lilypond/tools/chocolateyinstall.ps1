@@ -13,12 +13,12 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-$key = Get-UninstallRegistryKey @packageArgs | select -First 1
+$key = Get-UninstallRegistryKey @packageArgs | Select-Object -First 1
 
 if ($key) {
   Write-Host "Removing previously installed LilyPond application."
   Uninstall-LilyPond $key
-  sleep -Seconds 3
+  Start-Sleep -Seconds 3
 }
 
 Install-ChocolateyInstallPackage @packageArgs

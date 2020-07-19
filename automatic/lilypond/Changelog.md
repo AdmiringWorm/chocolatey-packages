@@ -1,5 +1,9 @@
 # ![LilyPond Changelog](https://img.shields.io/badge/LilyPond-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.20.0.20200719 (2020-07-19)
+
+- **BUG:** Automatic upgrade to 2.20 fails [#243](https://github.com/AdmiringWorm/chocolatey-packages/issues/243)
+
 ## Version: 2.20.0 (2020-04-24)
 
 - **BREAKING CHANGE:** Remove chocolatey-core dependency

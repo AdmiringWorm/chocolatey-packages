@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lilypond</id>
-    <version>2.20.0</version>
+    <version>2.20.0.20200719</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lilypond</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>LilyPond</title>
