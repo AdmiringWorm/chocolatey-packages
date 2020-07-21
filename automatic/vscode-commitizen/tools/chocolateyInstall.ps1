@@ -1,3 +1,3 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-Install-VsCodeExtension -extensionId 'KnisterPeter.vscode-commitizen@0.9.2'
+Install-VsCodeExtension -extensionId 'KnisterPeter.vscode-commitizen@0.9.3'
