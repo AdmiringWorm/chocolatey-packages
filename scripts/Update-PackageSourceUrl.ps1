@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Updates Package Source Url with correct URL in the nuspec file
 
@@ -65,14 +65,15 @@ param(
 if (!$GithubRepository) {
   $allRemotes = . git remote
   $remoteName = if ($allRemotes | ? { $_ -eq 'upstream' }) { "upstream" }
-                elseif ($allRemotes | ? { $_ -eq 'origin' }) { 'origin' }
-                else { $allRemotes | select -first 1 }
+  elseif ($allRemotes | ? { $_ -eq 'origin' }) { 'origin' }
+  else { $allRemotes | select -first 1 }
 
   if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
 
   if ($remoteUrl) {
-    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
-  } else {
+    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$', '' -join '/'
+  }
+  else {
     Write-Warning "Unable to get repository and user, setting dummy values..."
     $GithubRepository = "USERNAME/REPOSITORY-NAME"
   }
@@ -87,7 +88,7 @@ $missingIcons = New-Object System.Collections.Generic.List[object];
 
 $encoding = New-Object System.Text.UTF8Encoding($false)
 
-function Replace-PackageSourceUrl{
+function Replace-PackageSourceUrl {
   param(
     [string]$NuspecPath,
     [string]$PackageName,
@@ -97,13 +98,13 @@ function Replace-PackageSourceUrl{
 
   $nuspec = Get-Content "$NuspecPath" -Encoding UTF8
 
-  $oldContent = ($nuspec | Out-String) -replace '\r\n?',"`n"
+  $oldContent = ($nuspec | Out-String) -replace '\r\n?', "`n"
 
-  $url = "https://github.com/${GithubRepository}/tree/master/$PackagesDirectory/$PackageName"
+  $url = "https://github.com/${GithubRepository.ToLowerInvariant()}/tree/master/$PackagesDirectory/$PackageName"
 
-  $nuspec = $nuspec -replace '<packageSourceUrl>.*',"<packageSourceUrl>$url</packageSourceUrl>"
+  $nuspec = $nuspec -replace '<packageSourceUrl>.*', "<packageSourceUrl>$url</packageSourceUrl>"
 
-  $output = ($nuspec | Out-String) -replace '\r\n?',"`n"
+  $output = ($nuspec | Out-String) -replace '\r\n?', "`n"
   if ($oldContent -eq $output) {
     $counts.uptodate++;
     return;
@@ -113,7 +114,7 @@ function Replace-PackageSourceUrl{
   $counts.replaced++;
 }
 
-function Update-PackageSourceUrl{
+function Update-PackageSourceUrl {
   param(
     [string]$Name,
     [string]$GithubRepository,
@@ -165,7 +166,8 @@ if ($UseStopwatch) {
 }
 if ($counts.replaced -eq 0 -and !$Quiet) {
   Write-Host "Congratulations, all found urls are up to date."
-} elseif (!$Quiet) {
+}
+elseif (!$Quiet) {
   Write-Host "Updated $($counts.replaced) url(s)";
 }
 if ($counts.uptodate -gt 0 -and !$Quiet) {

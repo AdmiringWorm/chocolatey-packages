@@ -10,7 +10,7 @@ function global:au_AfterUpdate {
   $Latest.ReleaseNotes = $info_page.Links | ? href -match "whats-new-in-ghostdoc" | % href
 
   $releaseNotes = ("[Software Changelog]($($Latest.ReleaseNotes)  `n" +
-    "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)")
+    "[Package Changelog](https://github.com/admiringworm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)")
 
   Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
