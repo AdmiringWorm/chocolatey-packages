@@ -131,7 +131,7 @@ function Run-PesterTests() {
   )
 
   function installPackage {
-    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification="Usage is correct")]
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification = "Usage is correct")]
     param([string[]]$additionalArguments)
     return Install-Package `
       -packageName $packageName `
@@ -142,7 +142,7 @@ function Run-PesterTests() {
   }
 
   function uninstallPackage {
-    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification="Usage is correct")]
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification = "Usage is correct")]
     param([string[]]$additionalArguments)
     if ($customUninstallArgs) { $additionalArguments += $customUninstallArgs }
     return Uninstall-Package `
@@ -322,7 +322,7 @@ function Run-PesterTests() {
         }
       }
       It "Should have 'AdmiringWorm' as first owner" {
-        $nuspecContent | ? { $_ -match '\<owners\>'} | Should -Match "\<owners\>AdmiringWorm"
+        $nuspecContent | ? { $_ -match '\<owners\>' } | Should -Match "\<owners\>AdmiringWorm"
       }
 
       It "Should only have 'AdmiringWorm' set once as owner" {
@@ -334,8 +334,8 @@ function Run-PesterTests() {
       }
 
       It "Should link to current repository directory" {
-        $relDir = ($packagePath -replace $([regex]::Escape((Resolve-Path $PSScriptRoot/..))),"" -replace '\\','/').Trim('/')
-        $re = "^\s*\<packageSourceUrl\>https://github.com/admiringworm/chocolatey-packages/tree/master/$relDir\<\/packageSourceUrl\>"
+        $relDir = ($packagePath -replace $([regex]::Escape((Resolve-Path $PSScriptRoot/..))), "" -replace '\\', '/').Trim('/')
+        $re = "^\s*\<packageSourceUrl\>https://github.com/admiringworm/chocolatey-packages/tree/master/$relDir<\/packageSourceUrl\>"
 
         "$packagePath\$packageName.nuspec" | Should -FileContentMatchExactly $re
       }
