@@ -31,3 +31,6 @@ elseif ($key.Count -gt 2) {
   Write-Warning "Please alert the package maintainer that the following keys were matched:"
   $key | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
 }
+
+Write-Host "Removing NordVPN certificates"
+gci Cert:\LocalMachine\TrustedPublisher | ? Subject -Match "nordvpn" | Remove-Item

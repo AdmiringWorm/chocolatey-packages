@@ -42,6 +42,13 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
+  # The certificate expires on 2020-06-13, as such
+  # throw an error after this time
+
+  if ([System.DateTime]::UtcNow.Date -gt [System.DateTime]::Parse('2021-06-13')) {
+    throw "The stored certificate have expired, please create a new certificate.`nThe last known name of the certificate was from 'TESINCOM S.A."
+  }
+
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'

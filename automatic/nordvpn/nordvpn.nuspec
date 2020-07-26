@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nordvpn</id>
-    <version>6.30.10</version>
+    <version>6.31.5</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/nordvpn</packageSourceUrl>
     <owners>AdmiringWorm, Sanshiro</owners>
     <title>NordVPN</title>
@@ -31,9 +31,7 @@ Online security is the biggest challenge in today's interconnected world, so it'
 - See [here](https://nordvpn.com/features/) for more features.
 ]]></description>
     <dependencies>
-      <dependency id="kb3033929" version="1.0.3" />
-      <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="dotnetfx" version="4.8.0.0" />
     </dependencies>
   </metadata>
   <files>
