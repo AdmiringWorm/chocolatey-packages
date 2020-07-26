@@ -27,7 +27,10 @@ function global:au_AfterUpdate {
 
 function GetResultInformation([string]$url32) {
   Get-WebFile $url32 $dest | Out-Null
-  $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
+  $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion.Trim() }
+  if ($version -match "(\d+\.){3}0$") {
+    $version = $version -replace "\.0$", ""
+  }
 
   return @{
     URL32          = $url32
@@ -46,7 +49,7 @@ function global:au_GetLatest {
 
   $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
     GetResultInformation $url32
-  } -OnUpdated { @{ URL32 = $url32 }}
+  } -OnUpdated { @{ URL32 = $url32 } }
 
   if ($result.RemoteVersion) {
     $result["URL32"] = $result["URL32"] -replace '\/latest\/', "/$($result["RemoteVersion"])/"
