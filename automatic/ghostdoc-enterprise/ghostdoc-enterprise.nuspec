@@ -16,7 +16,7 @@
     <docsUrl>http://submain.com/ghostdoc/tutorials.aspx</docsUrl>
     <mailingListUrl>http://community.submain.com/forums/30/ShowForum.aspx</mailingListUrl>
     <bugTrackerUrl>http://support.submain.com/Main/</bugTrackerUrl>
-    <tags>ghostdoc admin notsilent trial documentation extension</tags>
+    <tags>ghostdoc-enterprise ghostdoc admin notsilent trial documentation extension</tags>
     <summary>GhostDoc is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[**GhostDoc** is a Visual Studio extension that automatically generates XML documentation comments for methods and properties based on their type, parameters, name, and other contextual information.
@@ -41,7 +41,7 @@ If you follow good naming conventions in your code, then you will get very decen
 
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
-    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx  
+    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.28.01" />
