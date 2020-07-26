@@ -42,7 +42,7 @@ install:
         if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade }
         else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
       }
-      Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+      Install-Module Pester -RequiredVersion 4.10.1 -Scope CurrentUser -Force -SkipPublisherCheck
   - ps: "Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version"
   - ps: $PSVersionTable
   - cmd: git --version
