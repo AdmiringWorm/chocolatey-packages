@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://github.com/coq/coq/releases/download/V8.11.2/coq-8.11.2-installer-windows-i686.exe'
-  url64bit       = 'https://github.com/coq/coq/releases/download/V8.11.2/coq-8.11.2-installer-windows-x86_64.exe'
+  url            = 'https://github.com/coq/coq/releases/download/V8.12.0/coq-8.12.0-installer-windows-i686.exe'
+  url64bit       = 'https://github.com/coq/coq/releases/download/V8.12.0/coq-8.12.0-installer-windows-x86_64.exe'
   softwareName   = 'coq*'
-  checksum       = '8da902232a5e560bee3ae4498466144da36db09de3a0051e94c33f53b5ec424e'
+  checksum       = '519b17b4c9bd893cf27b9228dd8359a104ba10159a4a8f90c55a33632776a3d9'
   checksumType   = 'sha256'
-  checksum64     = '26b04bffd904f91e508be99dfda7d8c5b3521c1ea98f76c29dcf4876fa4733b9'
+  checksum64     = 'e957be5a013669215639e34f954727824f385b785d0e2a8bdf08a6078c26c1a6'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
