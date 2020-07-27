@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>io-ninja</id>
-    <version>3.14.3</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
+    <version>3.14.4</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>IO Ninja</title>
     <authors>Tibbo Technology Inc</authors>
