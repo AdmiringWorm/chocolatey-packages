@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer</id>
-    <version>4.0.6</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer</packageSourceUrl>
+    <version>4.0.7</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/privazer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer</title>
     <authors>Goversoft LLC</authors>
@@ -27,7 +27,7 @@ Privacy protection: PrivaZer prevents recovery of your activities.
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/privazer.install/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="privazer.install" version="[4.0.6]" />
+      <dependency id="privazer.install" version="[4.0.7]" />
     </dependencies>
   </metadata>
   <files>

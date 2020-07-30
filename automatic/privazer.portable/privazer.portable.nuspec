@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer.portable</id>
-    <version>4.0.6</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/privazer.portable</packageSourceUrl>
+    <version>4.0.7</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/privazer.portable</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer (Portable)</title>
     <authors>Goversoft LLC</authors>

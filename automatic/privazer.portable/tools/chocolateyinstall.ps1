@@ -5,7 +5,7 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   url            = 'https://privazer.com/PrivaZer.exe'
-  checksum       = 'ae4458ae44f71496a302f1ef4b0f4534c6826dfdb176687cc46155419d609fde819ba0f1c686f35a4c340f1a35a6ae76413469958f75c635a8887bd9c31e32f3'
+  checksum       = 'c10603cb409da528702fbf5975c1979b322f069f3762bbf897b73ed70a48fa7c31f911176143f0412475fc95e9cf3e98b133cff3d9657b92b99343f8c12084c2'
   checksumType   = 'sha512'
   fileFullPath   = "$toolsDir\privazer.exe"
 }
