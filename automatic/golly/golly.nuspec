@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>golly</id>
-    <version>3.3</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/golly</packageSourceUrl>
+    <version>3.4</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/golly</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Golly Game of Life</title>
     <authors>The Golly Gang</authors>

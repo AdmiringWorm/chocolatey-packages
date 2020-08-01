@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- Server: sfs-forge-3 -->
+<!-- Server: sfs-forge-6 -->
 
 
     
@@ -35,7 +35,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
     <title>
   Golly / Code /
-  [7d9ec0]
+  [a4cf10]
   /docs/License.html
 </title>
     
@@ -43,13 +43,13 @@
 <meta name="viewport" content="width=1100">
 
 
-<link rel="icon" sizes="180x180" href="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/images/sandiego/logo-180x180.png" type="image/png">
-<link rel="icon" sizes="any" href="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" sizes="180x180" href="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/images/sandiego/logo-180x180.png">
-<link rel="mask-icon" href="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg" color="#FF6600">
+<link rel="icon" sizes="180x180" href="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/images/sandiego/logo-180x180.png" type="image/png">
+<link rel="icon" sizes="any" href="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/images/sandiego/logo-180x180.png">
+<link rel="mask-icon" href="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/images/sandiego/svg/originals/sf-icon-orange-no_sf.svg" color="#FF6600">
 
 <!--[if lt IE 7 ]>
-  <script src="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
+  <script src="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/js/sftheme/vendor/dd_belatedpng.js"></script>
   <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
 <![endif]-->
 <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet'>
@@ -65,17 +65,17 @@ SF.cdn = "https://a.fsdn.com/con";
     
         <link rel="stylesheet"
                 type="text/css"
-                href="https://a.fsdn.com/allura/nf/1570050973/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Fhilite.css%3Ballura%2Fcss%2Fforge%2Ftooltipster.css"
+                href="https://a.fsdn.com/allura/nf/1596141324/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Fhilite.css%3Ballura%2Fcss%2Fforge%2Ftooltipster.css"
                 >
     
         <link rel="stylesheet"
                 type="text/css"
-                href="https://a.fsdn.com/allura/nf/1570050973/_ew_/allura/css/font-awesome.min.css"
+                href="https://a.fsdn.com/allura/nf/1596141324/_ew_/allura/css/font-awesome.min.css"
                 >
     
         <link rel="stylesheet"
                 type="text/css"
-                href="https://a.fsdn.com/allura/nf/1570050973/_ew_/theme/sftheme/css/forge.css"
+                href="https://a.fsdn.com/allura/nf/1596141324/_ew_/theme/sftheme/css/forge.css"
                 >
     
         
@@ -86,7 +86,7 @@ SF.cdn = "https://a.fsdn.com/con";
         <!-- ew:head_js -->
 
     
-        <script type="text/javascript" src="https://a.fsdn.com/allura/nf/1570050973/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"></script>
+        <script type="text/javascript" src="https://a.fsdn.com/allura/nf/1596141324/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fpromise.polyfill.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp3.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fmodernizr.3.3.1.custom.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"></script>
     
         
 <!-- /ew:head_js -->
@@ -99,6 +99,13 @@ SF.cdn = "https://a.fsdn.com/con";
 .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
 .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
   overflow: visible;
+  font-size: 22px;
+  width: 340px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5) label, .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) label {
+  font-size: 14px;
 }
         </style>
     
@@ -112,7 +119,7 @@ SF.cdn = "https://a.fsdn.com/con";
         }
     </style>
 
-    <style>.XujNyHyjnyAYxwYbHqrnMxc {
+    <style>.XwrCuHDtMOwwpIdwrFDwEqwqtHwCvsOOkdg {
         display: none
     }</style>
 
@@ -171,6 +178,7 @@ SF.cdn = "https://a.fsdn.com/con";
 
 <body class="
 body_class sandiego_chrome  legacy_chrome  l-allow-natural-width 
+no-cmp
 " id="forge">
 
     
@@ -189,7 +197,29 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
     <!-- Menu -->
     <ul class="header-nav-menulist">
-        <li class="highlight social row">
+        <li class="highlight search">
+            <form method="get" action="/directory/">
+    
+        <input type="text" placeholder="Search for software or solutions" autocomplete="off" name="q" >
+        
+        <label>
+        <input type="submit" class="bt" value="">
+            
+
+<svg  viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
+        </label>
+    
+    </form>
+        </li>
+        
+        <li class="highlight"><a href="">Join/Login</a></li>
+        
+        <li><a href="/directory/">Open Source Software</a></li>
+        <li><a href="/software/">Business Software</a></li>
+        <li><a href="/blog" title="Blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/support">Help</a></li>
+        <li class="social row">
             <span class="social-label">Connect</span>
             <span class="social-icons">
                 
@@ -209,64 +239,41 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 <span></span>
             </span>
         </li>
-        <li class="highlight search">
-            <form method="get" action="/directory/">
-    
-        <input type="text" placeholder="Search for software or solutions" autocomplete="off" name="q" >
-        
-        <label>
-        <input type="submit" class="bt" value="">
-            
-
-<svg  viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg>
-        </label>
-    
-    </form>
-        </li>
-        
-
-    
-
-    
-    
-    
-        <li class="highlight"><a href="/articles/">Articles</a></li>
-    
-    
-        <li class="highlight"><a href="/cloud-storage-providers/">Cloud Storage</a></li>
-    
-    
-        <li class="highlight"><a href="/business-voip/">Business VoIP</a></li>
-    
-    
-    
-        <li class="highlight"><a href="/speedtest/">Internet Speed Test</a></li>
-    
-
-    
-
-        <li><a href="/directory/">Open Source Software</a></li>
-        <li><a href="/software/">Business Software</a></li>
-        <li><a href="/blog" title="Blog">Blog</a></li>
-        <li><a href="https://deals.sourceforge.net/?utm_source=sourceforge&utm_medium=navbar&utm_campaign=homepage">Deals</a></li>
-        <li><a href="/support">Help</a></li>
-        
-        <li><a href="/create">Create</a></li>
-        
-        
-        <li><a href="">Join/Login</a></li>
-        
-        <li><a href="/about">About</a></li>
-        <li><a href="/top">Top Downloaded Projects</a></li>
-        <li><a href="/blog/category/sitestatus/">Site Status</a></li>
-        <li><a href="https://twitter.com/sfnet_ops" rel="nofollow">@sfnet_ops</a></li>
-        <li><a href="https://twitter.com/sourceforge" rel="nofollow">@sourceforge</a></li>
-        <li><a href="https://p.sf.net/sourceforge/docs">Site Documentation</a></li>
-        <li><a href="/support">Support Request</a></li>
-        <li><a href="https://slashdotmedia.com/terms-of-use/" rel="nofollow">Terms</a></li>
         <li><a href="https://slashdotmedia.com/privacy-statement/" rel="nofollow">Privacy</a></li>
-        <li><a href="https://slashdotmedia.com/opt-out-choices/" rel="nofollow">Opt Out</a></li>
-        <li><a href="https://slashdotmedia.com/" rel="nofollow">Advertise</a></li>
+        <li><a id="header-nav-more" data-toggle="header-nav-more header-nav-more-content" data-toggler=".toggled">More</a></li>
+        <li>
+            <ul id="header-nav-more-content" class="toggled" data-toggler=".toggled">
+                
+
+    
+
+    
+    
+    
+        <li><a href="/articles/">Articles</a></li>
+    
+    
+        <li><a href="/business-voip/">Business VoIP</a></li>
+    
+    
+
+    
+ 
+                
+                <li><a href="/create">Create</a></li>
+                
+                <li><a href="/top">Top Downloaded Projects</a></li>
+                <li><a href="https://deals.sourceforge.net/?utm_source=sourceforge&utm_medium=navbar&utm_campaign=homepage">Deals</a></li>
+                <li><a href="/blog/category/sitestatus/">Site Status</a></li>
+                <li><a href="https://twitter.com/sfnet_ops" rel="nofollow">@sfnet_ops</a></li>
+                <li><a href="https://twitter.com/sourceforge" rel="nofollow">@sourceforge</a></li>
+                <li><a href="https://p.sf.net/sourceforge/docs">Site Documentation</a></li>
+                <li><a href="/support">Support Request</a></li>
+                <li><a href="https://slashdotmedia.com/terms-of-use/" rel="nofollow">Terms</a></li>
+                <li><a href="https://slashdotmedia.com/opt-out-choices/" rel="nofollow">Opt Out</a></li>
+                <li><a href="https://slashdotmedia.com/" rel="nofollow">Advertise</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <div class="off-canvas-content" data-off-canvas-content>
@@ -327,7 +334,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 
     
         <div class="nav-dropdown">
-            <a href="/directory" title="Browse">Open Source Software</a>
+            <a href="/directory/" title="Browse">Open Source Software</a>
 
             <ul class="nav-dropdown-menu">
                 <li><a href="/directory/business-enterprise/financial/accounting/">Accounting</a></li>
@@ -348,21 +355,21 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li><a href="/directory/business-enterprise/suites/">Office</a></li>
                 <li><a href="/directory/science-engineering/">Science & Engineering</a></li>
                 <li><a href="/directory/games/games/">Games</a></li>
-                <li><a href="/directory">All Software</a></li>
+                <li><a href="/directory/">All Software</a></li>
             </ul>
         </div>
 
         <div class="nav-dropdown">
-            <a href="/software">Business Software</a>
+            <a href="/software/">Business Software</a>
             <ul class="nav-dropdown-menu  dropdown-with-pane">
                 
                 <li class="pane-parent">
                     <a href="/software/crm/">CRM</a>
                     <div class="sub-pane">
-                        <div class="heading">CRM</div>
-
                         
-                            <a href="/software/crm/">CRM</a>
+                        <div class="heading">CRM</div>
+                        
+
                         
                             <a href="/software/customer-service/">Customer Service</a>
                         
@@ -381,9 +388,11 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 </li>
                 
                 <li class="pane-parent">
-                    <a href="/software/accounting-finance/">Accounting &amp; Finance</a>
+                    <a href="/software/finance/">Finance</a>
                     <div class="sub-pane">
-                        <div class="heading">Accounting &amp; Finance</div>
+                        
+                        <div class="heading">Finance</div>
+                        
 
                         
                             <a href="/software/accounting/">Accounting</a>
@@ -392,11 +401,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/budgeting/">Budgeting</a>
                         
-                            <a href="/software/compliance/">Compliance</a>
-                        
                             <a href="/software/payment-processing/">Payment Processing</a>
                         
-                            <a href="/software/risk-management/">Risk Management</a>
+                            <a href="/software/expense-report/">Expense Report</a>
                         
 
                     </div>
@@ -405,7 +412,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/business-intelligence/">Analytics</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">Analytics</div>
+                        
 
                         
                             <a href="/software/big-data/">Big Data</a>
@@ -423,16 +432,24 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/collaboration/">Collaboration</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">Collaboration</div>
+                        
 
                         
                             <a href="/software/collaboration/">Team Collaboration</a>
                         
                             <a href="/software/idea-management/">Idea Management</a>
                         
-                            <a href="/software/conference/">Conferencing</a>
+                            <a href="/software/web-conferencing/">Web Conferencing</a>
                         
-                            <a href="/software/engineering-cad/">CAD</a>
+                            <a href="/software/employee-communication-tools/">Employee Communication Tools</a>
+                        
+                            <a href="/software/screen-sharing/">Screen Sharing</a>
+                        
+                            <a href="/software/cad/">CAD</a>
+                        
+                            <a href="/software/webinar/">Webinar</a>
                         
 
                     </div>
@@ -441,7 +458,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/communications/">Communications</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">Communications</div>
+                        
 
                         
                             <a href="/software/call-center/">Call Center</a>
@@ -458,8 +477,6 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/voip/">VoIP</a>
                         
-                            <a href="/software/web-conferencing/">Web Conferencing</a>
-                        
 
                     </div>
                 </li>
@@ -467,7 +484,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/marketing/">Marketing</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">Marketing</div>
+                        
 
                         
                             <a href="/software/brand-management/">Brand Management</a>
@@ -486,14 +505,44 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/digital-signage/">Digital Signage</a>
                         
+                            <a href="/software/virtual-event-platforms/">Virtual Event Platforms</a>
+                        
 
                     </div>
                 </li>
                 
                 <li class="pane-parent">
-                    <a href="/software/erp/">ERP</a>
+                    <a href="/software/sales/">Sales</a>
                     <div class="sub-pane">
-                        <div class="heading">ERP</div>
+                        
+                        <div class="heading">Sales</div>
+                        
+
+                        
+                            <a href="/software/sales-force-automation/">Sales Force Automation</a>
+                        
+                            <a href="/software/sales-intelligence/">Sales Intelligence</a>
+                        
+                            <a href="/software/inside-sales/">Inside Sales</a>
+                        
+                            <a href="/software/sales-enablement/">Sales Enablement</a>
+                        
+                            <a href="/software/sales-engagement/">Sales Engagement</a>
+                        
+                            <a href="/software/contact-management/">Contact Management</a>
+                        
+                            <a href="/software/cpq/">CPQ</a>
+                        
+
+                    </div>
+                </li>
+                
+                <li class="pane-parent">
+                    <a href="/software/operations-management/">Operations Management</a>
+                    <div class="sub-pane">
+                        
+                        <div class="heading">Operations Management</div>
+                        
 
                         
                             <a href="/software/erp/">ERP</a>
@@ -506,6 +555,14 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/supply-chain-management/">Supply Chain Management</a>
                         
+                            <a href="/software/ecommerce/">eCommerce</a>
+                        
+                            <a href="/software/quality-management/">Quality Management</a>
+                        
+                            <a href="/software/cmms/">CMMS</a>
+                        
+                            <a href="/software/manufacturing/">Manufacturing</a>
+                        
 
                     </div>
                 </li>
@@ -513,7 +570,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/human-resources/">HR</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">HR</div>
+                        
 
                         
                             <a href="/software/360-degree-feedback/">360 Degree Feedback</a>
@@ -534,6 +593,8 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/training/">Training</a>
                         
+                            <a href="/software/employee-monitoring/">Employee Monitoring</a>
+                        
 
                     </div>
                 </li>
@@ -541,20 +602,16 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/it-management/">IT Management</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">IT Management</div>
+                        
 
                         
-                            <a href="/software/it-management/">IT Management</a>
-                        
                             <a href="/software/application-performance-management/">Application Performance Management</a>
-                        
-                            <a href="/software/application-lifecycle-management/">Application Lifecycle Management</a>
                         
                             <a href="/software/it-asset-management/">IT Asset Management</a>
                         
                             <a href="/software/database-management/">Database Management</a>
-                        
-                            <a href="/software/cloud-management/">Cloud Management</a>
                         
                             <a href="/software/network-monitoring/">Network Monitoring</a>
                         
@@ -564,6 +621,12 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/devops/">DevOps</a>
                         
+                            <a href="/software/compliance/">Compliance</a>
+                        
+                            <a href="/software/remote-desktop/">Remote Desktop</a>
+                        
+                            <a href="/software/remote-support/">Remote Support</a>
+                        
 
                     </div>
                 </li>
@@ -571,7 +634,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/it-security/">Security</a>
                     <div class="sub-pane">
+                        
                         <div class="heading">Security</div>
+                        
 
                         
                             <a href="/software/it-security/">IT Security</a>
@@ -584,6 +649,8 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                         
                             <a href="/software/email-security/">Email Security</a>
                         
+                            <a href="/software/risk-management/">Risk Management</a>
+                        
 
                     </div>
                 </li>
@@ -591,10 +658,10 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <li class="pane-parent">
                     <a href="/software/project-management/">Project Management</a>
                     <div class="sub-pane">
-                        <div class="heading">Project Management</div>
-
                         
-                            <a href="/software/project-management/">Project Management</a>
+                        <div class="heading">Project Management</div>
+                        
+
                         
                             <a href="/software/content-management/">Content Management System (CMS)</a>
                         
@@ -605,6 +672,30 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                             <a href="/software/time-tracking/">Time Tracking</a>
                         
                             <a href="/software/pdf/">PDF</a>
+                        
+
+                    </div>
+                </li>
+                
+                <li class="pane-parent">
+                    <a href="/software/education/">Education</a>
+                    <div class="sub-pane">
+                        
+                        <div class="heading">Education</div>
+                        
+
+                        
+                            <a href="/software/learning-management-system/">Learning Management Systems</a>
+                        
+                            <a href="/software/learning-experience-platforms/">Learning Experience Platforms</a>
+                        
+                            <a href="/software/virtual-classroom/">Virtual Classroom</a>
+                        
+                            <a href="/software/course-authoring/">Course Authoring</a>
+                        
+                            <a href="/software/school-administration/">School Administration</a>
+                        
+                            <a href="/software/student-information-system/">Student Information Systems</a>
                         
 
                     </div>
@@ -622,15 +713,6 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 
                 <li><a href="/business-voip/">Business VoIP</a></li>
                 
-
-                
-                <li><a href="/cloud-storage-providers/">Cloud Storage</a></li>
-                
-
-                
-                <li><a href="/speedtest/">Internet Speed Test</a></li>
-                
-
             </ul>
         </div>
 
@@ -740,10 +822,10 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
     <div class="content">
     
         
-    <nav id="breadcrumbs" class="breadcrumbs">
+    <nav id="breadcrumbs" class="breadcrumbs rtl">
         <ul>
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/">Home</a></li>
-            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/directory">Browse</a></li>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="/directory/">Browse</a></li>
             
             
                 
@@ -769,13 +851,13 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 <div class="overview">
 
     
-
 <div class="project-icon   " >
     
     
     <img itemprop="image" alt="Golly Icon" 
     
-    src="/p/golly/icon?1370439578"
+    
+    src="https://a.fsdn.com/allura/p/golly/icon?1370439578"
     /></div>
 
 
@@ -792,38 +874,38 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
         
             
             
-          
-
-
+           
         
-        
-        <h3 class="brought-by">
+            
+            
+            <h3 class="brought-by">
 
-            
+                
 
-            Brought to you by:
+                Brought to you by:
+                
+                    
+                        <a href="/u/andykt/">andykt</a>,
+                    
+                
+                    
+                        <a href="/u/apgoucher/">apgoucher</a>,
+                    
+                
+                    
+                        <a href="/u/dvgrn/">dvgrn</a>,
+                    
+                
+                    
+                        <a href="/u/maksverver/">maksverver</a>,
+                    
+                
+                    
+                        and <a href="/p/golly/_members/">2 others</a>
+                    
+                
+            </h3>
             
-                
-                    <a href="/u/andykt/">andykt</a>,
-                
-            
-                
-                    <a href="/u/apgoucher/">apgoucher</a>,
-                
-            
-                
-                    <a href="/u/dvgrn/">dvgrn</a>,
-                
-            
-                
-                    <a href="/u/maksverver/">maksverver</a>,
-                
-            
-                
-                    and <a href="/p/golly/_members/">2 others</a>
-                
-            
-        </h3>
         
 
         
@@ -850,6 +932,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 
 <div id="top_nav_admin">
 <ul class="dropdown">
+  
   
     <li class="">
         <a href="/projects/golly/" class="tool-summary-32" >
@@ -1016,7 +1099,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
         <a href="/p/golly/code/forks/"  >
       
       <span class="has_small">Forks</span>
-      <small>4</small></a>
+      <small>7</small></a>
   </li>
   
       
@@ -1071,7 +1154,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 
                 <div class="grid-20 pad">
                     <h2 class="dark title">
-<a href="/p/golly/code/ci/7d9ec08652526c2416c12c2112370aa4aaf55189/">[7d9ec0]</a>:
+<a href="/p/golly/code/ci/a4cf101805e27c15d87dbbeaead7b76198fc31ac/">[a4cf10]</a>:
 
   
       <a href="./../"><b class="fa fa-folder-open-o" title="Root directory"></b></a> /
@@ -1088,7 +1171,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
     
     <a class="icon" href="#" id="maximize-content" title="Maximize"><i class="fa fa-expand"></i>&nbsp;Maximize</a>
     <a class="icon" href="#" id="restore-content" title="Restore"><i class="fa fa-compress"></i>&nbsp;Restore</a>
-<a class="icon" href="/p/golly/code/ci/7d9ec08652526c2416c12c2112370aa4aaf55189/log/?path=/docs/License.html" title="History"><i class="fa fa-calendar"></i>&nbsp;History</a>
+<a class="icon" href="/p/golly/code/ci/a4cf101805e27c15d87dbbeaead7b76198fc31ac/log/?path=/docs/License.html" title="History"><i class="fa fa-calendar"></i>&nbsp;History</a>
 
                         </small>
                         <!-- /actions -->
@@ -1756,7 +1839,7 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 </div><div id="l7" class="code_block">Golly is an open source, cross-platform application for exploring
 </div><div id="l8" class="code_block">John Conway&#39;s Game of Life and many other types of cellular automata.
 </div><div id="l9" class="code_block">
-</div><div id="l10" class="code_block">Copyright (C) 2005-2019 The Golly Gang (Andrew Trevorrow, Tomas Rokicki,
+</div><div id="l10" class="code_block">Copyright (C) 2005-2020 The Golly Gang (Andrew Trevorrow, Tomas Rokicki,
 </div><div id="l11" class="code_block">Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo,
 </div><div id="l12" class="code_block">Brenton Bostick, Chris Rowett).
 </div><div id="l13" class="code_block">
@@ -2419,7 +2502,6 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                     <a href="/create" title="Create a Project">Create a Project</a>
                     <a href="/directory/" title="Open Source Software Directory">Open Source Software</a>
                     <a href="/software/" title="Business Software Directory">Business Software</a>
-                    <a href="/software/games/" title="Commercial Games Directory">Commercial Games</a>
                 
 
                 
@@ -2451,8 +2533,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 
     <section class="l-nav-bottom">
         <nav class="row">
-            <div class="columns small-12 large-6 copyright-notice">&copy; 2019 Slashdot Media. All Rights Reserved.</div>
+            <div class="columns small-12 large-6 copyright-notice">&copy; 2020 Slashdot Media. All Rights Reserved.</div>
             <div class="columns large-6 links">
+                
                 <span class="show-for-large">
                     <a href="http://slashdotmedia.com/terms-of-use" title="Terms" rel="nofollow">Terms</a>
                     <a href="http://slashdotmedia.com/privacy-statement/" title="Privacy" rel="nofollow">Privacy</a>
@@ -2460,7 +2543,9 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
                 <span id='teconsent'></span>
                 
                 <span class="show-for-large">
+                    
                     <a href="http://slashdotmedia.com/opt-out-choices" title="Opt Out" rel="nofollow">Opt Out</a>
+                    
                     <a href="http://slashdotmedia.com/" title="Advertise" rel="nofollow">Advertise</a>
                 </span>
             </div>
@@ -2469,8 +2554,11 @@ body_class sandiego_chrome  legacy_chrome  l-allow-natural-width
 </footer>
 
 
-<div id="l-no-css" style="font-family:sans-serif;width:100%;font-size:2em;background:#fff;color:#ff3300;padding:2rem;border:1px solid #ff3300;position:absolute;top: 0;left:0;box-sizing: border-box;">
-    Oh no! Some styles failed to load. Please try reloading this page, or <a href="/support" target="_blank" style="color:#0099cc;">contact support</a>.
+<div id="l-no-css" style="z-index:100;font-family:sans-serif;width:100%;font-size:1.5em;background:#fff;padding:2rem;border:1px solid #ff3300;position:absolute;top: 0;left:0;box-sizing: border-box;">
+    <h1 style="font-family:sans-serif;color:#ff3300;">Oh no! Some styles failed to load. 😵</h1>
+    
+        Please try <a href="https://sourceforge.net/p/golly/code/ci/master/tree/docs/License.html?css-reload=1" rel="nofollow">reloading this page</a>
+    
 </div>
 <script>
 
@@ -2482,6 +2570,24 @@ document.addEventListener('DOMContentLoaded', function () {
             svgs[x].style.display = 'none';
         }
         window.scroll(0, 0);  
+        document.getElementById('offCanvas').style.display = 'none';
+        var dropdowns = document.querySelectorAll('.nav-dropdown-menu');
+        for (x=0; x<dropdowns.length; x++){
+            dropdowns[x].style.display = 'none';
+        }
+        var backdrop = document.querySelectorAll('.backdrop');
+        if (backdrop.length) {
+            backdrop[0].style.display = 'none';
+        }
+        var dlpNewsletterModal = document.getElementById('psp-newsletter-modal');
+        if (dlpNewsletterModal) {
+            dlpNewsletterModal.style.display = 'none';
+        }
+        var problemDownloading = document.getElementById('btn-problems-downloading');
+        if (problemDownloading) {
+            problemDownloading.setAttribute('href', problemDownloading.getAttribute('data-release-url'));
+            problemDownloading.style.fontSize = '40px';
+        }
     }
 });
 </script>
@@ -2490,11 +2596,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
-<div id="newsletter-floating" class="sandiego">
-    <h2>Get latest updates about Open Source Projects, Conferences and News.</h2>
-    <a class="button blue" href="/user/newsletters?source=floating">Sign Up</a>
-    <a id="btn-float-close">No, Thank you</a>
-</div>
+    
+    <div id="newsletter-floating" class="sandiego">
+        <h2>Get latest updates about Open Source Projects, Conferences and News.</h2>
+        <a class="button blue btn-closer" href="/user/newsletters?source=floating">Sign Up</a>
+        <a id="btn-float-close" class="btn-closer">No, Thank you</a>
+    </div>
+    
 
 
 
@@ -2511,7 +2619,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- ew:body_js -->
 
 
-    <script type="text/javascript" src="https://a.fsdn.com/allura/nf/1570050973/_ew_/_slim/js?href=allura%2Fjs%2Fjquery.notify.js%3Ballura%2Fjs%2Fjquery.tooltipster.js%3Ballura%2Fjs%2Fsylvester.js%3Ballura%2Fjs%2Ftwemoji.min.js%3Ballura%2Fjs%2Fpb.transformie.min.js%3Ballura%2Fjs%2Fallura-base.js%3Ballura%2Fjs%2Fchecklist.js%3Ballura%2Fjs%2Fadmin_modal.js%3Bjs%2Fjquery.lightbox_me.js%3Ballura%2Fjs%2Fmemorable.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsticky.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Faudero-sticky.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fchrome.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Futilities.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.core.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.mediaQuery.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.keyboard.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.box.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.nest.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.dropdownMenu.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.offcanvas.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fproject.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fjquery.typeahead.min.js%3Ballura%2Fjs%2Fmaximize-content.js"></script>
+    <script type="text/javascript" src="https://a.fsdn.com/allura/nf/1596141324/_ew_/_slim/js?href=allura%2Fjs%2Fjquery.notify.js%3Ballura%2Fjs%2Fjquery.tooltipster.js%3Ballura%2Fjs%2Fsylvester.js%3Ballura%2Fjs%2Ftwemoji.min.js%3Ballura%2Fjs%2Fpb.transformie.min.js%3Ballura%2Fjs%2Fallura-base.js%3Ballura%2Fjs%2Fchecklist.js%3Ballura%2Fjs%2Fadmin_modal.js%3Bjs%2Fjquery.lightbox_me.js%3Ballura%2Fjs%2Fmemorable.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsticky.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Faudero-sticky.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fchrome.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Futilities.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.core.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.mediaQuery.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.keyboard.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.box.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.nest.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.dropdownMenu.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.offcanvas.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.toggler.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fproject.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fjquery.typeahead.min.js%3Ballura%2Fjs%2Fmaximize-content.js"></script>
 
     
 <!-- /ew:body_js -->
@@ -2520,6 +2628,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- ew:body_js_tail -->
 
+
+    <script type="text/javascript" src="https://a.fsdn.com/allura/nf/1596141324/_ew_/_slim/js?href=theme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.triggers.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.reveal.min.js"></script>
 
     
 <!-- /ew:body_js_tail -->
@@ -2587,19 +2697,19 @@ document.addEventListener('DOMContentLoaded', function () {
     $(element).bind('click', function() {
       // Trick to ignore double and triple clicks
       clicks++;
-      if (clicks == 1) {
+      if (clicks === 1) {
         setTimeout(function() {
-          if (clicks == 1) {
+          if (clicks === 1) {
             var hash = window.location.hash.substring(1);
             if (hash !== '' && hash.substring(0, 1) === 'l' && !isNaN(hash.substring(1))) {
               $('#' + hash).css('background-color', 'transparent');
             }
             $(element).css('background-color', '#ffff99');
-            window.location.href = '#' + $(element).attr('id');
-          };
+            window.history.pushState({}, document.title, window.location.pathname + window.location.search + '#' + $(element).attr('id'));
+          }
           clicks = 0;
         }, 500);
-      };
+      }
     });
   });
 }());
