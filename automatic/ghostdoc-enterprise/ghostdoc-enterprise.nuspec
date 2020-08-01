@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-enterprise</id>
-    <version>2020.1.20070</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/ghostdoc-enterprise</packageSourceUrl>
+    <version>2020.2.20200</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/ghostdoc-enterprise</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Enterprise Edition</title>
     <authors>submain</authors>
@@ -41,8 +41,8 @@ If you follow good naming conventions in your code, then you will get very decen
 
 - Uninstall is not completely silent, after uninstall a browser window pops up
 ]]></description>
-    <releaseNotes>[Software Changelog](https://support.submain.com/kb/a60/whats-new-in-ghostdoc-v2018.aspx
-[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
+    <releaseNotes>[Software Changelog](  
+[Package Changelog](https://github.com/admiringworm/chocolatey-packages/blob/master/automatic/ghostdoc-pro/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.28.01" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
