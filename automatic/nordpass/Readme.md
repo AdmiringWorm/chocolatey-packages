@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@25a4543b38acaadc800639b203a00610ff05bf77/automatic/nordpass/icons/48x48.png" height="48" width="48" /> ![NordPass](https://img.shields.io/chocolatey/v/nordpass.svg?label=NordPass&style=for-the-badge)](https://chocolatey.org/packages/nordpass)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@27fcec4dffef41512280612a26b75b0819c096e2/automatic/nordpass/icons/48x48.png" height="48" width="48" /> ![NordPass](https://img.shields.io/chocolatey/v/nordpass.svg?label=NordPass&style=for-the-badge)](https://chocolatey.org/packages/nordpass)
 
 **We lock passwords. You hold the key.**  
 With NordPass, store your passwords in the cloud, access them on desktop, mobile, or your favorite browser. All encrypted on your device, for your eyes only.

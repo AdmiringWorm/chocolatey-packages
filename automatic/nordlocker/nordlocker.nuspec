@@ -5,8 +5,8 @@
         <!-- == PACKAGE SPECIFIC SECTION == -->
         <!-- This section is about this package, although id and version have ties back to the software -->
         <id>nordlocker</id>
-        <version>0.1</version>
-        <packageSourceUrl>https://github.com/__REPLACE_YOUR_REPO__/nordlocker</packageSourceUrl>
+        <version>2.1.0</version>
+        <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordlocker</packageSourceUrl>
         <owners>AdmiringWorm</owners>
         <!-- ============================== -->
 
@@ -15,13 +15,27 @@
         <title>NordLocker</title>
         <authors>Nord</authors>
         <projectUrl>https://nordlocker.com/</projectUrl>
-        <iconUrl>https://cdn.jsdelivr.net/gh/__REPLACE_YOUR_REPO__@master/icons/nordlocker.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a4adb67f5433ba8605abb004b05405f7c1466915/automatic/nordlocker/icons/128x128.png</iconUrl>
         <copyright>Copyright © 2020 NordLocker.com</copyright>
         <licenseUrl>https://my.nordaccount.com/legal/terms-of-service/nordlocker/</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <tags>nordlocker encryption security</tags>
         <summary>Protect your files effortlessly</summary>
-        <description>__REPLACE__MarkDown_Okay </description>
+        <description><![CDATA[**Protect your files effortlessly**
+Encrypt 2 GB for free today.
+
+## Features
+
+- **Easiest encryption you'll ever use:** NordLocker offers a fast and intuitive interface. But don’t be deceived by the basic process. As soon as you drag a file into the locker, it's encrypted with the most advanced ciphers and principles
+- **Supports all file types:** Create lockers — your digital safes — and protect your data from hackers. Add any file. No one can open your locker or know what's inside without your permission.
+- **Keep your files anywhere you like:** After you encrypt files on your computer, you can transfer them anywhere you like. Like your favorite cloud provider. Or a removable drive. Or keep them on your computer. No matter where your files go, the locker protects them.
+- **Share securely:** Need to transfer confidential data to a partner or a client? Give them access to the encrypted file and send it through email, messenger apps, upload to the cloud, or choose any other service – any way is safe when your files are secured by NordLocker.
+
+## Notes
+
+- This software is only supported on Windows 10 platforms. Installation will fail on earlier platforms.
+- Uninstall is not entirely silent, a question wether you want to keep the application data will be prompted during installation.
+]]></description>
         <dependencies>
             <dependency id="vcredist140" version="14.26.28720.3" />
             <dependency id="dotnetfx" version="4.8.0.20190930" />

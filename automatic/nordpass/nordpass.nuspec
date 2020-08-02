@@ -5,8 +5,8 @@
         <!-- == PACKAGE SPECIFIC SECTION == -->
         <!-- This section is about this package, although id and version have ties back to the software -->
         <id>nordpass</id>
-        <version>__REPLACE__</version>
-        <packageSourceUrl>https://github.com/__REPLACE_YOUR_REPO__/nordpass</packageSourceUrl>
+        <version>2.3.1</version>
+        <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordpass</packageSourceUrl>
         <owners>AdmiringWorm</owners>
         <!-- ============================== -->
 
@@ -15,13 +15,22 @@
         <title>NordPass</title>
         <authors>Nord</authors>
         <projectUrl>https://nordpass.com/</projectUrl>
-        <iconUrl>https://cdn.jsdelivr.net/gh/__REPLACE_YOUR_REPO__@master/icons/nordpass.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@27fcec4dffef41512280612a26b75b0819c096e2/automatic/nordpass/icons/128x128.png</iconUrl>
         <copyright>Copyright © 2020 NordPass.com</copyright>
         <licenseUrl>https://my.nordaccount.com/legal/terms-of-service/nordpass/</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <tags>nordpass password-manager security</tags>
         <summary>We lock passwords. You hold the key.</summary>
-        <description>__REPLACE__MarkDown_Okay </description>
+        <description><![CDATA[**We lock passwords. You hold the key.**  
+With NordPass, store your passwords in the cloud, access them on desktop, mobile, or your favorite browser. All encrypted on your device, for your eyes only.
+
+## Features
+
+- **Manage your passwords effortlessly:** Never reset passwords again. Access them whenever you need them, on any device.
+- **Generate secure passwords:** Whenever you need a new password, use our secure technology with built-in randomness to generate one. You can also adjust your new strong passwords to meet the requirements of different websites.
+- **Store everything that matters:** No more password sharing over email, messenger apps, or pieces of paper. Share passwords with the ones you trust safely and without hassle.
+- **Share passwords securely:** NordPass uses top-of-the-field encryption to protect your vault. It’s used not only by the best password managers, but also by the US Government to protect their classified information.
+]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
