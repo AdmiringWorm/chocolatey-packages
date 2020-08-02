@@ -127,7 +127,8 @@ function Run-PesterTests() {
     [switch]$test32bit,
     [switch]$installWithPreRelease,
     [switch]$failsOn32bit,
-    [switch]$skipChecksumCheck
+    [switch]$skipChecksumCheck,
+    [switch]$skipUninstallCheck
   )
 
   function installPackage {
@@ -425,51 +426,54 @@ function Run-PesterTests() {
           }
         }
 
-        It "Should uninstall package with default arguments" {
-          uninstallPackage | Should -Be 0
-        }
+        if (!$skipUninstallCheck) {
 
-        if ($customUninstallChecks) {
-          $customUninstallChecks | % { . $_ }
-        }
-
-        if ($expectedDefaultDirectory) {
-          It "Should have removed default installation directory" {
-            $expectedDefaultDirectory | Should -Not -Exist
+          It "Should uninstall package with default arguments" {
+            uninstallPackage | Should -Be 0
           }
-        }
 
-        if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-          $expectedShimFiles | % {
-            $shimFile = $_
-            It "Should have removed shimfile $shimFile" {
-              "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+          if ($customUninstallChecks) {
+            $customUninstallChecks | % { . $_ }
+          }
+
+          if ($expectedDefaultDirectory) {
+            It "Should have removed default installation directory" {
+              $expectedDefaultDirectory | Should -Not -Exist
             }
           }
-        }
 
-        if ($expectedUninstallKeys) {
-          Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-
-          $expectedUninstallKeys | % {
-            $key = $_
-            It "Should have removed uninstall registry key '$key" {
-              [array]$foundKeys = Get-UninstallRegistryKey $key
-
-              $foundKeys.Count | Should -Be 0
+          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+            $expectedShimFiles | % {
+              $shimFile = $_
+              It "Should have removed shimfile $shimFile" {
+                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              }
             }
           }
-        }
 
-        if ($filesAvailableOnPath) {
-          Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-          Update-SessionEnvironment
-          $filesAvailableOnPath | % {
-            $file = $_
-            It "$file should be removed from path." {
-              $file = Get-Command $file -ea 0
+          if ($expectedUninstallKeys) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-              $file.Source | Should -BeNullOrEmpty
+            $expectedUninstallKeys | % {
+              $key = $_
+              It "Should have removed uninstall registry key '$key" {
+                [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                $foundKeys.Count | Should -Be 0
+              }
+            }
+          }
+
+          if ($filesAvailableOnPath) {
+            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+            Update-SessionEnvironment
+            $filesAvailableOnPath | % {
+              $file = $_
+              It "$file should be removed from path." {
+                $file = Get-Command $file -ea 0
+
+                $file.Source | Should -BeNullOrEmpty
+              }
             }
           }
         }
@@ -535,49 +539,52 @@ function Run-PesterTests() {
             }
           }
 
-          It "Should uninstall package with custom path" {
-            uninstallPackage | Should -Be 0
-          }
+          if (!$skipUninstallCheck) {
 
-          if ($customUninstallChecks) {
-            $customUninstallChecks | % { . $_ }
-          }
+            It "Should uninstall package with custom path" {
+              uninstallPackage | Should -Be 0
+            }
 
-          It "Should have removed custom installation directory" {
-            $customPath | Should -Not -Exist
-          }
+            if ($customUninstallChecks) {
+              $customUninstallChecks | % { . $_ }
+            }
 
-          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-            $expectedShimFiles | % {
-              $shimFile = $_
-              It "Should have removed shimfile $shimFile" {
-                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            It "Should have removed custom installation directory" {
+              $customPath | Should -Not -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have removed shimfile $shimFile" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
               }
             }
-          }
 
-          if ($expectedUninstallKeys) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+            if ($expectedUninstallKeys) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-            $expectedUninstallKeys | % {
-              $key = $_
-              It "Should have removed uninstall registry key '$key" {
-                [array]$foundKeys = Get-UninstallRegistryKey $key
+              $expectedUninstallKeys | % {
+                $key = $_
+                It "Should have removed uninstall registry key '$key" {
+                  [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                $foundKeys.Count | Should -Be 0
+                  $foundKeys.Count | Should -Be 0
+                }
               }
             }
-          }
 
-          if ($filesAvailableOnPath) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-            Update-SessionEnvironment
-            $filesAvailableOnPath | % {
-              $file = $_
-              It "$file should be removed from path." {
-                $file = Get-Command $file
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be removed from path." {
+                  $file = Get-Command $file
 
-                $file.Source | Should -BeNullOrEmpty
+                  $file.Source | Should -BeNullOrEmpty
+                }
               }
             }
           }
@@ -643,49 +650,52 @@ function Run-PesterTests() {
             }
           }
 
-          It "Should uninstall package with custom path" {
-            uninstallPackage | Should -Be 0
-          }
+          if (!$skipUninstallCheck) {
 
-          if ($customUninstallChecks) {
-            $customUninstallChecks | % { . $_ }
-          }
+            It "Should uninstall package with custom path" {
+              uninstallPackage | Should -Be 0
+            }
 
-          It "Should have removed custom installation directory" {
-            $customPath | Should -Not -Exist
-          }
+            if ($customUninstallChecks) {
+              $customUninstallChecks | % { . $_ }
+            }
 
-          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-            $expectedShimFiles | % {
-              $shimFile = $_
-              It "Should have removed shimfile $shimFile" {
-                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            It "Should have removed custom installation directory" {
+              $customPath | Should -Not -Exist
+            }
+
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have removed shimfile $shimFile" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
               }
             }
-          }
 
-          if ($expectedUninstallKeys) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+            if ($expectedUninstallKeys) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-            $expectedUninstallKeys | % {
-              $key = $_
-              It "Should have removed uninstall registry key '$key" {
-                [array]$foundKeys = Get-UninstallRegistryKey $key
+              $expectedUninstallKeys | % {
+                $key = $_
+                It "Should have removed uninstall registry key '$key" {
+                  [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                $foundKeys.Count | Should -Be 0
+                  $foundKeys.Count | Should -Be 0
+                }
               }
             }
-          }
 
-          if ($filesAvailableOnPath) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-            Update-SessionEnvironment
-            $filesAvailableOnPath | % {
-              $file = $_
-              It "$file should be removed from path." {
-                $file = Get-Command $file
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be removed from path." {
+                  $file = Get-Command $file
 
-                $file.Source | Should -BeNullOrEmpty
+                  $file.Source | Should -BeNullOrEmpty
+                }
               }
             }
           }
@@ -758,58 +768,61 @@ function Run-PesterTests() {
             }
           }
 
-          It "Should uninstall package with default arguments in 32bit mode" {
-            uninstallPackage | Should -Be 0
-          }
+          if (!$skipUninstallCheck) {
 
-          if ($customUninstallChecks) {
-            $customUninstallChecks | % { . $_ }
-          }
+            It "Should uninstall package with default arguments in 32bit mode" {
+              uninstallPackage | Should -Be 0
+            }
 
-          if ($expectedDefaultDirectory) {
-            $re = [regex]::Escape("$env:ProgramFiles\")
-            if ($expectedDefaultDirectory -match "$re") {
-              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+            if ($customUninstallChecks) {
+              $customUninstallChecks | % { . $_ }
             }
-            else {
-              $expectedDefault32Directory = $expectedDefaultDirectory
-            }
-            It "Should have removed default install directory in 32bit mode" {
-              $expectedDefault32Directory | Should -Not -Exist
-            }
-          }
 
-          if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-            $expectedShimFiles | % {
-              $shimFile = $_
-              It "Should have removed shimfile $shimFile in 32bit mode" {
-                "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+            if ($expectedDefaultDirectory) {
+              $re = [regex]::Escape("$env:ProgramFiles\")
+              if ($expectedDefaultDirectory -match "$re") {
+                $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+              }
+              else {
+                $expectedDefault32Directory = $expectedDefaultDirectory
+              }
+              It "Should have removed default install directory in 32bit mode" {
+                $expectedDefault32Directory | Should -Not -Exist
               }
             }
-          }
 
-          if ($expectedUninstallKeys) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-
-            $expectedUninstallKeys | % {
-              $key = $_
-              It "Should have removed uninstall registry key '$key" {
-                [array]$foundKeys = Get-UninstallRegistryKey $key
-
-                $foundKeys.Count | Should -Be 0
+            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+              $expectedShimFiles | % {
+                $shimFile = $_
+                It "Should have removed shimfile $shimFile in 32bit mode" {
+                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                }
               }
             }
-          }
 
-          if ($filesAvailableOnPath) {
-            Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-            Update-SessionEnvironment
-            $filesAvailableOnPath | % {
-              $file = $_
-              It "$file should be removed from path." {
-                $file = Get-Command $file
+            if ($expectedUninstallKeys) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-                $file.Source | Should -BeNullOrEmpty
+              $expectedUninstallKeys | % {
+                $key = $_
+                It "Should have removed uninstall registry key '$key" {
+                  [array]$foundKeys = Get-UninstallRegistryKey $key
+
+                  $foundKeys.Count | Should -Be 0
+                }
+              }
+            }
+
+            if ($filesAvailableOnPath) {
+              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+              Update-SessionEnvironment
+              $filesAvailableOnPath | % {
+                $file = $_
+                It "$file should be removed from path." {
+                  $file = Get-Command $file
+
+                  $file.Source | Should -BeNullOrEmpty
+                }
               }
             }
           }
@@ -873,49 +886,52 @@ function Run-PesterTests() {
               }
             }
 
-            It "Should uninstall package with custom path in 32bit mode" {
-              uninstallPackage | Should -Be 0
-            }
+            if (!$skipUninstallCheck) {
 
-            if ($customUninstallChecks) {
-              $customUninstallChecks | % { . $_ }
-            }
+              It "Should uninstall package with custom path in 32bit mode" {
+                uninstallPackage | Should -Be 0
+              }
 
-            It "Should have removed custom installation directory in 32bit mode" {
-              $customPath | Should -Not -Exist
-            }
+              if ($customUninstallChecks) {
+                $customUninstallChecks | % { . $_ }
+              }
 
-            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-              $expectedShimFiles | % {
-                $shimFile = $_
-                It "Should have removed shimfile $shimFile in 32bit mode" {
-                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              It "Should have removed custom installation directory in 32bit mode" {
+                $customPath | Should -Not -Exist
+              }
+
+              if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+                $expectedShimFiles | % {
+                  $shimFile = $_
+                  It "Should have removed shimfile $shimFile in 32bit mode" {
+                    "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                  }
                 }
               }
-            }
 
-            if ($expectedUninstallKeys) {
-              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+              if ($expectedUninstallKeys) {
+                Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-              $expectedUninstallKeys | % {
-                $key = $_
-                It "Should have removed uninstall registry key '$key" {
-                  [array]$foundKeys = Get-UninstallRegistryKey $key
+                $expectedUninstallKeys | % {
+                  $key = $_
+                  It "Should have removed uninstall registry key '$key" {
+                    [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                  $foundKeys.Count | Should -Be 0
+                    $foundKeys.Count | Should -Be 0
+                  }
                 }
               }
-            }
 
-            if ($filesAvailableOnPath) {
-              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-              Update-SessionEnvironment
-              $filesAvailableOnPath | % {
-                $file = $_
-                It "$file should be removed from path." {
-                  $file = Get-Command $file
+              if ($filesAvailableOnPath) {
+                Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+                Update-SessionEnvironment
+                $filesAvailableOnPath | % {
+                  $file = $_
+                  It "$file should be removed from path." {
+                    $file = Get-Command $file
 
-                  $file.Source | Should -BeNullOrEmpty
+                    $file.Source | Should -BeNullOrEmpty
+                  }
                 }
               }
             }
@@ -979,49 +995,52 @@ function Run-PesterTests() {
               }
             }
 
-            It "Should uninstall package with custom path in 32bit mode" {
-              uninstallPackage | Should -Be 0
-            }
+            if (!$skipUninstallCheck) {
 
-            if ($customUninstallChecks) {
-              $customUninstallChecks | % { . $_ }
-            }
+              It "Should uninstall package with custom path in 32bit mode" {
+                uninstallPackage | Should -Be 0
+              }
 
-            It "Should have removed custom installation directory in 32bit mode" {
-              $customPath | Should -Not -Exist
-            }
+              if ($customUninstallChecks) {
+                $customUninstallChecks | % { . $_ }
+              }
 
-            if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
-              $expectedShimFiles | % {
-                $shimFile = $_
-                It "Should have removed shimfile $shimFile in 32bit mode" {
-                  "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+              It "Should have removed custom installation directory in 32bit mode" {
+                $customPath | Should -Not -Exist
+              }
+
+              if ($expectedShimFiles -and $expectedShimFiles.Count -gt 0) {
+                $expectedShimFiles | % {
+                  $shimFile = $_
+                  It "Should have removed shimfile $shimFile in 32bit mode" {
+                    "${env:ChocolateyInstall}\bin\$shimFile" | Should -Not -Exist
+                  }
                 }
               }
-            }
 
-            if ($expectedUninstallKeys) {
-              Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+              if ($expectedUninstallKeys) {
+                Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-              $expectedUninstallKeys | % {
-                $key = $_
-                It "Should have removed uninstall registry key '$key" {
-                  [array]$foundKeys = Get-UninstallRegistryKey $key
+                $expectedUninstallKeys | % {
+                  $key = $_
+                  It "Should have removed uninstall registry key '$key" {
+                    [array]$foundKeys = Get-UninstallRegistryKey $key
 
-                  $foundKeys.Count | Should -Be 0
+                    $foundKeys.Count | Should -Be 0
+                  }
                 }
               }
-            }
 
-            if ($filesAvailableOnPath) {
-              Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-              Update-SessionEnvironment
-              $filesAvailableOnPath | % {
-                $file = $_
-                It "$file should be removed from path." {
-                  $file = Get-Command $file
+              if ($filesAvailableOnPath) {
+                Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+                Update-SessionEnvironment
+                $filesAvailableOnPath | % {
+                  $file = $_
+                  It "$file should be removed from path." {
+                    $file = Get-Command $file
 
-                  $file.Source | Should -BeNullOrEmpty
+                    $file.Source | Should -BeNullOrEmpty
+                  }
                 }
               }
             }
