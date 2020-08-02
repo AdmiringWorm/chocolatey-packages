@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <!-- == PACKAGE SPECIFIC SECTION == -->
+        <!-- This section is about this package, although id and version have ties back to the software -->
+        <id>nordlocker</id>
+        <version>0.1</version>
+        <packageSourceUrl>https://github.com/__REPLACE_YOUR_REPO__/nordlocker</packageSourceUrl>
+        <owners>__REPLACE_YOUR_NAME__</owners>
+        <!-- ============================== -->
+
+        <!-- == SOFTWARE SPECIFIC SECTION == -->
+        <!-- This section is about the software itself -->
+        <title>nordlocker (Install)</title>
+        <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+        <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/__REPLACE_YOUR_REPO__@master/icons/nordlocker.png</iconUrl>
+        <!-- <copyright>Year Software Vendor</copyright> -->
+        <!-- If there is a license Url available, it is is required for the community feed -->
+        <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+        <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+        <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+        <!--<mailingListUrl></mailingListUrl>-->
+        <!--<bugTrackerUrl></bugTrackerUrl>-->
+        <tags>nordlocker SPACE_SEPARATED</tags>
+        <summary>__REPLACE__</summary>
+        <description>__REPLACE__MarkDown_Okay </description>
+        <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+        <!-- =============================== -->
+
+        <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+        <dependencies>
+            <dependency id="vcredist140" version="14.26.28720.3" />
+            <dependency id="dotnetfx" version="4.8.0.20190930" />
+        </dependencies>
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
