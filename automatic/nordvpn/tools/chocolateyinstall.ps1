@@ -3,8 +3,8 @@
 $toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 . "$toolsPath\helpers.ps1"
 Write-Host "Importing necessary certificates..."
-$certificates = gci "$toolsPath\*.cer"
-$certificates | % {
+$certificates = Get-ChildItem "$toolsPath\*.cer"
+$certificates | ForEach-Object {
   Import-Certificate -FilePath $_ -CertStoreLocation "Cert:\LocalMachine\TrustedPublisher"
 }
 

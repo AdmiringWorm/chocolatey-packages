@@ -33,4 +33,4 @@ elseif ($key.Count -gt 2) {
 }
 
 Write-Host "Removing NordVPN certificates"
-gci Cert:\LocalMachine\TrustedPublisher | ? Subject -Match "nordvpn" | Remove-Item
+Get-ChildItem Cert:\LocalMachine\TrustedPublisher | Where-Object Subject -Match "nordvpn" | Remove-Item
