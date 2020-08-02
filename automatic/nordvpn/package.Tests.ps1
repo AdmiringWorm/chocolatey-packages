@@ -1,9 +1,9 @@
-. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
+﻿. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
-  -expectedDefaultDirectory "${env:ProgramFiles(x86)}\NordVPN" `
-  -expectedUninstallKeys 'NordVPN','NordVPN network TAP'
+  -expectedDefaultDirectory "${env:ProgramFiles}\NordVPN" `
+  -expectedUninstallKeys 'NordVPN', 'NordVPN network TAP', 'NordVPN network TUN'
