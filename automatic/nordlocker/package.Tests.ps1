@@ -7,4 +7,5 @@ Run-PesterTests `
   -packagePath "$PSScriptRoot" `
   -expectedDefaultDirectory "${env:ProgramFiles}\$packageName" `
   -expectedUninstallKeys "$packageName", "${packageName} FS" `
-  -skipUninstallCheck
+  -skipUninstallCheck `
+  -testChoco $($env:APPVEYOR_BUILD_WORKER_IMAGE -ne "Visual Studio 2015")
