@@ -3,7 +3,7 @@
 $uninstallArgs = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'NordVPN*'
+  softwareName   = 'NordVPN Teams*'
   fileType       = 'msi'
   silentArgs     = ""
   validExitCodes = @(0, 3010, 1641)
@@ -11,7 +11,7 @@ $packageArgs = @{
 
 $uninstalled = $false
 
-[array]$key = Get-UninstallRegistryKey @packageArgs | Where-Object { $_.UninstallString -match 'MsiExec' -and $_.DisplayName -notmatch "Teams" }
+[array]$key = Get-UninstallRegistryKey @packageArgs | Where-Object { $_.UninstallString -match 'MsiExec' }
 
 if ($key.Count -eq 2 -or $key.Count -eq 1) {
   $key | ForEach-Object {
@@ -33,4 +33,4 @@ elseif ($key.Count -gt 2) {
 }
 
 Write-Host "Removing NordVPN certificates"
-Get-ChildItem Cert:\LocalMachine\TrustedPublisher | Where-Object Subject -Match "nordvpn" | Remove-Item
+gci Cert:\LocalMachine\TrustedPublisher | ? Subject -Match "nordvpn" | Remove-Item

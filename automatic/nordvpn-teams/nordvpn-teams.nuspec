@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>nordvpn-teams</id>
+        <version>__REPLACE__</version>
+        <packageSourceUrl>https://github.com/__REPLACE_YOUR_REPO__/nordvpn-teams</packageSourceUrl>
+        <owners>AdmiringWorm</owners>
+        <title>NordVPN Teams</title>
+        <authors>Nord</authors>
+        <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f62bac2c6d606bae6d0a696d71df70a102106e9e/automatic/nordvpn-teams/icons/128x128.png</iconUrl>
+        <copyright>Copyright © 2020 NordVPNTeams</copyright>
+        <licenseUrl>https://nordvpnteams.com/terms-of-service/</licenseUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <tags>nordvpn-teams vpn privacy security</tags>
+        <summary>Protect your company’s network with a business VPN</summary>
+        <description>__REPLACE__MarkDown_Okay </description>
+        <dependencies>
+            <dependency id="dotnetfx" version="4.7.2.0" />
+        </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\io-ninja\tools\helpers.ps1" target="tools" />
+  </files>
+</package>
