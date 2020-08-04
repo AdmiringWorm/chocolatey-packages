@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lunacy</id>
-    <version>5.9</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lunacy</packageSourceUrl>
+    <version>6.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/lunacy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Lunacy</title>
     <authors>Icons8</authors>
