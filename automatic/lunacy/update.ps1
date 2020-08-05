@@ -4,6 +4,10 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 $releasesUrl = 'https://docs.icons8.com/release-notes/'
 $softwareName = 'Lunacy'
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
+}
+
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
@@ -33,4 +37,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
