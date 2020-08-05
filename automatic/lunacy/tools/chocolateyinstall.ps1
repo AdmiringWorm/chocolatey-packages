@@ -14,7 +14,7 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 Write-Host "Waiting 10 seconds for Lunacy program to open..."
-sleep -Seconds 10
+Start-Sleep -Seconds 10
 $process = Get-Process -Name "Lunacy" -ErrorAction SilentlyContinue
 
 if ($process) {
