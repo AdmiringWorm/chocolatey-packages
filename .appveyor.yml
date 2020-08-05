@@ -25,7 +25,7 @@ environment:
   github_user_repo: "AdmiringWorm/chocolatey-packages"
   # Github token to commit pushed packages to repository
   github_api_key:
-    secure: vudN7TALdiPCJL1JjaBVTjmUFPSEKB01C5zKEXWjR5d7k0KwKJh296dn4i83mdKq
+    secure: VEjlsAVg46cZgClJS5R+sldJVzLZS1PFQ717LNBQJzcNRmUNDYhV33hWOho0pyZG
 
   # The gitter webhook to use to publish messages
   gitter_webhook:
