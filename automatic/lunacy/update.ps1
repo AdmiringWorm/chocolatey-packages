@@ -1,16 +1,17 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
+$releasesUrl = 'https://docs.icons8.com/release-notes/'
 $softwareName = 'Lunacy'
 
 function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
+    ".\tools\chocolateyInstall.ps1"   = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
-      "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*url\s*=\s*)'.*'"          = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
@@ -19,30 +20,17 @@ function global:au_SearchReplace {
   }
 }
 
-function GetResultInformation([string]$url32) {
-  $dest = "$env:TEMP\Lunacy.exe"
-  Get-WebFile $url32 $dest | Out-Null
-  try {
-    $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
+function global:au_GetLatest {
+  $download_page = Invoke-WebRequest $releasesUrl -UseBasicParsing
 
-    return @{
-      URL32 = $url32
-      Version = $version.Trim()
-      Checksum32 = Get-FileHash $dest -Algorithm SHA512 | % Hash
-      ChecksumType32 = 'sha512'
-    }
-  } finally {
-    Remove-Item -Force $dest
+  $url32 = $download_page.Links | ? href -Match "\d+\.[\d\.]+\.exe$" | select -First 1 -ExpandProperty href
+  $version = $url32 -split "_|\.exe" | select -Last 1 -Skip 1
+
+  return @{
+    URL32          = $url32
+    Version        = $version
+    ChecksumType32 = 'sha512'
   }
 }
 
-function global:au_GetLatest {
-  $url32 = "https://desk.icons8.com/lunacy/LunacySetup.exe"
-
-  $result = Update-OnETagChanged -execUrl $url32 -OnETagChanged {
-    GetResultInformation $url32
-  } -OnUpdated { @{ URL32 = $url32 }}
-  return $result
-}
-
-update -ChecksumFor none
+update -ChecksumFor 32
