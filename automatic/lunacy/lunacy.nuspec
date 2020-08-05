@@ -32,7 +32,7 @@ In short, it’s long-awaited Sketch for Windows. It solves the big pain of desi
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lunacy/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.6.2" version="4.6.01590.20170129" />
+      <dependency id="netfx-4.6.2" version="4.6.2.20190930" />
     </dependencies>
   </metadata>
   <files>
