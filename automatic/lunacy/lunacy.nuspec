@@ -29,7 +29,7 @@ In short, it’s long-awaited Sketch for Windows. It solves the big pain of desi
 - CSS and XAML code
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://icons8.github.io/Lunacy/)
+[Software Changelog](https://docs.icons8.com/release-notes/)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lunacy/Changelog.md)
     </releaseNotes>
     <dependencies>
