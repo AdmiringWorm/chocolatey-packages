@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://www.syntevo.com/downloads/deepgit/deepgit-win-setup-4_0_1.zip'
+  url            = 'https://www.syntevo.com/downloads/deepgit/deepgit-win-setup-4_0_2.zip'
   softwareName   = 'DeepGit'
-  checksum       = '530672facd68038cd3eeccf102c4028de20816b0169863030b36e0e49370d4cfe970e6c9a7602b09182a76036965e9a2e87b35b7b6f67ed122d2a660faadba3d'
+  checksum       = '7fd844fbfa1722b7f814f1467a19e3faa59252f19aa563dfe45aa5921f1f50e7ddfe6573b039392eae98ec7305f6231878226f36ce604c66095e91b6634553ed'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
