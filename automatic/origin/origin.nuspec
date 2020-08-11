@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>origin</id>
-    <version>10.5.79.42672</version>
+    <version>10.5.80.42860</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/origin</packageSourceUrl>
     <owners>AdmiringWorm, thaiphan</owners>
     <title>Origin</title>
