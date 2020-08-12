@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cacher</id>
-    <version>2.32.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/cacher</packageSourceUrl>
+    <version>2.32.3</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/cacher</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Cacher</title>
     <authors>Penguin Labs, LLC</authors>
