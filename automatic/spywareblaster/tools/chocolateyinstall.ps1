@@ -3,10 +3,10 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://www.brightfort.net/downloads/spywareblastersetup56.exe'
+  url            = 'https://www.brightfort.net/downloads/spywareblastersetup60.exe'
 
   softwareName   = 'SpywareBlaster *'
-  checksum       = 'd371114362df3d5f0f725cb3991d0c38342fab4e343fd66f8260a7ce552cf4459a502be39a8329f02f238cfda25b9fb8e78c526199171f0f86382611b1cef2fe'
+  checksum       = '228dc0d7865e01c893aa5156b36ac9cc19d27044acac96e432e68951a90b878ff6216fc43619a11f85b533993ee93eeb6017978240969873e9e3ea04aa620541'
   checksumType   = 'sha512'
 
   silentArgs     = "/SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
