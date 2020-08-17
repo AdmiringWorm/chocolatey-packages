@@ -2,7 +2,7 @@
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 cd $PSScriptRoot
 
-$domain = 'http://www.monogame.net'
+$domain = 'https://www.monogame.net'
 $releases = "$domain/downloads/"
 
 function global:au_BeforeUpdate($Package) {
@@ -48,7 +48,7 @@ function addDomainIfNeeded([string]$url, [uri]$oldUrl) {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\/monogame[\d\-]+(\-release\/.*|\/)$'
+  $re = '\/monogame[\d\-]+(\-release\/.*|\/?)$'
   $releasesUrl = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { addDomainIfNeeded $_ $releases }
   $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
 
