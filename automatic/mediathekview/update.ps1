@@ -38,7 +38,7 @@ function global:au_GetLatest {
   $re = 'MediathekView\-[\d\.]+.*\.zip$'
   $url32 = $download_page.Links | ? href -match $re | select -last 1 -expand href | % { $releases + $_ }
 
-  $verRe = 'View-|-win\.zip'
+  $verRe = 'View-|-win(?:32)?\.zip'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
     URL32       = [uri]$url32
