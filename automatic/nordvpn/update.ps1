@@ -58,10 +58,6 @@ function global:au_GetLatest {
     GetResultInformation $url32
   } -OnUpdated { @{ URL32 = $url32 } }
 
-  if ($result.RemoteVersion) {
-    $result["URL32"] = $result["URL32"] -replace '\/latest\/', "/$($result["RemoteVersion"])/"
-  }
-
   return $result
 }
 
