@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>2.5.1</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
+    <version>2.6.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
     <authors>Box</authors>
     <projectUrl>https://developer.box.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@507f445e404eb629632365875da50972699c9837/automatic/boxcli/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
-    <licenseUrl>https://github.com/box/boxcli/blob/v2.5.1/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/box/boxcli/blob/v2.6.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
     <docsUrl>https://developer.box.com/reference</docsUrl>
@@ -30,14 +30,12 @@ Box is a cloud-based enterprise content management platform trusted by thousands
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)
 
 ## Software Release Notes
-[CHANGELOG](https://github.com/box/boxcli/blob/master/CHANGELOG.md#251-2020-04-14)
-- Added `--quiet` flag to suppress any non-error output to stderr (#167) 27045c6
-- Fixed a bug for the `--restrict-collaboration` flag for `box folders:update` where previously the flag would not restrict the collaborations when passed as true and would restrict collaborations when passed as false (#175) e6e1120
-- Added `box trash:restore` to restore a trashed item and `box trash:get` to get information on a trashed item (#179) 74db947
-- Fixed a bug where flags that can be specified multiple times in a single command could not be passed through the command line for bulk commands (#183) 63db0ac
-- **Note**: Skipped version 2.5.0 due to development of new release process
+[CHANGELOG](https://github.com/box/boxcli/blob/master/CHANGELOG.md#260-2020-08-20)
+- Add zip functionality (#203) 1953639fe78def22e9c9d392e784577fc089f842
+- Add proxy support for `http`, `https`, `socks` and `pac` protocols. Proxy settings can be found under `box configure:settings` (#202) 21671c854a3fe835eb46df6e640fa2237d23a313
+- Fix filename issue when saving reports on Windows (#195) 31853d30e9e20a1dc6967a8277fa38165ca671f4
 
-https://github.com/box/boxcli/compare/v2.4.0...v2.5.1</releaseNotes>
+https://github.com/box/boxcli/compare/v2.5.1...v2.6.0</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
