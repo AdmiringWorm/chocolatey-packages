@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dumo</id>
-    <version>2.22.2.105</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
+    <version>2.22.3.106</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
     <owners>AdmiringWorm, dtgm, adgellida</owners>
     <title>DUMo</title>
     <authors>KC Softwares</authors>
