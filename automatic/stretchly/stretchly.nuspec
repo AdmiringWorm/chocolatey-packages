@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stretchly</id>
-    <version>1.0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/stretchly</packageSourceUrl>
+    <version>1.1.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/stretchly</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>stretchly</title>
     <authors>Jan Hovancik</authors>
