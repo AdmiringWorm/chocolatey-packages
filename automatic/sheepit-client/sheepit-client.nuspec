@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sheepit-client</id>
-    <version>6.2020.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/sheepit-client</packageSourceUrl>
+    <version>6.2038.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/sheepit-client</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>SheepIt Render Farm Client</title>
     <authors>Laurent Clouet</authors>
