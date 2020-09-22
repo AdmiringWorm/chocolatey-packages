@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>heaven-benchmark</id>
-    <version>4.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/heaven-benchmark</packageSourceUrl>
+    <version>4.0.0.20200922</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/heaven-benchmark</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>UNIGINE Heaven Benchmark</title>
     <authors>UNIGINE</authors>

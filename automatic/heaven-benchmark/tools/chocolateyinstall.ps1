@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName  = 'Heaven Benchmark*'
   fileType      = 'exe'
   url           = 'https://assets.unigine.com/d/Unigine_Heaven-4.0.exe'
-  checksum      = '2bcb187d4eb3323e209d1666521089f4cd91f62e1a54dde5a76bdad11c035bc47f2e31187921a746f3da8cca0b6b81ca6c546b025524fc933664bd6ca41f8bd7'
+  checksum      = 'abaddab621c71ccc43e907d0d6be957c87769c1c6f958e8c01e1eaaed6e2831db81aff9a95a017ed663d4b769c8cb077e390a4e189e33290129fdcabe4f06936'
   checksumType  = 'sha512'
   silentArgs   = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes= @(0)
