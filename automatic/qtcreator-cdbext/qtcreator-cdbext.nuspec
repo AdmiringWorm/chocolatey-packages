@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qtcreator-cdbext</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/qtcreator-cdbext</packageSourceUrl>
+    <owners>AdmiringWorm, michaelweghorn</owners>
+    <title>Qt Creator CDB Extension</title>
+    <authors>Qt Project</authors>
+    <projectUrl>http://wiki.qt.io/Qt_Creator</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@35eb3e49edb3411d779f64e57ef023abac8a3a06/icons/qtcreator.png</iconUrl>
+    <copyright>© 2020 The Qt Company Ltd.</copyright>
+    <licenseUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/src/libs/qtcreatorcdbext/</projectSourceUrl>
+    <docsUrl>https://wiki.qt.io/Qt_Creator_Windows_Debugging</docsUrl>
+    <mailingListUrl>http://lists.qt-project.org/mailman/listinfo/qt-creator/</mailingListUrl>
+    <bugTrackerUrl>https://bugreports.qt.io/browse/QTCREATORBUG</bugTrackerUrl>
+    <tags>c++ qt ide qtcreator qtcreatorcdbext plugin</tags>
+    <summary>CDB (Microsoft Console Debugger) extension for Qt Creator.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Qt Creator CDB Extension adds support for the Microsoft Console Debugger (CDB) to Qt Creator, a cross-platform, complete integrated development environment (IDE) for application developers to create applications for multiple desktop and mobile device platforms, such as Android and iOS.
+
+The Debugging Tools for Windows (which include the CDB debugger) need to be installed separately by installing one of the components mentioned on [this Microsoft help page](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/). (Chocolatey packages for different versions of the components are available.)
+]]></description>
+    <releaseNotes>[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.13.2.md)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator-cdbext/Changelog.md)</releaseNotes>
+    <dependencies>
+      <dependency id="qtcreator" version="[4.13.2]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
