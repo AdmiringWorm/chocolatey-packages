@@ -12,6 +12,6 @@ else {
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
-  -expectedDefaultDirectory "$defaultDir\tools\lib\qtcreatorcdbext64" `
-  -expectedDefaultDirectory32 "$defaultDir\tools\lib\qtcreatorcdbext32" `
+  -expectedDefaultDirectory "$defaultDir\qtcreator\lib\qtcreatorcdbext64" `
+  -expectedDefaultDirectory32 "$defaultDir\qtcreator\lib\qtcreatorcdbext32" `
   -test32bit
