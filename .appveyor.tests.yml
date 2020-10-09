@@ -18,7 +18,7 @@ init:
       git config --global core.safecrlf false
   - ps: Set-Service wuauserv -StartupType Manual
 environment:
-  au_version: master
+  au_version: custom
   au_push: false
   github_user_repo: AdmiringWorm/chocolatey-packages
   github_api_key:
