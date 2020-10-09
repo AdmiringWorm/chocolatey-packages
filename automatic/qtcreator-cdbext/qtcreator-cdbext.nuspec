@@ -17,7 +17,7 @@
     <docsUrl>https://wiki.qt.io/Qt_Creator_Windows_Debugging</docsUrl>
     <mailingListUrl>http://lists.qt-project.org/mailman/listinfo/qt-creator/</mailingListUrl>
     <bugTrackerUrl>https://bugreports.qt.io/browse/QTCREATORBUG</bugTrackerUrl>
-    <tags>c++ qt ide qtcreator qtcreatorcdbext plugin</tags>
+    <tags>qtcreator-cdbext cdbext c++ qt ide qtcreator plugin</tags>
     <summary>CDB (Microsoft Console Debugger) extension for Qt Creator.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Qt Creator CDB Extension adds support for the Microsoft Console Debugger (CDB) to Qt Creator, a cross-platform, complete integrated development environment (IDE) for application developers to create applications for multiple desktop and mobile device platforms, such as Android and iOS.
