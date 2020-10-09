@@ -48,10 +48,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'Setup\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://openmpt.org' + $_ }
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $re = 'Setup-x64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://openmpt.org' + $_ }
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
   $verRe = '[-]'
   [version]$version32 = $url32 -split "$verRe" | select -last 1 -skip 1
