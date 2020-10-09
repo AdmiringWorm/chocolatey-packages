@@ -5,8 +5,8 @@ $packageName = Split-Path -Leaf $PSScriptRoot
 Run-PesterTests `
   -packageName "$packageName" `
   -packagePath "$PSScriptRoot" `
-  -expectedDefaultDirectory "${env:ProgramFiles(x86)}\SnapGene Viewer" `
+  -expectedDefaultDirectory "${env:ProgramFiles}\SnapGene Viewer" `
   -customDirectoryArgument "/D=" `
-  -customUninstallChecks @({
+  -customUninstallChecks @( {
     It "Sleeping" { sleep -Seconds 5 }
   })
