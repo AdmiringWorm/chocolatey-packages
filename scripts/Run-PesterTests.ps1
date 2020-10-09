@@ -111,6 +111,7 @@ function Run-PesterTests() {
     [string]$expectedEmbeddedMatch,
     [string]$licenseShouldMatch,
     [string]$expectedDefaultDirectory,
+    [string]$expectedDefaultDirectory32,
     [string]$customDirectoryArgument,
     [string]$customDirectoryParameter,
     [string[]]$expectedShimFiles,
@@ -151,6 +152,8 @@ function Run-PesterTests() {
       -additionalArguments $additionalArguments `
       -uninstallSleep $installUninstallSleep
   }
+
+  if (!$expectedDefaultDirectory32) { $expectedDefaultDirectory32 = $expectedDefaultDirectory }
 
   Import-Module Pester
 
@@ -711,13 +714,13 @@ function Run-PesterTests() {
             $customInstallChecks | % { . $_ }
           }
 
-          if ($expectedDefaultDirectory) {
+          if ($expectedDefaultDirectory32) {
             $re = [regex]::Escape("$env:ProgramFiles\")
-            if ($expectedDefaultDirectory -match "$re") {
-              $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+            if ($expectedDefaultDirectory32 -match "$re") {
+              $expectedDefault32Directory = $expectedDefaultDirectory32 -replace $re, "${env:ProgramFiles(x86)}\"
             }
             else {
-              $expectedDefault32Directory = $expectedDefaultDirectory
+              $expectedDefault32Directory = $expectedDefaultDirectory32
             }
             It "Should have created default directory in 32bit mode" {
               $expectedDefault32Directory | Should -Exist
@@ -778,13 +781,13 @@ function Run-PesterTests() {
               $customUninstallChecks | % { . $_ }
             }
 
-            if ($expectedDefaultDirectory) {
+            if ($expectedDefaultDirectory32) {
               $re = [regex]::Escape("$env:ProgramFiles\")
-              if ($expectedDefaultDirectory -match "$re") {
-                $expectedDefault32Directory = $expectedDefaultDirectory -replace $re, "${env:ProgramFiles(x86)}\"
+              if ($expectedDefaultDirectory32 -match "$re") {
+                $expectedDefault32Directory = $expectedDefaultDirectory32 -replace $re, "${env:ProgramFiles(x86)}\"
               }
               else {
-                $expectedDefault32Directory = $expectedDefaultDirectory
+                $expectedDefault32Directory = $expectedDefaultDirectory32
               }
               It "Should have removed default install directory in 32bit mode" {
                 $expectedDefault32Directory | Should -Not -Exist
