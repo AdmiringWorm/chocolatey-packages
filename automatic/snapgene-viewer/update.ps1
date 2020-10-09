@@ -6,8 +6,8 @@ $releases = 'https://www.snapgene.com/snapgene-viewer/'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
-      "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*url\s*=\s*)'.*'"          = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
   }
@@ -21,16 +21,16 @@ function global:au_GetLatest {
 
   $re = 'download.*os=windows$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  Add-Type -AssemblyName System.Web -ea 0 | Out-Null
-  $url32 = [System.Web.HttpUtility]::HtmlDecode($url32)
 
-  $verRe = 'minorRelease=|&'
+  $url32 = Get-RedirectedUrl $url32
+
+  $verRe = 'viewer_|_win'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL32 = [uri]$url32
+    URL32          = [uri]$url32
     ChecksumType32 = 'sha512'
-    Version = [version]$version32
+    Version        = [version]$version32
   }
 }
 
