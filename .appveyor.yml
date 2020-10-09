@@ -17,7 +17,7 @@ skip_branch_with_pr: true
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: master
+  au_version: custom
   au_push: true
   # Use 1 to test all, or N to split testing into N groups
   au_test_groups: 1
