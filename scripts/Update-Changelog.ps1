@@ -1,4 +1,4 @@
-function Get-IssueDetails() {
+﻿function Get-IssueDetails() {
   param([int]$issueId)
 
   $headers = @{}
@@ -101,7 +101,7 @@ function Parse-GitCommit() {
 
   $commitDetail = git show -s --format=%B $commitHash
 
-  $issueLine = $commitDetail | ? { $_ -match "\#[\d]+" }
+  $issueLine = $commitDetail | ? { $_ -match "\#[\d]+" } | select -last 1
   $changelogLine = $commitDetail | ? { $_ -match "changelog\:\s*[a-z]*" }
   if ($issueLine) {
     $index = $splits.IndexOf($issueLine)
