@@ -5,6 +5,6 @@ $pluginDirs = @(
   "$toolsDir\qtcreator\lib\qtcreatorcdbext32"
 )
 
-$pluginDirs | ? { Test-Path $_ } | % {
+$pluginDirs | Where-Object { Test-Path $_ } | ForEach-Object {
   Remove-Item -Recurse -Force $_
 }

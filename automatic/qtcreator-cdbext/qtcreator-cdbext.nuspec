@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qtcreator-cdbext</id>
-    <version>0.0</version>
+    <version>4.13.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/qtcreator-cdbext</packageSourceUrl>
     <owners>AdmiringWorm, michaelweghorn</owners>
     <title>Qt Creator CDB Extension</title>
