@@ -19,8 +19,12 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'download.*os=windows$'
+  $re = 'download.*os=windows'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+
+  if ($url32.StartsWith("/")) {
+    $url32 = New-Object uri([uri]$releases, [string]$url32)
+  }
 
   $url32 = Get-RedirectedUrl $url32
 
