@@ -2,9 +2,10 @@
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 
-if ((Test-Path $env:ChocolateyToolsLocation)) {
+if ((Test-Path Env:\ChocolateyToolsLocation)) {
   $defaultDir = $env:ChocolateyToolsLocation
-} else {
+}
+else {
   $defaultDir = "C:\Tools"
 }
 
