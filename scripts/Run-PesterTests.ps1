@@ -256,7 +256,7 @@ function Run-PesterTests() {
         It "All dependencies should specify minimum version" {
           [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
             $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
-            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"\]]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
@@ -272,7 +272,7 @@ function Run-PesterTests() {
         It "All dependencies should exist on chocolatey.org" {
           [array]$dependencies = $nuspecContent | ? { $_ -match '\<dependency' } | % {
             $id = $_ -replace "\s*\<dependency.*id=`"([^`"]*)`".*", "`$1"
-            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"]*)[\]]?`".*", "`$1"
+            $version = $_ -replace "\s*\<dependency.*version=`"[\[]?([^`"\]]*)[\]]?`".*", "`$1"
 
             return @{ Id = $id ; Version = $version }
           }
