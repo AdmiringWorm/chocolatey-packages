@@ -1,7 +1,7 @@
 # AdmiringWorm's Chocolatey Community packages
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)](https://liberapay.com/AdmiringWorm)
@@ -119,6 +119,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ghuser.io/jayvdb"><img src="https://avatars1.githubusercontent.com/u/15092?v=4" width="100px;" alt=""/><br /><sub><b>John Vandenberg</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Ajayvdb" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/kintrupf"><img src="https://avatars3.githubusercontent.com/u/8496344?v=4" width="100px;" alt=""/><br /><sub><b>Frank Kintrup</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Akintrupf+label%3Abug" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/soul4soul"><img src="https://avatars2.githubusercontent.com/u/5142635?v=4" width="100px;" alt=""/><br /><sub><b>soul4soul</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Asoul4soul" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/michaelweghorn"><img src="https://avatars2.githubusercontent.com/u/6560939?v=4" width="100px;" alt=""/><br /><sub><b>Michael Weghorn</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=michaelweghorn" title="Code">💻</a></td>
   </tr>
 </table>
 

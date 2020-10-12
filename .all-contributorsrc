@@ -151,6 +151,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "michaelweghorn",
+      "name": "Michael Weghorn",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6560939?v=4",
+      "profile": "https://github.com/michaelweghorn",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": false
