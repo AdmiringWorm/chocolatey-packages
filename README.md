@@ -1,7 +1,7 @@
 # AdmiringWorm's Chocolatey Community packages
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)](https://liberapay.com/AdmiringWorm)
@@ -122,6 +122,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/michaelweghorn"><img src="https://avatars2.githubusercontent.com/u/6560939?v=4" width="100px;" alt=""/><br /><sub><b>Michael Weghorn</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=michaelweghorn" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.zaltys.org"><img src="https://avatars2.githubusercontent.com/u/42079499?v=4" width="100px;" alt=""/><br /><sub><b>James Grant</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Ajamesg-nz" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 

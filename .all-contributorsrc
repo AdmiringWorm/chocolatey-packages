@@ -160,6 +160,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jamesg-nz",
+      "name": "James Grant",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/42079499?v=4",
+      "profile": "http://www.zaltys.org",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "skipCi": false
