@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resxtranslator</id>
-    <version>2.9</version>
+    <version>2.10</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/resxtranslator</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Resx Resource Translator</title>
@@ -43,7 +43,7 @@ These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/NoStartMenuIcon /CreateDesktopIcon"'`
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.9)
+[Software Changelog](https://github.com/HakanL/resxtranslator/releases/tag/v2.10)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/resxtranslator/Changelog.md)
     </releaseNotes>
     <dependencies>
