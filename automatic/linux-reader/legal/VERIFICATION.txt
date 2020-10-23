@@ -14,7 +14,7 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 87AAA835B165813F0C81F7FC9AF7D4DFD10169C12E169EFF71190519890074FD
+  checksum32: 010876510060777E28A27FCB358D2BBB4B22B6639CA3C60240455F0845056498
 
 The license is not available online, can only be verified by installing the package and look at the included license.txt file.
 In most cases, this license should be available in: ${env:ProgramFiles(x86)}\DiskInternals\Linux Reader

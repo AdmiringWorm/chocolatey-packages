@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>linux-reader</id>
-    <version>4.6.4</version>
+    <version>4.6.5</version>
     <title>Linux Reader</title>
     <authors>DiskInternals</authors>
     <owners>TheCakeIsNaOH</owners>
@@ -35,7 +35,7 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/innosetup/Changelog.md)</releaseNotes>
     <copyright>2019 DiskInternals</copyright>
     <tags>linux reader</tags>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/linux-reader</packageSourceUrl>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/linux-reader</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
