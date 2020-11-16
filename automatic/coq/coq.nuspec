@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>8.12.0</version>
+    <version>8.12.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
@@ -38,14 +38,17 @@ As a platform for the formalization of mathematics or the development of program
 ## [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)
 
 ## Software Release Notes
-Some highlights from this release are:
-- a new binder notation for non-maximal implicit arguments;
-- an improved `Search` command which accepts more complex queries;
-- many additions to the standard library;
-- a restructured reference manual;
-- the deprecation of the `omega` tactic in favor the `lia` tactic.
+This release contains numerous bug fixes and documentation improvements. Some bug fix highlights:
 
-Please see [the changelog](https://coq.github.io/doc/v8.12/refman/changes.html#version-8-12) to learn more about this release.
+- Polymorphic side-effects inside monomorphic definitions were incorrectly handled as not inlined. This allowed deriving an inconsistency (#13330).
+- Regression in error reporting after SSReflect's `case` tactic. A generic error message "Could not fill dependent hole in apply" was reported for any error following `case` or `elim` (#12837).
+- Several bugs with `Search` (#13298, #13349).
+- The `details` environment introduced in coqdoc in Coq 8.12 can now be used as advertised in the reference manual (#12772).
+- View menu "Display parentheses" introduced in CoqIDE in Coq 8.12 now works correctly (#12793).
+
+See the [changelog](https://coq.inria.fr/refman/changes.html#changes-in-8-12-1) for details and a more complete list.
+
+Note that we are not providing a macOS installer for this release due to infrastructure issues. We hope that this will be alleviated soon by the incoming [Coq Platform](https://github.com/coq/platform/). In the meantime, you can install Coq on macOS using `opam`, `nix` or `brew` (see [the wiki](https://github.com/coq/coq/wiki/Installation%20of%20Coq%20on%20Mac)).
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
