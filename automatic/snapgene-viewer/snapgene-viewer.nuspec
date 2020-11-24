@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snapgene-viewer</id>
-    <version>5.2.2</version>
+    <version>5.2.3</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/snapgene-viewer</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>SnapGene Viewer</title>
