@@ -4,7 +4,7 @@ $packageArgs = @{
   packageName   = $env:chocolateyPackageName
   fileType      = 'exe'
   url           = 'https://www.kymoto.org/downloads/ISStudio_Latest.exe'
-  checksum      = '0a1b9c7fb0a199da14bddd6bef52318134e8a39418a97fc9ee1f7367e71c997e'
+  checksum      = '03a8e6e59f7ad1bb087672000dcfce515452876e10a4cbd48be1cc087a520fcb'
   checksumType  = 'sha256'
   silentArgs    = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes= @(0)
