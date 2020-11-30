@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/martinrotter/rssguard/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/martinrotter/rssguard/releases/download/3.8.2/rssguard-3.8.2-12104c7-win64.7z>
+1. Download the following <https://github.com/martinrotter/rssguard/releases/download/3.8.3/rssguard-3.8.3-03684f5-win64.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: B78E1C68692C7BA76533CE873211030E5273C6CA5C08B4787834C310468D2FEF
+  checksum: CE589E1896D84D2F1BDF7D284C682F95F9748D8B6FF88680E5DE92A814B781C1
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/martinrotter/rssguard/blob/4dd04d6db544a665b1d87a7f9478766cdf3c687e/LICENSE.md>
