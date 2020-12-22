@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>folder_size</id>
-    <version>4.5.0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
+    <version>4.7.0.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
     <owners>AdmiringWorm, MarkJohnson</owners>
     <title>Folder Size</title>
     <authors>https://www.mindgems.com</authors>
