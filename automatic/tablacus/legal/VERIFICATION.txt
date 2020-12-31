@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://tablacus.github.io/explorer_en.html>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/tablacus/TablacusExplorer/releases/download/20.12.29/te201229.zip>
+1. Download the following <https://github.com/tablacus/TablacusExplorer/releases/download/20.12.30/te201230.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C7548FD9BDE05FAEB884818DF2D84E88C48E756B8B1A4910C4A6DC37B974D57D
+  checksum: 39D5DCED09BC5A4984B84851ADDA7FF7035535FE105B60C32B22301E96451938
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/tablacus/TablacusExplorer/blob/20.12.29/LICENSE.TXT>
+The file 'LICENSE.txt' has been obtained from <https://github.com/tablacus/TablacusExplorer/blob/20.12.30/LICENSE.TXT>
