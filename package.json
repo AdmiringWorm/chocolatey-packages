@@ -25,7 +25,7 @@
     "commitlint": "11.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eclint": "^2.8.1",
-    "husky": "4.3.0",
+    "husky": "4.3.6",
     "imagemin-lint-staged": "0.4.0",
     "lint-staged": "10.4.0",
     "prettier": "2.1.2"
