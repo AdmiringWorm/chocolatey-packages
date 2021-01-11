@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lilypond</id>
-    <version>2.20.0.20200719</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/lilypond</packageSourceUrl>
+    <version>2.22.0</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/lilypond</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>LilyPond</title>
     <authors>Han-Wen Nienhuys,Jan Nieuwenhuizen</authors>
@@ -39,7 +39,7 @@ LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for e
 [customized output]: http://lilypond.org/examples.html#Customized-Output
 [schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
 ]]></description>
-    <releaseNotes>[Software Changelog](http://lilypond.org/doc/v2.20/Documentation/changes/index.html)
+    <releaseNotes>[Software Changelog](http://lilypond.org/doc/v2.22/Documentation/changes/index.html)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)</releaseNotes>
   </metadata>
   <files>
