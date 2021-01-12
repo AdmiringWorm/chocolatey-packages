@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   fileType    = 'zip'
-  file        = "$toolsPath\CMail_0.8.0_x86-dev-9.zip"
-  file64      = "$toolsPath\CMail_0.8.0_amd64-dev-9.zip"
+  file        = "$toolsPath\CMail_0.8.3_x86.zip"
+  file64      = "$toolsPath\CMail_0.8.3_amd64.zip"
   destination = "$toolsPath"
 }
 
