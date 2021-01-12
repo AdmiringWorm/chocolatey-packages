@@ -42,14 +42,18 @@ function global:au_GetLatest {
   $url32 = $urls | ? { $_ -match 'x86' }
   $url64 = $urls | ? { $_ -match 'amd64' }
 
-  $verRe = 'CMail_([\d\.]+)_(?:x86|amd64)\-(.*)\.zip$'
+  $verRe = 'CMail_([\d\.]+)_(?:x86|amd64)(?:\-(.*))?\.zip$'
 
   if ($url32 -match $verRe) {
-    $version32 = $Matches[1] + '-' + $Matches[2]
+    $version32 = $Matches[1]
+
+    if ($Matches[2]) { $version32 = "$version32-$($Matches[2])" }
   }
 
   if ($url64 -match $verRe) {
-    $version64 = $Matches[1] + '-' + $Matches[2]
+    $version64 = $Matches[1]
+
+    if ($Matches[2]) { $version64 = "$version64-$($Matches[2])" }
   }
 
   if ($version32 -ne $version64) { throw "32bit and 64bit version do not match" }
