@@ -12,7 +12,7 @@
     <!-- IconUrl: Skip check -->
     <licenseUrl>https://www.inveigle.net/cmail/faq.shtml</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>cmail commandline mail freeware</tags>
+    <tags>cmail commandline email network console-only freeware</tags>
     <summary>A utility which is able to send email messages from the command line.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[CMail is a freeware command line e-mail sending tool for Windows, primarily intended for sending scripted e-mail, but it is simple enough to be used interactively. If you are looking for an alternative to Blat with SSL support, or more control over message formatting, CMail may be a good choice.

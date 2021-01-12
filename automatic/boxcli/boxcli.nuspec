@@ -17,7 +17,7 @@
     <docsUrl>https://developer.box.com/reference</docsUrl>
     <mailingListUrl>https://community.box.com/t5/Box-Developer-Forum/bd-p/DeveloperForum</mailingListUrl>
     <bugTrackerUrl>https://github.com/box/boxcli/issues</bugTrackerUrl>
-    <tags>boxcli box commandline foss cross-platform</tags>
+    <tags>boxcli box console-only foss cross-platform</tags>
     <summary>A command line interface to interact with the Box api</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Cloud Content Management APIs for developers

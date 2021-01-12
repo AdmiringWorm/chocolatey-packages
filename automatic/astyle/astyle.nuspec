@@ -17,7 +17,7 @@
     <projectSourceUrl>https://sourceforge.net/p/astyle/code/HEAD/tree/trunk/AStyle/</projectSourceUrl>
     <docsUrl>http://astyle.sourceforge.net/astyle.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/astyle/bugs/</bugTrackerUrl>
-    <tags>astyle command-line source code beautifier</tags>
+    <tags>astyle beautifier command-only development</tags>
     <summary>Artistic Style is a source code indenter, formatter, and beautifier for the C, C++, C++/CLI, Objective-C, C# and Java programming languages.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Artistic Style is a source code indenter, formatter, and beautifier for the C, C++, C++/CLI, Objective-C, C# and Java programming languages.

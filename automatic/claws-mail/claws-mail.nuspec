@@ -17,7 +17,7 @@
     <docsUrl>http://www.claws-mail.org/documentation.php</docsUrl>
     <mailingListUrl>http://www.claws-mail.org/MLs.php</mailingListUrl>
     <bugTrackerUrl>http://www.thewildbeast.co.uk/claws-mail/bugzilla/index.cgi</bugTrackerUrl>
-    <tags>claws-mail email client mua mh smtp imap nntp ldap gpg i18n gtk admin foss cross-platform</tags>
+    <tags>claws-mail client cross-platform email foss gpg gtk i18n imap ldap mua network nntp office smtp</tags>
     <summary>The user-friendly, lightweight, and fast email client</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Claws Mail is a GTK+ based, lightweight, and fast e-mail client and newsreader. Supports POP3, APOP, IMAP, SMTP, SMTP AUTH, NNTP, LDAP, multiple accounts, spell-checking, addressbook, SSL, GPG, filtering, i18n, & more. It is further extended by plugins.
