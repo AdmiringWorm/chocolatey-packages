@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>folder_size</id>
-    <version>4.7.0.0</version>
+    <version>4.9.0.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/folder_size</packageSourceUrl>
     <owners>AdmiringWorm, MarkJohnson</owners>
     <title>Folder Size</title>
