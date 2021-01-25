@@ -4,8 +4,8 @@
   <!-- Icon: Skip check -->
   <metadata>
     <id>vscode-commitizen</id>
-    <version>0.9.3</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/vscode-commitizen</packageSourceUrl>
+    <version>0.10.1</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/vscode-commitizen</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Visual Studio Code Commitizen Support</title>
     <authors>Markus Wolf</authors>
