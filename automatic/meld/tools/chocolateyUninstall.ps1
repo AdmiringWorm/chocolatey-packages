@@ -19,6 +19,8 @@ if ($key.Count -eq 1) {
 
     Uninstall-ChocolateyPackage @packageArgs
   }
+  Write-Host "Removing shim"
+  Uninstall-BinFile meld
 }
 elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
