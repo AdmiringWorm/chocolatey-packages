@@ -32,7 +32,7 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'qt-creator.*x86\-.*\.exe'
+  $re = 'qt-creator.*x86[\-_].*\.exe'
   $versionURL = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $version = $versionURL -split '\/' | select -last 1 -skip 1

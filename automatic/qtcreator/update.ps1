@@ -29,13 +29,16 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'qt-creator.*x86\-.*\.exe'
+  $re = 'qt-creator.*x86[\-_].*\.exe'
   $versionURL = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  Write-Host "Version URL: $versionURL"
 
   $version = $versionURL -split '\/' | select -last 1 -skip 1
   $versionTwoPart = $version -replace "^(\d+\.\d+).*", '$1'
+  Write-Host "Version: ${version} ($versionTwoPart)"
 
   $url = "https://download.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
+  Write-Host "Testing url '$url'"
   $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
   $links = $download_page.links | ? href -match '^windows' | select -expand href
   $url32 = ($links -match '(x86|_32)\/$' | select -first 1 | % { $url + $_ }) + "qtcreator.7z"
