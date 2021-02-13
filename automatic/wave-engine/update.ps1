@@ -20,7 +20,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = "\.exe$"
+  $re = "[\d_]+\.exe$"
   $url = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $version = $url -split 'Setup_|\.exe$' | select -last 1 -skip 1 | % { $_ -replace '_','.' }
