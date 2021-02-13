@@ -6,7 +6,7 @@ $packageName = $env:ChocolateyPackageName
 
 $packageArgs = @{
   packageName    = $packageName
-  file           = "$toolsPath\golly-3.4-win-32bit.zip"
+  file           = ""
   file64         = "$toolsPath\golly-3.4-win-64bit.zip"
   destination    = "$toolsPath"
 }
