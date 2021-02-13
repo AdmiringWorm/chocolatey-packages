@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://gitlab.gnome.org/GNOME/meld</projectSourceUrl>
     <docsUrl>https://meldmerge.org/help/</docsUrl>
-    <mailingListUrl>https://mail.gnome.org/mailman/listinfo/meld-list</mailingListUrl>
     <bugTrackerUrl>https://gitlab.gnome.org/GNOME/meld/issues</bugTrackerUrl>
     <tags>meld compare diff merge admin foss cross-platform</tags>
     <summary>Visual diff and merge file/folder tool</summary>
