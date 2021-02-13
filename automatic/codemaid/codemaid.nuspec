@@ -8,13 +8,13 @@
     <owners>AdmiringWorm</owners>
     <title>CodeMaid</title>
     <authors>Steve Cadwallader</authors>
-    <projectUrl>http://www.codemaid.net</projectUrl>
+    <projectUrl>https://www.codemaid.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@25274468d2ef287a6069b81fd3ad403bd1e7d52b/automatic/codemaid/icons/codemaid.png</iconUrl>
-    <copyright>© 2007 - 2018 CodeMaid</copyright>
+    <copyright>© 2007 - 2021 CodeMaid</copyright>
     <licenseUrl>https://github.com/codecadwallader/codemaid/blob/release/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/codecadwallader/codemaid</projectSourceUrl>
-    <docsUrl>http://www.codemaid.net/documentation/</docsUrl>
+    <docsUrl>https://www.codemaid.net/documentation//</docsUrl>
     <bugTrackerUrl>https://github.com/codecadwallader/codemaid/issues</bugTrackerUrl>
     <tags>codemaid visual-studio-extension vsix cleaning c-sharp clean-code</tags>
     <summary>An open source Visual Studio extension to cleanup and simplify code.</summary>
