@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qtcreator-cdbext</id>
-    <version>4.13.3</version>
+    <version>4.14.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/qtcreator-cdbext</packageSourceUrl>
     <owners>AdmiringWorm, michaelweghorn</owners>
     <title>Qt Creator CDB Extension</title>
@@ -24,10 +24,10 @@
 
 The Debugging Tools for Windows (which include the CDB debugger) need to be installed separately by installing one of the components mentioned on [this Microsoft help page](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/). (Chocolatey packages for different versions of the components are available.)
 ]]></description>
-    <releaseNotes>[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.13.3.md)
+    <releaseNotes>[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-4.14.0.md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator-cdbext/Changelog.md)</releaseNotes>
     <dependencies>
-      <dependency id="qtcreator" version="[4.13.3]" />
+      <dependency id="qtcreator" version="[4.14.0]" />
     </dependencies>
   </metadata>
   <files>
