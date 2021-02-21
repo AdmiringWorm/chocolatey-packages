@@ -27,7 +27,7 @@ jobs:
       mail_port: 587
       mail_enablessl: true
       api_key: ${{ secrets.CHOCO_API_KEY }}
-      nuget_artifacts: ${{ runner.temp }}/artifacts
+      nuget_artifacts: ${{ github.runner.temp }}/artifacts
 
     steps:
       - name: Configure git client
