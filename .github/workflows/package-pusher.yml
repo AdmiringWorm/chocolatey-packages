@@ -8,7 +8,7 @@ on:
         required: true
 
 jobs:
-  test:
+  pusher:
     runs-on: windows-latest
     env:
       au_version: custom
