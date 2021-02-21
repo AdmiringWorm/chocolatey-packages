@@ -63,4 +63,5 @@ jobs:
           name: artifacts-${{ matrix.os }}
           path: |
             unsaved_changes.patch
-            '**/*.nupkg'
+            **/*.nupkg
+          retention-days: 5
