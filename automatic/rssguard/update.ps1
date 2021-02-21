@@ -37,7 +37,7 @@ function global:au_GetLatest {
   $urls64 | % {
     $verRe = '\/'
     $version = $_ -split "$verRe" | select -last 1 -skip 1
-    if ($version -eq "devbuild") { continue } # we ignore the pre-release build
+    if ($version -eq "devbuild") { return } # we ignore the pre-release build
     $version = Get-Version $version
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
