@@ -169,6 +169,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "cmorty",
+      "name": "Moritz 'Morty' Strübe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2370091?v=4",
+      "profile": "http://www.redheads.de",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "skipCi": false
