@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $parameters = @{
   PackageName = $env:ChocolateyPackageName
-  File        = "$toolsPath\CodeMaid.v11.1.204.vsix"
+  File        = "$toolsPath\CodeMaid.v11.2.231.vsix"
 }
 
 Install-VisualStudioVsixExtension @parameters

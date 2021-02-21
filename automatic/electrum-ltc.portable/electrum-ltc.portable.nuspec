@@ -4,7 +4,7 @@
   <metadata>
     <id>electrum-ltc.portable</id>
     <title>Electrum-LTC (Portable)</title>
-    <version>3.3.8.1</version>
+    <version>4.0.9.1</version>
     <authors>Electrum Technologies GmbH</authors>
     <owners>AdmiringWorm</owners>
     <summary>Electrum-LTC is a simple, but powerful Litecoin wallet.</summary>
@@ -16,7 +16,7 @@
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@98aeaf411ee4176a4f99ade7bf5c076e2b7ee64c/automatic/electrum-ltc/icons/electrum-ltc.png</iconUrl>
     <bugTrackerUrl>https://github.com/pooler/electrum-ltc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/pooler/electrum-ltc</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/electrum-ltc.portable</packageSourceUrl>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/electrum-ltc.portable</packageSourceUrl>
     <description><![CDATA[Electrum-LTC is a simple, but powerful Litecoin wallet. A twelve-word security passphrase (or “seed”) leaves intruders stranded and your peace of mind intact. Keep it on paper, or in your head... and never worry about losing your litecoins to theft or hardware failure. No waiting, no lengthy blockchain downloads and no syncing to the network.
 
 ## Features
@@ -28,7 +28,7 @@
 - **Accessible:** Export your private keys to other Litecoin clients, at your convenience.
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://github.com/pooler/electrum-ltc/blob/3.3.8.1/RELEASE-NOTES)
+[Software Changelog](https://github.com/pooler/electrum-ltc/blob/4.0.9.1/RELEASE-NOTES)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/electrum-ltc.portable/Changelog.md)
     </releaseNotes>
   </metadata>
