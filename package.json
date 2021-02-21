@@ -8,7 +8,8 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,6 @@
     "*.{jpeg,jpg,gif,png,svg}": [
       "imagemin-lint-staged"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "config": {
     "commitizen": {
