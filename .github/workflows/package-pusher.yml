@@ -1,40 +1,20 @@
-name: Package Updater
+name: Package Pusher
 
 on:
-  push:
-    branches: [master]
   workflow_dispatch:
     inputs:
       packages:
-        description: "What is the packages (optionally version) you wish to force update on?"
-        required: false
-  schedule:
-    - cron: "30 1-19/6 * * *"
+        description: "What is the packages you wish to push?"
+        required: true
 
 jobs:
   test:
     runs-on: windows-latest
     env:
       au_version: custom
-      au_push: false
-      github_user_repo: ${{ github.repository }}
-      github_api_key: ${{ secrets.GIST_API_KEY }}
-      gist_id: 747b3ede98c9404e5cb6a399595e7ad1
-      nupkg_cache_path: C:\nupkg_cache
-      mail_user: ${{ secrets.MAIL_USER }}
-      mail_pass: ${{ secrets.MAIL_PASSWORD }}
-      mail_server: smtp.gmail.com
-      mail_port: 587
-      mail_enablessl: true
       api_key: ${{ secrets.CHOCO_API_KEY }}
-      nuget_artifacts: ${{ runner.temp }}/artifacts
 
     steps:
-      - name: Configure git client
-        run: |
-          git config --global user.email "chocolatey@realdimensions.net"
-          git config --global user.name "Chocolatey"
-          git config --global core.safecrlf false
       - name: Install Dependencies
         run: |
           Set-Service wuauserv -StartupType Manual
@@ -56,26 +36,28 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Run package updater
+      - name: Run package pushing
         env:
-          FORCED_PACKAGES: ${{ github.event.inputs.packages }}
+          PACKAGES_PUSHES: ${{ github.event.inputs.packages }}
         run: |
-          yarn install
+          $packages = $env:PACKAGES_PUSHES -split ' '
+          Write-Host "PUSHING PACKAGES: $packages"
+          foreach ($package in $packages) {
+            Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
+            $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec" } | select -First 1 | % Directory
 
-          . ./scripts/EventLogs.ps1
-          Clear-EventLogs
-          rm "$env:ChocolateyInstall\logs\*.log"
-
-          ./update_all.ps1 -ForcedPackages $env:FORCED_PACKAGES
-          Get-EventLogs * | ? Source -eq 'Schannel' | fl * | out-file eventlogs.txt
+            if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
+            pushd $package_dir
+            if (Test-Path update.ps1 -ea 0) { ./update.ps1 }
+            choco pack
+            Push-Package
+            popd
+          }
         shell: powershell
       - name: Create diff file
         run: |
           git add automatic extension manual templates
           git diff --cached > unsaved_changes.patch
-      - name: Create au temporary directory
-        run: |
-          if (Test-Path $Env:TEMP\chocolatey\au) { 7z a -mx9 au_temp.7z $Env:TEMP\chocolatey-au\* }
         shell: powershell
       - name: Upload artifacts
         if: always()
@@ -84,9 +66,6 @@ jobs:
           name: artifacts
           path: |
             unsaved_changes.patch
-            au_temp.7z
-            update_info.xml
-            Update-AUPackages.md
             eventlogs.txt
             **/*.nupkg
           retention-days: 5
