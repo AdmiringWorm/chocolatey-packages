@@ -57,12 +57,16 @@ function global:au_GetLatest {
   $releasesUrl = $download_page.Links | ? href -match $re | select -first 1 -expand href
   $url64Data = GetDataFrom $releasesUrl
 
+  $version32 = Get-Version $url32Data.version
+  $version64 = Get-Version $url64Data.version
+  $version = if ($version32 -ge $version64) { $version32 } else { $version64 }
+
   @{
     URL32         = $url32Data.URL
     URL64         = $url64Data.URL
     FallBackUrl32 = $url32Data.FallBackUrl
     FallBackUrl64 = $url64Data.FallBackUrl
-    Version       = $url32Data.version
+    Version       = $version
     PackageName   = 'Qemu'
   }
 }
