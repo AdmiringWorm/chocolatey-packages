@@ -15,11 +15,16 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 
-#Create shim
-$installlogfile="$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log"
-Write-Host "Searching for meld.exe installation directory in  $installlogfile"
-$meldExe = Get-Content $installlogfile | Select-String -Pattern 'TARGETDIR\s*,\s*Object: ([^,]*)$' | % {$_.matches.groups[1].Value}
-$meldExe = "$($meldExe)meld.exe"
+$meldExe = @(
+  "HKLM:\SOFTWARE\Meld"
+  "HKLM:\SOFTWARE\Wow6432Node\Meld"
+) | ? {
+  Test-Path $_
+} | % {
+  $key = Get-ItemPropertyValue $_ -Name "Executable" -ea 0
+  if ($key) { Write-Host "Found executable path: $key" }
+  $key
+} | select -First 1
 
 if( Test-Path $meldExe -PathType Leaf ) {
   Install-BinFile -Name meld -Path "$meldExe"
