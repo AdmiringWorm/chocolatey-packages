@@ -7,7 +7,6 @@
     "node": ">= 10.0.0"
   },
   "scripts": {
-    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install"
   },
@@ -20,11 +19,6 @@
   },
   "homepage": "https://github.com/AdmiringWorm/chocolatey-packages#readme",
   "dependencies": {
-    "@commitlint/config-angular": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "commitizen": "4.2.3",
-    "commitlint": "11.0.0",
-    "cz-conventional-changelog": "3.3.0",
     "eclint": "^2.8.1",
     "husky": "5.0.9",
     "imagemin-lint-staged": "0.4.0",
