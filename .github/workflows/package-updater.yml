@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     env:
       au_version: custom
-      au_push: false
+      au_push: true
       github_user_repo: ${{ github.repository }}
       github_api_key: ${{ secrets.GIST_API_KEY }}
       gist_id: 747b3ede98c9404e5cb6a399595e7ad1
