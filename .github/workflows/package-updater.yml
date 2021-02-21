@@ -75,7 +75,7 @@ jobs:
           git diff --cached > unsaved_changes.patch
       - name: Create au temporary directory
         run: |
-          if (Test-Path $Env:TEMP\chocolatey\au) { 7z a -mx9 au_temp.7z $Env:TEMP\chocolatey-au\* }
+          if (Test-Path $Env:TEMP\chocolatey\au) { 7z a -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
         shell: powershell
       - name: Upload artifacts
         if: always()
