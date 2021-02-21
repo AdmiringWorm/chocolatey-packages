@@ -52,3 +52,15 @@ jobs:
             .\scripts\Invoke-PesterTests.ps1
           }
         shell: powershell
+      - name: Create diff file
+        run: |
+          git add automatic extension manual templates
+          git diff --cached > unsaved_changes.patch
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: |
+            unsaved_changes.patch
+            '**/*.nupkg'
