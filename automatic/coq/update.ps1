@@ -39,19 +39,25 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $latestRelease = Get-LatestGithubReleases @repoInfo | % latest
+  [array]$assets = $latestRelease.Assets | ? { $_ -match "\.exe$" }
+  if ($assets.Count -ne 2) {
+    Write-Host "Latest release do not contain expected Windows assets, ignoring..."
+    return "ignore"
+  }
   $distIndex = $latestRelease.Body.Indexof("Distribution")
   if ($distIndex -gt 0) {
     $releaseNotes = $latestRelease.Body.Substring(0, $distIndex)
-  } else {
+  }
+  else {
     $releaseNotes = $latestRelease.Body
   }
 
   @{
-    Version = $latestRelease.Version
+    Version      = $latestRelease.Version
     ReleaseNotes = $releaseNotes
-    URL32 = $latestRelease.Assets | ? { $_ -match "i686\.exe$" }
-    URL64 = $latestRelease.Assets | ? { $_ -match "x86_64\.exe$" }
-    PackageName = 'Coq'
+    URL32        = $assets | ? { $_ -match "i686\.exe$" }
+    URL64        = $assets | ? { $_ -match "x86_64\.exe$" }
+    PackageName  = 'Coq'
   }
 }
 
