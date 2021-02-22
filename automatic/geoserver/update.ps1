@@ -16,8 +16,6 @@ function global:au_BeforeUpdate($Package) {
 
   Get-RemoteFiles -Purge -NoSuffix
   $Latest.LicenseUrl = $licenseUrl -replace 'raw', 'blob'
-  $Package.nuspecXml.package.metadata.LicenseUrl = $Latest.LicenseUrl
-  $Package.nuspecXml.package.metadata.ReleaseNotes = $Latest.AnnouncementUrl
 }
 
 function global:au_SearchReplace {
@@ -36,7 +34,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  #Update-Metadata -key "licenseUrl" -value $Latest.LicenseUrl
+  Update-Metadata -data @{
+    licenseUrl   = $Latest.LicenseUrl
+    releaseNotes = $Latest.AnnouncementUrl
+  }
 }
 
 function global:au_GetLatest {
