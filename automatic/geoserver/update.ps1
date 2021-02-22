@@ -54,7 +54,9 @@ function global:au_GetLatest {
     }
   }
 
-  $announchementUrl = $download_page.Links | ? href -match "announcements.*released.html"
+  $announchementUrl = $download_page.Links | ? href -match "announcements.*released.html" | % {
+    [uri]::new([uri]$releases, $_.href)
+  } | select -first 1
 
   @{
     URL32           = $url

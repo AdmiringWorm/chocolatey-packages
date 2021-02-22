@@ -24,27 +24,7 @@
     <summary>Java-based software server that allows users to view and edit geospatial dat</summary>
     <description><![CDATA[NO DESCRIPTION YET
 ]]></description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!-- =============================== -->
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
