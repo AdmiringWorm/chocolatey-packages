@@ -30,7 +30,6 @@ function global:au_SearchReplace {
       "(?i)(obtained from )\<.*\>"        = "`${1}<$($Latest.LicenseUrl)>"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'"      = "`${1}'$softwareName'"
       "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
     }
   }

@@ -4,11 +4,9 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = Join-Path (Get-ToolsLocation) "GeoServer"
 
 $packageArgs = @{
-  packageName  = $env:ChocolateyPackageName
-  destination  = $installDir
-  file         = "$toolsDir\"
-
-  softwareName = 'geoserver*'
+  packageName = $env:ChocolateyPackageName
+  destination = $installDir
+  file        = "$toolsDir\"
 }
 
 Get-ChocolateyUnzip @packageArgs
