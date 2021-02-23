@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://electrum-ltc.org>
 and can be verified like this:
 
-1. Download <https://electrum-ltc.org/download/electrum-ltc-4.0.9.1-setup.exe>
+1. Download <https://electrum-ltc.org/download/electrum-ltc-4.0.9.2-setup.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 1B083435BA73341E9F60F24B0D509F17D5B8536E1EDE50600B448E0935DC2C84
+  checksum: 19C0149C90B4A74B9CF39E24A34C41BE1C63BEC0591E0E3871551B40C3DB0C03
 
 File 'LICENSE.txt' is obtained from <https://github.com/pooler/electrum-ltc/blob/305843999eabdb4276109e3dc6b70bf21dbbc29a/LICENCE>
