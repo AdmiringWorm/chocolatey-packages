@@ -18,13 +18,13 @@ Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test
 $meldExe = @(
   "HKLM:\SOFTWARE\Meld"
   "HKLM:\SOFTWARE\Wow6432Node\Meld"
-) | ? {
+) | Where-Object {
   Test-Path $_
-} | % {
+} | ForEach-Object {
   $key = Get-ItemPropertyValue $_ -Name "Executable" -ea 0
   if ($key) { Write-Host "Found executable path: $key" }
   $key
-} | select -First 1
+} | Select-Object -First 1
 
 if( Test-Path $meldExe -PathType Leaf ) {
   Install-BinFile -Name meld -Path "$meldExe"

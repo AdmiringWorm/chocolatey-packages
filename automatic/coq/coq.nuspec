@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Coq</id>
-    <version>8.13.0</version>
+    <version>8.13.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/coq</packageSourceUrl>
     <owners>AdmiringWorm, murray</owners>
     <title>The Coq proof assistant</title>
@@ -38,12 +38,10 @@ As a platform for the formalization of mathematics or the development of program
 ## [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/coq/Changelog.md)
 
 ## Software Release Notes
-Highlights:
-- Introduction of primitive persistent arrays in the core language, implemented using imperative persistent arrays.
-- Introduction of definitional proof irrelevance for the equality type defined in the SProp sort.
-- Many improvements to the handling of notations, including number notations, recursive notations and notations with bindings. A new algorithm chooses the most precise notation available to print an expression, which might introduce changes in printing behavior.
+Hotfix:
+- Fix arities of VM opcodes for some floating-point operations that could cause memory corruption
 
-See the [changelog](https://coq.github.io/doc/v8.13/refman/changes.html#version-8-13) for an overview of the new features and changes.
+__Notes regarding the macOS installer__: This installer is only compatible with macOS 10.13 or higher. Because the application is signed but not "notarized", on macOS 10.15 (Catalina), it won't open by default, unless you right-click and chose "Open". Cf. https://github.com/coq/platform/issues/51 to learn more.
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
