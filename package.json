@@ -7,8 +7,7 @@
     "node": ">= 10.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "husky install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,6 @@
   "homepage": "https://github.com/AdmiringWorm/chocolatey-packages#readme",
   "dependencies": {
     "eclint": "^2.8.1",
-    "husky": "5.1.0",
     "imagemin-lint-staged": "0.4.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1"
