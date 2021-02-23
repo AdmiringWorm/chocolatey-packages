@@ -21,13 +21,14 @@ $meldExe = @(
 ) | Where-Object {
   Test-Path $_
 } | ForEach-Object {
-  $key = Get-ItemPropertyValue $_ -Name "Executable" -ea 0
+  $key = Get-ItemProperty $_ -Name "Executable" -ea 0 | % Executable
   if ($key) { Write-Host "Found executable path: $key" }
   $key
 } | Select-Object -First 1
 
-if( Test-Path $meldExe -PathType Leaf ) {
+if ( Test-Path $meldExe -PathType Leaf ) {
   Install-BinFile -Name meld -Path "$meldExe"
-} else {
+}
+else {
   Write-Host "Could not find meld.exe at `"$meldExe`" - not Shimming"
 }
