@@ -19,6 +19,9 @@ If you have any issues with one of the packages hosted in this repository, pleas
 This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).
 The repository is setup so that you can manage your packages entirely from the GitHub web interface (using AppVeyor to update and push packages) and/or using the local repository copy.
 
+On the community repository there are certain functions that can not be used inside the package.
+Please see <https://gist.github.com/AdmiringWorm/500f244c0098dddfd36474f63d3216af> for currently known functions to avoid, or provide fallback helpers for.
+
 ## Prerequisites
 
 To run locally you will need:
