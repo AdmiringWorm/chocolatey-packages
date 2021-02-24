@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>geoserver</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>GeoServer</title>
+    <authors>Open Source Geospatial Foundation</authors>
+    <projectUrl>http://geoserver.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/geoserver.png</iconUrl>
+    <copyright>©2021 Open Source Geospatial Foundation.</copyright>
+    <licenseUrl>https://github.com/geoserver/geoserver/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/geoserver/geoserver/tree/master</projectSourceUrl>
+    <docsUrl>https://docs.geoserver.org/</docsUrl>
+    <mailingListUrl>http://geoserver.org/comm/</mailingListUrl>
+    <bugTrackerUrl>http://geoserver.org/issues/</bugTrackerUrl>
+    <tags>geoserver web mapping maps foss cross-platform</tags>
+    <summary>Java-based software server that allows users to view and edit geospatial dat</summary>
+    <description><![CDATA[NO DESCRIPTION YET
+]]></description>
+    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
