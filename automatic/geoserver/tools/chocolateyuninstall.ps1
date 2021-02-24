@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 Write-Host "Removing shim files"
-@('startup'; 'shutdown') | % {
+@('startup'; 'shutdown') | ForEach-Object {
   Uninstall-BinFile "geoserver-$_"
 }
 
@@ -9,7 +9,7 @@ $installPath = Join-Path (Get-ToolsLocation) "GeoServer"
 
 if (Test-Path $installPath) {
   Write-Host "Removing installation directory..."
-  rm -Recurse -Force $installPath
+  Remove-Item -Recurse -Force $installPath
 }
 else {
   Write-Warning "Installation directory NOT found. Ignoring..."

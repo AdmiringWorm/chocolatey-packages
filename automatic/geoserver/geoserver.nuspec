@@ -4,17 +4,17 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoserver</id>
-    <version>0.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages</packageSourceUrl>
+    <version>2.18.2</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/geoserver</packageSourceUrl>
     <owners>AdmiringWorm</owners>
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>GeoServer</title>
     <authors>Open Source Geospatial Foundation</authors>
     <projectUrl>http://geoserver.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/geoserver.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@36b9d155c51c8558d7c29dab84b293603212a215/icons/geoserver.png</iconUrl>
     <copyright>©2021 Open Source Geospatial Foundation.</copyright>
-    <licenseUrl>https://github.com/geoserver/geoserver/blob/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/geoserver/geoserver/blob/2.18.2/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/geoserver/geoserver/tree/master</projectSourceUrl>
     <docsUrl>https://docs.geoserver.org/</docsUrl>
@@ -22,9 +22,16 @@
     <bugTrackerUrl>http://geoserver.org/issues/</bugTrackerUrl>
     <tags>geoserver web mapping maps foss cross-platform</tags>
     <summary>Java-based software server that allows users to view and edit geospatial dat</summary>
-    <description><![CDATA[NO DESCRIPTION YET
+    <description><![CDATA[GeoServer implements industry standard OGC protocols such as Web Feature Service (WFS), Web Map Service (WMS), and Web Coverage Service (WCS). Additional formats and publication options are available as extensions including Web Processing Service (WPS), and Web Map Tile Service (WMTS).
+
+## Notes
+
+- This package do not install any form of Java, and before use fo the program the java of your choice needs to be installed.
+  Some helpful packages to install java includes: [`javaruntime`](https://chocolatey.org/packages/javaruntime), [`adoptopenjdk-jre`](https://chocolatey.org/packages/adoptopenjdk-jre).
+- GeoServer is not shut down as part of the upgrade or uninstall process, please do so before upgrading this package.
+- Shutdown and Startup scripts are available on `PATH` under the names `geoserver-startup` and `geoserver-shutdown`
 ]]></description>
-    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+    <releaseNotes>http://geoserver.org/announcements/2021/01/20/geoserver-2-18-2-released.html</releaseNotes>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->

@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>uplay</id>
-    <version>0.0</version>
-    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/uplay</packageSourceUrl>
+    <id>ubisoft-connect</id>
+    <version>119.0.0.10382</version>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/ubisoft-connect</packageSourceUrl>
     <owners>AdmiringWorm, Marek</owners>
     <title>Uplay</title>
     <authors>Ubisoft Entertainment</authors>
     <projectUrl>https://ubisoftconnect.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ad4fd39fa9af7d287f8a4e39d05f09d7b7cb789c/icons/uplay.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@401a9c0283f623586a4991f04977ab1659798ba1/automatic/ubisoft-connect/icons/128x128.png</iconUrl>
     <copyright>© Ubisoft Entertainment. All Rights Reserved.</copyright>
     <licenseUrl>https://legal.ubi.com/eula/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -17,13 +17,46 @@
     <tags>ubisoft-connect uplay ubisoft ubisoft-client games-distributor games-delivery ubisoft-downloader game-downloader gaming</tags>
     <summary>Ubisoft Connect is a cross-platform service available in more than 50 games. It enables actions, rewards and social interactions.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[Uplay is a service created by Ubisoft that provides its users with an experience similar to the achievements offered by other game companies. The service is provided across various platforms including: PC, Mac, PS3, Xbox360, Facebook, iPhone, iPad, and most recently revealed, OnLive.
+    <description><![CDATA[Ubisoft Connect is the ecosystem of players services for Ubisoft games across all platforms. It aims at giving the best environment for all players to enjoy their games and connect with each other whatever the device.
 
-Each Uplay enabled game has various actions that can be accomplished to earn Uplay points. You can then spend these points to unlock game-related rewards for any available game. On Uplay you can find the hottest games from Ubisoft along with all the information you need on them.
+Ubisoft Connect is a free service available on all devices. You can access it on your PC, through a mobile app, or even directly from your games. All you need to login is a [Ubisoft Account](https://ubisoftconnect.com/)!
 
-The application displays a user-friendly interface which makes it easy to use by anyone. From a main window you are able to browse game releases, add new ones to your library and even launch those which you have installed.
+## Features
 
-You can also manage your account information and see what games your friends are playing. To make things easier, Uplay even displays the awards you can win and also provides information about what you have to achieve for each one.
+### One network for all players
+
+**Connect with players across all platforms, for all games**
+Whether you play on PC or console, you'll be part of a global network of Ubisoft players with access to all the same services. Regular updates will provide you with more ways to interact with an ever-growing community.
+
+Find friends on all platforms, see what they're playing, and check their achievements.
+
+**Keep your progression on all devices**
+For our newest releases, all your game progression is saved within Ubisoft Connect, so you won't lose a step if you change consoles or switch to PC.
+
+### Endless celebration
+
+**Win more**
+Over 1000 free rewards are available across our back catalogue of games.
+
+On our latest titles, unlock legendary weapons, character outfits, emotes, and consumables just by playing your games. Every time you level up in Ubisoft Connect, you'll earn [Units](https://ubisoftconnect.com/en-GB/units/) you can spend on unique rewards.
+
+Learn more about our loyalty program [here](https://ubisoftconnect.com/en-GB/faq/#loyalty-program).
+
+**20% off the Ubisoft Store**
+Redeem 100 Units to get 20% off your next purchase in the Ubisoft Store.
+
+### Know more and improve
+
+**Access your stats at any time and compare with your friends**
+Keep up to date with your stats, progression and performance in your favorite games.
+
+Compare yourself with your friends, no matter what platform they are playing on.
+
+**Get Smart Intel to improve your next session**
+Before starting your game session, get highlights of your best performances, along with some personalized tips based on your playstyle.
+
+**Don't miss any news or events on your favorite games**
+Check your feed to get all the latest news on your games: upcoming seasons, new challenges, and rewards... We'll give you everything you need to know about the games you love.
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/uplay/Changelog.md)</releaseNotes>
   </metadata>

@@ -1,6 +1,6 @@
 # ![Uplay Changelog](https://img.shields.io/badge/Uplay-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 119.0.0.10382 (2021-02-24)
 
 - Renamed package to `ubisoft-connect` (old name `uplay`)
 
