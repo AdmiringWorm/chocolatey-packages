@@ -5,6 +5,6 @@ GeoServer implements industry standard OGC protocols such as Web Feature Service
 ## Notes
 
 - This package do not install any form of Java, and before use fo the program the java of your choice needs to be installed.
-  Some helpful packages to install java includes: [`javaruntime`](https://chocolatey.org/packages/javaruntime), [`adoptopenjdk-jre`](https://chocolatey.org/packages/adoptopenjdk-jre).
+  Some helpful packages to install java includes: [`javaruntime`](https://chocolatey.org/packages/javaruntime), [`adoptopenjdk-jre`](https://chocolatey.org/packages/adoptopenjdkjre).
 - GeoServer is not shut down as part of the upgrade or uninstall process, please do so before upgrading this package.
 - Shutdown and Startup scripts are available on `PATH` under the names `geoserver-startup` and `geoserver-shutdown`
