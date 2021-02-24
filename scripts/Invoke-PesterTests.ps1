@@ -1,4 +1,4 @@
-param(
+﻿param(
   [string]$artifactsDirectory = "$env:TEMP\artifacts",
   [string]$validateAgainst = "origin/master",
   [switch]$runAllTests
@@ -60,7 +60,7 @@ function Invoke-PesterTests() {
   }
 
   if ($failedCount -gt 0) {
-    if (Test-Path Env:\APPVEYOR_JOB_ID) {
+    if ((Test-Path Env:\APPVEYOR_JOB_ID) -or (Test-Path Env:\GITHUB_ACTIONS)) {
       throw "$($failedCount) tests failed"
     }
     else {
