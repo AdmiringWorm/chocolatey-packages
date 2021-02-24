@@ -1,4 +1,4 @@
-. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
+﻿. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 
@@ -8,4 +8,4 @@ Run-PesterTests `
   -licenseShouldMatch 'GNU GENERAL PUBLIC LICENSE' `
   -expectedEmbeddedMatch 'geoserver-[\d\.]+-bin.zip' `
   -expectedDefaultDirectory "$env:SystemDrive\tools\GeoServer" `
-  -expectedShimFiles "geoserver-startup", "geoserver-shutdown"
+  -expectedShimFiles "geoserver-startup.exe", "geoserver-shutdown.exe"
