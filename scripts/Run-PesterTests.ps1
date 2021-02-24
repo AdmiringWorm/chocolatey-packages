@@ -1,4 +1,4 @@
-﻿function Install-Package() {
+﻿function Install-ChocolateyPackage() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
     [Parameter(Mandatory = $true)][string]$packagePath,
@@ -56,7 +56,7 @@
   return $exitCode
 }
 
-function Uninstall-Package() {
+function Uninstall-ChocolateyPackage() {
   param(
     [Parameter(Mandatory = $true)][string]$packageName,
     [string[]]$additionalArguments,
@@ -135,7 +135,7 @@ function Run-PesterTests() {
   function installPackage {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification = "Usage is correct")]
     param([string[]]$additionalArguments)
-    return Install-Package `
+    return Install-ChocolateyPackage `
       -packageName $packageName `
       -packagePath $packagePath `
       -additionalArguments $additionalArguments `
@@ -147,7 +147,7 @@ function Run-PesterTests() {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly", "", Justification = "Usage is correct")]
     param([string[]]$additionalArguments)
     if ($customUninstallArgs) { $additionalArguments += $customUninstallArgs }
-    return Uninstall-Package `
+    return Uninstall-ChocolateyPackage `
       -packageName $packageName `
       -additionalArguments $additionalArguments `
       -uninstallSleep $installUninstallSleep
