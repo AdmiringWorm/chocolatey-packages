@@ -21,7 +21,7 @@ $meldExe = @(
 ) | Where-Object {
   Test-Path $_
 } | ForEach-Object {
-  $key = Get-ItemProperty $_ -Name "Executable" -ea 0 | % Executable
+  $key = Get-ItemProperty $_ -Name "Executable" -ea 0 | ForEach-Object Executable
   if ($key) { Write-Host "Found executable path: $key" }
   $key
 } | Select-Object -First 1
