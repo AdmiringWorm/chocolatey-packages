@@ -45,7 +45,7 @@ function forceDomain([uri]$releaseUrl, [string]$fileUrl) {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe$'
+  $re = '\.msi$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { forceDomain $releases $_ }
 
   $verRe = '\/v?'
