@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$softwareName = 'Uplay'
+$softwareName = 'Ubisoft Connect'
 
 function global:au_SearchReplace {
   @{
@@ -22,7 +22,7 @@ function global:au_AfterUpdate {
 }
 
 function GetResultInformation([string]$url32) {
-  $dest = "$env:TEMP\uplay.exe"
+  $dest = "$env:TEMP\ubisoft-connect.exe"
   Get-WebFile $url32 $dest | Out-Null
 
   return @{

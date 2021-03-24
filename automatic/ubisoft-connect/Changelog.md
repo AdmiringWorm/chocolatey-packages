@@ -1,4 +1,4 @@
-# ![Uplay Changelog](https://img.shields.io/badge/Uplay-Package%20Changelog-blue.svg?style=for-the-badge)
+# ![Ubisoft Connect Changelog](https://img.shields.io/badge/ubisoft-connect-Package%20Changelog-blue.svg?style=for-the-badge)
 
 ## Version: 119.0.0.10382 (2021-02-24)
 
