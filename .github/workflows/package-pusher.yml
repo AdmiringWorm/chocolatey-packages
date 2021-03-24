@@ -11,7 +11,8 @@ jobs:
   pusher:
     runs-on: windows-latest
     env:
-      au_version: custom
+      au_version: master
+      github_user_repo: ${{ github.repository }}
       api_key: ${{ secrets.CHOCO_API_KEY }}
 
     steps:
@@ -20,7 +21,7 @@ jobs:
           Set-Service wuauserv -StartupType Manual
           choco install wormies-au-helpers
           Install-Module Pester -RequiredVersion 4.10.1 -Scope CurrentUser -Force -SkipPublisherCheck
-          git clone -q https://github.com/AdmiringWorm/au.git $Env:TEMP/au
+          git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
         shell: powershell
       - name: System information
