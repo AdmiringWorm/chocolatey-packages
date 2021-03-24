@@ -31,8 +31,8 @@ jobs:
           git --version
           choco --version
           "Build info"
-          '  {0,-20} {1}' -f 'SCHEDULED BUILD:', (${{ github.event_name }} -eq 'schedule')
-          '  {0,-20} {1}' -f 'FORCED BUILD:'   , (${{ github.event_name }}    -eq 'workflow_dispatch')
+          '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ("${{ github.event_name }}" -eq 'schedule')
+          '  {0,-20} {1}' -f 'FORCED BUILD:'   , ("${{ github.event_name }}" -eq 'workflow_dispatch')
         shell: powershell
       - uses: actions/checkout@v2
         with:
