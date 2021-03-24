@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>uplay</id>
+    <version>120.0.0.20210324</version>
+    <owners>AdmiringWorm, Marek</owners>
+    <title>[Deprecated] Uplay</title>
+    <authors>Ubisoft Entertainment</authors>
+    <projectUrl>https://uplay.ubi.com/</projectUrl>
+    <tags>uplay deprecated</tags>
+    <summary>This package is deprecated, use ubisoft-connect instead</summary>
+    <description>The Ubisoft program have changed its name to Ubisoft Connect, as such this package is deprecated and a new package named [ubisoft-connect](https://chocolatey.org/packages/ubisoft-connect) supercedes the package instead.</description>
+    <dependencies>
+      <dependency id="ubisoft-connect" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
