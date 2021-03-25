@@ -11,9 +11,9 @@ $certificates | ForEach-Object {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/latest/NordVPNSetup.exe'
+  url            = 'https://downloads.nordcdn.com/apps/windows/NordVPN/TEST_A/NordVPNSetup.exe'
   softwareName   = 'NordVPN*'
-  checksum       = '0ECA17E1B847773B4CC6CF122A3792DAF2F47233C541416F5F14497A7A549F47ED880D9E78E60E980F5367FC7570ECD90B1B262D85980E29799DAA02D2988F8F'
+  checksum       = '8BE48FE314919BF08BA46B746EDBDA2FCDC726CA53355CD268649893917142A75F8B1B54BFB09B1C1FC55604CDF1890B4CAF110D55A7370D0746C16F3B2491FE'
   checksumType   = 'sha512'
   silentArgs     = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /ALLUSERS /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName)\$($env:chocolateyPackageVersion)\install.log`""
   validExitCodes = @(0)
