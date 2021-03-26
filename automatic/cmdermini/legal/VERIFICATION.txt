@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/cmderdev/cmder/releases/tag/v1.3.17>
+location on <https://github.com/cmderdev/cmder/releases/tag/v1.3.18>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/cmderdev/cmder/releases/download/v1.3.17/cmder_mini.zip>
+1. Download the following <https://github.com/cmderdev/cmder/releases/download/v1.3.18/cmder_mini.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: A0B6539943489D559E920D320ADA9468AB62F215E7218B5075D913B3687069D5
+  checksum: 2196BC1880A711C72F2B86DF07F7533B72B085FB167D8566D941F0B9A41B5510
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/cmderdev/cmder/blob/master/LICENSE>
