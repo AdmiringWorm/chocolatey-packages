@@ -9,4 +9,4 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 
-Remove-Item "$ttolsDir\*.zip" -ea 0
+Remove-Item "$toolsDir\*.zip" -ea 0
