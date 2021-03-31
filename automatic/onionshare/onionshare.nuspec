@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>onionshare</id>
-    <version>2.3.1</version>
+    <version>2.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/onionshare</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>OnionShare</title>
     <authors>Micah Lee</authors>
     <projectUrl>https://onionshare.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@92f4e01bb66a1a5a853e465e8a06ae7017de871a/automatic/onionshare/icons/128x128.png</iconUrl>
-    <licenseUrl>https://github.com/micahflee/onionshare/blob/v2.3.1/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/micahflee/onionshare/blob/v2.2/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/micahflee/onionshare</projectSourceUrl>
     <docsUrl>https://github.com/micahflee/onionshare/wiki</docsUrl>

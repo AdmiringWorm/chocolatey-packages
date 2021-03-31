@@ -4,13 +4,13 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  fileType       = 'msi'
-  file           = "$toolsPath\OnionShare-2.3.1.msi"
+  fileType       = 'exe'
+  file           = "$toolsPath\onionshare-2.2-setup.exe"
   softwareName   = 'OnionShare'
-  silentArgs     = '/quiet /passive /norestart'
+  silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
