@@ -1,15 +1,39 @@
 ﻿Import-Module AU
 
-$releases = 'https://nagstamon.ifw-dresden.de/download/'
+[uri]$releases = 'https://github.com/HenriWahl/Nagstamon/releases/latest'
 if ($MyInvocation.InvocationName -ne '.') {
   $packageName = 'Nagstamon'
 }
 
-if ($MyInvocation.InvocationName -eq '.') {
+if ($MyInvocation.InvocationName -ne '.') {
+  function global:au_BeforeUpdate {
+    $content = Get-Content "$PSScriptRoot\..\nagstamon.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(nagstamon)(?:\.install| \(Install\))', "`$1" }
+    $encoding = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
+  }
+
+  function global:au_AfterUpdate {
+
+    $releaseNotes = (
+      "[Software Changelog]($($Latest.ReleaseNotes))  `n" +
+      "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)")
+
+    Update-Metadata -key "releaseNotes" -value $releaseNotes
+  }
+
+  function global:au_SearchReplace {
+    @{
+      ".\$($Latest.PackageName).nuspec" = @{
+        "(\<dependency .+?`"$($Latest.PackageName).install`" version=)`"([^`"]*)`"" = "`$1`"[$($Latest.Version)]`""
+      }
+    }
+  }
+}
+else {
   function global:au_SearchReplace {
     $replaceArgs = @{
       ".\legal\VERIFICATION.txt"      = @{
-        "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+        "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseNotes)>"
         "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
         "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
         "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
@@ -27,53 +51,35 @@ if ($MyInvocation.InvocationName -eq '.') {
     return $replaceArgs
   }
 }
-else {
-
-  function global:au_BeforeUpdate {
-    $content = Get-Content "$PSScriptRoot\..\nagstamon.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(nagstamon)(?:\.install| \(Install\))', "`$1" }
-    $encoding = New-Object System.Text.UTF8Encoding($false)
-    [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
-
-    $releaseNotes = (
-      "[Software Changelog]($($Latest.ReleaseNotes))  `n" +
-      "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)")
-
-    Update-Metadata -key "releaseNotes" -value $releaseNotes
-  }
-
-  function global:au_SearchReplace {
-    @{
-      ".\$($Latest.PackageName).nuspec" = @{
-        "(\<dependency .+?`"$($Latest.PackageName).install`" version=)`"([^`"]*)`"" = "`$1`"[$($Latest.Version)]`""
-      }
-    }
-  }
-}
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   #region Installer
-  $re = '\/stable.*\.exe$'
-  $urls_i = $download_page.Links | ? href -match $re | select -first 2 -expand href
+  $re = '\.exe$'
+  $urls_i = $download_page.Links | ? href -match $re | select -first 2 -expand href | % {
+    [uri]::new($releases, $_)
+  }
   #endregion
 
   #region Portable
-  $re = '\/stable.*\.zip$'
-  $urls_p = $download_page.Links | ? href -match $re | select -first 2 -expand href
+  $re = '\.zip$'
+  $urls_p = $download_page.Links | ? href -match $re | select -first 2 -expand href | % {
+    [uri]::new($releases, $_)
+  }
   #region
 
-  $verRe = '[-]'
+  $verRe = '/'
   [version]$version32 = $urls_i[0] -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL32_i      = [uri]($urls_i | ? { $_ -match 'win32' } )
-    URL64_i      = [uri]($urls_i | ? { $_ -match 'win64' } )
-    #URL32_p      = [uri]($urls_p | ? { $_ -match 'win32' } )
-    URL64_p      = [uri]($urls_p | ? { $_ -match 'win64' } )
+    URL32_i      = $urls_i | ? { $_ -match 'win32' }
+    URL64_i      = $urls_i | ? { $_ -match 'win64' }
+    URL32_p      = $urls_p | ? { $_ -match 'win32' }
+    URL64_p      = $urls_p | ? { $_ -match 'win64' }
     Version      = $version32
     PackageName  = $packageName
-    ReleaseNotes = "https://github.com/HenriWahl/Nagstamon/releases/tag/$version32"
+    ReleaseNotes = Get-RedirectedUrl $releases
   }
 }
 
