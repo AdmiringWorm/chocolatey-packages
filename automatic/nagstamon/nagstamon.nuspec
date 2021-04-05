@@ -8,13 +8,13 @@
     <owners>AdmiringWorm</owners>
     <title>Nagstamon</title>
     <authors>Henri Wahl</authors>
-    <projectUrl>https://nagstamon.ifw-dresden.de/</projectUrl>
+    <projectUrl>https://nagstamon.de/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@612b4f83873a31681e7fd54bd99b0737dc906d52/automatic/nagstamon/icons/256x256.png</iconUrl>
-    <copyright>© 2008-2014 Henri Wahl et al.</copyright>
+    <copyright>© 2008-2021 The Nagstamon Community</copyright>
     <licenseUrl>https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/HenriWahl/Nagstamon</projectSourceUrl>
-    <docsUrl>https://nagstamon.ifw-dresden.de/docs/</docsUrl>
+    <docsUrl>https://nagstamon.de/documentation</docsUrl>
     <bugTrackerUrl>https://github.com/HenriWahl/Nagstamon/issues</bugTrackerUrl>
     <tags>nagstamon nagios monitoring admin</tags>
     <summary>Nagstamon is a status monitor for the desktop.</summary>

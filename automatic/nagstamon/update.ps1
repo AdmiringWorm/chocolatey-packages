@@ -26,12 +26,19 @@ if ($MyInvocation.InvocationName -eq '.') {
     }
     return $replaceArgs
   }
-} else {
+}
+else {
 
   function global:au_BeforeUpdate {
-    $content = Get-Content "$PSScriptRoot\..\nagstamon.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(nagstamon)(?:\.install| \(Install\))',"`$1" }
+    $content = Get-Content "$PSScriptRoot\..\nagstamon.install\Readme.md" -Encoding UTF8 | % { $_ -replace '(nagstamon)(?:\.install| \(Install\))', "`$1" }
     $encoding = New-Object System.Text.UTF8Encoding($false)
     [System.IO.File]::WriteAllLines("$PSScriptRoot\Readme.md", $content, $encoding)
+
+    $releaseNotes = (
+      "[Software Changelog]($($Latest.ReleaseNotes))  `n" +
+      "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)")
+
+    Update-Metadata -key "releaseNotes" -value $releaseNotes
   }
 
   function global:au_SearchReplace {
@@ -57,15 +64,16 @@ function global:au_GetLatest {
   #region
 
   $verRe = '[-]'
-  $version32 = $urls_i[0] -split "$verRe" | select -last 1 -skip 1
+  [version]$version32 = $urls_i[0] -split "$verRe" | select -last 1 -skip 1
 
   @{
     URL32_i      = [uri]($urls_i | ? { $_ -match 'win32' } )
     URL64_i      = [uri]($urls_i | ? { $_ -match 'win64' } )
     #URL32_p      = [uri]($urls_p | ? { $_ -match 'win32' } )
     URL64_p      = [uri]($urls_p | ? { $_ -match 'win64' } )
-    Version      = [version]$version32
+    Version      = $version32
     PackageName  = $packageName
+    ReleaseNotes = "https://github.com/HenriWahl/Nagstamon/releases/tag/$version32"
   }
 }
 
