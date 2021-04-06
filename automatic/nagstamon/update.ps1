@@ -70,7 +70,7 @@ function global:au_GetLatest {
   #region
 
   $verRe = '/'
-  [version]$version32 = $urls_i[0] -split "$verRe" | select -last 1 -skip 1
+  $version32 = Get-Version ($urls_i[0] -split "$verRe" | select -last 1 -skip 1)
 
   @{
     URL32_i      = $urls_i | ? { $_ -match 'win32' }
