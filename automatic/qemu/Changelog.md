@@ -1,5 +1,9 @@
 # ![Qemu Changelog](https://img.shields.io/badge/Qemu-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2021.4.7 (2021-04-08)
+
+- Change to allow installer versions to mismatch
+
 ## Version: 2020.2.1.20200331 (2020-03-31)
 
 - **ENHANCEMENT:** Change to using SHA512 checksums
