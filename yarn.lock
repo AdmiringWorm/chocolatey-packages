@@ -897,7 +897,7 @@ duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-eclint@^2.8.1:
+eclint@2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/eclint/-/eclint-2.8.1.tgz#252e95ca1b05b9273096bed2f2a7172b5e864a22"
   integrity sha512-0u1UubFXSOgZgXNhuPeliYyTFmjWStVph8JR6uD6NDuxl3xI5VSCsA1KX6/BSYtM9v4wQMifGoNFfN5VlRn4LQ==
