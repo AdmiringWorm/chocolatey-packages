@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 
 $repoInfo = @{
   repoUser = 'securitywithoutborders'
@@ -44,7 +44,7 @@ function addStream($release, $stream, $name) {
   if (!($stream | ? Version -eq $release.Version)) {
     $stream.Add($name, @{
         Version      = $release.Version
-        URL32        = $release.Assets | ? { $_ -match '\.exe$' }
+        URL32        = $release.Assets | ? { $_ -match 'hardentools\.exe$' }
         ReleaseNotes = $release.Body
         ReleaseUrl   = $release.ReleaseUrl
       })
