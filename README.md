@@ -4,15 +4,12 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Liberapay donations](https://img.shields.io/liberapay/receives/admiringworm.svg?logo=liberapay&style=flat-square)](https://liberapay.com/AdmiringWorm)
-
 ## Automatic Chocolatey Packages built by appveyor
 
-[![Join the chat at https://gitter.im/wormie-packages/Lobby](https://badges.gitter.im/wormie-packages/Lobby.svg)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![AppVeyor Update Status](https://ci.appveyor.com/api/projects/status/github/AdmiringWorm/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/AdmiringWorm/chocolatey-packages)
-[![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
-[![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg)](https://chocolatey.org/profiles/AdmiringWorm)
-[![Open Source Helpers](https://www.codetriage.com/admiringworm/chocolatey-packages/badges/users.svg)](https://www.codetriage.com/admiringworm/chocolatey-packages)
+[![Join the chat at https://gitter.im/wormie-packages/Lobby](https://img.shields.io/gitter/room/wormie-packages/Lobby?logo=gitter&style=flat-square)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![GitHub Updater Status](https://img.shields.io/github/workflow/status/AdmiringWorm/chocolatey-packages/Package%20Updater?label=updater&logo=github&style=flat-square)](https://github.com/AdmiringWorm/chocolatey-packages/actions/workflows/package-updater.yml)
+[![Update Status](https://img.shields.io/badge/Update-Status-blue.svg?style=flat-square&logo=github)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
+[![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg?style=flat-square&logo=chocolatey)](https://chocolatey.org/profiles/AdmiringWorm)
 
 If you have any issues with one of the packages hosted in this repository, please feel free to open an issue (preferred instead of using `Contact Maintainers` on chocolatey.org), or jump into my [gitter channel](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).
 
