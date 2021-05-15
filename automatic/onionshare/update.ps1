@@ -46,21 +46,38 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { forceDomain $releases $_ }
+  $urls = $download_page.Links | ? href -match $re | select -expand href | % { forceDomain $releases $_ }
 
-  $verRe = '\/v?'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
+  $streams = @{}
 
-  if ($version32 -match "([\d\.]+)\.([a-z-][a-z\d-]+)") {
-    $version = "$($Matches[1])-$($Matches[2])"
-  } else {
-    $version = $version32
+  $urls | % {
+    $url32 = $_
+    $verRe = '\/v?'
+    $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
+    $stableRe = "^([\d\.]+)$"
+    $unstableRe = "^([\d\.]+)\.([a-z-][a-z\d-]+)$"
+
+    ($name, $version) = if ($version32 -match $stableRe) {
+      ("stable", $Matches[1])
+    }
+    elseif ($version32 -match $unstableRe) {
+      ("unstable", "$($Matches[1])-$($Matches[2])")
+    }
+    else {
+      ("", "")
+    }
+
+    if ($name -and !$streams.ContainsKey($name)) {
+      $streams.Add($name, @{
+          URL32         = [uri]$url32
+          Version       = Get-Version $version
+          RemoteVersion = $version32
+        })
+    }
   }
 
   @{
-    URL32         = [uri]$url32
-    Version       = Get-Version $version
-    RemoteVersion = $version32
+    streams = $streams
   }
 }
 
