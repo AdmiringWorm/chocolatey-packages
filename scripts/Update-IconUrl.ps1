@@ -297,7 +297,7 @@ function Update-IconUrl {
   }
   $iconPath = $possiblePkgNames | % {
     if (Test-Path "$PSScriptRoot/$PackagesDirectory/$_/icons") {
-      $result = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$_/icons" | ? Name -match "^[\d]+x" | sort -Descending { [int]($_ -split 'x' | select -first 1) } | select -expand FullName -first 1
+      $result = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$_/icons" | ? Name -match "^[\d]+x" | sort -Descending { [int]($_ -split 'x|\\' | select -last 1 -skip 1) } | select -expand FullName -first 1
       if (!$result) {
         # We assume that there is only one file in the icons directory
         $result = Get-ChildItem "$PSScriptRoot/$PackagesDirectory/$_/icons" | select -expand FullName -first 1

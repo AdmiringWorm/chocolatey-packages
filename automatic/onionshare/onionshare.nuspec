@@ -25,7 +25,7 @@
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/onionshare/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1.30.01" />
+      <dependency id="kb2999226" version="1.0.20181019" />
     </dependencies>
   </metadata>
   <files>

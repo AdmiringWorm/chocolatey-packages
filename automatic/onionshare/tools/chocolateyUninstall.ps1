@@ -4,9 +4,10 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'OnionShare'
-  fileType       = 'exe'
-  silentArgs     = '/S'
-  validExitCodes = @(0)
+  file = ''
+  fileType       = 'msi'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiUninstall.log`""
+  validExitCodes = @(0, 3010, 1605, 1614, 1641)
 }
 
 $uninstalled = $false
@@ -15,10 +16,9 @@ $uninstalled = $false
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
-    $packageArgs['file'] = "$($_.UninstallString)"
+    $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
 
     Uninstall-ChocolateyPackage @packageArgs
-    Start-Process -Wait "autohotkey" -ArgumentList "$toolsDir\uninstall.ahk"
   }
 }
 elseif ($key.Count -eq 0) {
