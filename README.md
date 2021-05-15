@@ -1,7 +1,7 @@
 # AdmiringWorm's Chocolatey Community packages
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Automatic Chocolatey Packages built by appveyor
@@ -124,6 +124,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/michaelweghorn"><img src="https://avatars2.githubusercontent.com/u/6560939?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Weghorn</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=michaelweghorn" title="Code">💻</a></td>
     <td align="center"><a href="http://www.zaltys.org"><img src="https://avatars2.githubusercontent.com/u/42079499?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Grant</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Ajamesg-nz" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://www.redheads.de"><img src="https://avatars.githubusercontent.com/u/2370091?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Moritz 'Morty' Strübe</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/issues?q=author%3Acmorty" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=cmorty" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/TakataSanshiro"><img src="https://avatars.githubusercontent.com/u/25909315?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sanshiro</b></sub></a><br /><a href="https://github.com/AdmiringWorm/chocolatey-packages/commits?author=TakataSanshiro" title="Code">💻</a></td>
   </tr>
 </table>
 

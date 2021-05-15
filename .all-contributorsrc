@@ -179,6 +179,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "TakataSanshiro",
+      "name": "Sanshiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25909315?v=4",
+      "profile": "https://github.com/TakataSanshiro",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "skipCi": false
