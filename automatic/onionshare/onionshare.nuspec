@@ -24,6 +24,9 @@
 [Software Changelog](https://github.com/micahflee/onionshare/blob/master/CHANGELOG.md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/onionshare/Changelog.md)
     </releaseNotes>
+    <dependencies>
+      <dependency id="kb2999226" version="1.0.20181019" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
