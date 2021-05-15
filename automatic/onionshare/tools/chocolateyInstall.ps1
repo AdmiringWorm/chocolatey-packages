@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'msi'
   file           = "$toolsPath\OnionShare-2.3.1.msi"
   softwareName   = 'OnionShare'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1 MSIINSTALLPERUSER=0"
   validExitCodes = @(0)
 }
 
