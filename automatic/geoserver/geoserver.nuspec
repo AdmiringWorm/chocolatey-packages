@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoserver</id>
-    <version>2.19.0</version>
+    <version>2.19.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/geoserver</packageSourceUrl>
     <owners>AdmiringWorm</owners>
 
@@ -12,7 +12,7 @@
     <title>GeoServer</title>
     <authors>Open Source Geospatial Foundation</authors>
     <projectUrl>http://geoserver.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@36b9d155c51c8558d7c29dab84b293603212a215/icons/geoserver.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c83e5c78e07916aca67a4eabb48fc5b81f17cef7/icons/geoserver.png</iconUrl>
     <copyright>©2021 Open Source Geospatial Foundation.</copyright>
     <licenseUrl>https://github.com/geoserver/geoserver/blob/2.18.2/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -31,7 +31,7 @@
 - GeoServer is not shut down as part of the upgrade or uninstall process, please do so before upgrading this package.
 - Shutdown and Startup scripts are available on `PATH` under the names `geoserver-startup` and `geoserver-shutdown`
 ]]></description>
-    <releaseNotes>http://geoserver.org/announcements/2021/03/22/geoserver-2-19-0-released.html</releaseNotes>
+    <releaseNotes>http://geoserver.org/announcements/2021/05/24/geoserver-2-19-1-released.html</releaseNotes>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->

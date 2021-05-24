@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@36b9d155c51c8558d7c29dab84b293603212a215/icons/geoserver.png" height="48" width="48" /> ![GeoServer](https://img.shields.io/chocolatey/v/geoserver.svg?label=GeoServer&style=for-the-badge)](https://chocolatey.org/packages/geoserver)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c83e5c78e07916aca67a4eabb48fc5b81f17cef7/icons/geoserver.png" height="48" width="48" /> ![GeoServer](https://img.shields.io/chocolatey/v/geoserver.svg?label=GeoServer&style=for-the-badge)](https://chocolatey.org/packages/geoserver)
 
 GeoServer implements industry standard OGC protocols such as Web Feature Service (WFS), Web Map Service (WMS), and Web Coverage Service (WCS). Additional formats and publication options are available as extensions including Web Processing Service (WPS), and Web Map Tile Service (WMTS).
 
