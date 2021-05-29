@@ -1,5 +1,9 @@
 # ![F* language Changelog](https://img.shields.io/badge/F*%20language-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2021.05.28 (2021-05-29)
+
+- Move all icons to their respective package directory [#47](https://github.com/AdmiringWorm/chocolatey-packages/issues/47)
+
 ## Version: 0.9.6.002 (2019-03-11)
 
 - **BUG:** Changed to not generate shim for anything other than fstar.exe
