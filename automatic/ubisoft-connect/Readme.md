@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@401a9c0283f623586a4991f04977ab1659798ba1/automatic/ubisoft-connect/icons/48x48.png" height="48" width="48" /> ![Ubisoft Connect](https://img.shields.io/chocolatey/v/ubisoft-connect.svg?label=Ubisoft%20Connect&style=for-the-badge)](https://chocolatey.org/packages/ubisoft-connect)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c83e5c78e07916aca67a4eabb48fc5b81f17cef7/automatic/ubisoft-connect/icons/48x48.png" height="48" width="48" /> ![Ubisoft Connect](https://img.shields.io/chocolatey/v/ubisoft-connect.svg?label=Ubisoft%20Connect&style=for-the-badge)](https://chocolatey.org/packages/ubisoft-connect)
 
 Ubisoft Connect is the ecosystem of players services for Ubisoft games across all platforms. It aims at giving the best environment for all players to enjoy their games and connect with each other whatever the device.
 
