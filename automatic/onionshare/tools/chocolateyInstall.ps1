@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 . "$toolsPath\helpers.ps1"
@@ -7,7 +7,7 @@ Report-LegacyInstalls
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\OnionShare-2.3.1.msi"
+  file           = "$toolsPath\OnionShare-2.3.2.msi"
   softwareName   = 'OnionShare'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1 MSIINSTALLPERUSER=0"
   validExitCodes = @(0)
