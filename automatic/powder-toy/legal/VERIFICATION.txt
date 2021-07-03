@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: B40877D4FCF8895987DE059C0F87925743CE9626FEBE9FBA00D97DD86BD4AAA9
+  checksum: C93D71051A2E3A7433CEDAA19E4B48A1AB609399C2188F9CEA022AAEC771449D
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/ThePowderToy/The-Powder-Toy/blob/master/LICENSE>
