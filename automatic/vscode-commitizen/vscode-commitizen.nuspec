@@ -4,7 +4,7 @@
   <!-- Icon: Skip check -->
   <metadata>
     <id>vscode-commitizen</id>
-    <version>0.12.1</version>
+    <version>0.15.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/vscode-commitizen</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Visual Studio Code Commitizen Support</title>
@@ -50,7 +50,7 @@ To determine what config to use, the extention will look for a config file in th
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-vscode.extension" version="1.0.0" />
-      <dependency id="vscode" version="1.46.0" />
+      <dependency id="vscode" version="1.55.0" />
     </dependencies>
   </metadata>
   <files>
