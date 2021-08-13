@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>meld</id>
-    <version>3.20.3</version>
+    <version>3.20.4</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/meld</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Meld</title>
