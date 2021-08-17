@@ -7,18 +7,18 @@ $softwareName = 'Friture*'
 
 function global:au_BeforeUpdate($package) {
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
-  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+  if (Test-Path $licenseFile) { Remove-Item -Force $licenseFile }
 
-  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
+  Invoke-WebRequest -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
   if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
-    throw "Unknown license download. Please verify it still contains distribution rights."
+    throw 'Unknown license download. Please verify it still contains distribution rights.'
   }
 
   Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_AfterUpdate {
-  Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
+  Update-Metadata -key 'releaseNotes' -Value "[Software Changelog]($($Latest.ReleaseNotes))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/friture/Changelog.md)"
 
   Update-Changelog -useIssueTitle
@@ -26,18 +26,15 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+    '.\legal\VERIFICATION.txt'      = @{
+      '(?i)(^\s*location on\:?\s*)\<.*\>' = "`${1}<$releases>"
+      '(?i)(\s*1\..+)\<.*\>'              = "`${1}<$($Latest.URL32)>"
+      '(?i)(^\s*checksum\s*type\:).*'     = "`${1} $($Latest.ChecksumType32)"
+      '(?i)(^\s*checksum(32)?\:).*'       = "`${1} $($Latest.Checksum32)"
     }
-    ".\tools\chocolateyInstall.ps1"   = @{
+    '.\tools\chocolateyInstall.ps1' = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
-    }
-    ".\tools\chocolateyUninstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
     }
   }
 }
@@ -45,13 +42,13 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe$'
-  $urls32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $re = '\.msi$'
+  $urls32 = $download_page.Links | Where-Object href -Match $re | Select-Object -First 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
 
   $streams = @{}
-  $urls32 | % {
+  $urls32 | ForEach-Object {
     $verRe = '\/'
-    $tag = $_ -split "$verRe" | select -last 1 -skip 1
+    $tag = $_ -split "$verRe" | Select-Object -Last 1 -Skip 1
     $version = Get-Version $tag
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
@@ -64,8 +61,8 @@ function global:au_GetLatest {
   }
 
   # Update the latest version to be the latest stream
-  $key = $streams.Keys | sort -Descending | select -first 1
-  $streams.Add("latest", $streams[$key])
+  $key = $streams.Keys | Sort-Object -Descending | Select-Object -First 1
+  $streams.Add('latest', $streams[$key])
   $streams.Remove($key)
 
   return @{ Streams = $streams }

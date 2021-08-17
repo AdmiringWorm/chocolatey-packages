@@ -1,13 +1,22 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+$uninstallKey = Get-UninstallRegistryKey 'friture*' | Where-Object ModifyPath -NotMatch 'Msi'
+
+if ($uninstallKey) {
+  . "$toolsPath\helpers.ps1"
+
+  Write-Host 'Uninstalling old versions of Friture'
+  $uninstallKey | ForEach-Object { Uninstall-Program $_.UninstallString }
+}
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  fileType       = 'exe'
+  fileType       = 'msi'
   file           = "$toolsPath\friture-0.36-20190201.exe"
   softwareName   = 'Friture*'
-  silentArgs     = '/S'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
 }
 
