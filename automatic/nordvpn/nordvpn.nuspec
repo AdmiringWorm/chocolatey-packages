@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nordvpn</id>
-    <version>6.37.3</version>
+    <version>6.38.15</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordvpn</packageSourceUrl>
     <owners>AdmiringWorm, Sanshiro</owners>
     <title>NordVPN</title>
@@ -16,8 +16,7 @@
     <tags>nordvpn vpn privacy security trial</tags>
     <summary>Protect your privacy and security online with just a few clicks.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-      <![CDATA[**Enjoy secure and private access to the Internet**
+    <description><![CDATA[**Enjoy secure and private access to the Internet**
 
 With NordVPN, encrypt your online activity to protect your private data from hackers or snoopy advertisers. Enjoy global connectivity along with high-performance speed and secure access to streaming websites, censored content and social networks.
 
@@ -30,8 +29,7 @@ Online security is the biggest challenge in today's interconnected world, so it'
 - **CyberSec:** Shield yourself from intrusive advertisements and malicious online threats.
 - **Double VPN:** Encrypt your Internet traffic twice to create an extra layer of online privacy.
 - See [here](https://nordvpn.com/features/) for more features.
-]]>
-    </description>
+]]></description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
       <dependency id="vcredist140" version="14.29.30133" />
