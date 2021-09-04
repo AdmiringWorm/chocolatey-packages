@@ -13,7 +13,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://downloads.nordcdn.com/apps/windows/10/NordVPN/latest/NordVPNSetup.exe'
   softwareName   = 'NordVPN*'
-  checksum       = '3B22FAA5CBC37B22789BE385B4F7DD139C7A5165332FC07D0FD02C60A98B179A3CBC7D3ED6CF3481DDEC5E8DF89F7E5657F975AD3A8267DE6D6614E380669561'
+  checksum       = '5317ED22F2F33CEC6BA8EB0DA4B701D03EFAFDB88E1DF031F93E1C7E55A42E38A79413C3F6F0CB81571990EE45679F165EEE4E9303DED833F1721AF921F607DA'
   checksumType   = 'sha512'
   silentArgs     = "/SILENT /SUPPRESSMSGBOXES /NORESTART /SP- /ALLUSERS /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName)\$($env:chocolateyPackageVersion)\install.log`""
   validExitCodes = @(0)
