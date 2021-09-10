@@ -13,7 +13,7 @@ on:
 
 jobs:
   updater:
-    runs-on: windows-latest
+    runs-on: windows-2019
     env:
       au_version: master
       au_push: true
