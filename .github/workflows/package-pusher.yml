@@ -9,7 +9,7 @@ on:
 
 jobs:
   pusher:
-    runs-on: windows-latest
+    runs-on: windows-2019
     env:
       au_version: master
       github_user_repo: ${{ github.repository }}
