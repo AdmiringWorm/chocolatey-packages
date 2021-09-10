@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>IcoFX</id>
-    <version>3.5.1</version>
+    <version>3.6.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/icofx</packageSourceUrl>
     <owners>AdmiringWorm, H. Alan Stevens</owners>
     <title>Icofx</title>
