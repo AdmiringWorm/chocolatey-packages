@@ -60,7 +60,8 @@ jobs:
         env:
           FORCED_PACKAGES: ${{ github.event.inputs.packages }}
         run: |
-          yarn install && yarn prepare
+          yarn install
+          yarn prepare
 
           . ./scripts/EventLogs.ps1
           Clear-EventLogs
