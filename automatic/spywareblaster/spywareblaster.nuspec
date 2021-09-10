@@ -10,11 +10,11 @@
     <authors>BrightFort LLC</authors>
     <projectUrl>https://www.brightfort.com/spywareblaster.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ce5b94c36d002e69d93d44283712e5645f87d860/automatic/spywareblaster/icons/spywareblaster.png</iconUrl>
-    <copyright>Copyright (C) 2002-2016 BrightFort LLC. All Rights Reserved.</copyright>
+    <copyright>Copyright (C) 2002-2020 BrightFort LLC. All Rights Reserved.</copyright>
     <licenseUrl>https://www.brightfort.com/sbnv/licenseagreement.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>https://www.brightfort.com/support/index.php?/Knowledgebase/List/Index/4/spywareblaster</docsUrl>
-    <bugTrackerUrl>https://www.brightfort.com/support/</bugTrackerUrl>
+    <docsUrl>https://brightfort.freshdesk.com/support/solutions/43000025891</docsUrl>
+    <bugTrackerUrl>https://www.wilderssecurity.com/forums/spywareblaster-other-forum.23/</bugTrackerUrl>
     <tags>sypwareblaster security protection prevention</tags>
     <summary>Keep your system secure, without interfering with the "good side" of the web.</summary>
     <description><![CDATA[Spyware, adware, browser hijackers, and dialers are some of the most annoying and pervasive threats on the Internet today. By simply browsing a web page, you could find your computer to be the brand-new host of one of these unwanted fiends!
@@ -48,6 +48,7 @@ SpywareBlaster can help keep your system secure, without interfering with the "g
     <provides>spywareblaster</provides>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.30.03" />
+      <dependency id="kb2919355" version="1.0.20160915" />
     </dependencies>
   </metadata>
   <files>
