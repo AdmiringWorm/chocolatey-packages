@@ -42,7 +42,7 @@ jobs:
           git --version
           choco --version
         shell: powershell
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0
       - name: Run package tests
