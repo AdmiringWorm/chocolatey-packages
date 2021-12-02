@@ -7,7 +7,7 @@ function global:au_SearchReplace {
     ".\$($Latest.PackageName).nuspec" = @{
       "(\<dependency .+?`"qtcreator`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
     }
-    ".\tools\chocolateyInstall.ps1" = @{
+    '.\tools\chocolateyInstall.ps1'   = @{
       "(?i)^(\s*url\s*=\s*)'.*'"            = "`${1}'$($Latest.URL32)'"
       "(?i)^(\s*url64(bit)?\s*=\s*)'.*'"    = "`${1}'$($Latest.URL64)'"
       "(?i)^(\s*checksum\s*=\s*)'.*'"       = "`${1}'$($Latest.Checksum32)'"
@@ -26,23 +26,23 @@ function global:au_AfterUpdate {
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator-cdbext/Changelog.md)
 "@
 
-  Update-Metadata -key "releaseNotes" -value $releaseNotes
+  Update-Metadata -key 'releaseNotes' -Value $releaseNotes
 }
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'qt-creator.*x86[\-_].*\.exe'
-  $versionURL = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $versionURL = $download_page.Links | Where-Object href -Match $re | Select-Object -First 1 -expand href
 
-  $version = $versionURL -split '\/' | select -last 1 -skip 1
-  $versionTwoPart = $version -replace "^(\d+\.\d+).*", '$1'
+  $version = $versionURL -split '\/' | Select-Object -Last 1 -Skip 1
+  $versionTwoPart = $version -replace '^(\d+\.\d+).*', '$1'
 
-  $url = "https://download.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
+  $url = "https://master.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
   $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
-  $links = $download_page.links | ? href -match '^windows' | select -expand href
-  $url32 = ($links -match '(x86|_32)\/$' | select -first 1 | % { $url + $_ }) + "qtcreatorcdbext.7z"
-  $url64 = ($links -match '[x_]64\/$' | select -first 1 | % { $url + $_ }) + "qtcreatorcdbext.7z"
+  $links = $download_page.links | Where-Object href -Match '^windows' | Select-Object -expand href
+  $url32 = ($links -match '(x86|_32)\/$' | Select-Object -First 1 | ForEach-Object { $url + $_ }) + 'qtcreatorcdbext.7z'
+  $url64 = ($links -match '[x_]64\/$' | Select-Object -First 1 | ForEach-Object { $url + $_ }) + 'qtcreatorcdbext.7z'
 
   return @{
     URL32         = $url32

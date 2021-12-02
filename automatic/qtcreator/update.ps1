@@ -47,7 +47,7 @@ function global:au_GetLatest {
   Write-Host "Version: ${version} ($versionTwoPart)"
 
   #$url = "https://download.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
-  $url = "http://master.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
+  $url = "https://master.qt.io/official_releases/qtcreator/$versionTwoPart/$version/installer_source/"
   Write-Host "Testing url '$url'"
   $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
   $links = $download_page.links | Where-Object href -Match '^windows' | Select-Object -expand href
