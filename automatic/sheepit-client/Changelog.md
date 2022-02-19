@@ -4,7 +4,7 @@
 
 - **ENHANCEMENT:** Update metadata to latest gitlab locations
 - **ENHANCEMENT:** Update package to parse tags from gitlab source location, and generate download URL based on the tags.
-- **BREAKING CHANGE:** Remove the chocolatey-core.extension dependency. This was used for users of Chocolatey versions we no longer support.
+- **ENHANCEMENT:** Update Chocolatey Core Extension to latest available version.
 
 ## Version: 5.1274.2958 (2019-01-18)
 
