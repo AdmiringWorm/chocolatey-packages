@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sheepit-client</id>
-    <version>6.21175.0</version>
+    <version>6.22006.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/sheepit-client</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>SheepIt Render Farm Client</title>
@@ -31,7 +31,7 @@
 ## Package Parameters
 
 - `/NoStartMenu` - Don't create a shortcut in the Start Menu
-- `/Desktop`     - Create a shortcut on the Desktop
+- `/Desktop` - Create a shortcut on the Desktop
 
 **Example**
 `choco install sheepit-client --package-parameters="/NoStartMenu /Desktop"`

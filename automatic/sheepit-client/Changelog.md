@@ -1,10 +1,10 @@
 # ![SheepIt Render Farm Client Changelog](https://img.shields.io/badge/SheepIt%20Render%20Farm%20Client-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 6.22006.0 (2022-02-19)
 
-- **BREAKING CHANGE:** Remove the chocolatey-core.extension dependency. This was used for users of Chocolatey versions we no longer support.
 - **ENHANCEMENT:** Update metadata to latest gitlab locations
 - **ENHANCEMENT:** Update package to parse tags from gitlab source location, and generate download URL based on the tags.
+- **BREAKING CHANGE:** Remove the chocolatey-core.extension dependency. This was used for users of Chocolatey versions we no longer support.
 
 ## Version: 5.1274.2958 (2019-01-18)
 

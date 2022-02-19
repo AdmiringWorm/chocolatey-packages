@@ -7,13 +7,13 @@ servers. The download URL is no longer linked to anywhere publically
 that have been found, but is generated based on historical data available.
 
 1. Download the following:
-  64-Bit software: <https://www.sheepit-renderfarm.com/media/applet/sheepit-6.21175.0.exe>
+  64-Bit software: <https://www.sheepit-renderfarm.com/media/applet/sheepit-6.22006.0.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 11E4C6E944D6EDB47D55F8D0DD41303793EE0D6BA646263E944AA1DC3180FABC
+  checksum64: 96EFD7DDBED063E414FE225043F4C04674FA83EA3B0E5EC3F9163C034236F06E
 
 The file 'LICENSE.txt' has been obtained from <https://gitlab.com/sheepitrenderfarm/client/-/blob/aef9ccc034d0915416dcbad0616154fe316efaa3/LICENSE>
