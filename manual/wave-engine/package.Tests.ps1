@@ -1,4 +1,4 @@
-. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
+﻿. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 

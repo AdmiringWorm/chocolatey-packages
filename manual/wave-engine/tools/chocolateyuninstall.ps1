@@ -14,7 +14,7 @@ $uninstalled = $false
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
     $file = ''
-	$silentArgs = "$($_.PSChildName) $silentArgs"
+  $silentArgs = "$($_.PSChildName) $silentArgs"
 
     Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
