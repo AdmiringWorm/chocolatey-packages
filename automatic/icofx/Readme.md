@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@10ccf58059196f26c0ec3e578d439850a2e9273d/automatic/icofx/icons/128x128.png" height="48" width="48" /> ![Icofx](https://img.shields.io/chocolatey/v/icofx.svg?label=Icofx&style=for-the-badge)](https://chocolatey.org/packages/icofx)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@10ccf58059196f26c0ec3e578d439850a2e9273d/automatic/icofx/icons/128x128.png" height="48" width="48" /> ![Icofx](https://img.shields.io/chocolatey/v/icofx.svg?label=Icofx&style=for-the-badge)](https://community.chocolatey.org/packages/icofx)
 
 Icofx is an award winning professional icon and cursor editor for Windows. It is an all-in-one solution for icon creation, extraction and editing. It is designed to work with Windows and Macintosh icons supporting transparency.
 

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8ab22ac35365e0e5cdcac1707299643d7fb3e759/icons/r.project.svg" height="48" width="48" /> ![The R Project for Statistical Computing](https://img.shields.io/chocolatey/v/r.project.svg?label=The%20R%20Project%20for%20Statistical%20Computing&style=for-the-badge)](https://chocolatey.org/packages/r.project)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8ab22ac35365e0e5cdcac1707299643d7fb3e759/icons/r.project.svg" height="48" width="48" /> ![The R Project for Statistical Computing](https://img.shields.io/chocolatey/v/r.project.svg?label=The%20R%20Project%20for%20Statistical%20Computing&style=for-the-badge)](https://community.chocolatey.org/packages/r.project)
 
 ## Introduction to R
 

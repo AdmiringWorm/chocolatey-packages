@@ -1,10 +1,10 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/aff24e8d814e7619a563f7efc3b767055d0644e4/icons/herdprotect.png" height="48" width="48" /> ![herdProtect Anti-Malware Scanner](https://img.shields.io/chocolatey/v/herdprotect.svg?label=herdProtect%20Anti-Malware%20Scanner&style=for-the-badge)](https://chocolatey.org/packages/herdprotect)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/aff24e8d814e7619a563f7efc3b767055d0644e4/icons/herdprotect.png" height="48" width="48" /> ![herdProtect Anti-Malware Scanner](https://img.shields.io/chocolatey/v/herdprotect.svg?label=herdProtect%20Anti-Malware%20Scanner&style=for-the-badge)](https://community.chocolatey.org/packages/herdprotect)
 
 ## What is herdProtect
 
 herdProtect is a second line of defense malware scanning platform powered by [68 anti-malware engines](https://www.herdprotect.com/engines.aspx) in
 the cloud.
-Since no single anti-malware program is perfect 100% of the time, herdProtect utilizes a *'herd'* of multiple engines to
+Since no single anti-malware program is perfect 100% of the time, herdProtect utilizes a _'herd'_ of multiple engines to
 guarantee the widest coverage and the earliest possible detection.
 As a second line of defense anti-malware solution, herdProtect is designed to run with any existing anti-virus program
 already installed on a user's PC.

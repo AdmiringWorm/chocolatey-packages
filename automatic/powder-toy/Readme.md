@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ecae249eb5349136642894dce1fe460658eacbb9/automatic/powder-toy/icons/48x48.png" height="48" width="48" /> ![The Powder Toy](https://img.shields.io/chocolatey/v/powder-toy.svg?label=The%20Powder%20Toy&style=for-the-badge)](https://chocolatey.org/packages/powder-toy)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@ecae249eb5349136642894dce1fe460658eacbb9/automatic/powder-toy/icons/48x48.png" height="48" width="48" /> ![The Powder Toy](https://img.shields.io/chocolatey/v/powder-toy.svg?label=The%20Powder%20Toy&style=for-the-badge)](https://community.chocolatey.org/packages/powder-toy)
 
 Have you ever wanted to blow something up? Or maybe you always dreamt of operating an atomic power plant? Do you have a will to develop your own CPU? The Powder Toy lets you to do all of these, and even more!
 

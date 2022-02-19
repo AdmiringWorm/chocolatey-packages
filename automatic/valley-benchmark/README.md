@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e37ae69753b7e0297c72133e4a081227d390795d/automatic/valley-benchmark/icons/64x64.png" height="48" width="48" /> ![UNIGINE Valley Benchmark](https://img.shields.io/chocolatey/v/valley-benchmark.svg?label=UNIGINE%20Valley%20Benchmarks&style=for-the-badge)](https://chocolatey.org/packages/valley-benchmark)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e37ae69753b7e0297c72133e4a081227d390795d/automatic/valley-benchmark/icons/64x64.png" height="48" width="48" /> ![UNIGINE Valley Benchmark](https://img.shields.io/chocolatey/v/valley-benchmark.svg?label=UNIGINE%20Valley%20Benchmarks&style=for-the-badge)](https://community.chocolatey.org/packages/valley-benchmark)
 
 The forest-covered valley surrounded by vast mountains amazes with its scale from a bird’s-eye view and is extremely detailed down to every leaf and flower petal.
 

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@da4df523c9fe1aadb649906f6311b9bb539fff20/automatic/linux-reader/icons/48x48.png" height="48" width="48" /> ![Linux Reader](https://img.shields.io/chocolatey/v/io-ninja.svg?label=Linux%20Reader&style=for-the-badge)](https://chocolatey.org/packages/linux-reader)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@da4df523c9fe1aadb649906f6311b9bb539fff20/automatic/linux-reader/icons/48x48.png" height="48" width="48" /> ![Linux Reader](https://img.shields.io/chocolatey/v/io-ninja.svg?label=Linux%20Reader&style=for-the-badge)](https://community.chocolatey.org/packages/linux-reader)
 
 How to get safe and quick access to alternative file systems? DiskInternals Linux Reader is a new easy way to do this. This program plays the role of a bridge between your Windows and Ext2/Ext3/Ext4, HFS and ReiserFS file systems.
 

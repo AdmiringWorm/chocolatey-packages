@@ -1,6 +1,6 @@
 # Automatic Folder
 
-This is where you put your Chocolatey packages that are automatically packaged up by [AU](https://chocolatey.org/packages/au).
+This is where you put your Chocolatey packages that are automatically packaged up by [AU](https://community.chocolatey.org/packages/au).
 
 ## Automatic Updater (AU)
 

@@ -1,4 +1,4 @@
-# ![Visual Studio Code Commitizen Support](https://img.shields.io/chocolatey/v/vscode-commitizen.svg?label=Visual%20Studio%20Code%20Commitizen%20Support&style=for-the-badge)](https://chocolatey.org/packages/vscode-commitizen)
+# ![Visual Studio Code Commitizen Support](https://img.shields.io/chocolatey/v/vscode-commitizen.svg?label=Visual%20Studio%20Code%20Commitizen%20Support&style=for-the-badge)](https://community.chocolatey.org/packages/vscode-commitizen)
 
 This vscode extension adds [commitizen support](https://github.com/commitizen).
 
@@ -18,11 +18,13 @@ To determine what config to use, the extention will look for a config file in th
 
 1. a `.cz-config.js` in the root directory
 2. in `package.json` to determine the path to the config file:
-   ```json
-   "config": {
-     "cz-customizable": {
-       "config": "test.js"
-     }
-   }
-   ```
+
+```json
+"config": {
+  "cz-customizable": {
+    "config": "test.js"
+  }
+}
+```
+
 3. use the default config

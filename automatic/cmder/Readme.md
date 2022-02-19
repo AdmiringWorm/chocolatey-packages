@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@080159cc943e64b1784b3847e24f5a9db219642e/automatic/cmder/icons/cmder.png" height="48" width="48" /> ![Cmder](https://img.shields.io/chocolatey/v/cmder.svg?label=Cmder&style=for-the-badge)](https://chocolatey.org/packages/cmder)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@080159cc943e64b1784b3847e24f5a9db219642e/automatic/cmder/icons/cmder.png" height="48" width="48" /> ![Cmder](https://img.shields.io/chocolatey/v/cmder.svg?label=Cmder&style=for-the-badge)](https://community.chocolatey.org/packages/cmder)
 
 Cmder is a software package created out of pure frustration over absence of usable console emulator on Windows. It is based on ConEmu with major config overhaul. Monokai color scheme, amazing clink and custom prompt layout.
 
@@ -13,4 +13,4 @@ Combines utility of 3 distinct tools:
 ## Notes
 
 This package uncompresses to 250 MB and includes Unix commands via bundled msysgit.
-See [cmdermini](https://chocolatey.org/packages/cmdermini) (8 MB) for basic console without bundled msysgit.
+See [cmdermini](https://community.chocolatey.org/packages/cmdermini) (8 MB) for basic console without bundled msysgit.

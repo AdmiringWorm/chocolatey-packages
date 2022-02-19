@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c0279a480bb787f73811a1547840354eecf93c20/icons/xvid.png" height="48" width="48" /> ![Xvid](https://img.shields.io/chocolatey/v/xvid.svg?label=Xvid&style=for-the-badge)](https://chocolatey.org/packages/xvid)
+# [<img src="https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/c0279a480bb787f73811a1547840354eecf93c20/icons/xvid.png" height="48" width="48" /> ![Xvid](https://img.shields.io/chocolatey/v/xvid.svg?label=Xvid&style=for-the-badge)](https://community.chocolatey.org/packages/xvid)
 
 ## Highest Performance
 
@@ -14,4 +14,4 @@ The Xvid codec compresses video to make them smaller. It can compress video at a
 
 ## Great Picture Quality
 
-While Xvid compresses video very well, it can do so without causing visible quality loss and by retaining a sharper picture than other codecs do. Xvid is *"lossy"* compression but aims at removing just those picture details that are not important for human perception. As such, it be seen as a MP3 for video.
+While Xvid compresses video very well, it can do so without causing visible quality loss and by retaining a sharper picture than other codecs do. Xvid is _"lossy"_ compression but aims at removing just those picture details that are not important for human perception. As such, it be seen as a MP3 for video.

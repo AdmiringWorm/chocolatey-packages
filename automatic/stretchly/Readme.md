@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@d2b87921365d4a6237272f2ec549c754586bbb53/icons/stretchly.png" height="48" width="48" /> ![stretchly](https://img.shields.io/chocolatey/v/stretchly.svg?label=stretchly&style=for-the-badge)](https://chocolatey.org/packages/stretchly)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@d2b87921365d4a6237272f2ec549c754586bbb53/icons/stretchly.png" height="48" width="48" /> ![stretchly](https://img.shields.io/chocolatey/v/stretchly.svg?label=stretchly&style=for-the-badge)](https://community.chocolatey.org/packages/stretchly)
 
 stretchly is a cross-platform electron app that reminds you to take breaks when working on your computer.
 

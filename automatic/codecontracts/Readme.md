@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6df511d4fab1fa5c09328f0e7c88db7a32435adf/automatic/codecontracts/icons/codecontracts.png" height="48" width="48" /> ![CodeContracts](https://img.shields.io/chocolatey/v/codecontracts.svg?label=CodeContracts&style=for-the-badge)](https://chocolatey.org/packages/codecontracts)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6df511d4fab1fa5c09328f0e7c88db7a32435adf/automatic/codecontracts/icons/codecontracts.png" height="48" width="48" /> ![CodeContracts](https://img.shields.io/chocolatey/v/codecontracts.svg?label=CodeContracts&style=for-the-badge)](https://community.chocolatey.org/packages/codecontracts)
 
 Code Contracts provide a language-agnostic way to express coding assumptions in .NET programs.
 

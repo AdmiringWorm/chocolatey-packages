@@ -1,4 +1,4 @@
-# [![Artistic Style](https://img.shields.io/chocolatey/v/astyle.svg?label=Artistic%20Style&style=for-the-badge)](https://chocolatey.org/packages/astyle)
+# [![Artistic Style](https://img.shields.io/chocolatey/v/astyle.svg?label=Artistic%20Style&style=for-the-badge)](https://community.chocolatey.org/packages/astyle)
 
 Artistic Style is a source code indenter, formatter, and beautifier for the C, C++, C++/CLI, Objective-C, C# and Java programming languages.
 

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@545f19a08e889d7d9e35664023aea80771af43c7/icons/wave-engine.png" height="48" width="48" /> ![Wave Engine](https://img.shields.io/chocolatey/v/wave-engine.svg?label=Wave%20Engine&style=for-the-badge)](https://chocolatey.org/packages/wave-engine)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@545f19a08e889d7d9e35664023aea80771af43c7/icons/wave-engine.png" height="48" width="48" /> ![Wave Engine](https://img.shields.io/chocolatey/v/wave-engine.svg?label=Wave%20Engine&style=for-the-badge)](https://community.chocolatey.org/packages/wave-engine)
 
 Wave Engine is a C# component-based modern game engine which allows you to create cross-platform games and apps for many platforms: Windows, Linux, MacOS, IOS, Android, Windows Store and Windows Phone.
 

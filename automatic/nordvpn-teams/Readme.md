@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@28991f5d0cb658a025d15e888bafd904a14f5a5e/automatic/nordvpn-teams/icons/48x48.png" height="48" width="48" /> ![NordVPN Teams](https://img.shields.io/chocolatey/v/nordvpn-teams.svg?label=NordVPN%20Teams&style=for-the-badge)](https://chocolatey.org/packages/nordvpn-teams)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@28991f5d0cb658a025d15e888bafd904a14f5a5e/automatic/nordvpn-teams/icons/48x48.png" height="48" width="48" /> ![NordVPN Teams](https://img.shields.io/chocolatey/v/nordvpn-teams.svg?label=NordVPN%20Teams&style=for-the-badge)](https://community.chocolatey.org/packages/nordvpn-teams)
 
 **Protect your company’s network with a business VPN**  
 Online security and convenience wherever you are.

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1fdb1423291e924b4984bfa69080abbf133487a8/automatic/golly/icons/golly.png" height="48" width="48" /> ![Golly Game of Life](https://img.shields.io/chocolatey/v/golly.svg?label=Golly%20Game%20of%20Life&style=for-the-badge)](https://chocolatey.org/packages/golly)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@1fdb1423291e924b4984bfa69080abbf133487a8/automatic/golly/icons/golly.png" height="48" width="48" /> ![Golly Game of Life](https://img.shields.io/chocolatey/v/golly.svg?label=Golly%20Game%20of%20Life&style=for-the-badge)](https://community.chocolatey.org/packages/golly)
 
 Golly is an open source, cross-platform application for exploring Conway's Game of Life and many other types of cellular automata. The primary authors are Andrew Trevorrow and Tom Rokicki, with code contributions by Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo, Brenton Bostick and Chris Rowett.
 
@@ -11,7 +11,7 @@ Golly is an open source, cross-platform application for exploring Conway's Game 
 - Responsive even while generating or garbage collecting.
 - Reads RLE, macrocell, Life 1.05/1.06, dblife, and MCell files.
 - Can also read common graphic formats: BMP, PNG, GIF, TIFF.
- Can extract patterns, rules and scripts from zip files.
+  Can extract patterns, rules and scripts from zip files.
 - Can download patterns, rules and scripts from online archives.
 - Includes a state-of-the-art pattern collection.
 - Can paste in patterns from the clipboard.

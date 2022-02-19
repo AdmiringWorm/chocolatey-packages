@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@40a94c95d7c52c848cb37036607e635e2fd203a9/icons/vscode-gitignore.png" height="48" width="48" /> ![vscode-gitignore (Install)](https://img.shields.io/chocolatey/v/vscode-gitignore.svg?label=vscode-gitignore%20(Install)&style=for-the-badge)](https://chocolatey.org/packages/vscode-gitignore)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@40a94c95d7c52c848cb37036607e635e2fd203a9/icons/vscode-gitignore.png" height="48" width="48" /> ![vscode-gitignore (Install)](<https://img.shields.io/chocolatey/v/vscode-gitignore.svg?label=vscode-gitignore%20(Install)&style=for-the-badge>)](https://community.chocolatey.org/packages/vscode-gitignore)
 
 A extension for Visual Studio Code that assists you in working with `.gitignore` files.
 

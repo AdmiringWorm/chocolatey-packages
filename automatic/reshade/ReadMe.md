@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2e8b9eb0b465415e629a31cade96590b4a0960d9/icons/reshade.png" height="48" width="48" /> ![ReShade](https://img.shields.io/chocolatey/v/reshade.svg?label=ReShade&style=for-the-badge)](https://chocolatey.org/packages/reshade)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@2e8b9eb0b465415e629a31cade96590b4a0960d9/icons/reshade.png" height="48" width="48" /> ![ReShade](https://img.shields.io/chocolatey/v/reshade.svg?label=ReShade&style=for-the-badge)](https://community.chocolatey.org/packages/reshade)
 
 ReShade (https://reshade.me) is an advanced, fully generic post-processing injector for games and video software developed by crosire. Imagine your favorite game with ambient occlusion, real depth of field effects, color correction and more ... ReShade exposes an automated and generic way to access both frame color and depth information (latter is automatically disabled during multiplayer to prevent exploitation) and all the tools to make it happen.
 

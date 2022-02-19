@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@33b1fe9fae09a9f801ff3c6c7431ace2233c8139/automatic/authy-desktop/icons/48x48.png" height="48" width="48" /> ![Authy Desktop (Install)](<https://img.shields.io/chocolatey/v/authy-desktop.svg?label=Authy%20Desktop%20(Install)&style=for-the-badge>)](https://chocolatey.org/packages/authy-desktop)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@33b1fe9fae09a9f801ff3c6c7431ace2233c8139/automatic/authy-desktop/icons/48x48.png" height="48" width="48" /> ![Authy Desktop (Install)](<https://img.shields.io/chocolatey/v/authy-desktop.svg?label=Authy%20Desktop%20(Install)&style=for-the-badge>)](https://community.chocolatey.org/packages/authy-desktop)
 
 Authy brings the future of strong authentication to the convenience of your Desktop.
 

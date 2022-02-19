@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a22c15bb78813121e46588781213a42634288d4c/automatic/gbm/icons/gbm.png" height="48" width="48" /> ![Game Backup Monitor](https://img.shields.io/chocolatey/v/gbm.svg?label=Game%20Backup%20Monitor&style=for-the-badge)](https://chocolatey.org/packages/gbm)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@a22c15bb78813121e46588781213a42634288d4c/automatic/gbm/icons/gbm.png" height="48" width="48" /> ![Game Backup Monitor](https://img.shields.io/chocolatey/v/gbm.svg?label=Game%20Backup%20Monitor&style=for-the-badge)](https://community.chocolatey.org/packages/gbm)
 
 Game Backup Monitor is a simple, but flexible application that detects games as you play them. Once you finish playing a game, a backup of the saved games will be made automatically using 7-Zip compression. GBM can be used on a single computer, or on multiple computers to effectively add cloud support to any game or application.
 

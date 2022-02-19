@@ -10,7 +10,7 @@
     <projectUrl>https://uplay.ubi.com/</projectUrl>
     <tags>uplay deprecated</tags>
     <summary>This package is deprecated, use ubisoft-connect instead</summary>
-    <description>The Ubisoft program have changed its name to Ubisoft Connect, as such this package is deprecated and a new package named [ubisoft-connect](https://chocolatey.org/packages/ubisoft-connect) supercedes the package instead.</description>
+    <description>The Ubisoft program have changed its name to Ubisoft Connect, as such this package is deprecated and a new package named [ubisoft-connect](https://community.chocolatey.org/packages/ubisoft-connect) supercedes the package instead.</description>
     <dependencies>
       <dependency id="ubisoft-connect" />
     </dependencies>

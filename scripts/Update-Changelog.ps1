@@ -219,7 +219,7 @@ function Update-Changelog() {
   else {
     $dirName = [System.IO.Path]::GetDirectoryName($changelogFile) -split '\/|\\' | select -last 1
     $content = ""
-    $changelog = "# Package changelog for [$dirName](https://chocolatey.org/packages/$dirName)`n`n$($changelog.TrimEnd())`n"
+    $changelog = "# Package changelog for [$dirName](https://community.chocolatey.org/packages/$dirName)`n`n$($changelog.TrimEnd())`n"
   }
 
   $index = $content.IndexOf('##')

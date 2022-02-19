@@ -281,7 +281,7 @@ function Run-PesterTests() {
             $dependencies | % {
               $dependency = $_
               try {
-                $url = "https://chocolatey.org/packages/$($dependency.Id)/$($dependency.Version)"
+                $url = "https://community.chocolatey.org/packages/$($dependency.Id)/$($dependency.Version)"
                 Write-Verbose "Calling $url"
                 iwr -UseBasicParsing -Uri "$url" | Out-Null
               }

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@95f1beaa5e5bcd0abc3af243ffcdd78a99086188/icons/resxtranslator.png" height="48" width="48" /> ![Resx Resource Translator](https://img.shields.io/chocolatey/v/resxtranslator.svg?label=Resx%20Resource%20Translator&style=for-the-badge)](https://chocolatey.org/packages/resxtranslator)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@95f1beaa5e5bcd0abc3af243ffcdd78a99086188/icons/resxtranslator.png" height="48" width="48" /> ![Resx Resource Translator](https://img.shields.io/chocolatey/v/resxtranslator.svg?label=Resx%20Resource%20Translator&style=for-the-badge)](https://community.chocolatey.org/packages/resxtranslator)
 
 Tool for non-developers to quickly translate resource files (resx) in .NET projects to multiple languages in parallel. Shows a tree view of all resources and all translation strings in parallel, one column per language. Compatible with VS2008-VS2015.
 
@@ -14,13 +14,13 @@ The top part will show the translated languages identified for this resx file. T
 
 - Key - this is the internal key that is used in your application. It can't be modified in the ResxTranslator.
 - No Language Value - the string value from the main resx file (without a language identifier)
-- Comments - comments that is never visible in the application, but can help translators understand what is meant. I use it to list what parameters I use in *string.Format*.
+- Comments - comments that is never visible in the application, but can help translators understand what is meant. I use it to list what parameters I use in _string.Format_.
 
-The rows that are red means one or more languages are missing values. I have a special case in here where {"\[]"} around a value means it's not translated. For example if I haven't done the translation for the *ErrorHeader* value then I just enter {"\[ErrorHeader]"} under that language. That way I will still see something when I develop using that value, but the ResxTranslator will show it red since it's not translated because of the brackets.
+The rows that are red means one or more languages are missing values. I have a special case in here where {"\[]"} around a value means it's not translated. For example if I haven't done the translation for the _ErrorHeader_ value then I just enter {"\[ErrorHeader]"} under that language. That way I will still see something when I develop using that value, but the ResxTranslator will show it red since it's not translated because of the brackets.
 
 ## Package Parameters
 
-- `/NoStartMenuIcon`   - Don't create a shortcut icon on the start menu
+- `/NoStartMenuIcon` - Don't create a shortcut icon on the start menu
 - `/CreateDesktopIcon` - Create a shortcut icon on the desktop
 
 These parameters can be passed to the installer with the use of --params.

@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6e4e615b509dc9a8a163317935370848b13ce6d3/automatic/deepgit/icons/deepgit.png" height="48" width="48" /> ![DeepGit (Install)](<https://img.shields.io/chocolatey/v/deepgit.svg?label=DeepGit%20(Install)&style=for-the-badge>)](https://chocolatey.org/packages/deepgit)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6e4e615b509dc9a8a163317935370848b13ce6d3/automatic/deepgit/icons/deepgit.png" height="48" width="48" /> ![DeepGit (Install)](<https://img.shields.io/chocolatey/v/deepgit.svg?label=DeepGit%20(Install)&style=for-the-badge>)](https://community.chocolatey.org/packages/deepgit)
 
 DeepGit is a tool to investigate the history of source code. It is based on git blame and makes it easy to trace changes to a line or block of code. DeepGit will detect code movements, even if lines are not identical.
 

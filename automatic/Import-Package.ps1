@@ -1,4 +1,4 @@
-param(
+﻿param(
   [Parameter(Mandatory = $true)]
   [string]$Name,
   [string]$Version,
@@ -9,10 +9,10 @@ function Import-Package() {
   param([string]$Name, [string]$Version, [string]$GithubRepository)
   If (!(Test-Path "$Name.zip")) {
     if ($Version) {
-      $baseUrl = "https://chocolatey.org/packages/$Name/$Version"
+      $baseUrl = "https://community.chocolatey.org/packages/$Name/$Version"
     }
     else {
-      $baseUrl = "https://chocolatey.org/packages/$Name"
+      $baseUrl = "https://community.chocolatey.org/packages/$Name"
     }
     $response = Invoke-WebRequest -UseBasicParsing -Uri $baseUrl;
     $downloadUrl = $response.Links | ? title -match "Download.*raw nupkg" | select -first 1 -ExpandProperty href;
