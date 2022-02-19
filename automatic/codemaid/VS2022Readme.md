@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@25274468d2ef287a6069b81fd3ad403bd1e7d52b/automatic/codemaid/icons/codemaid.png" height="48" width="48" /> ![CodeMaid](https://img.shields.io/chocolatey/v/codemaid.svg?label=CodeMaid&style=for-the-badge)](https://community.chocolatey.org/packages/codemaid)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@25274468d2ef287a6069b81fd3ad403bd1e7d52b/automatic/codemaid/icons/codemaid.png" height="48" width="48" /> ![CodeMaid (VS2022)](<https://img.shields.io/chocolatey/v/vs2022-codemaid.svg?label=CodeMaid%20(VS2022)&style=for-the-badge>)](https://community.chocolatey.org/packages/vs2022-codemaid)
 
 An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, PHP, PowerShell, R, JSON, XAML, XML, ASP, HTML, CSS, LESS, SCSS, JavaScript and TypeScript coding.
 
@@ -43,3 +43,7 @@ An open source Visual Studio extension to cleanup and simplify C#, C++, F#, VB, 
 - **and More!**  
   ![CodeMaid and more](https://www.codemaid.net/wp-content/themes/codemaid/images/code-andmore_thumb.png)  
   Remove regions, close read-only files, etc.
+
+## Notes
+
+- If you need the 2019 edition of this extension, please install [vs2019-codemaid](https://community.chocolatey.org/packages/vs2019-codemaid) instead.
