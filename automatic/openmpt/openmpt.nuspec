@@ -8,15 +8,15 @@
     <owners>AdmiringWorm, nipsky</owners>
     <title>OpenMPT</title>
     <authors>ModPlug Central</authors>
-    <projectUrl>http://openmpt.org</projectUrl>
+    <projectUrl>https://openmpt.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@907f94922206eee2f76ffb6c7aadbdf292db0def/automatic/openmpt/icons/128x128.png</iconUrl>
-    <copyright>ModPlug Central</copyright>
+    <copyright>© 1996 - 2022 ModPlug Central</copyright>
     <licenseUrl>https://source.openmpt.org/browse/openmpt/trunk/OpenMPT/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://source.openmpt.org/browse/openmpt/</projectSourceUrl>
-    <docsUrl>http://wiki.openmpt.org/Main_Page</docsUrl>
-    <mailingListUrl>http://forum.openmpt.org/</mailingListUrl>
-    <bugTrackerUrl>http://bugs.openmpt.org/</bugTrackerUrl>
+    <docsUrl>https://wiki.openmpt.org/Main_Page</docsUrl>
+    <mailingListUrl>https://forum.openmpt.org/</mailingListUrl>
+    <bugTrackerUrl>https://bugs.openmpt.org/my_view_page.php</bugTrackerUrl>
     <tags>openmpt music mod tracker notsilent admin</tags>
     <summary>OpenMPT is a powerful audio application that makes writing music fun, easy and efficient.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->

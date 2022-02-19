@@ -6,9 +6,8 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   file           = "$toolsPath\OpenMPT-1.29.12.00-Setup.exe"
-  file64         = "$toolsPath\OpenMPT-1.29.12.00-Setup-x64.exe"
   softwareName   = 'OpenMPT*'
-  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`" /AllUsers"
   validExitCodes = @(0)
 }
 
