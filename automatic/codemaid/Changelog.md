@@ -1,6 +1,6 @@
 # ![CodeMaid Changelog](https://img.shields.io/badge/CodeMaid-Package%20Changelog-blue.svg?style=for-the-badge)
 
-## UPCOMING
+## Version: 12.0.300 (2022-02-19)
 
 - Add support for new package targeting Visual Studio 2022
 
