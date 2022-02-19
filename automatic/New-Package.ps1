@@ -1,4 +1,4 @@
-param(
+﻿param(
     [Parameter(Mandatory = $true)]
     $Name,
     [ValidateSet('Portable', 'Installer')]
@@ -34,13 +34,15 @@ function New-Package{
     )
 
     if ($null -eq $Name) { throw "Name can't be empty" }
-    if (Test-Path $Name) { throw "Package with that name already exists" }
-    if (!(Test-Path _template)) { throw "Template for the packages not found" }
+
     if (!$id) {
-      $id = $Name.ToLower() -replace ' ','-'
+      $id = $Name.ToLowerInvariant() -replace ' ','-'
     } else {
-      $id = $id.ToLower() -replace ' ','-'
+      $id = $id.ToLowerInvariant() -replace ' ','-'
     }
+
+    if (Test-Path $id) { throw "Package with the identifier '$id' already exists" }
+    if (!(Test-Path _template)) { throw "Template for the packages not found" }
 
 
     cp _template $id -Recurse
