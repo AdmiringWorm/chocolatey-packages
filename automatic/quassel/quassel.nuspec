@@ -8,15 +8,15 @@
     <owners>AdmiringWorm, dimqua</owners>
     <title>Quassel IRC</title>
     <authors>Quassel team</authors>
-    <projectUrl>http://quassel-irc.org/</projectUrl>
+    <projectUrl>https://quassel-irc.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@666991132c85cfd09e577d6caadd5a6256921012/icons/quassel.png</iconUrl>
-    <copyright>(C) 2013 by the Quassel IRC Team</copyright>
+    <copyright>(C) 2021 by the Quassel IRC Team</copyright>
     <licenseUrl>https://github.com/quassel/quassel/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://github.com/quassel/quassel</projectSourceUrl>
-    <docsUrl>http://bugs.quassel-irc.org/projects/quassel-irc/wiki</docsUrl>
-    <bugTrackerUrl>http://bugs.quassel-irc.org/</bugTrackerUrl>
-    <tags>quassel irc qt</tags>
+    <docsUrl>https://bugs.quassel-irc.org/projects/quassel-irc/wiki</docsUrl>
+    <bugTrackerUrl>https://bugs.quassel-irc.org/</bugTrackerUrl>
+    <tags>quassel irc qt foss cross-platform</tags>
     <summary>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Quassel IRC is a modern, cross-platform, distributed [IRC][irc] client based on the [Qt4 framework][qt4].
