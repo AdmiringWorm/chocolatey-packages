@@ -8,6 +8,11 @@ Cross-platform means that Quassel IRC is developed for and tested on Linux®, Wi
 
 By modern we mean that Quassel IRC will have all the features you'd expect from an IRC client nowadays. It also innovates in many areas. For example, the GUI features a dockable nicklist and topic bar, or you can arrange your channel and query buffers in default or custom views, which are also dockable. This means that you can arrange your GUI as you please. The architecture allows for other innovations, such as on-demand creation of log files in custom formats from the backlog.
 
+## Notes
+
+- Starting in version 0.14.0 of this package, 32bit installation is no longer supported and will fail the installation.
+  If 32bit support is needed, the last package version supporting this is [0.13.1](https://community.chocolatey.org/packages/quassel/0.13.1).
+
 [irc]: http://en.wikipedia.org/wiki/IRC
 [qt4]: http://www.trolltech.com/products/qt
 [screen]: http://en.wikipedia.org/wiki/GNU_Screen
