@@ -7,15 +7,15 @@
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/sheepit-client</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>SheepIt Render Farm Client</title>
-    <authors>Laurent Clouet</authors>
-    <projectUrl>https://www.sheepit-renderfarm.com/</projectUrl>
+    <authors>Laurent Clouet, SheepIt Render Farm</authors>
+    <projectUrl>https://www.sheepit-renderfarm.com/home</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@e60406a15bd056274a5c69d9cfa15745f3a1d53d/icons/sheepit-client.png</iconUrl>
-    <copyright>2007-2019 Sheep it Render Farm.</copyright>
-    <licenseUrl>https://github.com/laurent-clouet/sheepit-client/blob/master/LICENSE</licenseUrl>
+    <copyright>2007-2022 SheepIt Render Farm.</copyright>
+    <licenseUrl>https://gitlab.com/sheepitrenderfarm/client/-/blob/aef9ccc034d0915416dcbad0616154fe316efaa3/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/laurent-clouet/sheepit-client</projectSourceUrl>
-    <docsUrl>https://www.sheepit-renderfarm.com/faq.php</docsUrl>
-    <bugTrackerUrl>https://github.com/laurent-clouet/sheepit-client/issues</bugTrackerUrl>
+    <projectSourceUrl>https://gitlab.com/sheepitrenderfarm/client/</projectSourceUrl>
+    <docsUrl>https://www.sheepit-renderfarm.com/faq</docsUrl>
+    <bugTrackerUrl>https://gitlab.com/sheepitrenderfarm/client/-/issues</bugTrackerUrl>
     <tags>sheepit-client rendering blender render-farm foss cross-platform</tags>
     <summary>An Open Source client for the distributed render farm SheepIt.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -37,9 +37,6 @@
 `choco install sheepit-client --package-parameters="/NoStartMenu /Desktop"`
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/sheepit-client/Changelog.md)</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

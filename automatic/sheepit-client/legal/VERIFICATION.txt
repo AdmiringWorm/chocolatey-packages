@@ -2,9 +2,9 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The embedded software have been downloaded from the listed download
-location on <https://www.sheepit-renderfarm.com/getstarted.php>
-and can be verified by doing the following:
+The embedded software is available from the sheepit renderfarm
+servers. The download URL is no longer linked to anywhere publically
+that have been found, but is generated based on historical data available.
 
 1. Download the following:
   64-Bit software: <https://www.sheepit-renderfarm.com/media/applet/sheepit-6.21175.0.exe>
@@ -16,4 +16,4 @@ and can be verified by doing the following:
   checksum type: sha256
   checksum64: 11E4C6E944D6EDB47D55F8D0DD41303793EE0D6BA646263E944AA1DC3180FABC
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/laurent-clouet/sheepit-client/blob/master/LICENSE>
+The file 'LICENSE.txt' has been obtained from <https://gitlab.com/sheepitrenderfarm/client/-/blob/aef9ccc034d0915416dcbad0616154fe316efaa3/LICENSE>
