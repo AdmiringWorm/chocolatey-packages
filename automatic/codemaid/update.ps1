@@ -5,13 +5,7 @@ Import-Module AU
 $releases = 'https://github.com/codecadwallader/codemaid/releases'
 
 function global:au_BeforeUpdate($Package) {
-  $readme = if ($Package.URL32 -match "VS2022") {
-    "$PSScriptRoot\VS2022Readme.md"
-  } else {
-    "$PSScriptRoot\VS2019Readme.md"
-  }
-
-  Copy-Item $readme "$PSScriptRoot\Readme.md"
+  Copy-Item $Latest.ReadmePath "$PSScriptRoot\Readme.md"
 
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
   if (Test-Path $licenseFile) { rm -Force $licenseFile }
@@ -75,12 +69,14 @@ function global:au_GetLatest {
       $streamName = "vs2022-$($version.ToString(2))"
       $vsixId = GetVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
       $title = "CodeMaid (VS2022)"
+      $readme = "$PSScriptRoot\VS2022Readme.md"
     }
     elseif ($_ -match "VS2019") {
       $id = "vs2019-codemaid"
       $streamName = "vs2019-$($version.ToString(2))"
       $vsixId = GetNewVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
       $title = "CodeMaid (VS2019)"
+      "$PSScriptRoot\VS2019Readme.md"
     }
     else {
       return "ignore"
@@ -88,11 +84,12 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($streamName))) {
       $streams.Add($streamName, @{
-          Version     = $version.ToString()
-          URL32       = $_
-          VsixId      = $vsixId
-          PackageName = $id
+          Version      = $version.ToString()
+          URL32        = $_
+          VsixId       = $vsixId
+          PackageName  = $id
           PackageTitle = $title
+          ReadmePath   = $readme
         })
     }
   }
