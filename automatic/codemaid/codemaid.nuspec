@@ -65,7 +65,7 @@
 
 ## Notes
 
-- If you need the 2022 edition of this extension, please install [vs2022-codemaid](https://community.chocolatey.org/packages/vs2022-codemaid) instead.
+- If you need the 2019 edition of this extension, please install [vs2019-codemaid](https://community.chocolatey.org/packages/vs2019-codemaid) instead.
 ]]></description>
     <releaseNotes>
 [Software Changelog](https://github.com/codecadwallader/codemaid/blob/master/CHANGELOG.md)
