@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>2.1</version>
+    <version>2.2-beta2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
@@ -30,16 +30,8 @@ Bear in mind, after running Hardentools you won't be able, for example, to do co
 
 ## Software Changelog
 
-Please download and use "hardentools.exe" for normal use cases.
+Improved CLI version
 
-No changes since 2.1-rc1.
-Changes since 2.0:
-- Update of UI Framework (fyne.io 2.0.1)
-- Additional command line client (hardentools-cli) for special use cases
-- prevent dynamic dll sideloading attacks for fyne.io dll loads
-- Fix missing file extensions hardening for unprivileged users
-- Now also hardens Acrobat Reader 2020 non-DC version 
- 
 </releaseNotes>
   </metadata>
   <files>
