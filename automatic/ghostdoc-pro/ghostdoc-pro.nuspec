@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghostdoc-pro</id>
-    <version>2021.2.21150</version>
+    <version>2022.1.22055</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/ghostdoc-pro</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>GhostDoc Pro Edition</title>
@@ -35,7 +35,7 @@ When generating documentation for class derived from a base class or for interfa
 - (Pro) Take control of your help files with Help Configurations and Template Libraries
 - See [this page](http://submain.com/ghostdoc/editions/) for the full comparison between editions.
 
-If you follow good naming conventions in your code, then you will get very decent results on the summary GhostDoc generates.  When I see code that is not documented, it is as simple as hit Ctrl-Shift-D to have GhostDoc document it.
+If you follow good naming conventions in your code, then you will get very decent results on the summary GhostDoc generates. When I see code that is not documented, it is as simple as hit Ctrl-Shift-D to have GhostDoc document it.
 
 ## Notes
 
