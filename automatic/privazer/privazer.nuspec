@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>privazer</id>
-    <version>4.0.29</version>
+    <version>4.0.41</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/privazer</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>PrivaZer</title>
@@ -18,7 +18,7 @@
 
 Secure cleanup with one click Irreversible cleanups by overwriting techniques
 
-In-depth cleanup of your PC and storage devices *Smart overwriting* : PrivaZer automatically recognizes your storage device type and adapts its overwriting algorithms to the storage medium (magnetic disk, SSD, etc)
+In-depth cleanup of your PC and storage devices _Smart overwriting_ : PrivaZer automatically recognizes your storage device type and adapts its overwriting algorithms to the storage medium (magnetic disk, SSD, etc)
 
 Privacy protection: PrivaZer prevents recovery of your activities.
 ]]></description>
@@ -27,7 +27,7 @@ Privacy protection: PrivaZer prevents recovery of your activities.
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/privazer.install/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="privazer.install" version="[4.0.29]" />
+      <dependency id="privazer.install" version="[4.0.41]" />
     </dependencies>
   </metadata>
   <files>
