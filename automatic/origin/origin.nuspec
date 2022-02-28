@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>origin</id>
-    <version>10.5.103.48818</version>
+    <version>10.5.111.50299</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/origin</packageSourceUrl>
     <owners>AdmiringWorm, thaiphan</owners>
     <title>Origin</title>
@@ -23,8 +23,8 @@ Origin contains social features such as profile management, networking with frie
 
 ## Package Parameters
 
-- `/NoAutoUpdate` - Disable the auto updating of the origin client. *NOTE: May also disable auto updating of installed games, but that is not tested*
-- `/InstallDir:` - Select the location to where the origin client should be installed (*Defaults to `C:\Program Files\Origin` (32bit), `C:\Program Files (x86)\Origin` (64bit), or the previously installed location*)
+- `/NoAutoUpdate` - Disable the auto updating of the origin client. _NOTE: May also disable auto updating of installed games, but that is not tested_
+- `/InstallDir:` - Select the location to where the origin client should be installed (_Defaults to `C:\Program Files\Origin` (32bit), `C:\Program Files (x86)\Origin` (64bit), or the previously installed location_)
 - `/LaunchOrigin` - Start Origin Client after installation
 - `/StartOrigin` - Alias for `/LaunchOrigin`
 - `/NoStartMenuIcon` - Don't create a shortcut on the start menu
