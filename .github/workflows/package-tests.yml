@@ -59,7 +59,7 @@ jobs:
           git diff --cached > unsaved_changes.patch
       - name: Upload artifacts
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artifacts-${{ matrix.os }}
           path: |
