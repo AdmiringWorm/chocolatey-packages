@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>io-ninja</id>
-    <version>5.1.0</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>IO Ninja</title>
     <authors>Tibbo Technology Inc</authors>
-    <projectUrl>http://tibbo.com/ninja.html</projectUrl>
+    <projectUrl>https://ioninja.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@6002fde9a9b502970066436309b0f35d5305d79c/automatic/io-ninja/icons/128x128.png</iconUrl>
-    <copyright>2016 IO Ninja Tibbo</copyright>
-    <docsUrl>http://tibbo.com/support.html</docsUrl>
+    <copyright>© 2008-2021 Tibbo Technology Inc.</copyright>
+    <docsUrl>https://ioninja.com/documentation.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>io-ninja admin ipv6 script terminal emulator monitor io ninja</tags>
@@ -38,7 +38,10 @@ IO Ninja features [session linking](http://tibbo.com/ninja/features.html#!linkin
 
 Last, but not least, IO Ninja is free for non-commercial usage. However, if you plan to use IO Ninja for work-related purposes, you have to [purchase a license](http://tibbo.com/ninja/purchase.html). If you already have a license for IO Ninja version 2.x.x, you can upgrade it to a commercial license for IO Ninja version 3.x.x free of charge. Contact our sales department for details at [sales@tibbo.com](mailto:sales@tibbo.com)
 ]]></description>
-    <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/io-ninja/Changelog.md)</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://tibbo.com/downloads/archive/ioninja/changelog.txt)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/io-ninja/Changelog.md)
+</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
