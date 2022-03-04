@@ -15,6 +15,7 @@ $funcs = @(
   "Update-OnHeaderChanged"
   "Get-ValidOpenSourceLicense"
   "Get-GithubRepositoryLicense"
+  "Invoke-VirusTotalScan"
 )
 
 $funcs | % {

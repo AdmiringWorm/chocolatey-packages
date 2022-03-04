@@ -28,6 +28,7 @@ jobs:
       mail_enablessl: true
       api_key: ${{ secrets.CHOCO_API_KEY }}
       nuget_artifacts: ${{ github.runner.temp }}/artifacts
+      VT_APIKEY: ${{ secrets.VT_APIKEY }}
 
     steps:
       - name: Configure git client

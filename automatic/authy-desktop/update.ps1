@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releasesFormat = "https://electron.authy.com/download?channel=stable&arch={0}&platform=win32&version=latest&product=authy"
@@ -13,7 +13,10 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_GetLatest {
   $url64 = Get-RedirectedUrl ($releasesFormat -f "x64")
