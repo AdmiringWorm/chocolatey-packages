@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoserver</id>
-    <version>2.19.2</version>
+    <version>2.20.3</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/geoserver</packageSourceUrl>
     <owners>AdmiringWorm</owners>
 
@@ -27,11 +27,11 @@
 ## Notes
 
 - This package do not install any form of Java, and before use fo the program the java of your choice needs to be installed.
-  Some helpful packages to install java includes: [`javaruntime`](https://chocolatey.org/packages/javaruntime), [`adoptopenjdk-jre`](https://chocolatey.org/packages/adoptopenjdkjre).
+  Some helpful packages to install java includes: [`javaruntime`](https://community.chocolatey.org/packages/javaruntime), [`adoptopenjdk-jre`](https://community.chocolatey.org/packages/adoptopenjdkjre).
 - GeoServer is not shut down as part of the upgrade or uninstall process, please do so before upgrading this package.
 - Shutdown and Startup scripts are available on `PATH` under the names `geoserver-startup` and `geoserver-shutdown`
 ]]></description>
-    <releaseNotes>http://geoserver.org/announcements/2021/07/18/geoserver-2-19-2-released.html</releaseNotes>
+    <releaseNotes>http://geoserver.org/announcements/2022/03/08/geoserver-2-20-3-released.html</releaseNotes>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
