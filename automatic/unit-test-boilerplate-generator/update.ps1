@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 
 $releases = 'https://marketplace.visualstudio.com/items?itemName=RandomEngy.UnitTestBoilerplateGenerator'
 
@@ -31,13 +31,14 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
   $releaseChangelog = @"
 [Software Changelog](https://github.com/Microsoft.UnitTestBoilerplateGenerator/blob/master/CHANGELOG.md#$($Latest.RemoteVersion -replace '\.'))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/unit-test-boilerplate-generator/Changelog.md)
 "@
   Update-Metadata -key "releaseNotes" -value $releaseChangelog
+  Invoke-VirusTotalScan $Package
 }
 
 function GetVsixIdFromManifest() {

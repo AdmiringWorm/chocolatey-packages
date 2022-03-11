@@ -4,7 +4,10 @@ $releases = 'http://quassel-irc.org/downloads'
 $softwareName = 'Quassel*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_SearchReplace {
   @{

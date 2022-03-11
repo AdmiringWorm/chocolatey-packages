@@ -4,8 +4,12 @@ import-module au
 $releases = 'https://benchmark.unigine.com/valley'
 $softwareName = 'Unigine Valley Benchmark*'
 
+function global:au_BeforeUpdate($Package) {
+  Invoke-VirusTotalScan $Package
+}
+
 function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
+  Update-Changelog -useIssueTitle
 }
 
 function global:au_SearchReplace {
@@ -33,4 +37,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

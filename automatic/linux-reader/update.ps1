@@ -4,7 +4,10 @@ Import-Module "$env:ChocolateyInstall/helpers/chocolateyInstaller.psm1"
 $softwareName = 'DiskInternals Linux Reader'
 $releases = "https://www.diskinternals.com/linux-reader/"
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_SearchReplace {
   @{

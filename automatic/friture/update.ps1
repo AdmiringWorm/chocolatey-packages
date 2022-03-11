@@ -17,11 +17,12 @@ function global:au_BeforeUpdate($package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key 'releaseNotes' -Value "[Software Changelog]($($Latest.ReleaseNotes))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/friture/Changelog.md)"
 
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

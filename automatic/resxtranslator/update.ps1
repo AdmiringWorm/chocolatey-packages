@@ -39,9 +39,10 @@ function global:au_BeforeUpdate($Package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
   Update-Metadata "licenseUrl" $Latest.LicenseUrl
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

@@ -18,10 +18,11 @@ function global:au_BeforeUpdate {
   $Latest.LicenseUrl = $licenseData.html_url
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
 
   Update-Metadata -key "licenseUrl" -value $Latest.LicenseUrl
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

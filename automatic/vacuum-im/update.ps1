@@ -5,13 +5,14 @@ $softwareName = 'vacuum-im*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   $releaseNotes = "
 [Software Changelog]($($Latest.ReleaseNotes))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/$($Latest.PackageName)/Changelog.md)
     "
   Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
@@ -36,7 +36,10 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing

@@ -9,13 +9,14 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
   $releaseNotes = (
     "[Software Changelog]($($Latest.ReleaseNotes))  `n" +
     "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)")
 
   Update-Metadata -key "releaseNotes" -value $releaseNotes
+  Invoke-VirusTotalScan $Package
 }
 
 update -ChecksumFor none

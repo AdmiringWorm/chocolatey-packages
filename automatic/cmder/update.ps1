@@ -31,7 +31,7 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key 'releaseNotes' -value "
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmder/Changelog.md)
 
@@ -39,6 +39,7 @@ function global:au_AfterUpdate {
 $($Latest.ReleaseNotes)
   "
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_GetLatest {

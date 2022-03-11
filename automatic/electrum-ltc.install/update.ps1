@@ -23,7 +23,10 @@ function global:au_BeforeUpdate($Package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_SearchReplace {
   $softwareName = 'Electrum-LTC*'

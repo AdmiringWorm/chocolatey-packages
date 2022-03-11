@@ -4,8 +4,14 @@ import-module au
 $releases = 'https://benchmark.unigine.com/heaven'
 $softwareName = 'Heaven Benchmark*'
 
-function global:au_AfterUpdate {
-  Update-ChangelogVersion -version $Latest.Version
+function global:au_BeforeUpdate {
+  Get-RemoteFiles
+  Remove-Item "tools/*.exe"
+}
+
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {
@@ -33,4 +39,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

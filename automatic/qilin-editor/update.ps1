@@ -19,12 +19,13 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key "releaseNotes" -value @"
 [Software Changelog](https://github.com/qilin-editor/qilin-app/releases/tag/v$($Latest.RemoteVersion))
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qilin-editor/Changelog.md)
 "@
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_GetLatest {

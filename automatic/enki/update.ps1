@@ -19,13 +19,14 @@ function global:au_BeforeUpdate($Package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
 
   Update-Metadata -key "releaseNotes" -value "
   [Software Changelog]($($Latest.ReleaseUrl))
   [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/enki/Changelog.md)
 "
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

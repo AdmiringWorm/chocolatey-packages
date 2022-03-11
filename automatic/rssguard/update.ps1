@@ -6,11 +6,12 @@ $releases = 'https://github.com/martinrotter/rssguard/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key 'releaseNotes' -value "[Software Changelog]($($Latest.ReleaseNotes))
   [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/rssguard/Changelog.md)"
 
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

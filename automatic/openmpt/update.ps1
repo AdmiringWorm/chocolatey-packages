@@ -17,7 +17,7 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   $releaseNotes = @"
 [Software Changelog](https://openmpt.org/release_notes/)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/openmpt/Changelog.md)
@@ -25,6 +25,7 @@ function global:au_AfterUpdate {
 
   Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

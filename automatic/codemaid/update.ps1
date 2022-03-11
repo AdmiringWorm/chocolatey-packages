@@ -35,9 +35,10 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
   Update-Metadata -key 'title' -value $Latest.PackageTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function GetVsixIdFromManifest([string]$tag) {

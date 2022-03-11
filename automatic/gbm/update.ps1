@@ -18,7 +18,7 @@ function global:au_BeforeUpdate($Package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key "releaseNotes" -value @"
 ### [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/gbm/Changelog.md)
 
@@ -26,7 +26,9 @@ function global:au_AfterUpdate {
 
 $($Latest.ReleaseNotes)
 "@
+
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

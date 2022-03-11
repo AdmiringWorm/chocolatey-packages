@@ -8,7 +8,10 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -FileNameBase $Latest.FileName32.TrimEnd('.exe') -NoSuffix -Purge
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_SearchReplace {
   @{

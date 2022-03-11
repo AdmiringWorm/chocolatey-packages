@@ -24,13 +24,14 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
 
   $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/persepolis/Changelog.md)`n`n## Software Release Notes`n"
   $releaseNotes += $Latest.ReleaseNotes
 
   Update-metadata -key "releaseNotes" -value $releaseNotes
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_GetLatest {

@@ -28,7 +28,7 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -key 'releaseNotes' -value "
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/hardentools/Changelog.md)
 
@@ -38,6 +38,7 @@ $($Latest.ReleaseNotes)
 "
 
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function addStream($release, $stream, $name) {

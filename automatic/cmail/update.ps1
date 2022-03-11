@@ -15,7 +15,10 @@ function global:au_BeforeUpdate {
   Remove-Item -Force $tempLoc -Recurse
 }
 
-function global:au_AfterUpdate { Update-Changelog -useIssueTitle }
+function global:au_AfterUpdate($Package) {
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
+}
 
 function global:au_SearchReplace {
   @{

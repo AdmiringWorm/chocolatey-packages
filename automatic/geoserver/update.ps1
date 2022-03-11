@@ -33,11 +33,14 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Metadata -data @{
     licenseUrl   = $Latest.LicenseUrl
     releaseNotes = $Latest.AnnouncementUrl
   }
+
+  Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_GetLatest {

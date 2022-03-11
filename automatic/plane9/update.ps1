@@ -5,6 +5,10 @@ $releases = 'https://www.plane9.com/download'
 $softwareName = 'Plane9*'
 $padUnderVersion = '2.5.2'
 
+function global:au_BeforeUpdate($Package) {
+  Invoke-VirusTotalScan $Package
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -33,4 +37,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

@@ -22,7 +22,7 @@ function global:au_BeforeUpdate($Package) {
   Get-RemoteFiles -Purge -NoSuffix
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   Update-Changelog -useIssueTitle
   $releaseNotes = "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)`n`n## Software Release Notes`n"
   $releaseNotes += $Latest.ReleaseNotes
@@ -31,6 +31,7 @@ function global:au_AfterUpdate {
     'releaseNotes' = $releaseNotes
     'licenseUrl'   = $Latest.LicenseUrl
   }
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

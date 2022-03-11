@@ -5,13 +5,14 @@ $softwareName = 'LilyPond'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   $releaseNotes = (
     "[Software Changelog](http://lilypond.org/doc/v$($Latest.RemoteVersion -replace '^([\d]+\.[\d]+).*','$1')/Documentation/changes/index.html)`n" +
     "[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/lilypond/Changelog.md)")
 
   Update-Changelog -useIssueTitle
   Update-Metadata -key 'releaseNotes' -value $releaseNotes
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_SearchReplace {

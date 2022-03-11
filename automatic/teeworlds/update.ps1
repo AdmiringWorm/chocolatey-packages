@@ -31,7 +31,7 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
   if ($Latest.ReleaseNotes) {
     $releaseNotes = "
 [Software Changelog]($($Latest.ReleaseNotes))
@@ -42,6 +42,7 @@ function global:au_AfterUpdate {
   }
   Update-Metadata -key "releaseNotes" -value $releaseNotes
   Update-Changelog -useIssueTitle
+  Invoke-VirusTotalScan $Package
 }
 
 function global:au_GetLatest {
