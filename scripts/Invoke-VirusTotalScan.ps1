@@ -49,5 +49,12 @@ function Invoke-VirusTotalScan ($Package) {
                 $Latest.Remove("FileName64")
             }
         }
+
+        $nupkgFile = Get-ChildItem "*.nupkg" | % {
+          Write-Output "Submitting file $file to VirusTotal"
+
+          # Assumes vt-cli Chocolatey package is installed!
+          vt.exe scan file $_ --apikey $env:VT_APIKEY
+        }
     }
 }
