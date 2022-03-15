@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>io-ninja</id>
-    <version>5.1.0</version>
+    <version>5.1.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/io-ninja</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>IO Ninja</title>
