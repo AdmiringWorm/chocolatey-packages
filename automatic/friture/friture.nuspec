@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>friture</id>
-    <version>0.47</version>
+    <version>0.49</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/friture</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Friture</title>
@@ -41,7 +41,7 @@ Friture helps you to understand audio data with several [widgets](http://friture
 
 ![Friture Screenshot](http://friture.org/images/friture_20150824_small.png)
 ]]></description>
-    <releaseNotes>[Software Changelog](https://github.com/tlecomte/friture/releases/tag/v0.47)
+    <releaseNotes>[Software Changelog](https://github.com/tlecomte/friture/releases/tag/v0.49)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/friture/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
