@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://lun-eu.icons8.com/s/setup/LunacySetup_8.4.0.exe'
+  url            = 'https://lun-eu.icons8.com/s/setup/LunacySetup_8.4.1.exe'
   softwareName   = 'Lunacy'
-  checksum       = 'c01491c2601a53d8bb373090b3f02dee7779dac5a0dc45644aa8179b5b6f145cd00ec0424c6898e473b365a3acb109e8786f0a16730a5829e35f14f68d6e440e'
+  checksum       = 'f5509133853c278b2fda1cef4dc7c1c06b96b4031f7875c2608d4560f7498391140ec1622ddd01bd2d10777aa4faaaafcdc1a0eadad25a616b0a8ff1be4f7f06'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
