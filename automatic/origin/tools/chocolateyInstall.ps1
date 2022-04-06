@@ -7,7 +7,7 @@ $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
   url          = 'https://download.dm.origin.com/origin/live/OriginSetup.exe'
   softwareName = 'Origin*' # Probably not needed, but we add registry keys so we keep it
-  checksum     = '34C5B964245281DD43D487CF415300F5C3F1368657DD7EE1AF7D1D8B4160BE2478559ABCAFA0F0556D09F6275148CE3483874E0525222009EC318DEF95309F80'
+  checksum     = '6AC6F66901B2C1D4301042B8A01795392D336CEEC1B272D846DB25BC4CD0A309F401F30A5B479D3D92AFEE51F633E292E30C07FEDAFBB395F0F89FC5F2B10B0A'
   checksumType = 'sha512'
   destination  = Get-PackageCacheLocation
 }
@@ -16,7 +16,7 @@ if ($env:ChocolateyForce -ne $true) {
   try {
     $InstalledVersion = Get-UninstallRegistryKey $packageArgs['softwareName'] | Select-Object -First 1 -Expand 'DisplayVersion'
 
-    if ([Version]::Parse($InstalledVersion) -ge [Version]::Parse('10.5.111.50299'))
+    if ([Version]::Parse($InstalledVersion) -ge [Version]::Parse('10.5.112.50486'))
     {
       Write-Host "Skipping installation because version $InstalledVersion is already installed."
       return
@@ -35,10 +35,10 @@ $packageArgs['file'] = $zipFile
 $packageArgs['destination'] = GetInstallLocation $pp
 
 if ($pp.NoAutoUpdate) {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version '10.5.111.50299'
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $false -version '10.5.112.50486'
 }
 else {
-  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version '10.5.111.50299'
+  CreateRegistrySettings -installPath $packageArgs['destination'] -autoUpdate $true -version '10.5.112.50486'
 }
 
 Get-ChocolateyUnzip @packageArgs
