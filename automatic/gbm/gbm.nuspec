@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gbm</id>
-    <version>1.2.8</version>
+    <version>1.3.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
@@ -45,22 +45,31 @@ Game Backup Monitor is completely free and open source software.
 
 ### Software Release notes
 
-***New in 1.2.8***
+***New in 1.3.0***
 
 All Platforms:
 
-- Differential backups are now supported and can be enabled in the Game Manager.
-	- Read the [online manual](https://mikemaximus.github.io/gbm-web/manual.html#differential) for details on how and when to use this backup method.
-- Validation on "Game Path" will now trim off a file name if it's been included.
-- Fixed importing multiple backup files for a single game.
-	- GBM will now create manifest entries for each file when appropriate, instead of just the newest file.
-- The "Save multiple backups" option used with a specific backup limit will now only clean up expired backups when a new backup is successfully completed.
-- Fixed unhandled exception on the Launcher Manager when using the "..." (Browse) button with an empty "Executable" field.
-	
+- New features for importing &amp; exporting game configurations.
+	- Added the ability to import any valid XML file from a HTTP or HTTPS URL.
+		- This makes it a little easier to host and share your own configuration lists.
+		- The last URL will be automatically saved to make it easier to repeatedly check the same list.
+	- Added the ability to use import and export features from the "File" menu on the main window and system tray.
+	- XML files are now cached in GBM's temporary folder when importing from the internet.
+	- Added an optional method of greatly reducing the bandwidth used when hosting XML files.
+- System tray menu has been changed to prevent it from getting too large.
+	- A "File" sub-menu has been added and some features have been moved to this menu.
+- Removed the "Sync Game IDs" feature.
+	- This feature was designed to ease upgrades from old versions of GBM and should no longer be required.
+- Fixed an issue with some browse windows on the Game Manager not opening to the correct location when using path variables.
+
 Windows:
 
-- GBM no longer tries to determine a relative save path when the "Game Path" and "Save Path" are on different drives.
-- Updated SQLite to 3.36.0
+- Updated 7-Zip to 21.07
+- Due to TLS 1.2 support, GBM now requires .NET Framework v4.5 or later.	
+
+Notice:
+
+Supported languages other than English may be missing the translation of labels and messages introduced in this version.
 
 The entire version history of GBM releases is available at http://mikemaximus.github.io/gbm-web/versionhistory.html</releaseNotes>
   </metadata>
