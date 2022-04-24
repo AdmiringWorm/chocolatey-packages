@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://openmpt.org/download>
 and can be verified by doing the following:
 
-1. Download the following: <https://download.openmpt.org/archive/openmpt/1.30/OpenMPT-1.30.03.00-Setup.exe>
+1. Download the following: <https://download.openmpt.org/archive/openmpt/1.30/OpenMPT-1.30.04.00-Setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D95F1ADB64796D94CD27B90D96FA506079F0E143582D5308EE2350D2B7A15726
+  checksum: B548492BD840F44A2DDE51F60127270B7A28B121E38BC9F4C937AA18801CD7D8
 
 The file 'LICENSE.txt' has been obtained from <https://source.openmpt.org/browse/openmpt/trunk/OpenMPT/LICENSE>
