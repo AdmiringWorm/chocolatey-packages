@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dumo</id>
-    <version>2.24.0.118</version>
+    <version>2.25.0.120</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
     <owners>AdmiringWorm, dtgm, adgellida</owners>
     <title>DUMo</title>
@@ -30,7 +30,7 @@
 
 ## Notes
 
-- This package installs the Free version.  A supported version with enhanced performance is available for purchase.
+- This package installs the Free version. A supported version with enhanced performance is available for purchase.
 - After the package is uninstall, a web page is shown. This is not being handled in the package.
 ]]></description>
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/dumo/Changelog.md)</releaseNotes>
