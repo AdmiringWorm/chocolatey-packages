@@ -5,7 +5,7 @@
         <!-- == PACKAGE SPECIFIC SECTION == -->
         <!-- This section is about this package, although id and version have ties back to the software -->
         <id>nordpass</id>
-        <version>4.22.22</version>
+        <version>4.23.12</version>
         <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordpass</packageSourceUrl>
         <owners>AdmiringWorm</owners>
         <!-- ============================== -->
