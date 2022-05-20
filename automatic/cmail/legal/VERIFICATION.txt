@@ -7,15 +7,15 @@ location on <https://www.inveigle.net/cmail/download.shtml>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.3_x86.zip>
-  64-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.3_amd64.zip>
+  32-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.5_x86.zip>
+  64-Bit software: <https://www.inveigle.net/downloads/CMail_0.8.5_amd64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: C7C81A74538F01C6AABF769BABA7575E5D2E67E4336295466789C3A5A54E5FA1
-  checksum64: 207700C2FA3E63402197FEFDE43F397F1CF04E87A75F8B0BCE0E17145DABBBB7
+  checksum32: B2869F2884352367A2E9AFDAC94E9C3415DA24C1AA814EA5D1FD2579BAEDB456
+  checksum64: 8315AC5A69143CB1C0535BE6E0972879986436F7154AFFA1D69ABA79D4098804
 
 The file 'LICENSE.txt' has been obtained from their FAQ located at <https://www.inveigle.net/cmail/faq.shtml>
