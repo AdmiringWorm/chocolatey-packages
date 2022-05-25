@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://www.mindgems.com/software/FolderSize.exe'
   softwareName   = 'Folder Size*'
-  checksum       = '6A14D161F5D9C3C15D29438965ACCD33486E91C026C8E96371D6ED4178408A70C2D1BB41FCD670CA813FEE5EC87E80E4F232CFE41AF519A1A18FDBE96AB86354'
+  checksum       = '6A570D74887B32E81C17D921D8A68508633381158BF59A0618656B78B485ECFD363797B94362D0A69383D8DFEDFB0855FBDCEEE20F134F4EEFDF42C30FC4AA30'
   checksumType   = 'sha512'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
