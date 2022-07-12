@@ -11,7 +11,7 @@ if ($pp.InstallDir) {
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\MediathekView-13.8.0-win32.zip"
+  file        = "$toolsPath\MediathekView-13.9.0-win32.zip"
   destination = $installPath
 }
 
