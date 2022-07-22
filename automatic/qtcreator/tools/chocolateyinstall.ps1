@@ -30,7 +30,7 @@ Get-ChildItem $packageArgs.destination -Include "*.exe" -Recurse | ForEach-Objec
 if ($qtCreator) {
   # Because chocolatey targets 4.0, we are able to use 'Programs' in the 'GetFolderPath'
   $programs = [System.Environment]::GetFolderPath("Programs")
-  Install-ChocolateyShortcut -shortcutFile "$programs\QT Creator.lnk" -targetPath $qtCreator
+  Install-ChocolateyShortcut -shortcutFile "$programs\Qt Creator.lnk" -targetPath $qtCreator
   Install-ChocolateyFileAssociation ".pro" $qtCreator
 } else {
   Write-Warning "Unable to find qtcreator executable, skipping start menu shortcut creation!"
