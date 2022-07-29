@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>3.3.1</version>
+    <version>3.3.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://developer.box.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@507f445e404eb629632365875da50972699c9837/automatic/boxcli/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
-    <licenseUrl>https://github.com/box/boxcli/blob/v3.3.1/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/box/boxcli/blob/v3.3.2/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
     <docsUrl>https://developer.box.com/reference</docsUrl>
@@ -32,7 +32,7 @@ Box is a cloud-based enterprise content management platform trusted by thousands
 ## Software Release Notes
 ### Bug Fixes
 
-* Fix OAuth login ([#364](https://github.com/box/boxcli/issues/364)) ([579b44b](https://github.com/box/boxcli/commit/579b44b83c60f6568c98cb5f1417effbac26c58c))</releaseNotes>
+* Fix request command when calling without body ([#369](https://github.com/box/boxcli/issues/369)) ([9317888](https://github.com/box/boxcli/commit/9317888c3f1bff56ef784d7319f1b8ccf12239ef))</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
