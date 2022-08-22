@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>golly</id>
-    <version>4.0</version>
+    <version>4.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/golly</packageSourceUrl>
     <owners>AdmiringWorm, </owners>
     <title>Golly Game of Life</title>
@@ -30,7 +30,7 @@
 - Responsive even while generating or garbage collecting.
 - Reads RLE, macrocell, Life 1.05/1.06, dblife, and MCell files.
 - Can also read common graphic formats: BMP, PNG, GIF, TIFF.
- Can extract patterns, rules and scripts from zip files.
+  Can extract patterns, rules and scripts from zip files.
 - Can download patterns, rules and scripts from online archives.
 - Includes a state-of-the-art pattern collection.
 - Can paste in patterns from the clipboard.
