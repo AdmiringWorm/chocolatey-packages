@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>nordvpn-teams</id>
-        <version>2.5.0</version>
+        <version>2.5.1</version>
         <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordvpn-teams</packageSourceUrl>
         <owners>AdmiringWorm</owners>
         <title>NordVPN Teams</title>
