@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/box/boxcli/releases/tag/v3.3.2>
+location on <https://github.com/box/boxcli/releases/tag/v3.4.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/box/boxcli/releases/download/v3.3.2/box-v3.3.2-x86.exe>
-  64-Bit software: <https://github.com/box/boxcli/releases/download/v3.3.2/box-v3.3.2-x64.exe>
+  32-Bit software: <https://github.com/box/boxcli/releases/download/v3.4.0/box-v3.4.0-x86.exe>
+  64-Bit software: <https://github.com/box/boxcli/releases/download/v3.4.0/box-v3.4.0-x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 0A0017706042D70B5DF29586EE89378F9162699EC1B6E1061C0132543BEE05CD
-  checksum64: C3698B8E4D45801A5D7B942F26674C828578CE6E60A008EA409693FF2C8DD643
+  checksum32: 9216BC39922BBAABE50DF63A9657B58689C139D7C7846FC15C8B532BC4FC8A24
+  checksum64: 9FDA6928BDDD4311569A4B9527668C23234D0276F3EAB98E2236A431A53D6AD9
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/box/boxcli/blob/v3.3.2/LICENSE>
+The file 'LICENSE.txt' has been obtained from <https://github.com/box/boxcli/blob/v3.4.0/LICENSE>
