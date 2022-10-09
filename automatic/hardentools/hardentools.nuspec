@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>2.2</version>
+    <version>2.3</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
@@ -32,16 +32,11 @@ Bear in mind, after running Hardentools you won't be able, for example, to do co
 
 Please download and use "hardentools.exe" for normal use cases.
 
-Changes since 2.1:
-- removed functionality in "restore" that deleted registry keys which have not been saved during harden. _If you hardened your system with a (really) old version of hardentools, best first restore with an older version (&lt;= 2.1) and then harden with this version again._
-- Compiled with golang 1.18.3 to include all security fixes, even if hardentools seems not be affected (by e.g https://github.com/golang/go/issues/52574)
-- Activation of Microsoft Defender PUA Protection added (enabled by default)
-- Improved CLI version
-- UAC with password prompt now (see #46 )
-- now makes sure that all other UAC registry settings are set correctly (which they are by default)
+Changes:
 
-
-
+- Fixes a bug in the Microsoft Defender PUA Protection from v2.2
+- add edge download blocker to PUA module
+- use go 1.19 to compile
 </releaseNotes>
   </metadata>
   <files>
