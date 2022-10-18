@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'https://www.icofx.ro/files/icofxsetup.exe'
   softwareName   = 'IcoFX*'
-  checksum       = '5bf43f1e815ca753a7149e666b87abe901bf693a659a80c21b2ab1000fbf37bf'
+  checksum       = '75eba4046fa79ec2ca45f01cb744f7f23cf5b42dbf7f651a2e4dcfe1e4545039'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
