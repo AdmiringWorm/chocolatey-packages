@@ -64,19 +64,15 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-LatestGithubReleases -repoUser 'HakanL' -repoName 'resxtranslator' | % latest
 
   $re = 'signed\.zip$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_}
-  $re = '\/releases\/tag\/v[\d\.]+$'
-  $releaseUrl = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+  $url32 = $release.Assets | ? { $_ -match $re } | select -First 1
 
-  $verRe = '\/'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
     URL32 = $url32
-    Version = $version32.TrimStart('v')
-    ReleaseURL = $releaseUrl
+    Version = Get-Version $release.Version
+    ReleaseURL = $release.ReleaseUrl
     LicenseUrl = 'https://github.com/HakanL/resxtranslator/blob/master/LICENSE'
   }
 }
