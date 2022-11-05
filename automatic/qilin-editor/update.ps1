@@ -1,6 +1,5 @@
 ﻿Import-Module AU
 
-$releases = 'https://github.com/qilin-editor/qilin-app/releases'
 $softwareName = 'qilin-editor*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -29,13 +28,12 @@ function global:au_AfterUpdate($Package) {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-AllGithubReleases -repoUser 'qilin-editor' -repoName 'qilin-app' | select -first 1
 
   $re = 'windows\.zip$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url32 = $release.Assets | Where-Object { $_ -match $re } | Select-Object -First 1
 
-  $verRe = '\/v?'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = Get-Version $release.Version
 
   @{
     URL32         = $url32
@@ -44,4 +42,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor none
+Update-Package -ChecksumFor none
