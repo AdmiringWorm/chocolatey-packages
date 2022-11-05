@@ -40,18 +40,18 @@ function global:au_AfterUpdate($Package) {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-LatestGithubReleases -repoUser 'FStarLang' -repoName 'FStar' | % latest
 
   $re = '\.zip$'
-  $url64 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+  $url64 = $release.Assets | ? { $_ -match $re }
 
   $verRe = '\/v?'
   $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
   @{
     URL64        = $url64
-    Version      = Get-FixVersion $version64 -OnlyFixBelowVersion $padUnderVersion
+    Version      = Get-FixVersion $release.Version -OnlyFixBelowVersion $padUnderVersion
     PackageName  = 'FStar'
-    ReleaseNotes = "https://github.com/FStarLang/FStar/releases/tag/v$($version64)"
+    ReleaseNotes = $release.ReleaseUrl
   }
 }
 
