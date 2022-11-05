@@ -37,18 +37,15 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-LatestGithubReleases -repoUser 'Vacuum-IM' -repoName 'vacuum-im' | % latest
 
   $re = '\.msi$'
-  $urls = $download_page.Links | ? href -match $re | select -first 2 -expand href | % { 'https://github.com' + $_ }
 
-  $verRe = '\/'
-  $version32 = $urls[0] -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32        = $urls[0]
-    URL64        = $urls[1]
-    Version      = $version32
-    ReleaseNotes = Get-RedirectedUrl $releases
+    URL32        = $release.Assets | ? { $_ -match $re -and $_ -notmatch 'GPO' }
+    URL64        = $release.Assets | ? { $_ -match $re -and $_ -match 'GPO' }
+    Version      = $release.Version
+    ReleaseNotes = $release.ReleaseUrl
   }
 }
 
