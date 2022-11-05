@@ -33,7 +33,7 @@ function global:au_GetLatest {
     }
   }
 
-  $version = $url -split 'jre\-|\.zip|setup\-' | select -last 1 -skip 1
+  $version = $url -split 'jre\-|\.zip|setup\-|win\-' | select -last 1 -skip 1
   $version = $version -replace '_', '.'
   if ($version -match '^\d+$') {
     $version += ".0"
