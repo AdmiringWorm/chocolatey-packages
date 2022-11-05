@@ -15,7 +15,7 @@ function global:au_AfterUpdate($Package) {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
       "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
@@ -29,7 +29,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $releases = Get-AllGithubReleases -repoUser 'martinrotter' -repoName 'rssguard'
 
-  $re = '(?<!nowebengine\-)win64\.7z'
+  $re = '(?<!nowebengine\-)win(64|7)\.7z'
 
   $streams = @{}
   $releases | % {
@@ -43,11 +43,12 @@ function global:au_GetLatest {
 
     if ($url64 -and !($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-        Version = $version.ToString()
-        URL64 = $url64
-        PackageName = 'RssGuard'
-        ReleaseNotes = $_.ReleaseUrl
-      })
+          Version      = $version.ToString()
+          URL64        = $url64
+          PackageName  = 'RssGuard'
+          ReleaseNotes = $_.ReleaseUrl
+          ReleaseUrl   = $_.ReleaseUrl
+        })
     }
   }
 
