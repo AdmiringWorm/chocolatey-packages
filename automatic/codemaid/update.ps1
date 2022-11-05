@@ -51,14 +51,19 @@ function GetVsixIdFromManifest([string]$tag) {
 }
 
 function GetNewVsixIdFromManifest([string]$tag) {
-  $url = "https://github.com/codecadwallader/codemaid/blob/$tag/CodeMaid.VS2022/source.extension.vsixmanifest"
+  $url = "https://github.com/codecadwallader/codemaid/raw/$tag/CodeMaid.VS2022/source.extension.vsixmanifest"
+  $manifest = New-Object xml
+  $manifest.Load($url)
+
+  $id = $manifest.PackageManifest.Metadata.Identity.Id
+  return $id
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $releases = Get-AllGithubReleases -repoUser 'codecadwallader' -repoName 'codemaid'
 
   $re = 'VS\d{4}.*\.vsix$'
-  $urls = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
+  $urls = $releases.Assets | ? { $_ -match $re }
 
   $streams = @{}
   $urls | % {
@@ -68,14 +73,14 @@ function global:au_GetLatest {
     if ($_ -match "VS2022") {
       $id = "vs2022-codemaid"
       $streamName = "vs2022-$($version.ToString(2))"
-      $vsixId = GetVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
+      $vsixId = GetNewVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
       $title = "CodeMaid (VS2022)"
       $readme = "$PSScriptRoot\VS2022Readme.md"
     }
     elseif ($_ -match "VS2019") {
       $id = "vs2019-codemaid"
       $streamName = "vs2019-$($version.ToString(2))"
-      $vsixId = GetNewVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
+      $vsixId = GetVsixIdFromManifest -tag ($_ -split '\/' | select -last 1 -skip 1)
       $title = "CodeMaid (VS2019)"
       "$PSScriptRoot\VS2019Readme.md"
     }
