@@ -41,22 +41,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $releases = Get-AllGithubReleases -repoUser 'tlecomte' -repoName 'friture'
 
   $re = '\.msi$'
-  $urls32 = $download_page.Links | Where-Object href -Match $re | Select-Object -First 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
-
   $streams = @{}
-  $urls32 | ForEach-Object {
-    $verRe = '\/'
-    $tag = $_ -split "$verRe" | Select-Object -Last 1 -Skip 1
-    $version = Get-Version $tag
+  $releases | ? { $_.Assets | ? { $_ -match $re } } | % {
+    $version = Get-Version $_.Version
+    $url = $_.Assets | ? { $_ -match $re }
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-          Version      = $version.ToString()
-          URL32        = $_
-          ReleaseNotes = "https://github.com/tlecomte/friture/releases/tag/$tag"
+          Version      = $version.ToSTring()
+          URL32        = $url
+          ReleaseNotes = $_.ReleaseUrl
         })
     }
   }
