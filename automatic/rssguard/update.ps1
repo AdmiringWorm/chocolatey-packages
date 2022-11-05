@@ -2,8 +2,6 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://github.com/martinrotter/rssguard/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate($Package) {
@@ -29,25 +27,27 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $releases = Get-AllGithubReleases -repoUser 'martinrotter' -repoName 'rssguard'
 
   $re = '(?<!nowebengine\-)win64\.7z'
-  $urls64 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
 
   $streams = @{}
-  $urls64 | % {
-    $verRe = '\/'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    if ($version -eq "devbuild") { return } # we ignore the pre-release build
-    $version = Get-Version $version
+  $releases | % {
+    if (!$_.Version -or ([string]$_.Version) -eq 'devbuild') {
+      return
+    }
 
-    if (!($streams.ContainsKey($version.ToString(2)))) {
+    $version = Get-Version $_.Version
+
+    $url64 = $_.Assets | ? { $_ -match $re } | select -First 1
+
+    if ($url64 -and !($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-          Version      = $version.ToString()
-          URL64        = $_
-          PackageName  = 'RssGuard'
-          ReleaseNotes = "https://github.com/martinrotter/rssguard/releases/tag/$($version.ToString())"
-        })
+        Version = $version.ToString()
+        URL64 = $url64
+        PackageName = 'RssGuard'
+        ReleaseNotes = $_.ReleaseUrl
+      })
     }
   }
 
