@@ -14,7 +14,7 @@ if ($uninstallKey) {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\friture-0.49.msi"
+  file           = "$toolsPath\friture-0.46.msi"
   softwareName   = 'Friture*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
