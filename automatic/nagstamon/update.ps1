@@ -1,6 +1,5 @@
 ﻿Import-Module AU
 
-[uri]$releases = 'https://github.com/HenriWahl/Nagstamon/releases/latest'
 if ($MyInvocation.InvocationName -ne '.') {
   $packageName = 'Nagstamon'
 }
@@ -53,37 +52,32 @@ else {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-LatestGithubReleases -repoUser 'HenriWahl' -repoName 'Nagstamon' | % latest
 
   #region Installer
   $re = '\.exe$'
-  $urls_i = $download_page.Links | ? href -match $re | select -first 2 -expand href | % {
-    [uri]::new($releases, $_)
-  }
+  $urls_i = $release.Assets | ? { $_ -match $re } | select -first 2
   #endregion
 
   #region Portable
   $re = '\.zip$'
-  $urls_p = $download_page.Links | ? href -match $re | select -first 2 -expand href | % {
-    [uri]::new($releases, $_)
-  }
+  $urls_p = $release.Assets | ? { $_ -match $re } | select -first 2
   #region
 
   $verRe = '/'
-  $version32 = Get-Version ($urls_i[0] -split "$verRe" | select -last 1 -skip 1)
+  $version32 = Get-Version $release.Version
 
   @{
     URL32_i      = $urls_i | ? { $_ -match 'win32' }
     URL64_i      = $urls_i | ? { $_ -match 'win64' }
-    URL32_p      = $urls_p | ? { $_ -match 'win32' }
+    #URL32_p      = $urls_p | ? { $_ -match 'win32' }
     URL64_p      = $urls_p | ? { $_ -match 'win64' }
     Version      = $version32
     PackageName  = $packageName
-    ReleaseNotes = Get-RedirectedUrl $releases
+    ReleaseNotes = $release.ReleaseUrl
   }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
   update -ChecksumFor none
 }
-
