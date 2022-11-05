@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://geoserver.org/release/stable/>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/geoserver/files/GeoServer/2.20.3/geoserver-2.20.3-bin.zip>
+1. Download the following <https://sourceforge.net/projects/geoserver/files/GeoServer/2.21.2/geoserver-2.21.2-bin.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C73CA8020FA7822D084FA1148414D6BB46F6EDAE26AD3731715C8B65E0724BCF
+  checksum: 44BF5AE803BA6570FC3575A1E3DC3070D77E5B936ED8FA65F1D684491E265280
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/geoserver/geoserver/blob/2.18.2/LICENSE.txt>
