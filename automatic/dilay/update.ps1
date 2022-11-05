@@ -39,16 +39,14 @@ function addDomainIfNeeded([string]$url, [uri]$oldUrl) {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $release = Get-LatestGithubReleases -repoUser 'abau' -repoName 'dilay' | % latest
 
   $re = '\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { addDomainIfNeeded $_ $releases }
+  $url32 = $release.Assets | ? { $_ -match $re } | select -first 1
 
-  $verRe = '\/'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
     URL32   = $url32
-    Version = $version32
+    Version = $release.Version
   }
 }
 
