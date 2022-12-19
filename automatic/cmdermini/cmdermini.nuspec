@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmdermini</id>
-    <version>1.3.20</version>
+    <version>1.3.21</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/cmdermini</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder Mini</title>
@@ -37,37 +37,31 @@ See [cmder](https://community.chocolatey.org/packages/cmder) (250 MB) for enhanc
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmdermini/Changelog.md)
 
 ### Software changelog
+# IMPORTANT
+
+**This release updates a dependency with a known vulnerability, it is suggested that you update as soon as possible.**
+
 ## What's Changed
-* Fix #2654: blank space added between {cwd} and version_control variable by @geekrumper in https://github.com/cmderdev/cmder/pull/2661
-* Fix #2659: Use get_hg_branch() to get Mercurial branch information. by @vsajip in https://github.com/cmderdev/cmder/pull/2660
-* Fix git worktree by @daxgames in https://github.com/cmderdev/cmder/pull/2680
-* Remove set term=cygwin in init.bat by @daxgames in https://github.com/cmderdev/cmder/pull/2688
-* Fix find git by @daxgames in https://github.com/cmderdev/cmder/pull/2689
-* Clink 1.3.15 by @daxgames in https://github.com/cmderdev/cmder/pull/2691
-* Update Git for Windows and Clink by @goodusername123 in https://github.com/cmderdev/cmder/pull/2695
-* Add optional clink async prompt update for svn status by @Mikaz-fr in https://github.com/cmderdev/cmder/pull/2703
-* Update Clink and Git by @daxgames in https://github.com/cmderdev/cmder/pull/2720
-* Better bat by @daxgames in https://github.com/cmderdev/cmder/pull/2742
-* Related to #2654: Move space from "{git}{hg}{svn}" to individual parts by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2738
-* Update Clink, Clink Completions and ConEmu dependencies by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2739
-* Minimal comspec detection (related to #2744) by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2745
-* Use TaskDialog instead of MessageBox (Fixes Builds) by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2746
-* Add bin\cmder_shell.cmd by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2747
-* Fix build system scripts (closes #2723) by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2748
-* Custom option for launcher title by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2752
-* Use Github Actions to build and release by @MartiUK in https://github.com/cmderdev/cmder/pull/2725
-* Minor edits to AppVeyor build by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2753
-* Fix mini edition build by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2754
-* Re-factor the build script to distinguish each step by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2758
-* Updates to `3` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2760
+* Added pagent ssh auth support by @AlphaGit in https://github.com/cmderdev/cmder/pull/1391
+* Update issue template labels by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2763
+* Git-bash use conemu-msys2-64 connector by @nexplorer-3e in https://github.com/cmderdev/cmder/pull/2765
+* Updates to `2` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2767
+* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2770
+* Improvements to Cmder prompt by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2772
+* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2773
+* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2776
+* Improvements to shells and general fixes by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2779
+* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2780
+* Fix https://github.com/cmderdev/cmder/issues/2789 by @chrisant996 in https://github.com/cmderdev/cmder/pull/2791
+* Updates to `3` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2786
+* ⬆️ Update dependencies (clink v1.4.4) by @github-actions in https://github.com/cmderdev/cmder/pull/2792
+* Update conemu to mitigate CVE-2022-46387 by @MartiUK in https://github.com/cmderdev/cmder/pull/2794
 
 ## New Contributors
-* @geekrumper made their first contribution in https://github.com/cmderdev/cmder/pull/2661
-* @vsajip made their first contribution in https://github.com/cmderdev/cmder/pull/2660
-* @goodusername123 made their first contribution in https://github.com/cmderdev/cmder/pull/2695
-* @github-actions made their first contribution in https://github.com/cmderdev/cmder/pull/2760
+* @AlphaGit made their first contribution in https://github.com/cmderdev/cmder/pull/1391
+* @nexplorer-3e made their first contribution in https://github.com/cmderdev/cmder/pull/2765
 
-**Full Changelog**: https://github.com/cmderdev/cmder/compare/v1.3.19...v1.3.20
+**Full Changelog**: https://github.com/cmderdev/cmder/compare/v1.3.20...v1.3.21
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
