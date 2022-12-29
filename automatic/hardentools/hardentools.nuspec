@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>2.3</version>
+    <version>2.4</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
@@ -30,13 +30,19 @@ Bear in mind, after running Hardentools you won't be able, for example, to do co
 
 ## Software Changelog
 
-Please download and use "hardentools.exe" for normal use cases.
+Usability update with minor fixes/cleanups. **No** updates regarding hardening, **no** need to harden again.
 
-Changes:
+_Please download and use "hardentools.exe" for normal use cases._
 
-- Fixes a bug in the Microsoft Defender PUA Protection from v2.2
-- add edge download blocker to PUA module
-- use go 1.19 to compile
+Details:
+- Add help buttons and help texts for every harden item (on main and expert screen). _Recommendations by users for improving the help texts are very welcome!_
+- fix splash screen (randomly only showing empty window)
+- fix info dialog blocking tool
+- all windows are now centered on screen
+- update libs except fyne.io
+- some minor code cleanups
+
+
 </releaseNotes>
   </metadata>
   <files>
