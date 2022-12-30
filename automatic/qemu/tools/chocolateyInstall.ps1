@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20221208.exe'
-  url64bit       = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20221130.exe'
+  url            = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20221230.exe'
+  url64bit       = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20221230.exe'
   softwareName   = 'QEMU'
-  checksum       = 'e309efe4242a9a5767528bbeab05a5876c457a4d0d0b78b0cde5a3c677a7d33ad561366bc3162187c5dc591ace9ae7968664edbbaac8e5860bc72094659dff1c'
+  checksum       = 'e8380fc1f44264a25a6591cee881842220106c7ceee9087dd229dc56fed1415e79afebfdbf243c71853c4b2a946d2591707f06bed429eda21e31a4d9ed7b62ab'
   checksumType   = 'SHA512'
-  checksum64     = '7010fed55d8a1c20e03f8f855e006ee1f8d0ee64ce358619e39cb0b43357d2712109fb11f8232e6f36a326d9babc4cee39addcf2d740e0736ee4ee0e8d4cd3a8'
+  checksum64     = '1a8c1764359bad713b3a0b306603adce42e12974d461140fa6378b5cf0a095bd57a4abf986de4210cc431d80e9d5af785b25e571040a2a0efd1ec3dd441a8193'
   checksumType64 = 'SHA512'
   silentArgs     = '/S'
   validExitCodes = @(0)
@@ -21,8 +21,8 @@ try {
 
   # We will just continue, as there is nothing to do when previous command succeed
 } catch {
-  $packageArgs['url'] = 'https://qemu.weilnetz.de/w32/2022/qemu-w32-setup-20221208.exe' # fallback32
-  $packageArgs['url64bit'] = 'https://qemu.weilnetz.de/w64/2022/qemu-w64-setup-20221130.exe' # fallback64
+  $packageArgs['url'] = 'https://qemu.weilnetz.de/w32/2022/qemu-w32-setup-20221230.exe' # fallback32
+  $packageArgs['url64bit'] = 'https://qemu.weilnetz.de/w64/2022/qemu-w64-setup-20221230.exe' # fallback64
 }
 
 Install-ChocolateyPackage @packageArgs
