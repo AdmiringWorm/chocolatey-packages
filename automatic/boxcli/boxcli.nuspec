@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>3.6.0</version>
+    <version>3.7.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://developer.box.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@507f445e404eb629632365875da50972699c9837/automatic/boxcli/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
-    <licenseUrl>https://github.com/box/boxcli/blob/v3.6.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/box/boxcli/blob/v3.7.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
     <docsUrl>https://developer.box.com/reference</docsUrl>
@@ -32,12 +32,14 @@ Box is a cloud-based enterprise content management platform trusted by thousands
 ## Software Release Notes
 ### New Features and Enhancements
 
-* Add `id` and `type` field  to shared-links:create response ([#427](https://github.com/box/boxcli/issues/427)) ([5ea4cb8](https://github.com/box/boxcli/commit/5ea4cb82294188dd30563ef9cea2c8e0b76bbfae))
-* Add fields disposition_at field for files under retention ([#429](https://github.com/box/boxcli/issues/429)) ([db824ef](https://github.com/box/boxcli/commit/db824ef0b4111810b7902896062c950ef9ac01b3))
+* Add more flags for folder update collaborators ([#438](https://github.com/box/boxcli/issues/438)) ([83ac6d7](https://github.com/box/boxcli/commit/83ac6d7c8eeb7f3dc8562c8132cade4f5af80ee1))
+* Add support session termination ([#446](https://github.com/box/boxcli/issues/446)) ([aef15a8](https://github.com/box/boxcli/commit/aef15a8d2c7ee904db320d879deb6ebf0f934d22))
 
 ### Bug Fixes
 
-* Fix `event:poll` polling-interval ([#430](https://github.com/box/boxcli/issues/430)) ([9ada74b](https://github.com/box/boxcli/commit/9ada74b09eb5aa0e09881946a4f7f30e2d68e037))</releaseNotes>
+* Fix delete token cache from disk ([#445](https://github.com/box/boxcli/issues/445)) ([aafb68a](https://github.com/box/boxcli/commit/aafb68ae38a8280bd97cf978042a8df5b71b2f52))
+* Fix metadata template update when adding multiple options to enum ([#442](https://github.com/box/boxcli/issues/442)) ([8779eec](https://github.com/box/boxcli/commit/8779eecf24bda5b093bc891f5097879e1876b601))
+* single file upload on Node 16 ([#441](https://github.com/box/boxcli/issues/441)) ([d94ab35](https://github.com/box/boxcli/commit/d94ab35a38938daf4edbbd134774a3809facecbd))</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
