@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/martinrotter/rssguard/releases/tag/4.3.0>
+location on <https://github.com/martinrotter/rssguard/releases/tag/4.3.1>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/martinrotter/rssguard/releases/download/4.3.0/rssguard-4.3.0-8a6b79e8-win7.7z>
+1. Download the following <https://github.com/martinrotter/rssguard/releases/download/4.3.1/rssguard-4.3.1-c49f1fc1-win7.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 4ED3F2FA4116C2C93EB540C07CCF2A3A8B7734647965C76216A80FAE0AE9547E
+  checksum: 9D025CD3F4B82DF5401387F22A7F9B8386D6C2967A48421D4DADE43A80583EF1
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/martinrotter/rssguard/blob/4dd04d6db544a665b1d87a7f9478766cdf3c687e/LICENSE.md>
