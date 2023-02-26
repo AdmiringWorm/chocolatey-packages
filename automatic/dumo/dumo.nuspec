@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dumo</id>
-    <version>2.25.2.122</version>
+    <version>2.25.3.123</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/dumo</packageSourceUrl>
     <owners>AdmiringWorm, dtgm, adgellida</owners>
     <title>DUMo</title>
