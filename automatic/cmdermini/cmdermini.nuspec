@@ -8,7 +8,7 @@
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder Mini</title>
     <authors>Samuel Vasko</authors>
-    <projectUrl>http://cmder.net/</projectUrl>
+    <projectUrl>https://cmder.app/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@8c271bfd3c4ccee05d3416d133c6569df579ed09/automatic/cmdermini/icons/256x256.png</iconUrl>
     <copyright>Copyright (c) 2016 Samuel Vasko</copyright>
     <licenseUrl>https://github.com/cmderdev/cmder/blob/master/LICENSE</licenseUrl>

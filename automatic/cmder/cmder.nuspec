@@ -8,7 +8,7 @@
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder</title>
     <authors>Samuel Vasko</authors>
-    <projectUrl>http://cmder.net/</projectUrl>
+    <projectUrl>https://cmder.app/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@080159cc943e64b1784b3847e24f5a9db219642e/automatic/cmder/icons/cmder.png</iconUrl>
     <copyright>Copyright (c) 2016 Samuel Vasko</copyright>
     <licenseUrl>https://github.com/cmderdev/cmder/blob/master/LICENSE</licenseUrl>
