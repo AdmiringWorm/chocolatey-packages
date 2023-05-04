@@ -41,21 +41,20 @@ See [cmder](https://community.chocolatey.org/packages/cmder) (250 MB) for enhanc
 
 **This release updates a dependency with a known vulnerability, it is suggested that you update as soon as possible.**
 
+Additionally, a number of regressions from this version and previous versions have now been fixed in the `master` branch, which will be released in 1.3.22.  For more information, please see [Issues](https://github.com/cmderdev/cmder/issues).  As always, you can download the latest unreleased builds from [Actions](https://github.com/cmderdev/cmder/actions/workflows/build.yml?query=branch%3Amaster+is%3Asuccess+event%3Apush+).
+
+**Note:** The version file included in this release is incorrectly named Version 1.3.20, instead of the correct 1.3.21.  This issue occurred due to a misconfiguration with the build procedure, and is now fixed.
+
 ## What's Changed
 * Added pagent ssh auth support by @AlphaGit in https://github.com/cmderdev/cmder/pull/1391
 * Update issue template labels by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2763
 * Git-bash use conemu-msys2-64 connector by @nexplorer-3e in https://github.com/cmderdev/cmder/pull/2765
-* Updates to `2` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2767
-* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2770
 * Improvements to Cmder prompt by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2772
-* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2773
-* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2776
 * Improvements to shells and general fixes by @DRSDavidSoft in https://github.com/cmderdev/cmder/pull/2779
-* Updates to `1` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2780
 * Fix https://github.com/cmderdev/cmder/issues/2789 by @chrisant996 in https://github.com/cmderdev/cmder/pull/2791
-* Updates to `3` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2786
 * ⬆️ Update dependencies (clink v1.4.4) by @github-actions in https://github.com/cmderdev/cmder/pull/2792
 * Update conemu to mitigate CVE-2022-46387 by @MartiUK in https://github.com/cmderdev/cmder/pull/2794
+* Fixed a couple of regressions, and minor new improvements.
 
 ## New Contributors
 * @AlphaGit made their first contribution in https://github.com/cmderdev/cmder/pull/1391
