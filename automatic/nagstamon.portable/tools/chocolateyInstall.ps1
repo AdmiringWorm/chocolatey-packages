@@ -10,7 +10,7 @@ if ((Get-OSArchitectureWidth 32) -or $env:ChocolateyForceX86) {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   file           = ""
-  file64         = "$toolsPath\Nagstamon-3.10.1-win64.zip"
+  file64         = "$toolsPath\Nagstamon-3.12.0-win64.zip"
   destination    = $toolsPath
   validExitCodes = @(0)
 }
