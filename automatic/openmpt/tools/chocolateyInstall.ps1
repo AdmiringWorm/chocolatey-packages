@@ -5,7 +5,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\OpenMPT-1.31.03.00-Setup.exe"
+  file           = "$toolsPath\OpenMPT-1.31.04.00-Setup.exe"
   softwareName   = 'OpenMPT*'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`" /AllUsers"
   validExitCodes = @(0)
