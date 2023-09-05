@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gbm</id>
-    <version>1.3.5</version>
+    <version>1.3.6</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
@@ -45,29 +45,46 @@ Game Backup Monitor is completely free and open source software.
 
 ### Software Release notes
 
-***New in 1.3.5***
+This is a little larger than the usual maintenance release...it contains some new features for all the save scummers out there. :godmode: Enjoy.
+
+***New in 1.3.6***
 
 All Platforms:
 
-- Fixed an issue that prevented GBM from properly refreshing the main window when the database file is updated by another app.
-- Fixed issues that could cause an unnecessary sync operation to be triggered.
-- GBM will no longer perform database syncs or automatically handle new backups while a game is being monitored or during other operations.
-	- These actions running simultaneously could cause errors and/or leave the app in an broken state.	
-- The remote database backup created when GBM is launched will now include the name of the PC in the file name.
-	- The remote database is "gbm.s3db" in your backup folder.
-	- This change makes the database backup more useful when using GBM on multiple PCs with a shared backup folder.
-	- This change prevents conflict issues with cloud services, as multiple PCs could be overwriting the same backup file with varying versions.
+- Added the ability to backup and restore saved games for the currently monitored game by using the "Backup" and "Restore" buttons on the main window.
+	- This allows you to save scum while a game is running, without interrupting the current session.
+	- Read the [Backup and Restore during Gameplay](https://mikemaximus.github.io/gbm-web/manual.html#livebackup) section of the manual for more details and recommendations when using this feature.	
+	- This feature is disabled by default.  Enable it in [Settings -&gt; Backup and Restore](https://mikemaximus.github.io/gbm-web/manual.html#settings_backupandrestore).	
+- Fixed issues that could cause the Ludusavi Manifest import to fail.
+- Fixed a crash that could occur when cancelling detection and re-enabling while using the "Fast" detection speed.
+- Changed how concurrent operations are handled.
+	- A backup, restore or import operation cannot be queued while another is currently in progress, a warning notification is now displayed if this occurs.
+	- Syncs triggered by another application and automatic backup restores can now execute while GBM is currently monitoring a session or paused while working in another window such as the Game Manager.
+		- Automatic backup restores may still fail if they happen to queue during another operation in progress.
+- The "Esc" key can now be used to shutdown the app or hide the main window to the system tray, depending on the "User Interface" settings.
+- Updated YamlDotNet to 13.1.1.
 
 Windows:
 
-- Added a Setting (Settings -&gt; Files &amp; Folders) to toggle the deleting of files to the Recycling Bin.
-	- This setting is enabled by default to match functionality of prior versions.
+- Added the ability to backup or restore saved games for the last played, selected or currently monitored game by using global hotkeys.
+	- This allows you to quickly backup or restore your save(s) without the need to switch to GBM. 
+	- This feature is disabled by default, it can be configured in [Settings -&gt; Global Hotkeys](https://mikemaximus.github.io/gbm-web/manual.html#settings_globalhotkeys) and [Settings -&gt; Backup and Restore](https://mikemaximus.github.io/gbm-web/manual.html#settings_backupandrestore).  
+	- This feature is not available in Linux.
+- Added unique "Success" or "Failure" audio that will play when a backup or restore is triggered from a hotkey.
+- Updated SQLite3 to 3.42.0.
+- Updated 7-Zip to 23.01.
 
 Linux:
 
-- Fixed a crash that occurred when attempting to automatically restore new backups on app start.
-	- GBM will now wait 60 seconds before attempting to automatically handle new backups after the app starts.
-			
+- The main window can now be hidden to the system tray when closed.
+	- Uncheck "Exit when closing window" in "Main Window Options" of [Settings -&gt; User Interface](https://mikemaximus.github.io/gbm-web/manual.html#settings_ui) to enable this feature.
+	- It can also be hidden automatically on startup by checking the "Start minimized" option in [Settings -&gt; Startup](https://mikemaximus.github.io/gbm-web/manual.html#settings_startup).
+- GBM no longer needs to wait 60 seconds before automatically restoring new backups (if enabled) when the app starts.
+
+Known Issues (Linux):
+
+- The main window may not redraw correctly if resized after it's been restored from the system tray.
+		
 The entire version history of GBM releases is available at http://mikemaximus.github.io/gbm-web/versionhistory.html</releaseNotes>
   </metadata>
   <files>
