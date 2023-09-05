@@ -13,7 +13,6 @@
     <copyright>© Ubisoft Entertainment. All Rights Reserved.</copyright>
     <licenseUrl>https://legal.ubi.com/eula/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <mailingListUrl>https://discord.gg/ubisoftofficial</mailingListUrl>
     <tags>ubisoft-connect uplay ubisoft ubisoft-client games-distributor games-delivery ubisoft-downloader game-downloader gaming</tags>
     <summary>Ubisoft Connect is a cross-platform service available in more than 50 games. It enables actions, rewards and social interactions.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
