@@ -74,6 +74,8 @@ Please see **additional notes** section below for information about the upcoming
   </releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
+      <!-- The archive is compressed with a new algorithm not possible to use with pre-2.2.2 Chocolatey CLI -->
+      <dependency id="chocolatey" version="2.2.2" />
     </dependencies>
   </metadata>
   <files>
