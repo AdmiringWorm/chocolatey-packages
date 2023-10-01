@@ -44,23 +44,40 @@ function global:au_AfterUpdate($Package) {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '32bit\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://www.claws-mail.org' + $_ }
+  $streams = @{}
 
   $re = '64bit\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://www.claws-mail.org' + $_ }
+  $urls = $download_page.links | ? href -match $re | select -expand href | % { 'https://www.claws-mail.org' + $_ }
 
-  $verRe = 'mail\-|\-\d+\-(32|64)bit'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 2
-  if ($version32 -ne $version64) {
-    throw "32bit version do not match the 64bit version"
+  $urls | % {
+    $verRe = 'mail\-|\-\d+\-(32|64)bit'
+    $version = $_  -split "$verRe" | select -Last 1 -Skip 2
+    if ($streams.ContainsKey($version)) {
+      return
+    }
+
+    $re = "$([regex]::Escape($version)).*-32bit\.exe"
+    $url32 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://www.claws-mail.org' + $_ }
+    $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
+
+    if ($version -ne $version32) {
+      throw "32bit version do not match the 64bit version"
+    }
+
+    $version = Get-Version $version
+
+    $streams.Add($version.ToString(2), @{
+      URL32 = $url32
+      URL64 = $_
+      Version = $version
+    })
   }
-  @{
-    URL32   = $url32
-    URL64   = $url64
-    Version = $version32
-  }
+
+  $key = $streams.Keys | sort -Descending | select -First 1
+  $streams.Add('latest', $streams[$key])
+  $streams.Remove($key)
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none
