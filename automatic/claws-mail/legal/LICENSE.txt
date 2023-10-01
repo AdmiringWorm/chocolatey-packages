@@ -1,4 +1,4 @@
-The code in this distribution is Copyright 1999-2015 by the Claws Mail team
+The code in this distribution is Copyright 1999-2022 by the Claws Mail team
 and Hiroyuki Yamamoto.
 
 -------------------------------------------------------------------------------
