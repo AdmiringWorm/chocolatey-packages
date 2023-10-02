@@ -8,10 +8,9 @@
 
 ## Automatic Chocolatey Packages built by appveyor
 
-[![Join the chat at https://gitter.im/wormie-packages/Lobby](https://img.shields.io/gitter/room/wormie-packages/Lobby?logo=gitter&style=flat-square)](https://gitter.im/wormie-packages/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![GitHub Updater Status](https://img.shields.io/github/workflow/status/AdmiringWorm/chocolatey-packages/Package%20Updater?label=updater&logo=github&style=flat-square)](https://github.com/AdmiringWorm/chocolatey-packages/actions/workflows/package-updater.yml)
-[![Update Status](https://img.shields.io/badge/Update-Status-blue.svg?style=flat-square&logo=github)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
-[![chocolatey/AdmiringWorm](https://img.shields.io/badge/Chocolatey-AdmiringWorm-yellowgreen.svg?style=flat-square&logo=chocolatey)](https://community.chocolatey.org/profiles/AdmiringWorm)
+[![GitHub Updater Status](https://img.shields.io/github/actions/workflow/status/AdmiringWorm/chocolatey-packages/.github%2Fworkflows%2Fpackage-updater.yml?style=flat-square&logo=github&label=updater)](https://github.com/AdmiringWorm/chocolatey-packages/actions/workflows/package-updater.yml)
+[![Update Status](https://img.shields.io/badge/Status-blue?style=flat-square&label=Update)](https://gist.github.com/AdmiringWorm/747b3ede98c9404e5cb6a399595e7ad1)
+[![chocolatey/AdmiringWorm](https://img.shields.io/badge/AdmiringWorm-yellowgreen?style=flat-square&logo=chocolatey&label=Chocolatey)](https://community.chocolatey.org/profiles/AdmiringWorm)
 
 If you have any issues with one of the packages hosted in this repository, please feel free to open an issue (preferred instead of using `Contact Maintainers` on chocolatey.org).
 
