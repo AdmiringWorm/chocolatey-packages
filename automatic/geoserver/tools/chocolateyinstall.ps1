@@ -6,7 +6,7 @@ $installDir = Join-Path (Get-ToolsLocation) "GeoServer"
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   destination = $installDir
-  file        = "$toolsDir\geoserver-2.23.2-bin.zip"
+  file        = "$toolsDir\geoserver-2.24.0-bin.zip"
 }
 
 Get-ChocolateyUnzip @packageArgs
