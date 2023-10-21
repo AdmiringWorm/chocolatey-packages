@@ -4,8 +4,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\astyle-3.4.9.zip"
-  file64      = "$toolsPath\astyle-3.4.9-x64.zip"
+  file        = "$toolsPath\astyle-3.4.10.zip"
+  file64      = "$toolsPath\astyle-3.4.10-x64.zip"
   destination = $toolsPath
 }
 

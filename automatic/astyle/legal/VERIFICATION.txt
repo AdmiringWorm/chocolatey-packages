@@ -7,15 +7,15 @@ location on <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.4/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.4/astyle-3.4.9.zip/download>
-  64-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.4/astyle-3.4.9-x64.zip/download>
+  32-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.4/astyle-3.4.10.zip/download>
+  64-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.4/astyle-3.4.10-x64.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 98FBF7C6756BA7F465371D08691F849410611F4269B9AB27302B0CF83BA597B3
-  checksum64: 2F75BB1DED9216B5D589707D414DEAB14806598E0E714F3647593DD1C49DE77B
+  checksum32: C0DE5CA5AEBAAD13653442EFB939A7CF0117D0B2DC931E95D49EE493E61EF1CF
+  checksum64: E82B8E5C94A8A7961D36C88FDC840B72AC64C72D3BCC2C736E226B42BC53747E
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/astyle/code/HEAD/tree/trunk/AStyle/LICENSE.md?format=raw>

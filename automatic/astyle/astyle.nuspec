@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>astyle</id>
-    <version>3.4.9</version>
+    <version>3.4.10</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/astyle</packageSourceUrl>
     <owners>AdmiringWorm, yying</owners>
     <title>Artistic Style</title>
