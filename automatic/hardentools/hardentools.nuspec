@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>2.5</version>
+    <version>2.6-beta2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
@@ -30,19 +30,14 @@ Bear in mind, after running Hardentools you won't be able, for example, to do co
 
 ## Software Changelog
 
-Change:
+Updates fyne.io framework and improves UI
 
-- New feature: Disable OneNote attachments
-- Improvement for help dialog in main screen: List all possible harden features
-- Update dependencies, incl. golang security fixes
-- Fixes https://github.com/securitywithoutborders/hardentools/issues/120
-
+Please use hardentools.exe for standard use cases.
 
 Known Issues:
-
 - Parts of text in UI is shown "fuzzy" (bug in current fyne.io UI framework)
 
-_Please download and use "hardentools.exe" for normal use cases._
+
 </releaseNotes>
   </metadata>
   <files>
