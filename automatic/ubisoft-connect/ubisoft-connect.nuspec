@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ubisoft-connect</id>
-    <version>147.0.0.10965</version>
+    <version>148.0.0.10969</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/ubisoft-connect</packageSourceUrl>
     <owners>AdmiringWorm, Marek</owners>
     <title>Ubisoft Connect</title>
