@@ -7,15 +7,15 @@ location on <https://www.claws-mail.org/win32/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://www.claws-mail.org/download.php?file=win32/claws-mail-4.1.1-1-32bit.exe>
-  64-Bit software: <https://www.claws-mail.org/download.php?file=win32/claws-mail-4.1.1-1-64bit.exe>
+  32-Bit software: <https://www.claws-mail.org/download.php?file=win32/claws-mail-4.2.0-1-32bit.exe>
+  64-Bit software: <https://www.claws-mail.org/download.php?file=win32/claws-mail-4.2.0-1-64bit.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 974116EBCCA638A71B7DF1E9236FAAD0EA47C00BBD39A189DFE533B9E0E0480B
-  checksum64: 26A2E2D393AC5A8C0AC693D4D5B43579F9BF14705031B3DA488C2FD0C92E773D
+  checksum32: 08794C3F715B196453EF0E7107964931FF68B3D8A4F1B607AF92858E9E4D17FA
+  checksum64: B9BD7250ADF5BEAE4D16E9F4CD65C9747F509FE6097A09E7EA1E8ED1B9F74896
 
 The file 'LICENSE.txt' has been obtained from <http://www.claws-mail.org/COPYING>
