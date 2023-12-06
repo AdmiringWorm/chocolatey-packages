@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $parameters = @{
   PackageName = $env:ChocolateyPackageName
-  File        = "$toolsPath\UnitTestBoilerplate_2.7.4.vsix"
+  File        = "$toolsPath\Unit_Test_Boilerplate_Generator_v2.7.5.vsix"
 }
 
 Install-VisualStudioVsixExtension @parameters
