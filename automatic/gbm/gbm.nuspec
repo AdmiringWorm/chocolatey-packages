@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gbm</id>
-    <version>1.3.7</version>
+    <version>1.3.8</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/gbm</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Game Backup Monitor</title>
@@ -45,19 +45,20 @@ Game Backup Monitor is completely free and open source software.
 
 ### Software Release notes
 
-***New in 1.3.7***
+***New in 1.3.8***
 
 All Platforms:
 
-- Added the ability to automatically create backups on a time interval for a detected game.
-	- This is configured on a per game basis using the new "Time interval backup" settings in the Game Manager.  The minimum interval between backups is 1 minute.
-	- This feature and it's related configuration settings are disabled and hidden by default.  Enable it in [Settings -&gt; Backup and Restore -&gt; Experimental](https://mikemaximus.github.io/gbm-web/manual.html#settings_backupandrestore).
-	- Read the [Backup and Restore during Gameplay](https://mikemaximus.github.io/gbm-web/manual.html#livebackup) section of the manual for more details and recommendations when using this feature.
+- Updated YamlDotNet to 13.7.1.
 
-Development:
+Windows:
 
-- Fixed Visual Studio not opening forms in design mode.
+- Updated SQLite to 3.44.2.  
 
+Linux:
+
+- Stopped a ghost window from appearing on startup when the "Start Minimized" option is used. (#303)
+		
 The entire version history of GBM releases is available at http://mikemaximus.github.io/gbm-web/versionhistory.html</releaseNotes>
   </metadata>
   <files>
