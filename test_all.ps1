@@ -1,4 +1,4 @@
-#Name can be 'random N' to randomly force the Nth group of packages.
+﻿#Name can be 'random N' to randomly force the Nth group of packages.
 
 param( [string[]] $Name, [string] $Root = "$PSScriptRoot\automatic", [switch]$ThrowOnErrors )
 
@@ -32,7 +32,7 @@ $options = [ordered]@{
       Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
       NoAppVeyor      = $false                             #  Markdown: do not show AppVeyor build shield
       Title           = "Update Force Test - Group ${n}"
-      UserMessage     = "[Update report](https://gist.github.com/$Env:gist_id) | **USING AU CUSTOM VERSION**"       #  Markdown, Text: Custom user message to show
+      UserMessage     = "[Update report](https://gist.github.com/$Env:gist_id) | **USING Chocolatey AU CUSTOM VERSION**"       #  Markdown, Text: Custom user message to show
     }
   }
 

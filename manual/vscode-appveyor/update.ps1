@@ -1,4 +1,4 @@
-﻿Import-Module "AU"
+﻿Import-Module "Chocolatey-AU"
 
 $releases = "https://marketplace.visualstudio.com/items?itemName=ivangabriele.vscode-appveyor"
 
