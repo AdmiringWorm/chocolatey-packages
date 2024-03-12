@@ -4,8 +4,8 @@
     <id>tinymediamanager</id>
     <version>5.0.3</version>
     <title>tinyMediaManager</title>
-    <authors>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/graphs/devel</authors>
-    <owners>JourneyOver AdmiringWorm</owners>
+    <authors>Manuel Laggner</authors>
+    <owners>AdmiringWorm,JourneyOver</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/blob/devel/LICENSE</licenseUrl>
     <projectUrl>https://www.tinymediamanager.org/</projectUrl>
@@ -16,18 +16,17 @@
 
 - [All Features](https://www.tinymediamanager.org/features)</description>
     <summary>A multi-OS media managment tool</summary>
-    <releaseNotes>#### Program
-* [Changelog](https://www.tinymediamanager.org/changelog)
-
-#### Package
-* Automatically built and uploaded by [JourneyOver](https://chocolatey.org/profiles/JourneyOver)
-* If you have any requests or issues with this package please make an issue [here](https://github.com/JourneyOver/chocolatey-packages) instead of "Contact Maintainers"</releaseNotes>
-    <copyright>© 2022 Manuel Laggner</copyright>
-    <tags>tinymediamanager media managment tinyMediaManager metadata XBOX Media Center XBMC Plex Emby Freemium</tags>
+    <releaseNotes>[Software Changelog](https://www.tinymediamanager.org/changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/tinymediamanager/Changelog.md)</releaseNotes>
+    <copyright>© 2024 Manuel Laggner</copyright>
+    <tags>tinymediamanager media-managment media-manager kodi xbmc plex emby foss cross-platform</tags>
     <projectSourceUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tinymediamanager</packageSourceUrl>
-    <docsUrl>https://www.tinymediamanager.org/docs</docsUrl>
-    <mailingListUrl>https://forum.kodi.tv/forumdisplay.php?fid=204</mailingListUrl>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/tinymediamanager</packageSourceUrl>
+    <docsUrl>https://www.tinymediamanager.org/docs/</docsUrl>
     <bugTrackerUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/issues</bugTrackerUrl>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

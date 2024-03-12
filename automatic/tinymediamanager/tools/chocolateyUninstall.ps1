@@ -1,6 +1,23 @@
-﻿$packageName = 'tinymediamanager'
-$shortcutName = 'tinyMediaManager.lnk'
+﻿$ErrorActionPreference = 'Stop';
 
-Remove-Item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
-Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
-Remove-Item -r "C:\Tools\tinyMediaManager*" -ea 0 -Force
+$startMenu = [System.Environment]::GetFolderPath("Programs")
+$desktop   = [System.Environment]::GetFolderPath('Desktop')
+$linkName = "tinyMediaManager.lnk"
+
+Uninstall-BinFile tinyMediaManagerCMD
+
+if (Test-Path "$startMenu\$linkName") {
+  Write-Host "Removing Start Menu Icon"
+  Remove-Item "$startMenu\$linkName"
+}
+if (Test-Path "$desktop\$linkName") {
+  Write-Host "Removing Desktop Icon"
+  Remove-Item "$desktop\$linkName"
+}
+
+$installPath = "$(Get-ToolsLocation)\tinyMediaManager"
+
+if (Test-Path $installPath) {
+  Write-Host "Removing installed files."
+  Remove-Item $installPath -Recurse -Force
+}

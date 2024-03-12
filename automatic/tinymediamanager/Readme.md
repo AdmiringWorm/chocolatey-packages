@@ -9,7 +9,7 @@ tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
 
 ### Movie Management
 
-![Movie Management](screenshots/movies.png)
+![Movie Management](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4d684f6623d2504624214dd4231cb2eca09f44e6/automatic/tinymediamanager/screenshots/movies.png)
 
 - Get data from **TheMovieDB.org, Imdb.com, Ofdb.de, HD-Trailers.net**, ...
 - Create NFO for use with Kodi (XBMC) and MediaPortal
@@ -17,7 +17,7 @@ tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
 
 ### Movie Set Management
 
-![Movie Set Management](screenshots/moviesets.png)
+![Movie Set Management](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4d684f6623d2504624214dd4231cb2eca09f44e6/automatic/tinymediamanager/screenshots/moviesets.png)
 
 - Organize movies into collections
 - Set artwork for moviesets
@@ -25,7 +25,7 @@ tinyMediaManager will run on Windows, Linux and macOS (and possible more OS).
 
 ### TV Show Management
 
-![TV Show Management](screenshots/tvshows.png)
+![TV Show Management](https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4d684f6623d2504624214dd4231cb2eca09f44e6/automatic/tinymediamanager/screenshots/tvshows.png)
 
 - find TV shows and episodes in subdirectories - powerful episode/season
   detection
