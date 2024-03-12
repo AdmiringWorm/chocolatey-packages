@@ -1,7 +1,9 @@
 # AdmiringWorm's Chocolatey Community packages
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Automatic Chocolatey Packages built by appveyor
@@ -23,12 +25,12 @@ Please see <https://gist.github.com/AdmiringWorm/500f244c0098dddfd36474f63d3216a
 To run locally you will need:
 
 - Powershell 5+: `cinst powershell`.
-- [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au): `Install-Module au` or `cinst au`.
+- [Chocolatey Automatic Package Updater Module](https://github.com/chocolatey-community/chocolatey-au): `Install-Module au` or `cinst au`.
 - [Wormies Automatic Updater Helpers](https://github.com/WormieCorp/Wormies-AU-Helpers): `Install-Module wormies-au-helpers` or `cinst wormies-au-helpers`.
 
 ## Create a package
 
-To create a new package see [Creating the package updater script](https://github.com/majkinetor/au#creating-the-package-updater-script).
+To create a new package see [Creating the package updater script](https://github.com/chocolatey-community/chocolatey-au#creating-the-package-updater-script).
 
 ## Testing the package
 
@@ -84,7 +86,7 @@ Force update ONLY packages `pkg1` and `pkg2`.
 
 Force `pkg1` and use explicit version `ver1`, force `pkg2` and ignore `non_existent`.
 
-To see how versions behave when package update is forced see the [force documentation](https://github.com/majkinetor/au/blob/master/README.md#force-update).
+To see how versions behave when package update is forced see the [force documentation](https://github.com/chocolatey-community/chocolatey-au/blob/master/README.md#force-update).
 
 You can also push manual packages with command `[PUSH pkg1 ... pkgN]`. This works for any package anywhere in the file hierarchy and will not invoke AU updater at all.
 

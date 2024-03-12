@@ -14,7 +14,7 @@ jobs:
       matrix:
         os: [windows-2019, windows-2022]
     env:
-      au_version: master
+      au_version: legacy
       au_push: false
       github_user_repo: ${{ github.repository }}
       github_api_key: ${{ secrets.GIST_API_KEY }}
@@ -32,7 +32,7 @@ jobs:
           Set-Service wuauserv -StartupType Manual
           choco install wormies-au-helpers vt-cli -y
           Install-Module Pester -RequiredVersion 4.10.1 -Scope CurrentUser -Force -SkipPublisherCheck
-          git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
+          git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
         shell: powershell
       - name: System information
