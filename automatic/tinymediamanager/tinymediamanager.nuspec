@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>tinymediamanager</id>
+    <version>5.0.3</version>
+    <title>tinyMediaManager</title>
+    <authors>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/graphs/devel</authors>
+    <owners>JourneyOver AdmiringWorm</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/blob/devel/LICENSE</licenseUrl>
+    <projectUrl>https://www.tinymediamanager.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f7ecb4a5879a829f63b4ad078a918e9595cef15a/automatic/tinymediamanager/icons/128x128.png</iconUrl>
+    <description>[tinyMediaManager](https://www.tinymediamanager.org) is a media management tool written in Java/Swing. It is written to provide metadata for the XBOX Media Center (XBMC). Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and Mac OSX (and possible more OS).
+
+## Features
+
+- [All Features](https://www.tinymediamanager.org/features)</description>
+    <summary>A multi-OS media managment tool</summary>
+    <releaseNotes>#### Program
+* [Changelog](https://www.tinymediamanager.org/changelog)
+
+#### Package
+* Automatically built and uploaded by [JourneyOver](https://chocolatey.org/profiles/JourneyOver)
+* If you have any requests or issues with this package please make an issue [here](https://github.com/JourneyOver/chocolatey-packages) instead of "Contact Maintainers"</releaseNotes>
+    <copyright>© 2022 Manuel Laggner</copyright>
+    <tags>tinymediamanager media managment tinyMediaManager metadata XBOX Media Center XBMC Plex Emby Freemium</tags>
+    <projectSourceUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/tinymediamanager</packageSourceUrl>
+    <docsUrl>https://www.tinymediamanager.org/docs</docsUrl>
+    <mailingListUrl>https://forum.kodi.tv/forumdisplay.php?fid=204</mailingListUrl>
+    <bugTrackerUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/issues</bugTrackerUrl>
+  </metadata>
+</package>

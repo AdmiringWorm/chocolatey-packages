@@ -1,0 +1,26 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software has been downloaded from the listed download
+location on <http://release.tinymediamanager.org/>
+and can be verified by doing the following:
+
+1. Download the following:
+
+  url: <https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.3-windows-amd64.zip>
+
+2. You can obtain the checksum using one of the following methods:
+  - Use powershell function 'Get-FileHash'
+  - Use Chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum: 2BC86688454FE57AF1FA66A5818EC69EE1ABCDCC8CE93C5DF357AD4475B1CE91
+
+Using AU:
+
+  Get-RemoteChecksum
+
+The file 'LICENSE.txt' is obtained from:
+  <https://gitlab.com/tinyMediaManager/tinyMediaManager/-/blob/devel/LICENSE>
