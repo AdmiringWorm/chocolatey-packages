@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-import-module au
+Import-Module Chocolatey-AU
 
 $releases = 'https://benchmark.unigine.com/superposition'
 $softwareName = 'Unigine Superposition Benchmark*'

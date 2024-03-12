@@ -1,6 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = 'https://www.inveigle.net/cmail/download.shtml'
 

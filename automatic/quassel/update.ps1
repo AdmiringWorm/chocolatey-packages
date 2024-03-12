@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://quassel-irc.org/downloads'
 $softwareName = 'Quassel*'

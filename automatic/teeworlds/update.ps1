@@ -1,6 +1,6 @@
 ﻿param($include = $null)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://teeworlds.com/?page=downloads'

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 if ($MyInvocation.InvocationName -ne '.') {
   $packageName = 'Nagstamon'

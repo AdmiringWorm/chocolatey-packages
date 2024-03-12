@@ -1,6 +1,6 @@
 ﻿param($include)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = 'http://qmmp.ylsoftware.com/files/windows/?C=M;O=D'
 $softwareName = 'Qt-based Multimedia Player'

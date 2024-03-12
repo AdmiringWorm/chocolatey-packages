@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $domain   = 'https://www.herdprotect.com'
 $releases = "$domain/downloads.aspx"

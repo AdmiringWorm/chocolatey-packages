@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://gitlab.com/api/v4/projects/sheepitrenderfarm%2Fclient/releases'
 

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://ioninja.com/downloads.html'
 $softwareName = 'IO Ninja*'

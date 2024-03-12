@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = "https://www.kymoto.org/products/inno-script-studio/downloads"
 $padUnderVersion = '2.2.3'

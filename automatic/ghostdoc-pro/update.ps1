@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 Import-Module "$env:chocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = 'https://submain.com/download/ghostdoc/pro/registered/'

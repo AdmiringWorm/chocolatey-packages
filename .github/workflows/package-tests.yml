@@ -14,7 +14,7 @@ jobs:
       matrix:
         os: [windows-2019, windows-2022]
     env:
-      au_version: legacy
+      au_version: master
       au_push: false
       github_user_repo: ${{ github.repository }}
       github_api_key: ${{ secrets.GIST_API_KEY }}

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://powdertoy.co.uk/Download/Platforms.html'
 $changelog = 'https://powdertoy.co.uk/Download/Changelog.html'

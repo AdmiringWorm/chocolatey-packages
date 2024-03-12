@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 . "$PSScriptRoot\..\electrum-ltc\update.ps1"
 
 $releases = 'https://electrum-ltc.org'

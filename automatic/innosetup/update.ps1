@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-import-module au
+Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $versionDirUrl = 'http://files.jrsoftware.org/is/';

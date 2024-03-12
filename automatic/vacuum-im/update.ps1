@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://github.com/Vacuum-IM/vacuum-im/releases/latest'
 $softwareName = 'vacuum-im*'

@@ -15,7 +15,7 @@ jobs:
   updater:
     runs-on: windows-2019
     env:
-      au_version: legacy
+      au_version: master
       au_push: true
       github_user_repo: ${{ github.repository }}
       github_api_key: ${{ secrets.GIST_API_KEY }}

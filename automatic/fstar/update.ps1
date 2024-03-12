@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $domain = 'https://github.com'
 $releases = "$domain/FStarLang/FStar/releases"

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://www.claws-mail.org/win32/'
 $softwareName = 'Claws Mail*'

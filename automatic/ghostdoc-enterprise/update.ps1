@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 . "$PSScriptRoot\..\ghostdoc-pro\update.ps1"
 
 $releases = 'https://submain.com/download/ghostdoc/enterprise/registered/'

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://www.brightfort.com/sbdownload_free.html'
 $softwareName = 'SpywareBlaster *'
