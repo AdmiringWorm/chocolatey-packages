@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>tinymediamanager</id>
+    <version>5.0.3</version>
+    <title>tinyMediaManager</title>
+    <authors>Manuel Laggner</authors>
+    <owners>AdmiringWorm,JourneyOver</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/blob/devel/LICENSE</licenseUrl>
+    <projectUrl>https://www.tinymediamanager.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f7ecb4a5879a829f63b4ad078a918e9595cef15a/automatic/tinymediamanager/icons/128x128.png</iconUrl>
+    <description>[tinyMediaManager](https://www.tinymediamanager.org) is a media management tool written in Java/Swing. It is written to provide metadata for the XBOX Media Center (XBMC). Due to the fact that it is written in Java, tinyMediaManager will run on Windows, Linux and Mac OSX (and possible more OS).
+
+## Features
+
+- [All Features](https://www.tinymediamanager.org/features)</description>
+    <summary>A multi-OS media managment tool</summary>
+    <releaseNotes>[Software Changelog](https://www.tinymediamanager.org/changelog)
+[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/tinymediamanager/Changelog.md)</releaseNotes>
+    <copyright>© 2024 Manuel Laggner</copyright>
+    <tags>tinymediamanager media-managment media-manager kodi xbmc plex emby foss cross-platform</tags>
+    <projectSourceUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager</projectSourceUrl>
+    <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/tinymediamanager</packageSourceUrl>
+    <docsUrl>https://www.tinymediamanager.org/docs/</docsUrl>
+    <bugTrackerUrl>https://gitlab.com/tinyMediaManager/tinyMediaManager/-/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
