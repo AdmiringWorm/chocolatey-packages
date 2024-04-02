@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>powder-toy</id>
-    <version>98.1</version>
+    <version>98.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/powder-toy</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>The Powder Toy</title>
