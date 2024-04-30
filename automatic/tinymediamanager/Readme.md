@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@f7ecb4a5879a829f63b4ad078a918e9595cef15a/automatic/tinymediamanager/icons/48x48.png" height="48" width="48" /> ![tinyMediaManager](https://img.shields.io/chocolatey/v/tinymediamanager.svg?label=tinyMediaManager&style=for-the-badge)](https://community.chocolatey.org/packages/tinymediamanager)
+# [<img src="https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@4d684f6623d2504624214dd4231cb2eca09f44e6/automatic/tinymediamanager/icons/48x48.png" height="48" width="48" /> ![tinyMediaManager](https://img.shields.io/chocolatey/v/tinymediamanager.svg?label=tinyMediaManager&style=for-the-badge)](https://community.chocolatey.org/packages/tinymediamanager)
 
 tinyMediaManager is a media management tool written in Java/Swing. It is written
 to provide metadata for the Kodi Media Center (formerly known as XBMC),
