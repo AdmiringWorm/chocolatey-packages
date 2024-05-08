@@ -8,14 +8,14 @@
     <owners>AdmiringWorm, michaelweghorn</owners>
     <title>Qt Creator CDB Extension</title>
     <authors>Qt Project</authors>
-    <projectUrl>http://wiki.qt.io/Qt_Creator</projectUrl>
+    <projectUrl>https://wiki.qt.io/Qt_Creator</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@35eb3e49edb3411d779f64e57ef023abac8a3a06/icons/qtcreator.png</iconUrl>
     <copyright>© 2020 The Qt Company Ltd.</copyright>
-    <licenseUrl>http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
+    <licenseUrl>https://code.qt.io/cgit/qt-creator/qt-creator.git/plain/LICENSE.GPL3-EXCEPT?h=4.1</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/src/libs/qtcreatorcdbext/</projectSourceUrl>
     <docsUrl>https://wiki.qt.io/Qt_Creator_Windows_Debugging</docsUrl>
-    <mailingListUrl>http://lists.qt-project.org/mailman/listinfo/qt-creator/</mailingListUrl>
+    <mailingListUrl>https://lists.qt-project.org/mailman/listinfo/qt-creator</mailingListUrl>
     <bugTrackerUrl>https://bugreports.qt.io/browse/QTCREATORBUG</bugTrackerUrl>
     <tags>qtcreator-cdbext cdbext c++ qt ide qtcreator plugin</tags>
     <summary>CDB (Microsoft Console Debugger) extension for Qt Creator.</summary>
@@ -24,7 +24,7 @@
 
 The Debugging Tools for Windows (which include the CDB debugger) need to be installed separately by installing one of the components mentioned on [this Microsoft help page](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/). (Chocolatey packages for different versions of the components are available.)
 ]]></description>
-    <releaseNotes>[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-13.0.0.md)
+    <releaseNotes>[Software Changelog](https://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changelog/changes-13.0.0.md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator-cdbext/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="qtcreator" version="[13.0.0]" />

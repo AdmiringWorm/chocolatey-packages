@@ -22,7 +22,7 @@ function global:au_AfterUpdate {
   Update-Changelog -useIssueTitle
 
   $releaseNotes = @"
-[Software Changelog](http://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changes-$($Latest.RemoteVersion).md)
+[Software Changelog](https://code.qt.io/cgit/qt-creator/qt-creator.git/plain/dist/changelog/changes-$($Latest.RemoteVersion).md)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/qtcreator-cdbext/Changelog.md)
 "@
 
