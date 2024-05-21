@@ -1,13 +1,13 @@
 <html>
 <title>License info for Golly</title>
 <body bgcolor="#FFFFCE">
-<center><table border=0><tr><td>
+<center><table border="0"><tr><td>
 <pre>
 
 Golly is an open source, cross-platform application for exploring
 John Conway's Game of Life and many other types of cellular automata.
 
-Copyright (C) 2005-2022 The Golly Gang (Andrew Trevorrow, Tomas Rokicki,
+Copyright (C) 2005-2024 The Golly Gang (Andrew Trevorrow, Tomas Rokicki,
 Tim Hutton, Dave Greene, Jason Summers, Maks Verver, Robert Munafo,
 Brenton Bostick, Chris Rowett, Dongook Lee).
 
@@ -653,6 +653,5 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 </pre>
 </td></tr></table></center>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"73ec0e96fed4aa2e","token":"05ab2f27910c4db284f4fcdcd6948338","version":"2022.8.0","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,13 +8,13 @@ and can be verified by doing the following:
 
 1. Download the following:
   32-Bit software: NO LONGER AVAILABLE
-  64-Bit software: <https://sourceforge.net/projects/golly/files/golly/golly-4.2/golly-4.2-win-64bit.zip/download>
+  64-Bit software: <https://sourceforge.net/projects/golly/files/golly/golly-4.3/golly-4.3-win-64bit.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 574F47EDF9FE5FC67C189100C55F2E4EF8D6EECF33B514FC10F0A6C5C022679C
+  checksum64: AD6BC779E9FF8D0EBD863B1B460B0F63BAD8FBD2B251B56D0AEB551FBF7CC2AF
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/golly/code/ci/master/tree/docs/License.html>
