@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Cmder</id>
-    <version>1.3.24</version>
+    <version>1.3.25</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/cmder</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder</title>
@@ -40,36 +40,40 @@ See [cmdermini](https://community.chocolatey.org/packages/cmdermini) (8 MB) for 
 ### Software changelog
 # IMPORTANT
 
-🔴 **This release updates a dependency with a known vulnerability, it is suggested that you update as soon as possible.**
+🔴 **This release updates another dependency with a known vulnerability, it is suggested that you update as soon as possible.**
 
 Please see **additional notes** section below for information about the upcoming changes in Cmder as well.
 
 ## What's Changed
-* Use CodeQL Scanning by @MartiUK in https://github.com/cmderdev/cmder/pull/2795
-* Use New-TimeSpan to calculate total elapsed time by @MartiUK in https://github.com/cmderdev/cmder/pull/2798
-* Fix error from profile.d PowerShell scripts by @bdukes in https://github.com/cmderdev/cmder/pull/2799
-* Draft a release on a tag being pushed by @MartiUK in https://github.com/cmderdev/cmder/pull/2804
-* Updates to the vendored dependencies by @github-actions (Clink, ConEmu, Clink-Completions and Git-for-Windows)
-* Remove unnecessary git actions in fast init by @daxgames in https://github.com/cmderdev/cmder/pull/2819
-* fix: /task "&lt;taskName&gt;" no longer works since version 1.3.20 by @pulsovi in https://github.com/cmderdev/cmder/pull/2806
-* Fix #2800, a regression where an invalid warning would be shown if clink was already injected
-* Bump peter-evans/create-pull-request from 4 to 5 by @dependabot in https://github.com/cmderdev/cmder/pull/2840
-* Fix 2846 by @chrisant996 in https://github.com/cmderdev/cmder/pull/2847
-* Remove PSGet Entirely by @MartiUK in https://github.com/cmderdev/cmder/pull/2851
-* Remove appveyor config by @MartiUK in https://github.com/cmderdev/cmder/pull/2805
+* Updates to `3` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2889
+* Fix #2859; script error when cwd name contains `%` by @chrisant996 in https://github.com/cmderdev/cmder/pull/2861
+* Create SECURITY.md by @MartiUK in https://github.com/cmderdev/cmder/pull/2866
+* Remove Cmder.exe race condition by @daxgames in https://github.com/cmderdev/cmder/pull/2891
+* Revert Git update so not to include a release Candidate by @daxgames in https://github.com/cmderdev/cmder/pull/2892
+* Enabled `match.expand_envvars` in the default clink settings in https://github.com/cmderdev/cmder/commit/c9b77f618a9314d56bb0572d7209c1d02f0e593e
+* Do CI on development PRs by @daxgames in https://github.com/cmderdev/cmder/pull/2907
+* fix: fix some typos in comments by @loselarry in https://github.com/cmderdev/cmder/pull/2932
+* Bump actions/upload-artifact from 3 to 4 by @dependabot in https://github.com/cmderdev/cmder/pull/2905
+* Bump peter-evans/create-pull-request from 5 to 6 by @dependabot in https://github.com/cmderdev/cmder/pull/2918
+* Bump softprops/action-gh-release from 1 to 2 by @dependabot in https://github.com/cmderdev/cmder/pull/2926
+* Bump microsoft/setup-msbuild from 1 to 2 by @dependabot in https://github.com/cmderdev/cmder/pull/2917
+* Bump github/codeql-action from 2 to 3 by @dependabot in https://github.com/cmderdev/cmder/pull/2906
+* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/cmderdev/cmder/pull/2871
 
 ## New Contributors
-* @pulsovi made their first contribution in https://github.com/cmderdev/cmder/pull/2806
-* @dependabot made their first contribution in https://github.com/cmderdev/cmder/pull/2840
+* @loselarry made their first contribution in https://github.com/cmderdev/cmder/pull/2932
 
 ## Additional Notes
-**Note 1:** We're in the process of improving Cmder's initialization speed. In the next major release, the loading time is expected to be optimized significantly.
+**Note 1:** We're in the process of improving Cmder's initialization speed in **Cmder 1.4**. In the next major release, the loading time is expected to be optimized significantly. You can track changes below:
+- https://github.com/cmderdev/cmder/issues/2788
+- https://github.com/cmderdev/cmder/issues/2816
 
 **Note 2:** Cmder is in the process of dropping [32-bit support](https://gitforwindows.org/32-bit.html) of x86 edition when the upstream projects (such as Git-for-Windows) do so.  In the next major releases of Cmder, the minimum Windows requirement will be bumped from **Windows 7 SP1** to **Windows 10**, as well.
 
 📌 Did you know Cmder also works with **[Windows Terminal](https://github.com/cmderdev/cmder/wiki/Seamless-Windows-Terminal-Integration)**? If you'd like to receive an official Cmder release with WT, please submit your [vote here](https://github.com/orgs/cmderdev/discussions/2864).
 
-**Full Changelog**: https://github.com/cmderdev/cmder/compare/v1.3.21...v1.3.24
+**Full Changelog**: https://github.com/cmderdev/cmder/compare/v1.3.24...v1.3.25
+
 
   </releaseNotes>
     <dependencies>
