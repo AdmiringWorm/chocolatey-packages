@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>3.14.0</version>
+    <version>3.14.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://developer.box.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@507f445e404eb629632365875da50972699c9837/automatic/boxcli/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
-    <licenseUrl>https://github.com/box/boxcli/blob/v3.14.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/box/boxcli/blob/v3.14.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
     <docsUrl>https://developer.box.com/reference</docsUrl>
@@ -30,10 +30,10 @@ Box is a cloud-based enterprise content management platform trusted by thousands
     <releaseNotes>[Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/boxcli/Changelog.md)
 
 ## Software Release Notes
-### New Features and Enhancements
+### Bug Fixes
 
-* Add support for `vanity_name` when creating `shared-links` ([#524](https://github.com/box/boxcli/issues/524)) ([38164bc](https://github.com/box/boxcli/commit/38164bc716879aef0a8a2b973a9c6fc7eb705978))
-* Support sign request signer group ID ([#521](https://github.com/box/boxcli/issues/521)) ([f7b1b44](https://github.com/box/boxcli/commit/f7b1b4409e0f72c264cc23a0f1ca1849060bf121))</releaseNotes>
+* Fix bulk action in `search` command ([#528](https://github.com/box/boxcli/issues/528)) ([782b0e6](https://github.com/box/boxcli/commit/782b0e6b00905d9724289cb05cf03a708c32ebb3))
+* Fix bulk operation for `sign-requests:create` command ([#531](https://github.com/box/boxcli/issues/531)) ([6d9cd6b](https://github.com/box/boxcli/commit/6d9cd6b82088185c1b98e8c4ed9ac26af4ee3362))</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
