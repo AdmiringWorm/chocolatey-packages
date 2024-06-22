@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://release.tinymediamanager.org>
 and can be verified by doing the following:
 
-1. Download the following <https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.6-windows-amd64.zip>
+1. Download the following <https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.7-windows-amd64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 32104D38990B4E2CD60870858E0A54C09D6D34F27CFD4D4CFE7D4C3DFFA759FB
+  checksum: 126D80D5BA5C336D40A2CD7518EF37CAEC28EAFD8379CC7EC082456CECCE3DE3
 
 The file 'LICENSE.txt' has been obtained from <https://gitlab.com/tinyMediaManager/tinyMediaManager/-/blob/devel/LICENSE>
