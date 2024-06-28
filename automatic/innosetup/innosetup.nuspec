@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>InnoSetup</id>
     <title>Inno Setup</title>
-    <version>6.3.1</version>
+    <version>6.3.2</version>
     <authors>jrsoftware</authors>
     <owners>AdmiringWorm,vicneanschi</owners>
     <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>
