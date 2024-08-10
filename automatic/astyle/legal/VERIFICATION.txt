@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.5/>
+location on <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.6/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.5/astyle-3.5.2.zip/download>
-  64-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.5/astyle-3.5.2-x64.zip/download>
+  32-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.6/astyle-3.6.zip/download>
+  64-Bit software: <https://sourceforge.net/projects/astyle/files/astyle/astyle%203.6/astyle-3.6-x64.zip/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 8980E8324EE2755A6B0F24E5ABD76F0ED45D5411594683331815E891B5E8D129
-  checksum64: 5755F6E14BD02B24D66900031F52F771CFE83898193F6BC353EBF1B035033C5D
+  checksum32: 32A0C8F0C9FCDB905A9775250D9D26E086E32A83FE773A65432F1A9A55A57EB6
+  checksum64: 5DC5C8F163A614A4F5F58A56771A083A88433E1CFFE505B71B888885082BCBA3
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/astyle/code/HEAD/tree/trunk/AStyle/LICENSE.md?format=raw>
