@@ -6,11 +6,11 @@ $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   unzipLocation  = $toolsDir
   fileType       = 'exe'
-  url            = 'https://downloads.nordcdn.com/apps/windows/NordLocker/NordLockerSetup.exe'
+  url            = 'https://downloads.nordcdn.com/apps/windows/NordLockerEvolution/NordLockerSetup_x64.exe'
 
   softwareName   = 'NordLocker*'
 
-  checksum       = '9E90178CF008496C60633CB560FF611EF56FF68F9348454B2EDC7AF1A316F59373D10C56BF6368D30F9C02A7F29F42491E4A671BFA849BA8778E67FC1AE93000'
+  checksum       = '9C89A5827C172118D2B5D1B2CE79D39520AE5A94FFD608BECDD88589854B3AE6A69F669ABDC0D022A1DAF4459648A5258EE38ED2B2C0A464A1D8ECAEBE0C0498'
   checksumType   = 'sha512'
 
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /ALLUSERS /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName)\$($env:chocolateyPackageVersion)\install.log`""
