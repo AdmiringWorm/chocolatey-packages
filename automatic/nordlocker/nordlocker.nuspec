@@ -5,7 +5,7 @@
         <!-- == PACKAGE SPECIFIC SECTION == -->
         <!-- This section is about this package, although id and version have ties back to the software -->
         <id>nordlocker</id>
-        <version>5.0.1</version>
+        <version>5.0.2</version>
         <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nordlocker</packageSourceUrl>
         <owners>AdmiringWorm</owners>
         <!-- ============================== -->
