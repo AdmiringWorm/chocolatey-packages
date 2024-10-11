@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/HenriWahl/Nagstamon/releases/tag/v3.14.0>
+location on <https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.14.0/Nagstamon-3.14.0-win32_setup.exe>
-  64-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.14.0/Nagstamon-3.14.0-win64_setup.exe>
+  32-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.16.0/Nagstamon-3.16.0-win32_setup.exe>
+  64-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.16.0/Nagstamon-3.16.0-win64_setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 2BA089BE60F4A06F87DDA74401B5934E4EA6FD2D34759361300F4D44FE09848B
-  checksum64: 6354747B2212A05AA9173A8393ABB5FB3DA00365B7413900FFF847AE9530FE45
+  checksum32: EB80E9AC50597896A780135C33682A3483D0E63B16A0871EBF6625760ECFCFF0
+  checksum64: FE2BBF8ACC3E3E6C6BE4C637F32D22B5280075D39A1A44FBC34322272A0FDFCD
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE>
