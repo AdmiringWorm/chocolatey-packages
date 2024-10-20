@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nagstamon.install</id>
-    <version>3.16.0</version>
+    <version>3.16.1</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nagstamon.install</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Nagstamon (Install)</title>
@@ -28,7 +28,7 @@
 **EXAMPLE**
 `choco install nagstamon.install --params "'/UseInf:C:\nagstamon.install.inf'"`
 ]]></description>
-    <releaseNotes>[Software Changelog](https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.0)  
+    <releaseNotes>[Software Changelog](https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.1)  
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="kb2999226" version="1.0.20170509" />
