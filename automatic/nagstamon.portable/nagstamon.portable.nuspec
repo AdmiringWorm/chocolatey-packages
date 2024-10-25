@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nagstamon.portable</id>
-    <version>3.16.1</version>
+    <version>3.16.2</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/nagstamon.portable</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Nagstamon (Portable)</title>
@@ -25,7 +25,7 @@
 
 - Due to high number of virus positives, the 32bit archive have been removed from the package. See software repository to monitor the situation: https://github.com/HenriWahl/Nagstamon/issues/528
 ]]></description>
-    <releaseNotes>[Software Changelog](https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.1)  
+    <releaseNotes>[Software Changelog](https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.2)  
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/nagstamon.install/Changelog.md)</releaseNotes>
     <dependencies>
       <dependency id="kb2999226" version="1.0.20170509" />

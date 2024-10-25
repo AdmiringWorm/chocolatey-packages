@@ -3,12 +3,12 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.1>
+location on <https://github.com/HenriWahl/Nagstamon/releases/tag/v3.16.2>
 and can be verified by doing the following:
 
 1. Download the following:
   32-Bit software: <PLACEHOLDER until virus count gets lower>
-  64-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.16.1/Nagstamon-3.16.1-win64.zip>
+  64-Bit software: <https://github.com/HenriWahl/Nagstamon/releases/download/v3.16.2/Nagstamon-3.16.2-win64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32:
-  checksum64: 1D278C42AB2568764635B3E29E4AD165526934712C9197305300A794273DA07B
+  checksum64: 2F9CE1683EBD37FBE93A9CF5B163709CB6ADD3B98A75FD484C495A5C5A78B319
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/HenriWahl/Nagstamon/blob/master/LICENSE>
