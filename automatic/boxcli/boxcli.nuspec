@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>boxcli</id>
-    <version>3.15.0</version>
+    <version>3.16.0</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/boxcli</packageSourceUrl>
     <owners>AdmiringWorm, William Higgs</owners>
     <title>Box CLI</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://developer.box.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@507f445e404eb629632365875da50972699c9837/automatic/boxcli/icons/boxcli.png</iconUrl>
     <copyright>©2018 Box</copyright>
-    <licenseUrl>https://github.com/box/boxcli/blob/v3.15.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/box/boxcli/blob/v3.16.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/box/boxcli</projectSourceUrl>
     <docsUrl>https://developer.box.com/reference</docsUrl>
@@ -32,7 +32,11 @@ Box is a cloud-based enterprise content management platform trusted by thousands
 ## Software Release Notes
 ### New Features and Enhancements
 
-* Support AI APIs using Box Node SDK ([#539](https://github.com/box/boxcli/issues/539)) ([59551d2](https://github.com/box/boxcli/commit/59551d2153549b5a87b2c3fae01eb3089d640c89))</releaseNotes>
+* add support for `template_id` during sign request creation ([#549](https://github.com/box/boxcli/issues/549)) ([95963c1](https://github.com/box/boxcli/commit/95963c19650937f9d67c47184cc8a743166eae60))
+
+### Bug Fixes
+
+* Change zone name in the mass update user zone script ([#546](https://github.com/box/boxcli/issues/546)) ([1a1d603](https://github.com/box/boxcli/commit/1a1d603267b928e08df32394637f53264e9e57c9))</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
