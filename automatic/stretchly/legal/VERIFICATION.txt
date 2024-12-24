@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://hovancik.net/stretchly/downloads/>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/hovancik/stretchly/releases/download/v1.16.0/Stretchly-Setup-1.16.0.exe>
+1. Download the following <https://github.com/hovancik/stretchly/releases/download/v1.17.0/Stretchly-Setup-1.17.0.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D3233805E3124F164707D52B9BC9F7D7D7B1ACA91FF9FA5440FE5BE21062B6E9
+  checksum: 9FC8C55CB452C993DDC7C0857DC680D1B55AB2A16A958F708341AA62BECEAE81
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/hovancik/stretchly/blob/master/LICENSE>
