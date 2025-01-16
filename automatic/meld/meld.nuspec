@@ -12,11 +12,11 @@
     <iconUrl>https://cdn.jsdelivr.net/gh/AdmiringWorm/chocolatey-packages@c388f026ccee70abd444a9e167cd741731a38d19/automatic/meld/icons/120x120.png</iconUrl>
     <copyright>Copyright © 2002-2009 Stephen Kennedy
 Copyright © 2009-2017 Kai Willadsen</copyright>
-    <licenseUrl>https://gitlab.gnome.org/GNOME/meld/blob/master/COPYING</licenseUrl>
+    <licenseUrl>https://gitlab.gnome.org/GNOME/meld/-/blob/main/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://gitlab.gnome.org/GNOME/meld</projectSourceUrl>
     <docsUrl>https://meldmerge.org/help/</docsUrl>
-    <bugTrackerUrl>https://gitlab.gnome.org/GNOME/meld/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://gitlab.gnome.org/GNOME/meld/-/issues</bugTrackerUrl>
     <tags>meld compare diff merge admin foss cross-platform</tags>
     <summary>Visual diff and merge file/folder tool</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -34,7 +34,7 @@ Meld helps you review code changes and understand patches. It might even help yo
 - ...and [more](https://meldmerge.org/features.html)
 ]]></description>
     <releaseNotes>
-[Software Changelog](https://meldmerge.org/news.html)
+[Software Changelog](https://gitlab.gnome.org/GNOME/meld/-/releases)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/meld/Changelog.md)
     </releaseNotes>
   </metadata>
