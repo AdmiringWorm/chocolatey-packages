@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>FStar</id>
-    <version>2024.01.13</version>
+    <version>2025.01.17</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/fstar</packageSourceUrl>
     <owners>AdmiringWorm, chantisnake</owners>
     <title>F* language</title>
@@ -22,7 +22,7 @@
 
 F*'s type system includes dependent types, monadic effects, refinement types, and a weakest precondition calculus. Together, these features allow expressing precise and compact specifications for programs, including functional correctness and security properties. The F* type-checker aims to prove that programs meet their specifications using a combination of SMT solving and interactive proofs.
 ]]></description>
-    <releaseNotes>[Software Changelog](https://github.com/FStarLang/FStar/releases/tag/v2024.01.13)
+    <releaseNotes>[Software Changelog](https://github.com/FStarLang/FStar/releases/tag/v2025.01.17)
 [Package Changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/fstar/Changelog.md)</releaseNotes>
   </metadata>
   <files>
