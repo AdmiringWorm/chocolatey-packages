@@ -3,7 +3,7 @@ param($IncludeStream, [switch]$Force)
 Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://meldmerge.org/'
+$releases = 'https://meldmerge.org/'
 $softwareName = 'Meld'
 
 function global:au_BeforeUpdate($Package) {
