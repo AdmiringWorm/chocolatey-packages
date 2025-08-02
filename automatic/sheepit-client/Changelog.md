@@ -1,5 +1,12 @@
 # ![SheepIt Render Farm Client Changelog](https://img.shields.io/badge/SheepIt%20Render%20Farm%20Client-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 7.25209.0 (2025-08-02)
+
+- **ENHANCEMENT:** Update to latest SheepIt client version 7.25209.0
+- **ENHANCEMENT:** Fixed compatibility issues with newer Blender versions (4.5+)
+- **ENHANCEMENT:** Improved GPU support for modern graphics cards
+- **ENHANCEMENT:** Updated embedded executable to current version
+
 ## Version: 6.22006.0 (2022-02-19)
 
 - **ENHANCEMENT:** Update metadata to latest gitlab locations
