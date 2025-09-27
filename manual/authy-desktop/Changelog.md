@@ -1,4 +1,4 @@
-# ![Authy Desktop (Install) Changelog](https://img.shields.io/badge/Authy%20Desktop%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge)
+# ![Authy Desktop (Install) Changelog](<https://img.shields.io/badge/Authy%20Desktop%20(Install)-Package%20Changelog-blue.svg?style=for-the-badge>)
 
 ## Version: 2.2.3.20230329 (2023-03-29)
 
