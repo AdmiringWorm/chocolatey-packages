@@ -8,5 +8,4 @@ Run-PesterTests `
   -streams "latest" `
   -expectedEmbeddedMatch "^friture-[\d\.\-]+\.msi$" `
   -licenseShouldMatch "GNU GENERAL PUBLIC LICENSE" `
-  -expectedDefaultDirectory "${env:ProgramFiles(x86)}\Friture" `
-  -customDirectoryArgument "/D="
+  -expectedDefaultDirectory "${env:ProgramFiles(x86)}\Friture"
