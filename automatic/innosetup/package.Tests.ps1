@@ -1,16 +1,14 @@
-[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly")]
-param()
-. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
+﻿. "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
 
 $packageName = Split-Path -Leaf $PSScriptRoot
 
 Write-Host "Ensuring that $packageName is not already installed"
-Install-Package `
+Install-ChocolateyPackage `
         -packageName $packageName `
         -packagePath "$PSScriptRoot" `
         -additionalArguments "-n"
 
-Uninstall-Package -packageName $packageName
+Uninstall-ChocolateyPackage -packageName $packageName
 
 Run-PesterTests `
   -packageName "$packageName" `
@@ -57,7 +55,7 @@ Describe "$packageName configuration verification" {
       # Remove the configuration file if it exists
       $confFile = "${env:SystemDrive}\Inno-Setup.inf"
       if (Test-Path "$confFile") { rm "${confFile}" }
-      Install-Package `
+      Install-ChocolateyPackage `
         -packageName $packageName `
         -packagePath $PSScriptRoot `
         -additionalArguments "--package-parameters='`"/UseInf:${confFile}`"'" | Should -Be 0
@@ -68,12 +66,12 @@ Describe "$packageName configuration verification" {
     }
 
     It "Should uninstall package after creating configuration file" {
-      Uninstall-Package `
+      Uninstall-ChocolateyPackage `
         -packageName $packageName | Should -Be 0
     }
 
     It "Should use existing configuration file when 'UseInf' is specified" {
-      Install-Package `
+      Install-ChocolateyPackage `
         -packageName $packageName `
         -packagePath $PSScriptRoot `
         -additionalArguments "--package-parameters='`"/UseInf:${PSScriptRoot}\test.inf`"'" | Should -Be 0
@@ -93,7 +91,7 @@ Describe "$packageName configuration verification" {
     }
 
     It "Should uninstall package after creating configuration file" {
-      Uninstall-Package `
+      Uninstall-ChocolateyPackage `
         -packageName $packageName
     }
 
