@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hardentools</id>
-    <version>2.6-beta2</version>
+    <version>2.6</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/hardentools</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Hardentools</title>
@@ -30,13 +30,28 @@ Bear in mind, after running Hardentools you won't be able, for example, to do co
 
 ## Software Changelog
 
-Updates fyne.io framework and improves UI
+**Please use hardentools.exe for standard use cases.**
 
-Please use hardentools.exe for standard use cases.
+Adds some LibreOffice hardenings (using Registry settings):
+- set MacroSecurityLevel for LibreOffice to highest level
+- Ctrl-Click to follow Hyperlinks
+- Block Untrusted Referer Links
+- Enforce Update Checks
+- Disable Updates from Links (Calc)
 
-Known Issues:
+Known Issues regarding LibreOffice:
+- Enforce Update Checks can't set the time interval (e.g. to one day, which would be better)
+- Disable Updates from Links setting is also available (and implemented) for Writer, but does not work.
+
+General Known Issues:
 - Parts of text in UI is shown "fuzzy" (bug in current fyne.io UI framework)
 
+Other then that there are some maintenance updates:
+- update go version
+- update Fyne UI framework to latest version
+- some minor code cleanups
+- fix potential Powershell issues when using custom output in Powershell profile
+- optimize UI a bit
 
 </releaseNotes>
   </metadata>
