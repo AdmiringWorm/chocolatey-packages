@@ -65,11 +65,6 @@ $Options = [ordered]@{
     Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
   }
 
-  GitReleases      = @{
-    ApiToken    = $Env:github_api_key
-    ReleaseType = 'date'
-  }
-
   Gitter           = @{
     WebHookUrl = $Env:gitter_webhook
   }
