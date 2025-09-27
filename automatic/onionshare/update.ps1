@@ -73,7 +73,7 @@ function global:au_GetLatest {
     if ($name -and !$streams.ContainsKey($name)) {
       $streams.Add($name, @{
           URL32         = [uri]$url32
-          Version       = Get-Version $version
+          Version       = Get-NormalizedVersion (Get-Version $version)
           RemoteVersion = $version32
         })
     }
