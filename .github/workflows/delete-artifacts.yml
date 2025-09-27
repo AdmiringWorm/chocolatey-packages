@@ -2,7 +2,7 @@ name: Delete all repository artifacts
 on: workflow_dispatch
 jobs:
   main:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Delete artifacts
         uses: kolpav/purge-artifacts-action@v1
