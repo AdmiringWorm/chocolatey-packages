@@ -31,6 +31,7 @@ jobs:
         run: |
           Set-Service wuauserv -StartupType Manual
           choco install chocolatey-au wormies-au-helpers vt-cli chocolatey-community-validation.extension -y
+          Install-Module Pester -RequiredVersion 4.10.1 -Scope CurrentUser -Force -SkipPublisherCheck
         shell: powershell
       - name: System information
         run: |
