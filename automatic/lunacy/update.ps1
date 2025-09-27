@@ -32,7 +32,7 @@ function global:au_GetLatest {
 
   return @{
     URL32          = $url32
-    Version        = $version
+    Version        = Get-NormalizedVersion $version
     ChecksumType32 = 'sha512'
   }
 }
