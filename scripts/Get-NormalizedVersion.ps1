@@ -1,4 +1,4 @@
-﻿function Normalize-Version {
+﻿function Get-NormalizedVersion {
   [CmdletBinding()]
   [OutputType([String])]
   param(

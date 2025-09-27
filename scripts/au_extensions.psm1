@@ -16,7 +16,7 @@ $funcs = @(
   "Get-ValidOpenSourceLicense"
   "Get-GithubRepositoryLicense"
   "Invoke-VirusTotalScan"
-  "Normalize-Version"
+  "Get-NormalizedVersion"
 )
 
 $funcs | % {
