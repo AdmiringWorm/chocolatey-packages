@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://meldmerge.org/>
+location on <https://meldmerge.org/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.gnome.org/binaries/win32/meld/3.22/Meld-3.22.0-mingw.msi>
+1. Download the following <https://download.gnome.org/binaries/win32/meld/3.22/Meld-3.22.2-mingw.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 2789ED3B259A506D359E1C17A2764E9DACCD70FBC8365803C20612B0C9F2FBD8
+  checksum: E1525657FF0E0D9762619B4930FA758756D5E766967764BD12C2F3914F16ECE8
 
 The file 'LICENSE.txt' has been obtained from <https://gitlab.gnome.org/GNOME/meld/raw/master/COPYING>
