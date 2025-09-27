@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/tlecomte/friture/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/tlecomte/friture/releases/download/v0.51/friture-0.51.msi>
+1. Download the following <https://github.com/tlecomte/friture/releases/download/v0.54/friture-0.54.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 460382DACDEB387C0960F59B9B3BAEE4D9128E225BCDC6E801B4CF9F0CA08D7B
+  checksum: 2D63CED60E0F45C68F046698F855DED5EBD15BBE7A86195210830DB07F365899
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/tlecomte/friture/blob/98a8aac4edaa0db9d0da3974c6b13abebea0954e/COPYING.txt>

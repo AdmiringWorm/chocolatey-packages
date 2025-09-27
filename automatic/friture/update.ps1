@@ -51,7 +51,7 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
       $streams.Add($version.ToString(2), @{
-          Version      = $version.ToSTring()
+          Version      = Normalize-Version $version.ToSTring()
           URL32        = $url
           ReleaseNotes = $_.ReleaseUrl
         })
