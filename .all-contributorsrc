@@ -197,6 +197,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "TheCakeIsNaOH",
+      "name": "TheCakeIsNaOH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38865330?v=4",
+      "profile": "https://naoh.host/",
+      "contributions": [
+        "code",
+        "infra"
+      ]
     }
   ],
   "skipCi": false,
