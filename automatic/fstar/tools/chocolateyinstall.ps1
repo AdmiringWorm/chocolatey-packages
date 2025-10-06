@@ -5,7 +5,7 @@ $toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
   file        = ''
-  file64      = "$toolsPath\fstar-v2025.09.04-Windows_NT-x86_64.zip"
+  file64      = "$toolsPath\fstar-v2025.10.06-Windows_NT-x86_64.zip"
   destination = $toolsPath
 }
 

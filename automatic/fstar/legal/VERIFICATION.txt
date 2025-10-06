@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/FStarLang/FStar/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/FStarLang/FStar/releases/download/v2025.09.04/fstar-v2025.09.04-Windows_NT-x86_64.zip>
+1. Download the following <https://github.com/FStarLang/FStar/releases/download/v2025.10.06/fstar-v2025.10.06-Windows_NT-x86_64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 57D9E0F519DC172C9B4CEDF872BDCEE19D3A3E1B2FB0A1054BCD67F410781C53
+  checksum: 8C77BBEF29CC8B760C310E234891121F4873FA40CAC40B8928D6B5889F3A0745
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/FStarLang/FStar/blob/9c8606bf95c84ef69ef7991db2ed4a3d4a5cc194/LICENSE>
