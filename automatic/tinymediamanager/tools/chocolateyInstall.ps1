@@ -19,7 +19,7 @@ $destination = Get-ToolsLocation
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  file64         = "$toolsDir\tinyMediaManager-5.2.2-windows-amd64.zip"
+  file64         = "$toolsDir\tinyMediaManager-5.2.3-windows-amd64.zip"
   SpecificFolder = 'tinyMediaManager'
   Destination    = $destination
 }
