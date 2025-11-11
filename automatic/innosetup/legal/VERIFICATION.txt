@@ -12,12 +12,12 @@ this can be navigated to from the main page by following:
 
 and the checksum can be verified like this:
 
-1. Download <http://files.jrsoftware.org/is/6/innosetup-6.5.4.exe>
+1. Download <http://files.jrsoftware.org/is/6/innosetup-6.6.0.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: FA73BF47A4DA250D185D07561C2BFDA387E5E20DB77E4570004CF6A133CC10B1
+  checksum: FA39687070BA17CF1C6A179F8671AF73375254B63E97948E6B9532FC46302CEC
 
 File 'license.txt' is obtained from <https://github.com/jrsoftware/issrc/blob/d33ce5c66191d2bd359eb8ecdaa0dfb9833fbee8/license.txt>
