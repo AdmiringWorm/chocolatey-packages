@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Qemu</id>
-    <version>2025.12.3</version>
+    <version>2025.12.4</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/qemu</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Qemu</title>

@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/MikeMaximus/gbm/releases/tag/v1.4.1>
+location on <https://github.com/MikeMaximus/gbm/releases/tag/v1.4.3>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.4.1/GBM.v1.4.1.32-bit.Installer.exe>
-  64-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.4.1/GBM.v1.4.1.64-bit.Installer.exe>
+  32-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.4.3/GBM.v1.4.3.32-bit.Installer.exe>
+  64-Bit software: <https://github.com/MikeMaximus/gbm/releases/download/v1.4.3/GBM.v1.4.3.64-bit.Installer.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 61A79380BE0FF80ECF9439D3B2E6AE1EE75A7B741D56A114E80FC405A9B9E6E1
-  checksum64: 7ABE2252CE95E5DCC53CB6830C16DE02609DB43704D799EAE1D26650142305CB
+  checksum32: 326C194CA9CDBC544ABEFC5A82EDB59F684F238B8B4E542349AD4CF02AE1BE2C
+  checksum64: 3059DABC2232ADBB097A61CE6D8C73FE58B3192273828D399C6B54AF17D4E535
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/MikeMaximus/gbm/blob/master/LICENSE>
