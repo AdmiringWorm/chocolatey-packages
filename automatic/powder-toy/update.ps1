@@ -52,7 +52,7 @@ function global:au_GetLatest {
 
   @{
     URL32   = $url32
-    Version = $version32
+    Version = Get-NormalizedVersion $version32
   }
 }
 
