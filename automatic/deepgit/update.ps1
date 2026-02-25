@@ -1,8 +1,8 @@
 ﻿Import-Module Chocolatey-AU
 
 $domain = 'https://www.syntevo.com'
-$packagePage = "$domain/deepgit"
-$releases = "$packagePage/download"
+$packagePage = "$domain/deepgit/"
+$releases = "$packagePage/download/"
 $softwareName = 'DeepGit'
 
 function global:au_BeforeUpdate {
@@ -28,6 +28,8 @@ function global:au_GetLatest {
   $url = $download_page.Links | ? href -match $re | select -first 1 -expand href | % {
     if ($_.StartsWith("/")) {
       return $domain + $_.TrimStart('.')
+    } elseif ($_.StartsWith("http")) {
+      $_
     } else {
       return $packagePage + $_.TrimStart('.')
     }
@@ -41,7 +43,7 @@ function global:au_GetLatest {
 
   @{
     URL32          = $url
-    Version        = $version
+    Version        = Normalize-Version $version
     ChecksumType32 = 'sha512'
   }
 }
