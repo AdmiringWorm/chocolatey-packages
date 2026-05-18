@@ -48,7 +48,7 @@ function global:au_GetLatest {
 
   @{
     URL64 = $url64
-    Version = $version64
+    Version = Get-NormalizedVersion $version64
     FileType = 'zip'
   }
 }
