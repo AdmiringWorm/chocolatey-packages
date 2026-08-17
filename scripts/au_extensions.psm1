@@ -11,6 +11,8 @@ $funcs = @(
   'Update-Metadata'
   'Get-LatestGithubReleases'
   'Get-AllGithubReleases'
+  'Get-LatestGitlabPackage'
+  'Get-GitlabRepositoryFile'
   "Update-OnETagChanged"
   "Update-OnHeaderChanged"
   "Get-ValidOpenSourceLicense"
