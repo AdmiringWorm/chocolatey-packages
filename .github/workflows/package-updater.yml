@@ -51,7 +51,7 @@ jobs:
           '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ("${{ github.event_name }}" -eq 'schedule')
           '  {0,-20} {1}' -f 'FORCED BUILD:'   , ("${{ github.event_name }}"    -eq 'workflow_dispatch')
         shell: powershell
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
       - name: Run package updater
