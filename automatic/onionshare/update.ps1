@@ -1,6 +1,7 @@
 ﻿Import-Module Chocolatey-AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://github.com/micahflee/onionshare/releases'
+$releases = 'https://github.com/onionshare/onionshare/releases'
 $softwareName = 'OnionShare'
 
 function global:au_BeforeUpdate($Package) {
@@ -27,13 +28,14 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
+      "(?i)(The file 'LICENSE\.txt'.+)\<.*\>" = "`${1}<https://github.com/onionshare/onionshare/blob/v$($Latest.RemoteVersion)/LICENSE.txt>"
     }
     ".\tools\chocolateyInstall.ps1"   = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
@@ -41,47 +43,44 @@ function global:au_SearchReplace {
   }
 }
 
-function forceDomain([uri]$releaseUrl, [string]$fileUrl) {
-  return New-Object uri($releaseUrl, $fileUrl)
-}
-
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '\.msi$'
-  $urls = $download_page.Links | ? href -match $re | select -expand href | % { forceDomain $releases $_ }
-
+  $githubReleases = Get-AllGithubReleases -repoUser 'onionshare' -repoName 'onionshare'
   $streams = @{}
 
-  $urls | % {
-    $url32 = $_
-    $verRe = '\/v?'
-    $version32 = $url32 -split "$verRe" | select -last 1 -skip 1 | % { $_.TrimStart('v') }
-    $stableRe = "^([\d\.]+)$"
-    $unstableRe = "^([\d\.]+)\.([a-z-][a-z\d-]+)$"
+  $githubReleases | ForEach-Object {
+    [array]$urls = $_.Assets | Where-Object { $_ -match '/OnionShare-win64-[^/]+\.msi$' }
+    if ($urls.Count -eq 0) { return }
+    if ($urls.Count -ne 1) { throw 'Expected exactly one OnionShare win64 MSI per release.' }
 
-    ($name, $version) = if ($version32 -match $stableRe) {
-      ("stable", $Matches[1])
+    $url64 = $urls[0]
+    $remoteVersion = ([uri]$url64).Segments[-2].Trim('/').TrimStart('v')
+    $stableRe = '^([\d\.]+)$'
+    $unstableRe = '^([\d\.]+)\.([a-z-][a-z\d-]+)$'
+
+    ($name, $version) = if ($remoteVersion -match $stableRe) {
+      ('stable', $Matches[1])
     }
-    elseif ($version32 -match $unstableRe) {
-      ("unstable", "$($Matches[1])-$($Matches[2])")
+    elseif ($remoteVersion -match $unstableRe) {
+      ('unstable', "$($Matches[1])-$($Matches[2])")
     }
     else {
-      ("", "")
+      ('', '')
     }
 
     if ($name -and !$streams.ContainsKey($name)) {
       $streams.Add($name, @{
-          URL32         = [uri]$url32
+          URL64         = [uri]$url64
           Version       = Get-NormalizedVersion (Get-Version $version)
-          RemoteVersion = $version32
+          RemoteVersion = $remoteVersion
         })
     }
   }
 
-  @{
-    streams = $streams
+  if (!$streams.ContainsKey('stable')) {
+    throw 'No stable OnionShare win64 MSI release was found.'
   }
+
+  @{ streams = $streams }
 }
 
 update -ChecksumFor none
