@@ -1,4 +1,4 @@
-[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly")]
+﻿[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseCmdletCorrectly")]
 param()
 . "$PSScriptRoot\..\..\scripts\Run-PesterTests.ps1"
 

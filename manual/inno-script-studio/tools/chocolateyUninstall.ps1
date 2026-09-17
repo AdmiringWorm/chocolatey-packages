@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'inno-script-studio'
-$softwareName = 'Inno Script Studio' 
-$installerType = 'exe' 
+$softwareName = 'Inno Script Studio'
+$installerType = 'exe'
 
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
@@ -12,9 +12,9 @@ $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
-  $key | ForEach-Object { 
+  $key | ForEach-Object {
     $file = "$($_.UninstallString)".Trim('"')
-	
+
     Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
                                 -SilentArgs "$silentArgs" `
@@ -29,4 +29,3 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
 }
-
