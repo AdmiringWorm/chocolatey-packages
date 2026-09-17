@@ -12,7 +12,7 @@
     $repoUrl = (git remote get-url origin 2>$null) -split '\.git$' | select -first 1
   }
 
-  $repoUrl = $repoUrl -replace "^.*github\.com\/(.*)$", '$1'
+  $repoUrl = $repoUrl -replace "^(?:.*github\.com\/|git\@github\.com\:)(.*)$", '$1'
 
   $response = Invoke-RestMethod -UseBasicParsing -Uri "https://api.github.com/repos/$repoUrl/issues/$issueId" -Headers $headers
 
