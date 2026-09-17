@@ -34,7 +34,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   if ($download_page.Content -match 'AssetUri":"([^"]+)') {
     $assetUri = $Matches[1]
