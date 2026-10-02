@@ -1,5 +1,11 @@
 # ![OnionShare Changelog](https://img.shields.io/badge/OnionShare-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## Version: 2.6.5 (2026-09-17)
+
+- **BREAKING CHANGE:** Support only 64-bit Windows and reject `--x86` before changing existing installations.
+- **ENHANCEMENT:** Automatically remove the previous 32-bit MSI installation when upgrading to 64-bit.
+- **BUG:** Read GitHub release assets and select only the win64 MSI.
+
 ## Version: 2.1-dev1 (2019-04-24)
 
 - **BUG:** updater is unable to check for update [#65](https://github.com/AdmiringWorm/chocolatey-packages/issues/65)
