@@ -4,4 +4,5 @@ OnionShare lets you securely and anonymously share files of any size. It works b
 
 ### Notes
 
+- This package supports only 64-bit Windows. Upgrades automatically uninstall the previous 32-bit MSI installation (OnionShare 2.3 through 2.6) before installing the 64-bit version. Installation with `--x86` is no longer supported. If you need 32-bit support, install version 2.6.0 with `choco install onionshare --version=2.6.0`.
 - Versions prior to 2.3 will not get uninstalled automatically by this package, due to problems with the uninstaller not running unattended. Please remove OnionShare manually before installing this package.
