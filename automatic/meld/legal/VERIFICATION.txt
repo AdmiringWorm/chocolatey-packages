@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://meldmerge.org/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.gnome.org/binaries/win32/meld/3.22/Meld-3.22.2-mingw.msi>
+1. Download the following <https://gitlab.gnome.org/api/v4/projects/301/packages/generic/meld/3.24.0/meld-3.24.0.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: E1525657FF0E0D9762619B4930FA758756D5E766967764BD12C2F3914F16ECE8
+  checksum: D25F98DCE5E3D07A6C98F6C7A91ACBFBACEDAC06EF5C4663DC4B614B52D2B993
 
-The file 'LICENSE.txt' has been obtained from <https://gitlab.gnome.org/GNOME/meld/raw/master/COPYING>
+The file 'LICENSE.txt' has been obtained from <https://gitlab.gnome.org/GNOME/meld/-/blob/main/COPYING>

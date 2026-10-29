@@ -3,27 +3,24 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'Meld'
-  fileType       = 'msi'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-  validExitCodes = @(0, 2010, 1641)
+  fileType       = 'exe'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
 
-$uninstalled = $false
-
-[array]$key = Get-UninstallRegistryKey @packageArgs
+[array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs.softwareName | Where-Object {
+  $_.UninstallString -notmatch '(?i)\bmsiexec(?:\.exe)?\b'
+}
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
-    $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
-    $packageArgs['file'] = ''
+    $packageArgs['file'] = $_.UninstallString.Trim('"')
 
     Uninstall-ChocolateyPackage @packageArgs
   }
-  Write-Host "Removing shim"
-  Uninstall-BinFile meld
 }
 elseif ($key.Count -eq 0) {
-  Write-Warning "$packageName has already been uninstalled by other means."
+  Write-Warning "$($env:ChocolateyPackageName) has already been uninstalled by other means."
 }
 elseif ($key.Count -gt 1) {
   Write-Warning "$($key.Count) matches found!"
@@ -31,3 +28,6 @@ elseif ($key.Count -gt 1) {
   Write-Warning "Please alert the package maintainer that the following keys were matched:"
   $key | ForEach-Object { Write-Warning "- $($_.DisplayName)" }
 }
+
+Write-Host 'Removing shim'
+Uninstall-BinFile meld

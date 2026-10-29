@@ -4,15 +4,24 @@ Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://meldmerge.org/'
+$gitlabHost = 'https://gitlab.gnome.org'
+$gitlabProjectId = 301
+$licenseSourceUrl = "$gitlabHost/api/v4/projects/$gitlabProjectId/repository/files/COPYING/raw?ref=main"
 $softwareName = 'Meld'
 
 function global:au_BeforeUpdate($Package) {
   $licenseFile = "$PSScriptRoot\legal\LICENSE.txt"
-  if (Test-Path $licenseFile) { rm -Force $licenseFile }
+  $licenseTempFile = "$licenseFile.tmp"
+  try {
+    Get-GitlabRepositoryFile -GitlabHost $gitlabHost -ProjectId $gitlabProjectId -FilePath 'COPYING' -OutFile $licenseTempFile | Out-Null
+    if (!(Get-ValidOpenSourceLicense -path $licenseTempFile)) {
+      throw 'Unknown license download. Please verify it still contains distribution rights.'
+    }
 
-  iwr -UseBasicParsing -Uri $($Package.nuspecXml.package.metadata.licenseUrl -replace 'blob', 'raw') -OutFile $licenseFile
-  if (!(Get-ValidOpenSourceLicense -path "$licenseFile")) {
-    throw "Unknown license download. Please verify it still contains distribution rights."
+    Move-Item -Force $licenseTempFile $licenseFile
+  }
+  finally {
+    Remove-Item -Force $licenseTempFile -ErrorAction SilentlyContinue
   }
 
   Get-RemoteFiles -Purge -NoSuffix
@@ -22,13 +31,14 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
+      "(?i)(The file 'LICENSE\.txt'.+)\<.*\>" = "`${1}<$licenseSourceUrl>"
     }
     ".\tools\chocolateyInstall.ps1"   = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)^(\s*softwareName\s*=\s*)'.*'"         = "`${1}'$softwareName'"
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
@@ -42,30 +52,23 @@ function global:au_AfterUpdate($Package) {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $latestPackage = Get-LatestGitlabPackage -GitlabHost $gitlabHost -ProjectId $gitlabProjectId -PackageName 'meld'
+  $expectedFileName = "meld-$($latestPackage.Version).exe"
+  [array]$installerFiles = $latestPackage.Files | Where-Object Name -EQ $expectedFileName
 
-  $re = '\.msi$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href
-
-  $streams = @{}
-  $urls32 | % {
-    $verRe = 'Meld\-|\-(mingw|win32)'
-    $version = $_ -split "$verRe" | select -last 1 -skip 2
-    $version = Get-Version $version
-
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-          Version = $version.ToString()
-          URL32   = $_
-        })
-    }
+  if ($installerFiles.Count -ne 1) {
+    throw "Expected exactly one '$expectedFileName' file in Meld package $($latestPackage.PackageId), but found $($installerFiles.Count)."
   }
 
-  $key = $streams.Keys | sort -Descending | select -first 1
-  $streams.Add("latest", $streams[$key])
-  $streams.Remove($key)
-
-  return @{ Streams = $streams }
+  return @{
+    Streams = @{
+      latest = @{
+        Version = $latestPackage.Version
+        URL64   = $installerFiles[0].Url
+        Options = $latestPackage.Options
+      }
+    }
+  }
 }
 
 update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
