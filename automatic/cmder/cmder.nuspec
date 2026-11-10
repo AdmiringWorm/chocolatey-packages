@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Cmder</id>
-    <version>1.3.25</version>
+    <version>1.3.26</version>
     <packageSourceUrl>https://github.com/admiringworm/chocolatey-packages/tree/master/automatic/cmder</packageSourceUrl>
     <owners>AdmiringWorm, dtgm</owners>
     <title>Cmder</title>
@@ -38,42 +38,50 @@ See [cmdermini](https://community.chocolatey.org/packages/cmdermini) (8 MB) for 
 [Package changelog](https://github.com/AdmiringWorm/chocolatey-packages/blob/master/automatic/cmder/Changelog.md)
 
 ### Software changelog
-# IMPORTANT
+This is the 1.x maintenance release, kept separate from the [Cmder 2.0 release candidate](https://github.com/cmderdev/cmder/releases/tag/v2.0.0-rc.1). It lets existing ConEmu users receive the scoped fixes while current development continues through feature PRs to `main`.
 
-🔴 **This release updates another dependency with a known vulnerability, it is suggested that you update as soon as possible.**
+Thanks to daxgames, David, Chris, Kobi Hikri, and the other contributors whose work and review history are retained.
 
-Please see **additional notes** section below for information about the upcoming changes in Cmder as well.
+## Downloads
 
-## What's Changed
-* Updates to `3` vendored dependencies by @github-actions in https://github.com/cmderdev/cmder/pull/2889
-* Fix #2859; script error when cwd name contains `%` by @chrisant996 in https://github.com/cmderdev/cmder/pull/2861
-* Create SECURITY.md by @MartiUK in https://github.com/cmderdev/cmder/pull/2866
-* Remove Cmder.exe race condition by @daxgames in https://github.com/cmderdev/cmder/pull/2891
-* Revert Git update so not to include a release Candidate by @daxgames in https://github.com/cmderdev/cmder/pull/2892
-* Enabled `match.expand_envvars` in the default clink settings in https://github.com/cmderdev/cmder/commit/c9b77f618a9314d56bb0572d7209c1d02f0e593e
-* Do CI on development PRs by @daxgames in https://github.com/cmderdev/cmder/pull/2907
-* fix: fix some typos in comments by @loselarry in https://github.com/cmderdev/cmder/pull/2932
-* Bump actions/upload-artifact from 3 to 4 by @dependabot in https://github.com/cmderdev/cmder/pull/2905
-* Bump peter-evans/create-pull-request from 5 to 6 by @dependabot in https://github.com/cmderdev/cmder/pull/2918
-* Bump softprops/action-gh-release from 1 to 2 by @dependabot in https://github.com/cmderdev/cmder/pull/2926
-* Bump microsoft/setup-msbuild from 1 to 2 by @dependabot in https://github.com/cmderdev/cmder/pull/2917
-* Bump github/codeql-action from 2 to 3 by @dependabot in https://github.com/cmderdev/cmder/pull/2906
-* Bump actions/checkout from 3 to 4 by @dependabot in https://github.com/cmderdev/cmder/pull/2871
+| Archive | Terminal emulator | Git for Windows |
+| --- | --- | --- |
+| `cmder.zip` / `cmder.7z` | ConEmu | Included |
+| `cmder_mini.zip` | ConEmu | Use an external Git if needed |
 
-## New Contributors
-* @loselarry made their first contribution in https://github.com/cmderdev/cmder/pull/2932
+The old 1.x names and `vendor/init.bat` startup path stay in place. Windows Terminal and the 2.0 generated-cache architecture are not included in these maintenance packages. Back up customized `config/` files before updating an existing installation.
 
-## Additional Notes
-**Note 1:** We're in the process of improving Cmder's initialization speed in **Cmder 1.4**. In the next major release, the loading time is expected to be optimized significantly. You can track changes below:
-- https://github.com/cmderdev/cmder/issues/2788
-- https://github.com/cmderdev/cmder/issues/2816
+## Fixes
 
-**Note 2:** Cmder is in the process of dropping [32-bit support](https://gitforwindows.org/32-bit.html) of x86 edition when the upstream projects (such as Git-for-Windows) do so.  In the next major releases of Cmder, the minimum Windows requirement will be bumped from **Windows 7 SP1** to **Windows 10**, as well.
+- Bound launcher configuration/icon path copies and correct executable-path API capacity/error handling, backported from the current-line fix for #3119.
+- Reject missing or empty launcher option values safely while preserving explicit `/c` roots and slash-prefixed `/x` arguments forwarded to ConEmu.
+- Restore the four TCC/TCCLE defaults removed by `e3d9f81`, using the previous implementation and retaining explicit user overrides. No new shell policy or TCC installation requirement is introduced.
+- Apply native build-tool argument handling and safe vendor-name validation from #3118, preserve failed extraction inputs, and keep SHA-256 manifests.
+- Preserve Kobi Hikri's original #3107 workflow fix and contributor credit; run legacy CI independently and remove the obsolete automatic merge into `development`.
+- Support both `ucrt64` and older `mingw64`/`mingw32` Git layouts. The Full bundle uses Git for Windows `2.56.0.windows.4`, the upstream security update selected from #3093.
+- Keep Windows Terminal out of every legacy archive and Git out of Mini.
 
-📌 Did you know Cmder also works with **[Windows Terminal](https://github.com/cmderdev/cmder/wiki/Seamless-Windows-Terminal-Integration)**? If you'd like to receive an official Cmder release with WT, please submit your [vote here](https://github.com/orgs/cmderdev/discussions/2864).
+## Compatibility and verification
 
-**Full Changelog**: https://github.com/cmderdev/cmder/compare/v1.3.24...v1.3.25
+The Full bundle's selected Git requires Windows 10 or later on x64. A 1.x branch name does not establish Windows 7 support; Mini can use an independently selected external Git, whose own OS and security requirements still apply. See [Git for Windows prerequisites](https://gitforwindows.org/requirements.html).
 
+[The tagged build](https://github.com/cmderdev/cmder/actions/runs/42740180433), [legacy tests](https://github.com/cmderdev/cmder/actions/runs/42740082808), and [CodeQL](https://github.com/cmderdev/cmder/actions/runs/42740082828) passed at the exact release commit. The source checks include Win32/x64 launcher regression harnesses, PowerShell 5.1/7 helper and Git-layout fixtures, shell-default fixtures, and all three packaging variants.
+
+Before publication, all three real archives were downloaded and checked against both `hashes.txt` and GitHub SHA-256 asset digests. Archive integrity, vendor versions and inclusion, absence of private configuration, and identical launcher bytes/version `1.3.26` passed. Both Full archives contain Git binaries matching the verified official portable Git archive. An extracted Full ZIP passed isolated first/repeated CMD, Windows PowerShell 5.1, and packaged Git Bash startup with synthetic profile hooks; bundled Git discovery in CMD/PowerShell and actual Git execution passed. These checks do not claim interactive ConEmu/Clink, physical x86/ARM, soak, or broad existing-user upgrade acceptance. The TCC/TCCLE change restores the previous source implementation; no TCC installation or runtime gate was required for that restoration.
+
+Launcher SHA-256: `94fdb85080488ea5e18e202b44259a229b0198facfa5cefc8902de0184cae817`. `hashes.txt` SHA-256: `f4bcecd8ab2e9d64b86c1741da8b822ab26a6978504cd416f25bcecea8d033b2`.
+
+Use a current 7-Zip reader for `.7z` files, or use the ZIP equivalent. This release does not claim physical x86/ARM testing, Windows 7 acceptance, or completion of the broader 2.0 upgrade work in #3132.
+
+## Preserved history and ongoing work
+
+- Release source: `874525c57ba3813a1cf3d139cec679a3cd6d85d8` on [`legacy/1.x`](https://github.com/cmderdev/cmder/tree/legacy/1.x).
+- Exact original master: [the original baseline](https://github.com/cmderdev/cmder/tree/2b25c570a2b58c3c46b7f672a0a25677970aa9c7), commit `2b25c570a2b58c3c46b7f672a0a25677970aa9c7`.
+- [Live legacy/main comparison, hiding whitespace](https://github.com/cmderdev/cmder/compare/legacy%2F1.x..main?w=1).
+- [Exact release/current-source comparison, hiding whitespace](https://github.com/cmderdev/cmder/compare/874525c57ba3813a1cf3d139cec679a3cd6d85d8..c55c235b5bb18796a47652942ee4598fc615a097?w=1).
+- [David's execution backlog](https://github.com/cmderdev/cmder/issues/3133), [2.0 RC](https://github.com/cmderdev/cmder/releases/tag/v2.0.0-rc.1), and [administrator default-branch handoff](https://github.com/cmderdev/cmder/issues/3130).
+
+Future 1.x changes should remain selective backports. New work uses short feature branches targeting `main`; all existing `development` work is retained and new feature PRs target `main`.
 
   </releaseNotes>
     <dependencies>
