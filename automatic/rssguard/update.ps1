@@ -33,7 +33,7 @@ function global:au_GetLatest {
 
   $streams = @{}
   $releases | % {
-    if (!$_.Version -or ([string]$_.Version) -eq 'devbuild') {
+    if (!$_.Version -or ([string]$_.Version) -like 'devbuild*') {
       return
     }
 
