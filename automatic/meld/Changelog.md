@@ -1,5 +1,9 @@
 # ![Meld Changelog](https://img.shields.io/badge/Meld-Package%20Changelog-blue.svg?style=for-the-badge)
 
+## UPCOMING
+
+- **BREAKING CHANGE**: Migrate the package from the legacy 32-bit MSI to the 64-bit NSIS installer
+
 ## Version: 3.20.3 (2021-02-23)
 
 - **FEATURE:** Create a shim to start meld from command line [#282](https://github.com/AdmiringWorm/chocolatey-packages/issues/282)
